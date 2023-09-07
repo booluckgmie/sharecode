@@ -1,0 +1,21 @@
+name: Scheduled Python Script2
+
+on:
+  schedule:
+    - cron: '21 7 * * *'  # This example runs the job daily at midnight UTC 3:00PM
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10.0  # You can specify the Python version you need
+      
+      - name: Run Python Script
+        run: python auto_script.py  # Replace 'your_script.py' with your Python script's filename
