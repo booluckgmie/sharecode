@@ -1,0 +1,4586 @@
+state,district,year,variable,value
+Johor,Batu Pahat,2018,visual,780
+Johor,Johor Bahru,2018,visual,1130
+Johor,Kluang,2018,visual,487
+Johor,Kota Tinggi,2018,visual,334
+Johor,Kulaijaya,2018,visual,290
+Johor,Ledang,2018,visual,235
+Johor,Mersing,2018,visual,126
+Johor,Muar,2018,visual,396
+Johor,Pontian,2018,visual,336
+Johor,Segamat,2018,visual,388
+Johor,Overall,2018,visual,4502
+Kedah,Baling,2018,visual,374
+Kedah,Bandar Baharu,2018,visual,166
+Kedah,Kota Setar,2018,visual,759
+Kedah,Kuala Muda,2018,visual,1136
+Kedah,Kubang Pasu,2018,visual,499
+Kedah,Kulim,2018,visual,585
+Kedah,Padang Terap,2018,visual,175
+Kedah,Pendang,2018,visual,240
+Kedah,Pokok Sena,2018,visual,105
+Kedah,Pulau Langkawi,2018,visual,162
+Kedah,Sik,2018,visual,213
+Kedah,Yan,2018,visual,163
+Kedah,Overall,2018,visual,4577
+Kelantan,Jajahah Jeli,2018,visual,111
+Kelantan,Bachok,2018,visual,260
+Kelantan,Gua Musang,2018,visual,172
+Kelantan,Kota Bharu,2018,visual,730
+Kelantan,Kuala Krai,2018,visual,244
+Kelantan,Machang,2018,visual,250
+Kelantan,Pasir Mas,2018,visual,347
+Kelantan,Pasir Puteh,2018,visual,286
+Kelantan,Tanah Merah,2018,visual,269
+Kelantan,Tumpat,2018,visual,402
+Kelantan,Overall,2018,visual,3071
+Melaka,Alor Gajah,2018,visual,443
+Melaka,Jasin,2018,visual,358
+Melaka,Melaka Tengah,2018,visual,906
+Melaka,Overall,2018,visual,1707
+Negeri Sembilan,Jelebu,2018,visual,85
+Negeri Sembilan,Jempol,2018,visual,208
+Negeri Sembilan,Kuala Pilah,2018,visual,144
+Negeri Sembilan,Port Dickson,2018,visual,186
+Negeri Sembilan,Rembau,2018,visual,121
+Negeri Sembilan,Seremban,2018,visual,759
+Negeri Sembilan,Tampin,2018,visual,211
+Negeri Sembilan,Overall,2018,visual,1714
+Pahang,Bentong,2018,visual,197
+Pahang,Bera,2018,visual,205
+Pahang,Cameron Highlands,2018,visual,27
+Pahang,Jerantut,2018,visual,190
+Pahang,Kuantan,2018,visual,762
+Pahang,Lipis,2018,visual,168
+Pahang,Maran,2018,visual,209
+Pahang,Pekan,2018,visual,211
+Pahang,Raub,2018,visual,140
+Pahang,Rompin,2018,visual,200
+Pahang,Temerloh,2018,visual,375
+Pahang,Overall,2018,visual,2684
+Perak,Batang Padang,2018,visual,292
+Perak,Hilir Perak,2018,visual,400
+Perak,Kampar,2018,visual,139
+Perak,Kerian,2018,visual,312
+Perak,Kinta,2018,visual,915
+Perak,Kuala Kangsar,2018,visual,289
+Perak,Larut/ Matang/ Selama,2018,visual,582
+Perak,Manjung,2018,visual,455
+Perak,Perak Tengah,2018,visual,267
+Perak,Bagan Datuk,2018,visual,0
+Perak,Overall,2018,visual,3776
+Perlis,Perlis,2018,visual,605
+Pulau Pinang,Barat Daya,2018,visual,283
+Pulau Pinang,Seberang Perai Selatan,2018,visual,310
+Pulau Pinang,Seberang Perai Tengah,2018,visual,676
+Pulau Pinang,Seberang Perai Utara,2018,visual,586
+Pulau Pinang,Timur Laut,2018,visual,1141
+Pulau Pinang,Overall,2018,visual,2996
+Sabah,Beaufort,2018,visual,123
+Sabah,Beluran,2018,visual,44
+Sabah,Kemabong,2018,visual,1
+Sabah,Keningau,2018,visual,108
+Sabah,Kota Belud,2018,visual,88
+Sabah,Kota Kinabalu,2018,visual,476
+Sabah,Kota Kinabatangan,2018,visual,41
+Sabah,Kota Marudu,2018,visual,74
+Sabah,Kuala Penyu,2018,visual,13
+Sabah,Kunak,2018,visual,19
+Sabah,Lahad Datu,2018,visual,82
+Sabah,Matunggong,2018,visual,16
+Sabah,Membakut,2018,visual,10
+Sabah,Menumbok,2018,visual,14
+Sabah,Nabawan,2018,visual,26
+Sabah,Papar,2018,visual,98
+Sabah,Penampang,2018,visual,64
+Sabah,Pitas,2018,visual,78
+Sabah,Putatan,2018,visual,35
+Sabah,Ranau,2018,visual,98
+Sabah,Sandakan,2018,visual,260
+Sabah,Semporna,2018,visual,156
+Sabah,Sipitang,2018,visual,18
+Sabah,Sook,2018,visual,15
+Sabah,Tambunan,2018,visual,35
+Sabah,Tamparuli,2018,visual,77
+Sabah,Tawau,2018,visual,330
+Sabah,Telupid,2018,visual,20
+Sabah,Tenom,2018,visual,54
+Sabah,Tongod,2018,visual,38
+Sabah,Tuaran,2018,visual,121
+Sabah,Overall,2018,visual,2789
+Sarawak,Bau,2018,visual,45
+Sarawak,Belaga,2018,visual,9
+Sarawak,Betong,2018,visual,288
+Sarawak,Bintulu,2018,visual,233
+Sarawak,Dalat,2018,visual,39
+Sarawak,Daro,2018,visual,17
+Sarawak,Julau,2018,visual,4
+Sarawak,Kanowit,2018,visual,29
+Sarawak,Kapit,2018,visual,112
+Sarawak,Kota Samarahan,2018,visual,267
+Sarawak,Kuching,2018,visual,862
+Sarawak,Limbang,2018,visual,112
+Sarawak,Lubok Antu,2018,visual,0
+Sarawak,Lundu,2018,visual,27
+Sarawak,Maradong,2018,visual,28
+Sarawak,Marudi,2018,visual,0
+Sarawak,Matu,2018,visual,17
+Sarawak,Miri,2018,visual,500
+Sarawak,Mukah,2018,visual,181
+Sarawak,Pakan,2018,visual,0
+Sarawak,Saratok,2018,visual,4
+Sarawak,Sarikei,2018,visual,203
+Sarawak,Selangau,2018,visual,10
+Sarawak,Serian,2018,visual,89
+Sarawak,Sibu,2018,visual,470
+Sarawak,Simunjan,2018,visual,38
+Sarawak,Song,2018,visual,22
+Sarawak,Sri Aman,2018,visual,198
+Sarawak,Tatau,2018,visual,11
+Sarawak,Overall,2018,visual,3833
+Selangor,Gombak,2018,visual,709
+Selangor,Hulu Langat,2018,visual,989
+Selangor,Hulu Selangor,2018,visual,298
+Selangor,Klang,2018,visual,1072
+Selangor,Kuala Langat,2018,visual,333
+Selangor,Kuala Selangor,2018,visual,335
+Selangor,Petaling,2018,visual,544
+Selangor,Sabak Bernam,2018,visual,240
+Selangor,Sepang,2018,visual,229
+Selangor,Shah Alam,2018,visual,489
+Selangor,Subang Jaya,2018,visual,574
+Selangor,Overall,2018,visual,5812
+Terengganu,Besut,2018,visual,271
+Terengganu,Dungun,2018,visual,272
+Terengganu,Hulu Terengganu,2018,visual,172
+Terengganu,Kemaman,2018,visual,284
+Terengganu,Kuala Terengganu,2018,visual,732
+Terengganu,Marang,2018,visual,285
+Terengganu,Setiu,2018,visual,128
+Terengganu,Overall,2018,visual,2144
+W.P Kuala Lumpur,W.P Kuala Lumpur,2018,visual,3336
+W.P Labuan,W.P Labuan,2018,visual,121
+W.P Putrajaya,W.P Putrajaya,2018,visual,44
+ Overall,Overall,2018,visual,43711
+Johor,Batu Pahat,2019,visual,857
+Johor,Johor Bahru,2019,visual,1334
+Johor,Kluang,2019,visual,554
+Johor,Kota Tinggi,2019,visual,370
+Johor,Kulaijaya,2019,visual,309
+Johor,Ledang,2019,visual,250
+Johor,Mersing,2019,visual,138
+Johor,Muar,2019,visual,457
+Johor,Pontian,2019,visual,356
+Johor,Segamat,2019,visual,432
+Johor,Overall,2019,visual,5057
+Kedah,Baling,2019,visual,418
+Kedah,Bandar Baharu,2019,visual,173
+Kedah,Kota Setar,2019,visual,839
+Kedah,Kuala Muda,2019,visual,1238
+Kedah,Kubang Pasu,2019,visual,584
+Kedah,Kulim,2019,visual,648
+Kedah,Padang Terap,2019,visual,200
+Kedah,Pendang,2019,visual,267
+Kedah,Pokok Sena,2019,visual,109
+Kedah,Pulau Langkawi,2019,visual,175
+Kedah,Sik,2019,visual,234
+Kedah,Yan,2019,visual,172
+Kedah,Overall,2019,visual,5057
+Kelantan,Jajahah Jeli,2019,visual,121
+Kelantan,Bachok,2019,visual,288
+Kelantan,Gua Musang,2019,visual,196
+Kelantan,Kota Bharu,2019,visual,830
+Kelantan,Kuala Krai,2019,visual,264
+Kelantan,Machang,2019,visual,280
+Kelantan,Pasir Mas,2019,visual,375
+Kelantan,Pasir Puteh,2019,visual,311
+Kelantan,Tanah Merah,2019,visual,291
+Kelantan,Tumpat,2019,visual,438
+Kelantan,Overall,2019,visual,3394
+Melaka,Alor Gajah,2019,visual,465
+Melaka,Jasin,2019,visual,392
+Melaka,Melaka Tengah,2019,visual,1011
+Melaka,Overall,2019,visual,1868
+Negeri Sembilan,Jelebu,2019,visual,82
+Negeri Sembilan,Jempol,2019,visual,218
+Negeri Sembilan,Kuala Pilah,2019,visual,160
+Negeri Sembilan,Port Dickson,2019,visual,208
+Negeri Sembilan,Rembau,2019,visual,120
+Negeri Sembilan,Seremban,2019,visual,858
+Negeri Sembilan,Tampin,2019,visual,230
+Negeri Sembilan,Overall,2019,visual,1876
+Pahang,Bentong,2019,visual,208
+Pahang,Bera,2019,visual,215
+Pahang,Cameron Highlands,2019,visual,25
+Pahang,Jerantut,2019,visual,198
+Pahang,Kuantan,2019,visual,862
+Pahang,Lipis,2019,visual,168
+Pahang,Maran,2019,visual,218
+Pahang,Pekan,2019,visual,220
+Pahang,Raub,2019,visual,153
+Pahang,Rompin,2019,visual,216
+Pahang,Temerloh,2019,visual,402
+Pahang,Overall,2019,visual,2885
+Perak,Batang Padang,2019,visual,330
+Perak,Hilir Perak,2019,visual,435
+Perak,Hulu Perak,2019,visual,132
+Perak,Kampar,2019,visual,154
+Perak,Kerian,2019,visual,345
+Perak,Kinta,2019,visual,1036
+Perak,Kuala Kangsar,2019,visual,313
+Perak,Larut/ Matang/ Selama,2019,visual,641
+Perak,Manjung,2019,visual,498
+Perak,Perak Tengah,2019,visual,276
+Perak,Bagan Datuk,2019,visual,0
+Perak,Overall,2019,visual,4160
+Perlis,Perlis,2019,visual,707
+Pulau Pinang,Barat Daya,2019,visual,306
+Pulau Pinang,Seberang Perai Selatan,2019,visual,339
+Pulau Pinang,Seberang Perai Tengah,2019,visual,717
+Pulau Pinang,Seberang Perai Utara,2019,visual,631
+Pulau Pinang,Timur Laut,2019,visual,1248
+Pulau Pinang,Overall,2019,visual,3241
+Sabah,Beaufort,2019,visual,132
+Sabah,Beluran,2019,visual,59
+Sabah,Kemabong,2019,visual,0
+Sabah,Keningau,2019,visual,118
+Sabah,Kota Belud,2019,visual,98
+Sabah,Kota Kinabalu,2019,visual,496
+Sabah,Kota Kinabatangan,2019,visual,40
+Sabah,Kota Marudu,2019,visual,82
+Sabah,Kuala Penyu,2019,visual,12
+Sabah,Kudat,2019,visual,162
+Sabah,Kunak,2019,visual,22
+Sabah,Lahad Datu,2019,visual,102
+Sabah,Matunggong,2019,visual,22
+Sabah,Membakut,2019,visual,11
+Sabah,Menumbok,2019,visual,14
+Sabah,Nabawan,2019,visual,28
+Sabah,Papar,2019,visual,106
+Sabah,Penampang,2019,visual,68
+Sabah,Pitas,2019,visual,89
+Sabah,Putatan,2019,visual,39
+Sabah,Ranau,2019,visual,100
+Sabah,Sandakan,2019,visual,279
+Sabah,Semporna,2019,visual,180
+Sabah,Sipitang,2019,visual,19
+Sabah,Sook,2019,visual,17
+Sabah,Tamparuli,2019,visual,82
+Sabah,Tawau,2019,visual,384
+Sabah,Telupid,2019,visual,24
+Sabah,Tenom,2019,visual,57
+Sabah,Tuaran,2019,visual,125
+Sabah,Overall,2019,visual,3048
+Sarawak,Bau,2019,visual,48
+Sarawak,Belaga,2019,visual,8
+Sarawak,Betong,2019,visual,302
+Sarawak,Bintulu,2019,visual,276
+Sarawak,Dalat,2019,visual,39
+Sarawak,Daro,2019,visual,20
+Sarawak,Julau,2019,visual,2
+Sarawak,Kanowit,2019,visual,37
+Sarawak,Kapit,2019,visual,118
+Sarawak,Kota Samarahan,2019,visual,278
+Sarawak,Kuching,2019,visual,973
+Sarawak,Limbang,2019,visual,121
+Sarawak,Lubok Antu,2019,visual,1
+Sarawak,Lundu,2019,visual,28
+Sarawak,Maradong,2019,visual,30
+Sarawak,Marudi,2019,visual,0
+Sarawak,Miri,2019,visual,581
+Sarawak,Mukah,2019,visual,189
+Sarawak,Pakan,2019,visual,1
+Sarawak,Saratok,2019,visual,2
+Sarawak,Sarikei,2019,visual,222
+Sarawak,Selangau,2019,visual,11
+Sarawak,Serian,2019,visual,97
+Sarawak,Sibu,2019,visual,537
+Sarawak,Simunjan,2019,visual,39
+Sarawak,Song,2019,visual,19
+Sarawak,Sri Aman,2019,visual,208
+Sarawak,Tatau,2019,visual,11
+Sarawak,Overall,2019,visual,4232
+Selangor,Gombak,2019,visual,818
+Selangor,Hulu Langat,2019,visual,1124
+Selangor,Hulu Selangor,2019,visual,323
+Selangor,Klang,2019,visual,1249
+Selangor,Kuala Langat,2019,visual,383
+Selangor,Kuala Selangor,2019,visual,357
+Selangor,Petaling,2019,visual,599
+Selangor,Sabak Bernam,2019,visual,261
+Selangor,Sepang,2019,visual,242
+Selangor,Shah Alam,2019,visual,550
+Selangor,Subang Jaya,2019,visual,680
+Selangor,Overall,2019,visual,6586
+Terengganu,Besut,2019,visual,312
+Terengganu,Dungun,2019,visual,306
+Terengganu,Hulu Terengganu,2019,visual,185
+Terengganu,Kemaman,2019,visual,318
+Terengganu,Kuala Terengganu,2019,visual,847
+Terengganu,Marang,2019,visual,319
+Terengganu,Setiu,2019,visual,131
+Terengganu,Overall,2019,visual,2418
+W.P Kuala Lumpur,W.P Kuala Lumpur,2019,visual,3601
+W.P Labuan,W.P Labuan,2019,visual,131
+ Overall,Overall,2019,visual,48353
+Johor,Batu Pahat,2020,visual,929
+Johor,Johor Bahru,2020,visual,1453
+Johor,Kluang,2020,visual,606
+Johor,Kota Tinggi,2020,visual,396
+Johor,Kulaijaya,2020,visual,325
+Johor,Ledang,2020,visual,280
+Johor,Mersing,2020,visual,148
+Johor,Muar,2020,visual,510
+Johor,Pontian,2020,visual,382
+Johor,Segamat,2020,visual,475
+Johor,Overall,2020,visual,5504
+Kedah,Baling,2020,visual,446
+Kedah,Bandar Baharu,2020,visual,184
+Kedah,Kota Setar,2020,visual,912
+Kedah,Kuala Muda,2020,visual,1340
+Kedah,Kubang Pasu,2020,visual,629
+Kedah,Kulim,2020,visual,695
+Kedah,Padang Terap,2020,visual,205
+Kedah,Pendang,2020,visual,292
+Kedah,Pokok Sena,2020,visual,125
+Kedah,Pulau Langkawi,2020,visual,200
+Kedah,Sik,2020,visual,242
+Kedah,Yan,2020,visual,191
+Kedah,Overall,2020,visual,5461
+Kelantan,Jajahah Jeli,2020,visual,133
+Kelantan,Bachok,2020,visual,326
+Kelantan,Gua Musang,2020,visual,219
+Kelantan,Kota Bharu,2020,visual,912
+Kelantan,Kuala Krai,2020,visual,286
+Kelantan,Machang,2020,visual,313
+Kelantan,Pasir Mas,2020,visual,418
+Kelantan,Pasir Puteh,2020,visual,349
+Kelantan,Tanah Merah,2020,visual,319
+Kelantan,Tumpat,2020,visual,504
+Kelantan,Overall,2020,visual,3779
+Melaka,Alor Gajah,2020,visual,500
+Melaka,Jasin,2020,visual,414
+Melaka,Melaka Tengah,2020,visual,1082
+Melaka,Overall,2020,visual,1996
+Negeri Sembilan,Jelebu,2020,visual,89
+Negeri Sembilan,Jempol,2020,visual,235
+Negeri Sembilan,Kuala Pilah,2020,visual,170
+Negeri Sembilan,Port Dickson,2020,visual,225
+Negeri Sembilan,Rembau,2020,visual,132
+Negeri Sembilan,Seremban,2020,visual,960
+Negeri Sembilan,Tampin,2020,visual,251
+Negeri Sembilan,Overall,2020,visual,2062
+Pahang,Bentong,2020,visual,218
+Pahang,Bera,2020,visual,227
+Pahang,Cameron Highlands,2020,visual,27
+Pahang,Jerantut,2020,visual,212
+Pahang,Kuantan,2020,visual,932
+Pahang,Lipis,2020,visual,174
+Pahang,Maran,2020,visual,234
+Pahang,Pekan,2020,visual,234
+Pahang,Raub,2020,visual,160
+Pahang,Rompin,2020,visual,230
+Pahang,Temerloh,2020,visual,425
+Pahang,Overall,2020,visual,3073
+Perak,Batang Padang,2020,visual,355
+Perak,Hilir Perak,2020,visual,460
+Perak,Hulu Perak,2020,visual,143
+Perak,Kampar,2020,visual,167
+Perak,Kerian,2020,visual,378
+Perak,Kinta,2020,visual,1135
+Perak,Kuala Kangsar,2020,visual,343
+Perak,Larut/ Matang/ Selama,2020,visual,686
+Perak,Manjung,2020,visual,533
+Perak,Perak Tengah,2020,visual,300
+Perak,Bagan Datuk,2020,visual,0
+Perak,Overall,2020,visual,4500
+Perlis,Perlis,2020,visual,796
+Pulau Pinang,Barat Daya,2020,visual,316
+Pulau Pinang,Seberang Perai Selatan,2020,visual,350
+Pulau Pinang,Seberang Perai Tengah,2020,visual,759
+Pulau Pinang,Seberang Perai Utara,2020,visual,673
+Pulau Pinang,Timur Laut,2020,visual,1323
+Pulau Pinang,Overall,2020,visual,3421
+Sabah,Beaufort,2020,visual,135
+Sabah,Beluran,2020,visual,62
+Sabah,Kemabong,2020,visual,0
+Sabah,Keningau,2020,visual,128
+Sabah,Kota Belud,2020,visual,102
+Sabah,Kota Kinabalu,2020,visual,517
+Sabah,Kota Kinabatangan,2020,visual,42
+Sabah,Kota Marudu,2020,visual,87
+Sabah,Kuala Penyu,2020,visual,15
+Sabah,Kudat,2020,visual,166
+Sabah,Kunak,2020,visual,30
+Sabah,Lahad Datu,2020,visual,108
+Sabah,Matunggong,2020,visual,27
+Sabah,Membakut,2020,visual,15
+Sabah,Menumbok,2020,visual,14
+Sabah,Nabawan,2020,visual,30
+Sabah,Papar,2020,visual,114
+Sabah,Penampang,2020,visual,72
+Sabah,Pitas,2020,visual,93
+Sabah,Putatan,2020,visual,48
+Sabah,Ranau,2020,visual,103
+Sabah,Sandakan,2020,visual,305
+Sabah,Semporna,2020,visual,193
+Sabah,Sipitang,2020,visual,21
+Sabah,Tambunan,2020,visual,45
+Sabah,Tamparuli,2020,visual,82
+Sabah,Tawau,2020,visual,397
+Sabah,Telupid,2020,visual,27
+Sabah,Tenom,2020,visual,62
+Sabah,Tongod,2020,visual,47
+Sabah,Tuaran,2020,visual,127
+Sabah,Overall,2020,visual,3232
+Sarawak,Bau,2020,visual,53
+Sarawak,Belaga,2020,visual,9
+Sarawak,Betong,2020,visual,324
+Sarawak,Bintulu,2020,visual,291
+Sarawak,Dalat,2020,visual,41
+Sarawak,Daro,2020,visual,21
+Sarawak,Julau,2020,visual,2
+Sarawak,Kanowit,2020,visual,43
+Sarawak,Kapit,2020,visual,126
+Sarawak,Kota Samarahan,2020,visual,285
+Sarawak,Kuching,2020,visual,1024
+Sarawak,Lawas,2020,visual,23
+Sarawak,Limbang,2020,visual,127
+Sarawak,Lubok Antu,2020,visual,1
+Sarawak,Lundu,2020,visual,30
+Sarawak,Maradong,2020,visual,36
+Sarawak,Marudi,2020,visual,0
+Sarawak,Matu,2020,visual,14
+Sarawak,Miri,2020,visual,660
+Sarawak,Mukah,2020,visual,197
+Sarawak,Pakan,2020,visual,3
+Sarawak,Saratok,2020,visual,12
+Sarawak,Sarikei,2020,visual,231
+Sarawak,Selangau,2020,visual,13
+Sarawak,Serian,2020,visual,99
+Sarawak,Sibu,2020,visual,588
+Sarawak,Simunjan,2020,visual,42
+Sarawak,Song,2020,visual,21
+Sarawak,Sri Aman,2020,visual,213
+Sarawak,Overall,2020,visual,4542
+Selangor,Gombak,2020,visual,905
+Selangor,Hulu Langat,2020,visual,1190
+Selangor,Hulu Selangor,2020,visual,352
+Selangor,Klang,2020,visual,1336
+Selangor,Kuala Langat,2020,visual,409
+Selangor,Kuala Selangor,2020,visual,389
+Selangor,Petaling,2020,visual,630
+Selangor,Sabak Bernam,2020,visual,284
+Selangor,Sepang,2020,visual,260
+Selangor,Shah Alam,2020,visual,592
+Selangor,Subang Jaya,2020,visual,737
+Selangor,Overall,2020,visual,7084
+Terengganu,Besut,2020,visual,333
+Terengganu,Dungun,2020,visual,326
+Terengganu,Hulu Terengganu,2020,visual,188
+Terengganu,Kemaman,2020,visual,346
+Terengganu,Kuala Terengganu,2020,visual,899
+Terengganu,Marang,2020,visual,335
+Terengganu,Setiu,2020,visual,148
+Terengganu,Overall,2020,visual,2575
+W.P Kuala Lumpur,W.P Kuala Lumpur,2020,visual,3800
+W.P Labuan,W.P Labuan,2020,visual,136
+W.P Putrajaya,W.P Putrajaya,2020,visual,150
+ Overall,Overall,2020,visual,52111
+Johor,Batu Pahat,2021,visual,991
+Johor,Johor Bahru,2021,visual,1573
+Johor,Kluang,2021,visual,645
+Johor,Kota Tinggi,2021,visual,403
+Johor,Kulaijaya,2021,visual,342
+Johor,Ledang,2021,visual,306
+Johor,Mersing,2021,visual,157
+Johor,Muar,2021,visual,538
+Johor,Pontian,2021,visual,392
+Johor,Segamat,2021,visual,493
+Johor,Overall,2021,visual,5840
+Kedah,Baling,2021,visual,467
+Kedah,Bandar Baharu,2021,visual,188
+Kedah,Kota Setar,2021,visual,964
+Kedah,Kuala Muda,2021,visual,1412
+Kedah,Kubang Pasu,2021,visual,662
+Kedah,Kulim,2021,visual,725
+Kedah,Padang Terap,2021,visual,216
+Kedah,Pendang,2021,visual,306
+Kedah,Pokok Sena,2021,visual,136
+Kedah,Pulau Langkawi,2021,visual,216
+Kedah,Sik,2021,visual,256
+Kedah,Yan,2021,visual,208
+Kedah,Overall,2021,visual,5756
+Kelantan,Jajahah Jeli,2021,visual,142
+Kelantan,Bachok,2021,visual,348
+Kelantan,Gua Musang,2021,visual,230
+Kelantan,Kota Bharu,2021,visual,978
+Kelantan,Kuala Krai,2021,visual,293
+Kelantan,Machang,2021,visual,323
+Kelantan,Pasir Mas,2021,visual,438
+Kelantan,Pasir Puteh,2021,visual,370
+Kelantan,Tanah Merah,2021,visual,332
+Kelantan,Tumpat,2021,visual,522
+Kelantan,Overall,2021,visual,3976
+Melaka,Alor Gajah,2021,visual,528
+Melaka,Jasin,2021,visual,443
+Melaka,Melaka Tengah,2021,visual,1141
+Melaka,Overall,2021,visual,2112
+Negeri Sembilan,Jelebu,2021,visual,100
+Negeri Sembilan,Jempol,2021,visual,242
+Negeri Sembilan,Kuala Pilah,2021,visual,179
+Negeri Sembilan,Port Dickson,2021,visual,241
+Negeri Sembilan,Rembau,2021,visual,140
+Negeri Sembilan,Seremban,2021,visual,1022
+Negeri Sembilan,Tampin,2021,visual,262
+Negeri Sembilan,Overall,2021,visual,2186
+Pahang,Bentong,2021,visual,232
+Pahang,Bera,2021,visual,237
+Pahang,Cameron Highlands,2021,visual,32
+Pahang,Jerantut,2021,visual,219
+Pahang,Kuantan,2021,visual,1016
+Pahang,Lipis,2021,visual,185
+Pahang,Maran,2021,visual,252
+Pahang,Pekan,2021,visual,258
+Pahang,Raub,2021,visual,166
+Pahang,Rompin,2021,visual,252
+Pahang,Temerloh,2021,visual,453
+Pahang,Overall,2021,visual,3302
+Perak,Bagan Datuk,2021,visual,9
+Perak,Batang Padang,2021,visual,365
+Perak,Hilir Perak,2021,visual,472
+Perak,Hulu Perak,2021,visual,147
+Perak,Kampar,2021,visual,189
+Perak,Kerian,2021,visual,395
+Perak,Kinta,2021,visual,1259
+Perak,Kuala Kangsar,2021,visual,361
+Perak,Larut/ Matang/ Selama,2021,visual,711
+Perak,Manjung,2021,visual,564
+Perak,Muallim,2021,visual,4
+Perak,Perak Tengah,2021,visual,312
+Perak,Overall,2021,visual,4788
+Perlis,Perlis,2021,visual,832
+Pulau Pinang,Barat Daya,2021,visual,332
+Pulau Pinang,Seberang Perai Selatan,2021,visual,368
+Pulau Pinang,Seberang Perai Tengah,2021,visual,796
+Pulau Pinang,Seberang Perai Utara,2021,visual,706
+Pulau Pinang,Timur Laut,2021,visual,1378
+Pulau Pinang,Overall,2021,visual,3580
+Sabah,Beaufort,2021,visual,143
+Sabah,Beluran,2021,visual,68
+Sabah,Kemabong,2021,visual,0
+Sabah,Keningau,2021,visual,133
+Sabah,Kota Belud,2021,visual,108
+Sabah,Kota Kinabalu,2021,visual,531
+Sabah,Kota Kinabatangan,2021,visual,43
+Sabah,Kota Marudu,2021,visual,91
+Sabah,Kuala Penyu,2021,visual,18
+Sabah,Kudat,2021,visual,167
+Sabah,Kunak,2021,visual,35
+Sabah,Lahad Datu,2021,visual,119
+Sabah,Matunggong,2021,visual,29
+Sabah,Membakut,2021,visual,18
+Sabah,Menumbok,2021,visual,15
+Sabah,Nabawan,2021,visual,33
+Sabah,Papar,2021,visual,120
+Sabah,Penampang,2021,visual,79
+Sabah,Pitas,2021,visual,94
+Sabah,Putatan,2021,visual,52
+Sabah,Ranau,2021,visual,111
+Sabah,Sandakan,2021,visual,318
+Sabah,Semporna,2021,visual,206
+Sabah,Sipitang,2021,visual,20
+Sabah,Sook,2021,visual,19
+Sabah,Tambunan,2021,visual,47
+Sabah,Tamparuli,2021,visual,88
+Sabah,Tawau,2021,visual,417
+Sabah,Telupid,2021,visual,27
+Sabah,Tenom,2021,visual,62
+Sabah,Tongod,2021,visual,47
+Sabah,Tuaran,2021,visual,134
+Sabah,Overall,2021,visual,3392
+Sarawak,Bau,2021,visual,59
+Sarawak,Belaga,2021,visual,9
+Sarawak,Betong,2021,visual,330
+Sarawak,Bintulu,2021,visual,313
+Sarawak,Dalat,2021,visual,44
+Sarawak,Daro,2021,visual,27
+Sarawak,Julau,2021,visual,7
+Sarawak,Kanowit,2021,visual,47
+Sarawak,Kapit,2021,visual,126
+Sarawak,Kota Samarahan,2021,visual,296
+Sarawak,Kuching,2021,visual,1070
+Sarawak,Lawas,2021,visual,26
+Sarawak,Limbang,2021,visual,129
+Sarawak,Lubok Antu,2021,visual,3
+Sarawak,Lundu,2021,visual,31
+Sarawak,Maradong,2021,visual,37
+Sarawak,Marudi,2021,visual,1
+Sarawak,Matu,2021,visual,18
+Sarawak,Miri,2021,visual,700
+Sarawak,Mukah,2021,visual,196
+Sarawak,Pakan,2021,visual,7
+Sarawak,Saratok,2021,visual,16
+Sarawak,Sarikei,2021,visual,240
+Sarawak,Selangau,2021,visual,16
+Sarawak,Serian,2021,visual,113
+Sarawak,Sibu,2021,visual,615
+Sarawak,Simunjan,2021,visual,44
+Sarawak,Song,2021,visual,24
+Sarawak,Sri Aman,2021,visual,223
+Sarawak,Tatau,2021,visual,13
+Sarawak,Overall,2021,visual,4780
+Selangor,Gombak,2021,visual,958
+Selangor,Hulu Langat,2021,visual,1270
+Selangor,Hulu Selangor,2021,visual,378
+Selangor,Klang,2021,visual,1429
+Selangor,Kuala Langat,2021,visual,431
+Selangor,Kuala Selangor,2021,visual,406
+Selangor,Petaling,2021,visual,646
+Selangor,Sabak Bernam,2021,visual,298
+Selangor,Sepang,2021,visual,273
+Selangor,Shah Alam,2021,visual,643
+Selangor,Subang Jaya,2021,visual,803
+Selangor,Overall,2021,visual,7535
+Terengganu,Besut,2021,visual,360
+Terengganu,Dungun,2021,visual,354
+Terengganu,Hulu Terengganu,2021,visual,196
+Terengganu,Kemaman,2021,visual,373
+Terengganu,Kuala Terengganu,2021,visual,947
+Terengganu,Marang,2021,visual,349
+Terengganu,Setiu,2021,visual,154
+Terengganu,Overall,2021,visual,2733
+W.P Kuala Lumpur,W.P Kuala Lumpur,2021,visual,3980
+W.P Labuan,W.P Labuan,2021,visual,137
+W.P Putrajaya,W.P Putrajaya,2021,visual,183
+ Overall,Overall,2021,visual,55112
+Johor,Batu Pahat,2018,hearing,630
+Johor,Johor Bahru,2018,hearing,1265
+Johor,Kluang,2018,hearing,328
+Johor,Kota Tinggi,2018,hearing,196
+Johor,Kulaijaya,2018,hearing,242
+Johor,Ledang,2018,hearing,208
+Johor,Mersing,2018,hearing,78
+Johor,Muar,2018,hearing,374
+Johor,Pontian,2018,hearing,229
+Johor,Segamat,2018,hearing,332
+Johor,Overall,2018,hearing,3882
+Kedah,Baling,2018,hearing,247
+Kedah,Bandar Baharu,2018,hearing,80
+Kedah,Kota Setar,2018,hearing,575
+Kedah,Kuala Muda,2018,hearing,829
+Kedah,Kubang Pasu,2018,hearing,275
+Kedah,Kulim,2018,hearing,392
+Kedah,Padang Terap,2018,hearing,94
+Kedah,Pendang,2018,hearing,146
+Kedah,Pokok Sena,2018,hearing,71
+Kedah,Pulau Langkawi,2018,hearing,78
+Kedah,Sik,2018,hearing,157
+Kedah,Yan,2018,hearing,88
+Kedah,Overall,2018,hearing,3032
+Kelantan,Jajahah Jeli,2018,hearing,68
+Kelantan,Bachok,2018,hearing,268
+Kelantan,Gua Musang,2018,hearing,101
+Kelantan,Kota Bharu,2018,hearing,530
+Kelantan,Kuala Krai,2018,hearing,158
+Kelantan,Machang,2018,hearing,165
+Kelantan,Pasir Mas,2018,hearing,353
+Kelantan,Pasir Puteh,2018,hearing,172
+Kelantan,Tanah Merah,2018,hearing,134
+Kelantan,Tumpat,2018,hearing,273
+Kelantan,Overall,2018,hearing,2222
+Melaka,Alor Gajah,2018,hearing,418
+Melaka,Jasin,2018,hearing,351
+Melaka,Melaka Tengah,2018,hearing,1277
+Melaka,Overall,2018,hearing,2046
+Negeri Sembilan,Jelebu,2018,hearing,74
+Negeri Sembilan,Jempol,2018,hearing,170
+Negeri Sembilan,Kuala Pilah,2018,hearing,155
+Negeri Sembilan,Port Dickson,2018,hearing,175
+Negeri Sembilan,Rembau,2018,hearing,95
+Negeri Sembilan,Seremban,2018,hearing,861
+Negeri Sembilan,Tampin,2018,hearing,137
+Negeri Sembilan,Overall,2018,hearing,1667
+Pahang,Bentong,2018,hearing,124
+Pahang,Bera,2018,hearing,124
+Pahang,Cameron Highlands,2018,hearing,25
+Pahang,Jerantut,2018,hearing,110
+Pahang,Kuantan,2018,hearing,639
+Pahang,Lipis,2018,hearing,134
+Pahang,Maran,2018,hearing,123
+Pahang,Pekan,2018,hearing,124
+Pahang,Raub,2018,hearing,117
+Pahang,Rompin,2018,hearing,116
+Pahang,Temerloh,2018,hearing,208
+Pahang,Overall,2018,hearing,1844
+Perak,Batang Padang,2018,hearing,175
+Perak,Hilir Perak,2018,hearing,263
+Perak,Kampar,2018,hearing,109
+Perak,Kerian,2018,hearing,237
+Perak,Kinta,2018,hearing,906
+Perak,Kuala Kangsar,2018,hearing,280
+Perak,Larut/ Matang/ Selama,2018,hearing,523
+Perak,Manjung,2018,hearing,295
+Perak,Perak Tengah,2018,hearing,134
+Perak,Bagan Datuk,2018,hearing,0
+Perak,Overall,2018,hearing,3026
+Perlis,Perlis,2018,hearing,303
+Pulau Pinang,Barat Daya,2018,hearing,203
+Pulau Pinang,Seberang Perai Selatan,2018,hearing,247
+Pulau Pinang,Seberang Perai Tengah,2018,hearing,527
+Pulau Pinang,Seberang Perai Utara,2018,hearing,411
+Pulau Pinang,Timur Laut,2018,hearing,973
+Pulau Pinang,Overall,2018,hearing,2361
+Sabah,Beaufort,2018,hearing,60
+Sabah,Beluran,2018,hearing,23
+Sabah,Kemabong,2018,hearing,1
+Sabah,Keningau,2018,hearing,144
+Sabah,Kota Belud,2018,hearing,64
+Sabah,Kota Kinabalu,2018,hearing,396
+Sabah,Kota Kinabatangan,2018,hearing,19
+Sabah,Kota Marudu,2018,hearing,54
+Sabah,Kuala Penyu,2018,hearing,8
+Sabah,Kunak,2018,hearing,22
+Sabah,Lahad Datu,2018,hearing,82
+Sabah,Matunggong,2018,hearing,15
+Sabah,Membakut,2018,hearing,13
+Sabah,Menumbok,2018,hearing,4
+Sabah,Nabawan,2018,hearing,42
+Sabah,Papar,2018,hearing,78
+Sabah,Penampang,2018,hearing,86
+Sabah,Pitas,2018,hearing,40
+Sabah,Putatan,2018,hearing,46
+Sabah,Ranau,2018,hearing,90
+Sabah,Sandakan,2018,hearing,243
+Sabah,Semporna,2018,hearing,125
+Sabah,Sipitang,2018,hearing,26
+Sabah,Sook,2018,hearing,13
+Sabah,Tambunan,2018,hearing,32
+Sabah,Tamparuli,2018,hearing,64
+Sabah,Tawau,2018,hearing,316
+Sabah,Telupid,2018,hearing,19
+Sabah,Tenom,2018,hearing,72
+Sabah,Tongod,2018,hearing,27
+Sabah,Tuaran,2018,hearing,116
+Sabah,Overall,2018,hearing,2454
+Sarawak,Bau,2018,hearing,19
+Sarawak,Belaga,2018,hearing,4
+Sarawak,Betong,2018,hearing,147
+Sarawak,Bintulu,2018,hearing,152
+Sarawak,Dalat,2018,hearing,29
+Sarawak,Daro,2018,hearing,10
+Sarawak,Julau,2018,hearing,3
+Sarawak,Kanowit,2018,hearing,16
+Sarawak,Kapit,2018,hearing,63
+Sarawak,Kota Samarahan,2018,hearing,196
+Sarawak,Kuching,2018,hearing,515
+Sarawak,Limbang,2018,hearing,72
+Sarawak,Lubok Antu,2018,hearing,0
+Sarawak,Lundu,2018,hearing,14
+Sarawak,Maradong,2018,hearing,18
+Sarawak,Marudi,2018,hearing,0
+Sarawak,Matu,2018,hearing,14
+Sarawak,Miri,2018,hearing,293
+Sarawak,Mukah,2018,hearing,104
+Sarawak,Pakan,2018,hearing,0
+Sarawak,Saratok,2018,hearing,4
+Sarawak,Sarikei,2018,hearing,92
+Sarawak,Selangau,2018,hearing,3
+Sarawak,Serian,2018,hearing,41
+Sarawak,Sibu,2018,hearing,407
+Sarawak,Simunjan,2018,hearing,38
+Sarawak,Song,2018,hearing,10
+Sarawak,Sri Aman,2018,hearing,84
+Sarawak,Tatau,2018,hearing,9
+Sarawak,Overall,2018,hearing,2362
+Selangor,Gombak,2018,hearing,763
+Selangor,Hulu Langat,2018,hearing,1021
+Selangor,Hulu Selangor,2018,hearing,255
+Selangor,Klang,2018,hearing,977
+Selangor,Kuala Langat,2018,hearing,229
+Selangor,Kuala Selangor,2018,hearing,272
+Selangor,Petaling,2018,hearing,578
+Selangor,Sabak Bernam,2018,hearing,135
+Selangor,Sepang,2018,hearing,167
+Selangor,Shah Alam,2018,hearing,533
+Selangor,Subang Jaya,2018,hearing,623
+Selangor,Overall,2018,hearing,5553
+Terengganu,Besut,2018,hearing,275
+Terengganu,Dungun,2018,hearing,239
+Terengganu,Hulu Terengganu,2018,hearing,150
+Terengganu,Kemaman,2018,hearing,287
+Terengganu,Kuala Terengganu,2018,hearing,743
+Terengganu,Marang,2018,hearing,220
+Terengganu,Setiu,2018,hearing,122
+Terengganu,Overall,2018,hearing,2036
+W.P Kuala Lumpur,W.P Kuala Lumpur,2018,hearing,2755
+W.P Labuan,W.P Labuan,2018,hearing,67
+W.P Putrajaya,W.P Putrajaya,2018,hearing,59
+ Overall,Overall,2018,hearing,35669
+Johor,Batu Pahat,2019,hearing,690
+Johor,Johor Bahru,2019,hearing,1404
+Johor,Kluang,2019,hearing,360
+Johor,Kota Tinggi,2019,hearing,207
+Johor,Kulaijaya,2019,hearing,257
+Johor,Ledang,2019,hearing,219
+Johor,Mersing,2019,hearing,81
+Johor,Muar,2019,hearing,391
+Johor,Pontian,2019,hearing,247
+Johor,Segamat,2019,hearing,365
+Johor,Overall,2019,hearing,4221
+Kedah,Baling,2019,hearing,266
+Kedah,Bandar Baharu,2019,hearing,85
+Kedah,Kota Setar,2019,hearing,614
+Kedah,Kuala Muda,2019,hearing,883
+Kedah,Kubang Pasu,2019,hearing,302
+Kedah,Kulim,2019,hearing,407
+Kedah,Padang Terap,2019,hearing,101
+Kedah,Pendang,2019,hearing,157
+Kedah,Pokok Sena,2019,hearing,78
+Kedah,Pulau Langkawi,2019,hearing,86
+Kedah,Sik,2019,hearing,167
+Kedah,Yan,2019,hearing,88
+Kedah,Overall,2019,hearing,3234
+Kelantan,Jajahah Jeli,2019,hearing,71
+Kelantan,Bachok,2019,hearing,279
+Kelantan,Gua Musang,2019,hearing,109
+Kelantan,Kota Bharu,2019,hearing,588
+Kelantan,Kuala Krai,2019,hearing,167
+Kelantan,Machang,2019,hearing,173
+Kelantan,Pasir Mas,2019,hearing,366
+Kelantan,Pasir Puteh,2019,hearing,186
+Kelantan,Tanah Merah,2019,hearing,138
+Kelantan,Tumpat,2019,hearing,286
+Kelantan,Overall,2019,hearing,2363
+Melaka,Alor Gajah,2019,hearing,435
+Melaka,Jasin,2019,hearing,381
+Melaka,Melaka Tengah,2019,hearing,1407
+Melaka,Overall,2019,hearing,2223
+Negeri Sembilan,Jelebu,2019,hearing,72
+Negeri Sembilan,Jempol,2019,hearing,183
+Negeri Sembilan,Kuala Pilah,2019,hearing,168
+Negeri Sembilan,Port Dickson,2019,hearing,191
+Negeri Sembilan,Rembau,2019,hearing,98
+Negeri Sembilan,Seremban,2019,hearing,932
+Negeri Sembilan,Tampin,2019,hearing,144
+Negeri Sembilan,Overall,2019,hearing,1788
+Pahang,Bentong,2019,hearing,137
+Pahang,Bera,2019,hearing,131
+Pahang,Cameron Highlands,2019,hearing,24
+Pahang,Jerantut,2019,hearing,114
+Pahang,Kuantan,2019,hearing,675
+Pahang,Lipis,2019,hearing,143
+Pahang,Maran,2019,hearing,129
+Pahang,Pekan,2019,hearing,132
+Pahang,Raub,2019,hearing,123
+Pahang,Rompin,2019,hearing,124
+Pahang,Temerloh,2019,hearing,228
+Pahang,Overall,2019,hearing,1960
+Perak,Batang Padang,2019,hearing,200
+Perak,Hilir Perak,2019,hearing,279
+Perak,Hulu Perak,2019,hearing,104
+Perak,Kampar,2019,hearing,114
+Perak,Kerian,2019,hearing,259
+Perak,Kinta,2019,hearing,991
+Perak,Kuala Kangsar,2019,hearing,285
+Perak,Larut/ Matang/ Selama,2019,hearing,557
+Perak,Manjung,2019,hearing,314
+Perak,Perak Tengah,2019,hearing,136
+Perak,Bagan Datuk,2019,hearing,0
+Perak,Overall,2019,hearing,3239
+Perlis,Perlis,2019,hearing,347
+Pulau Pinang,Barat Daya,2019,hearing,209
+Pulau Pinang,Seberang Perai Selatan,2019,hearing,255
+Pulau Pinang,Seberang Perai Tengah,2019,hearing,562
+Pulau Pinang,Seberang Perai Utara,2019,hearing,432
+Pulau Pinang,Timur Laut,2019,hearing,1060
+Pulau Pinang,Overall,2019,hearing,2518
+Sabah,Beaufort,2019,hearing,64
+Sabah,Beluran,2019,hearing,29
+Sabah,Kemabong,2019,hearing,0
+Sabah,Keningau,2019,hearing,152
+Sabah,Kota Belud,2019,hearing,64
+Sabah,Kota Kinabalu,2019,hearing,422
+Sabah,Kota Kinabatangan,2019,hearing,21
+Sabah,Kota Marudu,2019,hearing,53
+Sabah,Kuala Penyu,2019,hearing,8
+Sabah,Kudat,2019,hearing,119
+Sabah,Kunak,2019,hearing,24
+Sabah,Lahad Datu,2019,hearing,89
+Sabah,Matunggong,2019,hearing,15
+Sabah,Membakut,2019,hearing,12
+Sabah,Menumbok,2019,hearing,3
+Sabah,Nabawan,2019,hearing,45
+Sabah,Papar,2019,hearing,93
+Sabah,Penampang,2019,hearing,97
+Sabah,Pitas,2019,hearing,44
+Sabah,Putatan,2019,hearing,56
+Sabah,Ranau,2019,hearing,94
+Sabah,Sandakan,2019,hearing,257
+Sabah,Semporna,2019,hearing,136
+Sabah,Sipitang,2019,hearing,25
+Sabah,Sook,2019,hearing,15
+Sabah,Tamparuli,2019,hearing,65
+Sabah,Tawau,2019,hearing,350
+Sabah,Telupid,2019,hearing,23
+Sabah,Tenom,2019,hearing,72
+Sabah,Tuaran,2019,hearing,120
+Sabah,Overall,2019,hearing,2636
+Sarawak,Bau,2019,hearing,21
+Sarawak,Belaga,2019,hearing,3
+Sarawak,Betong,2019,hearing,150
+Sarawak,Bintulu,2019,hearing,163
+Sarawak,Dalat,2019,hearing,32
+Sarawak,Daro,2019,hearing,11
+Sarawak,Julau,2019,hearing,3
+Sarawak,Kanowit,2019,hearing,25
+Sarawak,Kapit,2019,hearing,74
+Sarawak,Kota Samarahan,2019,hearing,210
+Sarawak,Kuching,2019,hearing,553
+Sarawak,Limbang,2019,hearing,79
+Sarawak,Lubok Antu,2019,hearing,0
+Sarawak,Lundu,2019,hearing,14
+Sarawak,Maradong,2019,hearing,17
+Sarawak,Marudi,2019,hearing,0
+Sarawak,Miri,2019,hearing,320
+Sarawak,Mukah,2019,hearing,105
+Sarawak,Pakan,2019,hearing,0
+Sarawak,Saratok,2019,hearing,5
+Sarawak,Sarikei,2019,hearing,100
+Sarawak,Selangau,2019,hearing,3
+Sarawak,Serian,2019,hearing,45
+Sarawak,Sibu,2019,hearing,448
+Sarawak,Simunjan,2019,hearing,38
+Sarawak,Song,2019,hearing,9
+Sarawak,Sri Aman,2019,hearing,88
+Sarawak,Tatau,2019,hearing,8
+Sarawak,Overall,2019,hearing,2545
+Selangor,Gombak,2019,hearing,831
+Selangor,Hulu Langat,2019,hearing,1099
+Selangor,Hulu Selangor,2019,hearing,266
+Selangor,Klang,2019,hearing,1074
+Selangor,Kuala Langat,2019,hearing,238
+Selangor,Kuala Selangor,2019,hearing,291
+Selangor,Petaling,2019,hearing,609
+Selangor,Sabak Bernam,2019,hearing,141
+Selangor,Sepang,2019,hearing,173
+Selangor,Shah Alam,2019,hearing,586
+Selangor,Subang Jaya,2019,hearing,697
+Selangor,Overall,2019,hearing,6005
+Terengganu,Besut,2019,hearing,296
+Terengganu,Dungun,2019,hearing,251
+Terengganu,Hulu Terengganu,2019,hearing,157
+Terengganu,Kemaman,2019,hearing,323
+Terengganu,Kuala Terengganu,2019,hearing,844
+Terengganu,Marang,2019,hearing,241
+Terengganu,Setiu,2019,hearing,126
+Terengganu,Overall,2019,hearing,2238
+W.P Kuala Lumpur,W.P Kuala Lumpur,2019,hearing,2924
+W.P Labuan,W.P Labuan,2019,hearing,80
+ Overall,Overall,2019,hearing,38404
+Johor,Batu Pahat,2020,hearing,714
+Johor,Johor Bahru,2020,hearing,1474
+Johor,Kluang,2020,hearing,375
+Johor,Kota Tinggi,2020,hearing,220
+Johor,Kulaijaya,2020,hearing,268
+Johor,Ledang,2020,hearing,223
+Johor,Mersing,2020,hearing,86
+Johor,Muar,2020,hearing,411
+Johor,Pontian,2020,hearing,258
+Johor,Segamat,2020,hearing,388
+Johor,Overall,2020,hearing,4417
+Kedah,Baling,2020,hearing,276
+Kedah,Bandar Baharu,2020,hearing,86
+Kedah,Kota Setar,2020,hearing,650
+Kedah,Kuala Muda,2020,hearing,934
+Kedah,Kubang Pasu,2020,hearing,311
+Kedah,Kulim,2020,hearing,435
+Kedah,Padang Terap,2020,hearing,104
+Kedah,Pendang,2020,hearing,164
+Kedah,Pokok Sena,2020,hearing,86
+Kedah,Pulau Langkawi,2020,hearing,89
+Kedah,Sik,2020,hearing,177
+Kedah,Yan,2020,hearing,89
+Kedah,Overall,2020,hearing,3401
+Kelantan,Jajahah Jeli,2020,hearing,76
+Kelantan,Bachok,2020,hearing,302
+Kelantan,Gua Musang,2020,hearing,121
+Kelantan,Kota Bharu,2020,hearing,640
+Kelantan,Kuala Krai,2020,hearing,179
+Kelantan,Machang,2020,hearing,194
+Kelantan,Pasir Mas,2020,hearing,384
+Kelantan,Pasir Puteh,2020,hearing,200
+Kelantan,Tanah Merah,2020,hearing,154
+Kelantan,Tumpat,2020,hearing,319
+Kelantan,Overall,2020,hearing,2569
+Melaka,Alor Gajah,2020,hearing,456
+Melaka,Jasin,2020,hearing,405
+Melaka,Melaka Tengah,2020,hearing,1502
+Melaka,Overall,2020,hearing,2363
+Negeri Sembilan,Jelebu,2020,hearing,74
+Negeri Sembilan,Jempol,2020,hearing,194
+Negeri Sembilan,Kuala Pilah,2020,hearing,177
+Negeri Sembilan,Port Dickson,2020,hearing,194
+Negeri Sembilan,Rembau,2020,hearing,103
+Negeri Sembilan,Seremban,2020,hearing,991
+Negeri Sembilan,Tampin,2020,hearing,159
+Negeri Sembilan,Overall,2020,hearing,1892
+Pahang,Bentong,2020,hearing,139
+Pahang,Bera,2020,hearing,135
+Pahang,Cameron Highlands,2020,hearing,24
+Pahang,Jerantut,2020,hearing,116
+Pahang,Kuantan,2020,hearing,698
+Pahang,Lipis,2020,hearing,145
+Pahang,Maran,2020,hearing,132
+Pahang,Pekan,2020,hearing,136
+Pahang,Raub,2020,hearing,129
+Pahang,Rompin,2020,hearing,124
+Pahang,Temerloh,2020,hearing,240
+Pahang,Overall,2020,hearing,2018
+Perak,Batang Padang,2020,hearing,209
+Perak,Hilir Perak,2020,hearing,293
+Perak,Hulu Perak,2020,hearing,108
+Perak,Kampar,2020,hearing,122
+Perak,Kerian,2020,hearing,275
+Perak,Kinta,2020,hearing,1031
+Perak,Kuala Kangsar,2020,hearing,298
+Perak,Larut/ Matang/ Selama,2020,hearing,589
+Perak,Manjung,2020,hearing,328
+Perak,Perak Tengah,2020,hearing,140
+Perak,Bagan Datuk,2020,hearing,0
+Perak,Overall,2020,hearing,3393
+Perlis,Perlis,2020,hearing,384
+Pulau Pinang,Barat Daya,2020,hearing,217
+Pulau Pinang,Seberang Perai Selatan,2020,hearing,265
+Pulau Pinang,Seberang Perai Tengah,2020,hearing,589
+Pulau Pinang,Seberang Perai Utara,2020,hearing,460
+Pulau Pinang,Timur Laut,2020,hearing,1102
+Pulau Pinang,Overall,2020,hearing,2633
+Sabah,Beaufort,2020,hearing,66
+Sabah,Beluran,2020,hearing,31
+Sabah,Kemabong,2020,hearing,1
+Sabah,Keningau,2020,hearing,156
+Sabah,Kota Belud,2020,hearing,67
+Sabah,Kota Kinabalu,2020,hearing,440
+Sabah,Kota Kinabatangan,2020,hearing,23
+Sabah,Kota Marudu,2020,hearing,53
+Sabah,Kuala Penyu,2020,hearing,8
+Sabah,Kudat,2020,hearing,123
+Sabah,Kunak,2020,hearing,31
+Sabah,Lahad Datu,2020,hearing,91
+Sabah,Matunggong,2020,hearing,15
+Sabah,Membakut,2020,hearing,14
+Sabah,Menumbok,2020,hearing,3
+Sabah,Nabawan,2020,hearing,47
+Sabah,Papar,2020,hearing,94
+Sabah,Penampang,2020,hearing,101
+Sabah,Pitas,2020,hearing,45
+Sabah,Putatan,2020,hearing,60
+Sabah,Ranau,2020,hearing,102
+Sabah,Sandakan,2020,hearing,272
+Sabah,Semporna,2020,hearing,141
+Sabah,Sipitang,2020,hearing,30
+Sabah,Tambunan,2020,hearing,41
+Sabah,Tamparuli,2020,hearing,66
+Sabah,Tawau,2020,hearing,359
+Sabah,Telupid,2020,hearing,24
+Sabah,Tenom,2020,hearing,72
+Sabah,Tongod,2020,hearing,31
+Sabah,Tuaran,2020,hearing,124
+Sabah,Overall,2020,hearing,2746
+Sarawak,Bau,2020,hearing,21
+Sarawak,Belaga,2020,hearing,4
+Sarawak,Betong,2020,hearing,159
+Sarawak,Bintulu,2020,hearing,168
+Sarawak,Dalat,2020,hearing,33
+Sarawak,Daro,2020,hearing,13
+Sarawak,Julau,2020,hearing,4
+Sarawak,Kanowit,2020,hearing,26
+Sarawak,Kapit,2020,hearing,76
+Sarawak,Kota Samarahan,2020,hearing,214
+Sarawak,Kuching,2020,hearing,568
+Sarawak,Lawas,2020,hearing,8
+Sarawak,Limbang,2020,hearing,81
+Sarawak,Lubok Antu,2020,hearing,0
+Sarawak,Lundu,2020,hearing,14
+Sarawak,Maradong,2020,hearing,18
+Sarawak,Marudi,2020,hearing,0
+Sarawak,Matu,2020,hearing,13
+Sarawak,Miri,2020,hearing,342
+Sarawak,Mukah,2020,hearing,107
+Sarawak,Pakan,2020,hearing,6
+Sarawak,Saratok,2020,hearing,6
+Sarawak,Sarikei,2020,hearing,107
+Sarawak,Selangau,2020,hearing,4
+Sarawak,Serian,2020,hearing,45
+Sarawak,Sibu,2020,hearing,479
+Sarawak,Simunjan,2020,hearing,39
+Sarawak,Song,2020,hearing,12
+Sarawak,Sri Aman,2020,hearing,89
+Sarawak,Overall,2020,hearing,2665
+Selangor,Gombak,2020,hearing,876
+Selangor,Hulu Langat,2020,hearing,1139
+Selangor,Hulu Selangor,2020,hearing,279
+Selangor,Klang,2020,hearing,1119
+Selangor,Kuala Langat,2020,hearing,253
+Selangor,Kuala Selangor,2020,hearing,301
+Selangor,Petaling,2020,hearing,625
+Selangor,Sabak Bernam,2020,hearing,153
+Selangor,Sepang,2020,hearing,185
+Selangor,Shah Alam,2020,hearing,608
+Selangor,Subang Jaya,2020,hearing,734
+Selangor,Overall,2020,hearing,6272
+Terengganu,Besut,2020,hearing,307
+Terengganu,Dungun,2020,hearing,262
+Terengganu,Hulu Terengganu,2020,hearing,157
+Terengganu,Kemaman,2020,hearing,339
+Terengganu,Kuala Terengganu,2020,hearing,881
+Terengganu,Marang,2020,hearing,254
+Terengganu,Setiu,2020,hearing,130
+Terengganu,Overall,2020,hearing,2330
+W.P Kuala Lumpur,W.P Kuala Lumpur,2020,hearing,3044
+W.P Labuan,W.P Labuan,2020,hearing,85
+W.P Putrajaya,W.P Putrajaya,2020,hearing,107
+ Overall,Overall,2020,hearing,40319
+Johor,Batu Pahat,2021,hearing,741
+Johor,Johor Bahru,2021,hearing,1540
+Johor,Kluang,2021,hearing,388
+Johor,Kota Tinggi,2021,hearing,226
+Johor,Kulaijaya,2021,hearing,264
+Johor,Ledang,2021,hearing,226
+Johor,Mersing,2021,hearing,92
+Johor,Muar,2021,hearing,424
+Johor,Pontian,2021,hearing,269
+Johor,Segamat,2021,hearing,397
+Johor,Overall,2021,hearing,4567
+Kedah,Baling,2021,hearing,285
+Kedah,Bandar Baharu,2021,hearing,92
+Kedah,Kota Setar,2021,hearing,679
+Kedah,Kuala Muda,2021,hearing,975
+Kedah,Kubang Pasu,2021,hearing,324
+Kedah,Kulim,2021,hearing,453
+Kedah,Padang Terap,2021,hearing,108
+Kedah,Pendang,2021,hearing,170
+Kedah,Pokok Sena,2021,hearing,89
+Kedah,Pulau Langkawi,2021,hearing,93
+Kedah,Sik,2021,hearing,182
+Kedah,Yan,2021,hearing,101
+Kedah,Overall,2021,hearing,3551
+Kelantan,Jajahah Jeli,2021,hearing,80
+Kelantan,Bachok,2021,hearing,311
+Kelantan,Gua Musang,2021,hearing,122
+Kelantan,Kota Bharu,2021,hearing,708
+Kelantan,Kuala Krai,2021,hearing,188
+Kelantan,Machang,2021,hearing,201
+Kelantan,Pasir Mas,2021,hearing,397
+Kelantan,Pasir Puteh,2021,hearing,216
+Kelantan,Tanah Merah,2021,hearing,159
+Kelantan,Tumpat,2021,hearing,330
+Kelantan,Overall,2021,hearing,2712
+Melaka,Alor Gajah,2021,hearing,477
+Melaka,Jasin,2021,hearing,417
+Melaka,Melaka Tengah,2021,hearing,1575
+Melaka,Overall,2021,hearing,2469
+Negeri Sembilan,Jelebu,2021,hearing,76
+Negeri Sembilan,Jempol,2021,hearing,195
+Negeri Sembilan,Kuala Pilah,2021,hearing,178
+Negeri Sembilan,Port Dickson,2021,hearing,208
+Negeri Sembilan,Rembau,2021,hearing,111
+Negeri Sembilan,Seremban,2021,hearing,1036
+Negeri Sembilan,Tampin,2021,hearing,166
+Negeri Sembilan,Overall,2021,hearing,1970
+Pahang,Bentong,2021,hearing,143
+Pahang,Bera,2021,hearing,136
+Pahang,Cameron Highlands,2021,hearing,25
+Pahang,Jerantut,2021,hearing,115
+Pahang,Kuantan,2021,hearing,727
+Pahang,Lipis,2021,hearing,147
+Pahang,Maran,2021,hearing,132
+Pahang,Pekan,2021,hearing,139
+Pahang,Raub,2021,hearing,133
+Pahang,Rompin,2021,hearing,127
+Pahang,Temerloh,2021,hearing,256
+Pahang,Overall,2021,hearing,2080
+Perak,Bagan Datuk,2021,hearing,5
+Perak,Batang Padang,2021,hearing,214
+Perak,Hilir Perak,2021,hearing,298
+Perak,Hulu Perak,2021,hearing,113
+Perak,Kampar,2021,hearing,127
+Perak,Kerian,2021,hearing,278
+Perak,Kinta,2021,hearing,1110
+Perak,Kuala Kangsar,2021,hearing,310
+Perak,Larut/ Matang/ Selama,2021,hearing,581
+Perak,Manjung,2021,hearing,336
+Perak,Muallim,2021,hearing,3
+Perak,Perak Tengah,2021,hearing,142
+Perak,Overall,2021,hearing,3517
+Perlis,Perlis,2021,hearing,404
+Pulau Pinang,Barat Daya,2021,hearing,223
+Pulau Pinang,Seberang Perai Selatan,2021,hearing,278
+Pulau Pinang,Seberang Perai Tengah,2021,hearing,618
+Pulau Pinang,Seberang Perai Utara,2021,hearing,481
+Pulau Pinang,Timur Laut,2021,hearing,1132
+Pulau Pinang,Overall,2021,hearing,2732
+Sabah,Beaufort,2021,hearing,66
+Sabah,Beluran,2021,hearing,36
+Sabah,Kemabong,2021,hearing,1
+Sabah,Keningau,2021,hearing,159
+Sabah,Kota Belud,2021,hearing,68
+Sabah,Kota Kinabalu,2021,hearing,461
+Sabah,Kota Kinabatangan,2021,hearing,25
+Sabah,Kota Marudu,2021,hearing,55
+Sabah,Kuala Penyu,2021,hearing,8
+Sabah,Kudat,2021,hearing,127
+Sabah,Kunak,2021,hearing,32
+Sabah,Lahad Datu,2021,hearing,92
+Sabah,Matunggong,2021,hearing,17
+Sabah,Membakut,2021,hearing,14
+Sabah,Menumbok,2021,hearing,4
+Sabah,Nabawan,2021,hearing,47
+Sabah,Papar,2021,hearing,95
+Sabah,Penampang,2021,hearing,106
+Sabah,Pitas,2021,hearing,48
+Sabah,Putatan,2021,hearing,67
+Sabah,Ranau,2021,hearing,109
+Sabah,Sandakan,2021,hearing,280
+Sabah,Semporna,2021,hearing,141
+Sabah,Sipitang,2021,hearing,32
+Sabah,Sook,2021,hearing,16
+Sabah,Tambunan,2021,hearing,45
+Sabah,Tamparuli,2021,hearing,67
+Sabah,Tawau,2021,hearing,366
+Sabah,Telupid,2021,hearing,26
+Sabah,Tenom,2021,hearing,72
+Sabah,Tongod,2021,hearing,32
+Sabah,Tuaran,2021,hearing,131
+Sabah,Overall,2021,hearing,2845
+Sarawak,Bau,2021,hearing,25
+Sarawak,Belaga,2021,hearing,4
+Sarawak,Betong,2021,hearing,158
+Sarawak,Bintulu,2021,hearing,169
+Sarawak,Dalat,2021,hearing,34
+Sarawak,Daro,2021,hearing,15
+Sarawak,Julau,2021,hearing,6
+Sarawak,Kanowit,2021,hearing,29
+Sarawak,Kapit,2021,hearing,77
+Sarawak,Kota Samarahan,2021,hearing,207
+Sarawak,Kuching,2021,hearing,603
+Sarawak,Lawas,2021,hearing,12
+Sarawak,Limbang,2021,hearing,81
+Sarawak,Lubok Antu,2021,hearing,0
+Sarawak,Lundu,2021,hearing,16
+Sarawak,Maradong,2021,hearing,20
+Sarawak,Marudi,2021,hearing,1
+Sarawak,Matu,2021,hearing,13
+Sarawak,Miri,2021,hearing,353
+Sarawak,Mukah,2021,hearing,111
+Sarawak,Pakan,2021,hearing,6
+Sarawak,Saratok,2021,hearing,8
+Sarawak,Sarikei,2021,hearing,105
+Sarawak,Selangau,2021,hearing,6
+Sarawak,Serian,2021,hearing,47
+Sarawak,Sibu,2021,hearing,488
+Sarawak,Simunjan,2021,hearing,36
+Sarawak,Song,2021,hearing,13
+Sarawak,Sri Aman,2021,hearing,90
+Sarawak,Tatau,2021,hearing,11
+Sarawak,Overall,2021,hearing,2744
+Selangor,Gombak,2021,hearing,908
+Selangor,Hulu Langat,2021,hearing,1162
+Selangor,Hulu Selangor,2021,hearing,287
+Selangor,Klang,2021,hearing,1156
+Selangor,Kuala Langat,2021,hearing,259
+Selangor,Kuala Selangor,2021,hearing,300
+Selangor,Petaling,2021,hearing,636
+Selangor,Sabak Bernam,2021,hearing,150
+Selangor,Sepang,2021,hearing,189
+Selangor,Shah Alam,2021,hearing,632
+Selangor,Subang Jaya,2021,hearing,787
+Selangor,Overall,2021,hearing,6466
+Terengganu,Besut,2021,hearing,314
+Terengganu,Dungun,2021,hearing,277
+Terengganu,Hulu Terengganu,2021,hearing,162
+Terengganu,Kemaman,2021,hearing,350
+Terengganu,Kuala Terengganu,2021,hearing,921
+Terengganu,Marang,2021,hearing,260
+Terengganu,Setiu,2021,hearing,136
+Terengganu,Overall,2021,hearing,2420
+W.P Kuala Lumpur,W.P Kuala Lumpur,2021,hearing,3133
+W.P Labuan,W.P Labuan,2021,hearing,90
+W.P Putrajaya,W.P Putrajaya,2021,hearing,119
+ Overall,Overall,2021,hearing,41819
+Johor,Batu Pahat,2018,speech,31
+Johor,Johor Bahru,2018,speech,116
+Johor,Kluang,2018,speech,24
+Johor,Kota Tinggi,2018,speech,32
+Johor,Kulaijaya,2018,speech,32
+Johor,Ledang,2018,speech,13
+Johor,Mersing,2018,speech,10
+Johor,Muar,2018,speech,23
+Johor,Pontian,2018,speech,13
+Johor,Segamat,2018,speech,14
+Johor,Overall,2018,speech,308
+Kedah,Baling,2018,speech,19
+Kedah,Bandar Baharu,2018,speech,16
+Kedah,Kota Setar,2018,speech,56
+Kedah,Kuala Muda,2018,speech,56
+Kedah,Kubang Pasu,2018,speech,31
+Kedah,Kulim,2018,speech,23
+Kedah,Padang Terap,2018,speech,15
+Kedah,Pendang,2018,speech,19
+Kedah,Pokok Sena,2018,speech,5
+Kedah,Pulau Langkawi,2018,speech,16
+Kedah,Sik,2018,speech,11
+Kedah,Yan,2018,speech,11
+Kedah,Overall,2018,speech,278
+Kelantan,Jajahah Jeli,2018,speech,9
+Kelantan,Bachok,2018,speech,10
+Kelantan,Gua Musang,2018,speech,18
+Kelantan,Kota Bharu,2018,speech,48
+Kelantan,Kuala Krai,2018,speech,13
+Kelantan,Machang,2018,speech,10
+Kelantan,Pasir Mas,2018,speech,29
+Kelantan,Pasir Puteh,2018,speech,48
+Kelantan,Tanah Merah,2018,speech,10
+Kelantan,Tumpat,2018,speech,30
+Kelantan,Overall,2018,speech,225
+Melaka,Alor Gajah,2018,speech,33
+Melaka,Jasin,2018,speech,29
+Melaka,Melaka Tengah,2018,speech,48
+Melaka,Overall,2018,speech,110
+Negeri Sembilan,Jelebu,2018,speech,6
+Negeri Sembilan,Jempol,2018,speech,5
+Negeri Sembilan,Kuala Pilah,2018,speech,5
+Negeri Sembilan,Port Dickson,2018,speech,8
+Negeri Sembilan,Rembau,2018,speech,4
+Negeri Sembilan,Seremban,2018,speech,34
+Negeri Sembilan,Tampin,2018,speech,13
+Negeri Sembilan,Overall,2018,speech,75
+Pahang,Bentong,2018,speech,5
+Pahang,Bera,2018,speech,7
+Pahang,Cameron Highlands,2018,speech,7
+Pahang,Jerantut,2018,speech,23
+Pahang,Kuantan,2018,speech,45
+Pahang,Lipis,2018,speech,13
+Pahang,Maran,2018,speech,11
+Pahang,Pekan,2018,speech,11
+Pahang,Raub,2018,speech,12
+Pahang,Rompin,2018,speech,22
+Pahang,Temerloh,2018,speech,21
+Pahang,Overall,2018,speech,177
+Perak,Batang Padang,2018,speech,8
+Perak,Hilir Perak,2018,speech,20
+Perak,Kampar,2018,speech,3
+Perak,Kerian,2018,speech,10
+Perak,Kinta,2018,speech,40
+Perak,Kuala Kangsar,2018,speech,10
+Perak,Larut/ Matang/ Selama,2018,speech,32
+Perak,Manjung,2018,speech,18
+Perak,Perak Tengah,2018,speech,14
+Perak,Bagan Datuk,2018,speech,0
+Perak,Overall,2018,speech,161
+Perlis,Perlis,2018,speech,55
+Pulau Pinang,Barat Daya,2018,speech,9
+Pulau Pinang,Seberang Perai Selatan,2018,speech,17
+Pulau Pinang,Seberang Perai Tengah,2018,speech,35
+Pulau Pinang,Seberang Perai Utara,2018,speech,23
+Pulau Pinang,Timur Laut,2018,speech,19
+Pulau Pinang,Overall,2018,speech,103
+Sabah,Beaufort,2018,speech,6
+Sabah,Beluran,2018,speech,3
+Sabah,Kemabong,2018,speech,1
+Sabah,Keningau,2018,speech,12
+Sabah,Kota Belud,2018,speech,9
+Sabah,Kota Kinabalu,2018,speech,28
+Sabah,Kota Kinabatangan,2018,speech,4
+Sabah,Kota Marudu,2018,speech,12
+Sabah,Kuala Penyu,2018,speech,3
+Sabah,Kunak,2018,speech,2
+Sabah,Lahad Datu,2018,speech,12
+Sabah,Matunggong,2018,speech,2
+Sabah,Membakut,2018,speech,4
+Sabah,Menumbok,2018,speech,1
+Sabah,Nabawan,2018,speech,5
+Sabah,Papar,2018,speech,4
+Sabah,Penampang,2018,speech,4
+Sabah,Pitas,2018,speech,4
+Sabah,Putatan,2018,speech,4
+Sabah,Ranau,2018,speech,6
+Sabah,Sandakan,2018,speech,31
+Sabah,Semporna,2018,speech,16
+Sabah,Sipitang,2018,speech,2
+Sabah,Sook,2018,speech,6
+Sabah,Tambunan,2018,speech,7
+Sabah,Tamparuli,2018,speech,4
+Sabah,Tawau,2018,speech,21
+Sabah,Telupid,2018,speech,0
+Sabah,Tenom,2018,speech,14
+Sabah,Tongod,2018,speech,6
+Sabah,Tuaran,2018,speech,8
+Sabah,Overall,2018,speech,259
+Sarawak,Bau,2018,speech,4
+Sarawak,Belaga,2018,speech,1
+Sarawak,Betong,2018,speech,20
+Sarawak,Bintulu,2018,speech,12
+Sarawak,Dalat,2018,speech,3
+Sarawak,Daro,2018,speech,0
+Sarawak,Julau,2018,speech,0
+Sarawak,Kanowit,2018,speech,1
+Sarawak,Kapit,2018,speech,11
+Sarawak,Kota Samarahan,2018,speech,6
+Sarawak,Kuching,2018,speech,51
+Sarawak,Limbang,2018,speech,12
+Sarawak,Lubok Antu,2018,speech,0
+Sarawak,Lundu,2018,speech,1
+Sarawak,Maradong,2018,speech,2
+Sarawak,Marudi,2018,speech,0
+Sarawak,Matu,2018,speech,2
+Sarawak,Miri,2018,speech,15
+Sarawak,Mukah,2018,speech,11
+Sarawak,Pakan,2018,speech,0
+Sarawak,Saratok,2018,speech,0
+Sarawak,Sarikei,2018,speech,12
+Sarawak,Selangau,2018,speech,0
+Sarawak,Serian,2018,speech,7
+Sarawak,Sibu,2018,speech,20
+Sarawak,Simunjan,2018,speech,3
+Sarawak,Song,2018,speech,3
+Sarawak,Sri Aman,2018,speech,8
+Sarawak,Tatau,2018,speech,3
+Sarawak,Overall,2018,speech,210
+Selangor,Gombak,2018,speech,30
+Selangor,Hulu Langat,2018,speech,46
+Selangor,Hulu Selangor,2018,speech,13
+Selangor,Klang,2018,speech,78
+Selangor,Kuala Langat,2018,speech,21
+Selangor,Kuala Selangor,2018,speech,19
+Selangor,Petaling,2018,speech,26
+Selangor,Sabak Bernam,2018,speech,16
+Selangor,Sepang,2018,speech,12
+Selangor,Shah Alam,2018,speech,26
+Selangor,Subang Jaya,2018,speech,22
+Selangor,Overall,2018,speech,309
+Terengganu,Besut,2018,speech,24
+Terengganu,Dungun,2018,speech,9
+Terengganu,Hulu Terengganu,2018,speech,7
+Terengganu,Kemaman,2018,speech,16
+Terengganu,Kuala Terengganu,2018,speech,33
+Terengganu,Marang,2018,speech,20
+Terengganu,Setiu,2018,speech,5
+Terengganu,Overall,2018,speech,114
+W.P Kuala Lumpur,W.P Kuala Lumpur,2018,speech,106
+W.P Labuan,W.P Labuan,2018,speech,19
+W.P Putrajaya,W.P Putrajaya,2018,speech,1
+ Overall,Overall,2018,speech,2510
+Johor,Batu Pahat,2019,speech,34
+Johor,Johor Bahru,2019,speech,119
+Johor,Kluang,2019,speech,27
+Johor,Kota Tinggi,2019,speech,36
+Johor,Kulaijaya,2019,speech,34
+Johor,Ledang,2019,speech,14
+Johor,Mersing,2019,speech,11
+Johor,Muar,2019,speech,28
+Johor,Pontian,2019,speech,14
+Johor,Segamat,2019,speech,14
+Johor,Overall,2019,speech,331
+Kedah,Baling,2019,speech,22
+Kedah,Bandar Baharu,2019,speech,16
+Kedah,Kota Setar,2019,speech,49
+Kedah,Kuala Muda,2019,speech,67
+Kedah,Kubang Pasu,2019,speech,37
+Kedah,Kulim,2019,speech,26
+Kedah,Padang Terap,2019,speech,18
+Kedah,Pendang,2019,speech,23
+Kedah,Pokok Sena,2019,speech,6
+Kedah,Pulau Langkawi,2019,speech,18
+Kedah,Sik,2019,speech,14
+Kedah,Yan,2019,speech,11
+Kedah,Overall,2019,speech,307
+Kelantan,Jajahah Jeli,2019,speech,10
+Kelantan,Bachok,2019,speech,12
+Kelantan,Gua Musang,2019,speech,18
+Kelantan,Kota Bharu,2019,speech,52
+Kelantan,Kuala Krai,2019,speech,15
+Kelantan,Machang,2019,speech,11
+Kelantan,Pasir Mas,2019,speech,31
+Kelantan,Pasir Puteh,2019,speech,52
+Kelantan,Tanah Merah,2019,speech,12
+Kelantan,Tumpat,2019,speech,34
+Kelantan,Overall,2019,speech,247
+Melaka,Alor Gajah,2019,speech,38
+Melaka,Jasin,2019,speech,29
+Melaka,Melaka Tengah,2019,speech,53
+Melaka,Overall,2019,speech,120
+Negeri Sembilan,Jelebu,2019,speech,6
+Negeri Sembilan,Jempol,2019,speech,6
+Negeri Sembilan,Kuala Pilah,2019,speech,6
+Negeri Sembilan,Port Dickson,2019,speech,9
+Negeri Sembilan,Rembau,2019,speech,5
+Negeri Sembilan,Seremban,2019,speech,36
+Negeri Sembilan,Tampin,2019,speech,15
+Negeri Sembilan,Overall,2019,speech,83
+Pahang,Bentong,2019,speech,7
+Pahang,Bera,2019,speech,8
+Pahang,Cameron Highlands,2019,speech,7
+Pahang,Jerantut,2019,speech,24
+Pahang,Kuantan,2019,speech,45
+Pahang,Lipis,2019,speech,14
+Pahang,Maran,2019,speech,12
+Pahang,Pekan,2019,speech,13
+Pahang,Raub,2019,speech,13
+Pahang,Rompin,2019,speech,23
+Pahang,Temerloh,2019,speech,26
+Pahang,Overall,2019,speech,192
+Perak,Batang Padang,2019,speech,10
+Perak,Hilir Perak,2019,speech,22
+Perak,Hulu Perak,2019,speech,7
+Perak,Kampar,2019,speech,3
+Perak,Kerian,2019,speech,11
+Perak,Kinta,2019,speech,44
+Perak,Kuala Kangsar,2019,speech,10
+Perak,Larut/ Matang/ Selama,2019,speech,37
+Perak,Manjung,2019,speech,20
+Perak,Perak Tengah,2019,speech,14
+Perak,Bagan Datuk,2019,speech,0
+Perak,Overall,2019,speech,178
+Perlis,Perlis,2019,speech,63
+Pulau Pinang,Barat Daya,2019,speech,10
+Pulau Pinang,Seberang Perai Selatan,2019,speech,21
+Pulau Pinang,Seberang Perai Tengah,2019,speech,35
+Pulau Pinang,Seberang Perai Utara,2019,speech,27
+Pulau Pinang,Timur Laut,2019,speech,21
+Pulau Pinang,Overall,2019,speech,114
+Sabah,Beaufort,2019,speech,8
+Sabah,Beluran,2019,speech,4
+Sabah,Kemabong,2019,speech,1
+Sabah,Keningau,2019,speech,15
+Sabah,Kota Belud,2019,speech,10
+Sabah,Kota Kinabalu,2019,speech,30
+Sabah,Kota Kinabatangan,2019,speech,4
+Sabah,Kota Marudu,2019,speech,14
+Sabah,Kuala Penyu,2019,speech,3
+Sabah,Kudat,2019,speech,19
+Sabah,Kunak,2019,speech,2
+Sabah,Lahad Datu,2019,speech,13
+Sabah,Matunggong,2019,speech,3
+Sabah,Membakut,2019,speech,4
+Sabah,Menumbok,2019,speech,1
+Sabah,Nabawan,2019,speech,6
+Sabah,Papar,2019,speech,5
+Sabah,Penampang,2019,speech,4
+Sabah,Pitas,2019,speech,6
+Sabah,Putatan,2019,speech,5
+Sabah,Ranau,2019,speech,8
+Sabah,Sandakan,2019,speech,38
+Sabah,Semporna,2019,speech,19
+Sabah,Sipitang,2019,speech,2
+Sabah,Sook,2019,speech,8
+Sabah,Tamparuli,2019,speech,4
+Sabah,Tawau,2019,speech,22
+Sabah,Telupid,2019,speech,0
+Sabah,Tenom,2019,speech,14
+Sabah,Tuaran,2019,speech,9
+Sabah,Overall,2019,speech,297
+Sarawak,Bau,2019,speech,4
+Sarawak,Belaga,2019,speech,1
+Sarawak,Betong,2019,speech,20
+Sarawak,Bintulu,2019,speech,15
+Sarawak,Dalat,2019,speech,3
+Sarawak,Daro,2019,speech,0
+Sarawak,Julau,2019,speech,0
+Sarawak,Kanowit,2019,speech,1
+Sarawak,Kapit,2019,speech,12
+Sarawak,Kota Samarahan,2019,speech,7
+Sarawak,Kuching,2019,speech,46
+Sarawak,Limbang,2019,speech,12
+Sarawak,Lubok Antu,2019,speech,0
+Sarawak,Lundu,2019,speech,1
+Sarawak,Maradong,2019,speech,2
+Sarawak,Marudi,2019,speech,0
+Sarawak,Miri,2019,speech,17
+Sarawak,Mukah,2019,speech,12
+Sarawak,Pakan,2019,speech,0
+Sarawak,Saratok,2019,speech,0
+Sarawak,Sarikei,2019,speech,16
+Sarawak,Selangau,2019,speech,0
+Sarawak,Serian,2019,speech,7
+Sarawak,Sibu,2019,speech,23
+Sarawak,Simunjan,2019,speech,3
+Sarawak,Song,2019,speech,3
+Sarawak,Sri Aman,2019,speech,9
+Sarawak,Tatau,2019,speech,3
+Sarawak,Overall,2019,speech,221
+Selangor,Gombak,2019,speech,38
+Selangor,Hulu Langat,2019,speech,57
+Selangor,Hulu Selangor,2019,speech,15
+Selangor,Klang,2019,speech,88
+Selangor,Kuala Langat,2019,speech,23
+Selangor,Kuala Selangor,2019,speech,21
+Selangor,Petaling,2019,speech,31
+Selangor,Sabak Bernam,2019,speech,16
+Selangor,Sepang,2019,speech,13
+Selangor,Shah Alam,2019,speech,26
+Selangor,Subang Jaya,2019,speech,30
+Selangor,Overall,2019,speech,358
+Terengganu,Besut,2019,speech,24
+Terengganu,Dungun,2019,speech,14
+Terengganu,Hulu Terengganu,2019,speech,8
+Terengganu,Kemaman,2019,speech,18
+Terengganu,Kuala Terengganu,2019,speech,37
+Terengganu,Marang,2019,speech,21
+Terengganu,Setiu,2019,speech,8
+Terengganu,Overall,2019,speech,130
+W.P Kuala Lumpur,W.P Kuala Lumpur,2019,speech,115
+W.P Labuan,W.P Labuan,2019,speech,25
+ Overall,Overall,2019,speech,2786
+Johor,Batu Pahat,2020,speech,39
+Johor,Johor Bahru,2020,speech,127
+Johor,Kluang,2020,speech,30
+Johor,Kota Tinggi,2020,speech,39
+Johor,Kulaijaya,2020,speech,37
+Johor,Ledang,2020,speech,17
+Johor,Mersing,2020,speech,13
+Johor,Muar,2020,speech,30
+Johor,Pontian,2020,speech,14
+Johor,Segamat,2020,speech,18
+Johor,Overall,2020,speech,364
+Kedah,Baling,2020,speech,23
+Kedah,Bandar Baharu,2020,speech,17
+Kedah,Kota Setar,2020,speech,51
+Kedah,Kuala Muda,2020,speech,70
+Kedah,Kubang Pasu,2020,speech,42
+Kedah,Kulim,2020,speech,27
+Kedah,Padang Terap,2020,speech,18
+Kedah,Pendang,2020,speech,25
+Kedah,Pokok Sena,2020,speech,7
+Kedah,Pulau Langkawi,2020,speech,18
+Kedah,Sik,2020,speech,14
+Kedah,Yan,2020,speech,11
+Kedah,Overall,2020,speech,323
+Kelantan,Jajahah Jeli,2020,speech,10
+Kelantan,Bachok,2020,speech,14
+Kelantan,Gua Musang,2020,speech,18
+Kelantan,Kota Bharu,2020,speech,62
+Kelantan,Kuala Krai,2020,speech,19
+Kelantan,Machang,2020,speech,13
+Kelantan,Pasir Mas,2020,speech,31
+Kelantan,Pasir Puteh,2020,speech,54
+Kelantan,Tanah Merah,2020,speech,12
+Kelantan,Tumpat,2020,speech,40
+Kelantan,Overall,2020,speech,273
+Melaka,Alor Gajah,2020,speech,38
+Melaka,Jasin,2020,speech,32
+Melaka,Melaka Tengah,2020,speech,55
+Melaka,Overall,2020,speech,125
+Negeri Sembilan,Jelebu,2020,speech,6
+Negeri Sembilan,Jempol,2020,speech,6
+Negeri Sembilan,Kuala Pilah,2020,speech,7
+Negeri Sembilan,Port Dickson,2020,speech,11
+Negeri Sembilan,Rembau,2020,speech,5
+Negeri Sembilan,Seremban,2020,speech,39
+Negeri Sembilan,Tampin,2020,speech,16
+Negeri Sembilan,Overall,2020,speech,90
+Pahang,Bentong,2020,speech,8
+Pahang,Bera,2020,speech,9
+Pahang,Cameron Highlands,2020,speech,7
+Pahang,Jerantut,2020,speech,24
+Pahang,Kuantan,2020,speech,48
+Pahang,Lipis,2020,speech,15
+Pahang,Maran,2020,speech,12
+Pahang,Pekan,2020,speech,13
+Pahang,Raub,2020,speech,14
+Pahang,Rompin,2020,speech,25
+Pahang,Temerloh,2020,speech,27
+Pahang,Overall,2020,speech,202
+Perak,Batang Padang,2020,speech,10
+Perak,Hilir Perak,2020,speech,22
+Perak,Hulu Perak,2020,speech,7
+Perak,Kampar,2020,speech,5
+Perak,Kerian,2020,speech,12
+Perak,Kinta,2020,speech,48
+Perak,Kuala Kangsar,2020,speech,11
+Perak,Larut/ Matang/ Selama,2020,speech,40
+Perak,Manjung,2020,speech,21
+Perak,Perak Tengah,2020,speech,15
+Perak,Bagan Datuk,2020,speech,0
+Perak,Overall,2020,speech,191
+Perlis,Perlis,2020,speech,74
+Pulau Pinang,Barat Daya,2020,speech,10
+Pulau Pinang,Seberang Perai Selatan,2020,speech,21
+Pulau Pinang,Seberang Perai Tengah,2020,speech,35
+Pulau Pinang,Seberang Perai Utara,2020,speech,28
+Pulau Pinang,Timur Laut,2020,speech,23
+Pulau Pinang,Overall,2020,speech,117
+Sabah,Beaufort,2020,speech,8
+Sabah,Beluran,2020,speech,4
+Sabah,Kemabong,2020,speech,3
+Sabah,Keningau,2020,speech,16
+Sabah,Kota Belud,2020,speech,10
+Sabah,Kota Kinabalu,2020,speech,30
+Sabah,Kota Kinabatangan,2020,speech,4
+Sabah,Kota Marudu,2020,speech,16
+Sabah,Kuala Penyu,2020,speech,3
+Sabah,Kudat,2020,speech,19
+Sabah,Kunak,2020,speech,3
+Sabah,Lahad Datu,2020,speech,13
+Sabah,Matunggong,2020,speech,4
+Sabah,Membakut,2020,speech,4
+Sabah,Menumbok,2020,speech,1
+Sabah,Nabawan,2020,speech,6
+Sabah,Papar,2020,speech,6
+Sabah,Penampang,2020,speech,4
+Sabah,Pitas,2020,speech,8
+Sabah,Putatan,2020,speech,5
+Sabah,Ranau,2020,speech,9
+Sabah,Sandakan,2020,speech,38
+Sabah,Semporna,2020,speech,22
+Sabah,Sipitang,2020,speech,3
+Sabah,Tambunan,2020,speech,10
+Sabah,Tamparuli,2020,speech,4
+Sabah,Tawau,2020,speech,23
+Sabah,Telupid,2020,speech,0
+Sabah,Tenom,2020,speech,14
+Sabah,Tongod,2020,speech,8
+Sabah,Tuaran,2020,speech,10
+Sabah,Overall,2020,speech,316
+Sarawak,Bau,2020,speech,4
+Sarawak,Belaga,2020,speech,1
+Sarawak,Betong,2020,speech,21
+Sarawak,Bintulu,2020,speech,16
+Sarawak,Dalat,2020,speech,3
+Sarawak,Daro,2020,speech,0
+Sarawak,Julau,2020,speech,0
+Sarawak,Kanowit,2020,speech,2
+Sarawak,Kapit,2020,speech,12
+Sarawak,Kota Samarahan,2020,speech,8
+Sarawak,Kuching,2020,speech,49
+Sarawak,Lawas,2020,speech,2
+Sarawak,Limbang,2020,speech,12
+Sarawak,Lubok Antu,2020,speech,0
+Sarawak,Lundu,2020,speech,1
+Sarawak,Maradong,2020,speech,2
+Sarawak,Marudi,2020,speech,0
+Sarawak,Matu,2020,speech,2
+Sarawak,Miri,2020,speech,19
+Sarawak,Mukah,2020,speech,12
+Sarawak,Pakan,2020,speech,0
+Sarawak,Saratok,2020,speech,0
+Sarawak,Sarikei,2020,speech,16
+Sarawak,Selangau,2020,speech,1
+Sarawak,Serian,2020,speech,7
+Sarawak,Sibu,2020,speech,23
+Sarawak,Simunjan,2020,speech,3
+Sarawak,Song,2020,speech,3
+Sarawak,Sri Aman,2020,speech,9
+Sarawak,Overall,2020,speech,231
+Selangor,Gombak,2020,speech,43
+Selangor,Hulu Langat,2020,speech,61
+Selangor,Hulu Selangor,2020,speech,16
+Selangor,Klang,2020,speech,95
+Selangor,Kuala Langat,2020,speech,26
+Selangor,Kuala Selangor,2020,speech,22
+Selangor,Petaling,2020,speech,34
+Selangor,Sabak Bernam,2020,speech,17
+Selangor,Sepang,2020,speech,13
+Selangor,Shah Alam,2020,speech,29
+Selangor,Subang Jaya,2020,speech,32
+Selangor,Overall,2020,speech,388
+Terengganu,Besut,2020,speech,25
+Terengganu,Dungun,2020,speech,16
+Terengganu,Hulu Terengganu,2020,speech,8
+Terengganu,Kemaman,2020,speech,23
+Terengganu,Kuala Terengganu,2020,speech,41
+Terengganu,Marang,2020,speech,22
+Terengganu,Setiu,2020,speech,9
+Terengganu,Overall,2020,speech,144
+W.P Kuala Lumpur,W.P Kuala Lumpur,2020,speech,125
+W.P Labuan,W.P Labuan,2020,speech,25
+W.P Putrajaya,W.P Putrajaya,2020,speech,8
+ Overall,Overall,2020,speech,2996
+Johor,Batu Pahat,2021,speech,43
+Johor,Johor Bahru,2021,speech,129
+Johor,Kluang,2021,speech,33
+Johor,Kota Tinggi,2021,speech,38
+Johor,Kulaijaya,2021,speech,40
+Johor,Ledang,2021,speech,19
+Johor,Mersing,2021,speech,13
+Johor,Muar,2021,speech,31
+Johor,Pontian,2021,speech,17
+Johor,Segamat,2021,speech,20
+Johor,Overall,2021,speech,383
+Kedah,Baling,2021,speech,25
+Kedah,Bandar Baharu,2021,speech,18
+Kedah,Kota Setar,2021,speech,54
+Kedah,Kuala Muda,2021,speech,72
+Kedah,Kubang Pasu,2021,speech,46
+Kedah,Kulim,2021,speech,31
+Kedah,Padang Terap,2021,speech,19
+Kedah,Pendang,2021,speech,26
+Kedah,Pokok Sena,2021,speech,10
+Kedah,Pulau Langkawi,2021,speech,18
+Kedah,Sik,2021,speech,16
+Kedah,Yan,2021,speech,12
+Kedah,Overall,2021,speech,347
+Kelantan,Jajahah Jeli,2021,speech,9
+Kelantan,Bachok,2021,speech,14
+Kelantan,Gua Musang,2021,speech,19
+Kelantan,Kota Bharu,2021,speech,67
+Kelantan,Kuala Krai,2021,speech,22
+Kelantan,Machang,2021,speech,15
+Kelantan,Pasir Mas,2021,speech,30
+Kelantan,Pasir Puteh,2021,speech,54
+Kelantan,Tanah Merah,2021,speech,14
+Kelantan,Tumpat,2021,speech,45
+Kelantan,Overall,2021,speech,289
+Melaka,Alor Gajah,2021,speech,41
+Melaka,Jasin,2021,speech,34
+Melaka,Melaka Tengah,2021,speech,60
+Melaka,Overall,2021,speech,135
+Negeri Sembilan,Jelebu,2021,speech,7
+Negeri Sembilan,Jempol,2021,speech,8
+Negeri Sembilan,Kuala Pilah,2021,speech,9
+Negeri Sembilan,Port Dickson,2021,speech,12
+Negeri Sembilan,Rembau,2021,speech,5
+Negeri Sembilan,Seremban,2021,speech,41
+Negeri Sembilan,Tampin,2021,speech,18
+Negeri Sembilan,Overall,2021,speech,100
+Pahang,Bentong,2021,speech,9
+Pahang,Bera,2021,speech,11
+Pahang,Cameron Highlands,2021,speech,7
+Pahang,Jerantut,2021,speech,24
+Pahang,Kuantan,2021,speech,57
+Pahang,Lipis,2021,speech,16
+Pahang,Maran,2021,speech,13
+Pahang,Pekan,2021,speech,15
+Pahang,Raub,2021,speech,13
+Pahang,Rompin,2021,speech,27
+Pahang,Temerloh,2021,speech,28
+Pahang,Overall,2021,speech,220
+Perak,Bagan Datuk,2021,speech,1
+Perak,Batang Padang,2021,speech,11
+Perak,Hilir Perak,2021,speech,23
+Perak,Hulu Perak,2021,speech,7
+Perak,Kampar,2021,speech,5
+Perak,Kerian,2021,speech,16
+Perak,Kinta,2021,speech,55
+Perak,Kuala Kangsar,2021,speech,11
+Perak,Larut/ Matang/ Selama,2021,speech,42
+Perak,Manjung,2021,speech,22
+Perak,Muallim,2021,speech,0
+Perak,Perak Tengah,2021,speech,18
+Perak,Overall,2021,speech,211
+Perlis,Perlis,2021,speech,80
+Pulau Pinang,Barat Daya,2021,speech,10
+Pulau Pinang,Seberang Perai Selatan,2021,speech,22
+Pulau Pinang,Seberang Perai Tengah,2021,speech,37
+Pulau Pinang,Seberang Perai Utara,2021,speech,30
+Pulau Pinang,Timur Laut,2021,speech,23
+Pulau Pinang,Overall,2021,speech,122
+Sabah,Beaufort,2021,speech,8
+Sabah,Beluran,2021,speech,4
+Sabah,Kemabong,2021,speech,3
+Sabah,Keningau,2021,speech,17
+Sabah,Kota Belud,2021,speech,12
+Sabah,Kota Kinabalu,2021,speech,37
+Sabah,Kota Kinabatangan,2021,speech,4
+Sabah,Kota Marudu,2021,speech,18
+Sabah,Kuala Penyu,2021,speech,4
+Sabah,Kudat,2021,speech,20
+Sabah,Kunak,2021,speech,3
+Sabah,Lahad Datu,2021,speech,14
+Sabah,Matunggong,2021,speech,5
+Sabah,Membakut,2021,speech,4
+Sabah,Menumbok,2021,speech,1
+Sabah,Nabawan,2021,speech,6
+Sabah,Papar,2021,speech,7
+Sabah,Penampang,2021,speech,5
+Sabah,Pitas,2021,speech,8
+Sabah,Putatan,2021,speech,6
+Sabah,Ranau,2021,speech,9
+Sabah,Sandakan,2021,speech,39
+Sabah,Semporna,2021,speech,23
+Sabah,Sipitang,2021,speech,4
+Sabah,Sook,2021,speech,8
+Sabah,Tambunan,2021,speech,10
+Sabah,Tamparuli,2021,speech,4
+Sabah,Tawau,2021,speech,26
+Sabah,Telupid,2021,speech,0
+Sabah,Tenom,2021,speech,13
+Sabah,Tongod,2021,speech,8
+Sabah,Tuaran,2021,speech,10
+Sabah,Overall,2021,speech,340
+Sarawak,Bau,2021,speech,4
+Sarawak,Belaga,2021,speech,2
+Sarawak,Betong,2021,speech,23
+Sarawak,Bintulu,2021,speech,17
+Sarawak,Dalat,2021,speech,3
+Sarawak,Daro,2021,speech,0
+Sarawak,Julau,2021,speech,0
+Sarawak,Kanowit,2021,speech,2
+Sarawak,Kapit,2021,speech,11
+Sarawak,Kota Samarahan,2021,speech,9
+Sarawak,Kuching,2021,speech,50
+Sarawak,Lawas,2021,speech,2
+Sarawak,Limbang,2021,speech,12
+Sarawak,Lubok Antu,2021,speech,0
+Sarawak,Lundu,2021,speech,4
+Sarawak,Maradong,2021,speech,2
+Sarawak,Marudi,2021,speech,0
+Sarawak,Matu,2021,speech,2
+Sarawak,Miri,2021,speech,20
+Sarawak,Mukah,2021,speech,12
+Sarawak,Pakan,2021,speech,0
+Sarawak,Saratok,2021,speech,0
+Sarawak,Sarikei,2021,speech,14
+Sarawak,Selangau,2021,speech,1
+Sarawak,Serian,2021,speech,8
+Sarawak,Sibu,2021,speech,25
+Sarawak,Simunjan,2021,speech,3
+Sarawak,Song,2021,speech,3
+Sarawak,Sri Aman,2021,speech,9
+Sarawak,Tatau,2021,speech,3
+Sarawak,Overall,2021,speech,241
+Selangor,Gombak,2021,speech,47
+Selangor,Hulu Langat,2021,speech,62
+Selangor,Hulu Selangor,2021,speech,17
+Selangor,Klang,2021,speech,99
+Selangor,Kuala Langat,2021,speech,26
+Selangor,Kuala Selangor,2021,speech,22
+Selangor,Petaling,2021,speech,35
+Selangor,Sabak Bernam,2021,speech,16
+Selangor,Sepang,2021,speech,15
+Selangor,Shah Alam,2021,speech,34
+Selangor,Subang Jaya,2021,speech,34
+Selangor,Overall,2021,speech,407
+Terengganu,Besut,2021,speech,25
+Terengganu,Dungun,2021,speech,17
+Terengganu,Hulu Terengganu,2021,speech,9
+Terengganu,Kemaman,2021,speech,26
+Terengganu,Kuala Terengganu,2021,speech,46
+Terengganu,Marang,2021,speech,23
+Terengganu,Setiu,2021,speech,9
+Terengganu,Overall,2021,speech,155
+W.P Kuala Lumpur,W.P Kuala Lumpur,2021,speech,138
+W.P Labuan,W.P Labuan,2021,speech,23
+W.P Putrajaya,W.P Putrajaya,2021,speech,13
+ Overall,Overall,2021,speech,3204
+Johor,Batu Pahat,2018,physical,3032
+Johor,Johor Bahru,2018,physical,5949
+Johor,Kluang,2018,physical,1976
+Johor,Kota Tinggi,2018,physical,1485
+Johor,Kulaijaya,2018,physical,1386
+Johor,Ledang,2018,physical,1216
+Johor,Mersing,2018,physical,608
+Johor,Muar,2018,physical,2224
+Johor,Pontian,2018,physical,1369
+Johor,Segamat,2018,physical,1709
+Johor,Overall,2018,physical,20954
+Kedah,Baling,2018,physical,1212
+Kedah,Bandar Baharu,2018,physical,657
+Kedah,Kota Setar,2018,physical,2586
+Kedah,Kuala Muda,2018,physical,4402
+Kedah,Kubang Pasu,2018,physical,1805
+Kedah,Kulim,2018,physical,2412
+Kedah,Padang Terap,2018,physical,553
+Kedah,Pendang,2018,physical,719
+Kedah,Pokok Sena,2018,physical,413
+Kedah,Pulau Langkawi,2018,physical,582
+Kedah,Sik,2018,physical,643
+Kedah,Yan,2018,physical,526
+Kedah,Overall,2018,physical,16510
+Kelantan,Jajahah Jeli,2018,physical,421
+Kelantan,Bachok,2018,physical,852
+Kelantan,Gua Musang,2018,physical,533
+Kelantan,Kota Bharu,2018,physical,2643
+Kelantan,Kuala Krai,2018,physical,784
+Kelantan,Machang,2018,physical,700
+Kelantan,Pasir Mas,2018,physical,1358
+Kelantan,Pasir Puteh,2018,physical,1021
+Kelantan,Tanah Merah,2018,physical,741
+Kelantan,Tumpat,2018,physical,1219
+Kelantan,Overall,2018,physical,10272
+Melaka,Alor Gajah,2018,physical,2396
+Melaka,Jasin,2018,physical,2017
+Melaka,Melaka Tengah,2018,physical,4532
+Melaka,Overall,2018,physical,8945
+Negeri Sembilan,Jelebu,2018,physical,392
+Negeri Sembilan,Jempol,2018,physical,1067
+Negeri Sembilan,Kuala Pilah,2018,physical,687
+Negeri Sembilan,Port Dickson,2018,physical,1098
+Negeri Sembilan,Rembau,2018,physical,535
+Negeri Sembilan,Seremban,2018,physical,4306
+Negeri Sembilan,Tampin,2018,physical,964
+Negeri Sembilan,Overall,2018,physical,9049
+Pahang,Bentong,2018,physical,886
+Pahang,Bera,2018,physical,723
+Pahang,Cameron Highlands,2018,physical,183
+Pahang,Jerantut,2018,physical,807
+Pahang,Kuantan,2018,physical,3057
+Pahang,Lipis,2018,physical,702
+Pahang,Maran,2018,physical,817
+Pahang,Pekan,2018,physical,901
+Pahang,Raub,2018,physical,607
+Pahang,Rompin,2018,physical,685
+Pahang,Temerloh,2018,physical,1253
+Pahang,Overall,2018,physical,10621
+Perak,Batang Padang,2018,physical,1186
+Perak,Hilir Perak,2018,physical,1440
+Perak,Kampar,2018,physical,651
+Perak,Kerian,2018,physical,1073
+Perak,Kinta,2018,physical,4367
+Perak,Kuala Kangsar,2018,physical,1333
+Perak,Larut/ Matang/ Selama,2018,physical,2187
+Perak,Manjung,2018,physical,1641
+Perak,Perak Tengah,2018,physical,787
+Perak,Bagan Datuk,2018,physical,0
+Perak,Overall,2018,physical,15185
+Perlis,Perlis,2018,physical,1964
+Pulau Pinang,Barat Daya,2018,physical,1364
+Pulau Pinang,Seberang Perai Selatan,2018,physical,1365
+Pulau Pinang,Seberang Perai Tengah,2018,physical,2796
+Pulau Pinang,Seberang Perai Utara,2018,physical,2540
+Pulau Pinang,Timur Laut,2018,physical,4069
+Pulau Pinang,Overall,2018,physical,12134
+Sabah,Beaufort,2018,physical,403
+Sabah,Beluran,2018,physical,103
+Sabah,Kemabong,2018,physical,15
+Sabah,Keningau,2018,physical,410
+Sabah,Kota Belud,2018,physical,389
+Sabah,Kota Kinabalu,2018,physical,1421
+Sabah,Kota Kinabatangan,2018,physical,143
+Sabah,Kota Marudu,2018,physical,236
+Sabah,Kuala Penyu,2018,physical,55
+Sabah,Kunak,2018,physical,87
+Sabah,Lahad Datu,2018,physical,327
+Sabah,Matunggong,2018,physical,47
+Sabah,Membakut,2018,physical,65
+Sabah,Menumbok,2018,physical,41
+Sabah,Nabawan,2018,physical,120
+Sabah,Papar,2018,physical,324
+Sabah,Penampang,2018,physical,235
+Sabah,Pitas,2018,physical,154
+Sabah,Putatan,2018,physical,200
+Sabah,Ranau,2018,physical,278
+Sabah,Sandakan,2018,physical,808
+Sabah,Semporna,2018,physical,409
+Sabah,Sipitang,2018,physical,95
+Sabah,Sook,2018,physical,65
+Sabah,Tambunan,2018,physical,159
+Sabah,Tamparuli,2018,physical,266
+Sabah,Tawau,2018,physical,827
+Sabah,Telupid,2018,physical,55
+Sabah,Tenom,2018,physical,193
+Sabah,Tongod,2018,physical,96
+Sabah,Tuaran,2018,physical,184
+Sabah,Overall,2018,physical,8700
+Sarawak,Bau,2018,physical,175
+Sarawak,Belaga,2018,physical,22
+Sarawak,Betong,2018,physical,567
+Sarawak,Bintulu,2018,physical,560
+Sarawak,Dalat,2018,physical,98
+Sarawak,Daro,2018,physical,28
+Sarawak,Julau,2018,physical,35
+Sarawak,Kanowit,2018,physical,46
+Sarawak,Kapit,2018,physical,285
+Sarawak,Kota Samarahan,2018,physical,612
+Sarawak,Kuching,2018,physical,2577
+Sarawak,Limbang,2018,physical,204
+Sarawak,Lubok Antu,2018,physical,7
+Sarawak,Lundu,2018,physical,83
+Sarawak,Maradong,2018,physical,110
+Sarawak,Marudi,2018,physical,7
+Sarawak,Matu,2018,physical,34
+Sarawak,Miri,2018,physical,1209
+Sarawak,Mukah,2018,physical,343
+Sarawak,Pakan,2018,physical,47
+Sarawak,Saratok,2018,physical,14
+Sarawak,Sarikei,2018,physical,322
+Sarawak,Selangau,2018,physical,11
+Sarawak,Serian,2018,physical,251
+Sarawak,Sibu,2018,physical,1001
+Sarawak,Simunjan,2018,physical,94
+Sarawak,Song,2018,physical,40
+Sarawak,Sri Aman,2018,physical,421
+Sarawak,Tatau,2018,physical,34
+Sarawak,Overall,2018,physical,9371
+Selangor,Gombak,2018,physical,3528
+Selangor,Hulu Langat,2018,physical,5142
+Selangor,Hulu Selangor,2018,physical,1807
+Selangor,Klang,2018,physical,5910
+Selangor,Kuala Langat,2018,physical,1742
+Selangor,Kuala Selangor,2018,physical,2039
+Selangor,Petaling,2018,physical,3079
+Selangor,Sabak Bernam,2018,physical,1037
+Selangor,Sepang,2018,physical,1245
+Selangor,Shah Alam,2018,physical,2285
+Selangor,Subang Jaya,2018,physical,3381
+Selangor,Overall,2018,physical,31195
+Terengganu,Besut,2018,physical,1179
+Terengganu,Dungun,2018,physical,902
+Terengganu,Hulu Terengganu,2018,physical,556
+Terengganu,Kemaman,2018,physical,1205
+Terengganu,Kuala Terengganu,2018,physical,2111
+Terengganu,Marang,2018,physical,875
+Terengganu,Setiu,2018,physical,503
+Terengganu,Overall,2018,physical,7331
+W.P Kuala Lumpur,W.P Kuala Lumpur,2018,physical,13132
+W.P Labuan,W.P Labuan,2018,physical,396
+W.P Putrajaya,W.P Putrajaya,2018,physical,199
+ Overall,Overall,2018,physical,175958
+Johor,Batu Pahat,2019,physical,3310
+Johor,Johor Bahru,2019,physical,6855
+Johor,Kluang,2019,physical,2275
+Johor,Kota Tinggi,2019,physical,1657
+Johor,Kulaijaya,2019,physical,1530
+Johor,Ledang,2019,physical,1327
+Johor,Mersing,2019,physical,677
+Johor,Muar,2019,physical,2443
+Johor,Pontian,2019,physical,1473
+Johor,Segamat,2019,physical,1904
+Johor,Overall,2019,physical,23451
+Kedah,Baling,2019,physical,1377
+Kedah,Bandar Baharu,2019,physical,687
+Kedah,Kota Setar,2019,physical,2854
+Kedah,Kuala Muda,2019,physical,4915
+Kedah,Kubang Pasu,2019,physical,2107
+Kedah,Kulim,2019,physical,2676
+Kedah,Padang Terap,2019,physical,603
+Kedah,Pendang,2019,physical,805
+Kedah,Pokok Sena,2019,physical,460
+Kedah,Pulau Langkawi,2019,physical,631
+Kedah,Sik,2019,physical,676
+Kedah,Yan,2019,physical,584
+Kedah,Overall,2019,physical,18375
+Kelantan,Jajahah Jeli,2019,physical,445
+Kelantan,Bachok,2019,physical,936
+Kelantan,Gua Musang,2019,physical,589
+Kelantan,Kota Bharu,2019,physical,3077
+Kelantan,Kuala Krai,2019,physical,861
+Kelantan,Machang,2019,physical,760
+Kelantan,Pasir Mas,2019,physical,1477
+Kelantan,Pasir Puteh,2019,physical,1128
+Kelantan,Tanah Merah,2019,physical,797
+Kelantan,Tumpat,2019,physical,1314
+Kelantan,Overall,2019,physical,11384
+Melaka,Alor Gajah,2019,physical,2575
+Melaka,Jasin,2019,physical,2189
+Melaka,Melaka Tengah,2019,physical,5133
+Melaka,Overall,2019,physical,9897
+Negeri Sembilan,Jelebu,2019,physical,392
+Negeri Sembilan,Jempol,2019,physical,1131
+Negeri Sembilan,Kuala Pilah,2019,physical,738
+Negeri Sembilan,Port Dickson,2019,physical,1235
+Negeri Sembilan,Rembau,2019,physical,575
+Negeri Sembilan,Seremban,2019,physical,4813
+Negeri Sembilan,Tampin,2019,physical,1033
+Negeri Sembilan,Overall,2019,physical,9917
+Pahang,Bentong,2019,physical,967
+Pahang,Bera,2019,physical,781
+Pahang,Cameron Highlands,2019,physical,169
+Pahang,Jerantut,2019,physical,879
+Pahang,Kuantan,2019,physical,3575
+Pahang,Lipis,2019,physical,744
+Pahang,Maran,2019,physical,907
+Pahang,Pekan,2019,physical,954
+Pahang,Raub,2019,physical,667
+Pahang,Rompin,2019,physical,761
+Pahang,Temerloh,2019,physical,1377
+Pahang,Overall,2019,physical,11781
+Perak,Batang Padang,2019,physical,1301
+Perak,Hilir Perak,2019,physical,1584
+Perak,Hulu Perak,2019,physical,501
+Perak,Kampar,2019,physical,722
+Perak,Kerian,2019,physical,1208
+Perak,Kinta,2019,physical,5095
+Perak,Kuala Kangsar,2019,physical,1462
+Perak,Larut/ Matang/ Selama,2019,physical,2465
+Perak,Manjung,2019,physical,1821
+Perak,Perak Tengah,2019,physical,799
+Perak,Bagan Datuk,2019,physical,0
+Perak,Overall,2019,physical,16958
+Perlis,Perlis,2019,physical,2281
+Pulau Pinang,Barat Daya,2019,physical,1475
+Pulau Pinang,Seberang Perai Selatan,2019,physical,1477
+Pulau Pinang,Seberang Perai Tengah,2019,physical,2958
+Pulau Pinang,Seberang Perai Utara,2019,physical,2787
+Pulau Pinang,Timur Laut,2019,physical,4594
+Pulau Pinang,Overall,2019,physical,13291
+Sabah,Beaufort,2019,physical,436
+Sabah,Beluran,2019,physical,122
+Sabah,Kemabong,2019,physical,7
+Sabah,Keningau,2019,physical,451
+Sabah,Kota Belud,2019,physical,441
+Sabah,Kota Kinabalu,2019,physical,1657
+Sabah,Kota Kinabatangan,2019,physical,144
+Sabah,Kota Marudu,2019,physical,261
+Sabah,Kuala Penyu,2019,physical,51
+Sabah,Kudat,2019,physical,516
+Sabah,Kunak,2019,physical,85
+Sabah,Lahad Datu,2019,physical,377
+Sabah,Matunggong,2019,physical,61
+Sabah,Membakut,2019,physical,67
+Sabah,Menumbok,2019,physical,34
+Sabah,Nabawan,2019,physical,132
+Sabah,Papar,2019,physical,379
+Sabah,Penampang,2019,physical,253
+Sabah,Pitas,2019,physical,168
+Sabah,Putatan,2019,physical,224
+Sabah,Ranau,2019,physical,292
+Sabah,Sandakan,2019,physical,919
+Sabah,Semporna,2019,physical,452
+Sabah,Sipitang,2019,physical,100
+Sabah,Sook,2019,physical,69
+Sabah,Tamparuli,2019,physical,279
+Sabah,Tawau,2019,physical,922
+Sabah,Telupid,2019,physical,51
+Sabah,Tenom,2019,physical,207
+Sabah,Tuaran,2019,physical,211
+Sabah,Overall,2019,physical,9640
+Sarawak,Bau,2019,physical,193
+Sarawak,Belaga,2019,physical,16
+Sarawak,Betong,2019,physical,606
+Sarawak,Bintulu,2019,physical,631
+Sarawak,Dalat,2019,physical,97
+Sarawak,Daro,2019,physical,26
+Sarawak,Julau,2019,physical,32
+Sarawak,Kanowit,2019,physical,58
+Sarawak,Kapit,2019,physical,318
+Sarawak,Kota Samarahan,2019,physical,665
+Sarawak,Kuching,2019,physical,2937
+Sarawak,Limbang,2019,physical,215
+Sarawak,Lubok Antu,2019,physical,1
+Sarawak,Lundu,2019,physical,94
+Sarawak,Maradong,2019,physical,109
+Sarawak,Marudi,2019,physical,1
+Sarawak,Miri,2019,physical,1389
+Sarawak,Mukah,2019,physical,362
+Sarawak,Pakan,2019,physical,46
+Sarawak,Saratok,2019,physical,12
+Sarawak,Sarikei,2019,physical,339
+Sarawak,Selangau,2019,physical,7
+Sarawak,Serian,2019,physical,301
+Sarawak,Sibu,2019,physical,1125
+Sarawak,Simunjan,2019,physical,92
+Sarawak,Song,2019,physical,34
+Sarawak,Sri Aman,2019,physical,438
+Sarawak,Tatau,2019,physical,29
+Sarawak,Overall,2019,physical,10352
+Selangor,Gombak,2019,physical,4018
+Selangor,Hulu Langat,2019,physical,5742
+Selangor,Hulu Selangor,2019,physical,2022
+Selangor,Klang,2019,physical,6772
+Selangor,Kuala Langat,2019,physical,1923
+Selangor,Kuala Selangor,2019,physical,2314
+Selangor,Petaling,2019,physical,3338
+Selangor,Sabak Bernam,2019,physical,1123
+Selangor,Sepang,2019,physical,1338
+Selangor,Shah Alam,2019,physical,2578
+Selangor,Subang Jaya,2019,physical,4062
+Selangor,Overall,2019,physical,35230
+Terengganu,Besut,2019,physical,1333
+Terengganu,Dungun,2019,physical,973
+Terengganu,Hulu Terengganu,2019,physical,596
+Terengganu,Kemaman,2019,physical,1363
+Terengganu,Kuala Terengganu,2019,physical,2400
+Terengganu,Marang,2019,physical,945
+Terengganu,Setiu,2019,physical,569
+Terengganu,Overall,2019,physical,8179
+W.P Kuala Lumpur,W.P Kuala Lumpur,2019,physical,14786
+W.P Labuan,W.P Labuan,2019,physical,451
+ Overall,Overall,2019,physical,196388
+Johor,Batu Pahat,2020,physical,3555
+Johor,Johor Bahru,2020,physical,7392
+Johor,Kluang,2020,physical,2478
+Johor,Kota Tinggi,2020,physical,1801
+Johor,Kulaijaya,2020,physical,1646
+Johor,Ledang,2020,physical,1431
+Johor,Mersing,2020,physical,749
+Johor,Muar,2020,physical,2614
+Johor,Pontian,2020,physical,1584
+Johor,Segamat,2020,physical,2107
+Johor,Overall,2020,physical,25357
+Kedah,Baling,2020,physical,1479
+Kedah,Bandar Baharu,2020,physical,720
+Kedah,Kota Setar,2020,physical,3209
+Kedah,Kuala Muda,2020,physical,5408
+Kedah,Kubang Pasu,2020,physical,2250
+Kedah,Kulim,2020,physical,2942
+Kedah,Padang Terap,2020,physical,667
+Kedah,Pendang,2020,physical,927
+Kedah,Pokok Sena,2020,physical,516
+Kedah,Pulau Langkawi,2020,physical,695
+Kedah,Sik,2020,physical,732
+Kedah,Yan,2020,physical,640
+Kedah,Overall,2020,physical,20185
+Kelantan,Jajahah Jeli,2020,physical,491
+Kelantan,Bachok,2020,physical,1063
+Kelantan,Gua Musang,2020,physical,703
+Kelantan,Kota Bharu,2020,physical,3367
+Kelantan,Kuala Krai,2020,physical,961
+Kelantan,Machang,2020,physical,900
+Kelantan,Pasir Mas,2020,physical,1645
+Kelantan,Pasir Puteh,2020,physical,1254
+Kelantan,Tanah Merah,2020,physical,892
+Kelantan,Tumpat,2020,physical,1501
+Kelantan,Overall,2020,physical,12777
+Melaka,Alor Gajah,2020,physical,2744
+Melaka,Jasin,2020,physical,2304
+Melaka,Melaka Tengah,2020,physical,5596
+Melaka,Overall,2020,physical,10644
+Negeri Sembilan,Jelebu,2020,physical,420
+Negeri Sembilan,Jempol,2020,physical,1216
+Negeri Sembilan,Kuala Pilah,2020,physical,809
+Negeri Sembilan,Port Dickson,2020,physical,1332
+Negeri Sembilan,Rembau,2020,physical,637
+Negeri Sembilan,Seremban,2020,physical,5219
+Negeri Sembilan,Tampin,2020,physical,1109
+Negeri Sembilan,Overall,2020,physical,10742
+Pahang,Bentong,2020,physical,1028
+Pahang,Bera,2020,physical,826
+Pahang,Cameron Highlands,2020,physical,183
+Pahang,Jerantut,2020,physical,948
+Pahang,Kuantan,2020,physical,3909
+Pahang,Lipis,2020,physical,781
+Pahang,Maran,2020,physical,972
+Pahang,Pekan,2020,physical,1020
+Pahang,Raub,2020,physical,718
+Pahang,Rompin,2020,physical,810
+Pahang,Temerloh,2020,physical,1501
+Pahang,Overall,2020,physical,12696
+Perak,Batang Padang,2020,physical,1418
+Perak,Hilir Perak,2020,physical,1732
+Perak,Hulu Perak,2020,physical,542
+Perak,Kampar,2020,physical,813
+Perak,Kerian,2020,physical,1358
+Perak,Kinta,2020,physical,5588
+Perak,Kuala Kangsar,2020,physical,1622
+Perak,Larut/ Matang/ Selama,2020,physical,2791
+Perak,Manjung,2020,physical,2016
+Perak,Perak Tengah,2020,physical,877
+Perak,Bagan Datuk,2020,physical,0
+Perak,Overall,2020,physical,18757
+Perlis,Perlis,2020,physical,2576
+Pulau Pinang,Barat Daya,2020,physical,1570
+Pulau Pinang,Seberang Perai Selatan,2020,physical,1599
+Pulau Pinang,Seberang Perai Tengah,2020,physical,3225
+Pulau Pinang,Seberang Perai Utara,2020,physical,2940
+Pulau Pinang,Timur Laut,2020,physical,4944
+Pulau Pinang,Overall,2020,physical,14278
+Sabah,Beaufort,2020,physical,460
+Sabah,Beluran,2020,physical,137
+Sabah,Kemabong,2020,physical,8
+Sabah,Keningau,2020,physical,491
+Sabah,Kota Belud,2020,physical,469
+Sabah,Kota Kinabalu,2020,physical,1769
+Sabah,Kota Kinabatangan,2020,physical,161
+Sabah,Kota Marudu,2020,physical,276
+Sabah,Kuala Penyu,2020,physical,70
+Sabah,Kudat,2020,physical,535
+Sabah,Kunak,2020,physical,101
+Sabah,Lahad Datu,2020,physical,407
+Sabah,Matunggong,2020,physical,71
+Sabah,Membakut,2020,physical,78
+Sabah,Menumbok,2020,physical,34
+Sabah,Nabawan,2020,physical,138
+Sabah,Papar,2020,physical,399
+Sabah,Penampang,2020,physical,285
+Sabah,Pitas,2020,physical,175
+Sabah,Putatan,2020,physical,261
+Sabah,Ranau,2020,physical,317
+Sabah,Sandakan,2020,physical,994
+Sabah,Semporna,2020,physical,482
+Sabah,Sipitang,2020,physical,107
+Sabah,Tambunan,2020,physical,189
+Sabah,Tamparuli,2020,physical,281
+Sabah,Tawau,2020,physical,966
+Sabah,Telupid,2020,physical,54
+Sabah,Tenom,2020,physical,219
+Sabah,Tongod,2020,physical,116
+Sabah,Tuaran,2020,physical,225
+Sabah,Overall,2020,physical,10350
+Sarawak,Bau,2020,physical,215
+Sarawak,Belaga,2020,physical,17
+Sarawak,Betong,2020,physical,655
+Sarawak,Bintulu,2020,physical,689
+Sarawak,Dalat,2020,physical,102
+Sarawak,Daro,2020,physical,33
+Sarawak,Julau,2020,physical,34
+Sarawak,Kanowit,2020,physical,74
+Sarawak,Kapit,2020,physical,354
+Sarawak,Kota Samarahan,2020,physical,712
+Sarawak,Kuching,2020,physical,3197
+Sarawak,Lawas,2020,physical,174
+Sarawak,Limbang,2020,physical,237
+Sarawak,Lubok Antu,2020,physical,1
+Sarawak,Lundu,2020,physical,104
+Sarawak,Maradong,2020,physical,118
+Sarawak,Marudi,2020,physical,4
+Sarawak,Matu,2020,physical,28
+Sarawak,Miri,2020,physical,1551
+Sarawak,Mukah,2020,physical,375
+Sarawak,Pakan,2020,physical,57
+Sarawak,Saratok,2020,physical,19
+Sarawak,Sarikei,2020,physical,358
+Sarawak,Selangau,2020,physical,11
+Sarawak,Serian,2020,physical,321
+Sarawak,Sibu,2020,physical,1251
+Sarawak,Simunjan,2020,physical,98
+Sarawak,Song,2020,physical,41
+Sarawak,Sri Aman,2020,physical,458
+Sarawak,Overall,2020,physical,11320
+Selangor,Gombak,2020,physical,4362
+Selangor,Hulu Langat,2020,physical,6172
+Selangor,Hulu Selangor,2020,physical,2192
+Selangor,Klang,2020,physical,7272
+Selangor,Kuala Langat,2020,physical,2108
+Selangor,Kuala Selangor,2020,physical,2517
+Selangor,Petaling,2020,physical,3548
+Selangor,Sabak Bernam,2020,physical,1253
+Selangor,Sepang,2020,physical,1428
+Selangor,Shah Alam,2020,physical,2849
+Selangor,Subang Jaya,2020,physical,4512
+Selangor,Overall,2020,physical,38213
+Terengganu,Besut,2020,physical,1400
+Terengganu,Dungun,2020,physical,1056
+Terengganu,Hulu Terengganu,2020,physical,622
+Terengganu,Kemaman,2020,physical,1466
+Terengganu,Kuala Terengganu,2020,physical,2613
+Terengganu,Marang,2020,physical,993
+Terengganu,Setiu,2020,physical,618
+Terengganu,Overall,2020,physical,8768
+W.P Kuala Lumpur,W.P Kuala Lumpur,2020,physical,15966
+W.P Labuan,W.P Labuan,2020,physical,482
+W.P Putrajaya,W.P Putrajaya,2020,physical,605
+ Overall,Overall,2020,physical,213716
+Johor,Batu Pahat,2021,physical,3741
+Johor,Johor Bahru,2021,physical,7852
+Johor,Kluang,2021,physical,2638
+Johor,Kota Tinggi,2021,physical,1879
+Johor,Kulaijaya,2021,physical,1717
+Johor,Ledang,2021,physical,1492
+Johor,Mersing,2021,physical,798
+Johor,Muar,2021,physical,2702
+Johor,Pontian,2021,physical,1720
+Johor,Segamat,2021,physical,2198
+Johor,Overall,2021,physical,26737
+Kedah,Baling,2021,physical,1566
+Kedah,Bandar Baharu,2021,physical,747
+Kedah,Kota Setar,2021,physical,3468
+Kedah,Kuala Muda,2021,physical,5673
+Kedah,Kubang Pasu,2021,physical,2397
+Kedah,Kulim,2021,physical,3091
+Kedah,Padang Terap,2021,physical,723
+Kedah,Pendang,2021,physical,1009
+Kedah,Pokok Sena,2021,physical,552
+Kedah,Pulau Langkawi,2021,physical,773
+Kedah,Sik,2021,physical,775
+Kedah,Yan,2021,physical,697
+Kedah,Overall,2021,physical,21471
+Kelantan,Jajahah Jeli,2021,physical,532
+Kelantan,Bachok,2021,physical,1148
+Kelantan,Gua Musang,2021,physical,754
+Kelantan,Kota Bharu,2021,physical,3611
+Kelantan,Kuala Krai,2021,physical,1049
+Kelantan,Machang,2021,physical,985
+Kelantan,Pasir Mas,2021,physical,1739
+Kelantan,Pasir Puteh,2021,physical,1347
+Kelantan,Tanah Merah,2021,physical,976
+Kelantan,Tumpat,2021,physical,1601
+Kelantan,Overall,2021,physical,13742
+Melaka,Alor Gajah,2021,physical,2869
+Melaka,Jasin,2021,physical,2422
+Melaka,Melaka Tengah,2021,physical,5947
+Melaka,Overall,2021,physical,11238
+Negeri Sembilan,Jelebu,2021,physical,442
+Negeri Sembilan,Jempol,2021,physical,1279
+Negeri Sembilan,Kuala Pilah,2021,physical,879
+Negeri Sembilan,Port Dickson,2021,physical,1444
+Negeri Sembilan,Rembau,2021,physical,688
+Negeri Sembilan,Seremban,2021,physical,5478
+Negeri Sembilan,Tampin,2021,physical,1168
+Negeri Sembilan,Overall,2021,physical,11378
+Pahang,Bentong,2021,physical,1124
+Pahang,Bera,2021,physical,906
+Pahang,Cameron Highlands,2021,physical,195
+Pahang,Jerantut,2021,physical,1047
+Pahang,Kuantan,2021,physical,3966
+Pahang,Lipis,2021,physical,830
+Pahang,Maran,2021,physical,1074
+Pahang,Pekan,2021,physical,1121
+Pahang,Raub,2021,physical,767
+Pahang,Rompin,2021,physical,870
+Pahang,Temerloh,2021,physical,1656
+Pahang,Overall,2021,physical,13556
+Perak,Bagan Datuk,2021,physical,35
+Perak,Batang Padang,2021,physical,1487
+Perak,Hilir Perak,2021,physical,1792
+Perak,Hulu Perak,2021,physical,578
+Perak,Kampar,2021,physical,887
+Perak,Kerian,2021,physical,1449
+Perak,Kinta,2021,physical,6025
+Perak,Kuala Kangsar,2021,physical,1743
+Perak,Larut/ Matang/ Selama,2021,physical,3004
+Perak,Manjung,2021,physical,2155
+Perak,Muallim,2021,physical,19
+Perak,Perak Tengah,2021,physical,937
+Perak,Overall,2021,physical,20111
+Perlis,Perlis,2021,physical,2746
+Pulau Pinang,Barat Daya,2021,physical,1698
+Pulau Pinang,Seberang Perai Selatan,2021,physical,1744
+Pulau Pinang,Seberang Perai Tengah,2021,physical,3506
+Pulau Pinang,Seberang Perai Utara,2021,physical,3170
+Pulau Pinang,Timur Laut,2021,physical,5021
+Pulau Pinang,Overall,2021,physical,15139
+Sabah,Beaufort,2021,physical,474
+Sabah,Beluran,2021,physical,154
+Sabah,Kemabong,2021,physical,9
+Sabah,Keningau,2021,physical,518
+Sabah,Kota Belud,2021,physical,490
+Sabah,Kota Kinabalu,2021,physical,1884
+Sabah,Kota Kinabatangan,2021,physical,167
+Sabah,Kota Marudu,2021,physical,290
+Sabah,Kuala Penyu,2021,physical,73
+Sabah,Kudat,2021,physical,549
+Sabah,Kunak,2021,physical,105
+Sabah,Lahad Datu,2021,physical,446
+Sabah,Matunggong,2021,physical,76
+Sabah,Membakut,2021,physical,86
+Sabah,Menumbok,2021,physical,36
+Sabah,Nabawan,2021,physical,145
+Sabah,Papar,2021,physical,428
+Sabah,Penampang,2021,physical,321
+Sabah,Pitas,2021,physical,178
+Sabah,Putatan,2021,physical,285
+Sabah,Ranau,2021,physical,341
+Sabah,Sandakan,2021,physical,1045
+Sabah,Semporna,2021,physical,522
+Sabah,Sipitang,2021,physical,117
+Sabah,Sook,2021,physical,82
+Sabah,Tambunan,2021,physical,203
+Sabah,Tamparuli,2021,physical,301
+Sabah,Tawau,2021,physical,1012
+Sabah,Telupid,2021,physical,54
+Sabah,Tenom,2021,physical,223
+Sabah,Tongod,2021,physical,120
+Sabah,Tuaran,2021,physical,251
+Sabah,Overall,2021,physical,10985
+Sarawak,Bau,2021,physical,245
+Sarawak,Belaga,2021,physical,19
+Sarawak,Betong,2021,physical,689
+Sarawak,Bintulu,2021,physical,737
+Sarawak,Dalat,2021,physical,107
+Sarawak,Daro,2021,physical,40
+Sarawak,Julau,2021,physical,38
+Sarawak,Kanowit,2021,physical,92
+Sarawak,Kapit,2021,physical,363
+Sarawak,Kota Samarahan,2021,physical,760
+Sarawak,Kuching,2021,physical,3429
+Sarawak,Lawas,2021,physical,194
+Sarawak,Limbang,2021,physical,259
+Sarawak,Lubok Antu,2021,physical,3
+Sarawak,Lundu,2021,physical,115
+Sarawak,Maradong,2021,physical,132
+Sarawak,Marudi,2021,physical,11
+Sarawak,Matu,2021,physical,32
+Sarawak,Miri,2021,physical,1670
+Sarawak,Mukah,2021,physical,386
+Sarawak,Pakan,2021,physical,65
+Sarawak,Saratok,2021,physical,41
+Sarawak,Sarikei,2021,physical,364
+Sarawak,Selangau,2021,physical,14
+Sarawak,Serian,2021,physical,350
+Sarawak,Sibu,2021,physical,1310
+Sarawak,Simunjan,2021,physical,103
+Sarawak,Song,2021,physical,44
+Sarawak,Sri Aman,2021,physical,473
+Sarawak,Tatau,2021,physical,35
+Sarawak,Overall,2021,physical,12120
+Selangor,Gombak,2021,physical,4649
+Selangor,Hulu Langat,2021,physical,6496
+Selangor,Hulu Selangor,2021,physical,2306
+Selangor,Klang,2021,physical,7639
+Selangor,Kuala Langat,2021,physical,2228
+Selangor,Kuala Selangor,2021,physical,2609
+Selangor,Petaling,2021,physical,3712
+Selangor,Sabak Bernam,2021,physical,1304
+Selangor,Sepang,2021,physical,1463
+Selangor,Shah Alam,2021,physical,3055
+Selangor,Subang Jaya,2021,physical,4881
+Selangor,Overall,2021,physical,40342
+Terengganu,Besut,2021,physical,1498
+Terengganu,Dungun,2021,physical,1110
+Terengganu,Hulu Terengganu,2021,physical,660
+Terengganu,Kemaman,2021,physical,1544
+Terengganu,Kuala Terengganu,2021,physical,2798
+Terengganu,Marang,2021,physical,1043
+Terengganu,Setiu,2021,physical,656
+Terengganu,Overall,2021,physical,9309
+W.P Kuala Lumpur,W.P Kuala Lumpur,2021,physical,16878
+W.P Labuan,W.P Labuan,2021,physical,501
+W.P Putrajaya,W.P Putrajaya,2021,physical,779
+ Overall,Overall,2021,physical,227032
+Johor,Batu Pahat,2018,learning,3063
+Johor,Johor Bahru,2018,learning,5316
+Johor,Kluang,2018,learning,1569
+Johor,Kota Tinggi,2018,learning,1619
+Johor,Kulaijaya,2018,learning,1153
+Johor,Ledang,2018,learning,962
+Johor,Mersing,2018,learning,534
+Johor,Muar,2018,learning,1771
+Johor,Pontian,2018,learning,1498
+Johor,Segamat,2018,learning,1505
+Johor,Overall,2018,learning,18990
+Kedah,Baling,2018,learning,1089
+Kedah,Bandar Baharu,2018,learning,436
+Kedah,Kota Setar,2018,learning,2167
+Kedah,Kuala Muda,2018,learning,2680
+Kedah,Kubang Pasu,2018,learning,1450
+Kedah,Kulim,2018,learning,1400
+Kedah,Padang Terap,2018,learning,498
+Kedah,Pendang,2018,learning,746
+Kedah,Pokok Sena,2018,learning,364
+Kedah,Pulau Langkawi,2018,learning,523
+Kedah,Sik,2018,learning,564
+Kedah,Yan,2018,learning,523
+Kedah,Overall,2018,learning,12440
+Kelantan,Jajahah Jeli,2018,learning,478
+Kelantan,Bachok,2018,learning,979
+Kelantan,Gua Musang,2018,learning,966
+Kelantan,Kota Bharu,2018,learning,2678
+Kelantan,Kuala Krai,2018,learning,1144
+Kelantan,Machang,2018,learning,875
+Kelantan,Pasir Mas,2018,learning,1637
+Kelantan,Pasir Puteh,2018,learning,1109
+Kelantan,Tanah Merah,2018,learning,1080
+Kelantan,Tumpat,2018,learning,1489
+Kelantan,Overall,2018,learning,12435
+Melaka,Alor Gajah,2018,learning,2026
+Melaka,Jasin,2018,learning,1674
+Melaka,Melaka Tengah,2018,learning,3891
+Melaka,Overall,2018,learning,7591
+Negeri Sembilan,Jelebu,2018,learning,313
+Negeri Sembilan,Jempol,2018,learning,920
+Negeri Sembilan,Kuala Pilah,2018,learning,539
+Negeri Sembilan,Port Dickson,2018,learning,871
+Negeri Sembilan,Rembau,2018,learning,554
+Negeri Sembilan,Seremban,2018,learning,3101
+Negeri Sembilan,Tampin,2018,learning,832
+Negeri Sembilan,Overall,2018,learning,7130
+Pahang,Bentong,2018,learning,552
+Pahang,Bera,2018,learning,704
+Pahang,Cameron Highlands,2018,learning,185
+Pahang,Jerantut,2018,learning,790
+Pahang,Kuantan,2018,learning,2951
+Pahang,Lipis,2018,learning,562
+Pahang,Maran,2018,learning,727
+Pahang,Pekan,2018,learning,1140
+Pahang,Raub,2018,learning,583
+Pahang,Rompin,2018,learning,882
+Pahang,Temerloh,2018,learning,1195
+Pahang,Overall,2018,learning,10271
+Perak,Batang Padang,2018,learning,973
+Perak,Hilir Perak,2018,learning,1320
+Perak,Kampar,2018,learning,501
+Perak,Kerian,2018,learning,1145
+Perak,Kinta,2018,learning,3406
+Perak,Kuala Kangsar,2018,learning,1697
+Perak,Larut/ Matang/ Selama,2018,learning,2403
+Perak,Manjung,2018,learning,1439
+Perak,Perak Tengah,2018,learning,821
+Perak,Bagan Datuk,2018,learning,0
+Perak,Overall,2018,learning,14337
+Perlis,Perlis,2018,learning,1871
+Pulau Pinang,Barat Daya,2018,learning,985
+Pulau Pinang,Seberang Perai Selatan,2018,learning,1019
+Pulau Pinang,Seberang Perai Tengah,2018,learning,1886
+Pulau Pinang,Seberang Perai Utara,2018,learning,1998
+Pulau Pinang,Timur Laut,2018,learning,2672
+Pulau Pinang,Overall,2018,learning,8560
+Sabah,Beaufort,2018,learning,500
+Sabah,Beluran,2018,learning,177
+Sabah,Kemabong,2018,learning,55
+Sabah,Keningau,2018,learning,786
+Sabah,Kota Belud,2018,learning,559
+Sabah,Kota Kinabalu,2018,learning,2210
+Sabah,Kota Kinabatangan,2018,learning,104
+Sabah,Kota Marudu,2018,learning,308
+Sabah,Kuala Penyu,2018,learning,152
+Sabah,Kunak,2018,learning,164
+Sabah,Lahad Datu,2018,learning,469
+Sabah,Matunggong,2018,learning,89
+Sabah,Membakut,2018,learning,114
+Sabah,Menumbok,2018,learning,60
+Sabah,Nabawan,2018,learning,218
+Sabah,Papar,2018,learning,613
+Sabah,Penampang,2018,learning,447
+Sabah,Pitas,2018,learning,197
+Sabah,Putatan,2018,learning,294
+Sabah,Ranau,2018,learning,459
+Sabah,Sandakan,2018,learning,985
+Sabah,Semporna,2018,learning,393
+Sabah,Sipitang,2018,learning,145
+Sabah,Sook,2018,learning,107
+Sabah,Tambunan,2018,learning,176
+Sabah,Tamparuli,2018,learning,259
+Sabah,Tawau,2018,learning,1071
+Sabah,Telupid,2018,learning,90
+Sabah,Tenom,2018,learning,345
+Sabah,Tongod,2018,learning,75
+Sabah,Tuaran,2018,learning,360
+Sabah,Overall,2018,learning,12776
+Sarawak,Bau,2018,learning,254
+Sarawak,Belaga,2018,learning,31
+Sarawak,Betong,2018,learning,510
+Sarawak,Bintulu,2018,learning,786
+Sarawak,Dalat,2018,learning,100
+Sarawak,Daro,2018,learning,36
+Sarawak,Julau,2018,learning,49
+Sarawak,Kanowit,2018,learning,96
+Sarawak,Kapit,2018,learning,440
+Sarawak,Kota Samarahan,2018,learning,868
+Sarawak,Kuching,2018,learning,3187
+Sarawak,Limbang,2018,learning,303
+Sarawak,Lubok Antu,2018,learning,7
+Sarawak,Lundu,2018,learning,156
+Sarawak,Maradong,2018,learning,153
+Sarawak,Marudi,2018,learning,9
+Sarawak,Matu,2018,learning,32
+Sarawak,Miri,2018,learning,1178
+Sarawak,Mukah,2018,learning,354
+Sarawak,Pakan,2018,learning,37
+Sarawak,Saratok,2018,learning,59
+Sarawak,Sarikei,2018,learning,389
+Sarawak,Selangau,2018,learning,17
+Sarawak,Serian,2018,learning,188
+Sarawak,Sibu,2018,learning,1588
+Sarawak,Simunjan,2018,learning,102
+Sarawak,Song,2018,learning,40
+Sarawak,Sri Aman,2018,learning,342
+Sarawak,Tatau,2018,learning,39
+Sarawak,Overall,2018,learning,11417
+Selangor,Gombak,2018,learning,3593
+Selangor,Hulu Langat,2018,learning,4985
+Selangor,Hulu Selangor,2018,learning,1560
+Selangor,Klang,2018,learning,3927
+Selangor,Kuala Langat,2018,learning,1373
+Selangor,Kuala Selangor,2018,learning,1407
+Selangor,Petaling,2018,learning,2316
+Selangor,Sabak Bernam,2018,learning,1344
+Selangor,Sepang,2018,learning,831
+Selangor,Shah Alam,2018,learning,2515
+Selangor,Subang Jaya,2018,learning,2390
+Selangor,Overall,2018,learning,26241
+Terengganu,Besut,2018,learning,1829
+Terengganu,Dungun,2018,learning,1345
+Terengganu,Hulu Terengganu,2018,learning,824
+Terengganu,Kemaman,2018,learning,1434
+Terengganu,Kuala Terengganu,2018,learning,2791
+Terengganu,Marang,2018,learning,1016
+Terengganu,Setiu,2018,learning,672
+Terengganu,Overall,2018,learning,9911
+W.P Kuala Lumpur,W.P Kuala Lumpur,2018,learning,10293
+W.P Labuan,W.P Labuan,2018,learning,660
+W.P Putrajaya,W.P Putrajaya,2018,learning,338
+ Overall,Overall,2018,learning,165261
+Johor,Batu Pahat,2019,learning,3318
+Johor,Johor Bahru,2019,learning,6336
+Johor,Kluang,2019,learning,1732
+Johor,Kota Tinggi,2019,learning,1801
+Johor,Kulaijaya,2019,learning,1258
+Johor,Ledang,2019,learning,1022
+Johor,Mersing,2019,learning,569
+Johor,Muar,2019,learning,2008
+Johor,Pontian,2019,learning,1596
+Johor,Segamat,2019,learning,1698
+Johor,Overall,2019,learning,21338
+Kedah,Baling,2019,learning,1202
+Kedah,Bandar Baharu,2019,learning,472
+Kedah,Kota Setar,2019,learning,2568
+Kedah,Kuala Muda,2019,learning,2964
+Kedah,Kubang Pasu,2019,learning,1722
+Kedah,Kulim,2019,learning,1627
+Kedah,Padang Terap,2019,learning,531
+Kedah,Pendang,2019,learning,806
+Kedah,Pokok Sena,2019,learning,376
+Kedah,Pulau Langkawi,2019,learning,592
+Kedah,Sik,2019,learning,580
+Kedah,Yan,2019,learning,580
+Kedah,Overall,2019,learning,14020
+Kelantan,Jajahah Jeli,2019,learning,501
+Kelantan,Bachok,2019,learning,1114
+Kelantan,Gua Musang,2019,learning,1123
+Kelantan,Kota Bharu,2019,learning,3129
+Kelantan,Kuala Krai,2019,learning,1258
+Kelantan,Machang,2019,learning,933
+Kelantan,Pasir Mas,2019,learning,1758
+Kelantan,Pasir Puteh,2019,learning,1249
+Kelantan,Tanah Merah,2019,learning,1136
+Kelantan,Tumpat,2019,learning,1559
+Kelantan,Overall,2019,learning,13760
+Melaka,Alor Gajah,2019,learning,2218
+Melaka,Jasin,2019,learning,1853
+Melaka,Melaka Tengah,2019,learning,4491
+Melaka,Overall,2019,learning,8562
+Negeri Sembilan,Jelebu,2019,learning,321
+Negeri Sembilan,Jempol,2019,learning,1043
+Negeri Sembilan,Kuala Pilah,2019,learning,612
+Negeri Sembilan,Port Dickson,2019,learning,970
+Negeri Sembilan,Rembau,2019,learning,586
+Negeri Sembilan,Seremban,2019,learning,3546
+Negeri Sembilan,Tampin,2019,learning,855
+Negeri Sembilan,Overall,2019,learning,7933
+Pahang,Bentong,2019,learning,599
+Pahang,Bera,2019,learning,769
+Pahang,Cameron Highlands,2019,learning,171
+Pahang,Jerantut,2019,learning,857
+Pahang,Kuantan,2019,learning,3655
+Pahang,Lipis,2019,learning,631
+Pahang,Maran,2019,learning,817
+Pahang,Pekan,2019,learning,1259
+Pahang,Raub,2019,learning,634
+Pahang,Rompin,2019,learning,963
+Pahang,Temerloh,2019,learning,1289
+Pahang,Overall,2019,learning,11644
+Perak,Batang Padang,2019,learning,1100
+Perak,Hilir Perak,2019,learning,1409
+Perak,Hulu Perak,2019,learning,628
+Perak,Kampar,2019,learning,530
+Perak,Kerian,2019,learning,1269
+Perak,Kinta,2019,learning,3855
+Perak,Kuala Kangsar,2019,learning,1914
+Perak,Larut/ Matang/ Selama,2019,learning,2659
+Perak,Manjung,2019,learning,1617
+Perak,Perak Tengah,2019,learning,884
+Perak,Bagan Datuk,2019,learning,0
+Perak,Overall,2019,learning,15865
+Perlis,Perlis,2019,learning,2239
+Pulau Pinang,Barat Daya,2019,learning,1063
+Pulau Pinang,Seberang Perai Selatan,2019,learning,1137
+Pulau Pinang,Seberang Perai Tengah,2019,learning,2046
+Pulau Pinang,Seberang Perai Utara,2019,learning,2207
+Pulau Pinang,Timur Laut,2019,learning,3012
+Pulau Pinang,Overall,2019,learning,9465
+Sabah,Beaufort,2019,learning,539
+Sabah,Beluran,2019,learning,221
+Sabah,Kemabong,2019,learning,49
+Sabah,Keningau,2019,learning,885
+Sabah,Kota Belud,2019,learning,778
+Sabah,Kota Kinabalu,2019,learning,2545
+Sabah,Kota Kinabatangan,2019,learning,99
+Sabah,Kota Marudu,2019,learning,354
+Sabah,Kuala Penyu,2019,learning,140
+Sabah,Kudat,2019,learning,931
+Sabah,Kunak,2019,learning,164
+Sabah,Lahad Datu,2019,learning,559
+Sabah,Matunggong,2019,learning,85
+Sabah,Membakut,2019,learning,113
+Sabah,Menumbok,2019,learning,52
+Sabah,Nabawan,2019,learning,254
+Sabah,Papar,2019,learning,704
+Sabah,Penampang,2019,learning,487
+Sabah,Pitas,2019,learning,242
+Sabah,Putatan,2019,learning,326
+Sabah,Ranau,2019,learning,502
+Sabah,Sandakan,2019,learning,1108
+Sabah,Semporna,2019,learning,443
+Sabah,Sipitang,2019,learning,141
+Sabah,Sook,2019,learning,135
+Sabah,Tamparuli,2019,learning,280
+Sabah,Tawau,2019,learning,1386
+Sabah,Telupid,2019,learning,92
+Sabah,Tenom,2019,learning,360
+Sabah,Tuaran,2019,learning,429
+Sabah,Overall,2019,learning,14668
+Sarawak,Bau,2019,learning,271
+Sarawak,Belaga,2019,learning,25
+Sarawak,Betong,2019,learning,542
+Sarawak,Bintulu,2019,learning,923
+Sarawak,Dalat,2019,learning,108
+Sarawak,Daro,2019,learning,36
+Sarawak,Julau,2019,learning,48
+Sarawak,Kanowit,2019,learning,124
+Sarawak,Kapit,2019,learning,488
+Sarawak,Kota Samarahan,2019,learning,984
+Sarawak,Kuching,2019,learning,3693
+Sarawak,Limbang,2019,learning,337
+Sarawak,Lubok Antu,2019,learning,1
+Sarawak,Lundu,2019,learning,170
+Sarawak,Maradong,2019,learning,156
+Sarawak,Marudi,2019,learning,4
+Sarawak,Miri,2019,learning,1417
+Sarawak,Mukah,2019,learning,382
+Sarawak,Pakan,2019,learning,35
+Sarawak,Saratok,2019,learning,62
+Sarawak,Sarikei,2019,learning,451
+Sarawak,Selangau,2019,learning,15
+Sarawak,Serian,2019,learning,243
+Sarawak,Sibu,2019,learning,1799
+Sarawak,Simunjan,2019,learning,96
+Sarawak,Song,2019,learning,40
+Sarawak,Sri Aman,2019,learning,385
+Sarawak,Tatau,2019,learning,33
+Sarawak,Overall,2019,learning,12977
+Selangor,Gombak,2019,learning,4090
+Selangor,Hulu Langat,2019,learning,5722
+Selangor,Hulu Selangor,2019,learning,1695
+Selangor,Klang,2019,learning,4522
+Selangor,Kuala Langat,2019,learning,1484
+Selangor,Kuala Selangor,2019,learning,1553
+Selangor,Petaling,2019,learning,2577
+Selangor,Sabak Bernam,2019,learning,1465
+Selangor,Sepang,2019,learning,953
+Selangor,Shah Alam,2019,learning,2983
+Selangor,Subang Jaya,2019,learning,2776
+Selangor,Overall,2019,learning,29820
+Terengganu,Besut,2019,learning,2000
+Terengganu,Dungun,2019,learning,1477
+Terengganu,Hulu Terengganu,2019,learning,907
+Terengganu,Kemaman,2019,learning,1612
+Terengganu,Kuala Terengganu,2019,learning,3219
+Terengganu,Marang,2019,learning,1102
+Terengganu,Setiu,2019,learning,734
+Terengganu,Overall,2019,learning,11051
+W.P Kuala Lumpur,W.P Kuala Lumpur,2019,learning,11512
+W.P Labuan,W.P Labuan,2019,learning,850
+ Overall,Overall,2019,learning,186416
+Johor,Batu Pahat,2020,learning,3529
+Johor,Johor Bahru,2020,learning,7005
+Johor,Kluang,2020,learning,1910
+Johor,Kota Tinggi,2020,learning,1995
+Johor,Kulaijaya,2020,learning,1386
+Johor,Ledang,2020,learning,1094
+Johor,Mersing,2020,learning,622
+Johor,Muar,2020,learning,2165
+Johor,Pontian,2020,learning,1694
+Johor,Segamat,2020,learning,1894
+Johor,Overall,2020,learning,23294
+Kedah,Baling,2020,learning,1259
+Kedah,Bandar Baharu,2020,learning,491
+Kedah,Kota Setar,2020,learning,2790
+Kedah,Kuala Muda,2020,learning,3234
+Kedah,Kubang Pasu,2020,learning,1847
+Kedah,Kulim,2020,learning,1812
+Kedah,Padang Terap,2020,learning,595
+Kedah,Pendang,2020,learning,869
+Kedah,Pokok Sena,2020,learning,410
+Kedah,Pulau Langkawi,2020,learning,647
+Kedah,Sik,2020,learning,640
+Kedah,Yan,2020,learning,626
+Kedah,Overall,2020,learning,15220
+Kelantan,Jajahah Jeli,2020,learning,541
+Kelantan,Bachok,2020,learning,1198
+Kelantan,Gua Musang,2020,learning,1207
+Kelantan,Kota Bharu,2020,learning,3610
+Kelantan,Kuala Krai,2020,learning,1376
+Kelantan,Machang,2020,learning,1101
+Kelantan,Pasir Mas,2020,learning,1948
+Kelantan,Pasir Puteh,2020,learning,1384
+Kelantan,Tanah Merah,2020,learning,1297
+Kelantan,Tumpat,2020,learning,1829
+Kelantan,Overall,2020,learning,15491
+Melaka,Alor Gajah,2020,learning,2319
+Melaka,Jasin,2020,learning,1952
+Melaka,Melaka Tengah,2020,learning,4712
+Melaka,Overall,2020,learning,8983
+Negeri Sembilan,Jelebu,2020,learning,333
+Negeri Sembilan,Jempol,2020,learning,1116
+Negeri Sembilan,Kuala Pilah,2020,learning,653
+Negeri Sembilan,Port Dickson,2020,learning,1008
+Negeri Sembilan,Rembau,2020,learning,626
+Negeri Sembilan,Seremban,2020,learning,3846
+Negeri Sembilan,Tampin,2020,learning,912
+Negeri Sembilan,Overall,2020,learning,8494
+Pahang,Bentong,2020,learning,634
+Pahang,Bera,2020,learning,803
+Pahang,Cameron Highlands,2020,learning,174
+Pahang,Jerantut,2020,learning,918
+Pahang,Kuantan,2020,learning,3896
+Pahang,Lipis,2020,learning,660
+Pahang,Maran,2020,learning,904
+Pahang,Pekan,2020,learning,1299
+Pahang,Raub,2020,learning,683
+Pahang,Rompin,2020,learning,992
+Pahang,Temerloh,2020,learning,1360
+Pahang,Overall,2020,learning,12323
+Perak,Batang Padang,2020,learning,1185
+Perak,Hilir Perak,2020,learning,1464
+Perak,Hulu Perak,2020,learning,651
+Perak,Kampar,2020,learning,566
+Perak,Kerian,2020,learning,1403
+Perak,Kinta,2020,learning,4101
+Perak,Kuala Kangsar,2020,learning,2012
+Perak,Larut/ Matang/ Selama,2020,learning,2844
+Perak,Manjung,2020,learning,1753
+Perak,Perak Tengah,2020,learning,962
+Perak,Bagan Datuk,2020,learning,0
+Perak,Overall,2020,learning,16941
+Perlis,Perlis,2020,learning,2486
+Pulau Pinang,Barat Daya,2020,learning,1126
+Pulau Pinang,Seberang Perai Selatan,2020,learning,1207
+Pulau Pinang,Seberang Perai Tengah,2020,learning,2267
+Pulau Pinang,Seberang Perai Utara,2020,learning,2343
+Pulau Pinang,Timur Laut,2020,learning,3193
+Pulau Pinang,Overall,2020,learning,10136
+Sabah,Beaufort,2020,learning,553
+Sabah,Beluran,2020,learning,237
+Sabah,Kemabong,2020,learning,72
+Sabah,Keningau,2020,learning,959
+Sabah,Kota Belud,2020,learning,808
+Sabah,Kota Kinabalu,2020,learning,2695
+Sabah,Kota Kinabatangan,2020,learning,118
+Sabah,Kota Marudu,2020,learning,413
+Sabah,Kuala Penyu,2020,learning,164
+Sabah,Kudat,2020,learning,963
+Sabah,Kunak,2020,learning,181
+Sabah,Lahad Datu,2020,learning,606
+Sabah,Matunggong,2020,learning,87
+Sabah,Membakut,2020,learning,137
+Sabah,Menumbok,2020,learning,56
+Sabah,Nabawan,2020,learning,267
+Sabah,Papar,2020,learning,765
+Sabah,Penampang,2020,learning,518
+Sabah,Pitas,2020,learning,265
+Sabah,Putatan,2020,learning,364
+Sabah,Ranau,2020,learning,601
+Sabah,Sandakan,2020,learning,1164
+Sabah,Semporna,2020,learning,504
+Sabah,Sipitang,2020,learning,170
+Sabah,Tambunan,2020,learning,214
+Sabah,Tamparuli,2020,learning,281
+Sabah,Tawau,2020,learning,1522
+Sabah,Telupid,2020,learning,116
+Sabah,Tenom,2020,learning,368
+Sabah,Tongod,2020,learning,94
+Sabah,Tuaran,2020,learning,459
+Sabah,Overall,2020,learning,15858
+Sarawak,Bau,2020,learning,306
+Sarawak,Belaga,2020,learning,26
+Sarawak,Betong,2020,learning,590
+Sarawak,Bintulu,2020,learning,978
+Sarawak,Dalat,2020,learning,119
+Sarawak,Daro,2020,learning,40
+Sarawak,Julau,2020,learning,53
+Sarawak,Kanowit,2020,learning,140
+Sarawak,Kapit,2020,learning,532
+Sarawak,Kota Samarahan,2020,learning,1033
+Sarawak,Kuching,2020,learning,3980
+Sarawak,Lawas,2020,learning,86
+Sarawak,Limbang,2020,learning,372
+Sarawak,Lubok Antu,2020,learning,1
+Sarawak,Lundu,2020,learning,196
+Sarawak,Maradong,2020,learning,183
+Sarawak,Marudi,2020,learning,5
+Sarawak,Matu,2020,learning,34
+Sarawak,Miri,2020,learning,1658
+Sarawak,Mukah,2020,learning,404
+Sarawak,Pakan,2020,learning,44
+Sarawak,Saratok,2020,learning,83
+Sarawak,Sarikei,2020,learning,475
+Sarawak,Selangau,2020,learning,23
+Sarawak,Serian,2020,learning,275
+Sarawak,Sibu,2020,learning,2041
+Sarawak,Simunjan,2020,learning,114
+Sarawak,Song,2020,learning,53
+Sarawak,Sri Aman,2020,learning,409
+Sarawak,Overall,2020,learning,14291
+Selangor,Gombak,2020,learning,4394
+Selangor,Hulu Langat,2020,learning,6102
+Selangor,Hulu Selangor,2020,learning,1782
+Selangor,Klang,2020,learning,4757
+Selangor,Kuala Langat,2020,learning,1574
+Selangor,Kuala Selangor,2020,learning,1643
+Selangor,Petaling,2020,learning,2728
+Selangor,Sabak Bernam,2020,learning,1636
+Selangor,Sepang,2020,learning,995
+Selangor,Shah Alam,2020,learning,3261
+Selangor,Subang Jaya,2020,learning,2980
+Selangor,Overall,2020,learning,31852
+Terengganu,Besut,2020,learning,2060
+Terengganu,Dungun,2020,learning,1572
+Terengganu,Hulu Terengganu,2020,learning,945
+Terengganu,Kemaman,2020,learning,1714
+Terengganu,Kuala Terengganu,2020,learning,3465
+Terengganu,Marang,2020,learning,1160
+Terengganu,Setiu,2020,learning,780
+Terengganu,Overall,2020,learning,11696
+W.P Kuala Lumpur,W.P Kuala Lumpur,2020,learning,12348
+W.P Labuan,W.P Labuan,2020,learning,910
+W.P Putrajaya,W.P Putrajaya,2020,learning,1032
+ Overall,Overall,2020,learning,201355
+Johor,Batu Pahat,2021,learning,3654
+Johor,Johor Bahru,2021,learning,7624
+Johor,Kluang,2021,learning,2013
+Johor,Kota Tinggi,2021,learning,2075
+Johor,Kulaijaya,2021,learning,1457
+Johor,Ledang,2021,learning,1129
+Johor,Mersing,2021,learning,651
+Johor,Muar,2021,learning,2239
+Johor,Pontian,2021,learning,1777
+Johor,Segamat,2021,learning,1961
+Johor,Overall,2021,learning,24580
+Kedah,Baling,2021,learning,1321
+Kedah,Bandar Baharu,2021,learning,515
+Kedah,Kota Setar,2021,learning,2946
+Kedah,Kuala Muda,2021,learning,3391
+Kedah,Kubang Pasu,2021,learning,1919
+Kedah,Kulim,2021,learning,1933
+Kedah,Padang Terap,2021,learning,632
+Kedah,Pendang,2021,learning,927
+Kedah,Pokok Sena,2021,learning,432
+Kedah,Pulau Langkawi,2021,learning,692
+Kedah,Sik,2021,learning,665
+Kedah,Yan,2021,learning,663
+Kedah,Overall,2021,learning,16036
+Kelantan,Jajahah Jeli,2021,learning,606
+Kelantan,Bachok,2021,learning,1283
+Kelantan,Gua Musang,2021,learning,1259
+Kelantan,Kota Bharu,2021,learning,3952
+Kelantan,Kuala Krai,2021,learning,1488
+Kelantan,Machang,2021,learning,1155
+Kelantan,Pasir Mas,2021,learning,2073
+Kelantan,Pasir Puteh,2021,learning,1481
+Kelantan,Tanah Merah,2021,learning,1319
+Kelantan,Tumpat,2021,learning,1861
+Kelantan,Overall,2021,learning,16477
+Melaka,Alor Gajah,2021,learning,2394
+Melaka,Jasin,2021,learning,2078
+Melaka,Melaka Tengah,2021,learning,4983
+Melaka,Overall,2021,learning,9455
+Negeri Sembilan,Jelebu,2021,learning,335
+Negeri Sembilan,Jempol,2021,learning,1156
+Negeri Sembilan,Kuala Pilah,2021,learning,703
+Negeri Sembilan,Port Dickson,2021,learning,1058
+Negeri Sembilan,Rembau,2021,learning,662
+Negeri Sembilan,Seremban,2021,learning,4109
+Negeri Sembilan,Tampin,2021,learning,915
+Negeri Sembilan,Overall,2021,learning,8938
+Pahang,Bentong,2021,learning,704
+Pahang,Bera,2021,learning,868
+Pahang,Cameron Highlands,2021,learning,191
+Pahang,Jerantut,2021,learning,1010
+Pahang,Kuantan,2021,learning,3847
+Pahang,Lipis,2021,learning,703
+Pahang,Maran,2021,learning,977
+Pahang,Pekan,2021,learning,1398
+Pahang,Raub,2021,learning,744
+Pahang,Rompin,2021,learning,1084
+Pahang,Temerloh,2021,learning,1443
+Pahang,Overall,2021,learning,12969
+Perak,Bagan Datuk,2021,learning,31
+Perak,Batang Padang,2021,learning,1246
+Perak,Hilir Perak,2021,learning,1508
+Perak,Hulu Perak,2021,learning,684
+Perak,Kampar,2021,learning,590
+Perak,Kerian,2021,learning,1460
+Perak,Kinta,2021,learning,4390
+Perak,Kuala Kangsar,2021,learning,2108
+Perak,Larut/ Matang/ Selama,2021,learning,2846
+Perak,Manjung,2021,learning,1859
+Perak,Muallim,2021,learning,22
+Perak,Perak Tengah,2021,learning,1032
+Perak,Overall,2021,learning,17776
+Perlis,Perlis,2021,learning,2710
+Pulau Pinang,Barat Daya,2021,learning,1205
+Pulau Pinang,Seberang Perai Selatan,2021,learning,1307
+Pulau Pinang,Seberang Perai Tengah,2021,learning,2419
+Pulau Pinang,Seberang Perai Utara,2021,learning,2480
+Pulau Pinang,Timur Laut,2021,learning,3284
+Pulau Pinang,Overall,2021,learning,10695
+Sabah,Beaufort,2021,learning,569
+Sabah,Beluran,2021,learning,260
+Sabah,Kemabong,2021,learning,72
+Sabah,Keningau,2021,learning,1001
+Sabah,Kota Belud,2021,learning,862
+Sabah,Kota Kinabalu,2021,learning,2878
+Sabah,Kota Kinabatangan,2021,learning,124
+Sabah,Kota Marudu,2021,learning,442
+Sabah,Kuala Penyu,2021,learning,173
+Sabah,Kudat,2021,learning,978
+Sabah,Kunak,2021,learning,208
+Sabah,Lahad Datu,2021,learning,641
+Sabah,Matunggong,2021,learning,94
+Sabah,Membakut,2021,learning,148
+Sabah,Menumbok,2021,learning,61
+Sabah,Nabawan,2021,learning,277
+Sabah,Papar,2021,learning,814
+Sabah,Penampang,2021,learning,560
+Sabah,Pitas,2021,learning,294
+Sabah,Putatan,2021,learning,383
+Sabah,Ranau,2021,learning,631
+Sabah,Sandakan,2021,learning,1220
+Sabah,Semporna,2021,learning,538
+Sabah,Sipitang,2021,learning,183
+Sabah,Sook,2021,learning,141
+Sabah,Tambunan,2021,learning,233
+Sabah,Tamparuli,2021,learning,301
+Sabah,Tawau,2021,learning,1583
+Sabah,Telupid,2021,learning,117
+Sabah,Tenom,2021,learning,373
+Sabah,Tongod,2021,learning,105
+Sabah,Tuaran,2021,learning,491
+Sabah,Overall,2021,learning,16755
+Sarawak,Bau,2021,learning,360
+Sarawak,Belaga,2021,learning,36
+Sarawak,Betong,2021,learning,613
+Sarawak,Bintulu,2021,learning,1035
+Sarawak,Dalat,2021,learning,125
+Sarawak,Daro,2021,learning,55
+Sarawak,Julau,2021,learning,67
+Sarawak,Kanowit,2021,learning,154
+Sarawak,Kapit,2021,learning,526
+Sarawak,Kota Samarahan,2021,learning,1072
+Sarawak,Kuching,2021,learning,4261
+Sarawak,Lawas,2021,learning,103
+Sarawak,Limbang,2021,learning,389
+Sarawak,Lubok Antu,2021,learning,5
+Sarawak,Lundu,2021,learning,224
+Sarawak,Maradong,2021,learning,195
+Sarawak,Marudi,2021,learning,17
+Sarawak,Matu,2021,learning,47
+Sarawak,Miri,2021,learning,1745
+Sarawak,Mukah,2021,learning,416
+Sarawak,Pakan,2021,learning,52
+Sarawak,Saratok,2021,learning,116
+Sarawak,Sarikei,2021,learning,482
+Sarawak,Selangau,2021,learning,30
+Sarawak,Serian,2021,learning,363
+Sarawak,Sibu,2021,learning,2101
+Sarawak,Simunjan,2021,learning,121
+Sarawak,Song,2021,learning,63
+Sarawak,Sri Aman,2021,learning,446
+Sarawak,Tatau,2021,learning,39
+Sarawak,Overall,2021,learning,15258
+Selangor,Gombak,2021,learning,4768
+Selangor,Hulu Langat,2021,learning,6612
+Selangor,Hulu Selangor,2021,learning,1901
+Selangor,Klang,2021,learning,5008
+Selangor,Kuala Langat,2021,learning,1689
+Selangor,Kuala Selangor,2021,learning,1701
+Selangor,Petaling,2021,learning,2874
+Selangor,Sabak Bernam,2021,learning,1667
+Selangor,Sepang,2021,learning,1066
+Selangor,Shah Alam,2021,learning,3606
+Selangor,Subang Jaya,2021,learning,3261
+Selangor,Overall,2021,learning,34153
+Terengganu,Besut,2021,learning,2196
+Terengganu,Dungun,2021,learning,1650
+Terengganu,Hulu Terengganu,2021,learning,980
+Terengganu,Kemaman,2021,learning,1782
+Terengganu,Kuala Terengganu,2021,learning,3769
+Terengganu,Marang,2021,learning,1232
+Terengganu,Setiu,2021,learning,815
+Terengganu,Overall,2021,learning,12424
+W.P Kuala Lumpur,W.P Kuala Lumpur,2021,learning,13032
+W.P Labuan,W.P Labuan,2021,learning,954
+W.P Putrajaya,W.P Putrajaya,2021,learning,1380
+ Overall,Overall,2021,learning,213592
+Johor,Batu Pahat,2018,mental,725
+Johor,Johor Bahru,2018,mental,1700
+Johor,Kluang,2018,mental,460
+Johor,Kota Tinggi,2018,mental,257
+Johor,Kulaijaya,2018,mental,375
+Johor,Ledang,2018,mental,355
+Johor,Mersing,2018,mental,126
+Johor,Muar,2018,mental,679
+Johor,Pontian,2018,mental,296
+Johor,Segamat,2018,mental,467
+Johor,Overall,2018,mental,5440
+Kedah,Baling,2018,mental,290
+Kedah,Bandar Baharu,2018,mental,84
+Kedah,Kota Setar,2018,mental,664
+Kedah,Kuala Muda,2018,mental,960
+Kedah,Kubang Pasu,2018,mental,364
+Kedah,Kulim,2018,mental,410
+Kedah,Padang Terap,2018,mental,115
+Kedah,Pendang,2018,mental,177
+Kedah,Pokok Sena,2018,mental,96
+Kedah,Pulau Langkawi,2018,mental,43
+Kedah,Sik,2018,mental,130
+Kedah,Yan,2018,mental,156
+Kedah,Overall,2018,mental,3489
+Kelantan,Jajahah Jeli,2018,mental,134
+Kelantan,Bachok,2018,mental,312
+Kelantan,Gua Musang,2018,mental,165
+Kelantan,Kota Bharu,2018,mental,1018
+Kelantan,Kuala Krai,2018,mental,261
+Kelantan,Machang,2018,mental,241
+Kelantan,Pasir Mas,2018,mental,518
+Kelantan,Pasir Puteh,2018,mental,423
+Kelantan,Tanah Merah,2018,mental,347
+Kelantan,Tumpat,2018,mental,369
+Kelantan,Overall,2018,mental,3788
+Melaka,Alor Gajah,2018,mental,398
+Melaka,Jasin,2018,mental,338
+Melaka,Melaka Tengah,2018,mental,1047
+Melaka,Overall,2018,mental,1783
+Negeri Sembilan,Jelebu,2018,mental,96
+Negeri Sembilan,Jempol,2018,mental,268
+Negeri Sembilan,Kuala Pilah,2018,mental,242
+Negeri Sembilan,Port Dickson,2018,mental,178
+Negeri Sembilan,Rembau,2018,mental,99
+Negeri Sembilan,Seremban,2018,mental,780
+Negeri Sembilan,Tampin,2018,mental,137
+Negeri Sembilan,Overall,2018,mental,1800
+Pahang,Bentong,2018,mental,135
+Pahang,Bera,2018,mental,124
+Pahang,Cameron Highlands,2018,mental,24
+Pahang,Jerantut,2018,mental,103
+Pahang,Kuantan,2018,mental,543
+Pahang,Lipis,2018,mental,112
+Pahang,Maran,2018,mental,159
+Pahang,Pekan,2018,mental,145
+Pahang,Raub,2018,mental,75
+Pahang,Rompin,2018,mental,82
+Pahang,Temerloh,2018,mental,291
+Pahang,Overall,2018,mental,1793
+Perak,Batang Padang,2018,mental,223
+Perak,Hilir Perak,2018,mental,588
+Perak,Kampar,2018,mental,217
+Perak,Kerian,2018,mental,255
+Perak,Kinta,2018,mental,1335
+Perak,Kuala Kangsar,2018,mental,366
+Perak,Larut/ Matang/ Selama,2018,mental,612
+Perak,Manjung,2018,mental,383
+Perak,Perak Tengah,2018,mental,211
+Perak,Bagan Datuk,2018,mental,0
+Perak,Overall,2018,mental,4330
+Perlis,Perlis,2018,mental,612
+Pulau Pinang,Barat Daya,2018,mental,192
+Pulau Pinang,Seberang Perai Selatan,2018,mental,176
+Pulau Pinang,Seberang Perai Tengah,2018,mental,510
+Pulau Pinang,Seberang Perai Utara,2018,mental,309
+Pulau Pinang,Timur Laut,2018,mental,645
+Pulau Pinang,Overall,2018,mental,1832
+Sabah,Beaufort,2018,mental,62
+Sabah,Beluran,2018,mental,22
+Sabah,Kemabong,2018,mental,2
+Sabah,Keningau,2018,mental,199
+Sabah,Kota Belud,2018,mental,178
+Sabah,Kota Kinabalu,2018,mental,412
+Sabah,Kota Kinabatangan,2018,mental,53
+Sabah,Kota Marudu,2018,mental,69
+Sabah,Kuala Penyu,2018,mental,23
+Sabah,Kunak,2018,mental,21
+Sabah,Lahad Datu,2018,mental,25
+Sabah,Matunggong,2018,mental,13
+Sabah,Membakut,2018,mental,16
+Sabah,Menumbok,2018,mental,11
+Sabah,Nabawan,2018,mental,27
+Sabah,Papar,2018,mental,74
+Sabah,Penampang,2018,mental,55
+Sabah,Pitas,2018,mental,18
+Sabah,Putatan,2018,mental,55
+Sabah,Ranau,2018,mental,30
+Sabah,Sandakan,2018,mental,264
+Sabah,Semporna,2018,mental,65
+Sabah,Sipitang,2018,mental,20
+Sabah,Sook,2018,mental,11
+Sabah,Tambunan,2018,mental,76
+Sabah,Tamparuli,2018,mental,120
+Sabah,Tawau,2018,mental,221
+Sabah,Telupid,2018,mental,4
+Sabah,Tenom,2018,mental,63
+Sabah,Tongod,2018,mental,13
+Sabah,Tuaran,2018,mental,40
+Sabah,Overall,2018,mental,2339
+Sarawak,Bau,2018,mental,77
+Sarawak,Belaga,2018,mental,18
+Sarawak,Betong,2018,mental,101
+Sarawak,Bintulu,2018,mental,197
+Sarawak,Dalat,2018,mental,21
+Sarawak,Daro,2018,mental,6
+Sarawak,Julau,2018,mental,3
+Sarawak,Kanowit,2018,mental,19
+Sarawak,Kapit,2018,mental,100
+Sarawak,Kota Samarahan,2018,mental,358
+Sarawak,Kuching,2018,mental,1210
+Sarawak,Limbang,2018,mental,84
+Sarawak,Lubok Antu,2018,mental,3
+Sarawak,Lundu,2018,mental,24
+Sarawak,Maradong,2018,mental,45
+Sarawak,Marudi,2018,mental,3
+Sarawak,Matu,2018,mental,4
+Sarawak,Miri,2018,mental,419
+Sarawak,Mukah,2018,mental,90
+Sarawak,Pakan,2018,mental,0
+Sarawak,Saratok,2018,mental,3
+Sarawak,Sarikei,2018,mental,156
+Sarawak,Selangau,2018,mental,3
+Sarawak,Serian,2018,mental,132
+Sarawak,Sibu,2018,mental,529
+Sarawak,Simunjan,2018,mental,45
+Sarawak,Song,2018,mental,12
+Sarawak,Sri Aman,2018,mental,136
+Sarawak,Tatau,2018,mental,15
+Sarawak,Overall,2018,mental,3818
+Selangor,Gombak,2018,mental,697
+Selangor,Hulu Langat,2018,mental,934
+Selangor,Hulu Selangor,2018,mental,281
+Selangor,Klang,2018,mental,885
+Selangor,Kuala Langat,2018,mental,272
+Selangor,Kuala Selangor,2018,mental,261
+Selangor,Petaling,2018,mental,626
+Selangor,Sabak Bernam,2018,mental,199
+Selangor,Sepang,2018,mental,120
+Selangor,Shah Alam,2018,mental,318
+Selangor,Subang Jaya,2018,mental,593
+Selangor,Overall,2018,mental,5186
+Terengganu,Besut,2018,mental,268
+Terengganu,Dungun,2018,mental,173
+Terengganu,Hulu Terengganu,2018,mental,189
+Terengganu,Kemaman,2018,mental,247
+Terengganu,Kuala Terengganu,2018,mental,580
+Terengganu,Marang,2018,mental,149
+Terengganu,Setiu,2018,mental,91
+Terengganu,Overall,2018,mental,1697
+W.P Kuala Lumpur,W.P Kuala Lumpur,2018,mental,2348
+W.P Labuan,W.P Labuan,2018,mental,75
+W.P Putrajaya,W.P Putrajaya,2018,mental,18
+ Overall,Overall,2018,mental,40348
+Johor,Batu Pahat,2019,mental,796
+Johor,Johor Bahru,2019,mental,1920
+Johor,Kluang,2019,mental,519
+Johor,Kota Tinggi,2019,mental,284
+Johor,Kulaijaya,2019,mental,404
+Johor,Ledang,2019,mental,374
+Johor,Mersing,2019,mental,134
+Johor,Muar,2019,mental,744
+Johor,Pontian,2019,mental,322
+Johor,Segamat,2019,mental,518
+Johor,Overall,2019,mental,6015
+Kedah,Baling,2019,mental,334
+Kedah,Bandar Baharu,2019,mental,83
+Kedah,Kota Setar,2019,mental,736
+Kedah,Kuala Muda,2019,mental,1080
+Kedah,Kubang Pasu,2019,mental,432
+Kedah,Kulim,2019,mental,454
+Kedah,Padang Terap,2019,mental,131
+Kedah,Pendang,2019,mental,206
+Kedah,Pokok Sena,2019,mental,110
+Kedah,Pulau Langkawi,2019,mental,51
+Kedah,Sik,2019,mental,146
+Kedah,Yan,2019,mental,171
+Kedah,Overall,2019,mental,3934
+Kelantan,Jajahah Jeli,2019,mental,130
+Kelantan,Bachok,2019,mental,353
+Kelantan,Gua Musang,2019,mental,177
+Kelantan,Kota Bharu,2019,mental,1152
+Kelantan,Kuala Krai,2019,mental,291
+Kelantan,Machang,2019,mental,281
+Kelantan,Pasir Mas,2019,mental,566
+Kelantan,Pasir Puteh,2019,mental,460
+Kelantan,Tanah Merah,2019,mental,372
+Kelantan,Tumpat,2019,mental,387
+Kelantan,Overall,2019,mental,4169
+Melaka,Alor Gajah,2019,mental,413
+Melaka,Jasin,2019,mental,355
+Melaka,Melaka Tengah,2019,mental,1188
+Melaka,Overall,2019,mental,1956
+Negeri Sembilan,Jelebu,2019,mental,99
+Negeri Sembilan,Jempol,2019,mental,286
+Negeri Sembilan,Kuala Pilah,2019,mental,277
+Negeri Sembilan,Port Dickson,2019,mental,204
+Negeri Sembilan,Rembau,2019,mental,105
+Negeri Sembilan,Seremban,2019,mental,897
+Negeri Sembilan,Tampin,2019,mental,146
+Negeri Sembilan,Overall,2019,mental,2014
+Pahang,Bentong,2019,mental,158
+Pahang,Bera,2019,mental,134
+Pahang,Cameron Highlands,2019,mental,23
+Pahang,Jerantut,2019,mental,113
+Pahang,Kuantan,2019,mental,602
+Pahang,Lipis,2019,mental,124
+Pahang,Maran,2019,mental,177
+Pahang,Pekan,2019,mental,150
+Pahang,Raub,2019,mental,85
+Pahang,Rompin,2019,mental,89
+Pahang,Temerloh,2019,mental,356
+Pahang,Overall,2019,mental,2011
+Perak,Batang Padang,2019,mental,265
+Perak,Hilir Perak,2019,mental,626
+Perak,Hulu Perak,2019,mental,149
+Perak,Kampar,2019,mental,231
+Perak,Kerian,2019,mental,301
+Perak,Kinta,2019,mental,1460
+Perak,Kuala Kangsar,2019,mental,396
+Perak,Larut/ Matang/ Selama,2019,mental,720
+Perak,Manjung,2019,mental,444
+Perak,Perak Tengah,2019,mental,233
+Perak,Bagan Datuk,2019,mental,0
+Perak,Overall,2019,mental,4825
+Perlis,Perlis,2019,mental,737
+Pulau Pinang,Barat Daya,2019,mental,198
+Pulau Pinang,Seberang Perai Selatan,2019,mental,200
+Pulau Pinang,Seberang Perai Tengah,2019,mental,547
+Pulau Pinang,Seberang Perai Utara,2019,mental,336
+Pulau Pinang,Timur Laut,2019,mental,743
+Pulau Pinang,Overall,2019,mental,2024
+Sabah,Beaufort,2019,mental,64
+Sabah,Beluran,2019,mental,23
+Sabah,Kemabong,2019,mental,0
+Sabah,Keningau,2019,mental,213
+Sabah,Kota Belud,2019,mental,194
+Sabah,Kota Kinabalu,2019,mental,496
+Sabah,Kota Kinabatangan,2019,mental,52
+Sabah,Kota Marudu,2019,mental,73
+Sabah,Kuala Penyu,2019,mental,21
+Sabah,Kudat,2019,mental,88
+Sabah,Kunak,2019,mental,24
+Sabah,Lahad Datu,2019,mental,41
+Sabah,Matunggong,2019,mental,24
+Sabah,Membakut,2019,mental,17
+Sabah,Menumbok,2019,mental,10
+Sabah,Nabawan,2019,mental,34
+Sabah,Papar,2019,mental,88
+Sabah,Penampang,2019,mental,57
+Sabah,Pitas,2019,mental,20
+Sabah,Putatan,2019,mental,61
+Sabah,Ranau,2019,mental,34
+Sabah,Sandakan,2019,mental,300
+Sabah,Semporna,2019,mental,78
+Sabah,Sipitang,2019,mental,19
+Sabah,Sook,2019,mental,10
+Sabah,Tamparuli,2019,mental,124
+Sabah,Tawau,2019,mental,269
+Sabah,Telupid,2019,mental,2
+Sabah,Tenom,2019,mental,67
+Sabah,Tuaran,2019,mental,45
+Sabah,Overall,2019,mental,2642
+Sarawak,Bau,2019,mental,83
+Sarawak,Belaga,2019,mental,16
+Sarawak,Betong,2019,mental,115
+Sarawak,Bintulu,2019,mental,225
+Sarawak,Dalat,2019,mental,19
+Sarawak,Daro,2019,mental,5
+Sarawak,Julau,2019,mental,1
+Sarawak,Kanowit,2019,mental,27
+Sarawak,Kapit,2019,mental,112
+Sarawak,Kota Samarahan,2019,mental,375
+Sarawak,Kuching,2019,mental,1402
+Sarawak,Limbang,2019,mental,96
+Sarawak,Lubok Antu,2019,mental,1
+Sarawak,Lundu,2019,mental,25
+Sarawak,Maradong,2019,mental,48
+Sarawak,Marudi,2019,mental,1
+Sarawak,Miri,2019,mental,474
+Sarawak,Mukah,2019,mental,96
+Sarawak,Pakan,2019,mental,0
+Sarawak,Saratok,2019,mental,2
+Sarawak,Sarikei,2019,mental,172
+Sarawak,Selangau,2019,mental,1
+Sarawak,Serian,2019,mental,158
+Sarawak,Sibu,2019,mental,581
+Sarawak,Simunjan,2019,mental,44
+Sarawak,Song,2019,mental,10
+Sarawak,Sri Aman,2019,mental,144
+Sarawak,Tatau,2019,mental,14
+Sarawak,Overall,2019,mental,4255
+Selangor,Gombak,2019,mental,782
+Selangor,Hulu Langat,2019,mental,1088
+Selangor,Hulu Selangor,2019,mental,308
+Selangor,Klang,2019,mental,984
+Selangor,Kuala Langat,2019,mental,289
+Selangor,Kuala Selangor,2019,mental,281
+Selangor,Petaling,2019,mental,715
+Selangor,Sabak Bernam,2019,mental,208
+Selangor,Sepang,2019,mental,124
+Selangor,Shah Alam,2019,mental,350
+Selangor,Subang Jaya,2019,mental,701
+Selangor,Overall,2019,mental,5830
+Terengganu,Besut,2019,mental,307
+Terengganu,Dungun,2019,mental,216
+Terengganu,Hulu Terengganu,2019,mental,207
+Terengganu,Kemaman,2019,mental,272
+Terengganu,Kuala Terengganu,2019,mental,656
+Terengganu,Marang,2019,mental,167
+Terengganu,Setiu,2019,mental,99
+Terengganu,Overall,2019,mental,1924
+W.P Kuala Lumpur,W.P Kuala Lumpur,2019,mental,2606
+W.P Labuan,W.P Labuan,2019,mental,87
+ Overall,Overall,2019,mental,45080
+Johor,Batu Pahat,2020,mental,878
+Johor,Johor Bahru,2020,mental,2057
+Johor,Kluang,2020,mental,555
+Johor,Kota Tinggi,2020,mental,313
+Johor,Kulaijaya,2020,mental,425
+Johor,Ledang,2020,mental,389
+Johor,Mersing,2020,mental,146
+Johor,Muar,2020,mental,792
+Johor,Pontian,2020,mental,347
+Johor,Segamat,2020,mental,565
+Johor,Overall,2020,mental,6467
+Kedah,Baling,2020,mental,351
+Kedah,Bandar Baharu,2020,mental,89
+Kedah,Kota Setar,2020,mental,811
+Kedah,Kuala Muda,2020,mental,1165
+Kedah,Kubang Pasu,2020,mental,457
+Kedah,Kulim,2020,mental,487
+Kedah,Padang Terap,2020,mental,142
+Kedah,Pendang,2020,mental,220
+Kedah,Pokok Sena,2020,mental,115
+Kedah,Pulau Langkawi,2020,mental,59
+Kedah,Sik,2020,mental,167
+Kedah,Yan,2020,mental,191
+Kedah,Overall,2020,mental,4254
+Kelantan,Jajahah Jeli,2020,mental,139
+Kelantan,Bachok,2020,mental,382
+Kelantan,Gua Musang,2020,mental,196
+Kelantan,Kota Bharu,2020,mental,1258
+Kelantan,Kuala Krai,2020,mental,313
+Kelantan,Machang,2020,mental,313
+Kelantan,Pasir Mas,2020,mental,606
+Kelantan,Pasir Puteh,2020,mental,486
+Kelantan,Tanah Merah,2020,mental,408
+Kelantan,Tumpat,2020,mental,432
+Kelantan,Overall,2020,mental,4533
+Melaka,Alor Gajah,2020,mental,443
+Melaka,Jasin,2020,mental,370
+Melaka,Melaka Tengah,2020,mental,1247
+Melaka,Overall,2020,mental,2060
+Negeri Sembilan,Jelebu,2020,mental,107
+Negeri Sembilan,Jempol,2020,mental,316
+Negeri Sembilan,Kuala Pilah,2020,mental,290
+Negeri Sembilan,Port Dickson,2020,mental,227
+Negeri Sembilan,Rembau,2020,mental,108
+Negeri Sembilan,Seremban,2020,mental,964
+Negeri Sembilan,Tampin,2020,mental,153
+Negeri Sembilan,Overall,2020,mental,2165
+Pahang,Bentong,2020,mental,171
+Pahang,Bera,2020,mental,150
+Pahang,Cameron Highlands,2020,mental,23
+Pahang,Jerantut,2020,mental,124
+Pahang,Kuantan,2020,mental,648
+Pahang,Lipis,2020,mental,130
+Pahang,Maran,2020,mental,191
+Pahang,Pekan,2020,mental,158
+Pahang,Raub,2020,mental,95
+Pahang,Rompin,2020,mental,99
+Pahang,Temerloh,2020,mental,390
+Pahang,Overall,2020,mental,2179
+Perak,Batang Padang,2020,mental,302
+Perak,Hilir Perak,2020,mental,658
+Perak,Hulu Perak,2020,mental,158
+Perak,Kampar,2020,mental,253
+Perak,Kerian,2020,mental,331
+Perak,Kinta,2020,mental,1558
+Perak,Kuala Kangsar,2020,mental,428
+Perak,Larut/ Matang/ Selama,2020,mental,797
+Perak,Manjung,2020,mental,499
+Perak,Perak Tengah,2020,mental,243
+Perak,Bagan Datuk,2020,mental,0
+Perak,Overall,2020,mental,5227
+Perlis,Perlis,2020,mental,859
+Pulau Pinang,Barat Daya,2020,mental,206
+Pulau Pinang,Seberang Perai Selatan,2020,mental,214
+Pulau Pinang,Seberang Perai Tengah,2020,mental,577
+Pulau Pinang,Seberang Perai Utara,2020,mental,351
+Pulau Pinang,Timur Laut,2020,mental,787
+Pulau Pinang,Overall,2020,mental,2135
+Sabah,Beaufort,2020,mental,69
+Sabah,Beluran,2020,mental,23
+Sabah,Kemabong,2020,mental,0
+Sabah,Keningau,2020,mental,225
+Sabah,Kota Belud,2020,mental,200
+Sabah,Kota Kinabalu,2020,mental,521
+Sabah,Kota Kinabatangan,2020,mental,54
+Sabah,Kota Marudu,2020,mental,75
+Sabah,Kuala Penyu,2020,mental,22
+Sabah,Kudat,2020,mental,92
+Sabah,Kunak,2020,mental,36
+Sabah,Lahad Datu,2020,mental,49
+Sabah,Matunggong,2020,mental,30
+Sabah,Membakut,2020,mental,19
+Sabah,Menumbok,2020,mental,10
+Sabah,Nabawan,2020,mental,39
+Sabah,Papar,2020,mental,94
+Sabah,Penampang,2020,mental,68
+Sabah,Pitas,2020,mental,22
+Sabah,Putatan,2020,mental,68
+Sabah,Ranau,2020,mental,38
+Sabah,Sandakan,2020,mental,362
+Sabah,Semporna,2020,mental,84
+Sabah,Sipitang,2020,mental,20
+Sabah,Tambunan,2020,mental,84
+Sabah,Tamparuli,2020,mental,125
+Sabah,Tawau,2020,mental,295
+Sabah,Telupid,2020,mental,4
+Sabah,Tenom,2020,mental,72
+Sabah,Tongod,2020,mental,17
+Sabah,Tuaran,2020,mental,48
+Sabah,Overall,2020,mental,2875
+Sarawak,Bau,2020,mental,90
+Sarawak,Belaga,2020,mental,18
+Sarawak,Betong,2020,mental,119
+Sarawak,Bintulu,2020,mental,232
+Sarawak,Dalat,2020,mental,20
+Sarawak,Daro,2020,mental,6
+Sarawak,Julau,2020,mental,4
+Sarawak,Kanowit,2020,mental,32
+Sarawak,Kapit,2020,mental,117
+Sarawak,Kota Samarahan,2020,mental,390
+Sarawak,Kuching,2020,mental,1492
+Sarawak,Lawas,2020,mental,7
+Sarawak,Limbang,2020,mental,113
+Sarawak,Lubok Antu,2020,mental,2
+Sarawak,Lundu,2020,mental,29
+Sarawak,Maradong,2020,mental,50
+Sarawak,Marudi,2020,mental,1
+Sarawak,Matu,2020,mental,2
+Sarawak,Miri,2020,mental,507
+Sarawak,Mukah,2020,mental,99
+Sarawak,Pakan,2020,mental,1
+Sarawak,Saratok,2020,mental,7
+Sarawak,Sarikei,2020,mental,183
+Sarawak,Selangau,2020,mental,1
+Sarawak,Serian,2020,mental,169
+Sarawak,Sibu,2020,mental,648
+Sarawak,Simunjan,2020,mental,44
+Sarawak,Song,2020,mental,11
+Sarawak,Sri Aman,2020,mental,147
+Sarawak,Overall,2020,mental,4556
+Selangor,Gombak,2020,mental,849
+Selangor,Hulu Langat,2020,mental,1150
+Selangor,Hulu Selangor,2020,mental,330
+Selangor,Klang,2020,mental,1079
+Selangor,Kuala Langat,2020,mental,303
+Selangor,Kuala Selangor,2020,mental,297
+Selangor,Petaling,2020,mental,784
+Selangor,Sabak Bernam,2020,mental,237
+Selangor,Sepang,2020,mental,130
+Selangor,Shah Alam,2020,mental,399
+Selangor,Subang Jaya,2020,mental,766
+Selangor,Overall,2020,mental,6324
+Terengganu,Besut,2020,mental,319
+Terengganu,Dungun,2020,mental,247
+Terengganu,Hulu Terengganu,2020,mental,214
+Terengganu,Kemaman,2020,mental,290
+Terengganu,Kuala Terengganu,2020,mental,727
+Terengganu,Marang,2020,mental,181
+Terengganu,Setiu,2020,mental,105
+Terengganu,Overall,2020,mental,2083
+W.P Kuala Lumpur,W.P Kuala Lumpur,2020,mental,2756
+W.P Labuan,W.P Labuan,2020,mental,96
+W.P Putrajaya,W.P Putrajaya,2020,mental,75
+ Overall,Overall,2020,mental,48644
+Johor,Batu Pahat,2021,mental,928
+Johor,Johor Bahru,2021,mental,2208
+Johor,Kluang,2021,mental,588
+Johor,Kota Tinggi,2021,mental,330
+Johor,Kulaijaya,2021,mental,449
+Johor,Ledang,2021,mental,407
+Johor,Mersing,2021,mental,182
+Johor,Muar,2021,mental,800
+Johor,Pontian,2021,mental,384
+Johor,Segamat,2021,mental,579
+Johor,Overall,2021,mental,6855
+Kedah,Baling,2021,mental,363
+Kedah,Bandar Baharu,2021,mental,93
+Kedah,Kota Setar,2021,mental,855
+Kedah,Kuala Muda,2021,mental,1215
+Kedah,Kubang Pasu,2021,mental,485
+Kedah,Kulim,2021,mental,526
+Kedah,Padang Terap,2021,mental,157
+Kedah,Pendang,2021,mental,230
+Kedah,Pokok Sena,2021,mental,120
+Kedah,Pulau Langkawi,2021,mental,63
+Kedah,Sik,2021,mental,176
+Kedah,Yan,2021,mental,202
+Kedah,Overall,2021,mental,4485
+Kelantan,Jajahah Jeli,2021,mental,141
+Kelantan,Bachok,2021,mental,416
+Kelantan,Gua Musang,2021,mental,193
+Kelantan,Kota Bharu,2021,mental,1369
+Kelantan,Kuala Krai,2021,mental,318
+Kelantan,Machang,2021,mental,314
+Kelantan,Pasir Mas,2021,mental,636
+Kelantan,Pasir Puteh,2021,mental,486
+Kelantan,Tanah Merah,2021,mental,421
+Kelantan,Tumpat,2021,mental,447
+Kelantan,Overall,2021,mental,4741
+Melaka,Alor Gajah,2021,mental,463
+Melaka,Jasin,2021,mental,376
+Melaka,Melaka Tengah,2021,mental,1292
+Melaka,Overall,2021,mental,2131
+Negeri Sembilan,Jelebu,2021,mental,110
+Negeri Sembilan,Jempol,2021,mental,325
+Negeri Sembilan,Kuala Pilah,2021,mental,305
+Negeri Sembilan,Port Dickson,2021,mental,255
+Negeri Sembilan,Rembau,2021,mental,114
+Negeri Sembilan,Seremban,2021,mental,1043
+Negeri Sembilan,Tampin,2021,mental,158
+Negeri Sembilan,Overall,2021,mental,2310
+Pahang,Bentong,2021,mental,181
+Pahang,Bera,2021,mental,161
+Pahang,Cameron Highlands,2021,mental,23
+Pahang,Jerantut,2021,mental,142
+Pahang,Kuantan,2021,mental,705
+Pahang,Lipis,2021,mental,135
+Pahang,Maran,2021,mental,206
+Pahang,Pekan,2021,mental,166
+Pahang,Raub,2021,mental,104
+Pahang,Rompin,2021,mental,110
+Pahang,Temerloh,2021,mental,421
+Pahang,Overall,2021,mental,2354
+Perak,Bagan Datuk,2021,mental,13
+Perak,Batang Padang,2021,mental,321
+Perak,Hilir Perak,2021,mental,664
+Perak,Hulu Perak,2021,mental,164
+Perak,Kampar,2021,mental,280
+Perak,Kerian,2021,mental,342
+Perak,Kinta,2021,mental,1691
+Perak,Kuala Kangsar,2021,mental,458
+Perak,Larut/ Matang/ Selama,2021,mental,847
+Perak,Manjung,2021,mental,533
+Perak,Muallim,2021,mental,3
+Perak,Perak Tengah,2021,mental,243
+Perak,Overall,2021,mental,5559
+Perlis,Perlis,2021,mental,907
+Pulau Pinang,Barat Daya,2021,mental,220
+Pulau Pinang,Seberang Perai Selatan,2021,mental,238
+Pulau Pinang,Seberang Perai Tengah,2021,mental,632
+Pulau Pinang,Seberang Perai Utara,2021,mental,381
+Pulau Pinang,Timur Laut,2021,mental,811
+Pulau Pinang,Overall,2021,mental,2282
+Sabah,Beaufort,2021,mental,71
+Sabah,Beluran,2021,mental,24
+Sabah,Kemabong,2021,mental,1
+Sabah,Keningau,2021,mental,235
+Sabah,Kota Belud,2021,mental,208
+Sabah,Kota Kinabalu,2021,mental,560
+Sabah,Kota Kinabatangan,2021,mental,56
+Sabah,Kota Marudu,2021,mental,78
+Sabah,Kuala Penyu,2021,mental,25
+Sabah,Kudat,2021,mental,96
+Sabah,Kunak,2021,mental,39
+Sabah,Lahad Datu,2021,mental,49
+Sabah,Matunggong,2021,mental,30
+Sabah,Membakut,2021,mental,19
+Sabah,Menumbok,2021,mental,11
+Sabah,Nabawan,2021,mental,41
+Sabah,Papar,2021,mental,95
+Sabah,Penampang,2021,mental,77
+Sabah,Pitas,2021,mental,23
+Sabah,Putatan,2021,mental,73
+Sabah,Ranau,2021,mental,44
+Sabah,Sandakan,2021,mental,380
+Sabah,Semporna,2021,mental,88
+Sabah,Sipitang,2021,mental,29
+Sabah,Sook,2021,mental,9
+Sabah,Tambunan,2021,mental,87
+Sabah,Tamparuli,2021,mental,128
+Sabah,Tawau,2021,mental,306
+Sabah,Telupid,2021,mental,4
+Sabah,Tenom,2021,mental,73
+Sabah,Tongod,2021,mental,20
+Sabah,Tuaran,2021,mental,50
+Sabah,Overall,2021,mental,3029
+Sarawak,Bau,2021,mental,98
+Sarawak,Belaga,2021,mental,20
+Sarawak,Betong,2021,mental,125
+Sarawak,Bintulu,2021,mental,242
+Sarawak,Dalat,2021,mental,20
+Sarawak,Daro,2021,mental,8
+Sarawak,Julau,2021,mental,9
+Sarawak,Kanowit,2021,mental,36
+Sarawak,Kapit,2021,mental,117
+Sarawak,Kota Samarahan,2021,mental,394
+Sarawak,Kuching,2021,mental,1622
+Sarawak,Lawas,2021,mental,9
+Sarawak,Limbang,2021,mental,120
+Sarawak,Lubok Antu,2021,mental,5
+Sarawak,Lundu,2021,mental,34
+Sarawak,Maradong,2021,mental,54
+Sarawak,Marudi,2021,mental,3
+Sarawak,Matu,2021,mental,2
+Sarawak,Miri,2021,mental,542
+Sarawak,Mukah,2021,mental,100
+Sarawak,Pakan,2021,mental,3
+Sarawak,Saratok,2021,mental,10
+Sarawak,Sarikei,2021,mental,183
+Sarawak,Selangau,2021,mental,1
+Sarawak,Serian,2021,mental,189
+Sarawak,Sibu,2021,mental,663
+Sarawak,Simunjan,2021,mental,47
+Sarawak,Song,2021,mental,12
+Sarawak,Sri Aman,2021,mental,156
+Sarawak,Tatau,2021,mental,15
+Sarawak,Overall,2021,mental,4839
+Selangor,Gombak,2021,mental,872
+Selangor,Hulu Langat,2021,mental,1260
+Selangor,Hulu Selangor,2021,mental,346
+Selangor,Klang,2021,mental,1142
+Selangor,Kuala Langat,2021,mental,319
+Selangor,Kuala Selangor,2021,mental,309
+Selangor,Petaling,2021,mental,824
+Selangor,Sabak Bernam,2021,mental,245
+Selangor,Sepang,2021,mental,136
+Selangor,Shah Alam,2021,mental,422
+Selangor,Subang Jaya,2021,mental,816
+Selangor,Overall,2021,mental,6691
+Terengganu,Besut,2021,mental,341
+Terengganu,Dungun,2021,mental,272
+Terengganu,Hulu Terengganu,2021,mental,226
+Terengganu,Kemaman,2021,mental,308
+Terengganu,Kuala Terengganu,2021,mental,784
+Terengganu,Marang,2021,mental,203
+Terengganu,Setiu,2021,mental,115
+Terengganu,Overall,2021,mental,2249
+W.P Kuala Lumpur,W.P Kuala Lumpur,2021,mental,2971
+W.P Labuan,W.P Labuan,2021,mental,100
+W.P Putrajaya,W.P Putrajaya,2021,mental,96
+ Overall,Overall,2021,mental,51599
+Johor,Batu Pahat,2018,multiple,326
+Johor,Johor Bahru,2018,multiple,1000
+Johor,Kluang,2018,multiple,175
+Johor,Kota Tinggi,2018,multiple,179
+Johor,Kulaijaya,2018,multiple,153
+Johor,Ledang,2018,multiple,176
+Johor,Mersing,2018,multiple,75
+Johor,Muar,2018,multiple,287
+Johor,Pontian,2018,multiple,136
+Johor,Segamat,2018,multiple,231
+Johor,Overall,2018,multiple,2738
+Kedah,Baling,2018,multiple,102
+Kedah,Bandar Baharu,2018,multiple,85
+Kedah,Kota Setar,2018,multiple,344
+Kedah,Kuala Muda,2018,multiple,557
+Kedah,Kubang Pasu,2018,multiple,203
+Kedah,Kulim,2018,multiple,251
+Kedah,Padang Terap,2018,multiple,75
+Kedah,Pendang,2018,multiple,91
+Kedah,Pokok Sena,2018,multiple,53
+Kedah,Pulau Langkawi,2018,multiple,127
+Kedah,Sik,2018,multiple,69
+Kedah,Yan,2018,multiple,79
+Kedah,Overall,2018,multiple,2036
+Kelantan,Jajahah Jeli,2018,multiple,83
+Kelantan,Bachok,2018,multiple,124
+Kelantan,Gua Musang,2018,multiple,123
+Kelantan,Kota Bharu,2018,multiple,616
+Kelantan,Kuala Krai,2018,multiple,88
+Kelantan,Machang,2018,multiple,93
+Kelantan,Pasir Mas,2018,multiple,224
+Kelantan,Pasir Puteh,2018,multiple,121
+Kelantan,Tanah Merah,2018,multiple,104
+Kelantan,Tumpat,2018,multiple,203
+Kelantan,Overall,2018,multiple,1779
+Melaka,Alor Gajah,2018,multiple,169
+Melaka,Jasin,2018,multiple,210
+Melaka,Melaka Tengah,2018,multiple,345
+Melaka,Overall,2018,multiple,724
+Negeri Sembilan,Jelebu,2018,multiple,61
+Negeri Sembilan,Jempol,2018,multiple,156
+Negeri Sembilan,Kuala Pilah,2018,multiple,99
+Negeri Sembilan,Port Dickson,2018,multiple,131
+Negeri Sembilan,Rembau,2018,multiple,62
+Negeri Sembilan,Seremban,2018,multiple,485
+Negeri Sembilan,Tampin,2018,multiple,103
+Negeri Sembilan,Overall,2018,multiple,1097
+Pahang,Bentong,2018,multiple,85
+Pahang,Bera,2018,multiple,98
+Pahang,Cameron Highlands,2018,multiple,26
+Pahang,Jerantut,2018,multiple,149
+Pahang,Kuantan,2018,multiple,303
+Pahang,Lipis,2018,multiple,95
+Pahang,Maran,2018,multiple,144
+Pahang,Pekan,2018,multiple,154
+Pahang,Raub,2018,multiple,74
+Pahang,Rompin,2018,multiple,112
+Pahang,Temerloh,2018,multiple,175
+Pahang,Overall,2018,multiple,1415
+Perak,Batang Padang,2018,multiple,126
+Perak,Hilir Perak,2018,multiple,207
+Perak,Kampar,2018,multiple,124
+Perak,Kerian,2018,multiple,120
+Perak,Kinta,2018,multiple,687
+Perak,Kuala Kangsar,2018,multiple,158
+Perak,Larut/ Matang/ Selama,2018,multiple,281
+Perak,Manjung,2018,multiple,241
+Perak,Perak Tengah,2018,multiple,141
+Perak,Bagan Datuk,2018,multiple,0
+Perak,Overall,2018,multiple,2166
+Perlis,Perlis,2018,multiple,216
+Pulau Pinang,Barat Daya,2018,multiple,151
+Pulau Pinang,Seberang Perai Selatan,2018,multiple,125
+Pulau Pinang,Seberang Perai Tengah,2018,multiple,250
+Pulau Pinang,Seberang Perai Utara,2018,multiple,269
+Pulau Pinang,Timur Laut,2018,multiple,308
+Pulau Pinang,Overall,2018,multiple,1103
+Sabah,Beaufort,2018,multiple,85
+Sabah,Beluran,2018,multiple,27
+Sabah,Kemabong,2018,multiple,2
+Sabah,Keningau,2018,multiple,74
+Sabah,Kota Belud,2018,multiple,78
+Sabah,Kota Kinabalu,2018,multiple,294
+Sabah,Kota Kinabatangan,2018,multiple,22
+Sabah,Kota Marudu,2018,multiple,59
+Sabah,Kuala Penyu,2018,multiple,13
+Sabah,Kunak,2018,multiple,25
+Sabah,Lahad Datu,2018,multiple,52
+Sabah,Matunggong,2018,multiple,18
+Sabah,Membakut,2018,multiple,28
+Sabah,Menumbok,2018,multiple,11
+Sabah,Nabawan,2018,multiple,56
+Sabah,Papar,2018,multiple,31
+Sabah,Penampang,2018,multiple,49
+Sabah,Pitas,2018,multiple,42
+Sabah,Putatan,2018,multiple,38
+Sabah,Ranau,2018,multiple,114
+Sabah,Sandakan,2018,multiple,157
+Sabah,Semporna,2018,multiple,43
+Sabah,Sipitang,2018,multiple,12
+Sabah,Sook,2018,multiple,29
+Sabah,Tambunan,2018,multiple,30
+Sabah,Tamparuli,2018,multiple,31
+Sabah,Tawau,2018,multiple,182
+Sabah,Telupid,2018,multiple,3
+Sabah,Tenom,2018,multiple,47
+Sabah,Tongod,2018,multiple,45
+Sabah,Tuaran,2018,multiple,59
+Sabah,Overall,2018,multiple,1838
+Sarawak,Bau,2018,multiple,18
+Sarawak,Belaga,2018,multiple,3
+Sarawak,Betong,2018,multiple,93
+Sarawak,Bintulu,2018,multiple,78
+Sarawak,Dalat,2018,multiple,6
+Sarawak,Daro,2018,multiple,4
+Sarawak,Julau,2018,multiple,3
+Sarawak,Kanowit,2018,multiple,5
+Sarawak,Kapit,2018,multiple,47
+Sarawak,Kota Samarahan,2018,multiple,83
+Sarawak,Kuching,2018,multiple,258
+Sarawak,Limbang,2018,multiple,56
+Sarawak,Lubok Antu,2018,multiple,0
+Sarawak,Lundu,2018,multiple,11
+Sarawak,Maradong,2018,multiple,23
+Sarawak,Marudi,2018,multiple,0
+Sarawak,Matu,2018,multiple,10
+Sarawak,Miri,2018,multiple,252
+Sarawak,Mukah,2018,multiple,37
+Sarawak,Pakan,2018,multiple,0
+Sarawak,Saratok,2018,multiple,2
+Sarawak,Sarikei,2018,multiple,89
+Sarawak,Selangau,2018,multiple,3
+Sarawak,Serian,2018,multiple,17
+Sarawak,Sibu,2018,multiple,161
+Sarawak,Simunjan,2018,multiple,16
+Sarawak,Song,2018,multiple,2
+Sarawak,Sri Aman,2018,multiple,61
+Sarawak,Tatau,2018,multiple,7
+Sarawak,Overall,2018,multiple,1360
+Selangor,Gombak,2018,multiple,590
+Selangor,Hulu Langat,2018,multiple,608
+Selangor,Hulu Selangor,2018,multiple,224
+Selangor,Klang,2018,multiple,853
+Selangor,Kuala Langat,2018,multiple,223
+Selangor,Kuala Selangor,2018,multiple,230
+Selangor,Petaling,2018,multiple,372
+Selangor,Sabak Bernam,2018,multiple,155
+Selangor,Sepang,2018,multiple,134
+Selangor,Shah Alam,2018,multiple,367
+Selangor,Subang Jaya,2018,multiple,443
+Selangor,Overall,2018,multiple,4199
+Terengganu,Besut,2018,multiple,244
+Terengganu,Dungun,2018,multiple,201
+Terengganu,Hulu Terengganu,2018,multiple,68
+Terengganu,Kemaman,2018,multiple,148
+Terengganu,Kuala Terengganu,2018,multiple,357
+Terengganu,Marang,2018,multiple,102
+Terengganu,Setiu,2018,multiple,52
+Terengganu,Overall,2018,multiple,1172
+W.P Kuala Lumpur,W.P Kuala Lumpur,2018,multiple,1118
+W.P Labuan,W.P Labuan,2018,multiple,72
+W.P Putrajaya,W.P Putrajaya,2018,multiple,39
+ Overall,Overall,2018,multiple,23072
+Johor,Batu Pahat,2019,multiple,350
+Johor,Johor Bahru,2019,multiple,1126
+Johor,Kluang,2019,multiple,195
+Johor,Kota Tinggi,2019,multiple,199
+Johor,Kulaijaya,2019,multiple,179
+Johor,Ledang,2019,multiple,184
+Johor,Mersing,2019,multiple,79
+Johor,Muar,2019,multiple,319
+Johor,Pontian,2019,multiple,143
+Johor,Segamat,2019,multiple,260
+Johor,Overall,2019,multiple,3034
+Kedah,Baling,2019,multiple,117
+Kedah,Bandar Baharu,2019,multiple,85
+Kedah,Kota Setar,2019,multiple,371
+Kedah,Kuala Muda,2019,multiple,628
+Kedah,Kubang Pasu,2019,multiple,254
+Kedah,Kulim,2019,multiple,269
+Kedah,Padang Terap,2019,multiple,76
+Kedah,Pendang,2019,multiple,98
+Kedah,Pokok Sena,2019,multiple,64
+Kedah,Pulau Langkawi,2019,multiple,140
+Kedah,Sik,2019,multiple,72
+Kedah,Yan,2019,multiple,84
+Kedah,Overall,2019,multiple,2258
+Kelantan,Jajahah Jeli,2019,multiple,91
+Kelantan,Bachok,2019,multiple,138
+Kelantan,Gua Musang,2019,multiple,135
+Kelantan,Kota Bharu,2019,multiple,666
+Kelantan,Kuala Krai,2019,multiple,102
+Kelantan,Machang,2019,multiple,103
+Kelantan,Pasir Mas,2019,multiple,251
+Kelantan,Pasir Puteh,2019,multiple,131
+Kelantan,Tanah Merah,2019,multiple,113
+Kelantan,Tumpat,2019,multiple,218
+Kelantan,Overall,2019,multiple,1948
+Melaka,Alor Gajah,2019,multiple,178
+Melaka,Jasin,2019,multiple,237
+Melaka,Melaka Tengah,2019,multiple,392
+Melaka,Overall,2019,multiple,807
+Negeri Sembilan,Jelebu,2019,multiple,59
+Negeri Sembilan,Jempol,2019,multiple,177
+Negeri Sembilan,Kuala Pilah,2019,multiple,102
+Negeri Sembilan,Port Dickson,2019,multiple,158
+Negeri Sembilan,Rembau,2019,multiple,64
+Negeri Sembilan,Seremban,2019,multiple,556
+Negeri Sembilan,Tampin,2019,multiple,107
+Negeri Sembilan,Overall,2019,multiple,1223
+Pahang,Bentong,2019,multiple,97
+Pahang,Bera,2019,multiple,105
+Pahang,Cameron Highlands,2019,multiple,25
+Pahang,Jerantut,2019,multiple,155
+Pahang,Kuantan,2019,multiple,381
+Pahang,Lipis,2019,multiple,96
+Pahang,Maran,2019,multiple,156
+Pahang,Pekan,2019,multiple,166
+Pahang,Raub,2019,multiple,78
+Pahang,Rompin,2019,multiple,124
+Pahang,Temerloh,2019,multiple,193
+Pahang,Overall,2019,multiple,1576
+Perak,Batang Padang,2019,multiple,136
+Perak,Hilir Perak,2019,multiple,223
+Perak,Hulu Perak,2019,multiple,83
+Perak,Kampar,2019,multiple,124
+Perak,Kerian,2019,multiple,125
+Perak,Kinta,2019,multiple,747
+Perak,Kuala Kangsar,2019,multiple,165
+Perak,Larut/ Matang/ Selama,2019,multiple,307
+Perak,Manjung,2019,multiple,253
+Perak,Perak Tengah,2019,multiple,146
+Perak,Bagan Datuk,2019,multiple,0
+Perak,Overall,2019,multiple,2309
+Perlis,Perlis,2019,multiple,263
+Pulau Pinang,Barat Daya,2019,multiple,160
+Pulau Pinang,Seberang Perai Selatan,2019,multiple,137
+Pulau Pinang,Seberang Perai Tengah,2019,multiple,280
+Pulau Pinang,Seberang Perai Utara,2019,multiple,286
+Pulau Pinang,Timur Laut,2019,multiple,359
+Pulau Pinang,Overall,2019,multiple,1222
+Sabah,Beaufort,2019,multiple,92
+Sabah,Beluran,2019,multiple,31
+Sabah,Kemabong,2019,multiple,1
+Sabah,Keningau,2019,multiple,89
+Sabah,Kota Belud,2019,multiple,86
+Sabah,Kota Kinabalu,2019,multiple,335
+Sabah,Kota Kinabatangan,2019,multiple,22
+Sabah,Kota Marudu,2019,multiple,70
+Sabah,Kuala Penyu,2019,multiple,12
+Sabah,Kudat,2019,multiple,84
+Sabah,Kunak,2019,multiple,25
+Sabah,Lahad Datu,2019,multiple,65
+Sabah,Matunggong,2019,multiple,24
+Sabah,Membakut,2019,multiple,30
+Sabah,Menumbok,2019,multiple,11
+Sabah,Nabawan,2019,multiple,58
+Sabah,Papar,2019,multiple,39
+Sabah,Penampang,2019,multiple,51
+Sabah,Pitas,2019,multiple,46
+Sabah,Putatan,2019,multiple,42
+Sabah,Ranau,2019,multiple,122
+Sabah,Sandakan,2019,multiple,192
+Sabah,Semporna,2019,multiple,51
+Sabah,Sipitang,2019,multiple,11
+Sabah,Sook,2019,multiple,31
+Sabah,Tamparuli,2019,multiple,34
+Sabah,Tawau,2019,multiple,213
+Sabah,Telupid,2019,multiple,5
+Sabah,Tenom,2019,multiple,51
+Sabah,Tuaran,2019,multiple,64
+Sabah,Overall,2019,multiple,2064
+Sarawak,Bau,2019,multiple,19
+Sarawak,Belaga,2019,multiple,2
+Sarawak,Betong,2019,multiple,101
+Sarawak,Bintulu,2019,multiple,88
+Sarawak,Dalat,2019,multiple,5
+Sarawak,Daro,2019,multiple,3
+Sarawak,Julau,2019,multiple,2
+Sarawak,Kanowit,2019,multiple,6
+Sarawak,Kapit,2019,multiple,52
+Sarawak,Kota Samarahan,2019,multiple,107
+Sarawak,Kuching,2019,multiple,292
+Sarawak,Limbang,2019,multiple,59
+Sarawak,Lubok Antu,2019,multiple,0
+Sarawak,Lundu,2019,multiple,10
+Sarawak,Maradong,2019,multiple,22
+Sarawak,Marudi,2019,multiple,0
+Sarawak,Miri,2019,multiple,271
+Sarawak,Mukah,2019,multiple,43
+Sarawak,Pakan,2019,multiple,0
+Sarawak,Saratok,2019,multiple,1
+Sarawak,Sarikei,2019,multiple,94
+Sarawak,Selangau,2019,multiple,2
+Sarawak,Serian,2019,multiple,25
+Sarawak,Sibu,2019,multiple,176
+Sarawak,Simunjan,2019,multiple,15
+Sarawak,Song,2019,multiple,1
+Sarawak,Sri Aman,2019,multiple,60
+Sarawak,Tatau,2019,multiple,7
+Sarawak,Overall,2019,multiple,1487
+Selangor,Gombak,2019,multiple,636
+Selangor,Hulu Langat,2019,multiple,672
+Selangor,Hulu Selangor,2019,multiple,238
+Selangor,Klang,2019,multiple,919
+Selangor,Kuala Langat,2019,multiple,252
+Selangor,Kuala Selangor,2019,multiple,238
+Selangor,Petaling,2019,multiple,398
+Selangor,Sabak Bernam,2019,multiple,166
+Selangor,Sepang,2019,multiple,152
+Selangor,Shah Alam,2019,multiple,414
+Selangor,Subang Jaya,2019,multiple,552
+Selangor,Overall,2019,multiple,4637
+Terengganu,Besut,2019,multiple,271
+Terengganu,Dungun,2019,multiple,210
+Terengganu,Hulu Terengganu,2019,multiple,77
+Terengganu,Kemaman,2019,multiple,181
+Terengganu,Kuala Terengganu,2019,multiple,392
+Terengganu,Marang,2019,multiple,108
+Terengganu,Setiu,2019,multiple,51
+Terengganu,Overall,2019,multiple,1290
+W.P Kuala Lumpur,W.P Kuala Lumpur,2019,multiple,1236
+W.P Labuan,W.P Labuan,2019,multiple,79
+ Overall,Overall,2019,multiple,25489
+Johor,Batu Pahat,2020,multiple,368
+Johor,Johor Bahru,2020,multiple,1207
+Johor,Kluang,2020,multiple,208
+Johor,Kota Tinggi,2020,multiple,227
+Johor,Kulaijaya,2020,multiple,193
+Johor,Ledang,2020,multiple,195
+Johor,Mersing,2020,multiple,88
+Johor,Muar,2020,multiple,350
+Johor,Pontian,2020,multiple,153
+Johor,Segamat,2020,multiple,293
+Johor,Overall,2020,multiple,3282
+Kedah,Baling,2020,multiple,125
+Kedah,Bandar Baharu,2020,multiple,92
+Kedah,Kota Setar,2020,multiple,390
+Kedah,Kuala Muda,2020,multiple,662
+Kedah,Kubang Pasu,2020,multiple,268
+Kedah,Kulim,2020,multiple,298
+Kedah,Padang Terap,2020,multiple,84
+Kedah,Pendang,2020,multiple,114
+Kedah,Pokok Sena,2020,multiple,74
+Kedah,Pulau Langkawi,2020,multiple,142
+Kedah,Sik,2020,multiple,79
+Kedah,Yan,2020,multiple,88
+Kedah,Overall,2020,multiple,2416
+Kelantan,Jajahah Jeli,2020,multiple,96
+Kelantan,Bachok,2020,multiple,171
+Kelantan,Gua Musang,2020,multiple,148
+Kelantan,Kota Bharu,2020,multiple,698
+Kelantan,Kuala Krai,2020,multiple,107
+Kelantan,Machang,2020,multiple,114
+Kelantan,Pasir Mas,2020,multiple,273
+Kelantan,Pasir Puteh,2020,multiple,147
+Kelantan,Tanah Merah,2020,multiple,136
+Kelantan,Tumpat,2020,multiple,233
+Kelantan,Overall,2020,multiple,2123
+Melaka,Alor Gajah,2020,multiple,186
+Melaka,Jasin,2020,multiple,251
+Melaka,Melaka Tengah,2020,multiple,446
+Melaka,Overall,2020,multiple,883
+Negeri Sembilan,Jelebu,2020,multiple,61
+Negeri Sembilan,Jempol,2020,multiple,191
+Negeri Sembilan,Kuala Pilah,2020,multiple,105
+Negeri Sembilan,Port Dickson,2020,multiple,170
+Negeri Sembilan,Rembau,2020,multiple,67
+Negeri Sembilan,Seremban,2020,multiple,601
+Negeri Sembilan,Tampin,2020,multiple,118
+Negeri Sembilan,Overall,2020,multiple,1313
+Pahang,Bentong,2020,multiple,103
+Pahang,Bera,2020,multiple,108
+Pahang,Cameron Highlands,2020,multiple,27
+Pahang,Jerantut,2020,multiple,163
+Pahang,Kuantan,2020,multiple,409
+Pahang,Lipis,2020,multiple,102
+Pahang,Maran,2020,multiple,162
+Pahang,Pekan,2020,multiple,175
+Pahang,Raub,2020,multiple,83
+Pahang,Rompin,2020,multiple,131
+Pahang,Temerloh,2020,multiple,209
+Pahang,Overall,2020,multiple,1672
+Perak,Batang Padang,2020,multiple,144
+Perak,Hilir Perak,2020,multiple,230
+Perak,Hulu Perak,2020,multiple,86
+Perak,Kampar,2020,multiple,134
+Perak,Kerian,2020,multiple,134
+Perak,Kinta,2020,multiple,788
+Perak,Kuala Kangsar,2020,multiple,178
+Perak,Larut/ Matang/ Selama,2020,multiple,330
+Perak,Manjung,2020,multiple,275
+Perak,Perak Tengah,2020,multiple,150
+Perak,Bagan Datuk,2020,multiple,0
+Perak,Overall,2020,multiple,2449
+Perlis,Perlis,2020,multiple,289
+Pulau Pinang,Barat Daya,2020,multiple,167
+Pulau Pinang,Seberang Perai Selatan,2020,multiple,140
+Pulau Pinang,Seberang Perai Tengah,2020,multiple,292
+Pulau Pinang,Seberang Perai Utara,2020,multiple,297
+Pulau Pinang,Timur Laut,2020,multiple,387
+Pulau Pinang,Overall,2020,multiple,1283
+Sabah,Beaufort,2020,multiple,97
+Sabah,Beluran,2020,multiple,34
+Sabah,Kemabong,2020,multiple,2
+Sabah,Keningau,2020,multiple,97
+Sabah,Kota Belud,2020,multiple,92
+Sabah,Kota Kinabalu,2020,multiple,353
+Sabah,Kota Kinabatangan,2020,multiple,27
+Sabah,Kota Marudu,2020,multiple,78
+Sabah,Kuala Penyu,2020,multiple,13
+Sabah,Kudat,2020,multiple,89
+Sabah,Kunak,2020,multiple,26
+Sabah,Lahad Datu,2020,multiple,75
+Sabah,Matunggong,2020,multiple,28
+Sabah,Membakut,2020,multiple,42
+Sabah,Menumbok,2020,multiple,11
+Sabah,Nabawan,2020,multiple,59
+Sabah,Papar,2020,multiple,44
+Sabah,Penampang,2020,multiple,53
+Sabah,Pitas,2020,multiple,53
+Sabah,Putatan,2020,multiple,55
+Sabah,Ranau,2020,multiple,132
+Sabah,Sandakan,2020,multiple,208
+Sabah,Semporna,2020,multiple,57
+Sabah,Sipitang,2020,multiple,12
+Sabah,Tambunan,2020,multiple,36
+Sabah,Tamparuli,2020,multiple,35
+Sabah,Tawau,2020,multiple,224
+Sabah,Telupid,2020,multiple,5
+Sabah,Tenom,2020,multiple,53
+Sabah,Tongod,2020,multiple,52
+Sabah,Tuaran,2020,multiple,72
+Sabah,Overall,2020,multiple,2246
+Sarawak,Bau,2020,multiple,23
+Sarawak,Belaga,2020,multiple,3
+Sarawak,Betong,2020,multiple,106
+Sarawak,Bintulu,2020,multiple,95
+Sarawak,Dalat,2020,multiple,5
+Sarawak,Daro,2020,multiple,4
+Sarawak,Julau,2020,multiple,4
+Sarawak,Kanowit,2020,multiple,7
+Sarawak,Kapit,2020,multiple,55
+Sarawak,Kota Samarahan,2020,multiple,115
+Sarawak,Kuching,2020,multiple,322
+Sarawak,Lawas,2020,multiple,16
+Sarawak,Limbang,2020,multiple,66
+Sarawak,Lubok Antu,2020,multiple,0
+Sarawak,Lundu,2020,multiple,11
+Sarawak,Maradong,2020,multiple,24
+Sarawak,Marudi,2020,multiple,0
+Sarawak,Matu,2020,multiple,9
+Sarawak,Miri,2020,multiple,307
+Sarawak,Mukah,2020,multiple,43
+Sarawak,Pakan,2020,multiple,4
+Sarawak,Saratok,2020,multiple,6
+Sarawak,Sarikei,2020,multiple,99
+Sarawak,Selangau,2020,multiple,3
+Sarawak,Serian,2020,multiple,25
+Sarawak,Sibu,2020,multiple,203
+Sarawak,Simunjan,2020,multiple,15
+Sarawak,Song,2020,multiple,2
+Sarawak,Sri Aman,2020,multiple,62
+Sarawak,Overall,2020,multiple,1641
+Selangor,Gombak,2020,multiple,680
+Selangor,Hulu Langat,2020,multiple,714
+Selangor,Hulu Selangor,2020,multiple,253
+Selangor,Klang,2020,multiple,989
+Selangor,Kuala Langat,2020,multiple,265
+Selangor,Kuala Selangor,2020,multiple,253
+Selangor,Petaling,2020,multiple,415
+Selangor,Sabak Bernam,2020,multiple,182
+Selangor,Sepang,2020,multiple,161
+Selangor,Shah Alam,2020,multiple,464
+Selangor,Subang Jaya,2020,multiple,592
+Selangor,Overall,2020,multiple,4968
+Terengganu,Besut,2020,multiple,278
+Terengganu,Dungun,2020,multiple,218
+Terengganu,Hulu Terengganu,2020,multiple,79
+Terengganu,Kemaman,2020,multiple,205
+Terengganu,Kuala Terengganu,2020,multiple,415
+Terengganu,Marang,2020,multiple,114
+Terengganu,Setiu,2020,multiple,56
+Terengganu,Overall,2020,multiple,1365
+W.P Kuala Lumpur,W.P Kuala Lumpur,2020,multiple,1330
+W.P Labuan,W.P Labuan,2020,multiple,82
+W.P Putrajaya,W.P Putrajaya,2020,multiple,75
+ Overall,Overall,2020,multiple,27417
+Johor,Batu Pahat,2021,multiple,383
+Johor,Johor Bahru,2021,multiple,1267
+Johor,Kluang,2021,multiple,218
+Johor,Kota Tinggi,2021,multiple,226
+Johor,Kulaijaya,2021,multiple,204
+Johor,Ledang,2021,multiple,203
+Johor,Mersing,2021,multiple,91
+Johor,Muar,2021,multiple,360
+Johor,Pontian,2021,multiple,153
+Johor,Segamat,2021,multiple,301
+Johor,Overall,2021,multiple,3406
+Kedah,Baling,2021,multiple,133
+Kedah,Bandar Baharu,2021,multiple,93
+Kedah,Kota Setar,2021,multiple,416
+Kedah,Kuala Muda,2021,multiple,693
+Kedah,Kubang Pasu,2021,multiple,286
+Kedah,Kulim,2021,multiple,321
+Kedah,Padang Terap,2021,multiple,95
+Kedah,Pendang,2021,multiple,122
+Kedah,Pokok Sena,2021,multiple,83
+Kedah,Pulau Langkawi,2021,multiple,146
+Kedah,Sik,2021,multiple,82
+Kedah,Yan,2021,multiple,100
+Kedah,Overall,2021,multiple,2570
+Kelantan,Jajahah Jeli,2021,multiple,102
+Kelantan,Bachok,2021,multiple,187
+Kelantan,Gua Musang,2021,multiple,154
+Kelantan,Kota Bharu,2021,multiple,730
+Kelantan,Kuala Krai,2021,multiple,118
+Kelantan,Machang,2021,multiple,116
+Kelantan,Pasir Mas,2021,multiple,273
+Kelantan,Pasir Puteh,2021,multiple,162
+Kelantan,Tanah Merah,2021,multiple,149
+Kelantan,Tumpat,2021,multiple,239
+Kelantan,Overall,2021,multiple,2230
+Melaka,Alor Gajah,2021,multiple,192
+Melaka,Jasin,2021,multiple,260
+Melaka,Melaka Tengah,2021,multiple,458
+Melaka,Overall,2021,multiple,910
+Negeri Sembilan,Jelebu,2021,multiple,63
+Negeri Sembilan,Jempol,2021,multiple,207
+Negeri Sembilan,Kuala Pilah,2021,multiple,114
+Negeri Sembilan,Port Dickson,2021,multiple,179
+Negeri Sembilan,Rembau,2021,multiple,69
+Negeri Sembilan,Seremban,2021,multiple,634
+Negeri Sembilan,Tampin,2021,multiple,127
+Negeri Sembilan,Overall,2021,multiple,1393
+Pahang,Bentong,2021,multiple,115
+Pahang,Bera,2021,multiple,116
+Pahang,Cameron Highlands,2021,multiple,31
+Pahang,Jerantut,2021,multiple,176
+Pahang,Kuantan,2021,multiple,398
+Pahang,Lipis,2021,multiple,107
+Pahang,Maran,2021,multiple,178
+Pahang,Pekan,2021,multiple,188
+Pahang,Raub,2021,multiple,96
+Pahang,Rompin,2021,multiple,143
+Pahang,Temerloh,2021,multiple,228
+Pahang,Overall,2021,multiple,1776
+Perak,Bagan Datuk,2021,multiple,3
+Perak,Batang Padang,2021,multiple,152
+Perak,Hilir Perak,2021,multiple,224
+Perak,Hulu Perak,2021,multiple,92
+Perak,Kampar,2021,multiple,133
+Perak,Kerian,2021,multiple,140
+Perak,Kinta,2021,multiple,837
+Perak,Kuala Kangsar,2021,multiple,180
+Perak,Larut/ Matang/ Selama,2021,multiple,339
+Perak,Manjung,2021,multiple,273
+Perak,Muallim,2021,multiple,1
+Perak,Perak Tengah,2021,multiple,149
+Perak,Overall,2021,multiple,2523
+Perlis,Perlis,2021,multiple,305
+Pulau Pinang,Barat Daya,2021,multiple,179
+Pulau Pinang,Seberang Perai Selatan,2021,multiple,158
+Pulau Pinang,Seberang Perai Tengah,2021,multiple,301
+Pulau Pinang,Seberang Perai Utara,2021,multiple,303
+Pulau Pinang,Timur Laut,2021,multiple,393
+Pulau Pinang,Overall,2021,multiple,1334
+Sabah,Beaufort,2021,multiple,97
+Sabah,Beluran,2021,multiple,35
+Sabah,Kemabong,2021,multiple,2
+Sabah,Keningau,2021,multiple,103
+Sabah,Kota Belud,2021,multiple,93
+Sabah,Kota Kinabalu,2021,multiple,386
+Sabah,Kota Kinabatangan,2021,multiple,29
+Sabah,Kota Marudu,2021,multiple,83
+Sabah,Kuala Penyu,2021,multiple,13
+Sabah,Kudat,2021,multiple,91
+Sabah,Kunak,2021,multiple,32
+Sabah,Lahad Datu,2021,multiple,86
+Sabah,Matunggong,2021,multiple,29
+Sabah,Membakut,2021,multiple,43
+Sabah,Menumbok,2021,multiple,13
+Sabah,Nabawan,2021,multiple,60
+Sabah,Papar,2021,multiple,48
+Sabah,Penampang,2021,multiple,58
+Sabah,Pitas,2021,multiple,54
+Sabah,Putatan,2021,multiple,59
+Sabah,Ranau,2021,multiple,140
+Sabah,Sandakan,2021,multiple,229
+Sabah,Semporna,2021,multiple,62
+Sabah,Sipitang,2021,multiple,18
+Sabah,Sook,2021,multiple,32
+Sabah,Tambunan,2021,multiple,38
+Sabah,Tamparuli,2021,multiple,40
+Sabah,Tawau,2021,multiple,237
+Sabah,Telupid,2021,multiple,5
+Sabah,Tenom,2021,multiple,57
+Sabah,Tongod,2021,multiple,53
+Sabah,Tuaran,2021,multiple,80
+Sabah,Overall,2021,multiple,2405
+Sarawak,Bau,2021,multiple,29
+Sarawak,Belaga,2021,multiple,4
+Sarawak,Betong,2021,multiple,113
+Sarawak,Bintulu,2021,multiple,110
+Sarawak,Dalat,2021,multiple,5
+Sarawak,Daro,2021,multiple,5
+Sarawak,Julau,2021,multiple,6
+Sarawak,Kanowit,2021,multiple,8
+Sarawak,Kapit,2021,multiple,57
+Sarawak,Kota Samarahan,2021,multiple,121
+Sarawak,Kuching,2021,multiple,364
+Sarawak,Lawas,2021,multiple,17
+Sarawak,Limbang,2021,multiple,64
+Sarawak,Lubok Antu,2021,multiple,0
+Sarawak,Lundu,2021,multiple,12
+Sarawak,Maradong,2021,multiple,24
+Sarawak,Marudi,2021,multiple,1
+Sarawak,Matu,2021,multiple,11
+Sarawak,Miri,2021,multiple,315
+Sarawak,Mukah,2021,multiple,42
+Sarawak,Pakan,2021,multiple,4
+Sarawak,Saratok,2021,multiple,7
+Sarawak,Sarikei,2021,multiple,105
+Sarawak,Selangau,2021,multiple,2
+Sarawak,Serian,2021,multiple,30
+Sarawak,Sibu,2021,multiple,204
+Sarawak,Simunjan,2021,multiple,18
+Sarawak,Song,2021,multiple,2
+Sarawak,Sri Aman,2021,multiple,62
+Sarawak,Tatau,2021,multiple,7
+Sarawak,Overall,2021,multiple,1749
+Selangor,Gombak,2021,multiple,720
+Selangor,Hulu Langat,2021,multiple,766
+Selangor,Hulu Selangor,2021,multiple,260
+Selangor,Klang,2021,multiple,1051
+Selangor,Kuala Langat,2021,multiple,279
+Selangor,Kuala Selangor,2021,multiple,249
+Selangor,Petaling,2021,multiple,433
+Selangor,Sabak Bernam,2021,multiple,179
+Selangor,Sepang,2021,multiple,168
+Selangor,Shah Alam,2021,multiple,505
+Selangor,Subang Jaya,2021,multiple,631
+Selangor,Overall,2021,multiple,5241
+Terengganu,Besut,2021,multiple,297
+Terengganu,Dungun,2021,multiple,232
+Terengganu,Hulu Terengganu,2021,multiple,82
+Terengganu,Kemaman,2021,multiple,221
+Terengganu,Kuala Terengganu,2021,multiple,445
+Terengganu,Marang,2021,multiple,129
+Terengganu,Setiu,2021,multiple,57
+Terengganu,Overall,2021,multiple,1463
+W.P Kuala Lumpur,W.P Kuala Lumpur,2021,multiple,1410
+W.P Labuan,W.P Labuan,2021,multiple,88
+W.P Putrajaya,W.P Putrajaya,2021,multiple,87
+ Overall,Overall,2021,multiple,28890
