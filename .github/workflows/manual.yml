@@ -1,11 +1,9 @@
-
-
 ---
 name: Scheduled Python Script
 
 on:
   schedule:
-    - cron: '40 5 * * *'  # add 4hour current time
+    - cron: '55 8 * * *'  # This example runs the job daily at midnight UTC 11:45am
 
 jobs:
   run-python-script:
@@ -28,4 +26,12 @@ jobs:
         run: pip install --upgrade pip
 
       - name: Run Python Script
-        run: python auto_script.py
+
+        run: |
+          python auto_script.py
+          cd data_apims
+          git config --global user.email "booluckgmie@gmail.com"
+          git config --global user.name "booluckgmie"
+          git add .
+          git commit -m "Update data"
+          git push
