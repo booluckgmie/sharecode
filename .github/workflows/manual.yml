@@ -1,9 +1,11 @@
+
+
 ---
 name: Scheduled Python Script
 
 on:
   schedule:
-    - cron: '30 3 * * *'  # This example runs the job daily at midnight UTC 3:00PM
+    - cron: '45 3 * * *'  # This example runs the job daily at midnight UTC 11:45am
 
 jobs:
   run-python-script:
@@ -20,7 +22,10 @@ jobs:
           python-version: 3.9  # You can specify the Python version you need
       
       - name: install pandas
-        run: pip install pandas requests datetime os
-      
+        run: pip install pandas requests datetime
+
+      - name: upgrade package
+        run: pip install --upgrade pip
+
       - name: Run Python Script
         run: python auto_script.py
