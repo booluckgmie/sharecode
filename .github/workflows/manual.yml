@@ -3,7 +3,7 @@ name: Scheduled Python Script
 
 on:
   schedule:
-    - cron: '55 8 * * *'  # This example runs the job daily at midnight UTC 11:45am
+    - cron: '40 13 * * *'  # This example runs the job daily at midnight UTC 11:45am
 
 jobs:
   run-python-script:
