@@ -12,7 +12,7 @@ data = response.json()  # Parse JSON response
 data = pd.json_normalize(data['24hour_api_apims'])
 
 # Define the directory where you want to save the data
-data_dir = 'data'
+data_dir = 'data_apims'
 
 # Create the data directory if it doesn't exist
 os.makedirs(data_dir, exist_ok=True)
