@@ -4,12 +4,10 @@ from datetime import datetime
 import os
 
 # Retrieve JSON data from the API
-url = "http://apims.doe.gov.my/data/public_v2/CAQM/last24hours.json"
-response = requests.get(url)
-data = response.json()  # Parse JSON response
+r=requests.get("http://apims.doe.gov.my/data/public_v2/CAQM/last24hours.json")
+payload = r.json()  # Parse `response.text` into JSON
 
-# Assuming you want to work with the '24hour_api_apims' key
-data = pd.json_normalize(data['24hour_api_apims'])
+data = pd.json_normalize(payload, record_path=['24hour_api_apims'])
 
 # Define the directory where you want to save the data
 data_dir = 'data_apims'
