@@ -3,7 +3,8 @@ name: Scheduled Python Script
 
 on:
   schedule:
-    - cron: '40 13 * * *'  # This example runs the job daily at midnight UTC 11:45am
+    # - cron: '40 13 * * *'  # +4 hours for UTC time
+    - cron: '40 * * * *' # execute the task at 40 minutes past every hour.
 
 jobs:
   run-python-script:
