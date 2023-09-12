@@ -28,8 +28,8 @@ os.makedirs(data_dir, exist_ok=True)
 # Get the current date and time
 current_datetime = datetime.now()
 
-# Calculate the date for naming the CSV file (use yesterday's date)
-file_date = current_datetime - timedelta(days=1)
+# Calculate the date for naming the CSV file
+file_date = current_datetime
 file_name = file_date.strftime('%Y-%m-%d.csv')
 file_path = os.path.join(data_dir, file_name)
 
