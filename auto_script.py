@@ -14,7 +14,7 @@ data.columns = data.iloc[0]
 # Drop the first row (if needed)
 data = data[1:]
 
-# # Melt the data to keep only specific columns
+# Melt the data to keep only specific columns
 data = data.melt(id_vars=['State', 'Location'], var_name='hour', value_name='index')
 # Remove specific characters from the "value" column using regex
 data["index"] = data["index"].str.replace(r'[&*c]', '', regex=True)
@@ -27,6 +27,9 @@ os.makedirs(data_dir, exist_ok=True)
 
 # Get the current date and time
 current_datetime = datetime.now()
+
+# Add a new 'date' column with the current date
+data['date'] = current_datetime.strftime('%Y-%m-%d')
 
 # Calculate the date for naming the CSV file
 file_date = current_datetime
