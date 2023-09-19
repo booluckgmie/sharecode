@@ -14,8 +14,12 @@ data.columns = data.iloc[0]
 # Drop the first row (if needed)
 data = data[1:]
 
+# latest 1-hour data
+data = data.iloc[:, [0, 1, -1]]
+
 # Melt the data to keep only specific columns
 data = data.melt(id_vars=['State', 'Location'], var_name='hour', value_name='index')
+
 # Remove specific characters from the "value" column using regex
 data["index"] = data["index"].str.replace(r'[&*c]', '', regex=True)
 
