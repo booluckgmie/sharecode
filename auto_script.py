@@ -2,6 +2,10 @@ import pandas as pd
 import requests
 from datetime import datetime, timedelta
 import os
+from pytz import timezone  # Import the pytz library
+
+# Define the Malaysia timezone (UTC+8)
+malaysia_timezone = timezone('Asia/Kuala_Lumpur')
 
 # Retrieve JSON data from the API
 r = requests.get("http://apims.doe.gov.my/data/public_v2/CAQM/last24hours.json")
@@ -29,8 +33,8 @@ data_dir = 'data_apims'
 # Create the data directory if it doesn't exist
 os.makedirs(data_dir, exist_ok=True)
 
-# Get the current date and time
-current_datetime = datetime.now()
+# Get the current date and time in Malaysia timezone
+current_datetime = datetime.now(malaysia_timezone)
 
 # Add a new 'date' column with the current date
 data['date'] = current_datetime.strftime('%Y-%m-%d')
