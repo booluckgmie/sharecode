@@ -21,7 +21,7 @@ jobs:
           python-version: 3.9  # You can specify the Python version you need
       
       - name: install pandas
-        run: pip install pandas requests datetime
+        run: pip install pandas requests datetime pytz
 
       - name: upgrade package
         run: pip install --upgrade pip
