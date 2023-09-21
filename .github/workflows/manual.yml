@@ -3,8 +3,7 @@ name: Scheduled Python Script
 
 on:
   schedule:
-    # - cron: '40 13 * * *'  # +4 hours for UTC time
-    - cron: '40 * * * *' # execute the task at 40 minutes past every hour.
+    - cron: '40 * * * *' # Execute the task at 40 minutes past every hour.
 
 jobs:
   run-python-script:
@@ -13,26 +12,25 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@master
+        uses: actions/checkout@v2  # Use a specific version of the checkout action
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v2  # Use a specific version of the setup-python action
         with:
-          python-version: 3.9  # You can specify the Python version you need
-      
-      - name: install pandas
-        run: pip install pandas requests datetime pytz
+          python-version: 3.9
 
-      - name: upgrade package
-        run: pip install --upgrade pip
+      - name: Install dependencies
+        run: |
+          pip install pandas requests datetime pytz
+          pip install --upgrade pip
 
       - name: Run Python Script
-
         run: |
           python auto_script.py
           cd data_apims
           git config --global user.email "booluckgmie@gmail.com"
           git config --global user.name "booluckgmie"
+          git pull  # Pull the latest changes from the remote repository
           git add .
           git commit -m "Update data"
           git push
