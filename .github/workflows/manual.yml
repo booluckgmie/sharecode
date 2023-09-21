@@ -12,10 +12,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2  # Use a specific version of the checkout action
+        uses: actions/checkout@v2
 
       - name: Set up Python
-        uses: actions/setup-python@v2  # Use a specific version of the setup-python action
+        uses: actions/setup-python@v2
         with:
           python-version: 3.9
 
@@ -30,7 +30,8 @@ jobs:
           cd data_apims
           git config --global user.email "booluckgmie@gmail.com"
           git config --global user.name "booluckgmie"
-          git pull  # Pull the latest changes from the remote repository
+          git pull
           git add .
           git commit -m "Update data"
-          git push
+          git push --force  # Use the --force flag to forcefully push changes
+
