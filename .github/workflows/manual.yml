@@ -14,10 +14,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
+      - name: Set up Node.js and Python
+        uses: actions/setup-node@v2
         with:
-          python-version: 3.9
+          node-version: 16  # Set the desired Node.js version
+          python-version: 3.9  # Set the desired Python version
 
       - name: Install dependencies
         run: |
@@ -34,4 +35,5 @@ jobs:
           git add .
           git commit -m "Update data"
           git push --force  # Use the --force flag to forcefully push changes
+
 
