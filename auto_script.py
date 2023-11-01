@@ -2,60 +2,48 @@ import pandas as pd
 import requests
 from datetime import datetime, timedelta
 import os
-from pytz import timezone  # Import the pytz library
+from pytz import timezone
+from urllib3.exceptions import MaxRetryError, ConnectionError
+from requests.exceptions import RequestException
 
 # Define the Malaysia timezone (UTC+8)
 malaysia_timezone = timezone('Asia/Kuala_Lumpur')
 
-# Retrieve JSON data from the API
-r = requests.get("http://apims.doe.gov.my/data/public_v2/CAQM/last24hours.json")
-payload = r.json()  # Parse `response.text` into JSON
+try:
+    # Retrieve JSON data from the API
+    r = requests.get("http://apims.doe.gov.my/data/public_v2/CAQM/last24hours.json")
+    r.raise_for_status()  # Check for HTTP errors
 
-data = pd.json_normalize(payload, record_path=['24hour_api_apims'])
-# Set the first row as the header
-data.columns = data.iloc[0]
+    payload = r.json()
 
-# Drop the first row (if needed)
-data = data[1:]
+    data = pd.json_normalize(payload, record_path=['24hour_api_apims'])
+    data.columns = data.iloc[0]
 
-# latest 1-hour data
-data = data.iloc[:, [0, 1, -1]]
+    data = data[1:]
+    data = data.iloc[:, [0, 1, -1]]
+    data = data.melt(id_vars=['State', 'Location'], var_name='hour', value_name='index')
 
-# Melt the data to keep only specific columns
-data = data.melt(id_vars=['State', 'Location'], var_name='hour', value_name='index')
+    data["index"] = data["index"].str.replace(r'[&*c]', '', regex=True)
 
-# Remove specific characters from the "value" column using regex
-data["index"] = data["index"].str.replace(r'[&*c]', '', regex=True)
+    data_dir = 'data_apims'
+    os.makedirs(data_dir, exist_ok=True)
 
-# Define the directory where you want to save the data
-data_dir = 'data_apims'
+    current_datetime = datetime.now(malaysia_timezone)
+    data['date'] = current_datetime.strftime('%Y-%m-%d')
 
-# Create the data directory if it doesn't exist
-os.makedirs(data_dir, exist_ok=True)
+    file_date = current_datetime
+    file_name = file_date.strftime('%Y-%m-%d.csv')
+    file_path = os.path.join(data_dir, file_name)
 
-# Get the current date and time in Malaysia timezone
-current_datetime = datetime.now(malaysia_timezone)
+    if os.path.exists(file_path):
+        existing_data = pd.read_csv(file_path, header=0)
+        combined_data = pd.concat([existing_data, data], ignore_index=True)
+        combined_data.to_csv(file_path, index=False)
+        print(f'Data has been appended to {file_path}')
+    else:
+        data.to_csv(file_path, index=False)
+        print(f'Data has been saved to {file_path}')
 
-# Add a new 'date' column with the current date
-data['date'] = current_datetime.strftime('%Y-%m-%d')
-
-# Calculate the date for naming the CSV file
-file_date = current_datetime
-file_name = file_date.strftime('%Y-%m-%d.csv')
-file_path = os.path.join(data_dir, file_name)
-
-# Check if the CSV file already exists
-if os.path.exists(file_path):
-    # Load the existing data from the CSV file and set the first row as the header
-    existing_data = pd.read_csv(file_path, header=0)
-
-    # Append the new data to the existing data
-    combined_data = pd.concat([existing_data, data], ignore_index=True)
-
-    # Save the combined data to the CSV file
-    combined_data.to_csv(file_path, index=False)
-    print(f'Data has been appended to {file_path}')
-else:
-    # Save the data to the CSV file (create a new file if it doesn't exist)
-    data.to_csv(file_path, index=False)
-    print(f'Data has been saved to {file_path}')
+except (RequestException, ConnectionError, MaxRetryError) as e:
+    print(f"An error occurred: {e}")
+    # You can add further error handling or logging here.
