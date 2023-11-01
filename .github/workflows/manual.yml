@@ -13,12 +13,16 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        
+      - name: Set up Node.js and Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9  # Set the desired Python version
 
       - name: Set up Node.js and Python
         uses: actions/setup-node@v2
         with:
           node-version: 16  # Set the desired Node.js version
-          python-version: 3.9  # Set the desired Python version
 
       - name: Install dependencies
         run: |
