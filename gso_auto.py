@@ -21,7 +21,8 @@ try:
 }
 
 
-    response = requests.post(url, data=json.dumps(data), headers=headers)
+    response = requests.post(url, json=data, headers=headers)
+
 
     if response.status_code == 200:
         chartobjdata = json.loads(response.text)["d"]
