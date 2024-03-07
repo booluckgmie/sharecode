@@ -16,13 +16,11 @@ try:
     }
 
     headers = {
-    "Content-Type": "application/json; charset=utf-8",
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-}
-
+        "Content-Type": "application/json; charset=utf-8",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    }
 
     response = requests.post(url, json=data, headers=headers)
-
 
     if response.status_code == 200:
         chartobjdata = json.loads(response.text)["d"]
@@ -55,16 +53,11 @@ try:
         # Select specific columns
         df = df.loc[:, ['date', 'time', 'Coal', 'Gas', 'CoGen', 'Oil', 'Hydro', 'Solar']]
 
-        # print(df)  # Add a print statement to display the resulting DataFrame
-
         # Save data to CSV using flattened_data
         data_dir = 'data_gso'
         os.makedirs(data_dir, exist_ok=True)
 
-        # current_datetime = datetime.now(malaysia_timezone)
-        # data['date'] = current_datetime.strftime('%Y-%m-%d')
-
-        file_date = datetime.today()  # Corrected function name
+        file_date = datetime.today()
         file_name = file_date.strftime('%Y-%m-%d.csv')
         file_path = os.path.join(data_dir, file_name)
 
