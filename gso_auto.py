@@ -14,8 +14,7 @@ def fetch_data():
         "Todate": datetime.now(timezone('Asia/Kuala_Lumpur')).strftime('%d/%m/%Y')
     }
     headers = {
-        "Content-Type": "application/json; charset=utf-8",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+        "Content-Type": "application/json; charset=utf-8"
     }
 
     try:
