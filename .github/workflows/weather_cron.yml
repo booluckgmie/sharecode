@@ -31,7 +31,7 @@ jobs:
 
     - name: Run Python Script
       run: |
-        python data_weatherUO/weather_cron.py
+        python weather_cron.py
         cd data_gso
         git config --global user.email "booluckgmie@gmail.com"
         git config --global user.name "booluckgmie"
