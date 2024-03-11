@@ -2,34 +2,27 @@
 name: Scheduled Python Script for Unofficial Weather Forecast https://open-meteo.com/
 
 on:
-  pull_request:
-    types: closed
-    branches:
-      - master
-  
   schedule:
     - cron: '40 * * * *' # Execute the task at 40 minutes past every hour.
 
 jobs:
-
   run-python-script:
     runs-on: ubuntu-latest
     name: Run Python Script
-    
+
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Set up Node.js and Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9  # Set the desired Python version
 
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: 3.9
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 20
+      - name: Set up Node.js and Python
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16  # Set the desired Node.js version
 
     - name: Install dependencies
       run: |
