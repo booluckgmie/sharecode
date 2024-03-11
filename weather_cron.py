@@ -17,7 +17,7 @@ try:
     # Get current time in Malaysia/Kuala_Lumpur timezone
     malaysia_timezone = timezone('Asia/Kuala_Lumpur')
     current_time = datetime.now(malaysia_timezone).time()
-    current_date = current_datetime.strftime('%Y-%m-%d')
+    current_date = current_time.strftime('%Y-%m-%d')
     
     # Get current time as timedelta
     current_time = datetime.now().time()
