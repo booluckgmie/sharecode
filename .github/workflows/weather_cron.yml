@@ -1,9 +1,9 @@
 ---
 name: Scheduled Python Script for Unofficial Weather Forecast https://open-meteo.com/
 
-on:
-  schedule:
-    - cron: '40 * * * *' # Execute the task at 40 minutes past every hour.
+# on:
+  # schedule:
+    # - cron: '40 * * * *' # Execute the task at 40 minutes past every hour.
 
 jobs:
   run-python-script:
@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20  # Set the desired Node.js version
-
+          
       - name: Install dependencies
         run: |
           pip install pandas requests pytz urllib3 tqdm
