@@ -1,6 +1,5 @@
 import os
 import requests
-from requests.exceptions import RequestException
 import pandas as pd
 from tqdm import tqdm
 from datetime import datetime, timedelta
@@ -10,17 +9,17 @@ from urllib3.exceptions import MaxRetryError
 try:
     hourly_data_list = []
 
-    cityMY = pd.read_csv('data_weatherUO/cityMY.csv')
+    cityMY = pd.read_csv('./data_weatherUO/cityMY.csv')
     cities = cityMY.to_dict(orient='records')
-    wmo = pd.read_csv('data_weatherUO/wmo_code.csv', sep=';')
+    wmo = pd.read_csv('./data_weatherUO/wmo_code.csv', sep=';')
 
     # Get current time in Malaysia/Kuala_Lumpur timezone
     malaysia_timezone = timezone('Asia/Kuala_Lumpur')
-    current_time = datetime.now(malaysia_timezone).time()
-    current_date = current_time.strftime('%Y-%m-%d')
-    
+    current_datetime = datetime.now(malaysia_timezone)
+    current_date = current_datetime.strftime('%Y-%m-%d')
+
     # Get current time as timedelta
-    current_time = datetime.now().time()
+    current_time = current_datetime.time()
     current_time_delta = timedelta(hours=current_time.hour, minutes=current_time.minute, seconds=current_time.second)
 
     # Use tqdm to create a progress bar
@@ -87,5 +86,5 @@ try:
         today_time.to_csv(file_path, index=False)
         print(f'Data has been saved to {file_path}')
 
-except (RequestException, ConnectionError, MaxRetryError) as e:
+except (requests.RequestException, requests.ConnectionError, MaxRetryError) as e:
     print(f"An error occurred: {e}")
