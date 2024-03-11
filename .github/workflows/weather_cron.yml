@@ -1,5 +1,9 @@
 ---
 name: Scheduled Python Script for Unofficial Weather Forecast https://open-meteo.com/
+
+on:
+  push:
+    branches: [ master ] 
     
 jobs:
   run-python-script:
