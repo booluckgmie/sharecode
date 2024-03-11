@@ -32,7 +32,7 @@ jobs:
     - name: Run Python Script
       run: |
         python weather_cron.py
-        cd data_gso
+        cd data_weatherUO
         git config --global user.email "booluckgmie@gmail.com"
         git config --global user.name "booluckgmie"
         git pull
