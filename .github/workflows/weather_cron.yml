@@ -24,18 +24,19 @@ jobs:
         with:
           node-version: 20  # Set the desired Node.js version
 
-    - name: Install dependencies
-      run: |
-        pip install pandas requests pytz urllib3 tqdm
-        pip install --upgrade pip
+      - name: Install dependencies
+        run: |
+          pip install pandas requests pytz urllib3 tqdm
+          pip install --upgrade pip
 
-    - name: Run Python Script
-      run: |
-        python weather_cron.py
-        cd data_weatherUO
-        git config --global user.email "booluckgmie@gmail.com"
-        git config --global user.name "booluckgmie"
-        git pull
-        git add .
-        git commit -m "Update data"
-        git push --force  # Use the --force flag to forcefully push changes
+      - name: Run Python Script
+        run: |
+          python weather_cron.py
+          cd data_weatherUO
+          git config --global user.email "booluckgmie@gmail.com"
+          git config --global user.name "booluckgmie"
+          git pull
+          git add .
+          git commit -m "Update data"
+          git push --force  # Use the --force flag to forcefully push changes
+
