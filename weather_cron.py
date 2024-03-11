@@ -9,9 +9,9 @@ from urllib3.exceptions import MaxRetryError
 try:
     hourly_data_list = []
 
-    cityMY = pd.read_csv('cityMY.csv')
+    cityMY = pd.read_csv('data_weatherUO/cityMY.csv')
     cities = cityMY.to_dict(orient='records')
-    wmo = pd.read_csv('wmo_code.csv', sep=';')
+    wmo = pd.read_csv('data_weatherUO/wmo_code.csv', sep=';')
 
     # Get current time in Malaysia/Kuala_Lumpur timezone
     malaysia_timezone = timezone('Asia/Kuala_Lumpur')
