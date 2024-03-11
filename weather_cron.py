@@ -58,10 +58,6 @@ try:
 
     # Sort the DataFrame by 'date' and 'time' in descending order
     merged_df.sort_values(by=['date', 'time'], ascending=[False, False], inplace=True)
-    
-    merged_df = merged_df[['date','time', 'state', 'city', 'latitude', 'longitude',
-                            'temperature_2m', 'relativehumidity_2m', 'rain', 'windspeed_10m', 
-                            'weathercode', 'description']]
 
     # Filter data based on current time
     today_time = merged_df[merged_df['time'] <= current_time]
@@ -80,6 +76,8 @@ try:
     if os.path.exists(file_path):
         existing_data = pd.read_csv(file_path, header=0)
         combined_data = pd.concat([existing_data, today_time], ignore_index=True)
+        combined_data = combined_data[['date','time', 'state', 'city', 'latitude', 'longitude','temperature_2m', 'relativehumidity_2m', 'rain', 'windspeed_10m', 
+                            'weathercode', 'description']]
         combined_data.to_csv(file_path, index=False)
         print(f'Data has been appended to {file_path}')
     else:
