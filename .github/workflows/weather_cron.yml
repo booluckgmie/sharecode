@@ -4,6 +4,8 @@ name: Scheduled Python Script for Unofficial Weather Forecast https://open-meteo
 on:
   push:
     branches: [ master ] 
+  schedule:
+    - cron: '40 * * * *' 
     
 jobs:
   run-python-script:
