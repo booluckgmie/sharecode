@@ -1,0 +1,23 @@
+---
+name: Scrape Data GSO
+
+on:
+  push:
+    branches: [ master ] 
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest  # Specify the runner OS
+
+    steps:
+      - uses: actions/checkout@v3  # Checkout your repository code
+
+      - name: Install dependencies  # Install required libraries
+        run: |
+          sudo apt update
+          sudo apt install python3-pip
+          pip install selenium webdriver-manager pandas
+
+      - name: Run scraper script
+        run: |
+          python gso_cron.py  # Replace with your script name
