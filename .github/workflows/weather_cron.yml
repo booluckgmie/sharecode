@@ -3,8 +3,8 @@ name: Scheduled Python Script for Unofficial Weather Forecast https://open-meteo
 
 on:
   schedule:
-      - cron: '*/2 * * * *'
-    # - cron: '40 * * * *' # Execute the task at 40 minutes past every hour.
+      # - cron: '*/2 * * * *'
+    - cron: '40 * * * *' # Execute the task at 40 minutes past every hour.
     
 
 
