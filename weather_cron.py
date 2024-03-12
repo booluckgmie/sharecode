@@ -2,7 +2,7 @@ import os
 import requests
 import pandas as pd
 from tqdm import tqdm
-from datetime import datetime, timedelta
+from datetime import datetime
 from pytz import timezone
 from urllib3.exceptions import MaxRetryError  
 
