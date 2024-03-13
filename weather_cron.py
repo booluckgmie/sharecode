@@ -14,8 +14,8 @@ try:
     wmo = pd.read_csv('./data_weatherUO/wmo_code.csv', sep=';')
 
     # Get current time in Malaysia/Kuala_Lumpur timezone
-    malaysia_timezone = pytz.timezone('Asia/Kuala_Lumpur')
-    current_datetime = datetime.datetime.now(malaysia_timezone)
+    malaysia_timezone = timezone('Asia/Kuala_Lumpur')
+    current_datetime = datetime.now(malaysia_timezone)
     current_date = current_datetime.strftime('%Y-%m-%d')
 
     # Get current time as timedelta
