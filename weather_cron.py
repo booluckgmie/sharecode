@@ -67,7 +67,7 @@ try:
     data_dir = 'data_weatherUO'
     os.makedirs(data_dir, exist_ok=True)
 
-    file_date = datetime.now(malaysia_timezone)
+    file_date = datetime.today(malaysia_timezone)
     file_name = file_date.strftime('%Y-%m-%d.csv')
     file_path = os.path.join(data_dir, file_name)
 
