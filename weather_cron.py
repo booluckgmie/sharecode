@@ -53,14 +53,11 @@ try:
     merged_df = pd.merge(wmo, final_df, on='weathercode', how='inner')
 
     # Sort the DataFrame by 'date' and 'time' in descending order
-    merged_df.sort_values(by=['date', 'time'], ascending=[False, False], inplace=True)
-
-    # Filter data based on current time
-    today_df = merged_df[merged_df['date'] == current_date]
+    merged_df.sort_values(by=['time'], ascending=[False], inplace=True)
 
     # Filter data based on current time
     current_time = current_datetime.time()
-    today_df = today_df[today_df['time'] <= current_time]
+    today_df = merged_df[merged_df['time'] <= current_time]
     
     # Remove duplicates based on 'date', 'time', 'state', and 'city'
     today_df = today_df.drop_duplicates(subset=['date', 'time', 'state', 'city'])
@@ -69,12 +66,16 @@ try:
     data_dir = 'data_weatherUO'
     os.makedirs(data_dir, exist_ok=True)
 
-    file_name = current_date + '.csv'
+    file_date = datetime.today()
+    file_name = file_date.strftime('%Y-%m-%d.csv')
     file_path = os.path.join(data_dir, file_name)
 
     if os.path.exists(file_path):
         existing_data = pd.read_csv(file_path, header=0)
-        combined_data = pd.concat([existing_data, today_df], ignore_index=True)
+        if existing_data.empty:
+            combined_data = today_df
+        else:
+            combined_data = pd.concat([existing_data, today_df], ignore_index=True)
         combined_data = combined_data[['date','time', 'state', 'city', 'latitude', 'longitude','temperature_2m', 'relativehumidity_2m', 'rain', 'windspeed_10m', 
                             'weathercode', 'description']]
         combined_data.to_csv(file_path, index=False)
