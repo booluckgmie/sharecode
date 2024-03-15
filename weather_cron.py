@@ -18,10 +18,6 @@ try:
     current_datetime = datetime.now(malaysia_timezone)
     current_date = current_datetime.strftime('%Y-%m-%d')
 
-    # Get current time as timedelta
-    current_time = current_datetime.time()
-    current_time_delta = timedelta(hours=current_time.hour, minutes=current_time.minute, seconds=current_time.second)
-
     # Use tqdm to create a progress bar
     for i, city in tqdm(enumerate(cities), desc="Processing Cities", total=len(cities)):
         latitude = city['latitude']
@@ -60,28 +56,31 @@ try:
     merged_df.sort_values(by=['date', 'time'], ascending=[False, False], inplace=True)
 
     # Filter data based on current time
-    today_time = merged_df[merged_df['time'] <= current_time]
+    today_df = merged_df[merged_df['date'] == current_date]
+
+    # Filter data based on current time
+    current_time = current_datetime.time()
+    today_df = today_df[today_df['time'] <= current_time]
     
     # Remove duplicates based on 'date', 'time', 'state', and 'city'
-    today_time = today_time.drop_duplicates(subset=['date', 'time', 'state', 'city'])
+    today_df = today_df.drop_duplicates(subset=['date', 'time', 'state', 'city'])
 
-    # Save data to CSV using today_time
+    # Save data to CSV using today_df
     data_dir = 'data_weatherUO'
     os.makedirs(data_dir, exist_ok=True)
 
-    file_date = datetime.today()
-    file_name = file_date.strftime('%Y-%m-%d.csv')
+    file_name = current_date + '.csv'
     file_path = os.path.join(data_dir, file_name)
 
     if os.path.exists(file_path):
         existing_data = pd.read_csv(file_path, header=0)
-        combined_data = pd.concat([existing_data, today_time], ignore_index=True)
+        combined_data = pd.concat([existing_data, today_df], ignore_index=True)
         combined_data = combined_data[['date','time', 'state', 'city', 'latitude', 'longitude','temperature_2m', 'relativehumidity_2m', 'rain', 'windspeed_10m', 
                             'weathercode', 'description']]
         combined_data.to_csv(file_path, index=False)
         print(f'Data has been appended to {file_path}')
     else:
-        today_time.to_csv(file_path, index=False)
+        today_df.to_csv(file_path, index=False)
         print(f'Data has been saved to {file_path}')
 
 except (requests.RequestException, requests.ConnectionError, MaxRetryError) as e:
