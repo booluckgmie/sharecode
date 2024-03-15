@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 from pytz import timezone
 from urllib3.exceptions import MaxRetryError  
 
+malaysia_timezone = timezone('Asia/Kuala_Lumpur')
 try:
     hourly_data_list = []
 
@@ -66,7 +67,7 @@ try:
     data_dir = 'data_weatherUO'
     os.makedirs(data_dir, exist_ok=True)
 
-    file_date = datetime.today()
+    file_date = datetime.now(malaysia_timezone)
     file_name = file_date.strftime('%Y-%m-%d.csv')
     file_path = os.path.join(data_dir, file_name)
 
