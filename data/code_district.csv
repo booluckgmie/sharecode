@@ -1,161 +1,161 @@
-﻿code_district,district
-101.0,Batu Pahat
-102.0,Johor Bahru
-103.0,Kluang
-104.0,Kota Tinggi
-105.0,Mersing
-106.0,Muar
-107.0,Pontian
-108.0,Segamat
-109.0,Kulai/Kulaijaya
-110.0,Ledang/Tangkak
-201.0,Baling
-202.0,Bandar Baharu
-203.0,Kota Setar
-204.0,Kuala Muda
-205.0,Kubang Pasu
-206.0,Kulim
-207.0,Langkawi
-208.0,Padang Terap
-209.0,Sik
-210.0,Yan
-211.0,Pendang
-212.0,Pokok Sena
-301.0,Bachok
-302.0,Kota Bharu
-303.0,Machang
-304.0,Pasir Mas
-305.0,Pasir Puteh
-306.0,Tanah Merah
-307.0,Tumpat
-308.0,Gua Musang
-309.0,Kuala Krai
-310.0,Jeli
-311.0,Lojing
-401.0,Alor Gajah(Melaka Utara)
-402.0,Jasin(Melaka Selatan)
-403.0,Melaka Tengah
-501.0,Jelebu
-502.0,Kuala Pilah
-503.0,Port Dickson
-504.0,Rembau
-505.0,Seremban
-506.0,Tampin
-507.0,Jempol
-601.0,Bentong
-602.0,Cameron Highlands
-603.0,Jerantut
-604.0,Kuantan
-605.0,Lipis
-606.0,Pekan
-607.0,Raub
-608.0,Temerloh
-609.0,Rompin
-610.0,Maran
-611.0,Bera
-701.0,S.P.Tengah
-702.0,S.P.Utara
-703.0,S.P. Selatan
-704.0,Timur Laut
-705.0,Barat Daya
-801.0,Batang Padang
-802.0,Manjung (Dinding)
-803.0,Kinta
-804.0,Kerian
-805.0,Kuala Kangsar
-806.0,Larut & Matang
-807.0,Hilir Perak
-808.0,Hulu Perak
-809.0,Perak Tengah
-810.0,Kampar
-811.0,Muallim
-812.0,Bagan Datuk
-813.0,Selama
-901.0,Perlis
-1001.0,Gombak
-1002.0,Klang
-1003.0,Kuala Langat
-1004.0,Kuala Selangor
-1005.0,Petaling
-1006.0,Sabak Bernam
-1007.0,Sepang
-1008.0,Hulu Langat
-1009.0,Hulu Selangor
-1101.0,Besut
-1102.0,Dungun
-1103.0,Kemaman
-1104.0,Kuala Terengganu
-1105.0,Marang
-1106.0,Hulu Terengganu
-1107.0,Setiu
-1108.0,Kuala Nerus
-1201.0,Tawau
-1202.0,Lahad Datu
-1203.0,Semporna
-1204.0,Sandakan
-1205.0,Kinabatangan
-1206.0,Beluran
-1207.0,Kota Kinabalu
-1208.0,Ranau
-1209.0,Kota Belud
-1210.0,Tuaran
-1211.0,Penampang
-1212.0,Papar
-1213.0,Kudat
-1214.0,Kota Marudu
-1215.0,Pitas
-1216.0,Beaufort
-1217.0,Kuala Penyu
-1218.0,Sipitang
-1219.0,Tenom
-1220.0,Nabawan
-1221.0,Keningau
-1222.0,Tambunan
-1223.0,Kunak
-1224.0,Tongod
-1225.0,Putatan
-1226.0,Telupid
-1227.0,Kalabakan
-1301.0,Kuching
-1302.0,Bau
-1303.0,Lundu
-1304.0,Samarahan
-1305.0,Serian
-1306.0,Simunjan
-1307.0,Sri Aman
-1308.0,Lubok antu
-1309.0,Betong
-1310.0,Saratok
-1311.0,Sarikei
-1312.0,Meradong
-1313.0,Daro
-1314.0,Julau
-1315.0,Sibu
-1316.0,Dalat
-1317.0,Mukah
-1318.0,Kanowit
-1319.0,Bintulu
-1320.0,Tatau
-1321.0,Kapit
-1322.0,Song
-1323.0,Belaga
-1324.0,Miri
-1325.0,Marudi
-1326.0,Limbang
-1327.0,Lawas
-1328.0,Matu
-1329.0,Asajaya
-1330.0,Pakan
-1331.0,Selangau
-1332.0,Tebedu
-1333.0,Pusa
-1334.0,Kabong
-1335.0,Tanjung Manis
-1336.0,Sebauh
-1337.0,Bukit Mabong
-1338.0,Subis
-1339.0,Beluru
-1340.0,Telang Usan
-1401.0,W.P. KUALA LUMPUR
-1501.0,W.P. LABUAN
-1601.0,W.P. PUTRAJAYA
+﻿code_district,district,state
+101,BATU PAHAT,Johor
+102,JOHOR BAHRU,Johor
+103,KLUANG,Johor
+104,KOTA TINGGI,Johor
+105,MERSING,Johor
+106,MUAR,Johor
+107,PONTIAN,Johor
+108,SEGAMAT,Johor
+109,KULAI/KULAIJAYA,Johor
+110,LEDANG/TANGKAK,Johor
+201,BALING,Kedah
+202,BANDAR BAHARU,Kedah
+203,KOTA SETAR,Kedah
+204,KUALA MUDA,Kedah
+205,KUBANG PASU,Kedah
+206,KULIM,Kedah
+207,LANGKAWI,Kedah
+208,PADANG TERAP,Kedah
+209,SIK,Kedah
+210,YAN,Kedah
+211,PENDANG,Kedah
+212,POKOK SENA,Kedah
+301,BACHOK,Kelantan
+302,KOTA BHARU,Kelantan
+303,MACHANG,Kelantan
+304,PASIR MAS,Kelantan
+305,PASIR PUTEH,Kelantan
+306,TANAH MERAH,Kelantan
+307,TUMPAT,Kelantan
+308,GUA MUSANG,Kelantan
+309,KUALA KRAI,Kelantan
+310,JELI,Kelantan
+311,LOJING,Kelantan
+401,ALOR GAJAH(MELAKA UTARA),Melaka
+402,JASIN(MELAKA SELATAN),Melaka
+403,MELAKA TENGAH,Melaka
+501,JELEBU,Negeri Sembilan
+502,KUALA PILAH,Negeri Sembilan
+503,PORT DICKSON,Negeri Sembilan
+504,REMBAU,Negeri Sembilan
+505,SEREMBAN,Negeri Sembilan
+506,TAMPIN,Negeri Sembilan
+507,JEMPOL,Negeri Sembilan
+601,BENTONG,Pahang
+602,CAMERON HIGHLANDS,Pahang
+603,JERANTUT,Pahang
+604,KUANTAN,Pahang
+605,LIPIS,Pahang
+606,PEKAN,Pahang
+607,RAUB,Pahang
+608,TEMERLOH,Pahang
+609,ROMPIN,Pahang
+610,MARAN,Pahang
+611,BERA,Pahang
+701,S.P.TENGAH,Pulau Pinang
+702,S.P.UTARA,Pulau Pinang
+703,S.P. SELATAN,Pulau Pinang
+704,TIMUR LAUT,Pulau Pinang
+705,BARAT DAYA,Pulau Pinang
+801,BATANG PADANG,Perak
+802,MANJUNG (DINDING),Perak
+803,KINTA,Perak
+804,KERIAN,Perak
+805,KUALA KANGSAR,Perak
+806,LARUT & MATANG,Perak
+807,HILIR PERAK,Perak
+808,HULU PERAK,Perak
+809,PERAK TENGAH,Perak
+810,KAMPAR,Perak
+811,MUALLIM,Perak
+812,BAGAN DATUK,Perak
+813,SELAMA,Perak
+901,PERLIS,Perlis
+1001,GOMBAK,Selangor
+1002,KLANG,Selangor
+1003,KUALA LANGAT,Selangor
+1004,KUALA SELANGOR,Selangor
+1005,PETALING,Selangor
+1006,SABAK BERNAM,Selangor
+1007,SEPANG,Selangor
+1008,HULU LANGAT,Selangor
+1009,HULU SELANGOR,Selangor
+1101,BESUT,Terengganu
+1102,DUNGUN,Terengganu
+1103,KEMAMAN,Terengganu
+1104,KUALA TERENGGANU,Terengganu
+1105,MARANG,Terengganu
+1106,HULU TERENGGANU,Terengganu
+1107,SETIU,Terengganu
+1108,KUALA NERUS,Terengganu
+1201,TAWAU,Sabah
+1202,LAHAD DATU,Sabah
+1203,SEMPORNA,Sabah
+1204,SANDAKAN,Sabah
+1205,KINABATANGAN,Sabah
+1206,BELURAN,Sabah
+1207,KOTA KINABALU,Sabah
+1208,RANAU,Sabah
+1209,KOTA BELUD,Sabah
+1210,TUARAN,Sabah
+1211,PENAMPANG,Sabah
+1212,PAPAR,Sabah
+1213,KUDAT,Sabah
+1214,KOTA MARUDU,Sabah
+1215,PITAS,Sabah
+1216,BEAUFORT,Sabah
+1217,KUALA PENYU,Sabah
+1218,SIPITANG,Sabah
+1219,TENOM,Sabah
+1220,NABAWAN,Sabah
+1221,KENINGAU,Sabah
+1222,TAMBUNAN,Sabah
+1223,KUNAK,Sabah
+1224,TONGOD,Sabah
+1225,PUTATAN,Sabah
+1226,TELUPID,Sabah
+1227,KALABAKAN,Sabah
+1301,KUCHING,Sarawak
+1302,BAU,Sarawak
+1303,LUNDU,Sarawak
+1304,SAMARAHAN,Sarawak
+1305,SERIAN,Sarawak
+1306,SIMUNJAN,Sarawak
+1307,SRI AMAN,Sarawak
+1308,LUBOK ANTU,Sarawak
+1309,BETONG,Sarawak
+1310,SARATOK,Sarawak
+1311,SARIKEI,Sarawak
+1312,MERADONG,Sarawak
+1313,DARO,Sarawak
+1314,JULAU,Sarawak
+1315,SIBU,Sarawak
+1316,DALAT,Sarawak
+1317,MUKAH,Sarawak
+1318,KANOWIT,Sarawak
+1319,BINTULU,Sarawak
+1320,TATAU,Sarawak
+1321,KAPIT,Sarawak
+1322,SONG,Sarawak
+1323,BELAGA,Sarawak
+1324,MIRI,Sarawak
+1325,MARUDI,Sarawak
+1326,LIMBANG,Sarawak
+1327,LAWAS,Sarawak
+1328,MATU,Sarawak
+1329,ASAJAYA,Sarawak
+1330,PAKAN,Sarawak
+1331,SELANGAU,Sarawak
+1332,TEBEDU,Sarawak
+1333,PUSA,Sarawak
+1334,KABONG,Sarawak
+1335,TANJUNG MANIS,Sarawak
+1336,SEBAUH,Sarawak
+1337,BUKIT MABONG,Sarawak
+1338,SUBIS,Sarawak
+1339,BELURU,Sarawak
+1340,TELANG USAN,Sarawak
+1401,W.P. KUALA LUMPUR,Wilayah Persekutuan
+1501,W.P. LABUAN,Labuan
+1601,W.P. PUTRAJAYA,Putrajaya
