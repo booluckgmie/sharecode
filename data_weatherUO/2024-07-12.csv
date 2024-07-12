@@ -9449,3 +9449,213 @@ date,time,state,city,latitude,longitude,temperature_2m,relativehumidity_2m,rain,
 2024-07-13,00:00:00,Perak,Ipoh,4.6,101.07,27.2,77,0.0,1.1,3,Clouds generally forming or developing
 2024-07-13,00:00:00,Kedah,Sungai Petani,5.65,100.48,25.8,95,0.0,1.8,3,Clouds generally forming or developing
 2024-07-13,00:00:00,Selangor,Klang,3.0333,101.45,26.5,88,0.0,2.8,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,27.1,87,0.0,2.9,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,24.7,96,0.0,2.5,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,05:00:00,Sarawak,Sibu,2.3,111.8167,24.3,97,0.0,3.1,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,05:00:00,Pahang,Raub,3.7931,101.8569,23.7,100,0.0,1.1,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,05:00:00,Kedah,Alor Setar,6.1167,100.3667,24.1,98,0.0,2.7,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,05:00:00,Pulau Pinang,George Town,5.4145,100.3292,27.1,87,0.0,2.9,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,24.0,100,0.0,2.1,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,05:00:00,Kedah,Sungai Petani,5.65,100.48,24.6,97,0.0,1.1,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,05:00:00,Perak,Ipoh,4.6,101.07,24.3,84,0.0,2.0,2,State of sky on the whole unchanged
+2024-07-13,05:00:00,Kelantan,Kota Bharu,6.1333,102.25,24.8,97,0.0,4.5,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,05:00:00,Pahang,Kuantan,3.8167,103.3333,26.4,90,0.0,6.4,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Pahang,Kuala Lipis,4.184,102.042,24.1,98,0.0,1.5,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,05:00:00,Terengganu,Cukai,4.2332,103.4479,26.2,90,0.0,6.9,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Selangor,Petaling Jaya,3.1073,101.6067,25.9,91,0.0,1.6,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Sabah,Kota Kinabalu,5.975,116.0725,25.4,86,0.1,8.9,61,"Rain, not freezing, continuous slight at time of observation"
+2024-07-13,05:00:00,Sarawak,Miri,4.4028,113.9933,25.1,94,0.3,10.4,61,"Rain, not freezing, continuous slight at time of observation"
+2024-07-13,05:00:00,Labuan,Labuan,5.2803,115.2475,25.2,91,0.3,6.1,61,"Rain, not freezing, continuous slight at time of observation"
+2024-07-13,05:00:00,Selangor,Shah Alam,3.0833,101.5333,25.9,91,0.0,1.6,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Perlis,Kangar,6.4333,100.2,24.6,100,0.0,2.0,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,05:00:00,Johor,Muar,2.05,102.56,26.6,93,0.0,5.2,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,25.0,92,0.0,2.9,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,25.2,92,0.0,2.9,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Putrajaya,Putrajaya,2.93,101.69,24.9,94,0.0,1.8,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Perak,Teluk Intan,4.0259,101.0213,25.0,96,0.0,2.8,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Sabah,Sandakan,5.8388,118.1173,24.3,97,0.0,5.2,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Sarawak,Kuching,1.5397,110.3542,25.7,95,0.0,3.0,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Sabah,Tawau,4.2448,117.8911,26.0,91,0.0,5.1,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Melaka,Melaka,2.1889,102.2511,26.3,94,0.0,4.0,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Sarawak,Bintulu,3.17,113.03,24.7,96,0.0,7.2,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Johor,Batu Pahat,1.85,102.93,25.9,94,0.0,2.7,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Selangor,Klang,3.0333,101.45,25.4,92,0.0,2.6,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Perak,Taiping,4.85,100.7333,26.4,94,0.0,4.3,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Johor,Johor Bahru,1.4556,103.7611,26.6,89,0.0,1.9,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Sabah,Lahad Datu,5.03,118.34,26.0,91,0.0,3.4,3,Clouds generally forming or developing
+2024-07-13,05:00:00,Johor,Kluang,2.0336,103.3194,24.8,97,0.0,1.8,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Melaka,Melaka,2.1889,102.2511,26.2,94,0.0,3.6,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Pahang,Kuala Lipis,4.184,102.042,24.1,98,0.0,2.3,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,04:00:00,Sabah,Sandakan,5.8388,118.1173,24.4,97,0.0,5.5,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Sarawak,Kuching,1.5397,110.3542,26.1,93,0.0,1.1,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Selangor,Petaling Jaya,3.1073,101.6067,26.2,90,0.0,1.3,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Pahang,Kuantan,3.8167,103.3333,26.4,91,0.0,6.2,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Pahang,Raub,3.7931,101.8569,23.9,100,0.0,1.5,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,04:00:00,Johor,Batu Pahat,1.85,102.93,25.9,94,0.0,3.7,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,24.3,99,0.0,2.1,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,04:00:00,Perlis,Kangar,6.4333,100.2,24.7,100,0.0,1.5,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,04:00:00,Kelantan,Kota Bharu,6.1333,102.25,25.0,96,0.0,4.4,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,04:00:00,Perak,Ipoh,4.6,101.07,24.8,83,0.0,1.5,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Kedah,Alor Setar,6.1167,100.3667,24.3,98,0.0,2.4,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,04:00:00,Johor,Muar,2.05,102.56,26.4,94,0.0,5.2,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,25.2,91,0.0,2.5,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Labuan,Labuan,5.2803,115.2475,25.2,91,0.3,7.3,80,"Rain shower(s), slight"
+2024-07-13,04:00:00,Kedah,Sungai Petani,5.65,100.48,24.8,97,0.0,1.1,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,04:00:00,Sabah,Lahad Datu,5.03,118.34,25.8,92,0.0,3.3,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Johor,Kluang,2.0336,103.3194,24.8,97,0.0,1.8,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Selangor,Shah Alam,3.0833,101.5333,26.2,90,0.0,1.3,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Perak,Teluk Intan,4.0259,101.0213,25.1,95,0.0,2.3,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Terengganu,Cukai,4.2332,103.4479,26.3,91,0.0,6.4,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Putrajaya,Putrajaya,2.93,101.69,25.0,94,0.0,1.8,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Sarawak,Sibu,2.3,111.8167,24.4,96,0.0,1.3,80,"Rain shower(s), slight"
+2024-07-13,04:00:00,Pulau Pinang,George Town,5.4145,100.3292,27.2,86,0.0,2.1,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,25.4,92,0.0,2.9,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Johor,Johor Bahru,1.4556,103.7611,26.6,90,0.0,2.6,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Sarawak,Bintulu,3.17,113.03,24.9,95,0.1,6.7,80,"Rain shower(s), slight"
+2024-07-13,04:00:00,Perak,Taiping,4.85,100.7333,26.5,94,0.0,3.5,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Sabah,Tawau,4.2448,117.8911,25.9,91,0.0,3.9,80,"Rain shower(s), slight"
+2024-07-13,04:00:00,Sarawak,Miri,4.4028,113.9933,25.2,95,0.9,9.8,61,"Rain, not freezing, continuous slight at time of observation"
+2024-07-13,04:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,25.1,95,0.0,2.3,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,27.2,86,0.0,2.1,3,Clouds generally forming or developing
+2024-07-13,04:00:00,Sabah,Kota Kinabalu,5.975,116.0725,24.9,89,1.0,9.7,61,"Rain, not freezing, continuous slight at time of observation"
+2024-07-13,04:00:00,Selangor,Klang,3.0333,101.45,25.6,92,0.0,2.3,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Perak,Taiping,4.85,100.7333,26.8,93,0.0,3.3,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Sarawak,Sibu,2.3,111.8167,24.6,96,0.0,2.8,80,"Rain shower(s), slight"
+2024-07-13,03:00:00,Johor,Kluang,2.0336,103.3194,25.0,97,0.0,1.6,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,25.7,92,0.0,3.2,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Kedah,Alor Setar,6.1167,100.3667,24.7,97,0.0,2.1,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,03:00:00,Sarawak,Miri,4.4028,113.9933,25.3,94,0.4,7.6,80,"Rain shower(s), slight"
+2024-07-13,03:00:00,Johor,Batu Pahat,1.85,102.93,25.9,94,0.0,4.0,2,State of sky on the whole unchanged
+2024-07-13,03:00:00,Perlis,Kangar,6.4333,100.2,24.8,100,0.0,1.3,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,03:00:00,Selangor,Petaling Jaya,3.1073,101.6067,26.5,89,0.0,1.3,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Sabah,Kota Kinabalu,5.975,116.0725,25.0,89,1.2,11.2,61,"Rain, not freezing, continuous slight at time of observation"
+2024-07-13,03:00:00,Perak,Ipoh,4.6,101.07,25.1,82,0.0,2.5,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Pahang,Raub,3.7931,101.8569,24.0,100,0.0,1.6,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,03:00:00,Pulau Pinang,George Town,5.4145,100.3292,27.3,87,0.0,2.4,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Sabah,Sandakan,5.8388,118.1173,24.6,97,0.0,5.7,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Sarawak,Bintulu,3.17,113.03,25.4,92,0.1,3.0,80,"Rain shower(s), slight"
+2024-07-13,03:00:00,Labuan,Labuan,5.2803,115.2475,25.1,91,0.7,7.7,61,"Rain, not freezing, continuous slight at time of observation"
+2024-07-13,03:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,25.3,95,0.0,2.3,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Pahang,Kuala Lipis,4.184,102.042,24.1,99,0.0,2.2,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,03:00:00,Sabah,Lahad Datu,5.03,118.34,25.5,93,0.0,3.9,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Johor,Muar,2.05,102.56,26.4,95,0.0,5.4,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,24.7,97,0.0,2.1,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,03:00:00,Johor,Johor Bahru,1.4556,103.7611,26.5,92,0.0,3.7,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Sarawak,Kuching,1.5397,110.3542,26.1,94,0.0,1.3,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Terengganu,Cukai,4.2332,103.4479,26.4,92,0.0,5.9,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Melaka,Melaka,2.1889,102.2511,26.2,94,0.0,3.6,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Selangor,Shah Alam,3.0833,101.5333,26.5,89,0.0,1.3,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Pahang,Kuantan,3.8167,103.3333,26.5,92,0.0,6.1,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Kelantan,Kota Bharu,6.1333,102.25,25.2,96,0.0,4.0,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,03:00:00,Putrajaya,Putrajaya,2.93,101.69,25.1,94,0.0,2.1,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,27.3,87,0.0,2.4,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,25.4,91,0.0,2.9,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Sabah,Tawau,4.2448,117.8911,26.1,91,0.0,2.5,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Perak,Teluk Intan,4.0259,101.0213,25.3,94,0.0,1.9,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Selangor,Klang,3.0333,101.45,25.8,91,0.0,2.5,3,Clouds generally forming or developing
+2024-07-13,03:00:00,Kedah,Sungai Petani,5.65,100.48,25.0,97,0.0,1.6,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,02:00:00,Sabah,Lahad Datu,5.03,118.34,25.3,93,0.0,4.6,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Perak,Teluk Intan,4.0259,101.0213,25.5,92,0.0,2.3,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Pahang,Kuala Lipis,4.184,102.042,24.1,99,0.0,1.6,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,02:00:00,Sabah,Kota Kinabalu,5.975,116.0725,26.0,81,0.1,10.8,80,"Rain shower(s), slight"
+2024-07-13,02:00:00,Selangor,Shah Alam,3.0833,101.5333,26.6,90,0.0,1.1,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Pahang,Kuantan,3.8167,103.3333,26.6,93,0.0,7.1,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Sarawak,Miri,4.4028,113.9933,25.2,95,0.3,6.8,61,"Rain, not freezing, continuous slight at time of observation"
+2024-07-13,02:00:00,Selangor,Klang,3.0333,101.45,25.9,90,0.0,2.4,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Kelantan,Kota Bharu,6.1333,102.25,25.4,95,0.0,3.6,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Melaka,Melaka,2.1889,102.2511,26.2,94,0.0,3.8,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Pulau Pinang,George Town,5.4145,100.3292,27.4,86,0.0,1.6,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Selangor,Petaling Jaya,3.1073,101.6067,26.6,90,0.0,1.1,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Sabah,Tawau,4.2448,117.8911,26.0,93,0.0,2.6,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Putrajaya,Putrajaya,2.93,101.69,25.2,94,0.0,2.0,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Sarawak,Bintulu,3.17,113.03,25.7,92,0.0,4.1,61,"Rain, not freezing, continuous slight at time of observation"
+2024-07-13,02:00:00,Sarawak,Sibu,2.3,111.8167,24.8,96,0.0,2.8,80,"Rain shower(s), slight"
+2024-07-13,02:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,27.5,86,0.0,1.6,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Johor,Batu Pahat,1.85,102.93,26.0,93,0.0,3.9,2,State of sky on the whole unchanged
+2024-07-13,02:00:00,Johor,Kluang,2.0336,103.3194,25.2,96,0.0,2.4,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Kedah,Sungai Petani,5.65,100.48,25.2,97,0.0,1.6,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,02:00:00,Perak,Taiping,4.85,100.7333,27.3,90,0.0,2.9,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,25.5,91,0.0,2.5,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Kedah,Alor Setar,6.1167,100.3667,25.0,96,0.0,2.5,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,02:00:00,Johor,Johor Bahru,1.4556,103.7611,26.5,92,0.0,3.3,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Sarawak,Kuching,1.5397,110.3542,26.1,94,0.0,2.0,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Labuan,Labuan,5.2803,115.2475,25.2,92,0.4,7.2,80,"Rain shower(s), slight"
+2024-07-13,02:00:00,Johor,Muar,2.05,102.56,26.4,94,0.0,5.4,2,State of sky on the whole unchanged
+2024-07-13,02:00:00,Terengganu,Cukai,4.2332,103.4479,26.5,92,0.0,6.1,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,25.6,94,0.0,1.8,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Perlis,Kangar,6.4333,100.2,25.2,98,0.0,1.9,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,02:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,25.2,95,0.0,2.1,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,25.8,92,0.0,3.4,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Perak,Ipoh,4.6,101.07,25.8,80,0.0,3.1,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Sabah,Sandakan,5.8388,118.1173,24.7,97,0.0,7.5,3,Clouds generally forming or developing
+2024-07-13,02:00:00,Pahang,Raub,3.7931,101.8569,24.2,100,0.0,1.9,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,01:00:00,Kelantan,Kota Bharu,6.1333,102.25,25.7,94,0.0,4.0,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Kedah,Alor Setar,6.1167,100.3667,25.3,95,0.0,2.1,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,25.8,92,0.0,2.1,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Perak,Ipoh,4.6,101.07,26.7,77,0.0,1.5,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Selangor,Klang,3.0333,101.45,26.2,89,0.0,3.4,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Terengganu,Cukai,4.2332,103.4479,26.7,92,0.0,8.3,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Pahang,Kuantan,3.8167,103.3333,26.8,93,0.0,9.6,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Perak,Taiping,4.85,100.7333,27.8,86,0.0,2.3,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,26.1,92,0.0,3.9,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,27.7,84,0.0,2.2,2,State of sky on the whole unchanged
+2024-07-13,01:00:00,Sabah,Sandakan,5.8388,118.1173,24.8,97,0.2,7.0,61,"Rain, not freezing, continuous slight at time of observation"
+2024-07-13,01:00:00,Sabah,Tawau,4.2448,117.8911,26.1,92,0.1,1.4,61,"Rain, not freezing, continuous slight at time of observation"
+2024-07-13,01:00:00,Selangor,Petaling Jaya,3.1073,101.6067,26.9,88,0.0,1.8,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Johor,Kluang,2.0336,103.3194,25.3,96,0.0,3.4,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Kedah,Sungai Petani,5.65,100.48,25.4,97,0.0,1.9,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,01:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,25.9,93,0.0,2.1,2,State of sky on the whole unchanged
+2024-07-13,01:00:00,Johor,Muar,2.05,102.56,26.5,95,0.0,6.3,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Johor,Batu Pahat,1.85,102.93,25.9,94,0.0,4.6,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Perlis,Kangar,6.4333,100.2,25.5,97,0.0,1.3,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,01:00:00,Pulau Pinang,George Town,5.4145,100.3292,27.7,84,0.0,2.2,2,State of sky on the whole unchanged
+2024-07-13,01:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,25.6,92,0.0,2.5,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Johor,Johor Bahru,1.4556,103.7611,26.6,91,0.0,3.4,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Pahang,Raub,3.7931,101.8569,24.5,99,0.0,1.1,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,01:00:00,Sarawak,Bintulu,3.17,113.03,25.7,92,0.1,0.0,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Sabah,Kota Kinabalu,5.975,116.0725,26.8,74,0.0,9.8,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Sarawak,Sibu,2.3,111.8167,25.1,96,0.0,3.3,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Pahang,Kuala Lipis,4.184,102.042,24.4,98,0.0,2.1,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,01:00:00,Selangor,Shah Alam,3.0833,101.5333,26.9,88,0.0,1.8,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Putrajaya,Putrajaya,2.93,101.69,25.5,94,0.0,2.6,2,State of sky on the whole unchanged
+2024-07-13,01:00:00,Melaka,Melaka,2.1889,102.2511,26.3,94,0.0,4.1,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Labuan,Labuan,5.2803,115.2475,25.4,92,0.0,7.8,80,"Rain shower(s), slight"
+2024-07-13,01:00:00,Sarawak,Kuching,1.5397,110.3542,26.2,94,0.0,2.3,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Sarawak,Miri,4.4028,113.9933,25.2,95,0.5,5.0,61,"Rain, not freezing, continuous slight at time of observation"
+2024-07-13,01:00:00,Perak,Teluk Intan,4.0259,101.0213,25.6,91,0.0,4.4,3,Clouds generally forming or developing
+2024-07-13,01:00:00,Sabah,Lahad Datu,5.03,118.34,25.2,94,0.1,2.9,61,"Rain, not freezing, continuous slight at time of observation"
+2024-07-13,00:00:00,Sarawak,Kuching,1.5397,110.3542,26.2,93,0.0,3.2,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Sarawak,Sibu,2.3,111.8167,25.3,95,0.0,3.1,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Perak,Teluk Intan,4.0259,101.0213,25.9,89,0.0,4.8,1,Clouds generally dissolving or becoming less developed
+2024-07-13,00:00:00,Perak,Taiping,4.85,100.7333,28.3,82,0.0,2.4,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Sarawak,Bintulu,3.17,113.03,26.0,92,0.1,1.6,80,"Rain shower(s), slight"
+2024-07-13,00:00:00,Selangor,Petaling Jaya,3.1073,101.6067,27.2,88,0.0,1.9,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Johor,Johor Bahru,1.4556,103.7611,26.7,90,0.0,4.1,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Pahang,Raub,3.7931,101.8569,24.8,98,0.0,1.4,45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour"
+2024-07-13,00:00:00,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,26.6,90,0.0,3.4,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Johor,Batu Pahat,1.85,102.93,26.1,94,0.0,4.1,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Perlis,Kangar,6.4333,100.2,26.0,95,0.0,1.6,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Kelantan,Kota Bharu,6.1333,102.25,26.1,92,0.0,4.3,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,26.4,90,0.0,1.8,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Terengganu,Cukai,4.2332,103.4479,26.9,91,0.0,9.0,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Putrajaya,Putrajaya,2.93,101.69,25.9,93,0.0,2.1,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,27.9,83,0.0,1.5,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Melaka,Melaka,2.1889,102.2511,26.5,93,0.0,5.1,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Selangor,Shah Alam,3.0833,101.5333,27.2,88,0.0,1.9,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Pahang,Kuala Lipis,4.184,102.042,24.9,96,0.0,2.5,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Sabah,Kota Kinabalu,5.975,116.0725,26.9,74,0.0,8.6,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,25.8,93,0.0,2.5,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Johor,Kluang,2.0336,103.3194,25.5,96,0.0,2.7,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Kedah,Alor Setar,6.1167,100.3667,25.9,92,0.0,1.9,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Johor,Muar,2.05,102.56,26.6,95,0.0,5.8,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Sabah,Sandakan,5.8388,118.1173,24.9,98,0.1,4.8,61,"Rain, not freezing, continuous slight at time of observation"
+2024-07-13,00:00:00,Sarawak,Miri,4.4028,113.9933,25.2,95,0.5,4.0,61,"Rain, not freezing, continuous slight at time of observation"
+2024-07-13,00:00:00,Sabah,Lahad Datu,5.03,118.34,25.2,94,0.1,2.4,61,"Rain, not freezing, continuous slight at time of observation"
+2024-07-13,00:00:00,Sabah,Tawau,4.2448,117.8911,26.2,91,0.1,0.8,61,"Rain, not freezing, continuous slight at time of observation"
+2024-07-13,00:00:00,Labuan,Labuan,5.2803,115.2475,25.5,92,0.1,5.7,61,"Rain, not freezing, continuous slight at time of observation"
+2024-07-13,00:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,26.3,91,0.0,1.8,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Pahang,Kuantan,3.8167,103.3333,27.1,92,0.0,10.1,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Pulau Pinang,George Town,5.4145,100.3292,27.9,83,0.0,1.5,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Perak,Ipoh,4.6,101.07,27.2,77,0.0,1.1,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Kedah,Sungai Petani,5.65,100.48,25.8,95,0.0,1.8,3,Clouds generally forming or developing
+2024-07-13,00:00:00,Selangor,Klang,3.0333,101.45,26.5,88,0.0,2.8,3,Clouds generally forming or developing
