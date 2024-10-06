@@ -1,0 +1,386 @@
+weathercode,description,time,temperature_2m,relativehumidity_2m,rain,windspeed_10m,state,city,latitude,longitude,date
+3,Clouds generally forming or developing,10:00:00,26.3,87,0.0,1.8,Putrajaya,Putrajaya,2.93,101.69,2024-10-06
+3,Clouds generally forming or developing,10:00:00,28.6,80,0.0,2.8,Terengganu,Kuala Terengganu,5.3303,103.1408,2024-10-06
+3,Clouds generally forming or developing,10:00:00,27.2,84,0.0,6.2,Pulau Pinang,George Town,5.4145,100.3292,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",10:00:00,26.5,87,0.0,3.6,Selangor,Klang,3.0333,101.45,2024-10-06
+3,Clouds generally forming or developing,10:00:00,27.2,84,0.0,6.2,Pulau Pinang,Butterworth,5.3992,100.3639,2024-10-06
+3,Clouds generally forming or developing,10:00:00,26.4,92,0.0,3.4,Perak,Teluk Intan,4.0259,101.0213,2024-10-06
+3,Clouds generally forming or developing,10:00:00,28.2,78,0.0,6.5,Sarawak,Miri,4.4028,113.9933,2024-10-06
+3,Clouds generally forming or developing,10:00:00,27.9,80,0.0,5.6,Labuan,Labuan,5.2803,115.2475,2024-10-06
+80,"Rain shower(s), slight",10:00:00,26.9,91,0.0,8.4,Perlis,Kangar,6.4333,100.2,2024-10-06
+3,Clouds generally forming or developing,10:00:00,27.4,84,0.0,6.8,Kedah,Sungai Petani,5.65,100.48,2024-10-06
+2,State of sky on the whole unchanged,10:00:00,28.0,81,0.0,2.6,Sarawak,Sibu,2.3,111.8167,2024-10-06
+3,Clouds generally forming or developing,10:00:00,27.6,79,0.0,4.7,Perak,Taiping,4.85,100.7333,2024-10-06
+80,"Rain shower(s), slight",10:00:00,26.7,89,0.0,8.2,Johor,Batu Pahat,1.85,102.93,2024-10-06
+3,Clouds generally forming or developing,10:00:00,26.6,83,0.0,1.9,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2024-10-06
+3,Clouds generally forming or developing,10:00:00,27.5,83,0.0,0.5,Pahang,Kuala Lipis,4.184,102.042,2024-10-06
+80,"Rain shower(s), slight",10:00:00,27.7,84,0.0,9.7,Johor,Johor Bahru,1.4556,103.7611,2024-10-06
+3,Clouds generally forming or developing,10:00:00,28.1,80,0.0,11.3,Pahang,Kuantan,3.8167,103.3333,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",10:00:00,25.3,93,0.0,6.7,Johor,Kluang,2.0336,103.3194,2024-10-06
+2,State of sky on the whole unchanged,10:00:00,28.8,79,0.0,4.1,Sabah,Tawau,4.2448,117.8911,2024-10-06
+3,Clouds generally forming or developing,10:00:00,30.0,68,0.0,5.5,Sabah,Lahad Datu,5.03,118.34,2024-10-06
+3,Clouds generally forming or developing,10:00:00,27.4,84,0.0,6.2,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2024-10-06
+3,Clouds generally forming or developing,10:00:00,27.7,85,0.0,4.8,Terengganu,Cukai,4.2332,103.4479,2024-10-06
+3,Clouds generally forming or developing,10:00:00,29.2,76,0.0,4.5,Sabah,Sandakan,5.8388,118.1173,2024-10-06
+80,"Rain shower(s), slight",10:00:00,27.1,86,0.0,8.7,Kedah,Alor Setar,6.1167,100.3667,2024-10-06
+3,Clouds generally forming or developing,10:00:00,27.6,83,0.0,6.0,Kelantan,Kota Bharu,6.1333,102.25,2024-10-06
+3,Clouds generally forming or developing,10:00:00,26.6,86,0.0,2.6,Selangor,Petaling Jaya,3.1073,101.6067,2024-10-06
+3,Clouds generally forming or developing,10:00:00,25.7,90,0.0,1.6,Perak,Ipoh,4.6,101.07,2024-10-06
+3,Clouds generally forming or developing,10:00:00,29.5,70,0.0,5.7,Sabah,Kota Kinabalu,5.975,116.0725,2024-10-06
+3,Clouds generally forming or developing,10:00:00,25.6,88,0.0,1.8,Pahang,Raub,3.7931,101.8569,2024-10-06
+3,Clouds generally forming or developing,10:00:00,27.5,81,0.0,7.9,Melaka,Melaka,2.1889,102.2511,2024-10-06
+2,State of sky on the whole unchanged,10:00:00,28.8,78,0.0,3.2,Sarawak,Bintulu,3.17,113.03,2024-10-06
+2,State of sky on the whole unchanged,10:00:00,28.5,77,0.0,1.4,Sarawak,Kuching,1.5397,110.3542,2024-10-06
+80,"Rain shower(s), slight",10:00:00,27.2,85,0.0,8.2,Johor,Muar,2.05,102.56,2024-10-06
+3,Clouds generally forming or developing,10:00:00,26.6,86,0.0,2.6,Selangor,Shah Alam,3.0833,101.5333,2024-10-06
+3,Clouds generally forming or developing,10:00:00,26.9,84,0.0,4.8,Negeri Sembilan,Seremban,2.7297,101.9381,2024-10-06
+3,Clouds generally forming or developing,09:00:00,27.1,86,0.0,8.2,Pahang,Kuantan,3.8167,103.3333,2024-10-06
+3,Clouds generally forming or developing,09:00:00,27.3,84,0.0,6.8,Sarawak,Miri,4.4028,113.9933,2024-10-06
+2,State of sky on the whole unchanged,09:00:00,27.5,85,0.0,5.1,Sarawak,Bintulu,3.17,113.03,2024-10-06
+3,Clouds generally forming or developing,09:00:00,26.8,84,0.0,4.5,Perak,Taiping,4.85,100.7333,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",09:00:00,25.4,92,0.0,3.1,Selangor,Shah Alam,3.0833,101.5333,2024-10-06
+80,"Rain shower(s), slight",09:00:00,25.5,90,0.0,2.2,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",09:00:00,26.8,89,0.0,7.4,Johor,Johor Bahru,1.4556,103.7611,2024-10-06
+80,"Rain shower(s), slight",09:00:00,26.6,86,0.0,7.0,Melaka,Melaka,2.1889,102.2511,2024-10-06
+3,Clouds generally forming or developing,09:00:00,28.1,82,0.0,4.3,Sabah,Sandakan,5.8388,118.1173,2024-10-06
+3,Clouds generally forming or developing,09:00:00,26.2,90,0.0,5.3,Pulau Pinang,George Town,5.4145,100.3292,2024-10-06
+3,Clouds generally forming or developing,09:00:00,26.6,90,0.0,3.9,Terengganu,Cukai,4.2332,103.4479,2024-10-06
+3,Clouds generally forming or developing,09:00:00,25.7,88,0.0,1.8,Negeri Sembilan,Seremban,2.7297,101.9381,2024-10-06
+3,Clouds generally forming or developing,09:00:00,28.8,74,0.0,6.5,Sabah,Lahad Datu,5.03,118.34,2024-10-06
+3,Clouds generally forming or developing,09:00:00,28.7,73,0.0,5.6,Sabah,Kota Kinabalu,5.975,116.0725,2024-10-06
+80,"Rain shower(s), slight",09:00:00,25.9,90,0.0,5.4,Johor,Batu Pahat,1.85,102.93,2024-10-06
+3,Clouds generally forming or developing,09:00:00,26.1,91,0.0,4.2,Kedah,Sungai Petani,5.65,100.48,2024-10-06
+3,Clouds generally forming or developing,09:00:00,25.7,94,0.0,3.3,Perak,Teluk Intan,4.0259,101.0213,2024-10-06
+3,Clouds generally forming or developing,09:00:00,25.3,91,0.0,2.1,Putrajaya,Putrajaya,2.93,101.69,2024-10-06
+3,Clouds generally forming or developing,09:00:00,26.1,89,0.0,5.5,Kelantan,Kota Bharu,6.1333,102.25,2024-10-06
+3,Clouds generally forming or developing,09:00:00,26.0,93,0.0,5.8,Perlis,Kangar,6.4333,100.2,2024-10-06
+3,Clouds generally forming or developing,09:00:00,26.2,89,0.0,4.3,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2024-10-06
+80,"Rain shower(s), slight",09:00:00,27.8,85,0.0,3.5,Sabah,Tawau,4.2448,117.8911,2024-10-06
+3,Clouds generally forming or developing,09:00:00,27.1,85,0.0,5.1,Labuan,Labuan,5.2803,115.2475,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",09:00:00,24.9,94,0.0,4.6,Johor,Kluang,2.0336,103.3194,2024-10-06
+2,State of sky on the whole unchanged,09:00:00,27.2,85,0.0,1.1,Sarawak,Kuching,1.5397,110.3542,2024-10-06
+80,"Rain shower(s), slight",09:00:00,26.8,88,0.0,8.7,Johor,Muar,2.05,102.56,2024-10-06
+3,Clouds generally forming or developing,09:00:00,25.9,91,0.0,7.5,Kedah,Alor Setar,6.1167,100.3667,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",09:00:00,25.4,92,0.0,3.6,Selangor,Klang,3.0333,101.45,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",09:00:00,25.4,92,0.0,3.1,Selangor,Petaling Jaya,3.1073,101.6067,2024-10-06
+3,Clouds generally forming or developing,09:00:00,26.2,90,0.0,5.3,Pulau Pinang,Butterworth,5.3992,100.3639,2024-10-06
+2,State of sky on the whole unchanged,09:00:00,27.1,87,0.0,3.1,Sarawak,Sibu,2.3,111.8167,2024-10-06
+3,Clouds generally forming or developing,09:00:00,26.5,89,0.0,1.5,Pahang,Kuala Lipis,4.184,102.042,2024-10-06
+3,Clouds generally forming or developing,09:00:00,27.0,88,0.0,0.5,Terengganu,Kuala Terengganu,5.3303,103.1408,2024-10-06
+3,Clouds generally forming or developing,09:00:00,24.6,93,0.0,1.3,Pahang,Raub,3.7931,101.8569,2024-10-06
+3,Clouds generally forming or developing,09:00:00,25.2,90,0.0,1.0,Perak,Ipoh,4.6,101.07,2024-10-06
+80,"Rain shower(s), slight",08:00:00,24.7,94,0.0,1.1,Putrajaya,Putrajaya,2.93,101.69,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",08:00:00,24.8,94,0.0,2.9,Selangor,Klang,3.0333,101.45,2024-10-06
+3,Clouds generally forming or developing,08:00:00,24.6,94,0.0,1.1,Perak,Ipoh,4.6,101.07,2024-10-06
+80,"Rain shower(s), slight",08:00:00,25.8,92,0.0,5.4,Pulau Pinang,Butterworth,5.3992,100.3639,2024-10-06
+3,Clouds generally forming or developing,08:00:00,26.4,88,0.0,5.4,Pahang,Kuantan,3.8167,103.3333,2024-10-06
+80,"Rain shower(s), slight",08:00:00,25.8,92,0.0,5.4,Pulau Pinang,George Town,5.4145,100.3292,2024-10-06
+80,"Rain shower(s), slight",08:00:00,25.6,90,0.0,7.9,Johor,Batu Pahat,1.85,102.93,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",08:00:00,26.0,91,0.0,5.5,Johor,Johor Bahru,1.4556,103.7611,2024-10-06
+80,"Rain shower(s), slight",08:00:00,27.2,87,0.0,4.3,Sabah,Tawau,4.2448,117.8911,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",08:00:00,24.8,95,0.0,2.0,Selangor,Petaling Jaya,3.1073,101.6067,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",08:00:00,24.8,95,0.0,2.0,Selangor,Shah Alam,3.0833,101.5333,2024-10-06
+80,"Rain shower(s), slight",08:00:00,24.9,93,0.0,2.2,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2024-10-06
+3,Clouds generally forming or developing,08:00:00,26.0,90,0.0,4.2,Perak,Taiping,4.85,100.7333,2024-10-06
+2,State of sky on the whole unchanged,08:00:00,26.7,88,0.0,4.1,Sabah,Sandakan,5.8388,118.1173,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",08:00:00,24.8,97,0.0,2.2,Perak,Teluk Intan,4.0259,101.0213,2024-10-06
+2,State of sky on the whole unchanged,08:00:00,26.2,92,0.0,6.1,Sarawak,Bintulu,3.17,113.03,2024-10-06
+3,Clouds generally forming or developing,08:00:00,27.2,82,0.0,7.1,Sabah,Lahad Datu,5.03,118.34,2024-10-06
+3,Clouds generally forming or developing,08:00:00,24.8,94,0.0,0.8,Negeri Sembilan,Seremban,2.7297,101.9381,2024-10-06
+3,Clouds generally forming or developing,08:00:00,27.6,76,0.0,6.2,Sabah,Kota Kinabalu,5.975,116.0725,2024-10-06
+3,Clouds generally forming or developing,08:00:00,24.7,94,0.0,4.9,Kelantan,Kota Bharu,6.1333,102.25,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",08:00:00,24.8,97,0.0,1.1,Terengganu,Kuala Terengganu,5.3303,103.1408,2024-10-06
+2,State of sky on the whole unchanged,08:00:00,25.9,93,0.0,3.4,Sarawak,Sibu,2.3,111.8167,2024-10-06
+3,Clouds generally forming or developing,08:00:00,25.5,95,0.0,3.6,Perlis,Kangar,6.4333,100.2,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",08:00:00,25.5,95,0.0,1.9,Sarawak,Kuching,1.5397,110.3542,2024-10-06
+3,Clouds generally forming or developing,08:00:00,26.4,91,0.0,4.7,Labuan,Labuan,5.2803,115.2475,2024-10-06
+3,Clouds generally forming or developing,08:00:00,25.5,93,0.0,3.4,Terengganu,Cukai,4.2332,103.4479,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",08:00:00,24.8,97,0.0,2.2,Kedah,Sungai Petani,5.65,100.48,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",08:00:00,24.7,95,0.0,2.7,Johor,Kluang,2.0336,103.3194,2024-10-06
+3,Clouds generally forming or developing,08:00:00,26.2,91,0.0,6.6,Sarawak,Miri,4.4028,113.9933,2024-10-06
+3,Clouds generally forming or developing,08:00:00,24.4,89,0.0,2.3,Pahang,Raub,3.7931,101.8569,2024-10-06
+3,Clouds generally forming or developing,08:00:00,25.2,93,0.0,2.8,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",08:00:00,26.6,88,0.0,10.2,Johor,Muar,2.05,102.56,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",08:00:00,25.3,97,0.0,0.8,Pahang,Kuala Lipis,4.184,102.042,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",08:00:00,26.2,89,0.0,6.5,Melaka,Melaka,2.1889,102.2511,2024-10-06
+3,Clouds generally forming or developing,08:00:00,25.0,95,0.0,6.1,Kedah,Alor Setar,6.1167,100.3667,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",07:00:00,24.4,98,0.0,1.8,Perak,Teluk Intan,4.0259,101.0213,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",07:00:00,26.1,90,0.0,6.5,Melaka,Melaka,2.1889,102.2511,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",07:00:00,24.7,96,0.0,1.5,Pahang,Kuala Lipis,4.184,102.042,2024-10-06
+3,Clouds generally forming or developing,07:00:00,25.0,93,0.0,3.8,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",07:00:00,24.5,97,0.0,2.3,Sarawak,Kuching,1.5397,110.3542,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",07:00:00,25.4,93,0.0,8.2,Johor,Batu Pahat,1.85,102.93,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",07:00:00,24.8,95,0.0,1.8,Selangor,Klang,3.0333,101.45,2024-10-06
+3,Clouds generally forming or developing,07:00:00,25.2,94,0.0,2.9,Terengganu,Cukai,4.2332,103.4479,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",07:00:00,24.7,95,0.0,1.8,Selangor,Petaling Jaya,3.1073,101.6067,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",07:00:00,25.2,96,0.0,2.7,Perlis,Kangar,6.4333,100.2,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",07:00:00,24.4,97,0.0,2.5,Kedah,Sungai Petani,5.65,100.48,2024-10-06
+80,"Rain shower(s), slight",07:00:00,24.5,95,0.0,0.4,Putrajaya,Putrajaya,2.93,101.69,2024-10-06
+80,"Rain shower(s), slight",07:00:00,25.7,93,0.0,3.4,Labuan,Labuan,5.2803,115.2475,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",07:00:00,25.2,97,0.0,2.7,Sabah,Sandakan,5.8388,118.1173,2024-10-06
+3,Clouds generally forming or developing,07:00:00,24.4,95,0.0,1.1,Perak,Ipoh,4.6,101.07,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",07:00:00,24.6,95,0.0,3.3,Johor,Kluang,2.0336,103.3194,2024-10-06
+3,Clouds generally forming or developing,07:00:00,25.8,90,0.0,4.0,Perak,Taiping,4.85,100.7333,2024-10-06
+3,Clouds generally forming or developing,07:00:00,23.9,90,0.0,1.3,Pahang,Raub,3.7931,101.8569,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",07:00:00,24.7,95,0.0,1.8,Selangor,Shah Alam,3.0833,101.5333,2024-10-06
+3,Clouds generally forming or developing,07:00:00,26.1,86,0.0,5.8,Sabah,Kota Kinabalu,5.975,116.0725,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",07:00:00,24.1,98,0.0,1.6,Terengganu,Kuala Terengganu,5.3303,103.1408,2024-10-06
+3,Clouds generally forming or developing,07:00:00,24.5,94,0.0,1.5,Negeri Sembilan,Seremban,2.7297,101.9381,2024-10-06
+80,"Rain shower(s), slight",07:00:00,25.8,91,0.0,5.8,Pulau Pinang,George Town,5.4145,100.3292,2024-10-06
+2,State of sky on the whole unchanged,07:00:00,25.8,90,0.0,5.8,Sabah,Lahad Datu,5.03,118.34,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",07:00:00,25.0,97,0.0,4.1,Sarawak,Bintulu,3.17,113.03,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",07:00:00,24.8,93,0.0,1.6,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2024-10-06
+80,"Rain shower(s), slight",07:00:00,26.7,89,0.0,4.0,Sabah,Tawau,4.2448,117.8911,2024-10-06
+3,Clouds generally forming or developing,07:00:00,24.9,95,0.0,5.2,Kedah,Alor Setar,6.1167,100.3667,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",07:00:00,25.8,92,0.0,5.2,Johor,Johor Bahru,1.4556,103.7611,2024-10-06
+3,Clouds generally forming or developing,07:00:00,25.4,95,0.0,5.9,Sarawak,Miri,4.4028,113.9933,2024-10-06
+3,Clouds generally forming or developing,07:00:00,26.2,89,0.0,4.9,Pahang,Kuantan,3.8167,103.3333,2024-10-06
+80,"Rain shower(s), slight",07:00:00,25.8,91,0.0,5.8,Pulau Pinang,Butterworth,5.3992,100.3639,2024-10-06
+3,Clouds generally forming or developing,07:00:00,24.2,96,0.0,5.1,Kelantan,Kota Bharu,6.1333,102.25,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",07:00:00,24.3,99,0.0,1.9,Sarawak,Sibu,2.3,111.8167,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",07:00:00,26.5,89,0.0,11.0,Johor,Muar,2.05,102.56,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",06:00:00,24.8,94,0.0,4.0,Johor,Kluang,2.0336,103.3194,2024-10-06
+3,Clouds generally forming or developing,06:00:00,24.8,96,0.0,3.8,Kedah,Alor Setar,6.1167,100.3667,2024-10-06
+3,Clouds generally forming or developing,06:00:00,24.1,90,0.0,1.5,Pahang,Raub,3.7931,101.8569,2024-10-06
+80,"Rain shower(s), slight",06:00:00,25.3,95,0.0,5.8,Sarawak,Miri,4.4028,113.9933,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",06:00:00,24.9,94,0.0,0.5,Selangor,Klang,3.0333,101.45,2024-10-06
+3,Clouds generally forming or developing,06:00:00,24.8,94,0.0,3.9,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2024-10-06
+3,Clouds generally forming or developing,06:00:00,24.5,94,0.0,2.0,Negeri Sembilan,Seremban,2.7297,101.9381,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",06:00:00,25.7,93,0.0,3.2,Labuan,Labuan,5.2803,115.2475,2024-10-06
+3,Clouds generally forming or developing,06:00:00,25.3,93,0.0,2.5,Terengganu,Cukai,4.2332,103.4479,2024-10-06
+3,Clouds generally forming or developing,06:00:00,24.4,95,0.0,1.5,Perak,Ipoh,4.6,101.07,2024-10-06
+3,Clouds generally forming or developing,06:00:00,25.4,88,0.0,5.7,Sabah,Kota Kinabalu,5.975,116.0725,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",06:00:00,25.5,93,0.0,7.3,Johor,Batu Pahat,1.85,102.93,2024-10-06
+80,"Rain shower(s), slight",06:00:00,24.6,95,0.0,1.1,Putrajaya,Putrajaya,2.93,101.69,2024-10-06
+3,Clouds generally forming or developing,06:00:00,24.2,97,0.0,5.4,Kelantan,Kota Bharu,6.1333,102.25,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",06:00:00,24.9,92,0.0,1.8,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2024-10-06
+3,Clouds generally forming or developing,06:00:00,25.8,91,0.0,5.7,Pulau Pinang,Butterworth,5.3992,100.3639,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",06:00:00,24.7,95,0.0,2.4,Selangor,Petaling Jaya,3.1073,101.6067,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",06:00:00,24.2,98,0.0,2.0,Sarawak,Sibu,2.3,111.8167,2024-10-06
+3,Clouds generally forming or developing,06:00:00,25.8,89,0.0,3.2,Perak,Taiping,4.85,100.7333,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",06:00:00,24.2,97,0.0,0.8,Terengganu,Kuala Terengganu,5.3303,103.1408,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",06:00:00,26.6,89,0.0,11.6,Johor,Muar,2.05,102.56,2024-10-06
+3,Clouds generally forming or developing,06:00:00,25.8,91,0.0,5.7,Pulau Pinang,George Town,5.4145,100.3292,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",06:00:00,24.7,95,0.0,2.4,Selangor,Shah Alam,3.0833,101.5333,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",06:00:00,25.8,92,0.0,5.5,Johor,Johor Bahru,1.4556,103.7611,2024-10-06
+2,State of sky on the whole unchanged,06:00:00,25.1,93,0.0,4.7,Sabah,Lahad Datu,5.03,118.34,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",06:00:00,24.3,99,0.0,2.3,Sarawak,Kuching,1.5397,110.3542,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",06:00:00,24.9,97,0.0,4.1,Sarawak,Bintulu,3.17,113.03,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",06:00:00,24.5,97,0.0,1.3,Perak,Teluk Intan,4.0259,101.0213,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",06:00:00,24.5,97,0.0,2.3,Kedah,Sungai Petani,5.65,100.48,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",06:00:00,24.2,97,0.0,2.6,Sabah,Sandakan,5.8388,118.1173,2024-10-06
+2,State of sky on the whole unchanged,06:00:00,26.3,90,0.0,4.0,Sabah,Tawau,4.2448,117.8911,2024-10-06
+3,Clouds generally forming or developing,06:00:00,24.9,96,0.0,0.4,Pahang,Kuala Lipis,4.184,102.042,2024-10-06
+3,Clouds generally forming or developing,06:00:00,26.2,89,0.0,3.7,Pahang,Kuantan,3.8167,103.3333,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",06:00:00,26.0,90,0.0,6.6,Melaka,Melaka,2.1889,102.2511,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",06:00:00,25.2,97,0.0,2.6,Perlis,Kangar,6.4333,100.2,2024-10-06
+3,Clouds generally forming or developing,05:00:00,26.2,89,0.0,3.9,Pahang,Kuantan,3.8167,103.3333,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",05:00:00,26.0,91,0.0,5.1,Johor,Johor Bahru,1.4556,103.7611,2024-10-06
+3,Clouds generally forming or developing,05:00:00,24.8,96,0.0,4.2,Kedah,Alor Setar,6.1167,100.3667,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",05:00:00,26.0,90,0.0,6.6,Melaka,Melaka,2.1889,102.2511,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",05:00:00,24.6,95,0.0,1.8,Putrajaya,Putrajaya,2.93,101.69,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",05:00:00,25.1,97,0.0,2.8,Perlis,Kangar,6.4333,100.2,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",05:00:00,24.6,97,0.0,2.4,Perak,Teluk Intan,4.0259,101.0213,2024-10-06
+2,State of sky on the whole unchanged,05:00:00,25.1,92,0.0,5.2,Sabah,Lahad Datu,5.03,118.34,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",05:00:00,25.6,94,0.0,3.1,Labuan,Labuan,5.2803,115.2475,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",05:00:00,25.1,97,0.0,3.6,Sarawak,Bintulu,3.17,113.03,2024-10-06
+3,Clouds generally forming or developing,05:00:00,24.8,95,0.0,3.9,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2024-10-06
+3,Clouds generally forming or developing,05:00:00,25.4,90,0.0,5.4,Sabah,Kota Kinabalu,5.975,116.0725,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",05:00:00,24.3,98,0.0,2.0,Sarawak,Sibu,2.3,111.8167,2024-10-06
+2,State of sky on the whole unchanged,05:00:00,26.2,91,0.0,4.2,Sabah,Tawau,4.2448,117.8911,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",05:00:00,24.6,97,0.0,2.6,Kedah,Sungai Petani,5.65,100.48,2024-10-06
+3,Clouds generally forming or developing,05:00:00,24.5,94,0.0,2.2,Perak,Ipoh,4.6,101.07,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",05:00:00,26.7,89,0.0,10.5,Johor,Muar,2.05,102.56,2024-10-06
+3,Clouds generally forming or developing,05:00:00,25.2,95,0.0,1.3,Pahang,Kuala Lipis,4.184,102.042,2024-10-06
+3,Clouds generally forming or developing,05:00:00,24.1,90,0.0,1.3,Pahang,Raub,3.7931,101.8569,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",05:00:00,25.1,91,0.0,1.5,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2024-10-06
+3,Clouds generally forming or developing,05:00:00,25.6,91,0.0,2.9,Perak,Taiping,4.85,100.7333,2024-10-06
+3,Clouds generally forming or developing,05:00:00,25.5,93,0.0,5.2,Pulau Pinang,Butterworth,5.3992,100.3639,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",05:00:00,25.0,94,0.0,4.9,Johor,Kluang,2.0336,103.3194,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",05:00:00,24.4,97,0.0,2.9,Sabah,Sandakan,5.8388,118.1173,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",05:00:00,24.8,94,0.0,2.3,Selangor,Petaling Jaya,3.1073,101.6067,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",05:00:00,24.4,96,0.0,0.7,Terengganu,Kuala Terengganu,5.3303,103.1408,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",05:00:00,24.5,99,0.0,1.8,Sarawak,Kuching,1.5397,110.3542,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",05:00:00,25.0,94,0.0,1.5,Selangor,Klang,3.0333,101.45,2024-10-06
+3,Clouds generally forming or developing,05:00:00,25.4,92,0.0,2.5,Terengganu,Cukai,4.2332,103.4479,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",05:00:00,24.8,94,0.0,2.3,Selangor,Shah Alam,3.0833,101.5333,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",05:00:00,25.6,91,0.0,6.6,Johor,Batu Pahat,1.85,102.93,2024-10-06
+80,"Rain shower(s), slight",05:00:00,24.6,95,0.0,3.3,Negeri Sembilan,Seremban,2.7297,101.9381,2024-10-06
+3,Clouds generally forming or developing,05:00:00,25.5,93,0.0,5.2,Pulau Pinang,George Town,5.4145,100.3292,2024-10-06
+3,Clouds generally forming or developing,05:00:00,24.3,96,0.0,5.3,Kelantan,Kota Bharu,6.1333,102.25,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",05:00:00,25.5,95,0.0,5.8,Sarawak,Miri,4.4028,113.9933,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",04:00:00,25.2,94,0.0,2.2,Selangor,Klang,3.0333,101.45,2024-10-06
+96,"Thunderstorm, slight or moderate, with hail** at time of observation  - Thunderstorm at time of observation",04:00:00,26.6,89,0.0,9.2,Johor,Muar,2.05,102.56,2024-10-06
+2,State of sky on the whole unchanged,04:00:00,26.2,92,0.0,4.6,Sabah,Tawau,4.2448,117.8911,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",04:00:00,25.7,94,0.0,3.4,Labuan,Labuan,5.2803,115.2475,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",04:00:00,24.8,94,0.1,2.4,Putrajaya,Putrajaya,2.93,101.69,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",04:00:00,25.7,92,0.0,5.8,Johor,Batu Pahat,1.85,102.93,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",04:00:00,25.4,94,0.2,5.5,Pulau Pinang,Butterworth,5.3992,100.3639,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",04:00:00,25.4,94,0.2,5.5,Pulau Pinang,George Town,5.4145,100.3292,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",04:00:00,25.1,94,0.0,4.8,Johor,Kluang,2.0336,103.3194,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",04:00:00,24.9,93,0.0,3.0,Selangor,Shah Alam,3.0833,101.5333,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",04:00:00,25.9,94,0.0,5.4,Sarawak,Miri,4.4028,113.9933,2024-10-06
+2,State of sky on the whole unchanged,04:00:00,25.2,92,0.0,5.2,Sabah,Lahad Datu,5.03,118.34,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",04:00:00,24.7,95,0.0,2.4,Negeri Sembilan,Seremban,2.7297,101.9381,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",04:00:00,26.1,89,0.0,6.9,Melaka,Melaka,2.1889,102.2511,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",04:00:00,24.9,93,0.0,3.0,Selangor,Petaling Jaya,3.1073,101.6067,2024-10-06
+3,Clouds generally forming or developing,04:00:00,26.2,89,0.0,3.8,Pahang,Kuantan,3.8167,103.3333,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",04:00:00,25.3,88,0.0,1.3,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2024-10-06
+3,Clouds generally forming or developing,04:00:00,24.8,94,0.1,4.1,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2024-10-06
+3,Clouds generally forming or developing,04:00:00,25.6,91,0.0,2.5,Terengganu,Cukai,4.2332,103.4479,2024-10-06
+80,"Rain shower(s), slight",04:00:00,24.5,97,0.0,2.9,Sabah,Sandakan,5.8388,118.1173,2024-10-06
+80,"Rain shower(s), slight",04:00:00,26.2,90,0.0,4.7,Johor,Johor Bahru,1.4556,103.7611,2024-10-06
+3,Clouds generally forming or developing,04:00:00,24.5,96,0.0,5.0,Kelantan,Kota Bharu,6.1333,102.25,2024-10-06
+80,"Rain shower(s), slight",04:00:00,25.4,92,0.1,4.4,Perak,Taiping,4.85,100.7333,2024-10-06
+3,Clouds generally forming or developing,04:00:00,25.2,97,0.0,3.8,Perlis,Kangar,6.4333,100.2,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",04:00:00,24.7,97,0.0,2.9,Kedah,Sungai Petani,5.65,100.48,2024-10-06
+3,Clouds generally forming or developing,04:00:00,25.7,88,0.0,4.6,Sabah,Kota Kinabalu,5.975,116.0725,2024-10-06
+3,Clouds generally forming or developing,04:00:00,24.1,91,0.0,1.6,Pahang,Raub,3.7931,101.8569,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",04:00:00,24.4,98,0.0,1.8,Sarawak,Sibu,2.3,111.8167,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",04:00:00,24.6,99,0.0,1.3,Sarawak,Kuching,1.5397,110.3542,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",04:00:00,25.2,97,0.0,3.3,Sarawak,Bintulu,3.17,113.03,2024-10-06
+61,"Rain, not freezing, continuous slight at time of observation",04:00:00,24.6,95,0.1,2.7,Perak,Ipoh,4.6,101.07,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",04:00:00,24.7,97,0.0,3.8,Perak,Teluk Intan,4.0259,101.0213,2024-10-06
+3,Clouds generally forming or developing,04:00:00,24.9,96,0.0,5.2,Kedah,Alor Setar,6.1167,100.3667,2024-10-06
+3,Clouds generally forming or developing,04:00:00,24.6,95,0.0,0.5,Terengganu,Kuala Terengganu,5.3303,103.1408,2024-10-06
+80,"Rain shower(s), slight",04:00:00,25.3,94,0.0,0.8,Pahang,Kuala Lipis,4.184,102.042,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",03:00:00,24.9,95,0.0,2.7,Negeri Sembilan,Seremban,2.7297,101.9381,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",03:00:00,25.2,94,0.0,4.0,Johor,Kluang,2.0336,103.3194,2024-10-06
+80,"Rain shower(s), slight",03:00:00,24.6,96,0.0,6.3,Kelantan,Kota Bharu,6.1333,102.25,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",03:00:00,25.4,97,0.0,3.6,Sarawak,Bintulu,3.17,113.03,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",03:00:00,25.3,98,0.0,3.6,Perlis,Kangar,6.4333,100.2,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",03:00:00,26.4,91,0.0,4.0,Johor,Johor Bahru,1.4556,103.7611,2024-10-06
+3,Clouds generally forming or developing,03:00:00,25.2,92,0.0,2.2,Selangor,Shah Alam,3.0833,101.5333,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",03:00:00,26.2,89,0.0,7.2,Melaka,Melaka,2.1889,102.2511,2024-10-06
+2,State of sky on the whole unchanged,03:00:00,25.3,92,0.0,5.5,Sabah,Lahad Datu,5.03,118.34,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",03:00:00,25.5,92,0.1,4.7,Perak,Taiping,4.85,100.7333,2024-10-06
+3,Clouds generally forming or developing,03:00:00,26.4,88,0.0,3.4,Pahang,Kuantan,3.8167,103.3333,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",03:00:00,24.8,98,0.0,1.3,Sarawak,Kuching,1.5397,110.3542,2024-10-06
+80,"Rain shower(s), slight",03:00:00,25.5,87,0.0,1.8,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2024-10-06
+61,"Rain, not freezing, continuous slight at time of observation",03:00:00,24.8,94,0.1,2.2,Perak,Ipoh,4.6,101.07,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",03:00:00,24.5,98,0.0,1.5,Sarawak,Sibu,2.3,111.8167,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",03:00:00,26.2,92,0.0,5.4,Sarawak,Miri,4.4028,113.9933,2024-10-06
+3,Clouds generally forming or developing,03:00:00,25.2,92,0.0,2.2,Selangor,Petaling Jaya,3.1073,101.6067,2024-10-06
+80,"Rain shower(s), slight",03:00:00,24.7,97,0.0,3.0,Sabah,Sandakan,5.8388,118.1173,2024-10-06
+3,Clouds generally forming or developing,03:00:00,24.4,90,0.0,2.2,Pahang,Raub,3.7931,101.8569,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",03:00:00,25.1,93,0.0,1.9,Putrajaya,Putrajaya,2.93,101.69,2024-10-06
+80,"Rain shower(s), slight",03:00:00,25.4,95,0.0,1.0,Pahang,Kuala Lipis,4.184,102.042,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",03:00:00,25.3,95,0.0,3.1,Selangor,Klang,3.0333,101.45,2024-10-06
+96,"Thunderstorm, slight or moderate, with hail** at time of observation  - Thunderstorm at time of observation",03:00:00,25.5,93,0.0,4.9,Johor,Batu Pahat,1.85,102.93,2024-10-06
+96,"Thunderstorm, slight or moderate, with hail** at time of observation  - Thunderstorm at time of observation",03:00:00,26.7,88,0.0,7.9,Johor,Muar,2.05,102.56,2024-10-06
+80,"Rain shower(s), slight",03:00:00,26.3,91,0.0,4.7,Sabah,Tawau,4.2448,117.8911,2024-10-06
+3,Clouds generally forming or developing,03:00:00,24.8,95,0.0,0.5,Terengganu,Kuala Terengganu,5.3303,103.1408,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",03:00:00,25.8,93,0.0,3.4,Labuan,Labuan,5.2803,115.2475,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",03:00:00,25.5,94,0.2,5.5,Pulau Pinang,Butterworth,5.3992,100.3639,2024-10-06
+80,"Rain shower(s), slight",03:00:00,24.9,94,0.1,4.2,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2024-10-06
+80,"Rain shower(s), slight",03:00:00,25.0,96,0.0,4.9,Kedah,Alor Setar,6.1167,100.3667,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",03:00:00,24.8,97,0.0,2.8,Perak,Teluk Intan,4.0259,101.0213,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",03:00:00,25.5,94,0.2,5.5,Pulau Pinang,George Town,5.4145,100.3292,2024-10-06
+3,Clouds generally forming or developing,03:00:00,25.8,91,0.0,2.2,Terengganu,Cukai,4.2332,103.4479,2024-10-06
+80,"Rain shower(s), slight",03:00:00,24.7,97,0.0,3.5,Kedah,Sungai Petani,5.65,100.48,2024-10-06
+3,Clouds generally forming or developing,03:00:00,25.7,89,0.0,4.6,Sabah,Kota Kinabalu,5.975,116.0725,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",02:00:00,25.0,98,0.0,1.5,Sarawak,Kuching,1.5397,110.3542,2024-10-06
+3,Clouds generally forming or developing,02:00:00,25.6,96,0.0,2.3,Pahang,Kuala Lipis,4.184,102.042,2024-10-06
+3,Clouds generally forming or developing,02:00:00,24.6,90,0.0,2.5,Pahang,Raub,3.7931,101.8569,2024-10-06
+3,Clouds generally forming or developing,02:00:00,26.6,91,0.0,2.7,Johor,Johor Bahru,1.4556,103.7611,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",02:00:00,25.5,97,0.0,3.7,Sarawak,Bintulu,3.17,113.03,2024-10-06
+3,Clouds generally forming or developing,02:00:00,26.2,93,0.0,4.6,Sarawak,Miri,4.4028,113.9933,2024-10-06
+2,State of sky on the whole unchanged,02:00:00,25.8,89,0.0,4.6,Sabah,Kota Kinabalu,5.975,116.0725,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",02:00:00,25.8,91,0.0,3.1,Terengganu,Cukai,4.2332,103.4479,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",02:00:00,26.7,87,0.0,5.4,Johor,Muar,2.05,102.56,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",02:00:00,24.9,94,0.2,3.7,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",02:00:00,25.5,91,0.1,4.1,Perak,Taiping,4.85,100.7333,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",02:00:00,25.8,93,0.0,2.9,Labuan,Labuan,5.2803,115.2475,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",02:00:00,25.2,94,0.2,2.0,Putrajaya,Putrajaya,2.93,101.69,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",02:00:00,24.7,97,0.0,3.1,Sabah,Sandakan,5.8388,118.1173,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",02:00:00,25.4,94,0.0,3.4,Johor,Kluang,2.0336,103.3194,2024-10-06
+3,Clouds generally forming or developing,02:00:00,25.7,93,0.0,4.3,Johor,Batu Pahat,1.85,102.93,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",02:00:00,24.7,98,0.0,0.8,Sarawak,Sibu,2.3,111.8167,2024-10-06
+2,State of sky on the whole unchanged,02:00:00,25.3,92,0.0,4.8,Sabah,Lahad Datu,5.03,118.34,2024-10-06
+80,"Rain shower(s), slight",02:00:00,26.5,87,0.0,3.4,Pahang,Kuantan,3.8167,103.3333,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",02:00:00,25.5,94,0.2,5.5,Pulau Pinang,George Town,5.4145,100.3292,2024-10-06
+80,"Rain shower(s), slight",02:00:00,25.0,95,0.0,3.1,Negeri Sembilan,Seremban,2.7297,101.9381,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",02:00:00,25.3,92,0.0,2.8,Selangor,Shah Alam,3.0833,101.5333,2024-10-06
+3,Clouds generally forming or developing,02:00:00,25.6,87,0.0,2.1,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",02:00:00,24.9,96,0.0,6.6,Kelantan,Kota Bharu,6.1333,102.25,2024-10-06
+80,"Rain shower(s), slight",02:00:00,24.8,97,0.1,3.3,Kedah,Sungai Petani,5.65,100.48,2024-10-06
+80,"Rain shower(s), slight",02:00:00,25.4,95,0.1,3.8,Selangor,Klang,3.0333,101.45,2024-10-06
+80,"Rain shower(s), slight",02:00:00,25.0,96,0.0,2.0,Terengganu,Kuala Terengganu,5.3303,103.1408,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",02:00:00,25.3,92,0.0,2.8,Selangor,Petaling Jaya,3.1073,101.6067,2024-10-06
+80,"Rain shower(s), slight",02:00:00,25.1,97,0.0,4.3,Kedah,Alor Setar,6.1167,100.3667,2024-10-06
+2,State of sky on the whole unchanged,02:00:00,26.4,93,0.0,3.8,Sabah,Tawau,4.2448,117.8911,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",02:00:00,26.4,88,0.0,5.9,Melaka,Melaka,2.1889,102.2511,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",02:00:00,25.6,94,0.2,5.5,Pulau Pinang,Butterworth,5.3992,100.3639,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",02:00:00,25.0,96,0.0,3.0,Perak,Teluk Intan,4.0259,101.0213,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",02:00:00,25.4,97,0.0,3.3,Perlis,Kangar,6.4333,100.2,2024-10-06
+61,"Rain, not freezing, continuous slight at time of observation",02:00:00,24.9,94,0.3,3.1,Perak,Ipoh,4.6,101.07,2024-10-06
+3,Clouds generally forming or developing,01:00:00,25.3,94,0.0,2.5,Negeri Sembilan,Seremban,2.7297,101.9381,2024-10-06
+80,"Rain shower(s), slight",01:00:00,25.0,97,0.0,2.4,Sabah,Sandakan,5.8388,118.1173,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",01:00:00,26.5,89,0.0,7.2,Pahang,Kuantan,3.8167,103.3333,2024-10-06
+3,Clouds generally forming or developing,01:00:00,25.4,87,0.0,1.8,Pahang,Raub,3.7931,101.8569,2024-10-06
+3,Clouds generally forming or developing,01:00:00,25.5,95,0.0,2.4,Terengganu,Kuala Terengganu,5.3303,103.1408,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",01:00:00,25.3,96,0.0,3.7,Perak,Teluk Intan,4.0259,101.0213,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",01:00:00,25.8,94,0.1,4.4,Pulau Pinang,Butterworth,5.3992,100.3639,2024-10-06
+80,"Rain shower(s), slight",01:00:00,25.5,94,0.0,3.6,Kedah,Alor Setar,6.1167,100.3667,2024-10-06
+80,"Rain shower(s), slight",01:00:00,25.8,89,0.0,4.7,Sabah,Lahad Datu,5.03,118.34,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",01:00:00,26.1,91,0.0,5.6,Terengganu,Cukai,4.2332,103.4479,2024-10-06
+3,Clouds generally forming or developing,01:00:00,27.3,86,0.0,1.9,Johor,Johor Bahru,1.4556,103.7611,2024-10-06
+1,Clouds generally dissolving or becoming less developed,01:00:00,26.2,89,0.0,4.4,Sabah,Kota Kinabalu,5.975,116.0725,2024-10-06
+3,Clouds generally forming or developing,01:00:00,25.8,90,0.0,2.6,Selangor,Shah Alam,3.0833,101.5333,2024-10-06
+3,Clouds generally forming or developing,01:00:00,25.8,92,0.0,2.3,Johor,Kluang,2.0336,103.3194,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",01:00:00,25.8,94,0.1,4.4,Pulau Pinang,George Town,5.4145,100.3292,2024-10-06
+80,"Rain shower(s), slight",01:00:00,27.0,86,0.0,3.7,Melaka,Melaka,2.1889,102.2511,2024-10-06
+3,Clouds generally forming or developing,01:00:00,26.2,93,0.0,2.9,Johor,Batu Pahat,1.85,102.93,2024-10-06
+3,Clouds generally forming or developing,01:00:00,26.1,94,0.0,3.1,Pahang,Kuala Lipis,4.184,102.042,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",01:00:00,25.8,91,0.0,2.0,Perak,Taiping,4.85,100.7333,2024-10-06
+96,"Thunderstorm, slight or moderate, with hail** at time of observation  - Thunderstorm at time of observation",01:00:00,27.0,88,0.0,5.9,Johor,Muar,2.05,102.56,2024-10-06
+3,Clouds generally forming or developing,01:00:00,26.5,91,0.0,5.2,Sarawak,Miri,4.4028,113.9933,2024-10-06
+2,State of sky on the whole unchanged,01:00:00,27.0,89,0.0,3.2,Sabah,Tawau,4.2448,117.8911,2024-10-06
+3,Clouds generally forming or developing,01:00:00,26.0,87,0.0,1.9,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2024-10-06
+61,"Rain, not freezing, continuous slight at time of observation",01:00:00,25.2,94,0.3,2.9,Perak,Ipoh,4.6,101.07,2024-10-06
+61,"Rain, not freezing, continuous slight at time of observation",01:00:00,25.3,96,0.1,2.8,Kedah,Sungai Petani,5.65,100.48,2024-10-06
+80,"Rain shower(s), slight",01:00:00,25.8,92,0.0,3.7,Selangor,Klang,3.0333,101.45,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",01:00:00,25.3,94,0.2,3.4,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",01:00:00,25.0,98,0.0,1.5,Sarawak,Kuching,1.5397,110.3542,2024-10-06
+3,Clouds generally forming or developing,01:00:00,25.1,96,0.0,1.5,Sarawak,Sibu,2.3,111.8167,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",01:00:00,25.6,94,0.0,6.2,Kelantan,Kota Bharu,6.1333,102.25,2024-10-06
+80,"Rain shower(s), slight",01:00:00,25.9,95,0.0,2.8,Perlis,Kangar,6.4333,100.2,2024-10-06
+80,"Rain shower(s), slight",01:00:00,25.7,92,0.0,2.6,Putrajaya,Putrajaya,2.93,101.69,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",01:00:00,26.2,93,0.0,2.9,Labuan,Labuan,5.2803,115.2475,2024-10-06
+3,Clouds generally forming or developing,01:00:00,25.8,90,0.0,2.6,Selangor,Petaling Jaya,3.1073,101.6067,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",01:00:00,25.8,96,0.0,3.7,Sarawak,Bintulu,3.17,113.03,2024-10-06
+80,"Rain shower(s), slight",00:00:00,26.6,91,0.0,2.9,Pahang,Kuala Lipis,4.184,102.042,2024-10-06
+96,"Thunderstorm, slight or moderate, with hail** at time of observation  - Thunderstorm at time of observation",00:00:00,26.5,90,0.0,6.3,Terengganu,Cukai,4.2332,103.4479,2024-10-06
+3,Clouds generally forming or developing,00:00:00,26.8,90,0.0,4.5,Sarawak,Miri,4.4028,113.9933,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",00:00:00,26.0,94,0.3,4.2,Pulau Pinang,Butterworth,5.3992,100.3639,2024-10-06
+3,Clouds generally forming or developing,00:00:00,26.1,86,0.0,3.4,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2024-10-06
+3,Clouds generally forming or developing,00:00:00,25.9,91,0.0,1.8,Johor,Kluang,2.0336,103.3194,2024-10-06
+3,Clouds generally forming or developing,00:00:00,25.9,92,0.0,5.1,Selangor,Klang,3.0333,101.45,2024-10-06
+1,Clouds generally dissolving or becoming less developed,00:00:00,27.3,88,0.0,2.2,Sabah,Tawau,4.2448,117.8911,2024-10-06
+3,Clouds generally forming or developing,00:00:00,25.4,95,0.0,1.3,Sarawak,Sibu,2.3,111.8167,2024-10-06
+2,State of sky on the whole unchanged,00:00:00,26.1,96,0.0,3.3,Sarawak,Bintulu,3.17,113.03,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",00:00:00,26.9,88,0.0,9.4,Pahang,Kuantan,3.8167,103.3333,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",00:00:00,26.3,92,0.0,2.9,Labuan,Labuan,5.2803,115.2475,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",00:00:00,25.9,94,0.3,4.2,Pulau Pinang,George Town,5.4145,100.3292,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",00:00:00,25.4,96,0.0,3.8,Perak,Teluk Intan,4.0259,101.0213,2024-10-06
+61,"Rain, not freezing, continuous slight at time of observation",00:00:00,25.3,94,0.1,2.9,Perak,Ipoh,4.6,101.07,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",00:00:00,25.9,91,0.0,2.6,Perak,Taiping,4.85,100.7333,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",00:00:00,27.2,85,0.0,5.2,Melaka,Melaka,2.1889,102.2511,2024-10-06
+2,State of sky on the whole unchanged,00:00:00,26.1,89,0.0,5.8,Sabah,Lahad Datu,5.03,118.34,2024-10-06
+61,"Rain, not freezing, continuous slight at time of observation",00:00:00,25.4,95,0.1,3.1,Kedah,Sungai Petani,5.65,100.48,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",00:00:00,25.6,94,0.1,3.6,Kedah,Alor Setar,6.1167,100.3667,2024-10-06
+61,"Rain, not freezing, continuous slight at time of observation",00:00:00,25.5,94,0.4,3.4,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",00:00:00,25.3,97,0.0,1.8,Sarawak,Kuching,1.5397,110.3542,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",00:00:00,26.1,94,0.0,3.7,Kelantan,Kota Bharu,6.1333,102.25,2024-10-06
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",00:00:00,25.2,97,0.0,2.6,Sabah,Sandakan,5.8388,118.1173,2024-10-06
+3,Clouds generally forming or developing,00:00:00,26.0,90,0.0,3.9,Selangor,Shah Alam,3.0833,101.5333,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",00:00:00,27.3,87,0.0,6.5,Johor,Muar,2.05,102.56,2024-10-06
+3,Clouds generally forming or developing,00:00:00,26.0,90,0.0,3.9,Selangor,Petaling Jaya,3.1073,101.6067,2024-10-06
+3,Clouds generally forming or developing,00:00:00,25.4,87,0.0,1.8,Pahang,Raub,3.7931,101.8569,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",00:00:00,26.3,93,0.0,2.6,Johor,Batu Pahat,1.85,102.93,2024-10-06
+3,Clouds generally forming or developing,00:00:00,27.4,86,0.0,1.3,Johor,Johor Bahru,1.4556,103.7611,2024-10-06
+80,"Rain shower(s), slight",00:00:00,25.7,94,0.0,2.4,Terengganu,Kuala Terengganu,5.3303,103.1408,2024-10-06
+3,Clouds generally forming or developing,00:00:00,25.7,92,0.0,2.2,Putrajaya,Putrajaya,2.93,101.69,2024-10-06
+3,Clouds generally forming or developing,00:00:00,25.4,94,0.0,2.3,Negeri Sembilan,Seremban,2.7297,101.9381,2024-10-06
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",00:00:00,26.1,94,0.0,3.1,Perlis,Kangar,6.4333,100.2,2024-10-06
+1,Clouds generally dissolving or becoming less developed,00:00:00,26.3,90,0.0,4.1,Sabah,Kota Kinabalu,5.975,116.0725,2024-10-06
