@@ -64,3 +64,41 @@
  "nbformat": 4,
  "nbformat_minor": 2
 }
+
+<?php
+
+// URL for the API
+$url = "https://api.bnm.gov.my/public/exchange-rate/";
+
+// Set headers
+$options = [
+    "http" => [
+        "header" => "Accept: application/vnd.BNM.API.v1+json"
+    ]
+];
+
+$context = stream_context_create($options);
+
+// Send the request to the API
+$response = file_get_contents($url, false, $context);
+
+// Parse the response JSON
+$payload = json_decode($response, true);
+
+// Loop through the data list to find the USD currency
+$buying_rate = null;
+foreach ($payload['data'] as $item) {
+    if ($item['currency_code'] === 'USD') {
+        $buying_rate = $item['rate']['buying_rate'];
+        break;
+    }
+}
+
+// Display the buying rate
+if ($buying_rate !== null) {
+    echo "USD Buying Rate: " . $buying_rate;
+} else {
+    echo "USD rate not found!";
+}
+
+?>
