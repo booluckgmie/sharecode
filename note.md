@@ -60,5 +60,9 @@ Historical data may not comply fully with PDPA (Personal Data Protection Act).
 Engaging agencies like MCMC or DOSM (PADU) to help fill data gaps requires strong justification.
 
 Initial data flow:
+### [Architecture Flow]
 ![Architecture Flow](https://fast.image.delivery/sksebmj.png)
-![Operational Flow][(https://fast.image.delivery/chklpre.png)
+
+
+### [Operational Flow]
+![Operational Flow](https://fast.image.delivery/chklpre.png)
