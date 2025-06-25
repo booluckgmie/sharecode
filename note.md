@@ -1,63 +1,73 @@
-Sally - project director MSD Allience 
-- tech partner MCMC + NADI
-smart sercives
+# 📌 Project Summary: MSD Alliance Data Integration
 
-data from diff platorm - 
+## 👤 Key Stakeholders
+- **Sally** – Project Director, MSD Alliance
+- **Tech Partners** – MCMC, NADI (Smart Services)
 
-merging all data source
-DUSP - MCMC  - tech Partner
-FTP: AWS
+---
 
-we are prefer PII data encypted before enter our environment,
+## 🔗 Data Flow & Integration Overview
+- Data comes from multiple platforms and tech partners
+- Merged through:
+  - **DUSP**  
+  - **MCMC**  
+  - **Tech Partner FTP (AWS)**
 
-data provide -> PPI encypted (mapping ID in their end) -> our enviroment with encypted
+### 🔐 Data Security Approach
+- Prefer **PII data encrypted before entering our environment**
+- Data pipeline:
+  1. Data Provider → PII encrypted with mapped ID (on their end)
+  2. Transferred to our environment in **encrypted** form
+  3. Avoid cross-source matching of raw PII
 
-[avoid matching data from difference sources]
+---
 
-include indicator for connection API or othesr:
-100% on the last 90 days,
+## 📶 Data Source Connectivity Indicators
+- Track **API or other connections** with availability metrics:
+  - **100% uptime over the last 90 days**
+  - Include status:
+    - Operational
+    - Degraded Performance
+    - Partial Outage
+    - Major Outage
+    - Maintenance
+- Show:
+  - **Incident History**
+  - **Upcoming Maintenance**
 
- Operational
- Degraded Performance
- Partial Outage
- Major Outage
- Maintenance
+---
 
-Incident History;
-Upcoming Maintenance
+## 📊 Dashboard Requirements
+- **Centralized dashboard** as single source of truth
+- Features:
+  - Data visibility across platforms
+  - Naming convention consistency
+  - Analytics for actionable insights
+  - Agile and cost-efficient architecture
 
-focus on naming convention
+---
 
+## ⚠️ Key Data Management Challenges
 
-1. Develop a dashboard that provides data visibility as a single source of truth
+### 1. Lack of Standardization
+- Each TP has its **own system** (or none)
+- No standard data formats or structures
+- Smart Services creates **reports in their own format**
 
-2. Apply data analytics that provides intelligence and insights for more informed decision making
+### 2. Incomplete & Inconsistent Data
+- Some data only includes name & IC (missing race, etc.)
+- Data gaps due to non-uniform input across TPs
 
-Agile / Cost efficient
+### 3. Data Encryption & Access Issues
+- PII is encrypted differently by partners
+- Not all parties **own or control the systems** involved
 
+### 4. Compliance & Legal Constraints
+- **Historical data may not comply with PDPA**
+- Engaging external agencies (e.g., MCMC, DOSM/PADU) requires strong **justification** and oversight
 
-Key Challenges in Data Management (as shared by Sally and Najmi)
-1. Lack of Standardization
-Each Technology Partner (TP) used different systems — or had no system at all.
+---
 
-No common data format or structure across systems.
-
-Smart Services also generating reports in their own formats.
-
-2. Incomplete and Inconsistent Data
-Some datasets only include name and IC, but are missing fields like race, etc.
-
-Data gaps (missing values) are common due to inconsistent data input requirements.
-
-3. Data Encryption & Access Issues
-Certain personal info is encrypted — adds to complexity when trying to consolidate.
-
-Not all stakeholders have ownership or access rights to relevant systems.
-
-4. Compliance & Legal Constraints
-Historical data may not comply fully with PDPA (Personal Data Protection Act).
-
-Engaging agencies like MCMC or DOSM (PADU) to help fill data gaps requires strong justification.
 
 Initial data flow:
 ### [Architecture Flow]
