@@ -58,3 +58,7 @@ Not all stakeholders have ownership or access rights to relevant systems.
 Historical data may not comply fully with PDPA (Personal Data Protection Act).
 
 Engaging agencies like MCMC or DOSM (PADU) to help fill data gaps requires strong justification.
+
+Initial data flow:
+![Architecture Flow](https://fast.image.delivery/sksebmj.png)
+![Operational Flow][(https://fast.image.delivery/chklpre.png)
