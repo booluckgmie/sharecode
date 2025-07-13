@@ -1,4 +1,4 @@
-name: Scheduled Python Script
+name: Scheduled Python Script APIMS
 
 on:
   schedule:
