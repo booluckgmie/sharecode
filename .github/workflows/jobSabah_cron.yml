@@ -36,7 +36,7 @@ jobs:
           
       - name: Install dependencies
         run: |
-          pip install pandas requests pytz urllib3 tqdm
+          pip install pandas requests pytz urllib3 tqdm beautifulsoup4
           pip install --upgrade pip
 
       - name: Run Python Script
