@@ -1,18 +1,19 @@
+---
 name: Schedule Sabah Jobs Scraper
+
+on:
+  push:
+    branches: [ master ] 
+  schedule:
+    # Run every Wednesday at 10:00 AM Malaysia Time (UTC+8)
+    # The cron expression is in UTC. 10 AM MYT is 2 AM UTC.
+    - cron: '0 2 * * 3' # minute hour day_of_month month day_of_week (0-6, 0=Sunday)
 
 # on:
 #   # push:
-#   #   branches: [ master ] 
+#   #  branches: [ master ] 
 #   schedule:
-#     # Run every Wednesday at 10:00 AM Malaysia Time (UTC+8)
-#     # The cron expression is in UTC. 10 AM MYT is 2 AM UTC.
-#     - cron: '0 2 * * 3' # minute hour day_of_month month day_of_week (0-6, 0=Sunday)
-
-on:
-  # push:
-  #  branches: [ master ] 
-  schedule:
-    - cron: '40 * * * *' 
+#     - cron: '40 * * * *' 
     
 jobs:
   run-python-script:
