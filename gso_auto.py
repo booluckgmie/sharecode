@@ -62,6 +62,7 @@ try:
         if os.path.exists(file_path):
             existing_data = pd.read_csv(file_path, header=0)
             combined_data = pd.concat([existing_data, df], ignore_index=True)
+            combined_data = combined_data.drop_duplicates(subset=['date', 'time'], keep='last')
             combined_data.to_csv(file_path, index=False)
             print(f'Data has been appended to {file_path}')
         else:
