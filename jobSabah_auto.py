@@ -144,3 +144,4 @@ else:
 # Save
 df.to_csv(output_file_path, index=False)
 print(f"✅ Job scraping complete! Data saved to {output_file_path}")
+
