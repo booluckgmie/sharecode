@@ -2,6 +2,8 @@
 name: Schedule Sabah Jobs Scraper
 
 on:
+  push:
+    branches: [ master ] 
   # schedule:
   #   # Run every Wednesday at 10:00 AM Malaysia Time (UTC+8)
   #   # The cron expression is in UTC. 10 AM MYT is 2 AM UTC.
