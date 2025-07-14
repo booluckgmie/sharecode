@@ -1,44 +1,50 @@
----
 name: Schedule Sabah Jobs Scraper
 
+# on:
+#   # push:
+#   #   branches: [ master ] 
+#   schedule:
+#     # Run every Wednesday at 10:00 AM Malaysia Time (UTC+8)
+#     # The cron expression is in UTC. 10 AM MYT is 2 AM UTC.
+#     - cron: '0 2 * * 3' # minute hour day_of_month month day_of_week (0-6, 0=Sunday)
+
 on:
-  push:
-    branches: [ master ] 
-  # schedule:
-  #   # Run every Wednesday at 10:00 AM Malaysia Time (UTC+8)
-  #   # The cron expression is in UTC. 10 AM MYT is 2 AM UTC.
-  #   - cron: '0 2 * * 3' # minute hour day_of_month month day_of_week (0-6, 0=Sunday)
-
-  workflow_dispatch: # Allows manual triggering of the workflow
-
+  # push:
+  #  branches: [ master ] 
+  schedule:
+    - cron: '40 * * * *' 
+    
 jobs:
-  scrape:
+  run-python-script:
     runs-on: ubuntu-latest
+    name: Run Python Script
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9  # Set the desired Python version
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.x' # Use the desired Python version, e.g., '3.9', '3.10', '3.11'
-
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install requests beautifulsoup4 pandas tqdm
-
-    - name: Run Python Script
-      run: |
-         python ./jobSabah_auto.py || { echo "Python script execution failed"; exit 1; }
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20  # Set the desired Node.js version
           
-    - name: Git Operations
-       run: |
-         cd data_jobsabah
-         git config --global user.email "booluckgmie@gmail.com"
-         git config --global user.name "booluckgmie"
-         git pull
-         git add .
-         git commit -m "Update data" || echo "No changes to commit"
-         git push
+      - name: Install dependencies
+        run: |
+          pip install pandas requests pytz urllib3 tqdm
+          pip install --upgrade pip
+
+      - name: Run Python Script
+        run: |
+          python ./jobSabah_auto.py 
+          cd data_jobsabah
+          git config --global user.email "booluckgmie@gmail.com"
+          git config --global user.name "booluckgmie"
+          git pull
+          git add .
+          git commit -m "Update data"
+          git push --force  # Use the --force flag to forcefully push changes
