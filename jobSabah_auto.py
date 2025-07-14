@@ -2,6 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 from tqdm import tqdm  # Progress bar
+from datetime import datetime
+import os # Import the os module for path manipulation
 
 # Define base URLs - refer to number of pages for Oil and Gas Industry
 base_url = "https://jobs.sabah.gov.my"
@@ -9,6 +11,15 @@ employer_list_urls = [f"{base_url}/employer/index?industry=NDA%3D&page={i}" for 
 
 # Initialize session (better than multiple requests)
 session = requests.Session()
+
+# Get current scraping date
+scraping_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+# Define the folder name
+output_folder = "data_jobsabah"
+# Create the folder if it doesn't exist
+if not os.path.exists(output_folder):
+    os.makedirs(output_folder)
 
 # Step 1: Extract employer profile URLs
 employer_urls = set()  # Use a set to prevent duplicates
@@ -117,13 +128,30 @@ for job_url in tqdm(job_urls, desc="Extracting job details"):
             "off_day": off_day,
             "salary_type": salary_type,
             "salary_range": salary_range,
-            "job_url": job_url
+            "job_url": job_url,
+            "scraping_date": scraping_date # Add the scraping date
         })
 
 # Convert to DataFrame
 df = pd.DataFrame(job_data)
 
-# Save to CSV
-df.to_csv("sabah_jobs_extended.csv", index=False)
+# Define the full path to the CSV file
+output_file_path = os.path.join(output_folder, "sabah_jobs_extended.csv")
 
-print("✅ Job scraping complete! Data saved to sabah_jobs_extended.csv")
+# Load existing data if available and append, otherwise create new
+try:
+    # Use the full path for reading
+    existing_df = pd.read_csv(output_file_path)
+    df = pd.concat([existing_df, df], ignore_index=True)
+    # This deduplication ensures that if the script runs multiple times on the same day,
+    # it won't add duplicate entries for the exact same job URL scraped at the exact same timestamp.
+    # If you want to track changes over time for the same job, you might adjust this logic.
+    df.drop_duplicates(subset=["job_url", "scraping_date"], inplace=True)
+except FileNotFoundError:
+    pass # No existing file, just save the new DataFrame
+
+# Save to CSV
+# Use the full path for writing
+df.to_csv(output_file_path, index=False)
+
+print(f"✅ Job scraping complete! Data saved to {output_file_path}")
