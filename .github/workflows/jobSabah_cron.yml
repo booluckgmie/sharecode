@@ -29,13 +29,16 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests beautifulsoup4 pandas tqdm
 
-    - name: Run job scraper
-      run: 
-        python jobSabah_auto.py # Replace 'your_script_name.py' with the actual name of your Python file
-        cd data_jobsabah
-        git config --global user.email "booluckgmie@gmail.com"
-        git config --global user.name "booluckgmie"
-        git pull
-        git add .
-        git commit -m "Update data"
-        git push --force  # Use the --force flag to forcefully push changes
+    - name: Run Python Script
+      run: |
+         python ./jobSabah_auto.py || { echo "Python script execution failed"; exit 1; }
+          
+    - name: Git Operations
+       run: |
+         cd data_jobsabah
+         git config --global user.email "booluckgmie@gmail.com"
+         git config --global user.name "booluckgmie"
+         git pull
+         git add .
+         git commit -m "Update data" || echo "No changes to commit"
+         git push
