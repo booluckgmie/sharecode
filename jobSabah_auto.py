@@ -138,17 +138,17 @@ df = pd.DataFrame(job_data)
 # Define the full path to the CSV file
 output_file_path = os.path.join(output_folder, "sabah_jobs_extended.csv")
 
-# Load existing data if available and append, otherwise create new
-try:
-    # Use the full path for reading
-    existing_df = pd.read_csv(output_file_path)
-    df = pd.concat([existing_df, df], ignore_index=True)
-    # This deduplication ensures that if the script runs multiple times on the same day,
-    # it won't add duplicate entries for the exact same job URL scraped at the exact same timestamp.
-    # If you want to track changes over time for the same job, you might adjust this logic.
-    df.drop_duplicates(subset=["job_url", "scraping_date"], inplace=True)
-except FileNotFoundError:
-    pass # No existing file, just save the new DataFrame
+# # Load existing data if available and append, otherwise create new
+# try:
+#     # Use the full path for reading
+#     existing_df = pd.read_csv(output_file_path)
+#     df = pd.concat([existing_df, df], ignore_index=True)
+#     # This deduplication ensures that if the script runs multiple times on the same day,
+#     # it won't add duplicate entries for the exact same job URL scraped at the exact same timestamp.
+#     # If you want to track changes over time for the same job, you might adjust this logic.
+#     df.drop_duplicates(subset=["job_url", "scraping_date"], inplace=True)
+# except FileNotFoundError:
+#     pass # No existing file, just save the new DataFrame
 
 # Save to CSV
 # Use the full path for writing
