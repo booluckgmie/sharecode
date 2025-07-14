@@ -34,7 +34,7 @@ jobs:
 
       - name: Run Python Script and Commit Changes
         run: |
-          python ./jobSabah_auto.py
+          python jobSabah_auto.py
           cd data_jobsabah # Change directory to where the CSV is
           git config --global user.email "booluckgmie@gmail.com"
           git config --global user.name "booluckgmie"
