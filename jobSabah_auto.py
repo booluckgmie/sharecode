@@ -11,19 +11,15 @@ from requests.exceptions import RequestException
 # -----------------------------
 # CONFIGURATION
 # -----------------------------
-# Define output folder
 output_folder = 'data_jobsabah'
 os.makedirs(output_folder, exist_ok=True)
 
-# Define Malaysia timezone (UTC+8)
 malaysia_timezone = timezone('Asia/Kuala_Lumpur')
 current_datetime = datetime.now(malaysia_timezone)
 current_date_str = current_datetime.strftime('%Y-%m-%d')
 
-# Output file path
 output_file_path = os.path.join(output_folder, f"sabah_jobs_{current_date_str}.csv")
 
-# Job portal base URL
 base_url = "https://jobs.sabah.gov.my"
 employer_list_urls = [f"{base_url}/employer/index?industry=NDA%3D&page={i}" for i in range(1, 4)]
 scraping_date = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
@@ -133,7 +129,7 @@ try:
     # -----------------------------
     new_df = pd.DataFrame(job_data)
 
-    if os.path.exists(output_file_path):
+    if os.path.exists(output_file_path) and os.path.getsize(output_file_path) > 0:
         existing_df = pd.read_csv(output_file_path, sep='|')
         combined_df = pd.concat([existing_df, new_df], ignore_index=True)
         combined_df.drop_duplicates(subset="job_url", keep="last", inplace=True)
