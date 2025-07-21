@@ -21,7 +21,7 @@ current_datetime = datetime.now(malaysia_timezone)
 current_date_str = current_datetime.strftime('%Y-%m-%d')
 
 # Output file path
-output_file_path = os.path.join(output_folder, f"sabah_jobs_{current_date_str}.csv")
+output_file_path = os.path.join(output_folder, f"sabah_jobs_{current_date_str}.xlsx")
 
 # Job portal base URL
 base_url = "https://jobs.sabah.gov.my"
@@ -135,14 +135,14 @@ try:
 
     if os.path.exists(output_file_path):
         # Read existing data
-        existing_df = pd.read_csv(output_file_path)
+        existing_df = pd.read_excel(output_file_path)
         # Combine and remove duplicates by job_url
         combined_df = pd.concat([existing_df, new_df], ignore_index=True)
         combined_df.drop_duplicates(subset="job_url", keep="last", inplace=True)
-        combined_df.to_csv(output_file_path, index=False)
+        combined_df.to_excel(output_file_path, index=False)
         print(f"✅ Data appended to existing file: {output_file_path}")
     else:
-        new_df.to_csv(output_file_path, index=False)
+        new_df.to_excel(output_file_path, index=False)
         print(f"✅ New file created: {output_file_path}")
 
 except (RequestException, ConnectionError, MaxRetryError) as e:
