@@ -134,9 +134,7 @@ try:
     new_df = pd.DataFrame(job_data)
 
     if os.path.exists(output_file_path):
-        # Read existing data
-        existing_df = pd.read_csv(output_file_path)
-        # Combine and remove duplicates by job_url
+        existing_df = pd.read_csv(output_file_path, sep='|')
         combined_df = pd.concat([existing_df, new_df], ignore_index=True)
         combined_df.drop_duplicates(subset="job_url", keep="last", inplace=True)
         combined_df.to_csv(output_file_path, index=False, sep='|')
