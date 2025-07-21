@@ -7,7 +7,7 @@ from datetime import datetime
 from pytz import timezone
 from urllib3.exceptions import MaxRetryError, ConnectionError
 from requests.exceptions import RequestException
-from openpyxl
+import openpyxl
 
 # -----------------------------
 # CONFIGURATION
