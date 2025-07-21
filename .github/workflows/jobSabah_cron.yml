@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip # Upgrade pip first
-          pip install pandas requests pytz urllib3 tqdm beautifulsoup4
+          pip install pandas requests pytz urllib3 tqdm beautifulsoup4 openpyxl
 
       - name: Run Python Script and Commit Changes
         run: |
