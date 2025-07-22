@@ -11,19 +11,32 @@ malaysia_timezone = timezone('Asia/Kuala_Lumpur')
 
 try:
     # Retrieve JSON data from the API
-    r = requests.get("http://apims.doe.gov.my/data/public_v2/CAQM/last24hours.json")
+    r = requests.get("https://eqms.doe.gov.my/api3/publicportalapims/apitablehourly")
     r.raise_for_status()  # Check for HTTP errors
-
     payload = r.json()
+    df = pd.json_normalize(payload, record_path=['api_table_hourly'])
 
-    data = pd.json_normalize(payload, record_path=['24hour_api_apims'])
-    data.columns = data.iloc[0]
+    df = df[['STATION_LOCATION', 'DATETIME', 'API']]
+    
+    # Split STATION_LOCATION into Location and State
+    df[['Location', 'State']] = df['STATION_LOCATION'].str.split(', ', expand=True)
+    
+    # Convert DATETIME column to datetime type
+    df['DATETIME'] = pd.to_datetime(df['DATETIME'])
+    
+    # Extract hour in 12-hour format with AM/PM
+    df['hour'] = df['DATETIME'].dt.strftime('%I:00%p')
+    
+    # Extract date
+    df['date'] = df['DATETIME'].dt.date
+    
+    # Rename API to index
+    df.rename(columns={'API': 'index'}, inplace=True)
+    
+    # Reorder columns
+    df = df[['State', 'Location', 'hour', 'index', 'date']]
 
-    data = data[1:]
-    data = data.iloc[:, [0, 1, -1]]
-    data = data.melt(id_vars=['State', 'Location'], var_name='hour', value_name='index')
-
-    data["index"] = data["index"].str.replace(r'[&*c]', '', regex=True)
+    data = df.copy()
 
     data_dir = 'data_apims'
     os.makedirs(data_dir, exist_ok=True)
