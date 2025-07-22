@@ -30,7 +30,7 @@ jobs:
 
       - name: Run Python Script
         run: |
-          python ./auto_script.py || { echo "Python script execution failed"; exit 1; }
+          python ./cron_apims.py || { echo "Python script execution failed"; exit 1; }
           
       - name: Git Operations
         run: |
