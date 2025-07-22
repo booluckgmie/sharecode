@@ -6,7 +6,10 @@ on:
   schedule:
     # Run every Wednesday at 10:00 AM Malaysia Time (UTC+8)
     # The cron expression is in UTC. 10 AM MYT is 2 AM UTC.
-    - cron: '0 2 * * 3' # minute hour day_of_month month day_of_week (0-6, 0=Sunday)
+    - cron: '0 2 * * 3'
+
+permissions:
+  contents: write  # Needed for committing and pushing changes
 
 jobs:
   run-python-script:
@@ -15,35 +18,34 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4 # Updated to v4
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Required for pushing changes
 
       - name: Set up Python
-        uses: actions/setup-python@v5 # Updated to v5
+        uses: actions/setup-python@v5
         with:
-          python-version: 3.9 # Set the desired Python version
+          python-version: 3.9
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4 # Updated to v4
-        with:
-          node-version: 20 # Set the desired Node.js version
+      # Remove Node.js if not required
+      # - name: Set up Node.js
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: 20
 
       - name: Install dependencies
         run: |
-          pip install --upgrade pip # Upgrade pip first
+          python -m pip install --upgrade pip
           pip install pandas requests pytz urllib3 tqdm beautifulsoup4 openpyxl
 
       - name: Run Python Script and Commit Changes
         run: |
+          set -e
           python jobSabah_auto.py
-          cd data_jobsabah # Change directory to where the CSV is
+          cd data_jobsabah
           git config --global user.email "booluckgmie@gmail.com"
           git config --global user.name "booluckgmie"
-          # Pull latest changes to avoid conflicts, then add and commit
-          # Note: If there are external changes to data_jobsabah, this might cause issues.
-          # For a single-source update like this, simple add/commit/push is often fine.
-          # If the CSV is the *only* thing changing, and always being overwritten/appended by this action,
-          # then a simple add/commit/push is generally robust enough.
-          git pull origin master || echo "No remote changes to pull, proceeding." # Pull to ensure we have the latest master
+          git pull --rebase origin master || echo "No remote changes to pull."
           git add .
-          git commit -m "Update data" || echo "No changes to commit" # Don't fail if no changes
-          git push # Removed --force unless absolutely necessary for your workflow
+          git commit -m "Update data" || echo "No changes to commit"
+          git push
