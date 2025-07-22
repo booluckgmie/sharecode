@@ -2,7 +2,6 @@ import pandas as pd
 import requests
 from datetime import datetime
 import os
-import json
 import warnings
 from pytz import timezone
 from urllib3.exceptions import MaxRetryError, ConnectionError
@@ -20,12 +19,11 @@ url = "https://eqms.doe.gov.my/api3/publicportalapims/apitablehourly"
 try:
     # Set headers
     headers = {
-        "Content-Type": "application/json; charset=utf-8",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
     }
 
-    # Make a POST request (with verify=False due to SSL issue)
-    response = requests.post(url, data=json.dumps({}), headers=headers, verify=False)
+    # Use GET request with verify=False due to SSL issues
+    response = requests.get(url, headers=headers, verify=False)
     response.raise_for_status()
 
     # Process JSON response
