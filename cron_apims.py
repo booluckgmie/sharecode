@@ -42,19 +42,22 @@ try:
     # Extract hour in 12-hour format with AM/PM
     df['hour'] = df['DATETIME'].dt.strftime('%I:00%p')
 
-    # Extract date first
+    # Extract date and hour
     df['date'] = df['DATETIME'].dt.date
-    
-    # Get current time in Malaysia
+    df['hour'] = df['DATETIME'].dt.strftime('%I:00%p')
+
+    # Current date and hour
     current_dt = datetime.now(malaysia_timezone)
+    current_date = current_dt.date()
     current_hour = current_dt.hour
-    
-    # Adjust date: If hour > current hour but belongs to today, subtract 1 day
+
+    # Fix midnight crossover: If the record's hour is greater than current hour but the date is today, 
+    # it belongs to yesterday (previous day).
     df['hour_int'] = df['DATETIME'].dt.hour
-    df.loc[df['hour_int'] > current_hour, 'date'] = df['date'] - timedelta(days=1)
-    
-    # Drop helper column
-    df = df.drop(columns=['hour_int'])
+    mask = (df['hour_int'] > current_hour) & (df['date'] == current_date)
+    df.loc[mask, 'date'] = df.loc[mask, 'date'] - timedelta(days=1)
+
+    df.drop(columns=['hour_int'], inplace=True)
 
     # Rename API to index
     df.rename(columns={'API': 'index'}, inplace=True)
