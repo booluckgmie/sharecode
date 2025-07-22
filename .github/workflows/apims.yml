@@ -1,8 +1,9 @@
+---
 name: Scheduled Python Script APIMS
 
 on:
-  push:
-    branches: [ master ] 
+  # push:
+  #   branches: [ master ] 
   schedule:
     - cron: '40 * * * *' # Execute the task at 40 minutes past every hour.
         
@@ -31,6 +32,7 @@ jobs:
       run: |
         pip install pandas requests pytz urllib3 datetime
         pip install --upgrade pip
+        
     - name: Run Python Script
       run: |
         python cron_apims.py
