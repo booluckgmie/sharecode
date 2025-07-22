@@ -1,45 +1,45 @@
----
 name: Scheduled Python Script APIMS
 
 on:
-  # push:
-  #   branches: [ master ] 
   schedule:
     - cron: '40 * * * *' # Execute the task at 40 minutes past every hour.
-        
-jobs:
+  workflow_dispatch: # Allow manual triggers
 
+permissions:
+  contents: write  # Allow pushing to repository
+
+jobs:
   run-python-script:
     runs-on: ubuntu-latest
     name: Run Python Script
     
     steps:
-
     - name: Checkout code
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # Needed for pushing changes
 
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: 3.9
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 20
-
     - name: Install dependencies
       run: |
-        pip install pandas requests pytz urllib3 datetime
-        pip install --upgrade pip
-        
+        python -m pip install --upgrade pip
+        pip install pandas requests pytz urllib3
+
     - name: Run Python Script
       run: |
+        set -e
         python cron_apims.py
+
+    - name: Commit and Push Data
+      run: |
         cd data_apims
         git config --global user.email "booluckgmie@gmail.com"
         git config --global user.name "booluckgmie"
-        git pull
+        git pull --rebase
         git add .
-        git commit -m "Update data"
-        git push --force  # Use the --force flag to forcefully push changes
+        git commit -m "Update data" || echo "No changes to commit"
+        git push
