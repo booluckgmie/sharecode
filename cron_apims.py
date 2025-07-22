@@ -51,8 +51,7 @@ try:
     current_date = current_dt.date()
     current_hour = current_dt.hour
 
-    # Fix midnight crossover: If the record's hour is greater than current hour but the date is today, 
-    # it belongs to yesterday (previous day).
+    # Fix midnight crossover: If the record's hour is greater than current hour but the date is today, it belongs to yesterday (previous day).
     df['hour_int'] = df['DATETIME'].dt.hour
     mask = (df['hour_int'] > current_hour) & (df['date'] == current_date)
     df.loc[mask, 'date'] = df.loc[mask, 'date'] - timedelta(days=1)
