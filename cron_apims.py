@@ -1,6 +1,6 @@
 import pandas as pd
 import requests
-from datetime import datetime
+from datetime import datetime, timedelta
 import os
 import warnings
 from pytz import timezone
@@ -45,6 +45,13 @@ try:
     # Extract date
     df['date'] = df['DATETIME'].dt.date
 
+    # Adjust date for hours past midnight but ahead of current time
+    current_hour_str = datetime.now(malaysia_timezone).strftime('%I:00%p')
+    df['hour_dt'] = pd.to_datetime(df['hour'], format='%I:%M%p').dt.time
+    current_hour_dt = pd.to_datetime(current_hour_str, format='%I:%M%p').time()
+    df.loc[(df['hour_dt'] > current_hour_dt), 'date'] = df['date'] - timedelta(days=1)
+    df.drop(columns=['hour_dt'], inplace=True)
+
     # Rename API to index
     df.rename(columns={'API': 'index'}, inplace=True)
 
@@ -60,7 +67,7 @@ try:
 
     # Current datetime in Malaysia timezone
     current_datetime = datetime.now(malaysia_timezone)
-    data['date'] = current_datetime.strftime('%Y-%m-%d')
+    data['date'] = data['date'].astype(str)
 
     # Prepare file path
     file_name = current_datetime.strftime('%Y-%m-%d.csv')
