@@ -1,43 +1,43 @@
 name: Scheduled Python Script APIMS
 
 on:
+  push:
+    branches: [ master ] 
   schedule:
     - cron: '40 * * * *' # Execute the task at 40 minutes past every hour.
-
+        
 jobs:
+
   run-python-script:
     runs-on: ubuntu-latest
     name: Run Python Script
-
+    
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-        
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.9  # Set the desired Python version
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20  # Set the desired Node.js version
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: |
-          pip install --upgrade pip
-          pip install pandas requests pytz
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.9
 
-      - name: Run Python Script
-        run: |
-          python ./cron_apims.py || { echo "Python script execution failed"; exit 1; }
-          
-      - name: Git Operations
-        run: |
-          cd data_apims
-          git config --global user.email "booluckgmie@gmail.com"
-          git config --global user.name "booluckgmie"
-          git pull
-          git add .
-          git commit -m "Update data" || echo "No changes to commit"
-          git push
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
+
+    - name: Install dependencies
+      run: |
+        pip install pandas requests pytz urllib3 datetime
+        pip install --upgrade pip
+    - name: Run Python Script
+      run: |
+        python cron_apims.py
+        cd data_apims
+        git config --global user.email "booluckgmie@gmail.com"
+        git config --global user.name "booluckgmie"
+        git pull
+        git add .
+        git commit -m "Update data"
+        git push --force  # Use the --force flag to forcefully push changes
