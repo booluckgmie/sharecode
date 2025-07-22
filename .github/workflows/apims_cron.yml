@@ -34,6 +34,11 @@ jobs:
         set -e
         python cron_apims.py
 
+    - name: Reset workspace to avoid unstaged changes
+      run: |
+        git reset --hard
+        git clean -fd  # Remove untracked files to avoid conflicts
+
     - name: Commit and Push Data
       run: |
         cd data_apims
