@@ -6,6 +6,8 @@ import warnings
 from pytz import timezone
 from urllib3.exceptions import MaxRetryError, ConnectionError
 from requests.exceptions import RequestException
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 # Suppress SSL warnings when using verify=False
 warnings.filterwarnings("ignore")
@@ -22,8 +24,15 @@ try:
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
     }
 
+    # Configure session with retries
+    session = requests.Session()
+    retry = Retry(connect=3, backoff_factor=2, status_forcelist=[500, 502, 503, 504])
+    adapter = HTTPAdapter(max_retries=retry)
+    session.mount('https://', adapter)
+    session.mount('http://', adapter)
+
     # Use GET request with verify=False due to SSL issues
-    response = requests.get(url, headers=headers, verify=False)
+    response = session.get(url, headers=headers, verify=False, timeout=10)
     response.raise_for_status()
 
     # Process JSON response
@@ -39,24 +48,19 @@ try:
     # Convert DATETIME column to datetime type
     df['DATETIME'] = pd.to_datetime(df['DATETIME'])
 
-    # Extract hour in 12-hour format with AM/PM
+    # Extract hour and date
     df['hour'] = df['DATETIME'].dt.strftime('%I:00%p')
-
-    # Extract date and hour
     df['date'] = df['DATETIME'].dt.date
-    df['hour'] = df['DATETIME'].dt.strftime('%I:00%p')
 
     # Current date and hour
     current_dt = datetime.now(malaysia_timezone)
     current_date = current_dt.date()
     current_hour = current_dt.hour
 
-    # Fix midnight crossover: If the record's hour is greater than current hour but the date is today, 
-    # it belongs to yesterday (previous day).
+    # Fix midnight crossover
     df['hour_int'] = df['DATETIME'].dt.hour
     mask = (df['hour_int'] > current_hour) & (df['date'] == current_date)
     df.loc[mask, 'date'] = df.loc[mask, 'date'] - timedelta(days=1)
-
     df.drop(columns=['hour_int'], inplace=True)
 
     # Rename API to index
@@ -67,17 +71,14 @@ try:
 
     # Create data copy
     data = df.copy()
+    data['date'] = data['date'].astype(str)
 
     # Prepare data directory
     data_dir = 'data_apims'
     os.makedirs(data_dir, exist_ok=True)
 
-    # Current datetime in Malaysia timezone
-    current_datetime = datetime.now(malaysia_timezone)
-    data['date'] = data['date'].astype(str)
-
     # Prepare file path
-    file_name = current_datetime.strftime('%Y-%m-%d.csv')
+    file_name = current_dt.strftime('%Y-%m-%d.csv')
     file_path = os.path.join(data_dir, file_name)
 
     # Save or append data
@@ -92,4 +93,4 @@ try:
         print(f'Data has been saved to {file_path}')
 
 except (RequestException, ConnectionError, MaxRetryError) as e:
-    print(f"An error occurred: {e}")
+    print(f"An error occurred while fetching data: {e}")
