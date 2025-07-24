@@ -40,7 +40,7 @@ jobs:
       run: |
         # set -e ensures that the script will exit immediately if any command fails
         set -e
-        python your_script_name.py # IMPORTANT: Replace 'your_script_name.py' with the actual name of your Python file (e.g., cron_apims.py)
+        python cron_apims.py # IMPORTANT: Replace 'your_script_name.py' with the actual name of your Python file (e.g., cron_apims.py)
 
     - name: Verify file creation # Optional: List files to confirm data_apims directory and CSV are created
       run: |
