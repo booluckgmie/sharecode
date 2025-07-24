@@ -36,35 +36,13 @@ jobs:
         python -m pip install --upgrade pip # Upgrade pip to the latest version
         pip install pandas requests pytz urllib3 # Install necessary libraries
 
-    - name: Run Python Script # Step to execute your Python script
+    - name: Run Python Script
       run: |
-        # set -e ensures that the script will exit immediately if any command fails
-        set -e
-        python cron_apims.py # IMPORTANT: Replace 'your_script_name.py' with the actual name of your Python file (e.g., cron_apims.py)
-
-    - name: Verify file creation # Optional: List files to confirm data_apims directory and CSV are created
-      run: |
-        ls -l data_apims/ || echo "data_apims directory not found or empty." # List contents of the data_apims directory
-
-    - name: Commit and Push Data # Step to commit and push the generated data file
-      run: |
-        # Navigate into the directory where the CSV file is generated
+        python cron_apims.py
         cd data_apims
-        
-        # Configure Git user for the commit
         git config --global user.email "booluckgmie@gmail.com"
         git config --global user.name "booluckgmie"
-        
-        # Pull latest changes from remote and rebase to avoid conflicts
-        # This is important if other changes might have been pushed to the repo
-        git pull --rebase origin main # Assuming 'main' is your default branch. Adjust if different.
-        
-        # Add all changes in the current directory (data_apims) to staging
+        git pull
         git add .
-        
-        # Commit changes. The '|| echo "No changes to commit"' part prevents the workflow from failing
-        # if there are no new changes to commit (e.g., if the data hasn't changed).
-        git commit -m "Update API data for $(date +'%Y-%m-%d %H:%M')" || echo "No changes to commit"
-        
-        # Push the committed changes to the remote repository
-        git push
+        git commit -m "Update data"
+        git push --force  # Use the --force flag to forcefully push changes
