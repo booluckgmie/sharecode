@@ -2,49 +2,69 @@ name: Scheduled Python Script APIMS
 
 on:
   schedule:
-    - cron: '40 * * * *' # Execute the task at 40 minutes past every hour.
-  # workflow_dispatch: # Allow manual triggers
+    # Execute the task at 40 minutes past every hour.
+    # This cron expression means:
+    # 40: minute 40
+    # *: every hour
+    # *: every day of the month
+    # *: every month
+    # *: every day of the week
+    - cron: '40 * * * *'
+  # workflow_dispatch: # Uncomment this line to allow manual triggers from the GitHub UI
 
 permissions:
-  contents: write  # Allow pushing to repository
+  contents: write  # This permission is crucial to allow the workflow to push changes to the repository
 
 jobs:
   run-python-script:
-    runs-on: ubuntu-latest
-    name: Run Python Script
-    
+    runs-on: ubuntu-latest # Specifies the operating system for the job
+    name: Run Python Script # Name of the job
+
     steps:
-    - name: Checkout code
+    - name: Checkout code # Step to clone the repository
       uses: actions/checkout@v3
       with:
-        fetch-depth: 0  # Needed for pushing changes
+        fetch-depth: 0  # Needed for 'git pull --rebase' later, fetches all history
 
-    - name: Set up Python
+    - name: Set up Python # Step to set up Python environment
       uses: actions/setup-python@v4
       with:
-        python-version: 3.9
+        python-version: 3.9 # Specify the Python version to use
 
-    - name: Install dependencies
+    - name: Install dependencies # Step to install required Python packages
       run: |
-        python -m pip install --upgrade pip
-        pip install pandas requests pytz urllib3
+        python -m pip install --upgrade pip # Upgrade pip to the latest version
+        pip install pandas requests pytz urllib3 # Install necessary libraries
 
-    - name: Run Python Script
+    - name: Run Python Script # Step to execute your Python script
       run: |
+        # set -e ensures that the script will exit immediately if any command fails
         set -e
-        python cron_apims.py
+        python your_script_name.py # IMPORTANT: Replace 'your_script_name.py' with the actual name of your Python file (e.g., cron_apims.py)
 
-    - name: Reset workspace to avoid unstaged changes
+    - name: Verify file creation # Optional: List files to confirm data_apims directory and CSV are created
       run: |
-        git reset --hard
-        git clean -fd  # Remove untracked files to avoid conflicts
+        ls -l data_apims/ || echo "data_apims directory not found or empty." # List contents of the data_apims directory
 
-    - name: Commit and Push Data
+    - name: Commit and Push Data # Step to commit and push the generated data file
       run: |
+        # Navigate into the directory where the CSV file is generated
         cd data_apims
+        
+        # Configure Git user for the commit
         git config --global user.email "booluckgmie@gmail.com"
         git config --global user.name "booluckgmie"
-        git pull --rebase
+        
+        # Pull latest changes from remote and rebase to avoid conflicts
+        # This is important if other changes might have been pushed to the repo
+        git pull --rebase origin main # Assuming 'main' is your default branch. Adjust if different.
+        
+        # Add all changes in the current directory (data_apims) to staging
         git add .
-        git commit -m "Update data" || echo "No changes to commit"
+        
+        # Commit changes. The '|| echo "No changes to commit"' part prevents the workflow from failing
+        # if there are no new changes to commit (e.g., if the data hasn't changed).
+        git commit -m "Update API data for $(date +'%Y-%m-%d %H:%M')" || echo "No changes to commit"
+        
+        # Push the committed changes to the remote repository
         git push
