@@ -10,7 +10,7 @@ on:
     # *: every month
     # *: every day of the week
     - cron: '40 * * * *'
-  # workflow_dispatch: # Uncomment this line to allow manual triggers from the GitHub UI
+  workflow_dispatch: # Uncomment this line to allow manual triggers from the GitHub UI
 
 permissions:
   contents: write  # This permission is crucial to allow the workflow to push changes to the repository
