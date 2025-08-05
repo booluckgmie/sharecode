@@ -1,0 +1,42 @@
+name: Scheduled Python Script MPOB CPO
+
+on:
+  schedule:
+    # Runs at 10:00 AM UTC every day
+    - cron: '0 10 * * *'
+  workflow_dispatch: # Enables manual run from GitHub UI
+
+permissions:
+  contents: write  # Needed to push changes back to the repository
+
+jobs:
+  run-python-script:
+    name: Run Python Script
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Full history is required for rebase/pull
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas requests pytz urllib3
+
+      - name: Run Python script and push updates
+        run: |
+          cd mpob
+          python scrapeCPO.py
+          git config --global user.email "booluckgmie@gmail.com"
+          git config --global user.name "booluckgmie"
+          git pull --rebase
+          git add .
+          git commit -m "Update data" || echo "No changes to commit"
+          git push
