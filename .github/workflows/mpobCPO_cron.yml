@@ -4,7 +4,7 @@ on:
   schedule:
     # Runs at 10:00 AM UTC every day
     - cron: '0 10 20 * *'
-  # workflow_dispatch: # Enables manual run from GitHub UI
+  workflow_dispatch: # Enables manual run from GitHub UI
 
 permissions:
   contents: write  # Needed to push changes back to the repository
