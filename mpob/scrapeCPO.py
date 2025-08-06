@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from datetime import datetime
 import os
+import re
 
 def scrape_today(year):
     url = f"https://bepi.mpob.gov.my/admin2/price_local_daily_view_cpo_msia.php?more=Y&jenis=1Y&tahun={year}"
@@ -37,17 +38,28 @@ def scrape_today(year):
     df = pd.DataFrame(data)
     df["date"] = pd.to_datetime(df["day"] + " " + df["month"] + " " + df["year"].astype(str), errors='coerce', dayfirst=True)
     df = df.dropna(subset=["date"])
-    df["price"] = df["price"].apply(lambda x: x if x in ["PH", "NT"] else float(x))
+    df["price"] = df["price"].apply(clean_price)
+    df = df.dropna(subset=["price"])
     return df[["date", "price"]]
+
+def clean_price(value):
+    """Cleans price string and converts to float or keeps PH/NT"""
+    if value in ["PH", "NT"]:
+        return value
+    cleaned = re.sub(r"[^\d.]", "", value)
+    try:
+        return float(cleaned)
+    except ValueError:
+        return None
 
 def prices_are_equal(price1, price2):
     """Compare two prices, handling different data types properly"""
-    # Convert both to string for comparison to handle mixed types
     return str(price1) == str(price2)
 
 def update_csv():
     if datetime.now().hour < 10:
-        return  # Run only after 10 AM
+        print("Skipping update: Not yet 10 AM.")
+        return
 
     year = datetime.now().year
     df_scraped = scrape_today(year)
@@ -63,29 +75,26 @@ def update_csv():
 
     changes = []
 
-    # Detect updates (date exists and price changed)
+    # Update existing rows
     common_dates = df_scraped.index.intersection(df_existing.index)
     for date in common_dates:
         new_price = df_scraped.loc[date, "price"]
         old_price = df_existing.loc[date, "price"]
-        # Only add to changes if prices are actually different
         if not prices_are_equal(old_price, new_price):
             df_existing.loc[date, "price"] = new_price
             changes.append((date.date(), old_price, new_price))
 
-    # Detect new additions
+    # Add new rows
     new_dates = df_scraped.index.difference(df_existing.index)
     for date in new_dates:
         new_price = df_scraped.loc[date, "price"]
         df_existing.loc[date] = new_price
         changes.append((date.date(), None, new_price))
 
-    # Save updated file
     df_existing.sort_index().reset_index().to_csv(csv_file, index=False)
 
-    # Print only actual changes
     for date, old, new in changes:
         print(f"{date} updated: {old} → {new}")
 
-# Run it
-update_csv()
+if __name__ == "__main__":
+    update_csv()
