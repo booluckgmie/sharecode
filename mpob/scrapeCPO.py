@@ -36,7 +36,10 @@ def scrape_today(year):
                     data.append(record)
 
     df = pd.DataFrame(data)
-    df["date"] = pd.to_datetime(df["day"] + " " + df["month"] + " " + df["year"].astype(str), errors='coerce', dayfirst=True)
+    df["date"] = pd.to_datetime(
+        df["day"] + " " + df["month"] + " " + df["year"].astype(str),
+        errors='coerce', dayfirst=True
+    )
     df = df.dropna(subset=["date"])
     df["price"] = df["price"].apply(clean_price)
     df = df.dropna(subset=["price"])
@@ -57,10 +60,6 @@ def prices_are_equal(price1, price2):
     return str(price1) == str(price2)
 
 def update_csv():
-    if datetime.now().hour < 10:
-        print("Skipping update: Not yet 10 AM.")
-        return
-
     year = datetime.now().year
     df_scraped = scrape_today(year)
     csv_file = "cpo_daily_prices.csv"
@@ -80,6 +79,13 @@ def update_csv():
     for date in common_dates:
         new_price = df_scraped.loc[date, "price"]
         old_price = df_existing.loc[date, "price"]
+
+        # Handle potential Series from .loc
+        if isinstance(new_price, pd.Series):
+            new_price = new_price.iloc[0]
+        if isinstance(old_price, pd.Series):
+            old_price = old_price.iloc[0]
+
         if not prices_are_equal(old_price, new_price):
             df_existing.loc[date, "price"] = new_price
             changes.append((date.date(), old_price, new_price))
@@ -88,13 +94,18 @@ def update_csv():
     new_dates = df_scraped.index.difference(df_existing.index)
     for date in new_dates:
         new_price = df_scraped.loc[date, "price"]
+        if isinstance(new_price, pd.Series):
+            new_price = new_price.iloc[0]
         df_existing.loc[date] = new_price
         changes.append((date.date(), None, new_price))
 
     df_existing.sort_index().reset_index().to_csv(csv_file, index=False)
 
-    for date, old, new in changes:
-        print(f"{date} updated: {old} → {new}")
+    if changes:
+        for date, old, new in changes:
+            print(f"{date} updated: {old} → {new}")
+    else:
+        print("No changes detected.")
 
 if __name__ == "__main__":
     update_csv()
