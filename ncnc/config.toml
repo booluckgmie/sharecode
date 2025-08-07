@@ -1,0 +1,17 @@
+[CORE]
+core_version = "3.0"
+
+[DATA_NODE.input_data]
+storage_type = "csv"
+default_path = "dataMCMC.csv"
+scope = "SCENARIO:SCOPE"
+
+[TASK.df_operation]
+inputs = [ "input_data:SECTION" ]
+outputs = [ "service_perct_output:SECTION" ]
+function = "df_operations.service_provider_perct:service_provider_perct"
+skippable = false
+
+[DATA_NODE.service_perct_output]
+storage_type = "in_memory"
+scope = "SCENARIO:SCOPE"
