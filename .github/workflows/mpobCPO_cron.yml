@@ -2,8 +2,8 @@ name: Scheduled Python Script MPOB CPO
 
 on:
   schedule:
-    # Runs at 11:42 AM Malaysia Time (03:42 UTC) every day
-    - cron: '42 3 * * *'
+    # Runs at 11:42 AM Malaysia Time (03:42 UTC) every day // 10 AM Malaysia Time (MYT), you need to set the cron to 0 2 * * *
+    - cron: '50 3 * * *'
   workflow_dispatch: # Enables manual run from GitHub UI
 
 permissions:
