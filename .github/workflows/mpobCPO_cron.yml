@@ -39,7 +39,6 @@ jobs:
           git stash
           git pull --rebase
           git stash pop || true
-          git add cpo_daily_prices.csv
-          git add data/cpo_daily_prices2025.csv
+          git add cpo_daily_prices.csv data/cpo_daily_prices2025.csv -f
           git commit -m "Update data" || echo "No changes to commit"
           git push
