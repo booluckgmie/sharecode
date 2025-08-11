@@ -1,6 +1,12 @@
 name: Scheduled Python Script MPOB CPO
 
 on:
+push:
+  branches:
+    - master
+  paths:
+    - 'mpob/**'
+    - '.github/workflows/mpobCPO_cron.yml'
   schedule:
     # Runs at 9:00 AM Malaysia Time (01:00 UTC) every day
     - cron: '0 1 * * *'
