@@ -2,8 +2,8 @@
 name: Scheduled Python Script for GSO
 
 on:
-  push:
-    branches: [ master ] 
+  # push:
+  #  branches: [ master ] 
   schedule:
     - cron: '15 * * * *' 
 
