@@ -1,0 +1,47 @@
+---
+name: Scheduled Python Script MarketIntel GAlerts
+
+on:
+  # push:
+  #  branches: [ master ] 
+  schedule:
+    # Runs at 8:00 AM Malaysia Time (00:00 UTC) every day
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Enables manual run from GitHub UI
+
+permissions:
+  contents: write  # Needed to push changes back to the repository
+
+jobs:
+  run-python-script:
+    name: Run Python Script
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Full history is required for rebase/pull
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas requests pytz urllib3 beautifulsoup4 xml datetime
+
+      - name: Run Python script and push updates
+        run: |
+          cd marketIntel
+          python rssGA.py
+          git config --global user.email "booluckgmie@gmail.com"
+          git config --global user.name "booluckgmie"
+          git stash
+          git pull --rebase
+          git stash pop || true
+          git add petronasGAlerts2025.csv -f
+          git commit -m "Update data" || echo "No changes to commit"
+          git push
