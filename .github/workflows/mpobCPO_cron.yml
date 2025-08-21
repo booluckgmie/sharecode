@@ -6,7 +6,6 @@ on:
   schedule:
     # Runs at 10:30 AM Malaysia Time (02:30 UTC) every day
     - cron: '32 2 * * *'
-    - timeZone: "Asia/Kuala_Lumpur"
   workflow_dispatch: # Enables manual run from GitHub UI
 
 permissions:
