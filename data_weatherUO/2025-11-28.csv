@@ -1,0 +1,364 @@
+weathercode,description,time,temperature_2m,relativehumidity_2m,rain,windspeed_10m,state,city,latitude,longitude,date
+61,"Rain, not freezing, continuous slight at time of observation",10:00:00,23.6,89,1.2,16.3,Selangor,Shah Alam,3.0833,101.5333,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",10:00:00,23.5,91,1.0,16.1,Putrajaya,Putrajaya,2.93,101.69,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",10:00:00,25.1,88,0.2,6.1,Pulau Pinang,Butterworth,5.3992,100.3639,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",10:00:00,24.1,94,0.1,8.8,Perak,Teluk Intan,4.0259,101.0213,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",10:00:00,27.1,89,0.0,12.4,Sarawak,Bintulu,3.17,113.03,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",10:00:00,27.0,87,0.1,15.0,Labuan,Labuan,5.2803,115.2475,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",10:00:00,24.6,92,4.8,30.3,Terengganu,Cukai,4.2332,103.4479,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",10:00:00,22.6,96,3.3,2.7,Pahang,Kuala Lipis,4.184,102.042,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",10:00:00,24.9,89,0.3,14.6,Johor,Kluang,2.0336,103.3194,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",10:00:00,25.9,88,0.3,31.7,Johor,Muar,2.05,102.56,2025-11-28
+80,"Rain shower(s), slight",10:00:00,23.9,94,0.2,7.2,Kelantan,Kota Bharu,6.1333,102.25,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",10:00:00,22.7,92,1.1,3.6,Perak,Ipoh,4.6,101.07,2025-11-28
+3,Clouds generally forming or developing,10:00:00,25.8,85,0.0,6.4,Perlis,Kangar,6.4333,100.2,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",10:00:00,24.5,90,0.1,5.2,Kedah,Sungai Petani,5.65,100.48,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",10:00:00,23.3,94,2.4,13.0,Negeri Sembilan,Seremban,2.7297,101.9381,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",10:00:00,24.7,94,6.3,17.8,Pahang,Kuantan,3.8167,103.3333,2025-11-28
+80,"Rain shower(s), slight",10:00:00,26.4,86,0.0,13.7,Johor,Johor Bahru,1.4556,103.7611,2025-11-28
+3,Clouds generally forming or developing,10:00:00,28.3,82,0.0,1.9,Sabah,Lahad Datu,5.03,118.34,2025-11-28
+3,Clouds generally forming or developing,10:00:00,28.0,83,0.0,3.3,Sarawak,Kuching,1.5397,110.3542,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",10:00:00,23.1,89,1.0,14.5,Selangor,Petaling Jaya,3.1073,101.6067,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",10:00:00,23.3,89,1.0,14.5,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2025-11-28
+80,"Rain shower(s), slight",10:00:00,26.1,90,0.0,15.6,Sarawak,Miri,4.4028,113.9933,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",10:00:00,24.9,88,0.2,6.1,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",10:00:00,25.7,88,0.5,30.3,Melaka,Melaka,2.1889,102.2511,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",10:00:00,25.3,89,0.2,13.2,Kedah,Alor Setar,6.1167,100.3667,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",10:00:00,25.1,88,0.2,6.1,Pulau Pinang,George Town,5.4145,100.3292,2025-11-28
+3,Clouds generally forming or developing,10:00:00,28.8,82,0.0,5.0,Sabah,Tawau,4.2448,117.8911,2025-11-28
+3,Clouds generally forming or developing,10:00:00,26.4,86,0.1,22.0,Johor,Batu Pahat,1.85,102.93,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",10:00:00,24.0,91,1.4,18.2,Selangor,Klang,3.0333,101.45,2025-11-28
+80,"Rain shower(s), slight",10:00:00,26.6,90,0.0,4.8,Sarawak,Sibu,2.3,111.8167,2025-11-28
+3,Clouds generally forming or developing,10:00:00,27.7,80,0.0,9.4,Sabah,Kota Kinabalu,5.975,116.0725,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",10:00:00,25.1,84,0.2,9.7,Perak,Taiping,4.85,100.7333,2025-11-28
+3,Clouds generally forming or developing,10:00:00,28.7,81,0.0,5.0,Sabah,Sandakan,5.8388,118.1173,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",09:00:00,23.9,94,1.0,7.3,Perak,Teluk Intan,4.0259,101.0213,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",09:00:00,25.6,88,1.1,30.5,Melaka,Melaka,2.1889,102.2511,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",09:00:00,24.8,95,10.3,23.2,Pahang,Kuantan,3.8167,103.3333,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",09:00:00,23.6,95,3.1,13.7,Putrajaya,Putrajaya,2.93,101.69,2025-11-28
+3,Clouds generally forming or developing,09:00:00,27.5,85,0.0,1.5,Sabah,Lahad Datu,5.03,118.34,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",09:00:00,24.8,92,4.8,30.1,Terengganu,Cukai,4.2332,103.4479,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",09:00:00,26.7,89,0.1,14.5,Labuan,Labuan,5.2803,115.2475,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",09:00:00,24.5,92,1.5,20.3,Selangor,Klang,3.0333,101.45,2025-11-28
+3,Clouds generally forming or developing,09:00:00,27.3,82,0.0,9.6,Sabah,Kota Kinabalu,5.975,116.0725,2025-11-28
+80,"Rain shower(s), slight",09:00:00,27.8,87,0.0,4.5,Sabah,Tawau,4.2448,117.8911,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",09:00:00,23.5,91,2.6,15.2,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",09:00:00,24.7,91,0.4,13.6,Johor,Kluang,2.0336,103.3194,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",09:00:00,22.5,92,0.6,3.7,Perak,Ipoh,4.6,101.07,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",09:00:00,25.1,87,0.2,6.1,Pulau Pinang,Butterworth,5.3992,100.3639,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",09:00:00,25.2,83,0.2,8.9,Perak,Taiping,4.85,100.7333,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",09:00:00,23.2,91,2.6,15.2,Selangor,Petaling Jaya,3.1073,101.6067,2025-11-28
+3,Clouds generally forming or developing,09:00:00,27.6,87,0.0,4.8,Sabah,Sandakan,5.8388,118.1173,2025-11-28
+3,Clouds generally forming or developing,09:00:00,25.7,86,0.0,14.2,Johor,Johor Bahru,1.4556,103.7611,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",09:00:00,25.0,90,0.5,14.6,Kedah,Alor Setar,6.1167,100.3667,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",09:00:00,25.0,87,0.2,6.1,Pulau Pinang,George Town,5.4145,100.3292,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",09:00:00,23.1,96,4.9,13.3,Negeri Sembilan,Seremban,2.7297,101.9381,2025-11-28
+80,"Rain shower(s), slight",09:00:00,25.8,92,0.0,5.0,Sarawak,Sibu,2.3,111.8167,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",09:00:00,24.8,87,0.2,6.1,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2025-11-28
+80,"Rain shower(s), slight",09:00:00,23.7,95,0.4,7.1,Kelantan,Kota Bharu,6.1333,102.25,2025-11-28
+3,Clouds generally forming or developing,09:00:00,25.8,84,0.0,6.9,Perlis,Kangar,6.4333,100.2,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",09:00:00,24.0,94,1.3,18.1,Selangor,Shah Alam,3.0833,101.5333,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",09:00:00,22.5,97,6.1,1.6,Pahang,Kuala Lipis,4.184,102.042,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",09:00:00,25.9,89,1.3,31.2,Johor,Muar,2.05,102.56,2025-11-28
+3,Clouds generally forming or developing,09:00:00,26.9,88,0.0,2.6,Sarawak,Kuching,1.5397,110.3542,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",09:00:00,24.2,90,0.3,4.0,Kedah,Sungai Petani,5.65,100.48,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",09:00:00,26.3,91,0.0,14.6,Sarawak,Miri,4.4028,113.9933,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",09:00:00,25.7,86,0.4,27.1,Johor,Batu Pahat,1.85,102.93,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",09:00:00,26.7,90,0.0,13.1,Sarawak,Bintulu,3.17,113.03,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",08:00:00,23.4,96,6.9,14.6,Putrajaya,Putrajaya,2.93,101.69,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",08:00:00,22.4,98,6.1,1.0,Pahang,Kuala Lipis,4.184,102.042,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",08:00:00,22.9,96,6.9,13.5,Negeri Sembilan,Seremban,2.7297,101.9381,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",08:00:00,24.9,95,7.5,29.3,Pahang,Kuantan,3.8167,103.3333,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",08:00:00,23.5,95,6.1,13.4,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",08:00:00,25.2,89,1.4,30.9,Terengganu,Cukai,4.2332,103.4479,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",08:00:00,24.1,94,2.6,17.0,Selangor,Shah Alam,3.0833,101.5333,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",08:00:00,25.4,82,0.3,7.3,Perak,Taiping,4.85,100.7333,2025-11-28
+3,Clouds generally forming or developing,08:00:00,26.2,91,0.0,1.3,Sabah,Lahad Datu,5.03,118.34,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",08:00:00,24.3,89,0.8,3.3,Kedah,Sungai Petani,5.65,100.48,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",08:00:00,24.5,91,2.2,19.1,Selangor,Klang,3.0333,101.45,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",08:00:00,26.7,89,0.0,13.4,Labuan,Labuan,5.2803,115.2475,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",08:00:00,22.4,94,0.3,2.7,Perak,Ipoh,4.6,101.07,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",08:00:00,25.1,86,0.8,7.4,Pulau Pinang,Butterworth,5.3992,100.3639,2025-11-28
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",08:00:00,25.5,95,0.0,2.2,Sarawak,Kuching,1.5397,110.3542,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",08:00:00,26.6,91,0.0,12.4,Sarawak,Bintulu,3.17,113.03,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",08:00:00,25.1,86,0.8,7.4,Pulau Pinang,George Town,5.4145,100.3292,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",08:00:00,26.7,90,0.0,12.8,Sarawak,Miri,4.4028,113.9933,2025-11-28
+3,Clouds generally forming or developing,08:00:00,25.7,85,0.0,7.9,Perlis,Kangar,6.4333,100.2,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",08:00:00,25.0,96,0.0,4.3,Sarawak,Sibu,2.3,111.8167,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",08:00:00,23.7,95,1.0,7.6,Kelantan,Kota Bharu,6.1333,102.25,2025-11-28
+3,Clouds generally forming or developing,08:00:00,26.8,85,0.0,8.7,Sabah,Kota Kinabalu,5.975,116.0725,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",08:00:00,25.5,90,1.5,31.7,Melaka,Melaka,2.1889,102.2511,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",08:00:00,23.3,95,6.1,13.4,Selangor,Petaling Jaya,3.1073,101.6067,2025-11-28
+3,Clouds generally forming or developing,08:00:00,25.1,83,0.0,22.3,Johor,Kluang,2.0336,103.3194,2025-11-28
+3,Clouds generally forming or developing,08:00:00,26.5,93,0.0,5.1,Sabah,Sandakan,5.8388,118.1173,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",08:00:00,23.8,96,2.2,8.2,Perak,Teluk Intan,4.0259,101.0213,2025-11-28
+3,Clouds generally forming or developing,08:00:00,27.3,90,0.0,3.4,Sabah,Tawau,4.2448,117.8911,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",08:00:00,25.2,89,0.1,16.4,Kedah,Alor Setar,6.1167,100.3667,2025-11-28
+80,"Rain shower(s), slight",08:00:00,25.6,85,0.0,14.0,Johor,Johor Bahru,1.4556,103.7611,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",08:00:00,25.7,89,1.3,25.4,Johor,Batu Pahat,1.85,102.93,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",08:00:00,24.9,86,0.8,7.4,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",08:00:00,25.5,89,1.4,35.7,Johor,Muar,2.05,102.56,2025-11-28
+80,"Rain shower(s), slight",07:00:00,25.8,88,0.4,29.7,Johor,Batu Pahat,1.85,102.93,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",07:00:00,22.9,97,8.9,17.2,Negeri Sembilan,Seremban,2.7297,101.9381,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",07:00:00,26.8,89,0.0,12.8,Labuan,Labuan,5.2803,115.2475,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",07:00:00,24.0,94,5.3,16.7,Selangor,Shah Alam,3.0833,101.5333,2025-11-28
+80,"Rain shower(s), slight",07:00:00,24.6,96,0.0,4.3,Sarawak,Sibu,2.3,111.8167,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",07:00:00,22.5,97,4.7,1.1,Pahang,Kuala Lipis,4.184,102.042,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",07:00:00,26.5,91,0.0,12.3,Sarawak,Bintulu,3.17,113.03,2025-11-28
+80,"Rain shower(s), slight",07:00:00,25.4,88,0.1,18.7,Kedah,Alor Setar,6.1167,100.3667,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",07:00:00,27.1,88,0.0,11.3,Sarawak,Miri,4.4028,113.9933,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",07:00:00,24.2,96,2.5,8.4,Perak,Teluk Intan,4.0259,101.0213,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",07:00:00,23.5,96,9.6,15.0,Putrajaya,Putrajaya,2.93,101.69,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",07:00:00,25.1,94,7.8,33.8,Pahang,Kuantan,3.8167,103.3333,2025-11-28
+80,"Rain shower(s), slight",07:00:00,25.8,87,0.0,12.8,Johor,Johor Bahru,1.4556,103.7611,2025-11-28
+3,Clouds generally forming or developing,07:00:00,26.1,88,0.0,7.2,Sabah,Kota Kinabalu,5.975,116.0725,2025-11-28
+80,"Rain shower(s), slight",07:00:00,25.2,90,0.8,31.6,Terengganu,Cukai,4.2332,103.4479,2025-11-28
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",07:00:00,23.6,97,0.0,2.5,Sabah,Lahad Datu,5.03,118.34,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",07:00:00,23.4,95,6.9,14.5,Selangor,Petaling Jaya,3.1073,101.6067,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",07:00:00,23.6,95,6.9,14.5,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",07:00:00,22.7,90,0.3,1.4,Perak,Ipoh,4.6,101.07,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",07:00:00,25.6,83,0.8,8.7,Pulau Pinang,Butterworth,5.3992,100.3639,2025-11-28
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",07:00:00,24.1,99,0.0,1.8,Sarawak,Kuching,1.5397,110.3542,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",07:00:00,25.6,83,0.8,8.7,Pulau Pinang,George Town,5.4145,100.3292,2025-11-28
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",07:00:00,25.9,96,0.0,4.2,Sabah,Sandakan,5.8388,118.1173,2025-11-28
+3,Clouds generally forming or developing,07:00:00,25.8,84,0.0,8.7,Perlis,Kangar,6.4333,100.2,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",07:00:00,23.7,94,1.4,7.6,Kelantan,Kota Bharu,6.1333,102.25,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",07:00:00,25.3,89,1.1,36.7,Melaka,Melaka,2.1889,102.2511,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",07:00:00,24.9,84,0.3,4.4,Kedah,Sungai Petani,5.65,100.48,2025-11-28
+3,Clouds generally forming or developing,07:00:00,26.5,94,0.0,3.1,Sabah,Tawau,4.2448,117.8911,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",07:00:00,25.4,83,0.8,8.7,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",07:00:00,25.7,88,1.1,38.0,Johor,Muar,2.05,102.56,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",07:00:00,25.3,84,0.2,28.7,Johor,Kluang,2.0336,103.3194,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",07:00:00,25.6,83,0.3,6.3,Perak,Taiping,4.85,100.7333,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",07:00:00,24.2,94,4.6,18.7,Selangor,Klang,3.0333,101.45,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",06:00:00,25.9,87,8.3,36.2,Melaka,Melaka,2.1889,102.2511,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",06:00:00,25.9,84,0.2,9.0,Perak,Taiping,4.85,100.7333,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",06:00:00,23.1,97,13.1,19.2,Negeri Sembilan,Seremban,2.7297,101.9381,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",06:00:00,25.8,91,7.9,44.9,Johor,Muar,2.05,102.56,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",06:00:00,23.5,96,11.1,19.4,Putrajaya,Putrajaya,2.93,101.69,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",06:00:00,24.6,94,2.0,7.2,Perak,Teluk Intan,4.0259,101.0213,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",06:00:00,26.2,85,0.6,44.3,Johor,Batu Pahat,1.85,102.93,2025-11-28
+80,"Rain shower(s), slight",06:00:00,26.1,88,0.0,7.3,Sabah,Kota Kinabalu,5.975,116.0725,2025-11-28
+3,Clouds generally forming or developing,06:00:00,25.4,82,0.0,5.2,Kedah,Sungai Petani,5.65,100.48,2025-11-28
+80,"Rain shower(s), slight",06:00:00,24.6,97,0.0,4.0,Sarawak,Sibu,2.3,111.8167,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",06:00:00,24.3,94,5.3,19.1,Selangor,Klang,3.0333,101.45,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",06:00:00,26.1,77,0.1,11.4,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2025-11-28
+3,Clouds generally forming or developing,06:00:00,26.2,94,0.0,3.1,Sabah,Tawau,4.2448,117.8911,2025-11-28
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",06:00:00,22.7,99,0.0,3.0,Sabah,Lahad Datu,5.03,118.34,2025-11-28
+80,"Rain shower(s), slight",06:00:00,25.6,87,0.0,18.7,Kedah,Alor Setar,6.1167,100.3667,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",06:00:00,23.9,97,39.1,17.1,Pahang,Kuantan,3.8167,103.3333,2025-11-28
+80,"Rain shower(s), slight",06:00:00,25.4,83,0.1,20.4,Johor,Kluang,2.0336,103.3194,2025-11-28
+3,Clouds generally forming or developing,06:00:00,26.0,84,0.0,9.7,Perlis,Kangar,6.4333,100.2,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",06:00:00,24.1,94,5.4,18.1,Selangor,Shah Alam,3.0833,101.5333,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",06:00:00,23.9,94,0.9,7.6,Kelantan,Kota Bharu,6.1333,102.25,2025-11-28
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",06:00:00,25.8,96,0.0,3.6,Sabah,Sandakan,5.8388,118.1173,2025-11-28
+3,Clouds generally forming or developing,06:00:00,25.5,89,0.0,9.6,Johor,Johor Bahru,1.4556,103.7611,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",06:00:00,27.3,87,0.0,9.4,Sarawak,Miri,4.4028,113.9933,2025-11-28
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",06:00:00,24.1,99,0.0,2.1,Sarawak,Kuching,1.5397,110.3542,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",06:00:00,26.5,92,0.0,11.9,Sarawak,Bintulu,3.17,113.03,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",06:00:00,26.3,77,0.1,11.4,Pulau Pinang,George Town,5.4145,100.3292,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",06:00:00,26.3,77,0.1,11.4,Pulau Pinang,Butterworth,5.3992,100.3639,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",06:00:00,26.8,89,0.0,11.7,Labuan,Labuan,5.2803,115.2475,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",06:00:00,22.7,91,0.5,0.4,Perak,Ipoh,4.6,101.07,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",06:00:00,25.2,89,2.0,32.7,Terengganu,Cukai,4.2332,103.4479,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",06:00:00,23.4,95,7.2,15.6,Selangor,Petaling Jaya,3.1073,101.6067,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",06:00:00,23.7,95,7.2,15.6,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",06:00:00,22.5,97,2.3,3.4,Pahang,Kuala Lipis,4.184,102.042,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",05:00:00,23.7,94,5.6,20.0,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",05:00:00,26.0,87,0.0,5.8,Sabah,Kota Kinabalu,5.975,116.0725,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",05:00:00,23.5,96,16.1,14.3,Negeri Sembilan,Seremban,2.7297,101.9381,2025-11-28
+3,Clouds generally forming or developing,05:00:00,25.9,84,0.0,17.7,Kedah,Alor Setar,6.1167,100.3667,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",05:00:00,22.6,96,0.7,2.8,Pahang,Kuala Lipis,4.184,102.042,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",05:00:00,22.5,92,0.7,1.8,Perak,Ipoh,4.6,101.07,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",05:00:00,26.5,93,0.0,12.6,Sarawak,Bintulu,3.17,113.03,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",05:00:00,24.3,94,7.7,22.0,Selangor,Klang,3.0333,101.45,2025-11-28
+80,"Rain shower(s), slight",05:00:00,25.2,92,0.0,9.0,Johor,Johor Bahru,1.4556,103.7611,2025-11-28
+3,Clouds generally forming or developing,05:00:00,26.7,74,0.0,12.3,Pulau Pinang,Butterworth,5.3992,100.3639,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",05:00:00,24.0,95,1.4,5.2,Kelantan,Kota Bharu,6.1333,102.25,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",05:00:00,26.9,88,0.0,10.9,Labuan,Labuan,5.2803,115.2475,2025-11-28
+3,Clouds generally forming or developing,05:00:00,25.3,83,0.0,4.8,Kedah,Sungai Petani,5.65,100.48,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",05:00:00,23.7,95,9.3,27.2,Putrajaya,Putrajaya,2.93,101.69,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",05:00:00,26.0,84,0.1,43.3,Johor,Batu Pahat,1.85,102.93,2025-11-28
+3,Clouds generally forming or developing,05:00:00,26.2,85,0.0,9.8,Perlis,Kangar,6.4333,100.2,2025-11-28
+80,"Rain shower(s), slight",05:00:00,25.4,90,0.2,6.9,Perak,Teluk Intan,4.0259,101.0213,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",05:00:00,23.5,94,5.6,20.0,Selangor,Petaling Jaya,3.1073,101.6067,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",05:00:00,25.5,94,19.4,58.1,Melaka,Melaka,2.1889,102.2511,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",05:00:00,26.0,92,5.7,73.1,Johor,Muar,2.05,102.56,2025-11-28
+3,Clouds generally forming or developing,05:00:00,26.3,93,0.0,3.2,Sabah,Tawau,4.2448,117.8911,2025-11-28
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",05:00:00,22.9,99,0.0,3.2,Sabah,Lahad Datu,5.03,118.34,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",05:00:00,27.5,85,0.0,9.3,Sarawak,Miri,4.4028,113.9933,2025-11-28
+3,Clouds generally forming or developing,05:00:00,26.6,74,0.0,12.3,Pulau Pinang,George Town,5.4145,100.3292,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",05:00:00,24.1,94,7.0,20.7,Selangor,Shah Alam,3.0833,101.5333,2025-11-28
+3,Clouds generally forming or developing,05:00:00,26.0,94,0.0,2.9,Sabah,Sandakan,5.8388,118.1173,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",05:00:00,26.2,81,0.1,9.8,Perak,Taiping,4.85,100.7333,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",05:00:00,25.2,92,8.0,26.5,Terengganu,Cukai,4.2332,103.4479,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",05:00:00,24.7,97,0.0,4.2,Sarawak,Sibu,2.3,111.8167,2025-11-28
+3,Clouds generally forming or developing,05:00:00,26.4,74,0.0,12.3,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",05:00:00,22.7,99,32.2,13.6,Pahang,Kuantan,3.8167,103.3333,2025-11-28
+80,"Rain shower(s), slight",05:00:00,25.0,89,0.0,11.1,Johor,Kluang,2.0336,103.3194,2025-11-28
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",05:00:00,24.4,98,0.0,2.4,Sarawak,Kuching,1.5397,110.3542,2025-11-28
+80,"Rain shower(s), slight",04:00:00,26.7,81,0.0,33.5,Johor,Batu Pahat,1.85,102.93,2025-11-28
+3,Clouds generally forming or developing,04:00:00,25.2,83,0.0,5.0,Kedah,Sungai Petani,5.65,100.48,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",04:00:00,26.0,90,0.3,61.5,Johor,Muar,2.05,102.56,2025-11-28
+3,Clouds generally forming or developing,04:00:00,26.8,71,0.0,12.6,Pulau Pinang,Butterworth,5.3992,100.3639,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",04:00:00,24.8,94,6.9,28.6,Selangor,Klang,3.0333,101.45,2025-11-28
+3,Clouds generally forming or developing,04:00:00,25.5,88,0.0,10.2,Perak,Teluk Intan,4.0259,101.0213,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",04:00:00,27.6,84,0.0,8.7,Sarawak,Miri,4.4028,113.9933,2025-11-28
+80,"Rain shower(s), slight",04:00:00,25.1,90,0.0,9.3,Johor,Kluang,2.0336,103.3194,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",04:00:00,26.6,92,0.0,12.4,Sarawak,Bintulu,3.17,113.03,2025-11-28
+80,"Rain shower(s), slight",04:00:00,26.1,93,0.0,2.5,Sabah,Sandakan,5.8388,118.1173,2025-11-28
+3,Clouds generally forming or developing,04:00:00,26.3,82,0.0,14.7,Kedah,Alor Setar,6.1167,100.3667,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",04:00:00,23.8,95,5.4,21.4,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",04:00:00,24.9,93,3.9,24.3,Terengganu,Cukai,4.2332,103.4479,2025-11-28
+80,"Rain shower(s), slight",04:00:00,26.4,93,0.0,3.4,Sabah,Tawau,4.2448,117.8911,2025-11-28
+81,"Rain shower(s), moderate or heavy",04:00:00,26.0,94,1.3,41.6,Melaka,Melaka,2.1889,102.2511,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",04:00:00,23.6,95,5.4,21.4,Selangor,Petaling Jaya,3.1073,101.6067,2025-11-28
+3,Clouds generally forming or developing,04:00:00,26.8,71,0.0,12.6,Pulau Pinang,George Town,5.4145,100.3292,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",04:00:00,24.4,94,6.4,24.2,Selangor,Shah Alam,3.0833,101.5333,2025-11-28
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",04:00:00,23.0,99,0.0,3.3,Sabah,Lahad Datu,5.03,118.34,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",04:00:00,24.8,97,0.0,4.3,Sarawak,Sibu,2.3,111.8167,2025-11-28
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",04:00:00,24.6,98,0.0,2.4,Sarawak,Kuching,1.5397,110.3542,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",04:00:00,22.5,98,18.0,12.2,Pahang,Kuantan,3.8167,103.3333,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",04:00:00,24.2,93,1.3,6.2,Kelantan,Kota Bharu,6.1333,102.25,2025-11-28
+3,Clouds generally forming or developing,04:00:00,26.6,71,0.0,12.6,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",04:00:00,22.7,92,0.8,2.6,Perak,Ipoh,4.6,101.07,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",04:00:00,26.1,86,0.0,6.2,Sabah,Kota Kinabalu,5.975,116.0725,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",04:00:00,23.7,96,14.2,21.2,Putrajaya,Putrajaya,2.93,101.69,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",04:00:00,22.6,96,1.1,2.8,Pahang,Kuala Lipis,4.184,102.042,2025-11-28
+80,"Rain shower(s), slight",04:00:00,24.9,93,0.2,8.7,Johor,Johor Bahru,1.4556,103.7611,2025-11-28
+3,Clouds generally forming or developing,04:00:00,26.3,85,0.0,9.8,Perlis,Kangar,6.4333,100.2,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",04:00:00,26.9,88,0.0,10.2,Labuan,Labuan,5.2803,115.2475,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",04:00:00,26.5,80,0.1,10.1,Perak,Taiping,4.85,100.7333,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",04:00:00,23.6,95,6.9,12.7,Negeri Sembilan,Seremban,2.7297,101.9381,2025-11-28
+81,"Rain shower(s), moderate or heavy",03:00:00,24.6,94,1.0,10.5,Johor,Johor Bahru,1.4556,103.7611,2025-11-28
+80,"Rain shower(s), slight",03:00:00,26.6,93,0.0,2.5,Sabah,Tawau,4.2448,117.8911,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",03:00:00,25.3,93,7.5,29.8,Selangor,Klang,3.0333,101.45,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",03:00:00,26.9,92,0.0,11.2,Sarawak,Bintulu,3.17,113.03,2025-11-28
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",03:00:00,24.8,97,0.0,2.3,Sarawak,Kuching,1.5397,110.3542,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",03:00:00,25.0,97,0.0,3.9,Sarawak,Sibu,2.3,111.8167,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",03:00:00,24.6,90,0.2,7.0,Kelantan,Kota Bharu,6.1333,102.25,2025-11-28
+80,"Rain shower(s), slight",03:00:00,26.9,81,0.0,43.9,Johor,Muar,2.05,102.56,2025-11-28
+80,"Rain shower(s), slight",03:00:00,25.0,95,0.6,8.7,Johor,Kluang,2.0336,103.3194,2025-11-28
+81,"Rain shower(s), moderate or heavy",03:00:00,25.3,91,0.8,27.2,Terengganu,Cukai,4.2332,103.4479,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",03:00:00,24.9,94,6.1,25.9,Selangor,Shah Alam,3.0833,101.5333,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",03:00:00,23.7,96,9.0,15.9,Selangor,Petaling Jaya,3.1073,101.6067,2025-11-28
+3,Clouds generally forming or developing,03:00:00,26.5,83,0.0,9.0,Perlis,Kangar,6.4333,100.2,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",03:00:00,26.1,87,0.0,6.5,Sabah,Kota Kinabalu,5.975,116.0725,2025-11-28
+3,Clouds generally forming or developing,03:00:00,27.1,81,0.0,23.0,Johor,Batu Pahat,1.85,102.93,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",03:00:00,27.7,84,0.0,8.8,Sarawak,Miri,4.4028,113.9933,2025-11-28
+3,Clouds generally forming or developing,03:00:00,26.8,71,0.0,13.0,Pulau Pinang,Butterworth,5.3992,100.3639,2025-11-28
+80,"Rain shower(s), slight",03:00:00,26.3,86,0.0,41.9,Melaka,Melaka,2.1889,102.2511,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",03:00:00,22.6,95,2.2,3.5,Pahang,Kuala Lipis,4.184,102.042,2025-11-28
+3,Clouds generally forming or developing,03:00:00,26.7,79,0.0,10.8,Perak,Taiping,4.85,100.7333,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",03:00:00,25.3,90,0.5,12.3,Perak,Teluk Intan,4.0259,101.0213,2025-11-28
+3,Clouds generally forming or developing,03:00:00,25.2,82,0.0,5.0,Kedah,Sungai Petani,5.65,100.48,2025-11-28
+80,"Rain shower(s), slight",03:00:00,26.3,93,0.0,2.9,Sabah,Sandakan,5.8388,118.1173,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",03:00:00,23.0,91,1.0,1.8,Perak,Ipoh,4.6,101.07,2025-11-28
+3,Clouds generally forming or developing,03:00:00,26.6,71,0.0,13.0,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",03:00:00,23.5,98,17.2,10.1,Putrajaya,Putrajaya,2.93,101.69,2025-11-28
+3,Clouds generally forming or developing,03:00:00,26.5,81,0.0,12.9,Kedah,Alor Setar,6.1167,100.3667,2025-11-28
+3,Clouds generally forming or developing,03:00:00,26.8,71,0.0,13.0,Pulau Pinang,George Town,5.4145,100.3292,2025-11-28
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",03:00:00,23.1,99,0.0,3.1,Sabah,Lahad Datu,5.03,118.34,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",03:00:00,23.9,96,9.0,15.9,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",03:00:00,24.5,89,6.0,10.9,Negeri Sembilan,Seremban,2.7297,101.9381,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",03:00:00,27.1,88,0.0,10.5,Labuan,Labuan,5.2803,115.2475,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",03:00:00,22.6,97,15.8,8.3,Pahang,Kuantan,3.8167,103.3333,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",02:00:00,24.8,95,20.4,21.4,Selangor,Shah Alam,3.0833,101.5333,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",02:00:00,25.5,93,0.7,20.6,Terengganu,Cukai,4.2332,103.4479,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",02:00:00,26.3,89,0.0,13.5,Johor,Johor Bahru,1.4556,103.7611,2025-11-28
+80,"Rain shower(s), slight",02:00:00,26.7,84,0.0,33.1,Melaka,Melaka,2.1889,102.2511,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",02:00:00,22.8,95,0.8,2.9,Pahang,Kuala Lipis,4.184,102.042,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",02:00:00,25.0,88,1.1,7.6,Kelantan,Kota Bharu,6.1333,102.25,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",02:00:00,22.8,97,32.7,5.0,Pahang,Kuantan,3.8167,103.3333,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",02:00:00,23.3,90,0.7,2.5,Perak,Ipoh,4.6,101.07,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",02:00:00,23.6,97,12.6,10.4,Selangor,Petaling Jaya,3.1073,101.6067,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",02:00:00,25.0,96,17.3,20.6,Selangor,Klang,3.0333,101.45,2025-11-28
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",02:00:00,24.8,97,0.0,2.2,Sarawak,Kuching,1.5397,110.3542,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",02:00:00,23.8,97,12.6,10.4,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",02:00:00,24.7,97,5.3,5.7,Johor,Kluang,2.0336,103.3194,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",02:00:00,27.8,84,0.0,7.6,Sarawak,Miri,4.4028,113.9933,2025-11-28
+3,Clouds generally forming or developing,02:00:00,26.6,72,0.0,12.6,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",02:00:00,26.8,80,0.2,11.9,Perak,Taiping,4.85,100.7333,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",02:00:00,25.2,91,1.8,12.7,Perak,Teluk Intan,4.0259,101.0213,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",02:00:00,26.7,93,0.0,2.6,Sabah,Tawau,4.2448,117.8911,2025-11-28
+3,Clouds generally forming or developing,02:00:00,26.6,81,0.0,12.5,Kedah,Alor Setar,6.1167,100.3667,2025-11-28
+3,Clouds generally forming or developing,02:00:00,26.5,92,0.0,2.3,Sabah,Sandakan,5.8388,118.1173,2025-11-28
+80,"Rain shower(s), slight",02:00:00,26.9,84,0.0,35.7,Johor,Muar,2.05,102.56,2025-11-28
+80,"Rain shower(s), slight",02:00:00,25.2,97,0.0,3.1,Sarawak,Sibu,2.3,111.8167,2025-11-28
+3,Clouds generally forming or developing,02:00:00,26.8,72,0.0,12.6,Pulau Pinang,George Town,5.4145,100.3292,2025-11-28
+3,Clouds generally forming or developing,02:00:00,25.4,81,0.0,4.7,Kedah,Sungai Petani,5.65,100.48,2025-11-28
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",02:00:00,23.4,100,0.0,2.9,Sabah,Lahad Datu,5.03,118.34,2025-11-28
+3,Clouds generally forming or developing,02:00:00,26.8,72,0.0,12.6,Pulau Pinang,Butterworth,5.3992,100.3639,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",02:00:00,24.5,88,1.9,13.3,Negeri Sembilan,Seremban,2.7297,101.9381,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",02:00:00,27.3,90,0.0,8.9,Sarawak,Bintulu,3.17,113.03,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",02:00:00,26.7,84,0.6,21.9,Johor,Batu Pahat,1.85,102.93,2025-11-28
+3,Clouds generally forming or developing,02:00:00,26.7,82,0.0,9.1,Perlis,Kangar,6.4333,100.2,2025-11-28
+80,"Rain shower(s), slight",02:00:00,26.3,87,0.0,6.5,Sabah,Kota Kinabalu,5.975,116.0725,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",02:00:00,27.2,88,0.0,9.6,Labuan,Labuan,5.2803,115.2475,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",02:00:00,23.6,98,3.7,10.0,Putrajaya,Putrajaya,2.93,101.69,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",01:00:00,27.7,88,0.0,6.9,Sarawak,Bintulu,3.17,113.03,2025-11-28
+3,Clouds generally forming or developing,01:00:00,26.7,71,0.0,12.0,Pulau Pinang,George Town,5.4145,100.3292,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",01:00:00,23.6,89,0.3,3.1,Perak,Ipoh,4.6,101.07,2025-11-28
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",01:00:00,25.0,96,0.0,3.2,Sarawak,Kuching,1.5397,110.3542,2025-11-28
+3,Clouds generally forming or developing,01:00:00,26.7,71,0.0,12.0,Pulau Pinang,Butterworth,5.3992,100.3639,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",01:00:00,27.5,85,0.0,11.6,Labuan,Labuan,5.2803,115.2475,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",01:00:00,25.8,91,1.6,21.6,Terengganu,Cukai,4.2332,103.4479,2025-11-28
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",01:00:00,23.6,100,0.0,3.7,Sabah,Lahad Datu,5.03,118.34,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",01:00:00,22.7,93,1.0,3.9,Pahang,Kuala Lipis,4.184,102.042,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",01:00:00,28.1,82,0.0,9.0,Sarawak,Miri,4.4028,113.9933,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",01:00:00,24.3,90,0.8,6.9,Negeri Sembilan,Seremban,2.7297,101.9381,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",01:00:00,23.8,98,15.9,5.4,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",01:00:00,23.7,96,16.3,13.7,Selangor,Klang,3.0333,101.45,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",01:00:00,23.6,98,15.9,5.4,Selangor,Petaling Jaya,3.1073,101.6067,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",01:00:00,22.9,98,32.3,6.1,Pahang,Kuantan,3.8167,103.3333,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",01:00:00,23.5,97,16.0,7.0,Selangor,Shah Alam,3.0833,101.5333,2025-11-28
+3,Clouds generally forming or developing,01:00:00,26.8,83,0.0,19.8,Johor,Muar,2.05,102.56,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",01:00:00,24.7,94,1.7,10.5,Perak,Teluk Intan,4.0259,101.0213,2025-11-28
+3,Clouds generally forming or developing,01:00:00,26.5,71,0.0,12.0,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2025-11-28
+80,"Rain shower(s), slight",01:00:00,26.1,89,0.0,7.3,Sabah,Kota Kinabalu,5.975,116.0725,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",01:00:00,24.8,97,0.4,3.3,Johor,Kluang,2.0336,103.3194,2025-11-28
+3,Clouds generally forming or developing,01:00:00,25.9,74,0.0,4.0,Kedah,Sungai Petani,5.65,100.48,2025-11-28
+80,"Rain shower(s), slight",01:00:00,26.6,77,0.0,11.1,Kedah,Alor Setar,6.1167,100.3667,2025-11-28
+3,Clouds generally forming or developing,01:00:00,26.5,93,0.0,3.2,Sabah,Sandakan,5.8388,118.1173,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",01:00:00,25.9,85,0.5,6.9,Perak,Taiping,4.85,100.7333,2025-11-28
+80,"Rain shower(s), slight",01:00:00,27.0,95,0.0,1.5,Sabah,Tawau,4.2448,117.8911,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",01:00:00,25.4,98,0.0,2.9,Sarawak,Sibu,2.3,111.8167,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",01:00:00,26.7,88,0.0,13.7,Johor,Johor Bahru,1.4556,103.7611,2025-11-28
+3,Clouds generally forming or developing,01:00:00,26.7,84,0.0,17.7,Melaka,Melaka,2.1889,102.2511,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",01:00:00,26.1,88,2.5,16.2,Johor,Batu Pahat,1.85,102.93,2025-11-28
+3,Clouds generally forming or developing,01:00:00,27.0,78,0.0,7.9,Perlis,Kangar,6.4333,100.2,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",01:00:00,24.0,93,4.4,12.6,Putrajaya,Putrajaya,2.93,101.69,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",01:00:00,24.4,91,0.3,5.7,Kelantan,Kota Bharu,6.1333,102.25,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",00:00:00,26.0,84,0.4,8.3,Perak,Taiping,4.85,100.7333,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",00:00:00,24.7,92,0.5,8.7,Perak,Teluk Intan,4.0259,101.0213,2025-11-28
+3,Clouds generally forming or developing,00:00:00,24.8,85,0.0,5.4,Kelantan,Kota Bharu,6.1333,102.25,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",00:00:00,25.7,91,0.5,17.1,Terengganu,Cukai,4.2332,103.4479,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",00:00:00,24.0,96,12.5,9.4,Putrajaya,Putrajaya,2.93,101.69,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",00:00:00,23.2,98,23.1,10.1,Pahang,Kuantan,3.8167,103.3333,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",00:00:00,26.1,86,2.9,11.3,Melaka,Melaka,2.1889,102.2511,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",00:00:00,23.5,94,1.1,2.9,Perak,Ipoh,4.6,101.07,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",00:00:00,23.3,97,10.1,3.6,Selangor,Petaling Jaya,3.1073,101.6067,2025-11-28
+3,Clouds generally forming or developing,00:00:00,26.6,73,0.0,11.6,Pulau Pinang,Butterworth,5.3992,100.3639,2025-11-28
+3,Clouds generally forming or developing,00:00:00,27.5,76,0.0,10.9,Johor,Johor Bahru,1.4556,103.7611,2025-11-28
+65,"Rain, not freezing, continuous heavy at time of observation",00:00:00,23.6,97,10.1,3.6,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2025-11-28
+80,"Rain shower(s), slight",00:00:00,26.4,88,0.0,7.7,Sabah,Kota Kinabalu,5.975,116.0725,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",00:00:00,27.6,85,0.0,11.9,Labuan,Labuan,5.2803,115.2475,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",00:00:00,24.1,96,9.3,11.9,Selangor,Klang,3.0333,101.45,2025-11-28
+3,Clouds generally forming or developing,00:00:00,26.2,73,0.0,5.3,Kedah,Sungai Petani,5.65,100.48,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",00:00:00,22.8,94,1.4,3.6,Pahang,Kuala Lipis,4.184,102.042,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",00:00:00,23.6,97,7.6,8.3,Selangor,Shah Alam,3.0833,101.5333,2025-11-28
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",00:00:00,24.0,100,0.0,4.0,Sabah,Lahad Datu,5.03,118.34,2025-11-28
+3,Clouds generally forming or developing,00:00:00,26.6,93,0.0,3.3,Sabah,Sandakan,5.8388,118.1173,2025-11-28
+3,Clouds generally forming or developing,00:00:00,27.1,77,0.0,6.9,Perlis,Kangar,6.4333,100.2,2025-11-28
+63,"Rain, not freezing, continuous moderate at time of observation",00:00:00,24.2,95,7.0,7.4,Negeri Sembilan,Seremban,2.7297,101.9381,2025-11-28
+3,Clouds generally forming or developing,00:00:00,27.2,95,0.0,1.4,Sabah,Tawau,4.2448,117.8911,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",00:00:00,28.3,81,0.0,8.4,Sarawak,Miri,4.4028,113.9933,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",00:00:00,25.6,94,1.4,15.0,Johor,Batu Pahat,1.85,102.93,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",00:00:00,28.1,86,0.0,6.0,Sarawak,Bintulu,3.17,113.03,2025-11-28
+3,Clouds generally forming or developing,00:00:00,26.6,73,0.0,11.6,Pulau Pinang,George Town,5.4145,100.3292,2025-11-28
+80,"Rain shower(s), slight",00:00:00,25.1,96,0.0,3.0,Sarawak,Kuching,1.5397,110.3542,2025-11-28
+3,Clouds generally forming or developing,00:00:00,26.4,73,0.0,11.6,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2025-11-28
+61,"Rain, not freezing, continuous slight at time of observation",00:00:00,24.9,97,2.1,4.2,Johor,Kluang,2.0336,103.3194,2025-11-28
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",00:00:00,26.4,86,0.5,24.3,Johor,Muar,2.05,102.56,2025-11-28
+3,Clouds generally forming or developing,00:00:00,26.7,77,0.0,10.9,Kedah,Alor Setar,6.1167,100.3667,2025-11-28
+80,"Rain shower(s), slight",00:00:00,25.6,97,0.0,2.4,Sarawak,Sibu,2.3,111.8167,2025-11-28
