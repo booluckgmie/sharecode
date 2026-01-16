@@ -3,7 +3,7 @@ import requests
 from datetime import datetime
 import os
 import json
-from pytz import timezone
+import sys
 from urllib3.exceptions import MaxRetryError, ConnectionError
 from requests.exceptions import RequestException
 
@@ -14,16 +14,16 @@ try:
         "Fromdate": datetime.now().strftime('%d/%m/%Y'),
         "Todate": datetime.now().strftime('%d/%m/%Y')
     }
-
+    
     # Set headers
     headers = {
-    "Content-Type": "application/json; charset=utf-8",
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+        "Content-Type": "application/json; charset=utf-8",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
     }
-
+    
     # Make a POST request
     response = requests.post(url, data=json.dumps(data), headers=headers)
-
+    
     # Check the response status
     if response.status_code == 200:
         # Extract and process data
@@ -39,39 +39,53 @@ try:
                 "Solar": entry["Solar"]
             } for entry in chartobjdata_list
         ]
-
+        
         # Convert flattened data to DataFrame
         df = pd.DataFrame(flattened_data)
         df['datetime'] = pd.to_datetime(df['datetime'])
-
+        
         # Split "datetime" into "date" and "time" columns
         df['date'] = df['datetime'].dt.date
         df['time'] = df['datetime'].dt.time
-
+        
         # Select specific columns
         df = df.loc[:, ['date', 'time', 'Coal', 'Gas', 'CoGen', 'Oil', 'Hydro', 'Solar']]
-
-        # Save data to CSV using flattened_data
+        
+        # Save data to CSV
         data_dir = 'data_gso'
         os.makedirs(data_dir, exist_ok=True)
-
         file_date = datetime.today()
         file_name = file_date.strftime('%Y-%m-%d.csv')
         file_path = os.path.join(data_dir, file_name)
-
+        
+        has_changes = False
+        
         if os.path.exists(file_path):
             existing_data = pd.read_csv(file_path, header=0)
+            original_len = len(existing_data)
             combined_data = pd.concat([existing_data, df], ignore_index=True)
             combined_data = combined_data.drop_duplicates()
-            combined_data.to_csv(file_path, index=False)
-            print(f'Data has been appended to {file_path}')
+            
+            # Check if new data was actually added
+            if len(combined_data) > original_len:
+                combined_data.to_csv(file_path, index=False)
+                print(f'Data has been appended to {file_path}')
+                has_changes = True
+            else:
+                print(f'No new data to append to {file_path}')
         else:
             df.to_csv(file_path, index=False)
             print(f'Data has been saved to {file_path}')
-
+            has_changes = True
+        
+        # Exit with code 0 if no changes (skip git commit without error)
+        if not has_changes:
+            sys.exit(0)
+            
     else:
         print("Error: Unable to retrieve chart data. Status Code:", response.status_code)
-
+        sys.exit(1)
+        
 except (RequestException, ConnectionError, MaxRetryError) as e:
     print(f"An error occurred: {e}")
-    # You can add further error handling or logging here.
+    sys.exit(1)
