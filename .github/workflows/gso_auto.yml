@@ -1,45 +1,53 @@
 ---
 name: Scheduled Python Script for GSO
-
 on:
   # push:
   #  branches: [ master ] 
   schedule:
     - cron: '15 * * * *' 
-
+  workflow_dispatch:  # Allows manual trigger from GitHub UI
+  
 jobs:
-
   run-python-script:
     runs-on: ubuntu-latest
     name: Run Python Script
     
     steps:
-
     - name: Checkout code
       uses: actions/checkout@v3
-
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0  # Fetch all history for proper git operations
+        
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: 3.9
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 20
-
+        
     - name: Install dependencies
       run: |
-        pip install pandas requests pytz urllib3
         pip install --upgrade pip
-
-    - name: Run Python Script
+        pip install pandas requests pytz urllib3
+        
+    - name: Run Python Script and Commit Changes
       run: |
         python gso_auto.py
+        
+    - name: Commit and Push Changes
+      run: |
         cd data_gso
-        git config --global user.email "booluckgmie@gmail.com"
-        git config --global user.name "booluckgmie"
-        git pull
+        git config --local user.email "booluckgmie@gmail.com"
+        git config --local user.name "booluckgmie"
         git add .
-        git commit -m "Update data"
-        git push --force  # Use the --force flag to forcefully push changes
+        
+        # Check if there are changes to commit
+        if git diff-index --quiet HEAD --; then
+          echo "No changes to commit"
+          exit 0
+        else
+          git commit -m "Update data - $(date +'%Y-%m-%d %H:%M:%S')"
+          git pull --rebase origin master
+          git push origin master
+          echo "Changes committed and pushed successfully"
+        fi
+      continue-on-error: false
