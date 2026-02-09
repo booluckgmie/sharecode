@@ -1,0 +1,265 @@
+weathercode,description,time,temperature_2m,relativehumidity_2m,rain,windspeed_10m,state,city,latitude,longitude,date
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",07:00:00,21.1,97,0.0,3.5,Terengganu,Kuala Terengganu,5.3303,103.1408,2026-02-09
+2,State of sky on the whole unchanged,07:00:00,21.8,94,0.0,4.8,Kelantan,Kota Bharu,6.1333,102.25,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",07:00:00,22.8,98,0.0,1.8,Sabah,Lahad Datu,5.03,118.34,2026-02-09
+3,Clouds generally forming or developing,07:00:00,22.5,91,0.0,2.3,Sarawak,Kuching,1.5397,110.3542,2026-02-09
+1,Clouds generally dissolving or becoming less developed,07:00:00,25.2,81,0.0,13.3,Perlis,Kangar,6.4333,100.2,2026-02-09
+2,State of sky on the whole unchanged,07:00:00,23.2,87,0.0,7.6,Johor,Kluang,2.0336,103.3194,2026-02-09
+0,Cloud development not observed or not observable,07:00:00,23.4,89,0.0,4.7,Sabah,Kota Kinabalu,5.975,116.0725,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",07:00:00,24.0,98,0.0,1.1,Selangor,Petaling Jaya,3.1073,101.6067,2026-02-09
+3,Clouds generally forming or developing,07:00:00,26.1,86,0.0,6.2,Sarawak,Bintulu,3.17,113.03,2026-02-09
+0,Cloud development not observed or not observable,07:00:00,26.4,93,0.0,3.2,Perak,Taiping,4.85,100.7333,2026-02-09
+2,State of sky on the whole unchanged,07:00:00,25.5,89,0.0,6.4,Sarawak,Miri,4.4028,113.9933,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",07:00:00,22.7,97,0.0,2.5,Sarawak,Sibu,2.3,111.8167,2026-02-09
+0,Cloud development not observed or not observable,07:00:00,26.4,77,0.0,4.6,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2026-02-09
+2,State of sky on the whole unchanged,07:00:00,25.5,79,0.0,18.5,Johor,Muar,2.05,102.56,2026-02-09
+3,Clouds generally forming or developing,07:00:00,24.6,63,0.0,9.2,Negeri Sembilan,Seremban,2.7297,101.9381,2026-02-09
+3,Clouds generally forming or developing,07:00:00,24.2,75,0.0,2.2,Putrajaya,Putrajaya,2.93,101.69,2026-02-09
+3,Clouds generally forming or developing,07:00:00,25.0,80,0.0,24.2,Melaka,Melaka,2.1889,102.2511,2026-02-09
+2,State of sky on the whole unchanged,07:00:00,21.7,94,0.0,4.5,Pahang,Kuantan,3.8167,103.3333,2026-02-09
+0,Cloud development not observed or not observable,07:00:00,26.6,77,0.0,4.6,Pulau Pinang,George Town,5.4145,100.3292,2026-02-09
+3,Clouds generally forming or developing,07:00:00,24.8,94,0.0,1.1,Selangor,Shah Alam,3.0833,101.5333,2026-02-09
+3,Clouds generally forming or developing,07:00:00,24.0,87,0.0,6.0,Johor,Batu Pahat,1.85,102.93,2026-02-09
+0,Cloud development not observed or not observable,07:00:00,25.0,79,0.0,5.2,Kedah,Sungai Petani,5.65,100.48,2026-02-09
+2,State of sky on the whole unchanged,07:00:00,22.8,96,0.0,3.1,Pahang,Kuala Lipis,4.184,102.042,2026-02-09
+2,State of sky on the whole unchanged,07:00:00,24.9,75,0.0,9.4,Terengganu,Cukai,4.2332,103.4479,2026-02-09
+3,Clouds generally forming or developing,07:00:00,25.5,88,0.0,1.5,Selangor,Klang,3.0333,101.45,2026-02-09
+0,Cloud development not observed or not observable,07:00:00,25.5,75,0.0,19.4,Kedah,Alor Setar,6.1167,100.3667,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",07:00:00,24.2,98,0.0,1.1,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",07:00:00,23.4,100,0.0,1.9,Perak,Ipoh,4.6,101.07,2026-02-09
+0,Cloud development not observed or not observable,07:00:00,26.6,77,0.0,4.6,Pulau Pinang,Butterworth,5.3992,100.3639,2026-02-09
+3,Clouds generally forming or developing,07:00:00,19.9,88,0.0,9.2,Pahang,Raub,3.7931,101.8569,2026-02-09
+2,State of sky on the whole unchanged,07:00:00,25.2,83,0.0,3.3,Labuan,Labuan,5.2803,115.2475,2026-02-09
+81,"Rain shower(s), moderate or heavy",07:00:00,24.3,89,0.0,2.7,Perak,Teluk Intan,4.0259,101.0213,2026-02-09
+2,State of sky on the whole unchanged,07:00:00,23.5,84,0.0,6.0,Johor,Johor Bahru,1.4556,103.7611,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",06:00:00,22.7,97,0.0,2.5,Sarawak,Sibu,2.3,111.8167,2026-02-09
+2,State of sky on the whole unchanged,06:00:00,25.8,86,0.0,5.8,Sarawak,Miri,4.4028,113.9933,2026-02-09
+3,Clouds generally forming or developing,06:00:00,24.5,65,0.0,9.4,Negeri Sembilan,Seremban,2.7297,101.9381,2026-02-09
+3,Clouds generally forming or developing,06:00:00,25.5,88,0.0,1.8,Selangor,Klang,3.0333,101.45,2026-02-09
+2,State of sky on the whole unchanged,06:00:00,24.7,77,0.0,8.3,Terengganu,Cukai,4.2332,103.4479,2026-02-09
+3,Clouds generally forming or developing,06:00:00,24.8,93,0.0,1.5,Selangor,Shah Alam,3.0833,101.5333,2026-02-09
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",06:00:00,24.3,89,0.0,4.0,Perak,Teluk Intan,4.0259,101.0213,2026-02-09
+1,Clouds generally dissolving or becoming less developed,06:00:00,25.4,80,0.0,3.3,Labuan,Labuan,5.2803,115.2475,2026-02-09
+3,Clouds generally forming or developing,06:00:00,20.5,85,0.0,9.5,Pahang,Raub,3.7931,101.8569,2026-02-09
+2,State of sky on the whole unchanged,06:00:00,26.6,82,0.0,3.7,Sarawak,Bintulu,3.17,113.03,2026-02-09
+3,Clouds generally forming or developing,06:00:00,23.7,84,0.0,7.7,Johor,Johor Bahru,1.4556,103.7611,2026-02-09
+0,Cloud development not observed or not observable,06:00:00,25.6,76,0.0,20.9,Kedah,Alor Setar,6.1167,100.3667,2026-02-09
+3,Clouds generally forming or developing,06:00:00,22.5,91,0.0,2.3,Sarawak,Kuching,1.5397,110.3542,2026-02-09
+0,Cloud development not observed or not observable,06:00:00,25.1,84,0.0,5.2,Kedah,Sungai Petani,5.65,100.48,2026-02-09
+0,Cloud development not observed or not observable,06:00:00,23.2,91,0.0,4.6,Sabah,Kota Kinabalu,5.975,116.0725,2026-02-09
+0,Cloud development not observed or not observable,06:00:00,26.7,91,0.0,2.5,Perak,Taiping,4.85,100.7333,2026-02-09
+0,Cloud development not observed or not observable,06:00:00,26.4,80,0.0,4.2,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",06:00:00,22.8,98,0.0,1.8,Sabah,Lahad Datu,5.03,118.34,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",06:00:00,24.1,99,0.0,0.5,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2026-02-09
+2,State of sky on the whole unchanged,06:00:00,23.5,87,0.0,7.4,Johor,Kluang,2.0336,103.3194,2026-02-09
+2,State of sky on the whole unchanged,06:00:00,25.6,80,0.0,19.1,Johor,Muar,2.05,102.56,2026-02-09
+3,Clouds generally forming or developing,06:00:00,24.1,76,0.0,2.8,Putrajaya,Putrajaya,2.93,101.69,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",06:00:00,23.9,99,0.0,0.5,Selangor,Petaling Jaya,3.1073,101.6067,2026-02-09
+3,Clouds generally forming or developing,06:00:00,25.0,81,0.0,25.0,Melaka,Melaka,2.1889,102.2511,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",06:00:00,23.7,100,0.0,1.9,Perak,Ipoh,4.6,101.07,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",06:00:00,21.3,96,0.0,3.3,Terengganu,Kuala Terengganu,5.3303,103.1408,2026-02-09
+2,State of sky on the whole unchanged,06:00:00,21.6,95,0.0,4.0,Kelantan,Kota Bharu,6.1333,102.25,2026-02-09
+3,Clouds generally forming or developing,06:00:00,23.9,87,0.0,6.6,Johor,Batu Pahat,1.85,102.93,2026-02-09
+0,Cloud development not observed or not observable,06:00:00,26.7,80,0.0,4.2,Pulau Pinang,Butterworth,5.3992,100.3639,2026-02-09
+1,Clouds generally dissolving or becoming less developed,06:00:00,25.4,80,0.0,14.1,Perlis,Kangar,6.4333,100.2,2026-02-09
+0,Cloud development not observed or not observable,06:00:00,26.6,80,0.0,4.2,Pulau Pinang,George Town,5.4145,100.3292,2026-02-09
+2,State of sky on the whole unchanged,06:00:00,21.8,93,0.0,4.6,Pahang,Kuantan,3.8167,103.3333,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",06:00:00,23.3,96,0.0,2.6,Pahang,Kuala Lipis,4.184,102.042,2026-02-09
+3,Clouds generally forming or developing,05:00:00,25.5,81,0.0,18.9,Johor,Muar,2.05,102.56,2026-02-09
+3,Clouds generally forming or developing,05:00:00,26.1,82,0.0,5.3,Sarawak,Miri,4.4028,113.9933,2026-02-09
+3,Clouds generally forming or developing,05:00:00,24.2,77,0.0,3.6,Putrajaya,Putrajaya,2.93,101.69,2026-02-09
+1,Clouds generally dissolving or becoming less developed,05:00:00,26.8,90,0.0,1.8,Perak,Taiping,4.85,100.7333,2026-02-09
+0,Cloud development not observed or not observable,05:00:00,23.5,90,0.0,4.8,Sabah,Kota Kinabalu,5.975,116.0725,2026-02-09
+1,Clouds generally dissolving or becoming less developed,05:00:00,21.9,94,0.0,3.9,Kelantan,Kota Bharu,6.1333,102.25,2026-02-09
+2,State of sky on the whole unchanged,05:00:00,25.7,76,0.0,3.1,Labuan,Labuan,5.2803,115.2475,2026-02-09
+3,Clouds generally forming or developing,05:00:00,22.5,92,0.0,2.0,Sarawak,Kuching,1.5397,110.3542,2026-02-09
+1,Clouds generally dissolving or becoming less developed,05:00:00,25.6,80,0.0,14.8,Perlis,Kangar,6.4333,100.2,2026-02-09
+3,Clouds generally forming or developing,05:00:00,25.6,89,0.0,2.9,Selangor,Klang,3.0333,101.45,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",05:00:00,24.3,98,0.0,1.6,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2026-02-09
+2,State of sky on the whole unchanged,05:00:00,24.7,78,0.0,8.4,Terengganu,Cukai,4.2332,103.4479,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",05:00:00,24.0,99,0.0,1.8,Perak,Ipoh,4.6,101.07,2026-02-09
+2,State of sky on the whole unchanged,05:00:00,26.8,80,0.0,1.8,Sarawak,Bintulu,3.17,113.03,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",05:00:00,24.0,98,0.0,1.6,Selangor,Petaling Jaya,3.1073,101.6067,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",05:00:00,23.0,96,0.0,2.9,Sarawak,Sibu,2.3,111.8167,2026-02-09
+3,Clouds generally forming or developing,05:00:00,20.8,90,0.0,8.7,Pahang,Raub,3.7931,101.8569,2026-02-09
+2,State of sky on the whole unchanged,05:00:00,21.7,95,0.0,2.9,Terengganu,Kuala Terengganu,5.3303,103.1408,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",05:00:00,23.0,98,0.0,1.8,Sabah,Lahad Datu,5.03,118.34,2026-02-09
+0,Cloud development not observed or not observable,05:00:00,25.8,77,0.0,21.7,Kedah,Alor Setar,6.1167,100.3667,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",05:00:00,23.7,97,0.0,2.3,Pahang,Kuala Lipis,4.184,102.042,2026-02-09
+2,State of sky on the whole unchanged,05:00:00,22.2,92,0.0,4.5,Pahang,Kuantan,3.8167,103.3333,2026-02-09
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",05:00:00,24.4,91,0.0,5.4,Perak,Teluk Intan,4.0259,101.0213,2026-02-09
+1,Clouds generally dissolving or becoming less developed,05:00:00,26.8,82,0.0,4.1,Pulau Pinang,Butterworth,5.3992,100.3639,2026-02-09
+2,State of sky on the whole unchanged,05:00:00,24.0,86,0.0,7.2,Johor,Batu Pahat,1.85,102.93,2026-02-09
+3,Clouds generally forming or developing,05:00:00,23.8,87,0.0,8.4,Johor,Kluang,2.0336,103.3194,2026-02-09
+1,Clouds generally dissolving or becoming less developed,05:00:00,26.8,82,0.0,4.1,Pulau Pinang,George Town,5.4145,100.3292,2026-02-09
+3,Clouds generally forming or developing,05:00:00,24.5,66,0.0,9.2,Negeri Sembilan,Seremban,2.7297,101.9381,2026-02-09
+3,Clouds generally forming or developing,05:00:00,25.2,81,0.0,25.2,Melaka,Melaka,2.1889,102.2511,2026-02-09
+0,Cloud development not observed or not observable,05:00:00,25.4,85,0.0,4.3,Kedah,Sungai Petani,5.65,100.48,2026-02-09
+1,Clouds generally dissolving or becoming less developed,05:00:00,26.6,82,0.0,4.1,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2026-02-09
+3,Clouds generally forming or developing,05:00:00,23.7,83,0.0,9.2,Johor,Johor Bahru,1.4556,103.7611,2026-02-09
+3,Clouds generally forming or developing,05:00:00,25.0,92,0.0,2.9,Selangor,Shah Alam,3.0833,101.5333,2026-02-09
+80,"Rain shower(s), slight",04:00:00,27.0,88,0.0,2.3,Perak,Taiping,4.85,100.7333,2026-02-09
+2,State of sky on the whole unchanged,04:00:00,22.5,91,0.0,4.1,Kelantan,Kota Bharu,6.1333,102.25,2026-02-09
+61,"Rain, not freezing, continuous slight at time of observation",04:00:00,20.9,96,0.1,8.9,Pahang,Raub,3.7931,101.8569,2026-02-09
+2,State of sky on the whole unchanged,04:00:00,23.9,83,0.0,10.3,Johor,Johor Bahru,1.4556,103.7611,2026-02-09
+1,Clouds generally dissolving or becoming less developed,04:00:00,23.7,91,0.0,4.6,Sabah,Kota Kinabalu,5.975,116.0725,2026-02-09
+2,State of sky on the whole unchanged,04:00:00,25.2,91,0.0,3.2,Selangor,Shah Alam,3.0833,101.5333,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",04:00:00,23.1,98,0.0,2.1,Sabah,Lahad Datu,5.03,118.34,2026-02-09
+3,Clouds generally forming or developing,04:00:00,24.1,85,0.0,7.6,Johor,Batu Pahat,1.85,102.93,2026-02-09
+3,Clouds generally forming or developing,04:00:00,24.7,68,0.0,10.0,Negeri Sembilan,Seremban,2.7297,101.9381,2026-02-09
+2,State of sky on the whole unchanged,04:00:00,22.8,89,0.0,5.2,Pahang,Kuantan,3.8167,103.3333,2026-02-09
+3,Clouds generally forming or developing,04:00:00,25.5,82,0.0,17.8,Johor,Muar,2.05,102.56,2026-02-09
+1,Clouds generally dissolving or becoming less developed,04:00:00,26.9,83,0.0,4.4,Pulau Pinang,Butterworth,5.3992,100.3639,2026-02-09
+2,State of sky on the whole unchanged,04:00:00,25.7,88,0.0,2.5,Selangor,Klang,3.0333,101.45,2026-02-09
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",04:00:00,24.6,91,0.0,6.6,Perak,Teluk Intan,4.0259,101.0213,2026-02-09
+3,Clouds generally forming or developing,04:00:00,24.0,87,0.0,9.7,Johor,Kluang,2.0336,103.3194,2026-02-09
+3,Clouds generally forming or developing,04:00:00,25.3,81,0.0,24.2,Melaka,Melaka,2.1889,102.2511,2026-02-09
+3,Clouds generally forming or developing,04:00:00,24.5,95,0.0,1.6,Selangor,Petaling Jaya,3.1073,101.6067,2026-02-09
+3,Clouds generally forming or developing,04:00:00,23.2,96,0.0,2.2,Sarawak,Sibu,2.3,111.8167,2026-02-09
+1,Clouds generally dissolving or becoming less developed,04:00:00,26.7,83,0.0,4.4,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2026-02-09
+3,Clouds generally forming or developing,04:00:00,24.0,95,0.0,2.2,Pahang,Kuala Lipis,4.184,102.042,2026-02-09
+3,Clouds generally forming or developing,04:00:00,24.4,76,0.0,3.9,Putrajaya,Putrajaya,2.93,101.69,2026-02-09
+3,Clouds generally forming or developing,04:00:00,24.7,95,0.0,1.6,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2026-02-09
+2,State of sky on the whole unchanged,04:00:00,24.8,78,0.0,9.1,Terengganu,Cukai,4.2332,103.4479,2026-02-09
+1,Clouds generally dissolving or becoming less developed,04:00:00,25.7,85,0.0,4.5,Kedah,Sungai Petani,5.65,100.48,2026-02-09
+2,State of sky on the whole unchanged,04:00:00,21.8,96,0.0,2.7,Terengganu,Kuala Terengganu,5.3303,103.1408,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",04:00:00,24.5,96,0.0,1.5,Perak,Ipoh,4.6,101.07,2026-02-09
+2,State of sky on the whole unchanged,04:00:00,25.7,77,0.0,2.7,Labuan,Labuan,5.2803,115.2475,2026-02-09
+3,Clouds generally forming or developing,04:00:00,22.6,91,0.0,2.5,Sarawak,Kuching,1.5397,110.3542,2026-02-09
+1,Clouds generally dissolving or becoming less developed,04:00:00,25.8,80,0.0,15.0,Perlis,Kangar,6.4333,100.2,2026-02-09
+1,Clouds generally dissolving or becoming less developed,04:00:00,26.0,77,0.0,21.7,Kedah,Alor Setar,6.1167,100.3667,2026-02-09
+3,Clouds generally forming or developing,04:00:00,27.0,79,0.0,2.5,Sarawak,Bintulu,3.17,113.03,2026-02-09
+2,State of sky on the whole unchanged,04:00:00,26.3,81,0.0,5.5,Sarawak,Miri,4.4028,113.9933,2026-02-09
+1,Clouds generally dissolving or becoming less developed,04:00:00,26.9,83,0.0,4.4,Pulau Pinang,George Town,5.4145,100.3292,2026-02-09
+3,Clouds generally forming or developing,03:00:00,24.3,84,0.0,8.4,Johor,Batu Pahat,1.85,102.93,2026-02-09
+3,Clouds generally forming or developing,03:00:00,21.1,96,0.0,9.3,Pahang,Raub,3.7931,101.8569,2026-02-09
+95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",03:00:00,25.0,89,0.0,7.6,Perak,Teluk Intan,4.0259,101.0213,2026-02-09
+3,Clouds generally forming or developing,03:00:00,27.3,77,0.0,3.5,Sarawak,Bintulu,3.17,113.03,2026-02-09
+3,Clouds generally forming or developing,03:00:00,24.2,93,0.0,2.5,Pahang,Kuala Lipis,4.184,102.042,2026-02-09
+3,Clouds generally forming or developing,03:00:00,25.0,74,0.0,4.9,Putrajaya,Putrajaya,2.93,101.69,2026-02-09
+45,"Fog or ice fog, sky invisible no appreciable change during the preceding hour",03:00:00,23.2,99,0.0,2.4,Sabah,Lahad Datu,5.03,118.34,2026-02-09
+2,State of sky on the whole unchanged,03:00:00,27.1,83,0.0,4.7,Pulau Pinang,Butterworth,5.3992,100.3639,2026-02-09
+3,Clouds generally forming or developing,03:00:00,24.2,86,0.0,10.4,Johor,Kluang,2.0336,103.3194,2026-02-09
+2,State of sky on the whole unchanged,03:00:00,22.9,90,0.0,3.6,Kelantan,Kota Bharu,6.1333,102.25,2026-02-09
+3,Clouds generally forming or developing,03:00:00,23.2,95,0.0,1.6,Sarawak,Sibu,2.3,111.8167,2026-02-09
+2,State of sky on the whole unchanged,03:00:00,22.3,94,0.0,3.9,Terengganu,Kuala Terengganu,5.3303,103.1408,2026-02-09
+2,State of sky on the whole unchanged,03:00:00,26.4,80,0.0,5.4,Sarawak,Miri,4.4028,113.9933,2026-02-09
+2,State of sky on the whole unchanged,03:00:00,26.9,83,0.0,4.7,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2026-02-09
+1,Clouds generally dissolving or becoming less developed,03:00:00,26.2,79,0.0,15.3,Perlis,Kangar,6.4333,100.2,2026-02-09
+2,State of sky on the whole unchanged,03:00:00,25.6,82,0.0,2.9,Labuan,Labuan,5.2803,115.2475,2026-02-09
+3,Clouds generally forming or developing,03:00:00,22.6,91,0.0,2.6,Sarawak,Kuching,1.5397,110.3542,2026-02-09
+2,State of sky on the whole unchanged,03:00:00,24.9,79,0.0,10.7,Terengganu,Cukai,4.2332,103.4479,2026-02-09
+3,Clouds generally forming or developing,03:00:00,25.8,87,0.0,2.4,Selangor,Klang,3.0333,101.45,2026-02-09
+3,Clouds generally forming or developing,03:00:00,25.0,93,0.0,2.0,Perak,Ipoh,4.6,101.07,2026-02-09
+3,Clouds generally forming or developing,03:00:00,24.6,72,0.0,11.1,Negeri Sembilan,Seremban,2.7297,101.9381,2026-02-09
+3,Clouds generally forming or developing,03:00:00,23.3,88,0.0,5.8,Pahang,Kuantan,3.8167,103.3333,2026-02-09
+3,Clouds generally forming or developing,03:00:00,24.0,84,0.0,10.3,Johor,Johor Bahru,1.4556,103.7611,2026-02-09
+3,Clouds generally forming or developing,03:00:00,25.4,81,0.0,24.2,Melaka,Melaka,2.1889,102.2511,2026-02-09
+1,Clouds generally dissolving or becoming less developed,03:00:00,26.4,76,0.0,21.1,Kedah,Alor Setar,6.1167,100.3667,2026-02-09
+1,Clouds generally dissolving or becoming less developed,03:00:00,26.2,83,0.0,4.8,Kedah,Sungai Petani,5.65,100.48,2026-02-09
+2,State of sky on the whole unchanged,03:00:00,27.6,86,0.0,4.1,Perak,Taiping,4.85,100.7333,2026-02-09
+2,State of sky on the whole unchanged,03:00:00,24.8,93,0.0,1.5,Selangor,Petaling Jaya,3.1073,101.6067,2026-02-09
+2,State of sky on the whole unchanged,03:00:00,27.1,83,0.0,4.7,Pulau Pinang,George Town,5.4145,100.3292,2026-02-09
+2,State of sky on the whole unchanged,03:00:00,25.1,93,0.0,1.5,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2026-02-09
+3,Clouds generally forming or developing,03:00:00,25.6,81,0.0,17.4,Johor,Muar,2.05,102.56,2026-02-09
+2,State of sky on the whole unchanged,03:00:00,25.4,90,0.0,2.9,Selangor,Shah Alam,3.0833,101.5333,2026-02-09
+1,Clouds generally dissolving or becoming less developed,03:00:00,23.8,93,0.0,4.8,Sabah,Kota Kinabalu,5.975,116.0725,2026-02-09
+2,State of sky on the whole unchanged,02:00:00,27.5,83,0.0,5.1,Pulau Pinang,Butterworth,5.3992,100.3639,2026-02-09
+3,Clouds generally forming or developing,02:00:00,23.4,89,0.0,3.6,Kelantan,Kota Bharu,6.1333,102.25,2026-02-09
+2,State of sky on the whole unchanged,02:00:00,25.3,92,0.0,3.1,Perak,Ipoh,4.6,101.07,2026-02-09
+3,Clouds generally forming or developing,02:00:00,25.5,90,0.0,3.8,Selangor,Shah Alam,3.0833,101.5333,2026-02-09
+2,State of sky on the whole unchanged,02:00:00,27.4,83,0.0,5.1,Pulau Pinang,George Town,5.4145,100.3292,2026-02-09
+3,Clouds generally forming or developing,02:00:00,23.6,87,0.0,5.8,Pahang,Kuantan,3.8167,103.3333,2026-02-09
+3,Clouds generally forming or developing,02:00:00,24.4,85,0.0,10.5,Johor,Kluang,2.0336,103.3194,2026-02-09
+3,Clouds generally forming or developing,02:00:00,24.3,93,0.0,1.1,Pahang,Kuala Lipis,4.184,102.042,2026-02-09
+2,State of sky on the whole unchanged,02:00:00,24.7,72,0.0,10.3,Negeri Sembilan,Seremban,2.7297,101.9381,2026-02-09
+2,State of sky on the whole unchanged,02:00:00,25.1,91,0.0,2.3,Selangor,Petaling Jaya,3.1073,101.6067,2026-02-09
+2,State of sky on the whole unchanged,02:00:00,25.4,91,0.0,2.3,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2026-02-09
+80,"Rain shower(s), slight",02:00:00,21.3,97,0.0,7.6,Pahang,Raub,3.7931,101.8569,2026-02-09
+2,State of sky on the whole unchanged,02:00:00,25.9,86,0.0,4.2,Selangor,Klang,3.0333,101.45,2026-02-09
+2,State of sky on the whole unchanged,02:00:00,26.6,78,0.0,15.8,Perlis,Kangar,6.4333,100.2,2026-02-09
+2,State of sky on the whole unchanged,02:00:00,25.7,77,0.0,4.7,Putrajaya,Putrajaya,2.93,101.69,2026-02-09
+80,"Rain shower(s), slight",02:00:00,25.5,88,0.0,10.2,Perak,Teluk Intan,4.0259,101.0213,2026-02-09
+2,State of sky on the whole unchanged,02:00:00,25.7,81,0.0,17.6,Johor,Muar,2.05,102.56,2026-02-09
+80,"Rain shower(s), slight",02:00:00,28.0,86,0.0,4.4,Perak,Taiping,4.85,100.7333,2026-02-09
+3,Clouds generally forming or developing,02:00:00,25.3,77,0.0,11.7,Terengganu,Cukai,4.2332,103.4479,2026-02-09
+2,State of sky on the whole unchanged,02:00:00,24.2,84,0.0,10.5,Johor,Johor Bahru,1.4556,103.7611,2026-02-09
+1,Clouds generally dissolving or becoming less developed,02:00:00,26.8,76,0.0,20.2,Kedah,Alor Setar,6.1167,100.3667,2026-02-09
+2,State of sky on the whole unchanged,02:00:00,27.2,83,0.0,5.1,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2026-02-09
+1,Clouds generally dissolving or becoming less developed,02:00:00,26.9,81,0.0,4.7,Kedah,Sungai Petani,5.65,100.48,2026-02-09
+3,Clouds generally forming or developing,02:00:00,25.6,83,0.0,3.6,Labuan,Labuan,5.2803,115.2475,2026-02-09
+3,Clouds generally forming or developing,02:00:00,27.4,77,0.0,3.5,Sarawak,Bintulu,3.17,113.03,2026-02-09
+3,Clouds generally forming or developing,02:00:00,22.6,90,0.0,3.1,Sarawak,Kuching,1.5397,110.3542,2026-02-09
+3,Clouds generally forming or developing,02:00:00,26.5,79,0.0,5.4,Sarawak,Miri,4.4028,113.9933,2026-02-09
+3,Clouds generally forming or developing,02:00:00,23.3,95,0.0,2.1,Sarawak,Sibu,2.3,111.8167,2026-02-09
+3,Clouds generally forming or developing,02:00:00,23.3,99,0.0,2.4,Sabah,Lahad Datu,5.03,118.34,2026-02-09
+3,Clouds generally forming or developing,02:00:00,23.0,91,0.0,3.4,Terengganu,Kuala Terengganu,5.3303,103.1408,2026-02-09
+1,Clouds generally dissolving or becoming less developed,02:00:00,24.0,94,0.0,4.6,Sabah,Kota Kinabalu,5.975,116.0725,2026-02-09
+3,Clouds generally forming or developing,02:00:00,25.6,81,0.0,25.0,Melaka,Melaka,2.1889,102.2511,2026-02-09
+3,Clouds generally forming or developing,02:00:00,24.7,83,0.0,9.7,Johor,Batu Pahat,1.85,102.93,2026-02-09
+1,Clouds generally dissolving or becoming less developed,01:00:00,26.2,83,0.0,7.0,Kedah,Sungai Petani,5.65,100.48,2026-02-09
+2,State of sky on the whole unchanged,01:00:00,26.0,77,0.0,18.1,Johor,Muar,2.05,102.56,2026-02-09
+2,State of sky on the whole unchanged,01:00:00,24.8,83,0.0,10.7,Johor,Batu Pahat,1.85,102.93,2026-02-09
+80,"Rain shower(s), slight",01:00:00,25.6,89,0.0,11.1,Perak,Teluk Intan,4.0259,101.0213,2026-02-09
+61,"Rain, not freezing, continuous slight at time of observation",01:00:00,24.0,92,1.4,2.6,Pahang,Kuala Lipis,4.184,102.042,2026-02-09
+2,State of sky on the whole unchanged,01:00:00,24.2,84,0.0,9.7,Johor,Kluang,2.0336,103.3194,2026-02-09
+3,Clouds generally forming or developing,01:00:00,23.4,94,0.0,2.8,Sarawak,Sibu,2.3,111.8167,2026-02-09
+3,Clouds generally forming or developing,01:00:00,26.0,82,0.0,5.5,Putrajaya,Putrajaya,2.93,101.69,2026-02-09
+2,State of sky on the whole unchanged,01:00:00,24.4,84,0.0,10.5,Johor,Johor Bahru,1.4556,103.7611,2026-02-09
+2,State of sky on the whole unchanged,01:00:00,25.6,80,0.0,24.0,Melaka,Melaka,2.1889,102.2511,2026-02-09
+80,"Rain shower(s), slight",01:00:00,27.7,87,0.0,4.8,Perak,Taiping,4.85,100.7333,2026-02-09
+80,"Rain shower(s), slight",01:00:00,25.1,93,0.0,2.2,Perak,Ipoh,4.6,101.07,2026-02-09
+3,Clouds generally forming or developing,01:00:00,27.6,76,0.0,2.4,Sarawak,Bintulu,3.17,113.03,2026-02-09
+3,Clouds generally forming or developing,01:00:00,26.9,76,0.0,4.4,Sarawak,Miri,4.4028,113.9933,2026-02-09
+80,"Rain shower(s), slight",01:00:00,25.2,91,0.0,4.1,Selangor,Shah Alam,3.0833,101.5333,2026-02-09
+3,Clouds generally forming or developing,01:00:00,25.3,76,0.0,12.2,Terengganu,Cukai,4.2332,103.4479,2026-02-09
+2,State of sky on the whole unchanged,01:00:00,26.7,77,0.0,14.8,Perlis,Kangar,6.4333,100.2,2026-02-09
+80,"Rain shower(s), slight",01:00:00,25.8,84,0.0,5.3,Selangor,Klang,3.0333,101.45,2026-02-09
+3,Clouds generally forming or developing,01:00:00,23.2,88,0.0,2.8,Terengganu,Kuala Terengganu,5.3303,103.1408,2026-02-09
+1,Clouds generally dissolving or becoming less developed,01:00:00,27.0,74,0.0,20.9,Kedah,Alor Setar,6.1167,100.3667,2026-02-09
+3,Clouds generally forming or developing,01:00:00,23.5,87,0.0,4.0,Kelantan,Kota Bharu,6.1333,102.25,2026-02-09
+1,Clouds generally dissolving or becoming less developed,01:00:00,24.3,94,0.0,4.8,Sabah,Kota Kinabalu,5.975,116.0725,2026-02-09
+3,Clouds generally forming or developing,01:00:00,21.5,95,0.0,7.9,Pahang,Raub,3.7931,101.8569,2026-02-09
+3,Clouds generally forming or developing,01:00:00,25.1,67,0.0,10.7,Negeri Sembilan,Seremban,2.7297,101.9381,2026-02-09
+3,Clouds generally forming or developing,01:00:00,23.2,87,0.0,5.8,Pahang,Kuantan,3.8167,103.3333,2026-02-09
+3,Clouds generally forming or developing,01:00:00,25.2,88,0.0,1.9,Selangor,Petaling Jaya,3.1073,101.6067,2026-02-09
+3,Clouds generally forming or developing,01:00:00,26.7,84,0.0,7.0,Pulau Pinang,George Town,5.4145,100.3292,2026-02-09
+3,Clouds generally forming or developing,01:00:00,24.2,95,0.0,2.5,Sabah,Lahad Datu,5.03,118.34,2026-02-09
+3,Clouds generally forming or developing,01:00:00,26.8,84,0.0,7.0,Pulau Pinang,Butterworth,5.3992,100.3639,2026-02-09
+3,Clouds generally forming or developing,01:00:00,26.5,84,0.0,7.0,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2026-02-09
+3,Clouds generally forming or developing,01:00:00,22.4,91,0.0,2.8,Sarawak,Kuching,1.5397,110.3542,2026-02-09
+3,Clouds generally forming or developing,01:00:00,25.4,88,0.0,1.9,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2026-02-09
+2,State of sky on the whole unchanged,01:00:00,26.2,82,0.0,3.2,Labuan,Labuan,5.2803,115.2475,2026-02-09
+3,Clouds generally forming or developing,00:00:00,24.6,94,0.0,1.9,Sabah,Lahad Datu,5.03,118.34,2026-02-09
+3,Clouds generally forming or developing,00:00:00,26.7,83,0.0,4.8,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2026-02-09
+80,"Rain shower(s), slight",00:00:00,22.0,93,0.0,7.0,Pahang,Raub,3.7931,101.8569,2026-02-09
+80,"Rain shower(s), slight",00:00:00,25.5,91,0.0,5.8,Selangor,Shah Alam,3.0833,101.5333,2026-02-09
+2,State of sky on the whole unchanged,00:00:00,24.7,84,0.0,10.5,Johor,Johor Bahru,1.4556,103.7611,2026-02-09
+80,"Rain shower(s), slight",00:00:00,25.2,88,0.0,2.9,Selangor,Petaling Jaya,3.1073,101.6067,2026-02-09
+3,Clouds generally forming or developing,00:00:00,27.6,76,0.0,4.1,Sarawak,Bintulu,3.17,113.03,2026-02-09
+80,"Rain shower(s), slight",00:00:00,25.3,93,0.0,3.7,Perak,Ipoh,4.6,101.07,2026-02-09
+3,Clouds generally forming or developing,00:00:00,26.0,89,0.0,4.2,Putrajaya,Putrajaya,2.93,101.69,2026-02-09
+80,"Rain shower(s), slight",00:00:00,26.1,84,0.0,6.9,Selangor,Klang,3.0333,101.45,2026-02-09
+80,"Rain shower(s), slight",00:00:00,25.4,88,0.0,2.9,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,2026-02-09
+3,Clouds generally forming or developing,00:00:00,24.2,83,0.0,4.0,Kelantan,Kota Bharu,6.1333,102.25,2026-02-09
+1,Clouds generally dissolving or becoming less developed,00:00:00,27.5,73,0.0,19.6,Kedah,Alor Setar,6.1167,100.3667,2026-02-09
+3,Clouds generally forming or developing,00:00:00,25.8,71,0.0,9.8,Negeri Sembilan,Seremban,2.7297,101.9381,2026-02-09
+3,Clouds generally forming or developing,00:00:00,23.7,85,0.0,6.5,Pahang,Kuantan,3.8167,103.3333,2026-02-09
+3,Clouds generally forming or developing,00:00:00,26.3,82,0.0,3.8,Labuan,Labuan,5.2803,115.2475,2026-02-09
+3,Clouds generally forming or developing,00:00:00,27.2,81,0.0,7.4,Kedah,Sungai Petani,5.65,100.48,2026-02-09
+3,Clouds generally forming or developing,00:00:00,27.0,83,0.0,4.8,Pulau Pinang,Butterworth,5.3992,100.3639,2026-02-09
+3,Clouds generally forming or developing,00:00:00,22.9,88,0.0,2.8,Sarawak,Kuching,1.5397,110.3542,2026-02-09
+3,Clouds generally forming or developing,00:00:00,24.0,84,0.0,2.3,Terengganu,Kuala Terengganu,5.3303,103.1408,2026-02-09
+2,State of sky on the whole unchanged,00:00:00,27.1,76,0.0,14.1,Perlis,Kangar,6.4333,100.2,2026-02-09
+2,State of sky on the whole unchanged,00:00:00,25.1,83,0.0,10.7,Johor,Batu Pahat,1.85,102.93,2026-02-09
+3,Clouds generally forming or developing,00:00:00,23.8,92,0.0,2.8,Sarawak,Sibu,2.3,111.8167,2026-02-09
+2,State of sky on the whole unchanged,00:00:00,24.2,86,0.0,9.4,Johor,Kluang,2.0336,103.3194,2026-02-09
+2,State of sky on the whole unchanged,00:00:00,26.3,77,0.0,17.5,Johor,Muar,2.05,102.56,2026-02-09
+3,Clouds generally forming or developing,00:00:00,25.3,76,0.0,12.1,Terengganu,Cukai,4.2332,103.4479,2026-02-09
+3,Clouds generally forming or developing,00:00:00,26.3,91,0.0,8.1,Perak,Teluk Intan,4.0259,101.0213,2026-02-09
+2,State of sky on the whole unchanged,00:00:00,28.6,86,0.0,5.8,Perak,Taiping,4.85,100.7333,2026-02-09
+2,State of sky on the whole unchanged,00:00:00,24.6,93,0.0,4.1,Sabah,Kota Kinabalu,5.975,116.0725,2026-02-09
+2,State of sky on the whole unchanged,00:00:00,26.0,78,0.0,21.9,Melaka,Melaka,2.1889,102.2511,2026-02-09
+3,Clouds generally forming or developing,00:00:00,27.1,74,0.0,4.4,Sarawak,Miri,4.4028,113.9933,2026-02-09
+61,"Rain, not freezing, continuous slight at time of observation",00:00:00,24.6,89,2.3,2.6,Pahang,Kuala Lipis,4.184,102.042,2026-02-09
+3,Clouds generally forming or developing,00:00:00,26.9,83,0.0,4.8,Pulau Pinang,George Town,5.4145,100.3292,2026-02-09
