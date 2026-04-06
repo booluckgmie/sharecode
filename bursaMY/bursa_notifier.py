@@ -10,8 +10,8 @@ What it does every run
        a. Downloads the PDF  →  pn17_gn3_pdfs/<dated_filename>.pdf
        b. Parses companies   →  updates pn17_gn3_companies.csv (current snapshot)
        c. Appends new rows   →  pn17_gn3_historical.csv
-       d. Rebuilds summary   →  summary-reportPN17.csv
-       e. Sends email with inline summary + PDF download link
+       d. Appends summary    →  summary-reportPN17.csv
+       e. Sends email with inline summary + PDF attached
   4. Saves last_run.json (git commit handled by the workflow).
 
 Environment variables (set as GitHub Secrets)
@@ -36,13 +36,13 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
-# ─── Paths ────────────────────────────────────────────────────────────────────
-ROOT          = Path(__file__).parent
-PDF_DIR       = ROOT / "pn17_gn3_pdfs"
-COMPANIES_CSV = ROOT / "pn17_gn3_companies.csv"
-HISTORICAL_CSV= ROOT / "pn17_gn3_historical.csv"
-SUMMARY_CSV   = ROOT / "summary-reportPN17.csv"
-CACHE_FILE    = ROOT / "last_run.json"
+# ─── Paths (all relative to this script's location) ──────────────────────────
+ROOT           = Path(__file__).parent
+PDF_DIR        = ROOT / "pn17_gn3_pdfs"
+COMPANIES_CSV  = ROOT / "pn17_gn3_companies.csv"
+HISTORICAL_CSV = ROOT / "pn17_gn3_historical.csv"
+SUMMARY_CSV    = ROOT / "summary-reportPN17.csv"
+CACHE_FILE     = ROOT / "last_run.json"
 
 # ─── Bursa constants ──────────────────────────────────────────────────────────
 URL      = "https://www.bursamalaysia.com/bm/trade/trading_resources/listing_directory/pn17_and_gn3_companies"
@@ -54,12 +54,13 @@ BASE_URL = "https://www.bursamalaysia.com"
 # ══════════════════════════════════════════════════════════════════════════════
 
 def fetch_current() -> dict:
-    """Return {list_updated, pdf_link, pn17_companies, gn3_companies}."""
-    resp = requests.get(URL, timeout=30)
+    """Scrape Bursa and return {list_updated, pdf_link, pn17_companies, gn3_companies}."""
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; BursaMonitor/1.0)"}
+    resp = requests.get(URL, headers=headers, timeout=30)
     resp.raise_for_status()
     soup = BeautifulSoup(resp.content, "html.parser")
 
-    # List updated date
+    # "List updated:" date in the footnote paragraph
     note = soup.find("p", class_="footnote")
     list_updated = (
         note.text.split("List updated:")[-1].strip()
@@ -67,11 +68,11 @@ def fetch_current() -> dict:
         else "N/A"
     )
 
-    # PDF link
+    # PDF download link
     pdf_tag = soup.select_one('p.bm_download a[href$=".pdf"]')
     pdf_link = (BASE_URL + pdf_tag["href"]) if pdf_tag and pdf_tag.get("href") else "N/A"
 
-    # Company lists
+    # Company name lists from the ordered lists on the page
     def extract_list(label: str) -> list[str]:
         heading = soup.find("div", string=lambda t: t and label in t)
         if heading:
@@ -89,6 +90,7 @@ def fetch_current() -> dict:
 
 
 def load_previous() -> dict | None:
+    """Load last_run.json. Returns None if it does not exist yet."""
     if CACHE_FILE.exists():
         with open(CACHE_FILE) as f:
             return json.load(f)
@@ -96,6 +98,7 @@ def load_previous() -> dict | None:
 
 
 def save_current(data: dict):
+    """Write the current date + PDF link to last_run.json for the next comparison."""
     payload = {k: data[k] for k in ("list_updated", "pdf_link")}
     with open(CACHE_FILE, "w") as f:
         json.dump(payload, f, indent=2)
@@ -106,24 +109,25 @@ def save_current(data: dict):
 # ══════════════════════════════════════════════════════════════════════════════
 
 def download_pdf(pdf_url: str, list_updated: str) -> Path | None:
-    """Download PDF, save with dated filename, return local path."""
+    """Download the PDF from Bursa, save with a clean dated filename."""
     if pdf_url == "N/A":
         return None
 
     PDF_DIR.mkdir(exist_ok=True)
 
-    # Build a clean filename from the date  e.g. PN17_GN3_2026-03-17.pdf
+    # e.g. "17 March 2026" → "PN17_GN3_17_March_2026.pdf"
     safe_date = re.sub(r"[^\w]", "_", list_updated.strip())
     dest = PDF_DIR / f"PN17_GN3_{safe_date}.pdf"
 
     if dest.exists():
-        print(f"[PDF] Already downloaded: {dest.name}")
+        print(f"[PDF] Already exists, skipping download: {dest.name}")
         return dest
 
-    resp = requests.get(pdf_url, timeout=60)
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; BursaMonitor/1.0)"}
+    resp = requests.get(pdf_url, headers=headers, timeout=60)
     resp.raise_for_status()
     dest.write_bytes(resp.content)
-    print(f"[PDF] Saved: {dest.name}  ({len(resp.content)//1024} KB)")
+    print(f"[PDF] Saved: {dest.name}  ({len(resp.content) // 1024} KB)")
     return dest
 
 
@@ -133,27 +137,32 @@ def download_pdf(pdf_url: str, list_updated: str) -> Path | None:
 
 COMPANIES_HEADER  = ["Company Name", "Type", "List Updated", "PDF Link"]
 HISTORICAL_HEADER = ["Run Date", "List Updated", "Company Name", "Type", "PDF Link"]
-SUMMARY_HEADER    = ["Report Date", "PN17_GN3_Count", "Percentage_of_Total", "Total_Listed_Companies", "Source File"]
+SUMMARY_HEADER    = ["Report Date", "PN17_GN3_Count", "Percentage_of_Total",
+                     "Total_Listed_Companies", "Source File"]
 
-# Bursa publishes total listed companies on their stats page; we track it in
-# summary-reportPN17.csv.  The helper below reads the last known total so we
-# can carry it forward when Bursa doesn't publish an updated figure.
+
 def _read_last_total_listed() -> int:
-    """Return the most recently recorded Total_Listed_Companies value, or 0."""
+    """
+    Read the most recently recorded Total_Listed_Companies from summary CSV.
+    Used to carry the figure forward since Bursa does not publish it on the
+    PN17/GN3 page itself.
+    """
     if not SUMMARY_CSV.exists():
         return 0
     last = 0
     with open(SUMMARY_CSV, encoding="utf-8") as f:
         for row in csv.DictReader(f):
             try:
-                last = int(str(row.get("Total_Listed_Companies", 0)).replace(",", ""))
-            except ValueError:
+                val = str(row.get("Total_Listed_Companies", "0")).replace(",", "").strip()
+                if val.isdigit():
+                    last = int(val)
+            except (ValueError, AttributeError):
                 pass
     return last
 
 
 def update_companies_csv(data: dict):
-    """Overwrite companies CSV with the current snapshot."""
+    """Overwrite pn17_gn3_companies.csv with the latest snapshot."""
     rows = []
     for name in data["pn17_companies"]:
         rows.append([name, "PN17", data["list_updated"], data["pdf_link"]])
@@ -164,23 +173,24 @@ def update_companies_csv(data: dict):
         w = csv.writer(f)
         w.writerow(COMPANIES_HEADER)
         w.writerows(rows)
-    print(f"[CSV] pn17_gn3_companies.csv updated  ({len(rows)} companies)")
+    print(f"[CSV] pn17_gn3_companies.csv updated — {len(rows)} companies")
 
 
 def append_historical_csv(data: dict):
-    """Append new entries to the historical CSV (skip if date already present)."""
+    """
+    Append new company rows to pn17_gn3_historical.csv.
+    Skips silently if this list_updated date is already recorded.
+    """
     run_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
-    # Read existing to avoid duplicates
     existing_dates: set[str] = set()
     if HISTORICAL_CSV.exists():
         with open(HISTORICAL_CSV, encoding="utf-8") as f:
-            reader = csv.DictReader(f)
-            for row in reader:
+            for row in csv.DictReader(f):
                 existing_dates.add(row.get("List Updated", ""))
 
     if data["list_updated"] in existing_dates:
-        print(f"[CSV] historical – {data['list_updated']} already recorded, skipping.")
+        print(f"[CSV] historical — '{data['list_updated']}' already recorded, skipping.")
         return
 
     new_rows = []
@@ -195,53 +205,25 @@ def append_historical_csv(data: dict):
         if write_header:
             w.writerow(HISTORICAL_HEADER)
         w.writerows(new_rows)
-    print(f"[CSV] pn17_gn3_historical.csv – appended {len(new_rows)} rows")
+    print(f"[CSV] pn17_gn3_historical.csv — appended {len(new_rows)} rows")
 
 
-def rebuild_summary_csv(new_data: dict | None = None):
+def append_summary_csv(data: dict):
     """
-    Append a new row to summary-reportPN17.csv matching the schema:
-      Report Date, PN17_GN3_Count, Percentage_of_Total,
-      Total_Listed_Companies, Source File
-
-    Total_Listed_Companies is carried forward from the previous row when it
-    cannot be scraped (Bursa doesn't expose this on the live page).
-    If new_data is None, rebuilds the entire file from historical CSV.
+    Append one row to summary-reportPN17.csv.
+    Percentage_of_Total uses the last known Total_Listed_Companies figure
+    carried forward from the previous row (update manually for accuracy).
     """
-    if new_data is None:
-        # Full rebuild from historical CSV (used for migrations/repairs)
-        if not HISTORICAL_CSV.exists():
-            return
-        counts: dict[str, dict] = {}
-        with open(HISTORICAL_CSV, encoding="utf-8") as f:
-            for row in csv.DictReader(f):
-                key = row["List Updated"]
-                if key not in counts:
-                    counts[key] = {"count": 0, "source": row.get("PDF Link", "N/A")}
-                counts[key]["count"] += 1
-        existing_totals: dict[str, str] = {}
-        if SUMMARY_CSV.exists():
-            with open(SUMMARY_CSV, encoding="utf-8") as f:
-                for row in csv.DictReader(f):
-                    existing_totals[row.get("Report Date", "")] = row.get("Total_Listed_Companies", "")
-        last_total = _read_last_total_listed()
-        with open(SUMMARY_CSV, "w", newline="", encoding="utf-8") as f:
-            w = csv.writer(f)
-            w.writerow(SUMMARY_HEADER)
-            for lu, c in counts.items():
-                total = int(existing_totals.get(lu, last_total) or last_total)
-                pct   = f"{c['count']/total*100:.2f}%" if total else "N/A"
-                w.writerow([lu, c["count"], pct, total, c["source"]])
-        print(f"[CSV] summary-reportPN17.csv rebuilt  ({len(counts)} entries)")
-        return
-
-    # Normal path: append one new row
     total_listed = _read_last_total_listed()
-    count = len(new_data["pn17_companies"]) + len(new_data["gn3_companies"])
-    pct   = f"{count/total_listed*100:.2f}%" if total_listed else "N/A"
-    # Derive source filename from pdf_link URL
-    source_file = new_data["pdf_link"].split("/")[-1] if new_data["pdf_link"] != "N/A" else "N/A"
-    report_date = datetime.now(timezone.utc).strftime("%-d %B %Y")
+    count        = len(data["pn17_companies"]) + len(data["gn3_companies"])
+    pct          = f"{count / total_listed * 100:.2f}%" if total_listed else "N/A"
+
+    # Source filename extracted from the PDF URL
+    source_file  = data["pdf_link"].split("/")[-1] if data["pdf_link"] != "N/A" else "N/A"
+
+    # Cross-platform day without leading zero: use .day attribute, not %-d
+    now         = datetime.now(timezone.utc)
+    report_date = f"{now.day} {now.strftime('%B %Y')}"
 
     write_header = not SUMMARY_CSV.exists()
     with open(SUMMARY_CSV, "a", newline="", encoding="utf-8") as f:
@@ -249,90 +231,118 @@ def rebuild_summary_csv(new_data: dict | None = None):
         if write_header:
             w.writerow(SUMMARY_HEADER)
         w.writerow([report_date, count, pct, total_listed, source_file])
-    print(f"[CSV] summary-reportPN17.csv – appended row for {report_date}  ({count} companies, {pct})")
+    print(f"[CSV] summary-reportPN17.csv — appended row: {report_date}, {count} companies, {pct}")
 
 
 # ══════════════════════════════════════════════════════════════════════════════
 # 4. EMAIL
 # ══════════════════════════════════════════════════════════════════════════════
 
-def build_email_html(data: dict, pdf_path: Path | None) -> str:
+def _build_html(data: dict) -> str:
+    """Build the HTML body for the alert email."""
     pn17 = data["pn17_companies"]
     gn3  = data["gn3_companies"]
 
-    pn17_rows = "".join(
-        f"<tr><td style='padding:4px 8px'>{i+1}</td><td style='padding:4px 8px'>{c}</td></tr>"
-        for i, c in enumerate(pn17)
-    )
-    gn3_rows = "".join(
-        f"<tr style='background:#f9f9f9'><td style='padding:4px 8px'>{i+1}</td><td style='padding:4px 8px'>{c}</td></tr>"
-        for i, c in enumerate(gn3)
-    )
+    def make_rows(companies: list, bg_alt: str = "#f9f9f9") -> str:
+        return "".join(
+            f"<tr style='background:{'#ffffff' if i % 2 == 0 else bg_alt}'>"
+            f"<td style='padding:5px 10px;color:#555'>{i + 1}</td>"
+            f"<td style='padding:5px 10px'>{c}</td></tr>"
+            for i, c in enumerate(companies)
+        )
 
-    pdf_section = (
-        f"<p>📎 <a href='{data['pdf_link']}'>Download latest PDF from Bursa Malaysia</a></p>"
+    pdf_btn = (
+        f"<p style='margin:12px 0'>"
+        f"<a href='{data['pdf_link']}' "
+        f"style='background:#cc0000;color:#fff;padding:8px 18px;border-radius:4px;"
+        f"text-decoration:none;font-size:14px'>Download PDF from Bursa Malaysia</a></p>"
         if data["pdf_link"] != "N/A"
-        else "<p>⚠️ PDF link not available.</p>"
+        else "<p style='color:#999'>⚠️ PDF link not available on Bursa page.</p>"
     )
 
-    return f"""
-<html><body style="font-family:Arial,sans-serif;max-width:700px;margin:auto;color:#222">
-<h2 style="color:#cc0000">🔔 Bursa Malaysia PN17/GN3 Update Detected</h2>
-<p><strong>List Updated:</strong> {data['list_updated']}</p>
-<p><strong>Checked on:</strong> {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}</p>
-{pdf_section}
+    now_str = datetime.now(timezone.utc).strftime("%d %b %Y %H:%M UTC")
 
-<h3>PN17 Companies &nbsp;<span style="font-size:0.85em;color:#666">({len(pn17)} companies)</span></h3>
-<table border="1" cellspacing="0" cellpadding="0"
-       style="border-collapse:collapse;border-color:#ddd;width:100%">
+    return f"""<html><body style="font-family:Arial,sans-serif;max-width:700px;margin:auto;color:#222;font-size:14px">
+<h2 style="color:#cc0000;margin-bottom:4px">🔔 Bursa Malaysia PN17/GN3 Update</h2>
+<p style="color:#666;font-size:13px;margin-top:0">Detected on {now_str}</p>
+
+<table style="width:100%;border-collapse:collapse;margin-bottom:12px">
+  <tr>
+    <td style="padding:6px 10px;background:#f5f5f5;font-weight:bold;width:160px">List updated</td>
+    <td style="padding:6px 10px">{data['list_updated']}</td>
+  </tr>
+  <tr>
+    <td style="padding:6px 10px;background:#f5f5f5;font-weight:bold">PN17 companies</td>
+    <td style="padding:6px 10px">{len(pn17)}</td>
+  </tr>
+  <tr>
+    <td style="padding:6px 10px;background:#f5f5f5;font-weight:bold">GN3 companies</td>
+    <td style="padding:6px 10px">{len(gn3)}</td>
+  </tr>
+  <tr>
+    <td style="padding:6px 10px;background:#f5f5f5;font-weight:bold">Total</td>
+    <td style="padding:6px 10px"><strong>{len(pn17) + len(gn3)}</strong></td>
+  </tr>
+</table>
+
+{pdf_btn}
+<p style="font-size:12px;color:#888">The PDF is also attached to this email.</p>
+
+<h3 style="color:#cc0000;border-bottom:2px solid #cc0000;padding-bottom:4px">
+  PN17 Companies <span style="font-weight:normal;font-size:0.85em;color:#666">({len(pn17)})</span>
+</h3>
+<table style="width:100%;border-collapse:collapse;margin-bottom:20px">
   <tr style="background:#cc0000;color:#fff">
-    <th style="padding:6px 8px">#</th>
-    <th style="padding:6px 8px;text-align:left">Company</th>
+    <th style="padding:6px 10px;width:40px">#</th>
+    <th style="padding:6px 10px;text-align:left">Company Name</th>
   </tr>
-  {pn17_rows}
+  {make_rows(pn17)}
 </table>
 
-<h3>GN3 Companies &nbsp;<span style="font-size:0.85em;color:#666">({len(gn3)} companies)</span></h3>
-<table border="1" cellspacing="0" cellpadding="0"
-       style="border-collapse:collapse;border-color:#ddd;width:100%">
+<h3 style="color:#1a6699;border-bottom:2px solid #1a6699;padding-bottom:4px">
+  GN3 Companies <span style="font-weight:normal;font-size:0.85em;color:#666">({len(gn3)})</span>
+</h3>
+<table style="width:100%;border-collapse:collapse;margin-bottom:20px">
   <tr style="background:#1a6699;color:#fff">
-    <th style="padding:6px 8px">#</th>
-    <th style="padding:6px 8px;text-align:left">Company</th>
+    <th style="padding:6px 10px;width:40px">#</th>
+    <th style="padding:6px 10px;text-align:left">Company Name</th>
   </tr>
-  {gn3_rows}
+  {make_rows(gn3, "#eef4fa")}
 </table>
 
-<hr style="margin-top:24px">
-<p style="font-size:0.8em;color:#888">
-  Automated alert via GitHub Actions · Bursa Malaysia PN17/GN3 Monitor
+<hr style="border:none;border-top:1px solid #eee;margin-top:24px">
+<p style="font-size:11px;color:#aaa">
+  Automated by GitHub Actions · Bursa Malaysia PN17/GN3 Monitor ·
+  Source: <a href="{URL}" style="color:#aaa">{URL}</a>
 </p>
-</body></html>
-"""
+</body></html>"""
 
 
 def send_email(data: dict, pdf_path: Path | None):
-    gmail_user  = os.environ.get("GMAIL_USER", "")
-    gmail_pass  = os.environ.get("GMAIL_APP_PASS", "")
-    notify_raw  = os.environ.get("NOTIFY_EMAILS", "")
+    """Send the alert email with the HTML summary and PDF attachment."""
+    gmail_user = os.environ.get("GMAIL_USER", "").strip()
+    gmail_pass = os.environ.get("GMAIL_APP_PASS", "").strip()
+    notify_raw = os.environ.get("NOTIFY_EMAILS", "").strip()
 
     if not gmail_user or not gmail_pass:
-        print("[EMAIL] GMAIL_USER / GMAIL_APP_PASS not set – skipping email.")
+        print("[EMAIL] GMAIL_USER / GMAIL_APP_PASS not set — skipping.")
         return
-    if not notify_raw.strip():
-        print("[EMAIL] NOTIFY_EMAILS not set – skipping email.")
+    if not notify_raw:
+        print("[EMAIL] NOTIFY_EMAILS not set — skipping.")
         return
 
     recipients = [e.strip() for e in notify_raw.split(",") if e.strip()]
 
-    msg = MIMEMultipart("alternative")
-    msg["Subject"] = f"🔔 Bursa PN17/GN3 Update – {data['list_updated']}"
+    # "mixed" is required when combining HTML body + binary attachment
+    msg = MIMEMultipart("mixed")
+    msg["Subject"] = f"🔔 Bursa PN17/GN3 Update — {data['list_updated']}"
     msg["From"]    = gmail_user
     msg["To"]      = ", ".join(recipients)
 
-    html_body = build_email_html(data, pdf_path)
-    msg.attach(MIMEText(html_body, "html"))
+    # HTML body wrapped in a "related" part so images can be embedded later
+    msg.attach(MIMEText(_build_html(data), "html", "utf-8"))
 
-    # Attach PDF if downloaded
+    # PDF attachment
     if pdf_path and pdf_path.exists():
         with open(pdf_path, "rb") as fp:
             part = MIMEBase("application", "octet-stream")
@@ -343,12 +353,17 @@ def send_email(data: dict, pdf_path: Path | None):
             f'attachment; filename="{pdf_path.name}"',
         )
         msg.attach(part)
+        print(f"[EMAIL] Attaching: {pdf_path.name}")
+    else:
+        print("[EMAIL] No PDF to attach (PDF not downloaded or link was N/A).")
 
     try:
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
             server.login(gmail_user, gmail_pass)
             server.sendmail(gmail_user, recipients, msg.as_string())
-        print(f"[EMAIL] Sent to: {', '.join(recipients)}")
+        print(f"[EMAIL] Sent successfully to: {', '.join(recipients)}")
+    except smtplib.SMTPAuthenticationError:
+        print("[EMAIL] Authentication failed — check GMAIL_USER and GMAIL_APP_PASS.", file=sys.stderr)
     except Exception as e:
         print(f"[EMAIL] Failed: {e}", file=sys.stderr)
 
@@ -358,9 +373,9 @@ def send_email(data: dict, pdf_path: Path | None):
 # ══════════════════════════════════════════════════════════════════════════════
 
 def main():
-    print(f"\n{'='*60}")
-    print(f"  Bursa PN17/GN3 Monitor  –  {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}")
-    print(f"{'='*60}\n")
+    print(f"\n{'=' * 60}")
+    print(f"  Bursa PN17/GN3 Monitor  —  {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}")
+    print(f"{'=' * 60}\n")
 
     current  = fetch_current()
     previous = load_previous()
@@ -368,9 +383,10 @@ def main():
     print(f"  List Updated : {current['list_updated']}")
     print(f"  PDF Link     : {current['pdf_link']}")
     print(f"  PN17 Count   : {len(current['pn17_companies'])}")
-    print(f"  GN3  Count   : {len(current['gn3_companies'])}\n")
+    print(f"  GN3  Count   : {len(current['gn3_companies'])}")
+    print()
 
-    # Detect change
+    # Trigger update if EITHER the date OR the PDF link has changed
     changed = (
         not previous
         or previous.get("list_updated") != current["list_updated"]
@@ -378,15 +394,15 @@ def main():
     )
 
     if not changed:
-        print("✅ No update detected – nothing to do.\n")
+        print("✅ No update detected — nothing to do.\n")
         return
 
-    print("🆕 New release detected! Processing…\n")
+    print("🆕 New release detected! Processing...\n")
 
     pdf_path = download_pdf(current["pdf_link"], current["list_updated"])
     update_companies_csv(current)
     append_historical_csv(current)
-    rebuild_summary_csv(new_data=current)
+    append_summary_csv(current)
     send_email(current, pdf_path)
     save_current(current)
 
