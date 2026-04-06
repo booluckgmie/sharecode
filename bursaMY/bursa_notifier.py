@@ -55,9 +55,63 @@ BASE_URL = "https://www.bursamalaysia.com"
 
 def fetch_current() -> dict:
     """Scrape Bursa and return {list_updated, pdf_link, pn17_companies, gn3_companies}."""
-    headers = {"User-Agent": "Mozilla/5.0 (compatible; BursaMonitor/1.0)"}
-    resp = requests.get(URL, headers=headers, timeout=30)
-    resp.raise_for_status()
+    import time
+
+    # Full browser headers — Bursa returns 403 to bare/bot User-Agent strings
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/124.0.0.0 Safari/537.36"
+        ),
+        "Accept": (
+            "text/html,application/xhtml+xml,application/xml;"
+            "q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8"
+        ),
+        "Accept-Language":           "en-US,en;q=0.9",
+        "Accept-Encoding":           "gzip, deflate, br",
+        "Connection":                "keep-alive",
+        "Upgrade-Insecure-Requests": "1",
+        "Sec-Fetch-Dest":            "document",
+        "Sec-Fetch-Mode":            "navigate",
+        "Sec-Fetch-Site":            "none",
+        "Sec-Fetch-User":            "?1",
+        "Cache-Control":             "max-age=0",
+    }
+
+    session = requests.Session()
+    session.headers.update(headers)
+
+    # Warm-up: visit homepage first to collect any WAF / Cloudflare cookies
+    try:
+        session.get(BASE_URL, timeout=20)
+        time.sleep(2)
+    except Exception:
+        pass  # best-effort; continue even if homepage fails
+
+    # Retry up to 3 times with back-off on 403 / transient errors
+    last_exc: Exception = RuntimeError("No attempts made")
+    for attempt in range(1, 4):
+        try:
+            resp = session.get(URL, timeout=30)
+            if resp.status_code == 403:
+                raise requests.exceptions.HTTPError(
+                    f"403 Forbidden (attempt {attempt}/3)", response=resp
+                )
+            resp.raise_for_status()
+            break
+        except (requests.exceptions.HTTPError,
+                requests.exceptions.ConnectionError,
+                requests.exceptions.Timeout) as exc:
+            last_exc = exc
+            if attempt < 3:
+                wait = attempt * 8
+                print(f"[SCRAPE] Attempt {attempt} failed ({exc}), retrying in {wait}s...")
+                time.sleep(wait)
+    else:
+        print(f"[SCRAPE] All 3 attempts failed. Last error: {last_exc}", file=sys.stderr)
+        raise last_exc
+
     soup = BeautifulSoup(resp.content, "html.parser")
 
     # "List updated:" date in the footnote paragraph
