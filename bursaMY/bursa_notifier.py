@@ -36,6 +36,14 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
+# Try cloudscraper first (handles Cloudflare JS challenges).
+# Falls back to playwright headless browser if still blocked.
+try:
+    import cloudscraper as _cloudscraper
+    _CLOUDSCRAPER_OK = True
+except ImportError:
+    _CLOUDSCRAPER_OK = False
+
 # ─── Paths (all relative to this script's location) ──────────────────────────
 ROOT           = Path(__file__).parent
 PDF_DIR        = ROOT / "pn17_gn3_pdfs"
@@ -53,66 +61,68 @@ BASE_URL = "https://www.bursamalaysia.com"
 # 1. SCRAPING
 # ══════════════════════════════════════════════════════════════════════════════
 
+def _fetch_html_cloudscraper() -> str:
+    """Use cloudscraper to bypass Cloudflare JS challenge."""
+    scraper = _cloudscraper.create_scraper(
+        browser={"browser": "chrome", "platform": "windows", "mobile": False}
+    )
+    scraper.get(BASE_URL, timeout=20)   # warm-up for cookies
+    resp = scraper.get(URL, timeout=30)
+    resp.raise_for_status()
+    return resp.text
+
+
+def _fetch_html_playwright() -> str:
+    """Use a headless Chromium browser as the last resort (always works)."""
+    from playwright.sync_api import sync_playwright
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        page = browser.new_page(
+            user_agent=(
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/124.0.0.0 Safari/537.36"
+            )
+        )
+        page.goto(URL, wait_until="networkidle", timeout=30000)
+        html = page.content()
+        browser.close()
+    return html
+
+
 def fetch_current() -> dict:
-    """Scrape Bursa and return {list_updated, pdf_link, pn17_companies, gn3_companies}."""
-    import time
+    """
+    Scrape Bursa and return {list_updated, pdf_link, pn17_companies, gn3_companies}.
 
-    # Full browser headers — Bursa returns 403 to bare/bot User-Agent strings
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/124.0.0.0 Safari/537.36"
-        ),
-        "Accept": (
-            "text/html,application/xhtml+xml,application/xml;"
-            "q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8"
-        ),
-        "Accept-Language":           "en-US,en;q=0.9",
-        "Accept-Encoding":           "gzip, deflate, br",
-        "Connection":                "keep-alive",
-        "Upgrade-Insecure-Requests": "1",
-        "Sec-Fetch-Dest":            "document",
-        "Sec-Fetch-Mode":            "navigate",
-        "Sec-Fetch-Site":            "none",
-        "Sec-Fetch-User":            "?1",
-        "Cache-Control":             "max-age=0",
-    }
+    Strategy (in order):
+      1. cloudscraper  — handles Cloudflare JS challenges via TLS fingerprinting
+      2. playwright    — full headless Chromium, unblockable fallback
+    """
+    html = None
 
-    session = requests.Session()
-    session.headers.update(headers)
-
-    # Warm-up: visit homepage first to collect any WAF / Cloudflare cookies
-    try:
-        session.get(BASE_URL, timeout=20)
-        time.sleep(2)
-    except Exception:
-        pass  # best-effort; continue even if homepage fails
-
-    # Retry up to 3 times with back-off on 403 / transient errors
-    last_exc: Exception = RuntimeError("No attempts made")
-    for attempt in range(1, 4):
+    # ── Method 1: cloudscraper ────────────────────────────────────────────────
+    if _CLOUDSCRAPER_OK:
         try:
-            resp = session.get(URL, timeout=30)
-            if resp.status_code == 403:
-                raise requests.exceptions.HTTPError(
-                    f"403 Forbidden (attempt {attempt}/3)", response=resp
-                )
-            resp.raise_for_status()
-            break
-        except (requests.exceptions.HTTPError,
-                requests.exceptions.ConnectionError,
-                requests.exceptions.Timeout) as exc:
-            last_exc = exc
-            if attempt < 3:
-                wait = attempt * 8
-                print(f"[SCRAPE] Attempt {attempt} failed ({exc}), retrying in {wait}s...")
-                time.sleep(wait)
-    else:
-        print(f"[SCRAPE] All 3 attempts failed. Last error: {last_exc}", file=sys.stderr)
-        raise last_exc
+            print("[SCRAPE] Trying cloudscraper...")
+            html = _fetch_html_cloudscraper()
+            print("[SCRAPE] cloudscraper succeeded.")
+        except Exception as e:
+            print(f"[SCRAPE] cloudscraper failed: {e}")
 
-    soup = BeautifulSoup(resp.content, "html.parser")
+    # ── Method 2: playwright headless browser ─────────────────────────────────
+    if html is None:
+        try:
+            print("[SCRAPE] Falling back to playwright headless browser...")
+            html = _fetch_html_playwright()
+            print("[SCRAPE] playwright succeeded.")
+        except Exception as e:
+            print(f"[SCRAPE] playwright failed: {e}", file=sys.stderr)
+            raise RuntimeError(
+                "All fetch methods failed. "
+                "Check if Bursa is down or if playwright is installed."
+            ) from e
+
+    soup = BeautifulSoup(html, "html.parser")
 
     # "List updated:" date in the footnote paragraph
     note = soup.find("p", class_="footnote")
