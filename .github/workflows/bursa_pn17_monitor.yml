@@ -6,6 +6,10 @@ on:
     - cron: "0 2 * * *"
   workflow_dispatch:   # allow manual trigger from GitHub Actions tab
 
+# Suppress Node.js 20 deprecation warnings
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 permissions:
   contents: write      # required to push PDF + CSV commits back to repo
 
@@ -26,13 +30,19 @@ jobs:
         with:
           python-version: "3.11"
 
-      # ── 3. Install dependencies ─────────────────────────────────────────────
+      # ── 3. Install Python dependencies ──────────────────────────────────────
       - name: Install dependencies
         run: |
           pip install --upgrade pip
           pip install -r bursaMY/requirements.txt
 
-      # ── 4. Run the monitor script ───────────────────────────────────────────
+      # ── 4. Install Playwright Chromium browser ───────────────────────────────
+      #    Only used as fallback if cloudscraper cannot bypass Cloudflare.
+      #    Cached by GitHub Actions between runs automatically.
+      - name: Install Playwright browser
+        run: playwright install chromium --with-deps
+
+      # ── 5. Run the monitor script ───────────────────────────────────────────
       - name: Run Bursa PN17/GN3 monitor
         env:
           GMAIL_USER:     ${{ secrets.GMAIL_USER }}
@@ -40,7 +50,7 @@ jobs:
           NOTIFY_EMAILS:  ${{ secrets.NOTIFY_EMAILS }}
         run: python bursaMY/bursa_notifier.py
 
-      # ── 5. Commit and push any changes ──────────────────────────────────────
+      # ── 6. Commit and push any changes ──────────────────────────────────────
       - name: Commit & push updates
         run: |
           git config user.name  "booluckgmie"
