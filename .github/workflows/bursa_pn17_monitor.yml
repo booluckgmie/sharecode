@@ -55,11 +55,17 @@ jobs:
         run: |
           git config user.name  "booluckgmie"
           git config user.email "booluckgmie@gmail.com"
-          git pull --rebase
+          # Stage the files the script wrote FIRST, before any pull
           git add bursaMY/pn17_gn3_pdfs/ \
                   bursaMY/pn17_gn3_companies.csv \
                   bursaMY/pn17_gn3_historical.csv \
                   bursaMY/summary-reportPN17.csv \
                   bursaMY/last_run.json
-          git diff --cached --quiet || git commit -m "chore: auto-update $(date +'%Y-%m-%d') Bursa PN17/GN3 data"
+          # Nothing changed → skip push entirely
+          git diff --cached --quiet && echo "No changes to commit." && exit 0
+          # Stash staged changes, sync with remote, re-apply, then commit
+          git stash
+          git pull --rebase
+          git stash pop
+          git commit -m "chore: auto-update $(date +'%Y-%m-%d') Bursa PN17/GN3 data"
           git push
