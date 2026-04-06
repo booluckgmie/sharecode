@@ -1,0 +1,55 @@
+name: Bursa PN17/GN3 Monitor
+
+on:
+  schedule:
+    # 02:00 UTC = 10:00 AM MYT (UTC+8), runs daily
+    - cron: "0 2 * * *"
+  workflow_dispatch:   # allow manual trigger from GitHub UI
+
+permissions:
+  contents: write      # needed to push PDF + CSV updates back to repo
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. Checkout full history so git diff works ──────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # ── 2. Set up Python ────────────────────────────────────────────────────
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # ── 3. Install dependencies ─────────────────────────────────────────────
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # ── 4. Run the monitor script ───────────────────────────────────────────
+      - name: Run Bursa PN17/GN3 monitor
+        env:
+          GMAIL_USER:     ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASS: ${{ secrets.GMAIL_APP_PASS }}
+          NOTIFY_EMAILS:  ${{ secrets.NOTIFY_EMAILS }}   # comma-separated list
+        run: python bursa_notifier.py
+
+      # ── 5. Commit any changes (new PDF, updated CSVs, last_run.json) ────────
+      - name: Commit & push updates
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add pn17_gn3_pdfs/ \
+                  pn17_gn3_companies.csv \
+                  pn17_gn3_historical.csv \
+                  summary-reportPN17.csv \
+                  last_run.json
+          # Only commit if there is something new
+          git diff --cached --quiet || git commit -m "chore: auto-update $(date +'%Y-%m-%d') Bursa PN17/GN3 data"
+          git push
