@@ -66,6 +66,22 @@ def create_chart(df, proj_df):
     plt.savefig(chart_path)
     return chart_path
 
+def handle_peak(current_price):
+    # 1. Load existing peak
+    try:
+        with open("last_peak.txt", "r") as f:
+            peak = float(f.read().strip())
+    except FileNotFoundError:
+        peak = current_price # Initialize if file doesn't exist
+
+    # 2. Update if new peak is reached
+    if current_price > peak:
+        peak = current_price
+        with open("last_peak.txt", "w") as f:
+            f.write(f"{peak:.2f}")
+    
+    return peak
+    
 def send_telegram(chart_path, message):
     url = f"https://api.telegram.org/bot{TOKEN}/sendPhoto"
     with open(chart_path, 'rb') as photo:
