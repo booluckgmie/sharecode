@@ -186,18 +186,22 @@ def main():
         prev_price    = prices[-2] if len(prices) > 1 else current_price
         change        = current_price - prev_price
 
-        high_30d = max(prices[-30:]) if len(prices) >= 30 else max(prices)
-        low_30d  = min(prices[-30:]) if len(prices) >= 30 else min(prices)
+        high_30d   = max(prices[-30:]) if len(prices) >= 30 else max(prices)
+        low_30d    = min(prices[-30:]) if len(prices) >= 30 else min(prices)
+        median_30d = (high_30d + low_30d) / 2  # midpoint of 30d range
+
+        # Use env AVG_COST if explicitly set, otherwise fall back to 30d median
+        effective_avg_cost = AVG_COST if os.getenv("AVG_COST") else median_30d
 
         # --- Peak tracking ---
         peak_price = handle_peak(current_price)
 
         # --- Projection & Chart ---
         proj_df    = generate_projection(df)
-        chart_path = create_chart(df, proj_df, current_price, AVG_COST)
+        chart_path = create_chart(df, proj_df, current_price, effective_avg_cost)
 
         # --- Signals ---
-        profit_pct = (current_price - AVG_COST) / AVG_COST
+        profit_pct = (current_price - effective_avg_cost) / effective_avg_cost
         drop_pct   = (peak_price - current_price) / peak_price if peak_price else 0
 
         # Trend (compare last vs 7 days ago)
@@ -223,7 +227,7 @@ def main():
         change_str = (f"+RM {change:.2f}" if change >= 0
                       else f"-RM {abs(change):.2f}")
 
-        # --- Caption ---
+        avg_cost_label = ("env" if os.getenv("AVG_COST") else "30d mid")
         caption = (
             f"📊 *Public Gold Weekly Report*\n\n"
             f"💰 Price:      *RM {current_price:.2f}/g*\n"
@@ -231,7 +235,8 @@ def main():
             f"🏔 Peak:       RM {peak_price:.2f}/g\n"
             f"📈 30D High:   RM {high_30d:.2f}\n"
             f"📉 30D Low:    RM {low_30d:.2f}\n"
-            f"🎯 Avg Cost:   RM {AVG_COST:.2f}/g\n"
+            f"⚖️ 30D Mid:    RM {median_30d:.2f}\n"
+            f"🎯 Avg Cost:   RM {effective_avg_cost:.2f}/g _({avg_cost_label})_\n"
             f"💹 P/L:        *{profit_pct:+.2%}*\n"
             f"📊 Status:     {trend}\n\n"
             f"🧠 *Signal*: {signal}"
