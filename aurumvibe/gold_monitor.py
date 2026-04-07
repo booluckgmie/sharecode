@@ -13,12 +13,12 @@ import numpy as np
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
-try:
-    raw_avg_cost = os.getenv("AVG_COST", "320.0")
-    AVG_COST = float(raw_avg_cost)
-except ValueError:
-    AVG_COST = 320.0
-    print(f"⚠️ Warning: Invalid AVG_COST format. Using default: {AVG_COST}")
+# try:
+#     raw_avg_cost = os.getenv("AVG_COST", "320.0")
+#     AVG_COST = float(raw_avg_cost)
+# except ValueError:
+#     AVG_COST = 320.0
+#     print(f"⚠️ Warning: Invalid AVG_COST format. Using default: {AVG_COST}")
 
 RISE_THRESHOLD = 0.15   # 15% gain  → Take profit alert
 DROP_THRESHOLD = 0.05   # 5% drop   → Buy more alert
@@ -191,7 +191,7 @@ def main():
         median_30d = (high_30d + low_30d) / 2  # midpoint of 30d range
 
         # Use env AVG_COST if explicitly set, otherwise fall back to 30d median
-        effective_avg_cost = AVG_COST if os.getenv("AVG_COST") else median_30d
+        effective_avg_cost = median_30d
 
         # --- Peak tracking ---
         peak_price = handle_peak(current_price)
