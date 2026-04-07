@@ -41,19 +41,22 @@ jobs:
 
       - name: Commit and Push Updates
         run: |
+          # 1. Setup identity
           git config --global user.email "booluckgmie@gmail.com"
           git config --global user.name "booluckgmie"
           
-          # Fetch all history so the runner knows where 'master' is
+          # 2. Sync with remote
           git fetch origin master
+          git pull origin master --rebase
           
-          # Pull using master instead of main
-          git pull origin master
-          
+          # 3. Stage changes (specifically last_peak.txt)
           git add .
           
-          # Commit only if there are changes
-          git commit -m "Update gold peak data [skip ci]" || exit 0
-          
-          # Push specifically to master
-          git push origin HEAD:master --force
+          # 4. Commit only if changes exist
+          if git diff --staged --quiet; then
+            echo "No changes to last_peak.txt. Skipping commit."
+          else
+            git commit -m "Update gold peak data [skip ci]"
+            # 5. Push specifically to master branch
+            git push origin HEAD:master --force
+          fi
