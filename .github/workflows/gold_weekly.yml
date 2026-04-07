@@ -36,7 +36,7 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          # AVG_COST: ${{ secrets.AVG_COST }} # Uncomment if using GitHub Secrets for cost
+          AVG_COST: ${{ secrets.AVG_COST }}
         run: python gold_monitor.py
 
       - name: Commit and Push Updates
