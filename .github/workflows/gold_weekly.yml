@@ -43,8 +43,17 @@ jobs:
         run: |
           git config --global user.email "booluckgmie@gmail.com"
           git config --global user.name "booluckgmie"
-          git pull origin main
+          
+          # Fetch all history so the runner knows where 'master' is
+          git fetch origin master
+          
+          # Pull using master instead of main
+          git pull origin master
+          
           git add .
-          # We use '|| exit 0' so the workflow doesn't fail if there are no price changes/updates
+          
+          # Commit only if there are changes
           git commit -m "Update gold peak data [skip ci]" || exit 0
-          git push --force
+          
+          # Push specifically to master
+          git push origin HEAD:master --force
