@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     
-    # This ensures all 'run' commands happen inside the aurumvibe folder
+    # Ensures Python scripts run within the subfolder
     defaults:
       run:
         working-directory: ./aurumvibe
@@ -18,13 +18,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }} # Needed for the push back
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0 # Required for reliable git pull/push operations
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.9'
-          cache: 'pip' # Speeds up subsequent runs
+          cache: 'pip'
 
       - name: Install dependencies
         run: |
@@ -35,33 +36,33 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          # If you set up AVG_COST as a secret:
-          # AVG_COST: ${{ secrets.AVG_COST }} 
+          # AVG_COST: ${{ secrets.AVG_COST }} # Uncomment if using GitHub Secrets for cost
         run: python gold_monitor.py
 
       - name: Commit and Push Updates
+        # Override subdirectory default to run from Repository Root
         working-directory: ./ 
         run: |
           # 1. Setup identity
           git config --global user.email "booluckgmie@gmail.com"
           git config --global user.name "booluckgmie"
           
-          # 2. Handle "Unstaged Changes" Error
+          # 2. Handle "Unstaged Changes" (Stash generated files)
           echo "Stashing local changes..."
           git stash
           
-          # 3. Sync with remote
+          # 3. Sync with remote master branch
           git fetch origin master
           git pull origin master --rebase
           
-          # 4. Bring changes back
+          # 4. Bring price tracking back
           echo "Applying stashed changes..."
           git stash pop || echo "No stash to apply"
           
-          # 5. Stage only the tracking file
+          # 5. Stage only the tracking file (Ignore the .png chart)
           git add aurumvibe/last_peak.txt
           
-          # 6. Commit and Push
+          # 6. Commit and Push back to GitHub
           if git diff --staged --quiet; then
             echo "No changes to last_peak.txt. Skipping commit."
           else
