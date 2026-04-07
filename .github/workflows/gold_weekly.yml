@@ -2,20 +2,29 @@ name: Weekly Gold Monitor
 
 on:
   schedule:
-    - cron: '0 0 * * 1' # Runs at 00:00 UTC every Monday (8AM Malaysia)
-  workflow_dispatch: # Allows manual trigger for testing
+    - cron: '0 0 * * 1' # Runs at 08:00 AM Malaysia time every Monday
+  workflow_dispatch: # Manual trigger for testing
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    # This ensures all 'run' commands happen inside the aurumvibe folder
+    defaults:
+      run:
+        working-directory: ./aurumvibe
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }} # Needed for the push back
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.9'
+          cache: 'pip' # Speeds up subsequent runs
 
       - name: Install dependencies
         run: |
@@ -26,4 +35,16 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          # If you set up AVG_COST as a secret:
+          # AVG_COST: ${{ secrets.AVG_COST }} 
         run: python gold_monitor.py
+
+      - name: Commit and Push Updates
+        run: |
+          git config --global user.email "booluckgmie@gmail.com"
+          git config --global user.name "booluckgmie"
+          git pull origin main
+          git add .
+          # We use '|| exit 0' so the workflow doesn't fail if there are no price changes/updates
+          git commit -m "Update gold peak data [skip ci]" || exit 0
+          git push --force
