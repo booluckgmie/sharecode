@@ -40,23 +40,31 @@ jobs:
         run: python gold_monitor.py
 
       - name: Commit and Push Updates
+        working-directory: ./ 
         run: |
           # 1. Setup identity
           git config --global user.email "booluckgmie@gmail.com"
           git config --global user.name "booluckgmie"
           
-          # 2. Sync with remote
+          # 2. Handle "Unstaged Changes" Error
+          echo "Stashing local changes..."
+          git stash
+          
+          # 3. Sync with remote
           git fetch origin master
           git pull origin master --rebase
           
-          # 3. Stage changes (specifically last_peak.txt)
-          git add .
+          # 4. Bring changes back
+          echo "Applying stashed changes..."
+          git stash pop || echo "No stash to apply"
           
-          # 4. Commit only if changes exist
+          # 5. Stage only the tracking file
+          git add aurumvibe/last_peak.txt
+          
+          # 6. Commit and Push
           if git diff --staged --quiet; then
             echo "No changes to last_peak.txt. Skipping commit."
           else
             git commit -m "Update gold peak data [skip ci]"
-            # 5. Push specifically to master branch
             git push origin HEAD:master --force
           fi
