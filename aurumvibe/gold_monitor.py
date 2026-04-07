@@ -10,7 +10,19 @@ import numpy as np
 # --- Configuration ---
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
-DROP_THRESHOLD = 0.05  # 5% alert
+
+# AUTOMATED AVG_COST logic:
+# It will try to get the value from GitHub Secrets; 
+# otherwise, it defaults to 320.0
+try:
+    raw_avg_cost = os.getenv("AVG_COST", "320.0")
+    AVG_COST = float(raw_avg_cost)
+except ValueError:
+    AVG_COST = 320.0
+    print(f"⚠️ Warning: Invalid AVG_COST format. Using default: {AVG_COST}")
+
+RISE_THRESHOLD = 0.15   # 15% gain
+DROP_THRESHOLD = 0.05   # 5% drop
 BASE_PRICE_FILE = "last_peak.txt"
 
 def get_data():
