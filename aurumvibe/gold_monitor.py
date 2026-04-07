@@ -92,10 +92,19 @@ def handle_peak(current_price):
     
 def send_telegram(chart_path, message):
     url = f"https://api.telegram.org/bot{TOKEN}/sendPhoto"
-    with open(chart_path, 'rb') as photo:
-        payload = {'chat_id': CHAT_ID, 'caption': message, 'parse_mode': 'Markdown'}
-        files = {'photo': photo}
-        requests.post(url, data=payload, files=files)
+    try:
+        with open(chart_path, 'rb') as photo:
+            payload = {'chat_id': CHAT_ID, 'caption': message, 'parse_mode': 'Markdown'}
+            files = {'photo': photo}
+            response = requests.post(url, data=payload, files=files)
+            
+            # This will show the error in your GitHub Action log if it fails
+            if response.status_code != 200:
+                print(f"❌ Telegram Error: {response.status_code} - {response.text}")
+            else:
+                print("✅ Telegram message sent successfully!")
+    except Exception as e:
+        print(f"❌ Connection Error: {e}")
 
 # --- New Configuration for Selling ---
 RISE_THRESHOLD = 0.15   # 15% gain - Alert to take profit
