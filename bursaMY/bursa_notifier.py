@@ -84,7 +84,14 @@ def _fetch_html_playwright() -> str:
                 "Chrome/124.0.0.0 Safari/537.36"
             )
         )
-        page.goto(URL, wait_until="networkidle", timeout=30000)
+        # Use domcontentloaded + explicit wait for an <ol> to appear;
+        # networkidle alone can miss JS-rendered company lists.
+        page.goto(URL, wait_until="domcontentloaded", timeout=60000)
+        try:
+            page.wait_for_selector("ol", timeout=15000)
+        except Exception:
+            # If no <ol> appears in 15 s, fall through with whatever HTML we have
+            pass
         html = page.content()
         browser.close()
     return html
@@ -124,25 +131,57 @@ def fetch_current() -> dict:
 
     soup = BeautifulSoup(html, "html.parser")
 
-    # "List updated:" date in the footnote paragraph
-    note = soup.find("p", class_="footnote")
-    list_updated = (
-        note.text.split("List updated:")[-1].strip()
-        if note and "List updated:" in note.text
-        else "N/A"
-    )
+    # "List updated:" date — check footnote paragraph first, then any paragraph
+    list_updated = "N/A"
+    for candidate in soup.find_all("p"):
+        text = candidate.get_text(" ", strip=True)
+        if "List updated:" in text:
+            list_updated = text.split("List updated:")[-1].strip()
+            break
 
-    # PDF download link
-    pdf_tag = soup.select_one('p.bm_download a[href$=".pdf"]')
+    # PDF download link — try multiple selectors in priority order
+    _PDF_SELECTORS = [
+        'p.bm_download a[href$=".pdf"]',
+        'a.bm_download[href$=".pdf"]',
+        '.bm_download a[href$=".pdf"]',
+        'a[href*="Status_of_PN17"][href$=".pdf"]',
+        'a[href*="Monthly_Announcement"][href$=".pdf"]',
+        'a[href*="pn17"][href$=".pdf"]',
+        'a[href*="PN17"][href$=".pdf"]',
+    ]
+    pdf_tag = None
+    for sel in _PDF_SELECTORS:
+        pdf_tag = soup.select_one(sel)
+        if pdf_tag:
+            break
     pdf_link = (BASE_URL + pdf_tag["href"]) if pdf_tag and pdf_tag.get("href") else "N/A"
 
-    # Company name lists from the ordered lists on the page
+    # Company name lists — robust multi-strategy extraction
     def extract_list(label: str) -> list[str]:
+        heading = None
+
+        # Strategy 1: div whose direct NavigableString contains the label (original)
         heading = soup.find("div", string=lambda t: t and label in t)
+
+        # Strategy 2: any block element whose full text closely matches the label
+        if not heading:
+            for tag in soup.find_all(["div", "h2", "h3", "h4", "p", "strong", "b", "span"]):
+                txt = tag.get_text(strip=True)
+                if label in txt and len(txt) < len(label) + 30:
+                    heading = tag
+                    break
+
         if heading:
+            # Try direct next sibling <ol>
             ol = heading.find_next_sibling("ol")
+            if not ol:
+                # Try parent's next sibling <ol> (one level up)
+                parent = heading.parent
+                if parent:
+                    ol = parent.find_next_sibling("ol")
             if ol:
                 return [li.get_text(strip=True) for li in ol.find_all("li")]
+
         return []
 
     return {
@@ -462,6 +501,15 @@ def main():
         return
 
     print("🆕 New release detected! Processing...\n")
+
+    # Guard: do not overwrite CSVs with empty data if scraping failed to
+    # extract company names (Cloudflare block, page structure change, etc.)
+    if not current["pn17_companies"] and not current["gn3_companies"]:
+        print("⚠️  WARNING: Both PN17 and GN3 company lists are empty.")
+        print("⚠️  HTML parsing likely failed (Cloudflare block or page structure change).")
+        print("⚠️  Skipping CSV updates to preserve existing data.")
+        print("⚠️  last_run.json NOT saved — next run will retry.\n")
+        sys.exit(1)
 
     pdf_path = download_pdf(current["pdf_link"], current["list_updated"])
     update_companies_csv(current)
