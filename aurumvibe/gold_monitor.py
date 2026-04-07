@@ -232,10 +232,10 @@ def main():
             f"📊 *Public Gold Weekly Report*\n\n"
             f"💰 Price:      *RM {current_price:.2f}/g*\n"
             f"🔄 Change:     {change_str}\n"
-            f"🏔 Peak:       RM {peak_price:.2f}/g\n"
-            f"📉 30D Low:    RM {low_30d:.2f}\n"
+            f"🏔 Peak:       RM {high_30d:.2f}/g\n"
+            f"📉 30D Low:    RM {low_30d:.2f}/g\n"
             f"🎯 Avg Cost:   RM {effective_avg_cost:.2f}/g\n"
-            f"💹 P/L:        *{profit_pct:+.2%}*\n"
+            f"💹 P/L:        *{profit_pct:+.2%}/g*\n"
             f"📊 Status:     {trend}\n\n"
             f"🧠 *Signal*: {signal}"
         )
