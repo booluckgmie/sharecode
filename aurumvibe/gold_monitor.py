@@ -14,15 +14,23 @@ DROP_THRESHOLD = 0.05  # 5% alert
 BASE_PRICE_FILE = "last_peak.txt"
 
 def get_data():
-    # Fetch Gold (GC=F is Gold Futures, XAUUSD=X is Spot)
-    gold = yf.Ticker("GC=F").history(period="120d")
+    # Fetch Gold (using '1mo' is more stable for daily checks than '120d')
+    gold = yf.Ticker("GC=F").history(period="1mo")
     # Fetch USD/MYR
-    currency = yf.Ticker("MYR=X").history(period="120d")
+    currency = yf.Ticker("MYR=X").history(period="1mo")
     
-    df = pd.DataFrame({
-        'USD_Price': gold['Close'],
-        'Rate': currency['Close']
-    }).dropna()
+    if gold.empty or currency.empty:
+        print("⚠️ Warning: Initial data fetch empty. Retrying with longer period...")
+        gold = yf.Ticker("GC=F").history(period="3mo")
+        currency = yf.Ticker("MYR=X").history(period="3mo")
+
+    # Combine and align data
+    df = pd.concat([gold['Close'], currency['Close']], axis=1)
+    df.columns = ['USD_Price', 'Rate']
+    df = df.ffill().dropna() # Forward fill missing rates before dropping
+    
+    if df.empty:
+        raise ValueError("❌ Error: Could not fetch gold or currency data. Check internet or Ticker symbols.")
     
     # Calculate RM per Gram: (Price per Ounce / 31.1035) * Exchange Rate
     df['MYR_Gram'] = (df['USD_Price'] / 31.1035) * df['Rate']
@@ -95,37 +103,51 @@ AVG_COST = 320.0        # Replace with your actual average buy price (RM/g)
 DROP_THRESHOLD = 0.05   # 5% drop - Alert to buy more
 
 def main():
-    df = get_data()
-    proj_df = generate_projection(df)
-    chart_path = create_chart(df, proj_df)
-    
-    current_price = df['MYR_Gram'].iloc[-1]
-    peak_price = df['MYR_Gram'].max()
-    
-    # Logic for Alerts
-    drop_pct = (peak_price - current_price) / peak_price
-    profit_pct = (current_price - AVG_COST) / AVG_COST
-    
-    status = "📈 Trending Up" if current_price > df['MYR_Gram'].iloc[-7] else "📉 Consolidating"
-    alert_msg = ""
-    
-    # 🚨 BUY ALERT (Price Drop)
-    if drop_pct >= DROP_THRESHOLD:
-        alert_msg += f"\n\n🟢 *BUY ALERT*: Price is {drop_pct:.2%} below recent peak! Good time to top up."
+    try:
+        df = get_data()
+        print(f"✅ Data fetched successfully. Rows: {len(df)}")
+        
+        proj_df = generate_projection(df)
+        chart_path = create_chart(df, proj_df)
+        
+        current_price = df['MYR_Gram'].iloc[-1]
+        
+        # PERSISTENCE: Use your handle_peak function here
+        peak_price = handle_peak(current_price) 
+        
+        # Logic for Alerts
+        drop_pct = (peak_price - current_price) / peak_price
+        profit_pct = (current_price - AVG_COST) / AVG_COST
+        
+        # Fix for status calculation (check if we have at least 7 days of data)
+        if len(df) >= 7:
+            status = "📈 Trending Up" if current_price > df['MYR_Gram'].iloc[-7] else "📉 Consolidating"
+        else:
+            status = "📊 Calculating Trend..."
 
-    # 🚨 SELL ALERT (Profit Target Reached)
-    if profit_pct >= RISE_THRESHOLD:
-        alert_msg += f"\n\n🔴 *SELL ALERT*: You are {profit_pct:.2%} in profit! Consider taking partial gains."
+        alert_msg = ""
+        if drop_pct >= DROP_THRESHOLD:
+            alert_msg += f"\n\n🟢 *BUY ALERT*: Price is {drop_pct:.2%} below peak (RM {peak_price:.2f})!"
 
-    caption = (
-        f"📊 *Weekly Gold Report*\n"
-        f"Current: *RM {current_price:.2f}/g*\n"
-        f"Your Avg Cost: *RM {AVG_COST:.2f}/g*\n"
-        f"Current P/L: *{profit_pct:+.2%}*\n"
-        f"Status: {status}{alert_msg}"
-    )
-    
-    send_telegram(chart_path, caption)
+        if profit_pct >= RISE_THRESHOLD:
+            alert_msg += f"\n\n🔴 *SELL ALERT*: You are {profit_pct:.2%} in profit!"
+
+        caption = (
+            f"📊 *Weekly Gold Report*\n"
+            f"Current: *RM {current_price:.2f}/g*\n"
+            f"Peak: *RM {peak_price:.2f}/g*\n"
+            f"Your Avg Cost: *RM {AVG_COST:.2f}/g*\n"
+            f"Current P/L: *{profit_pct:+.2%}*\n"
+            f"Status: {status}{alert_msg}"
+        )
+        
+        send_telegram(chart_path, caption)
+        print("🚀 Report sent to Telegram!")
+
+    except Exception as e:
+        print(f"❌ Script failed: {e}")
+        # Optional: Send a failure notification to Telegram so you aren't in the dark
+        # requests.get(f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={CHAT_ID}&text=Gold Bot Error: {e}")
 
 if __name__ == "__main__":
     main()
