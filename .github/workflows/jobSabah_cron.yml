@@ -13,7 +13,7 @@ jobs:
     # Ensures all Python steps run inside the subfolder
     defaults:
       run:
-        working-directory: ./aurumvibe
+        working-directory: ./data_jobsabah
 
     steps:
       - name: Checkout code
