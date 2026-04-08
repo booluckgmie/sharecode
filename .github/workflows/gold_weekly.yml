@@ -2,7 +2,7 @@ name: Weekly Gold Monitor
 
 on:
   schedule:
-    - cron: '0 0 * * 1' # Runs at 08:00 AM Malaysia time every Monday
+    - cron: '20 2 * * *' # Runs at 10:20 AM Malaysia time everyday
   workflow_dispatch: # Manual trigger for testing
 
 jobs:
