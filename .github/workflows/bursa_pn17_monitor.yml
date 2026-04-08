@@ -54,11 +54,15 @@ jobs:
         run: |
           git config user.name  "booluckgmie"
           git config user.email "booluckgmie@gmail.com"
+          # Pull BEFORE staging — tree is clean here (script output files are
+          # modified/untracked but NOT staged, so rebase succeeds)
           git pull --rebase
+          # Stage everything the script may have written
           git add bursaMY/pn17_gn3_companies.csv \
                   bursaMY/pn17_gn3_historical.csv \
                   bursaMY/summary-reportPN17.csv \
                   bursaMY/last_run.json
+          # Nothing changed → exit cleanly
           if git diff --cached --quiet; then
             echo "No changes to commit. Done."
             exit 0
