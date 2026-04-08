@@ -235,7 +235,7 @@ def main():
             f"🏔 Peak:       RM {high_30d:.2f}/g\n"
             f"📉 30D Low:    RM {low_30d:.2f}/g\n"
             f"🎯 Avg Cost:   RM {effective_avg_cost:.2f}/g\n"
-            f"💹 P/L:        *{profit_pct:+.2%}/g*\n"
+            f"💹 P/L:        *{profit_pct:+.2%}*\n"
             f"📊 Status:     {trend}\n\n"
             f"🧠 *Signal*: {signal}"
         )
