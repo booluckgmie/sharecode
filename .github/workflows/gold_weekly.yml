@@ -1,15 +1,15 @@
-name: Weekly Gold Monitor
+name: Daily Gold Monitor
 
 on:
   schedule:
-    - cron: '20 2 * * *' # Runs at 10:20 AM Malaysia time everyday
-  workflow_dispatch: # Manual trigger for testing
+    - cron: '20 2 * * *'  # 10:20 AM Malaysia Time (MYT = UTC+8) every day
+  workflow_dispatch:       # Manual trigger for testing
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
-    # Ensures Python scripts run within the subfolder
+
+    # Ensures all Python steps run inside the subfolder
     defaults:
       run:
         working-directory: ./aurumvibe
@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0 # Required for reliable git pull/push operations
+          fetch-depth: 0   # Required for reliable git pull/push operations
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -40,32 +40,32 @@ jobs:
         run: python gold_monitor.py
 
       - name: Commit and Push Updates
-        # Override subdirectory default to run from Repository Root
-        working-directory: ./ 
+        # Run from repo root so git commands work correctly
+        working-directory: ./
         run: |
           # 1. Setup identity
           git config --global user.email "booluckgmie@gmail.com"
           git config --global user.name "booluckgmie"
-          
-          # 2. Handle "Unstaged Changes" (Stash generated files)
+
+          # 2. Stash generated files to avoid unstaged change conflicts
           echo "Stashing local changes..."
           git stash
-          
+
           # 3. Sync with remote master branch
           git fetch origin master
           git pull origin master --rebase
-          
-          # 4. Bring price tracking back
+
+          # 4. Restore peak tracking file
           echo "Applying stashed changes..."
           git stash pop || echo "No stash to apply"
-          
-          # 5. Stage only the tracking file (Ignore the .png chart)
+
+          # 5. Stage only the peak tracking file (chart PNG excluded)
           git add aurumvibe/last_peak.txt
-          
-          # 6. Commit and Push back to GitHub
+
+          # 6. Commit and push only if the file actually changed
           if git diff --staged --quiet; then
             echo "No changes to last_peak.txt. Skipping commit."
           else
-            git commit -m "Update gold peak data [skip ci]"
+            git commit -m "chore: update gold peak data [skip ci]"
             git push origin HEAD:master --force
           fi
