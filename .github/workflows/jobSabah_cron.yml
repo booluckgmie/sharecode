@@ -1,51 +1,77 @@
-name: Schedule Sabah Jobs Scraper
+name: Sabah Job Portal Scraping
 
 on:
-  # push:
-  #  branches: [ master ] 
   schedule:
-    # Run every Wednesday at 10:00 AM Malaysia Time (UTC+8)
-    # The cron expression is in UTC. 10 AM MYT is 2 AM UTC.
-    - cron: '0 2 * * 3'
-
-permissions:
-  contents: write  # Needed for committing and pushing changes
+    # 10:00 AM Malaysia Time (MYT) = 02:00 UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:   # Allow manual trigger from GitHub UI
 
 jobs:
-  run-python-script:
+  scrape:
+    name: Scrape jobs.sabah.gov.my
     runs-on: ubuntu-latest
-    name: Run Python Script
+    timeout-minutes: 60
+
+    permissions:
+      contents: write   # Required to push CSV files back to repo
 
     steps:
-      - name: Checkout code
+      # -------------------------------------------------------
+      # 1. Checkout repo (includes previously committed CSVs)
+      # -------------------------------------------------------
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Required for pushing changes
+          fetch-depth: 0   # Full history so we can compare across dates
 
-      - name: Set up Python
+      # -------------------------------------------------------
+      # 2. Set up Python
+      # -------------------------------------------------------
+      - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
-          python-version: 3.9
+          python-version: '3.11'
 
-      # Remove Node.js if not required
-      # - name: Set up Node.js
-      #   uses: actions/setup-node@v4
-      #   with:
-      #     node-version: 20
+      # -------------------------------------------------------
+      # 3. Cache pip dependencies
+      # -------------------------------------------------------
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
 
+      # -------------------------------------------------------
+      # 4. Install dependencies
+      # -------------------------------------------------------
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install pandas requests pytz urllib3 tqdm beautifulsoup4 openpyxl
+          pip install --upgrade pip
+          pip install -r requirements.txt
 
-      - name: Run Python Script and Commit Changes
+      # -------------------------------------------------------
+      # 5. Run scraper
+      # -------------------------------------------------------
+      - name: Run Sabah Job Scraper
+        run: python scrape_sabah_jobs.py
+
+      # -------------------------------------------------------
+      # 6. Commit and push output CSVs
+      # -------------------------------------------------------
+      - name: Commit and push scraped data
         run: |
-          set -e
-          python jobSabah_auto.py
-          cd data_jobsabah
           git config --global user.email "booluckgmie@gmail.com"
           git config --global user.name "booluckgmie"
-          git pull --rebase origin master || echo "No remote changes to pull."
-          git add .
-          git commit -m "Update data" || echo "No changes to commit"
-          git push
+
+          git add data_jobsabah/
+
+          # Only commit if there are actual changes
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            DATE=$(TZ='Asia/Kuala_Lumpur' date '+%Y-%m-%d %H:%M MYT')
+            git commit -m "chore: scrape sabah jobs – ${DATE}"
+            git push
+          fi
