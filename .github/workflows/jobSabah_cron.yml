@@ -7,50 +7,31 @@ on:
   workflow_dispatch:   # Allow manual trigger from GitHub UI
 
 jobs:
-  scrape:
-    name: Scrape jobs.sabah.gov.my
+  build:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
 
-    permissions:
-      contents: write   # Required to push CSV files back to repo
+    # Ensures all Python steps run inside the subfolder
+    defaults:
+      run:
+        working-directory: ./aurumvibe
 
     steps:
-      # -------------------------------------------------------
-      # 1. Checkout repo (includes previously committed CSVs)
-      # -------------------------------------------------------
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # Full history so we can compare across dates
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0   # Required for reliable git pull/push operations
 
-      # -------------------------------------------------------
-      # 2. Set up Python
-      # -------------------------------------------------------
-      - name: Set up Python 3.11
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.9'
+          cache: 'pip'
 
-      # -------------------------------------------------------
-      # 3. Cache pip dependencies
-      # -------------------------------------------------------
-      - name: Cache pip
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-
-      # -------------------------------------------------------
-      # 4. Install dependencies
-      # -------------------------------------------------------
       - name: Install dependencies
         run: |
-          pip install --upgrade pip
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
-
       # -------------------------------------------------------
       # 5. Run scraper
       # -------------------------------------------------------
