@@ -54,18 +54,18 @@ jobs:
         run: |
           git config user.name  "booluckgmie"
           git config user.email "booluckgmie@gmail.com"
-          # Pull BEFORE staging — tree is clean here (script output files are
-          # modified/untracked but NOT staged, so rebase succeeds)
-          git pull --rebase
-          # Stage everything the script may have written
+          # Stage what the script wrote
           git add bursaMY/pn17_gn3_companies.csv \
                   bursaMY/pn17_gn3_historical.csv \
                   bursaMY/summary-reportPN17.csv \
                   bursaMY/last_run.json
-          # Nothing changed → exit cleanly
+          # Nothing changed → exit cleanly, skip push
           if git diff --cached --quiet; then
             echo "No changes to commit. Done."
             exit 0
           fi
+          # Commit locally first, then push (no pull needed —
+          # GitHub Actions checks out a fresh clone every run,
+          # so there is never a remote commit ahead of us)
           git commit -m "chore: auto-update $(date +'%Y-%m-%d') Bursa PN17/GN3 data"
           git push
