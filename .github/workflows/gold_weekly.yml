@@ -2,7 +2,7 @@ name: Daily Gold Monitor
 
 on:
   schedule:
-    - cron: '15 2 * * *'
+    - cron: '10 1 * * *'
   workflow_dispatch:  # UNCOMMENT THIS
 
 jobs:
