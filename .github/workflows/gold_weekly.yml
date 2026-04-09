@@ -2,8 +2,8 @@ name: Daily Gold Monitor
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # 08:00 AM Malaysia Time (MYT = UTC+8) every day
-  # workflow_dispatch:       # Manual trigger for testing
+    - cron: '15 2 * * *'
+  workflow_dispatch:  # UNCOMMENT THIS
 
 jobs:
   build:
