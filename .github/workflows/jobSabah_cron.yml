@@ -3,14 +3,14 @@ name: Sabah Job Portal Scraping
 on:
   schedule:
     # 10:00 AM Malaysia Time (MYT) = 02:00 UTC
-    - cron: '0 2 * * *'
-  workflow_dispatch:   # Allow manual trigger from GitHub UI
+    - cron: '0 6 * * *'
+  workflow_dispatch: # Allow manual trigger from GitHub UI
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    # Ensures all Python steps run inside the subfolder
+    # working-directory is the subfolder where your script + requirements.txt live
     defaults:
       run:
         working-directory: ./data_jobsabah
@@ -20,35 +20,39 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0   # Required for reliable git pull/push operations
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.9'
-          cache: 'pip'
+          # Do NOT use cache: 'pip' with a custom working-directory —
+          # it looks for requirements.txt at repo root and fails.
+
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          # hashFiles path is relative to repo root, not working-directory
+          key: ${{ runner.os }}-pip-${{ hashFiles('data_jobsabah/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-      # -------------------------------------------------------
-      # 5. Run scraper
-      # -------------------------------------------------------
+
       - name: Run Sabah Job Scraper
         run: python scrape_sabah_jobs.py
 
-      # -------------------------------------------------------
-      # 6. Commit and push output CSVs
-      # -------------------------------------------------------
       - name: Commit and push scraped data
+        # git commands must run from repo root, not the working-directory subfolder
+        working-directory: .
         run: |
           git config --global user.email "booluckgmie@gmail.com"
           git config --global user.name "booluckgmie"
-
           git add data_jobsabah/
-
-          # Only commit if there are actual changes
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
