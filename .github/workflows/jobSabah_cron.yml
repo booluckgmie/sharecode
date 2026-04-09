@@ -3,7 +3,7 @@ name: Sabah Job Portal Scraping
 on:
   schedule:
     # 10:00 AM Malaysia Time (MYT) = 02:00 UTC
-    - cron: '0 6 * * *'
+    - cron: '0 1 * * *'
   workflow_dispatch: # Allow manual trigger from GitHub UI
 
 jobs:
