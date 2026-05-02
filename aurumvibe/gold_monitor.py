@@ -13,13 +13,6 @@ import numpy as np
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
-# try:
-#     raw_avg_cost = os.getenv("AVG_COST", "320.0")
-#     AVG_COST = float(raw_avg_cost)
-# except ValueError:
-#     AVG_COST = 320.0
-#     print(f"⚠️ Warning: Invalid AVG_COST format. Using default: {AVG_COST}")
-
 RISE_THRESHOLD = 0.15   # 15% gain  → Take profit alert
 DROP_THRESHOLD = 0.05   # 5% drop   → Buy more alert
 PEAK_FILE = "last_peak.txt"
@@ -30,10 +23,6 @@ PEAK_FILE = "last_peak.txt"
 # ---------------------------------------------------------------------------
 
 def get_public_gold_data() -> pd.DataFrame:
-    """
-    Scrape price series from publicgold.me and return a DataFrame with
-    columns ['Price'] indexed by date (newest = last row).
-    """
     url = "https://publicgold.me/yes/gold-price-today"
     headers = {"User-Agent": "Mozilla/5.0"}
 
@@ -42,7 +31,6 @@ def get_public_gold_data() -> pd.DataFrame:
     except requests.RequestException as e:
         raise ConnectionError(f"Failed to reach publicgold.me: {e}")
 
-    # Extract the JS chart array: data: [ ... ]
     match = re.search(r"data:\s*\[([\d.,\s]+)\]", res)
     if not match:
         raise ValueError("❌ Could not find price data on Public Gold page. "
@@ -54,7 +42,6 @@ def get_public_gold_data() -> pd.DataFrame:
     if len(prices) < 2:
         raise ValueError("❌ Not enough price data points returned from scrape.")
 
-    # Build date index backwards from today (scraped array has no timestamps)
     n = len(prices)
     dates = [datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
              - timedelta(days=n - 1 - i) for i in range(n)]
@@ -70,12 +57,11 @@ def get_public_gold_data() -> pd.DataFrame:
 # ---------------------------------------------------------------------------
 
 def handle_peak(current_price: float) -> float:
-    """Load peak from file, update if new high, return peak."""
     try:
         with open(PEAK_FILE, "r") as f:
             peak = float(f.read().strip())
     except (FileNotFoundError, ValueError):
-        peak = current_price   # initialise on first run
+        peak = current_price
 
     if current_price > peak:
         peak = current_price
@@ -92,7 +78,7 @@ def handle_peak(current_price: float) -> float:
 
 def generate_projection(df: pd.DataFrame) -> pd.DataFrame:
     last_date = df.index[-1]
-    window = df["Price"].values[-20:]          # last 20 data points
+    window = df["Price"].values[-20:]
     x = np.arange(len(window))
     slope, intercept = np.polyfit(x, window, 1)
 
@@ -104,7 +90,80 @@ def generate_projection(df: pd.DataFrame) -> pd.DataFrame:
 
 
 # ---------------------------------------------------------------------------
-# 4. CHART
+# 4. BUY SIGNAL SCORING  (max 6 pts)
+# ---------------------------------------------------------------------------
+
+def compute_buy_score(current_price: float, low_30d: float,
+                      avg_30d: float, prices: list,
+                      peak_price: float) -> tuple[int, list[str]]:
+    score = 0
+    signals = []
+
+    # Near 30D low (within 1.5%)
+    proximity_to_low = (current_price - low_30d) / low_30d * 100
+    if proximity_to_low <= 1.5:
+        score += 2
+        signals.append(f"📉 Near 30D Low (+{proximity_to_low:.1f}%)")
+
+    # Below 30D average by ≥2%
+    below_avg = (avg_30d - current_price) / avg_30d * 100
+    if below_avg >= 2.0:
+        score += 1
+        signals.append(f"📊 Below 30D Avg ({below_avg:.1f}%)")
+
+    # At 7-day low
+    if len(prices) >= 7 and current_price <= min(prices[-7:]):
+        score += 2
+        signals.append("🟢 7D Low")
+
+    # Drop from peak ≥5%
+    drop_pct = (peak_price - current_price) / peak_price if peak_price else 0
+    if drop_pct >= DROP_THRESHOLD:
+        score += 1
+        signals.append(f"⬇️ {drop_pct:.1%} below peak")
+
+    return score, signals
+
+
+# ---------------------------------------------------------------------------
+# 5. SELL SIGNAL SCORING  (max 6 pts)
+# ---------------------------------------------------------------------------
+
+def compute_sell_score(current_price: float, high_30d: float,
+                       avg_30d: float,
+                       prices: list) -> tuple[int, list[str]]:
+    score = 0
+    signals = []
+
+    # Near 30D high (within 1.5%)
+    proximity_to_high = (high_30d - current_price) / high_30d * 100
+    if proximity_to_high <= 1.5:
+        score += 2
+        signals.append(f"🏔 Near 30D High ({proximity_to_high:.1f}% away)")
+
+    # Above 30D average by ≥3%
+    above_avg = (current_price - avg_30d) / avg_30d * 100
+    if above_avg >= 3.0:
+        score += 1
+        signals.append(f"📈 Above 30D Avg (+{above_avg:.1f}%)")
+
+    # Peak reversal: price fell after 2 consecutive up-days
+    if len(prices) >= 3:
+        last3 = prices[-3:]
+        if last3[-1] < last3[-2] > last3[-3]:   # ▲▲▼ pattern
+            score += 2
+            signals.append("⛰️ Peak Reversal Detected")
+
+    # At 7-day high
+    if len(prices) >= 7 and current_price >= max(prices[-7:]):
+        score += 1
+        signals.append("🔴 7D High")
+
+    return score, signals
+
+
+# ---------------------------------------------------------------------------
+# 6. CHART
 # ---------------------------------------------------------------------------
 
 def create_chart(df: pd.DataFrame, proj_df: pd.DataFrame,
@@ -113,21 +172,17 @@ def create_chart(df: pd.DataFrame, proj_df: pd.DataFrame,
     fig.patch.set_facecolor("#0f0f0f")
     ax.set_facecolor("#1a1a2e")
 
-    # Historical price + fill
     ax.plot(df.index, df["Price"],
             color="#DAA520", linewidth=2.5, label="Public Gold Price")
     ax.fill_between(df.index, df["Price"], color="#DAA520", alpha=0.08)
 
-    # Projection
     ax.plot(proj_df.index, proj_df["Price"],
             color="#FFD700", linestyle="--", linewidth=1.8,
             alpha=0.75, label="Projection (30d)")
 
-    # Avg cost reference line
     ax.axhline(avg_cost, color="#00FF88", linestyle=":",
                linewidth=1.5, alpha=0.7, label=f"Avg Cost RM {avg_cost:.2f}")
 
-    # Current price dot
     ax.scatter([df.index[-1]], [current_price],
                color="#FFD700", s=80, zorder=5)
 
@@ -150,7 +205,7 @@ def create_chart(df: pd.DataFrame, proj_df: pd.DataFrame,
 
 
 # ---------------------------------------------------------------------------
-# 5. TELEGRAM
+# 7. TELEGRAM
 # ---------------------------------------------------------------------------
 
 def send_telegram(chart_path: str, caption: str) -> None:
@@ -173,7 +228,7 @@ def send_telegram(chart_path: str, caption: str) -> None:
 
 
 # ---------------------------------------------------------------------------
-# 6. MAIN
+# 8. MAIN
 # ---------------------------------------------------------------------------
 
 def main():
@@ -186,11 +241,12 @@ def main():
         prev_price    = prices[-2] if len(prices) > 1 else current_price
         change        = current_price - prev_price
 
-        high_30d   = max(prices[-30:]) if len(prices) >= 30 else max(prices)
-        low_30d    = min(prices[-30:]) if len(prices) >= 30 else min(prices)
-        median_30d = (high_30d + low_30d) / 2  # midpoint of 30d range
+        window_30      = prices[-30:] if len(prices) >= 30 else prices
+        high_30d       = max(window_30)
+        low_30d        = min(window_30)
+        avg_30d        = sum(window_30) / len(window_30)
+        median_30d     = (high_30d + low_30d) / 2   # midpoint of 30d range
 
-        # Use env AVG_COST if explicitly set, otherwise fall back to 30d median
         effective_avg_cost = median_30d
 
         # --- Peak tracking ---
@@ -200,44 +256,65 @@ def main():
         proj_df    = generate_projection(df)
         chart_path = create_chart(df, proj_df, current_price, effective_avg_cost)
 
-        # --- Signals ---
+        # --- P/L ---
         profit_pct = (current_price - effective_avg_cost) / effective_avg_cost
         drop_pct   = (peak_price - current_price) / peak_price if peak_price else 0
 
-        # Trend (compare last vs 7 days ago)
+        # --- Trend ---
         if len(prices) >= 7:
             trend = "📈 Trending Up" if current_price > prices[-7] else "📉 Consolidating"
         else:
             trend = "📊 Calculating Trend..."
 
-        # Signal logic (priority order)
-        if profit_pct >= RISE_THRESHOLD:
-            signal = f"🔴 *Take Profit Zone* — {profit_pct:+.2%} gain reached!"
-        elif drop_pct >= DROP_THRESHOLD:
-            signal = (f"🟢 *BUY Zone* — RM {drop_pct:.2%} below peak "
-                      f"(RM {peak_price:.2f})")
-        elif current_price <= min(prices[-7:]):
-            signal = "🟢 *Strong BUY zone* — 7-day low"
-        elif current_price >= high_30d:
-            signal = "⚠️ *Near Resistance* — watch for reversal"
-        else:
-            signal = "⚖️ Neutral — Hold"
+        # --- Buy & Sell scores ---
+        buy_score,  buy_signals  = compute_buy_score(
+            current_price, low_30d, avg_30d, prices, peak_price)
+        sell_score, sell_signals = compute_sell_score(
+            current_price, high_30d, avg_30d, prices)
 
-        # Change string
+        buy_badge  = "🟢" if buy_score  >= 4 else "🟡" if buy_score  >= 2 else "⚪"
+        sell_badge = "🔴" if sell_score >= 4 else "🟠" if sell_score >= 2 else "⚪"
+
+        buy_detail  = ", ".join(buy_signals)  or "No strong buy signal"
+        sell_detail = ", ".join(sell_signals) or "No strong sell signal"
+
+        # --- Primary signal (priority order) ---
+        if profit_pct >= RISE_THRESHOLD:
+            primary_signal = f"🔴 *Take Profit Zone* — {profit_pct:+.2%} gain reached!"
+        elif sell_score >= 4:
+            primary_signal = f"🔴 *SELL Zone* — Score {sell_score}/6 ({sell_detail})"
+        elif drop_pct >= DROP_THRESHOLD:
+            primary_signal = (f"🟢 *BUY Zone* — {drop_pct:.2%} below peak "
+                              f"(RM {peak_price:.2f})")
+        elif current_price <= min(prices[-7:]):
+            primary_signal = "🟢 *Strong BUY zone* — 7-day low"
+        elif sell_score >= 2:
+            primary_signal = f"🟠 *Watch to Sell* — Score {sell_score}/6 ({sell_detail})"
+        elif current_price >= high_30d:
+            primary_signal = "⚠️ *Near Resistance* — watch for reversal"
+        else:
+            primary_signal = "⚖️ Neutral — Hold"
+
+        # --- Change string ---
         change_str = (f"+RM {change:.2f}" if change >= 0
                       else f"-RM {abs(change):.2f}")
 
-        avg_cost_label = ("env" if os.getenv("AVG_COST") else "30d mid")
         caption = (
             f"📊 *Public Gold Weekly Report*\n\n"
-            f"💰 Price:      *RM {current_price:.2f}/g*\n"
-            f"🔄 Change:     {change_str}\n"
-            f"🏔 Peak:       RM {high_30d:.2f}/g\n"
-            f"📉 30D Low:    RM {low_30d:.2f}/g\n"
-            f"🎯 Avg Cost:   RM {effective_avg_cost:.2f}/g\n"
-            f"💹 P/L:        *{profit_pct:+.2%}*\n"
-            f"📊 Status:     {trend}\n\n"
-            f"🧠 *Signal*: {signal}"
+            f"💰 Price:        *RM {current_price:.2f}/g*\n"
+            f"🔄 Change:       {change_str}\n"
+            f"🏔 30D High:     RM {high_30d:.2f}/g\n"
+            f"📉 30D Low:      RM {low_30d:.2f}/g\n"
+            f"📊 30D Avg:      RM {avg_30d:.2f}/g\n"
+            f"🎯 Avg Cost:     RM {effective_avg_cost:.2f}/g\n"
+            f"💹 P/L:          *{profit_pct:+.2%}*\n"
+            f"📈 Status:       {trend}\n\n"
+            f"─────────────────────\n"
+            f"🧠 *Signal*: {primary_signal}\n\n"
+            f"{buy_badge} *Buy Score*:   {buy_score}/6\n"
+            f"   ↳ {buy_detail}\n\n"
+            f"{sell_badge} *Sell Score*:  {sell_score}/6\n"
+            f"   ↳ {sell_detail}"
         )
 
         send_telegram(chart_path, caption)
@@ -246,13 +323,6 @@ def main():
 
     except Exception as e:
         print(f"❌ Script failed: {e}")
-        # Uncomment to get failure pings on Telegram:
-        # if TOKEN and CHAT_ID:
-        #     requests.get(
-        #         f"https://api.telegram.org/bot{TOKEN}/sendMessage",
-        #         params={"chat_id": CHAT_ID, "text": f"🚨 Gold Bot Error: {e}"},
-        #         timeout=10,
-        #     )
 
 
 if __name__ == "__main__":
