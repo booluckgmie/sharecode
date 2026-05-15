@@ -1,311 +1,773 @@
-weathercode,description,time,temperature_2m,relativehumidity_2m,rain,windspeed_10m,state,city,latitude,longitude,date
-80,"Rain shower(s), slight",09:00:00,24.6,98,0.5,4.0,Johor,Johor Bahru,1.4556,103.7611,2026-05-15
-3,Clouds generally forming or developing,09:00:00,26.7,93,0.0,2.8,Putrajaya,Putrajaya,2.93,101.69,2026-05-15
-3,Clouds generally forming or developing,09:00:00,28.3,80,0.0,1.0,Kedah,Sungai Petani,5.65,100.48,2026-05-15
-3,Clouds generally forming or developing,09:00:00,28.2,85,0.0,4.2,Pulau Pinang,George Town,5.4145,100.3292,2026-05-15
-2,State of sky on the whole unchanged,09:00:00,29.1,76,0.0,6.0,Sabah,Lahad Datu,5.03,118.34,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",09:00:00,26.4,94,0.2,4.4,Selangor,Shah Alam,3.0833,101.5333,2026-05-15
-63,"Rain, not freezing, continuous moderate at time of observation",09:00:00,25.0,97,0.9,8.1,Sarawak,Bintulu,3.17,113.03,2026-05-15
-2,State of sky on the whole unchanged,09:00:00,30.4,65,0.0,2.8,Sabah,Sandakan,5.8388,118.1173,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",09:00:00,25.9,95,0.6,4.3,Selangor,Petaling Jaya,3.1073,101.6067,2026-05-15
-3,Clouds generally forming or developing,09:00:00,28.6,76,0.0,1.4,Sabah,Kota Kinabalu,5.975,116.0725,2026-05-15
-3,Clouds generally forming or developing,09:00:00,27.5,84,0.0,6.2,Perlis,Kangar,6.4333,100.2,2026-05-15
-3,Clouds generally forming or developing,09:00:00,26.6,90,0.0,4.0,Terengganu,Cukai,4.2332,103.4479,2026-05-15
-3,Clouds generally forming or developing,09:00:00,26.9,91,0.0,3.4,Melaka,Melaka,2.1889,102.2511,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",09:00:00,27.5,86,0.0,6.7,Pulau Pinang,Butterworth,5.3992,100.3639,2026-05-15
-3,Clouds generally forming or developing,09:00:00,26.2,92,0.0,2.3,Pahang,Kuala Lipis,4.184,102.042,2026-05-15
-3,Clouds generally forming or developing,09:00:00,28.1,81,0.0,6.5,Kelantan,Kota Bharu,6.1333,102.25,2026-05-15
-3,Clouds generally forming or developing,09:00:00,26.5,90,0.0,4.6,Pahang,Kuantan,3.8167,103.3333,2026-05-15
-3,Clouds generally forming or developing,09:00:00,25.9,95,0.0,1.7,Pahang,Raub,3.7931,101.8569,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",09:00:00,27.5,85,0.0,6.7,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2026-05-15
-2,State of sky on the whole unchanged,09:00:00,28.1,84,0.0,0.2,Perak,Teluk Intan,4.0259,101.0213,2026-05-15
-3,Clouds generally forming or developing,09:00:00,27.4,84,0.0,3.6,Perak,Ipoh,4.6,101.07,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",09:00:00,26.8,94,0.5,5.1,Sarawak,Miri,4.4028,113.9933,2026-05-15
-3,Clouds generally forming or developing,09:00:00,27.5,84,0.0,3.6,Kedah,Alor Setar,6.1167,100.3667,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",09:00:00,26.2,95,0.1,4.3,Sarawak,Sibu,2.3,111.8167,2026-05-15
-3,Clouds generally forming or developing,09:00:00,28.2,83,0.0,4.0,Terengganu,Kuala Terengganu,5.3303,103.1408,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",09:00:00,28.4,86,0.0,3.9,Labuan,Labuan,5.2803,115.2475,2026-05-15
-3,Clouds generally forming or developing,09:00:00,27.7,82,0.0,1.6,Perak,Taiping,4.85,100.7333,2026-05-15
-2,State of sky on the whole unchanged,09:00:00,27.4,82,0.0,2.5,Negeri Sembilan,Seremban,2.7297,101.9381,2026-05-15
-3,Clouds generally forming or developing,09:00:00,26.5,95,0.0,4.2,Johor,Batu Pahat,1.85,102.93,2026-05-15
-3,Clouds generally forming or developing,09:00:00,25.5,95,0.0,4.7,Johor,Kluang,2.0336,103.3194,2026-05-15
-3,Clouds generally forming or developing,09:00:00,26.9,93,0.0,5.2,Johor,Muar,2.05,102.56,2026-05-15
-3,Clouds generally forming or developing,08:00:00,26.1,87,0.0,9.6,Perlis,Kangar,6.4333,100.2,2026-05-15
-3,Clouds generally forming or developing,08:00:00,26.4,88,0.0,2.7,Perak,Taiping,4.85,100.7333,2026-05-15
-3,Clouds generally forming or developing,08:00:00,25.6,97,0.0,6.1,Terengganu,Cukai,4.2332,103.4479,2026-05-15
-3,Clouds generally forming or developing,08:00:00,25.5,96,0.0,5.5,Melaka,Melaka,2.1889,102.2511,2026-05-15
-3,Clouds generally forming or developing,08:00:00,24.3,98,0.0,7.1,Johor,Kluang,2.0336,103.3194,2026-05-15
-2,State of sky on the whole unchanged,08:00:00,27.1,89,0.0,3.3,Pulau Pinang,George Town,5.4145,100.3292,2026-05-15
-3,Clouds generally forming or developing,08:00:00,25.8,96,0.0,8.5,Johor,Muar,2.05,102.56,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",08:00:00,25.2,96,0.4,5.2,Sarawak,Sibu,2.3,111.8167,2026-05-15
-2,State of sky on the whole unchanged,08:00:00,28.5,74,0.0,4.0,Sabah,Sandakan,5.8388,118.1173,2026-05-15
-3,Clouds generally forming or developing,08:00:00,27.3,85,0.0,6.7,Sabah,Lahad Datu,5.03,118.34,2026-05-15
-3,Clouds generally forming or developing,08:00:00,26.2,90,0.0,8.0,Kelantan,Kota Bharu,6.1333,102.25,2026-05-15
-3,Clouds generally forming or developing,08:00:00,25.2,97,0.0,3.5,Pahang,Kuala Lipis,4.184,102.042,2026-05-15
-80,"Rain shower(s), slight",08:00:00,25.6,97,0.6,3.9,Sarawak,Miri,4.4028,113.9933,2026-05-15
-3,Clouds generally forming or developing,08:00:00,24.7,99,0.0,1.5,Pahang,Raub,3.7931,101.8569,2026-05-15
-2,State of sky on the whole unchanged,08:00:00,26.4,89,0.0,6.6,Pulau Pinang,Butterworth,5.3992,100.3639,2026-05-15
-3,Clouds generally forming or developing,08:00:00,27.2,85,0.0,1.5,Sabah,Kota Kinabalu,5.975,116.0725,2026-05-15
-2,State of sky on the whole unchanged,08:00:00,26.3,89,0.0,6.6,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2026-05-15
-3,Clouds generally forming or developing,08:00:00,26.2,91,0.0,3.8,Kedah,Sungai Petani,5.65,100.48,2026-05-15
-3,Clouds generally forming or developing,08:00:00,26.0,91,0.0,5.4,Perak,Ipoh,4.6,101.07,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",08:00:00,28.2,89,0.0,3.1,Labuan,Labuan,5.2803,115.2475,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",08:00:00,25.8,95,0.3,4.5,Selangor,Shah Alam,3.0833,101.5333,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",08:00:00,25.6,96,0.6,3.2,Selangor,Petaling Jaya,3.1073,101.6067,2026-05-15
-3,Clouds generally forming or developing,08:00:00,26.1,95,0.0,0.2,Putrajaya,Putrajaya,2.93,101.69,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",08:00:00,25.5,97,0.2,5.2,Pahang,Kuantan,3.8167,103.3333,2026-05-15
-3,Clouds generally forming or developing,08:00:00,26.9,90,0.0,1.7,Perak,Teluk Intan,4.0259,101.0213,2026-05-15
-3,Clouds generally forming or developing,08:00:00,26.1,91,0.0,4.8,Terengganu,Kuala Terengganu,5.3303,103.1408,2026-05-15
-3,Clouds generally forming or developing,08:00:00,25.6,97,0.0,5.3,Johor,Batu Pahat,1.85,102.93,2026-05-15
-81,"Rain shower(s), moderate or heavy",08:00:00,24.7,100,0.0,9.7,Sarawak,Bintulu,3.17,113.03,2026-05-15
-2,State of sky on the whole unchanged,08:00:00,25.9,91,0.0,3.7,Negeri Sembilan,Seremban,2.7297,101.9381,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",08:00:00,25.8,94,0.1,4.6,Kedah,Alor Setar,6.1167,100.3667,2026-05-15
-55,"Drizzle, not freezing, continuous heavy (dense) at time of observation",08:00:00,24.5,98,0.8,2.0,Johor,Johor Bahru,1.4556,103.7611,2026-05-15
-55,"Drizzle, not freezing, continuous heavy (dense) at time of observation",07:00:00,24.8,97,0.5,5.0,Sarawak,Sibu,2.3,111.8167,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",07:00:00,25.2,97,0.2,3.7,Sarawak,Miri,4.4028,113.9933,2026-05-15
-55,"Drizzle, not freezing, continuous heavy (dense) at time of observation",07:00:00,25.8,94,0.3,4.3,Selangor,Shah Alam,3.0833,101.5333,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",07:00:00,27.5,88,0.0,2.4,Labuan,Labuan,5.2803,115.2475,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",07:00:00,24.1,99,0.8,7.3,Johor,Johor Bahru,1.4556,103.7611,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",07:00:00,25.2,99,0.5,3.5,Pahang,Kuantan,3.8167,103.3333,2026-05-15
-63,"Rain, not freezing, continuous moderate at time of observation",07:00:00,24.5,99,0.1,7.8,Sarawak,Bintulu,3.17,113.03,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",07:00:00,25.2,98,0.6,5.8,Terengganu,Cukai,4.2332,103.4479,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",07:00:00,25.8,98,0.3,1.4,Putrajaya,Putrajaya,2.93,101.69,2026-05-15
-55,"Drizzle, not freezing, continuous heavy (dense) at time of observation",07:00:00,25.5,95,0.4,2.7,Selangor,Petaling Jaya,3.1073,101.6067,2026-05-15
-2,State of sky on the whole unchanged,07:00:00,25.1,95,0.0,5.3,Perak,Ipoh,4.6,101.07,2026-05-15
-3,Clouds generally forming or developing,07:00:00,26.1,92,0.0,2.3,Pulau Pinang,George Town,5.4145,100.3292,2026-05-15
-3,Clouds generally forming or developing,07:00:00,24.7,99,0.0,2.2,Kedah,Alor Setar,6.1167,100.3667,2026-05-15
-3,Clouds generally forming or developing,07:00:00,25.0,93,0.0,3.0,Negeri Sembilan,Seremban,2.7297,101.9381,2026-05-15
-3,Clouds generally forming or developing,07:00:00,26.0,92,0.0,2.7,Perak,Teluk Intan,4.0259,101.0213,2026-05-15
-3,Clouds generally forming or developing,07:00:00,25.0,97,0.0,3.4,Melaka,Melaka,2.1889,102.2511,2026-05-15
-3,Clouds generally forming or developing,07:00:00,23.8,98,0.0,6.2,Johor,Kluang,2.0336,103.3194,2026-05-15
-3,Clouds generally forming or developing,07:00:00,25.6,97,0.0,3.5,Johor,Muar,2.05,102.56,2026-05-15
-3,Clouds generally forming or developing,07:00:00,25.0,96,0.0,7.3,Kelantan,Kota Bharu,6.1333,102.25,2026-05-15
-3,Clouds generally forming or developing,07:00:00,25.9,88,0.0,6.1,Sabah,Lahad Datu,5.03,118.34,2026-05-15
-3,Clouds generally forming or developing,07:00:00,25.6,87,0.0,10.0,Perlis,Kangar,6.4333,100.2,2026-05-15
-3,Clouds generally forming or developing,07:00:00,26.5,85,0.0,6.4,Sabah,Sandakan,5.8388,118.1173,2026-05-15
-3,Clouds generally forming or developing,07:00:00,25.7,90,0.0,5.1,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2026-05-15
-3,Clouds generally forming or developing,07:00:00,23.6,99,0.0,3.1,Pahang,Raub,3.7931,101.8569,2026-05-15
-3,Clouds generally forming or developing,07:00:00,25.0,94,0.0,1.5,Kedah,Sungai Petani,5.65,100.48,2026-05-15
-3,Clouds generally forming or developing,07:00:00,24.5,100,0.0,4.0,Pahang,Kuala Lipis,4.184,102.042,2026-05-15
-3,Clouds generally forming or developing,07:00:00,25.8,90,0.0,5.1,Pulau Pinang,Butterworth,5.3992,100.3639,2026-05-15
-3,Clouds generally forming or developing,07:00:00,26.0,89,0.0,1.7,Sabah,Kota Kinabalu,5.975,116.0725,2026-05-15
-3,Clouds generally forming or developing,07:00:00,25.2,95,0.0,5.4,Terengganu,Kuala Terengganu,5.3303,103.1408,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",07:00:00,24.6,98,0.1,4.0,Johor,Batu Pahat,1.85,102.93,2026-05-15
-3,Clouds generally forming or developing,07:00:00,25.6,88,0.0,2.2,Perak,Taiping,4.85,100.7333,2026-05-15
-3,Clouds generally forming or developing,06:00:00,25.2,95,0.0,4.2,Perak,Ipoh,4.6,101.07,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",06:00:00,25.4,98,0.0,1.0,Pahang,Kuantan,3.8167,103.3333,2026-05-15
-3,Clouds generally forming or developing,06:00:00,25.6,87,0.0,6.8,Perlis,Kangar,6.4333,100.2,2026-05-15
-3,Clouds generally forming or developing,06:00:00,24.8,94,0.0,6.1,Sabah,Lahad Datu,5.03,118.34,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",06:00:00,24.9,98,0.5,6.3,Sarawak,Sibu,2.3,111.8167,2026-05-15
-3,Clouds generally forming or developing,06:00:00,25.0,96,0.0,6.8,Kelantan,Kota Bharu,6.1333,102.25,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",06:00:00,26.0,95,0.1,1.7,Johor,Muar,2.05,102.56,2026-05-15
-3,Clouds generally forming or developing,06:00:00,25.4,87,0.0,2.8,Perak,Taiping,4.85,100.7333,2026-05-15
-3,Clouds generally forming or developing,06:00:00,24.0,98,0.0,5.8,Johor,Kluang,2.0336,103.3194,2026-05-15
-3,Clouds generally forming or developing,06:00:00,25.6,91,0.0,7.0,Sabah,Sandakan,5.8388,118.1173,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",06:00:00,24.4,99,0.3,6.4,Johor,Batu Pahat,1.85,102.93,2026-05-15
-61,"Rain, not freezing, continuous slight at time of observation",06:00:00,24.7,98,0.9,5.9,Sarawak,Bintulu,3.17,113.03,2026-05-15
-3,Clouds generally forming or developing,06:00:00,26.3,90,0.0,0.2,Perak,Teluk Intan,4.0259,101.0213,2026-05-15
-2,State of sky on the whole unchanged,06:00:00,25.8,94,0.0,2.0,Pulau Pinang,George Town,5.4145,100.3292,2026-05-15
-3,Clouds generally forming or developing,06:00:00,25.0,95,0.0,3.9,Negeri Sembilan,Seremban,2.7297,101.9381,2026-05-15
-3,Clouds generally forming or developing,06:00:00,25.9,87,0.0,1.7,Sabah,Kota Kinabalu,5.975,116.0725,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",06:00:00,24.3,99,0.3,3.9,Johor,Johor Bahru,1.4556,103.7611,2026-05-15
-2,State of sky on the whole unchanged,06:00:00,25.0,94,0.0,5.5,Kedah,Sungai Petani,5.65,100.48,2026-05-15
-81,"Rain shower(s), moderate or heavy",06:00:00,25.2,98,1.5,4.2,Terengganu,Cukai,4.2332,103.4479,2026-05-15
-55,"Drizzle, not freezing, continuous heavy (dense) at time of observation",06:00:00,25.0,98,0.4,4.4,Sarawak,Miri,4.4028,113.9933,2026-05-15
-2,State of sky on the whole unchanged,06:00:00,25.9,90,0.0,6.3,Pulau Pinang,Butterworth,5.3992,100.3639,2026-05-15
-3,Clouds generally forming or developing,06:00:00,24.7,99,0.0,5.6,Kedah,Alor Setar,6.1167,100.3667,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",06:00:00,25.4,95,0.1,2.4,Melaka,Melaka,2.1889,102.2511,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",06:00:00,25.5,98,0.1,2.1,Putrajaya,Putrajaya,2.93,101.69,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",06:00:00,26.0,90,0.2,0.5,Selangor,Petaling Jaya,3.1073,101.6067,2026-05-15
-3,Clouds generally forming or developing,06:00:00,25.7,95,0.0,5.9,Terengganu,Kuala Terengganu,5.3303,103.1408,2026-05-15
-3,Clouds generally forming or developing,06:00:00,24.6,100,0.0,2.0,Pahang,Kuala Lipis,4.184,102.042,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",06:00:00,26.4,90,0.1,1.1,Selangor,Shah Alam,3.0833,101.5333,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",06:00:00,27.0,88,0.1,1.7,Labuan,Labuan,5.2803,115.2475,2026-05-15
-2,State of sky on the whole unchanged,06:00:00,25.9,90,0.0,6.3,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2026-05-15
-3,Clouds generally forming or developing,06:00:00,23.8,98,0.0,4.8,Pahang,Raub,3.7931,101.8569,2026-05-15
-3,Clouds generally forming or developing,05:00:00,25.4,87,0.0,2.3,Perak,Taiping,4.85,100.7333,2026-05-15
-55,"Drizzle, not freezing, continuous heavy (dense) at time of observation",05:00:00,25.1,98,0.8,2.5,Sarawak,Bintulu,3.17,113.03,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",05:00:00,24.4,100,0.5,5.5,Johor,Batu Pahat,1.85,102.93,2026-05-15
-3,Clouds generally forming or developing,05:00:00,25.0,95,0.0,0.7,Negeri Sembilan,Seremban,2.7297,101.9381,2026-05-15
-3,Clouds generally forming or developing,05:00:00,26.0,90,0.0,6.2,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2026-05-15
-3,Clouds generally forming or developing,05:00:00,26.1,94,0.0,4.6,Johor,Muar,2.05,102.56,2026-05-15
-3,Clouds generally forming or developing,05:00:00,26.1,94,0.0,5.2,Terengganu,Kuala Terengganu,5.3303,103.1408,2026-05-15
-3,Clouds generally forming or developing,05:00:00,24.8,94,0.0,7.1,Sabah,Lahad Datu,5.03,118.34,2026-05-15
-3,Clouds generally forming or developing,05:00:00,25.7,89,0.0,7.2,Sabah,Sandakan,5.8388,118.1173,2026-05-15
-3,Clouds generally forming or developing,05:00:00,25.0,98,0.0,5.8,Kedah,Alor Setar,6.1167,100.3667,2026-05-15
-55,"Drizzle, not freezing, continuous heavy (dense) at time of observation",05:00:00,25.2,99,0.3,7.0,Terengganu,Cukai,4.2332,103.4479,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",05:00:00,25.5,98,0.1,3.8,Pahang,Kuantan,3.8167,103.3333,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",05:00:00,26.1,95,0.6,3.6,Labuan,Labuan,5.2803,115.2475,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",05:00:00,24.9,99,0.1,7.8,Sarawak,Miri,4.4028,113.9933,2026-05-15
-3,Clouds generally forming or developing,05:00:00,24.9,98,0.0,1.9,Pahang,Kuala Lipis,4.184,102.042,2026-05-15
-3,Clouds generally forming or developing,05:00:00,26.0,90,0.0,6.2,Pulau Pinang,Butterworth,5.3992,100.3639,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",05:00:00,24.4,98,0.4,2.3,Johor,Johor Bahru,1.4556,103.7611,2026-05-15
-3,Clouds generally forming or developing,05:00:00,25.9,88,0.0,2.5,Sabah,Kota Kinabalu,5.975,116.0725,2026-05-15
-3,Clouds generally forming or developing,05:00:00,25.2,95,0.0,3.3,Perak,Ipoh,4.6,101.07,2026-05-15
-3,Clouds generally forming or developing,05:00:00,24.0,98,0.0,3.9,Pahang,Raub,3.7931,101.8569,2026-05-15
-3,Clouds generally forming or developing,05:00:00,26.2,88,0.0,0.5,Selangor,Petaling Jaya,3.1073,101.6067,2026-05-15
-3,Clouds generally forming or developing,05:00:00,25.5,88,0.0,5.6,Perlis,Kangar,6.4333,100.2,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",05:00:00,25.2,95,0.3,8.1,Sarawak,Sibu,2.3,111.8167,2026-05-15
-3,Clouds generally forming or developing,05:00:00,26.4,91,0.0,1.9,Selangor,Shah Alam,3.0833,101.5333,2026-05-15
-3,Clouds generally forming or developing,05:00:00,25.0,97,0.0,6.7,Kelantan,Kota Bharu,6.1333,102.25,2026-05-15
-2,State of sky on the whole unchanged,05:00:00,25.1,93,0.0,5.7,Kedah,Sungai Petani,5.65,100.48,2026-05-15
-3,Clouds generally forming or developing,05:00:00,25.6,98,0.0,3.2,Putrajaya,Putrajaya,2.93,101.69,2026-05-15
-3,Clouds generally forming or developing,05:00:00,25.7,93,0.0,6.7,Melaka,Melaka,2.1889,102.2511,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",05:00:00,24.1,98,0.3,5.1,Johor,Kluang,2.0336,103.3194,2026-05-15
-3,Clouds generally forming or developing,05:00:00,26.5,90,0.0,0.6,Perak,Teluk Intan,4.0259,101.0213,2026-05-15
-3,Clouds generally forming or developing,05:00:00,25.7,95,0.0,3.9,Pulau Pinang,George Town,5.4145,100.3292,2026-05-15
-3,Clouds generally forming or developing,04:00:00,25.4,87,0.0,3.6,Perak,Taiping,4.85,100.7333,2026-05-15
-3,Clouds generally forming or developing,04:00:00,25.8,96,0.0,3.3,Pulau Pinang,George Town,5.4145,100.3292,2026-05-15
-3,Clouds generally forming or developing,04:00:00,25.4,96,0.0,0.6,Perak,Ipoh,4.6,101.07,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",04:00:00,25.6,99,0.2,8.9,Terengganu,Cukai,4.2332,103.4479,2026-05-15
-3,Clouds generally forming or developing,04:00:00,26.2,90,0.0,4.5,Pulau Pinang,Butterworth,5.3992,100.3639,2026-05-15
-3,Clouds generally forming or developing,04:00:00,25.2,94,0.0,1.5,Negeri Sembilan,Seremban,2.7297,101.9381,2026-05-15
-3,Clouds generally forming or developing,04:00:00,25.0,94,0.0,6.0,Kedah,Sungai Petani,5.65,100.48,2026-05-15
-55,"Drizzle, not freezing, continuous heavy (dense) at time of observation",04:00:00,24.8,99,1.2,6.0,Johor,Batu Pahat,1.85,102.93,2026-05-15
-81,"Rain shower(s), moderate or heavy",04:00:00,24.2,97,1.0,0.8,Johor,Johor Bahru,1.4556,103.7611,2026-05-15
-3,Clouds generally forming or developing,04:00:00,26.0,90,0.0,3.5,Selangor,Petaling Jaya,3.1073,101.6067,2026-05-15
-80,"Rain shower(s), slight",04:00:00,25.2,97,0.5,1.8,Sarawak,Bintulu,3.17,113.03,2026-05-15
-3,Clouds generally forming or developing,04:00:00,25.8,90,0.0,10.4,Sabah,Sandakan,5.8388,118.1173,2026-05-15
-3,Clouds generally forming or developing,04:00:00,26.4,91,0.0,2.9,Selangor,Shah Alam,3.0833,101.5333,2026-05-15
-80,"Rain shower(s), slight",04:00:00,24.2,99,1.1,2.1,Johor,Kluang,2.0336,103.3194,2026-05-15
-3,Clouds generally forming or developing,04:00:00,25.2,97,0.0,5.5,Kelantan,Kota Bharu,6.1333,102.25,2026-05-15
-3,Clouds generally forming or developing,04:00:00,25.7,91,0.0,11.2,Melaka,Melaka,2.1889,102.2511,2026-05-15
-3,Clouds generally forming or developing,04:00:00,25.9,89,0.0,2.5,Sabah,Kota Kinabalu,5.975,116.0725,2026-05-15
-80,"Rain shower(s), slight",04:00:00,25.9,96,1.4,4.5,Labuan,Labuan,5.2803,115.2475,2026-05-15
-3,Clouds generally forming or developing,04:00:00,26.4,93,0.0,7.1,Terengganu,Kuala Terengganu,5.3303,103.1408,2026-05-15
-3,Clouds generally forming or developing,04:00:00,26.8,88,0.0,3.1,Perak,Teluk Intan,4.0259,101.0213,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",04:00:00,25.7,99,0.0,6.0,Pahang,Kuantan,3.8167,103.3333,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",04:00:00,24.1,98,0.1,3.0,Pahang,Raub,3.7931,101.8569,2026-05-15
-3,Clouds generally forming or developing,04:00:00,25.0,98,0.0,3.4,Pahang,Kuala Lipis,4.184,102.042,2026-05-15
-3,Clouds generally forming or developing,04:00:00,25.0,93,0.0,6.2,Sabah,Lahad Datu,5.03,118.34,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",04:00:00,25.0,99,0.6,7.5,Sarawak,Miri,4.4028,113.9933,2026-05-15
-3,Clouds generally forming or developing,04:00:00,25.0,98,0.0,6.2,Kedah,Alor Setar,6.1167,100.3667,2026-05-15
-3,Clouds generally forming or developing,04:00:00,25.3,90,0.0,5.1,Perlis,Kangar,6.4333,100.2,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",04:00:00,25.7,91,0.2,11.1,Sarawak,Sibu,2.3,111.8167,2026-05-15
-3,Clouds generally forming or developing,04:00:00,26.1,90,0.0,4.5,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",04:00:00,26.2,94,0.2,9.8,Johor,Muar,2.05,102.56,2026-05-15
-3,Clouds generally forming or developing,04:00:00,25.9,97,0.0,5.9,Putrajaya,Putrajaya,2.93,101.69,2026-05-15
-3,Clouds generally forming or developing,03:00:00,25.8,91,0.0,3.1,Sarawak,Bintulu,3.17,113.03,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",03:00:00,26.1,99,0.2,4.1,Pahang,Kuantan,3.8167,103.3333,2026-05-15
-3,Clouds generally forming or developing,03:00:00,26.3,88,0.0,5.6,Pulau Pinang,Butterworth,5.3992,100.3639,2026-05-15
-3,Clouds generally forming or developing,03:00:00,25.5,93,0.0,1.9,Sabah,Kota Kinabalu,5.975,116.0725,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",03:00:00,26.1,98,0.6,5.0,Terengganu,Cukai,4.2332,103.4479,2026-05-15
-3,Clouds generally forming or developing,03:00:00,25.3,96,0.0,7.3,Kelantan,Kota Bharu,6.1333,102.25,2026-05-15
-3,Clouds generally forming or developing,03:00:00,25.2,92,0.0,7.9,Sabah,Lahad Datu,5.03,118.34,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",03:00:00,25.5,91,0.1,3.5,Negeri Sembilan,Seremban,2.7297,101.9381,2026-05-15
-3,Clouds generally forming or developing,03:00:00,26.5,92,0.0,2.3,Putrajaya,Putrajaya,2.93,101.69,2026-05-15
-55,"Drizzle, not freezing, continuous heavy (dense) at time of observation",03:00:00,24.2,98,0.1,1.9,Pahang,Raub,3.7931,101.8569,2026-05-15
-3,Clouds generally forming or developing,03:00:00,26.0,89,0.0,11.0,Sabah,Sandakan,5.8388,118.1173,2026-05-15
-3,Clouds generally forming or developing,03:00:00,26.1,96,0.0,4.2,Pulau Pinang,George Town,5.4145,100.3292,2026-05-15
-3,Clouds generally forming or developing,03:00:00,25.0,95,0.0,7.1,Kedah,Sungai Petani,5.65,100.48,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",03:00:00,25.9,88,0.3,12.3,Melaka,Melaka,2.1889,102.2511,2026-05-15
-81,"Rain shower(s), moderate or heavy",03:00:00,23.9,99,0.9,7.2,Johor,Kluang,2.0336,103.3194,2026-05-15
-3,Clouds generally forming or developing,03:00:00,26.3,90,0.0,3.6,Selangor,Petaling Jaya,3.1073,101.6067,2026-05-15
-3,Clouds generally forming or developing,03:00:00,26.2,88,0.0,5.6,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2026-05-15
-3,Clouds generally forming or developing,03:00:00,25.2,98,0.0,5.4,Pahang,Kuala Lipis,4.184,102.042,2026-05-15
-3,Clouds generally forming or developing,03:00:00,26.5,90,0.0,4.2,Selangor,Shah Alam,3.0833,101.5333,2026-05-15
-80,"Rain shower(s), slight",03:00:00,25.0,98,1.2,3.9,Johor,Batu Pahat,1.85,102.93,2026-05-15
-3,Clouds generally forming or developing,03:00:00,25.7,86,0.0,3.1,Perak,Taiping,4.85,100.7333,2026-05-15
-3,Clouds generally forming or developing,03:00:00,25.5,89,0.0,6.2,Perlis,Kangar,6.4333,100.2,2026-05-15
-3,Clouds generally forming or developing,03:00:00,27.2,86,0.0,3.2,Perak,Teluk Intan,4.0259,101.0213,2026-05-15
-3,Clouds generally forming or developing,03:00:00,25.3,96,0.0,6.5,Kedah,Alor Setar,6.1167,100.3667,2026-05-15
-81,"Rain shower(s), moderate or heavy",03:00:00,25.7,95,0.0,6.9,Labuan,Labuan,5.2803,115.2475,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",03:00:00,26.3,90,0.6,6.7,Johor,Muar,2.05,102.56,2026-05-15
-3,Clouds generally forming or developing,03:00:00,26.6,91,0.0,1.3,Terengganu,Kuala Terengganu,5.3303,103.1408,2026-05-15
-81,"Rain shower(s), moderate or heavy",03:00:00,24.2,99,0.1,12.0,Johor,Johor Bahru,1.4556,103.7611,2026-05-15
-55,"Drizzle, not freezing, continuous heavy (dense) at time of observation",03:00:00,25.4,100,0.4,9.0,Sarawak,Miri,4.4028,113.9933,2026-05-15
-3,Clouds generally forming or developing,03:00:00,25.5,97,0.0,0.7,Perak,Ipoh,4.6,101.07,2026-05-15
-3,Clouds generally forming or developing,03:00:00,26.3,90,0.0,5.3,Sarawak,Sibu,2.3,111.8167,2026-05-15
-80,"Rain shower(s), slight",02:00:00,24.6,97,0.4,2.2,Pahang,Raub,3.7931,101.8569,2026-05-15
-80,"Rain shower(s), slight",02:00:00,26.5,92,0.7,5.6,Terengganu,Cukai,4.2332,103.4479,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",02:00:00,26.9,90,0.1,3.6,Selangor,Shah Alam,3.0833,101.5333,2026-05-15
-3,Clouds generally forming or developing,02:00:00,25.8,96,0.0,6.9,Johor,Johor Bahru,1.4556,103.7611,2026-05-15
-80,"Rain shower(s), slight",02:00:00,26.3,89,0.5,8.4,Sarawak,Bintulu,3.17,113.03,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",02:00:00,26.2,99,0.8,6.3,Pahang,Kuantan,3.8167,103.3333,2026-05-15
-3,Clouds generally forming or developing,02:00:00,25.5,90,0.0,4.6,Perlis,Kangar,6.4333,100.2,2026-05-15
-80,"Rain shower(s), slight",02:00:00,26.1,90,2.4,8.3,Johor,Muar,2.05,102.56,2026-05-15
-3,Clouds generally forming or developing,02:00:00,25.5,95,0.0,8.0,Kelantan,Kota Bharu,6.1333,102.25,2026-05-15
-3,Clouds generally forming or developing,02:00:00,26.7,94,0.0,6.2,Pulau Pinang,George Town,5.4145,100.3292,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",02:00:00,27.1,89,0.0,3.4,Putrajaya,Putrajaya,2.93,101.69,2026-05-15
-3,Clouds generally forming or developing,02:00:00,27.5,88,0.0,1.1,Perak,Teluk Intan,4.0259,101.0213,2026-05-15
-55,"Drizzle, not freezing, continuous heavy (dense) at time of observation",02:00:00,27.2,90,0.2,3.1,Labuan,Labuan,5.2803,115.2475,2026-05-15
-3,Clouds generally forming or developing,02:00:00,27.0,90,0.0,0.6,Terengganu,Kuala Terengganu,5.3303,103.1408,2026-05-15
-3,Clouds generally forming or developing,02:00:00,26.2,93,0.0,4.2,Sarawak,Sibu,2.3,111.8167,2026-05-15
-3,Clouds generally forming or developing,02:00:00,26.2,94,0.0,3.6,Perak,Ipoh,4.6,101.07,2026-05-15
-81,"Rain shower(s), moderate or heavy",02:00:00,25.1,98,2.0,6.5,Johor,Batu Pahat,1.85,102.93,2026-05-15
-3,Clouds generally forming or developing,02:00:00,26.5,87,0.0,6.7,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2026-05-15
-80,"Rain shower(s), slight",02:00:00,26.9,90,1.3,8.0,Melaka,Melaka,2.1889,102.2511,2026-05-15
-3,Clouds generally forming or developing,02:00:00,25.2,94,0.0,7.2,Kedah,Sungai Petani,5.65,100.48,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",02:00:00,25.8,98,0.0,8.5,Sarawak,Miri,4.4028,113.9933,2026-05-15
-3,Clouds generally forming or developing,02:00:00,25.5,93,0.0,7.3,Sabah,Lahad Datu,5.03,118.34,2026-05-15
-3,Clouds generally forming or developing,02:00:00,25.6,95,0.0,6.3,Kedah,Alor Setar,6.1167,100.3667,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",02:00:00,25.6,97,0.5,2.3,Pahang,Kuala Lipis,4.184,102.042,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",02:00:00,25.7,93,0.1,3.5,Sabah,Kota Kinabalu,5.975,116.0725,2026-05-15
-3,Clouds generally forming or developing,02:00:00,26.2,89,0.0,11.5,Sabah,Sandakan,5.8388,118.1173,2026-05-15
-81,"Rain shower(s), moderate or heavy",02:00:00,24.4,98,0.5,7.8,Johor,Kluang,2.0336,103.3194,2026-05-15
-3,Clouds generally forming or developing,02:00:00,26.9,86,0.0,2.9,Selangor,Petaling Jaya,3.1073,101.6067,2026-05-15
-3,Clouds generally forming or developing,02:00:00,26.0,86,0.0,2.8,Perak,Taiping,4.85,100.7333,2026-05-15
-3,Clouds generally forming or developing,02:00:00,26.2,83,0.0,4.7,Negeri Sembilan,Seremban,2.7297,101.9381,2026-05-15
-3,Clouds generally forming or developing,02:00:00,26.6,87,0.0,6.7,Pulau Pinang,Butterworth,5.3992,100.3639,2026-05-15
-95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",01:00:00,26.9,95,0.1,2.4,Selangor,Petaling Jaya,3.1073,101.6067,2026-05-15
-2,State of sky on the whole unchanged,01:00:00,26.2,96,0.0,5.3,Kelantan,Kota Bharu,6.1333,102.25,2026-05-15
-81,"Rain shower(s), moderate or heavy",01:00:00,26.2,96,0.8,3.4,Pahang,Kuantan,3.8167,103.3333,2026-05-15
-81,"Rain shower(s), moderate or heavy",01:00:00,25.5,96,2.1,0.4,Melaka,Melaka,2.1889,102.2511,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",01:00:00,25.8,95,0.1,7.0,Kedah,Sungai Petani,5.65,100.48,2026-05-15
-3,Clouds generally forming or developing,01:00:00,26.5,92,0.0,3.4,Perak,Ipoh,4.6,101.07,2026-05-15
-81,"Rain shower(s), moderate or heavy",01:00:00,24.9,98,0.1,12.1,Johor,Batu Pahat,1.85,102.93,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",01:00:00,26.3,93,0.0,13.0,Terengganu,Cukai,4.2332,103.4479,2026-05-15
-81,"Rain shower(s), moderate or heavy",01:00:00,25.0,98,0.9,4.6,Johor,Muar,2.05,102.56,2026-05-15
-3,Clouds generally forming or developing,01:00:00,27.5,85,0.0,9.2,Pulau Pinang,Butterworth,5.3992,100.3639,2026-05-15
-3,Clouds generally forming or developing,01:00:00,28.0,86,0.0,4.0,Pulau Pinang,George Town,5.4145,100.3292,2026-05-15
-81,"Rain shower(s), moderate or heavy",01:00:00,25.0,98,1.0,3.3,Johor,Kluang,2.0336,103.3194,2026-05-15
-3,Clouds generally forming or developing,01:00:00,26.1,98,0.0,7.5,Sarawak,Miri,4.4028,113.9933,2026-05-15
-3,Clouds generally forming or developing,01:00:00,26.1,88,0.0,12.2,Sabah,Sandakan,5.8388,118.1173,2026-05-15
-3,Clouds generally forming or developing,01:00:00,26.4,83,0.0,4.9,Perak,Taiping,4.85,100.7333,2026-05-15
-3,Clouds generally forming or developing,01:00:00,27.5,85,0.0,9.2,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2026-05-15
-3,Clouds generally forming or developing,01:00:00,25.6,92,0.0,7.9,Sabah,Lahad Datu,5.03,118.34,2026-05-15
-55,"Drizzle, not freezing, continuous heavy (dense) at time of observation",01:00:00,24.5,96,0.5,0.4,Pahang,Raub,3.7931,101.8569,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",01:00:00,25.5,97,0.1,6.6,Pahang,Kuala Lipis,4.184,102.042,2026-05-15
-3,Clouds generally forming or developing,01:00:00,26.6,86,0.0,3.5,Sarawak,Bintulu,3.17,113.03,2026-05-15
-3,Clouds generally forming or developing,01:00:00,27.0,88,0.0,2.6,Perak,Teluk Intan,4.0259,101.0213,2026-05-15
-3,Clouds generally forming or developing,01:00:00,26.6,88,0.0,5.4,Negeri Sembilan,Seremban,2.7297,101.9381,2026-05-15
-3,Clouds generally forming or developing,01:00:00,26.3,95,0.0,4.1,Sarawak,Sibu,2.3,111.8167,2026-05-15
-3,Clouds generally forming or developing,01:00:00,27.2,91,0.0,3.6,Terengganu,Kuala Terengganu,5.3303,103.1408,2026-05-15
-3,Clouds generally forming or developing,01:00:00,25.4,93,0.0,3.4,Sabah,Kota Kinabalu,5.975,116.0725,2026-05-15
-3,Clouds generally forming or developing,01:00:00,27.2,93,0.0,5.3,Putrajaya,Putrajaya,2.93,101.69,2026-05-15
-55,"Drizzle, not freezing, continuous heavy (dense) at time of observation",01:00:00,27.0,92,0.7,1.5,Selangor,Shah Alam,3.0833,101.5333,2026-05-15
-3,Clouds generally forming or developing,01:00:00,26.2,92,0.0,5.5,Kedah,Alor Setar,6.1167,100.3667,2026-05-15
-3,Clouds generally forming or developing,01:00:00,25.9,91,0.0,5.4,Perlis,Kangar,6.4333,100.2,2026-05-15
-3,Clouds generally forming or developing,01:00:00,26.8,90,0.0,3.5,Johor,Johor Bahru,1.4556,103.7611,2026-05-15
-3,Clouds generally forming or developing,01:00:00,27.5,87,0.0,3.1,Labuan,Labuan,5.2803,115.2475,2026-05-15
-3,Clouds generally forming or developing,00:00:00,27.0,90,0.0,0.6,Perak,Ipoh,4.6,101.07,2026-05-15
-2,State of sky on the whole unchanged,00:00:00,28.4,83,0.0,3.8,Pulau Pinang,George Town,5.4145,100.3292,2026-05-15
-95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",00:00:00,26.4,99,0.0,7.5,Sarawak,Miri,4.4028,113.9933,2026-05-15
-3,Clouds generally forming or developing,00:00:00,26.4,95,0.0,3.8,Sarawak,Sibu,2.3,111.8167,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",00:00:00,28.0,90,0.1,0.6,Putrajaya,Putrajaya,2.93,101.69,2026-05-15
-3,Clouds generally forming or developing,00:00:00,26.7,83,0.0,3.1,Perak,Taiping,4.85,100.7333,2026-05-15
-3,Clouds generally forming or developing,00:00:00,26.5,93,0.0,5.3,Kedah,Alor Setar,6.1167,100.3667,2026-05-15
-95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation",00:00:00,27.0,95,0.0,0.7,Selangor,Petaling Jaya,3.1073,101.6067,2026-05-15
-2,State of sky on the whole unchanged,00:00:00,26.4,92,0.0,7.0,Kedah,Sungai Petani,5.65,100.48,2026-05-15
-81,"Rain shower(s), moderate or heavy",00:00:00,25.0,97,0.0,3.7,Pahang,Raub,3.7931,101.8569,2026-05-15
-2,State of sky on the whole unchanged,00:00:00,25.9,92,0.0,7.7,Sabah,Lahad Datu,5.03,118.34,2026-05-15
-2,State of sky on the whole unchanged,00:00:00,28.3,76,0.0,0.6,Sarawak,Bintulu,3.17,113.03,2026-05-15
-3,Clouds generally forming or developing,00:00:00,26.2,94,0.0,2.9,Pahang,Kuala Lipis,4.184,102.042,2026-05-15
-3,Clouds generally forming or developing,00:00:00,28.5,78,0.0,3.9,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,2026-05-15
-3,Clouds generally forming or developing,00:00:00,27.1,95,0.0,2.2,Terengganu,Kuala Terengganu,5.3303,103.1408,2026-05-15
-3,Clouds generally forming or developing,00:00:00,27.9,88,0.0,3.1,Labuan,Labuan,5.2803,115.2475,2026-05-15
-80,"Rain shower(s), slight",00:00:00,25.8,95,0.0,8.0,Johor,Kluang,2.0336,103.3194,2026-05-15
-80,"Rain shower(s), slight",00:00:00,25.9,94,0.0,18.2,Johor,Muar,2.05,102.56,2026-05-15
-3,Clouds generally forming or developing,00:00:00,27.3,88,0.0,3.0,Johor,Johor Bahru,1.4556,103.7611,2026-05-15
-81,"Rain shower(s), moderate or heavy",00:00:00,25.2,94,0.0,9.4,Melaka,Melaka,2.1889,102.2511,2026-05-15
-3,Clouds generally forming or developing,00:00:00,26.2,90,0.0,4.7,Perlis,Kangar,6.4333,100.2,2026-05-15
-53,"Drizzle, not freezing, continuous 	moderate at time of observation",00:00:00,26.4,94,0.0,6.4,Pahang,Kuantan,3.8167,103.3333,2026-05-15
-3,Clouds generally forming or developing,00:00:00,25.4,93,0.0,3.4,Sabah,Kota Kinabalu,5.975,116.0725,2026-05-15
-51,"Drizzle, not freezing, continuous 	slight at time of observation",00:00:00,27.1,91,0.1,7.1,Terengganu,Cukai,4.2332,103.4479,2026-05-15
-3,Clouds generally forming or developing,00:00:00,27.0,86,0.0,2.8,Negeri Sembilan,Seremban,2.7297,101.9381,2026-05-15
-80,"Rain shower(s), slight",00:00:00,27.2,90,0.0,3.2,Selangor,Shah Alam,3.0833,101.5333,2026-05-15
-3,Clouds generally forming or developing,00:00:00,28.6,78,0.0,3.9,Pulau Pinang,Butterworth,5.3992,100.3639,2026-05-15
-3,Clouds generally forming or developing,00:00:00,27.3,85,0.0,4.0,Perak,Teluk Intan,4.0259,101.0213,2026-05-15
-3,Clouds generally forming or developing,00:00:00,26.9,87,0.0,12.4,Sabah,Sandakan,5.8388,118.1173,2026-05-15
-3,Clouds generally forming or developing,00:00:00,27.7,86,0.0,3.3,Johor,Batu Pahat,1.85,102.93,2026-05-15
-3,Clouds generally forming or developing,00:00:00,26.2,95,0.0,5.6,Kelantan,Kota Bharu,6.1333,102.25,2026-05-15
+date,time,state,city,latitude,longitude,temperature_2m,relativehumidity_2m,rain,windspeed_10m,weathercode,description
+2026-05-15,09:00:00,Johor,Johor Bahru,1.4556,103.7611,24.6,98,0.5,4.0,80,"Rain shower(s), slight"
+2026-05-15,09:00:00,Putrajaya,Putrajaya,2.93,101.69,26.7,93,0.0,2.8,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Kedah,Sungai Petani,5.65,100.48,28.3,80,0.0,1.0,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Pulau Pinang,George Town,5.4145,100.3292,28.2,85,0.0,4.2,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Sabah,Lahad Datu,5.03,118.34,29.1,76,0.0,6.0,2,State of sky on the whole unchanged
+2026-05-15,09:00:00,Selangor,Shah Alam,3.0833,101.5333,26.4,94,0.2,4.4,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,09:00:00,Sarawak,Bintulu,3.17,113.03,25.0,97,0.9,8.1,63,"Rain, not freezing, continuous moderate at time of observation"
+2026-05-15,09:00:00,Sabah,Sandakan,5.8388,118.1173,30.4,65,0.0,2.8,2,State of sky on the whole unchanged
+2026-05-15,09:00:00,Selangor,Petaling Jaya,3.1073,101.6067,25.9,95,0.6,4.3,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,09:00:00,Sabah,Kota Kinabalu,5.975,116.0725,28.6,76,0.0,1.4,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Perlis,Kangar,6.4333,100.2,27.5,84,0.0,6.2,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Terengganu,Cukai,4.2332,103.4479,26.6,90,0.0,4.0,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Melaka,Melaka,2.1889,102.2511,26.9,91,0.0,3.4,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,27.5,86,0.0,6.7,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,09:00:00,Pahang,Kuala Lipis,4.184,102.042,26.2,92,0.0,2.3,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Kelantan,Kota Bharu,6.1333,102.25,28.1,81,0.0,6.5,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Pahang,Kuantan,3.8167,103.3333,26.5,90,0.0,4.6,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Pahang,Raub,3.7931,101.8569,25.9,95,0.0,1.7,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,27.5,85,0.0,6.7,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,09:00:00,Perak,Teluk Intan,4.0259,101.0213,28.1,84,0.0,0.2,2,State of sky on the whole unchanged
+2026-05-15,09:00:00,Perak,Ipoh,4.6,101.07,27.4,84,0.0,3.6,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Sarawak,Miri,4.4028,113.9933,26.8,94,0.5,5.1,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,09:00:00,Kedah,Alor Setar,6.1167,100.3667,27.5,84,0.0,3.6,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Sarawak,Sibu,2.3,111.8167,26.2,95,0.1,4.3,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,09:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,28.2,83,0.0,4.0,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Labuan,Labuan,5.2803,115.2475,28.4,86,0.0,3.9,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,09:00:00,Perak,Taiping,4.85,100.7333,27.7,82,0.0,1.6,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,27.4,82,0.0,2.5,2,State of sky on the whole unchanged
+2026-05-15,09:00:00,Johor,Batu Pahat,1.85,102.93,26.5,95,0.0,4.2,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Johor,Kluang,2.0336,103.3194,25.5,95,0.0,4.7,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Johor,Muar,2.05,102.56,26.9,93,0.0,5.2,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Perlis,Kangar,6.4333,100.2,26.1,87,0.0,9.6,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Perak,Taiping,4.85,100.7333,26.4,88,0.0,2.7,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Terengganu,Cukai,4.2332,103.4479,25.6,97,0.0,6.1,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Melaka,Melaka,2.1889,102.2511,25.5,96,0.0,5.5,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Johor,Kluang,2.0336,103.3194,24.3,98,0.0,7.1,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Pulau Pinang,George Town,5.4145,100.3292,27.1,89,0.0,3.3,2,State of sky on the whole unchanged
+2026-05-15,08:00:00,Johor,Muar,2.05,102.56,25.8,96,0.0,8.5,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Sarawak,Sibu,2.3,111.8167,25.2,96,0.4,5.2,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,08:00:00,Sabah,Sandakan,5.8388,118.1173,28.5,74,0.0,4.0,2,State of sky on the whole unchanged
+2026-05-15,08:00:00,Sabah,Lahad Datu,5.03,118.34,27.3,85,0.0,6.7,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Kelantan,Kota Bharu,6.1333,102.25,26.2,90,0.0,8.0,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Pahang,Kuala Lipis,4.184,102.042,25.2,97,0.0,3.5,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Sarawak,Miri,4.4028,113.9933,25.6,97,0.6,3.9,80,"Rain shower(s), slight"
+2026-05-15,08:00:00,Pahang,Raub,3.7931,101.8569,24.7,99,0.0,1.5,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,26.4,89,0.0,6.6,2,State of sky on the whole unchanged
+2026-05-15,08:00:00,Sabah,Kota Kinabalu,5.975,116.0725,27.2,85,0.0,1.5,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,26.3,89,0.0,6.6,2,State of sky on the whole unchanged
+2026-05-15,08:00:00,Kedah,Sungai Petani,5.65,100.48,26.2,91,0.0,3.8,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Perak,Ipoh,4.6,101.07,26.0,91,0.0,5.4,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Labuan,Labuan,5.2803,115.2475,28.2,89,0.0,3.1,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,08:00:00,Selangor,Shah Alam,3.0833,101.5333,25.8,95,0.3,4.5,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,08:00:00,Selangor,Petaling Jaya,3.1073,101.6067,25.6,96,0.6,3.2,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,08:00:00,Putrajaya,Putrajaya,2.93,101.69,26.1,95,0.0,0.2,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Pahang,Kuantan,3.8167,103.3333,25.5,97,0.2,5.2,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,08:00:00,Perak,Teluk Intan,4.0259,101.0213,26.9,90,0.0,1.7,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,26.1,91,0.0,4.8,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Johor,Batu Pahat,1.85,102.93,25.6,97,0.0,5.3,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Sarawak,Bintulu,3.17,113.03,24.7,100,0.0,9.7,81,"Rain shower(s), moderate or heavy"
+2026-05-15,08:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,25.9,91,0.0,3.7,2,State of sky on the whole unchanged
+2026-05-15,08:00:00,Kedah,Alor Setar,6.1167,100.3667,25.8,94,0.1,4.6,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,08:00:00,Johor,Johor Bahru,1.4556,103.7611,24.5,98,0.8,2.0,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,07:00:00,Sarawak,Sibu,2.3,111.8167,24.8,97,0.5,5.0,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,07:00:00,Sarawak,Miri,4.4028,113.9933,25.2,97,0.2,3.7,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,07:00:00,Selangor,Shah Alam,3.0833,101.5333,25.8,94,0.3,4.3,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,07:00:00,Labuan,Labuan,5.2803,115.2475,27.5,88,0.0,2.4,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,07:00:00,Johor,Johor Bahru,1.4556,103.7611,24.1,99,0.8,7.3,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,07:00:00,Pahang,Kuantan,3.8167,103.3333,25.2,99,0.5,3.5,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,07:00:00,Sarawak,Bintulu,3.17,113.03,24.5,99,0.1,7.8,63,"Rain, not freezing, continuous moderate at time of observation"
+2026-05-15,07:00:00,Terengganu,Cukai,4.2332,103.4479,25.2,98,0.6,5.8,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,07:00:00,Putrajaya,Putrajaya,2.93,101.69,25.8,98,0.3,1.4,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,07:00:00,Selangor,Petaling Jaya,3.1073,101.6067,25.5,95,0.4,2.7,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,07:00:00,Perak,Ipoh,4.6,101.07,25.1,95,0.0,5.3,2,State of sky on the whole unchanged
+2026-05-15,07:00:00,Pulau Pinang,George Town,5.4145,100.3292,26.1,92,0.0,2.3,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Kedah,Alor Setar,6.1167,100.3667,24.7,99,0.0,2.2,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,25.0,93,0.0,3.0,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Perak,Teluk Intan,4.0259,101.0213,26.0,92,0.0,2.7,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Melaka,Melaka,2.1889,102.2511,25.0,97,0.0,3.4,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Johor,Kluang,2.0336,103.3194,23.8,98,0.0,6.2,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Johor,Muar,2.05,102.56,25.6,97,0.0,3.5,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Kelantan,Kota Bharu,6.1333,102.25,25.0,96,0.0,7.3,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Sabah,Lahad Datu,5.03,118.34,25.9,88,0.0,6.1,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Perlis,Kangar,6.4333,100.2,25.6,87,0.0,10.0,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Sabah,Sandakan,5.8388,118.1173,26.5,85,0.0,6.4,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,25.7,90,0.0,5.1,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Pahang,Raub,3.7931,101.8569,23.6,99,0.0,3.1,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Kedah,Sungai Petani,5.65,100.48,25.0,94,0.0,1.5,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Pahang,Kuala Lipis,4.184,102.042,24.5,100,0.0,4.0,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,25.8,90,0.0,5.1,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Sabah,Kota Kinabalu,5.975,116.0725,26.0,89,0.0,1.7,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,25.2,95,0.0,5.4,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Johor,Batu Pahat,1.85,102.93,24.6,98,0.1,4.0,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,07:00:00,Perak,Taiping,4.85,100.7333,25.6,88,0.0,2.2,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Perak,Ipoh,4.6,101.07,25.2,95,0.0,4.2,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Pahang,Kuantan,3.8167,103.3333,25.4,98,0.0,1.0,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,06:00:00,Perlis,Kangar,6.4333,100.2,25.6,87,0.0,6.8,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Sabah,Lahad Datu,5.03,118.34,24.8,94,0.0,6.1,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Sarawak,Sibu,2.3,111.8167,24.9,98,0.5,6.3,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,06:00:00,Kelantan,Kota Bharu,6.1333,102.25,25.0,96,0.0,6.8,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Johor,Muar,2.05,102.56,26.0,95,0.1,1.7,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,06:00:00,Perak,Taiping,4.85,100.7333,25.4,87,0.0,2.8,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Johor,Kluang,2.0336,103.3194,24.0,98,0.0,5.8,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Sabah,Sandakan,5.8388,118.1173,25.6,91,0.0,7.0,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Johor,Batu Pahat,1.85,102.93,24.4,99,0.3,6.4,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,06:00:00,Sarawak,Bintulu,3.17,113.03,24.7,98,0.9,5.9,61,"Rain, not freezing, continuous slight at time of observation"
+2026-05-15,06:00:00,Perak,Teluk Intan,4.0259,101.0213,26.3,90,0.0,0.2,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Pulau Pinang,George Town,5.4145,100.3292,25.8,94,0.0,2.0,2,State of sky on the whole unchanged
+2026-05-15,06:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,25.0,95,0.0,3.9,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Sabah,Kota Kinabalu,5.975,116.0725,25.9,87,0.0,1.7,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Johor,Johor Bahru,1.4556,103.7611,24.3,99,0.3,3.9,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,06:00:00,Kedah,Sungai Petani,5.65,100.48,25.0,94,0.0,5.5,2,State of sky on the whole unchanged
+2026-05-15,06:00:00,Terengganu,Cukai,4.2332,103.4479,25.2,98,1.5,4.2,81,"Rain shower(s), moderate or heavy"
+2026-05-15,06:00:00,Sarawak,Miri,4.4028,113.9933,25.0,98,0.4,4.4,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,06:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,25.9,90,0.0,6.3,2,State of sky on the whole unchanged
+2026-05-15,06:00:00,Kedah,Alor Setar,6.1167,100.3667,24.7,99,0.0,5.6,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Melaka,Melaka,2.1889,102.2511,25.4,95,0.1,2.4,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,06:00:00,Putrajaya,Putrajaya,2.93,101.69,25.5,98,0.1,2.1,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,06:00:00,Selangor,Petaling Jaya,3.1073,101.6067,26.0,90,0.2,0.5,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,06:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,25.7,95,0.0,5.9,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Pahang,Kuala Lipis,4.184,102.042,24.6,100,0.0,2.0,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Selangor,Shah Alam,3.0833,101.5333,26.4,90,0.1,1.1,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,06:00:00,Labuan,Labuan,5.2803,115.2475,27.0,88,0.1,1.7,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,06:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,25.9,90,0.0,6.3,2,State of sky on the whole unchanged
+2026-05-15,06:00:00,Pahang,Raub,3.7931,101.8569,23.8,98,0.0,4.8,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Perak,Taiping,4.85,100.7333,25.4,87,0.0,2.3,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Sarawak,Bintulu,3.17,113.03,25.1,98,0.8,2.5,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,05:00:00,Johor,Batu Pahat,1.85,102.93,24.4,100,0.5,5.5,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,05:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,25.0,95,0.0,0.7,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,26.0,90,0.0,6.2,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Johor,Muar,2.05,102.56,26.1,94,0.0,4.6,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,26.1,94,0.0,5.2,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Sabah,Lahad Datu,5.03,118.34,24.8,94,0.0,7.1,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Sabah,Sandakan,5.8388,118.1173,25.7,89,0.0,7.2,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Kedah,Alor Setar,6.1167,100.3667,25.0,98,0.0,5.8,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Terengganu,Cukai,4.2332,103.4479,25.2,99,0.3,7.0,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,05:00:00,Pahang,Kuantan,3.8167,103.3333,25.5,98,0.1,3.8,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,05:00:00,Labuan,Labuan,5.2803,115.2475,26.1,95,0.6,3.6,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,05:00:00,Sarawak,Miri,4.4028,113.9933,24.9,99,0.1,7.8,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,05:00:00,Pahang,Kuala Lipis,4.184,102.042,24.9,98,0.0,1.9,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,26.0,90,0.0,6.2,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Johor,Johor Bahru,1.4556,103.7611,24.4,98,0.4,2.3,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,05:00:00,Sabah,Kota Kinabalu,5.975,116.0725,25.9,88,0.0,2.5,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Perak,Ipoh,4.6,101.07,25.2,95,0.0,3.3,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Pahang,Raub,3.7931,101.8569,24.0,98,0.0,3.9,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Selangor,Petaling Jaya,3.1073,101.6067,26.2,88,0.0,0.5,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Perlis,Kangar,6.4333,100.2,25.5,88,0.0,5.6,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Sarawak,Sibu,2.3,111.8167,25.2,95,0.3,8.1,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,05:00:00,Selangor,Shah Alam,3.0833,101.5333,26.4,91,0.0,1.9,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Kelantan,Kota Bharu,6.1333,102.25,25.0,97,0.0,6.7,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Kedah,Sungai Petani,5.65,100.48,25.1,93,0.0,5.7,2,State of sky on the whole unchanged
+2026-05-15,05:00:00,Putrajaya,Putrajaya,2.93,101.69,25.6,98,0.0,3.2,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Melaka,Melaka,2.1889,102.2511,25.7,93,0.0,6.7,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Johor,Kluang,2.0336,103.3194,24.1,98,0.3,5.1,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,05:00:00,Perak,Teluk Intan,4.0259,101.0213,26.5,90,0.0,0.6,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Pulau Pinang,George Town,5.4145,100.3292,25.7,95,0.0,3.9,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Perak,Taiping,4.85,100.7333,25.4,87,0.0,3.6,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Pulau Pinang,George Town,5.4145,100.3292,25.8,96,0.0,3.3,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Perak,Ipoh,4.6,101.07,25.4,96,0.0,0.6,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Terengganu,Cukai,4.2332,103.4479,25.6,99,0.2,8.9,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,04:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,26.2,90,0.0,4.5,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,25.2,94,0.0,1.5,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Kedah,Sungai Petani,5.65,100.48,25.0,94,0.0,6.0,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Johor,Batu Pahat,1.85,102.93,24.8,99,1.2,6.0,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,04:00:00,Johor,Johor Bahru,1.4556,103.7611,24.2,97,1.0,0.8,81,"Rain shower(s), moderate or heavy"
+2026-05-15,04:00:00,Selangor,Petaling Jaya,3.1073,101.6067,26.0,90,0.0,3.5,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Sarawak,Bintulu,3.17,113.03,25.2,97,0.5,1.8,80,"Rain shower(s), slight"
+2026-05-15,04:00:00,Sabah,Sandakan,5.8388,118.1173,25.8,90,0.0,10.4,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Selangor,Shah Alam,3.0833,101.5333,26.4,91,0.0,2.9,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Johor,Kluang,2.0336,103.3194,24.2,99,1.1,2.1,80,"Rain shower(s), slight"
+2026-05-15,04:00:00,Kelantan,Kota Bharu,6.1333,102.25,25.2,97,0.0,5.5,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Melaka,Melaka,2.1889,102.2511,25.7,91,0.0,11.2,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Sabah,Kota Kinabalu,5.975,116.0725,25.9,89,0.0,2.5,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Labuan,Labuan,5.2803,115.2475,25.9,96,1.4,4.5,80,"Rain shower(s), slight"
+2026-05-15,04:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,26.4,93,0.0,7.1,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Perak,Teluk Intan,4.0259,101.0213,26.8,88,0.0,3.1,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Pahang,Kuantan,3.8167,103.3333,25.7,99,0.0,6.0,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,04:00:00,Pahang,Raub,3.7931,101.8569,24.1,98,0.1,3.0,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,04:00:00,Pahang,Kuala Lipis,4.184,102.042,25.0,98,0.0,3.4,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Sabah,Lahad Datu,5.03,118.34,25.0,93,0.0,6.2,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Sarawak,Miri,4.4028,113.9933,25.0,99,0.6,7.5,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,04:00:00,Kedah,Alor Setar,6.1167,100.3667,25.0,98,0.0,6.2,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Perlis,Kangar,6.4333,100.2,25.3,90,0.0,5.1,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Sarawak,Sibu,2.3,111.8167,25.7,91,0.2,11.1,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,04:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,26.1,90,0.0,4.5,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Johor,Muar,2.05,102.56,26.2,94,0.2,9.8,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,04:00:00,Putrajaya,Putrajaya,2.93,101.69,25.9,97,0.0,5.9,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Sarawak,Bintulu,3.17,113.03,25.8,91,0.0,3.1,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Pahang,Kuantan,3.8167,103.3333,26.1,99,0.2,4.1,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,03:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,26.3,88,0.0,5.6,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Sabah,Kota Kinabalu,5.975,116.0725,25.5,93,0.0,1.9,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Terengganu,Cukai,4.2332,103.4479,26.1,98,0.6,5.0,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,03:00:00,Kelantan,Kota Bharu,6.1333,102.25,25.3,96,0.0,7.3,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Sabah,Lahad Datu,5.03,118.34,25.2,92,0.0,7.9,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,25.5,91,0.1,3.5,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,03:00:00,Putrajaya,Putrajaya,2.93,101.69,26.5,92,0.0,2.3,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Pahang,Raub,3.7931,101.8569,24.2,98,0.1,1.9,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,03:00:00,Sabah,Sandakan,5.8388,118.1173,26.0,89,0.0,11.0,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Pulau Pinang,George Town,5.4145,100.3292,26.1,96,0.0,4.2,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Kedah,Sungai Petani,5.65,100.48,25.0,95,0.0,7.1,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Melaka,Melaka,2.1889,102.2511,25.9,88,0.3,12.3,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,03:00:00,Johor,Kluang,2.0336,103.3194,23.9,99,0.9,7.2,81,"Rain shower(s), moderate or heavy"
+2026-05-15,03:00:00,Selangor,Petaling Jaya,3.1073,101.6067,26.3,90,0.0,3.6,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,26.2,88,0.0,5.6,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Pahang,Kuala Lipis,4.184,102.042,25.2,98,0.0,5.4,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Selangor,Shah Alam,3.0833,101.5333,26.5,90,0.0,4.2,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Johor,Batu Pahat,1.85,102.93,25.0,98,1.2,3.9,80,"Rain shower(s), slight"
+2026-05-15,03:00:00,Perak,Taiping,4.85,100.7333,25.7,86,0.0,3.1,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Perlis,Kangar,6.4333,100.2,25.5,89,0.0,6.2,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Perak,Teluk Intan,4.0259,101.0213,27.2,86,0.0,3.2,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Kedah,Alor Setar,6.1167,100.3667,25.3,96,0.0,6.5,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Labuan,Labuan,5.2803,115.2475,25.7,95,0.0,6.9,81,"Rain shower(s), moderate or heavy"
+2026-05-15,03:00:00,Johor,Muar,2.05,102.56,26.3,90,0.6,6.7,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,03:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,26.6,91,0.0,1.3,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Johor,Johor Bahru,1.4556,103.7611,24.2,99,0.1,12.0,81,"Rain shower(s), moderate or heavy"
+2026-05-15,03:00:00,Sarawak,Miri,4.4028,113.9933,25.4,100,0.4,9.0,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,03:00:00,Perak,Ipoh,4.6,101.07,25.5,97,0.0,0.7,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Sarawak,Sibu,2.3,111.8167,26.3,90,0.0,5.3,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Pahang,Raub,3.7931,101.8569,24.6,97,0.4,2.2,80,"Rain shower(s), slight"
+2026-05-15,02:00:00,Terengganu,Cukai,4.2332,103.4479,26.5,92,0.7,5.6,80,"Rain shower(s), slight"
+2026-05-15,02:00:00,Selangor,Shah Alam,3.0833,101.5333,26.9,90,0.1,3.6,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,02:00:00,Johor,Johor Bahru,1.4556,103.7611,25.8,96,0.0,6.9,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Sarawak,Bintulu,3.17,113.03,26.3,89,0.5,8.4,80,"Rain shower(s), slight"
+2026-05-15,02:00:00,Pahang,Kuantan,3.8167,103.3333,26.2,99,0.8,6.3,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,02:00:00,Perlis,Kangar,6.4333,100.2,25.5,90,0.0,4.6,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Johor,Muar,2.05,102.56,26.1,90,2.4,8.3,80,"Rain shower(s), slight"
+2026-05-15,02:00:00,Kelantan,Kota Bharu,6.1333,102.25,25.5,95,0.0,8.0,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Pulau Pinang,George Town,5.4145,100.3292,26.7,94,0.0,6.2,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Putrajaya,Putrajaya,2.93,101.69,27.1,89,0.0,3.4,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,02:00:00,Perak,Teluk Intan,4.0259,101.0213,27.5,88,0.0,1.1,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Labuan,Labuan,5.2803,115.2475,27.2,90,0.2,3.1,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,02:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,27.0,90,0.0,0.6,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Sarawak,Sibu,2.3,111.8167,26.2,93,0.0,4.2,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Perak,Ipoh,4.6,101.07,26.2,94,0.0,3.6,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Johor,Batu Pahat,1.85,102.93,25.1,98,2.0,6.5,81,"Rain shower(s), moderate or heavy"
+2026-05-15,02:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,26.5,87,0.0,6.7,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Melaka,Melaka,2.1889,102.2511,26.9,90,1.3,8.0,80,"Rain shower(s), slight"
+2026-05-15,02:00:00,Kedah,Sungai Petani,5.65,100.48,25.2,94,0.0,7.2,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Sarawak,Miri,4.4028,113.9933,25.8,98,0.0,8.5,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,02:00:00,Sabah,Lahad Datu,5.03,118.34,25.5,93,0.0,7.3,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Kedah,Alor Setar,6.1167,100.3667,25.6,95,0.0,6.3,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Pahang,Kuala Lipis,4.184,102.042,25.6,97,0.5,2.3,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,02:00:00,Sabah,Kota Kinabalu,5.975,116.0725,25.7,93,0.1,3.5,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,02:00:00,Sabah,Sandakan,5.8388,118.1173,26.2,89,0.0,11.5,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Johor,Kluang,2.0336,103.3194,24.4,98,0.5,7.8,81,"Rain shower(s), moderate or heavy"
+2026-05-15,02:00:00,Selangor,Petaling Jaya,3.1073,101.6067,26.9,86,0.0,2.9,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Perak,Taiping,4.85,100.7333,26.0,86,0.0,2.8,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,26.2,83,0.0,4.7,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,26.6,87,0.0,6.7,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Selangor,Petaling Jaya,3.1073,101.6067,26.9,95,0.1,2.4,95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation"
+2026-05-15,01:00:00,Kelantan,Kota Bharu,6.1333,102.25,26.2,96,0.0,5.3,2,State of sky on the whole unchanged
+2026-05-15,01:00:00,Pahang,Kuantan,3.8167,103.3333,26.2,96,0.8,3.4,81,"Rain shower(s), moderate or heavy"
+2026-05-15,01:00:00,Melaka,Melaka,2.1889,102.2511,25.5,96,2.1,0.4,81,"Rain shower(s), moderate or heavy"
+2026-05-15,01:00:00,Kedah,Sungai Petani,5.65,100.48,25.8,95,0.1,7.0,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,01:00:00,Perak,Ipoh,4.6,101.07,26.5,92,0.0,3.4,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Johor,Batu Pahat,1.85,102.93,24.9,98,0.1,12.1,81,"Rain shower(s), moderate or heavy"
+2026-05-15,01:00:00,Terengganu,Cukai,4.2332,103.4479,26.3,93,0.0,13.0,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,01:00:00,Johor,Muar,2.05,102.56,25.0,98,0.9,4.6,81,"Rain shower(s), moderate or heavy"
+2026-05-15,01:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,27.5,85,0.0,9.2,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Pulau Pinang,George Town,5.4145,100.3292,28.0,86,0.0,4.0,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Johor,Kluang,2.0336,103.3194,25.0,98,1.0,3.3,81,"Rain shower(s), moderate or heavy"
+2026-05-15,01:00:00,Sarawak,Miri,4.4028,113.9933,26.1,98,0.0,7.5,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Sabah,Sandakan,5.8388,118.1173,26.1,88,0.0,12.2,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Perak,Taiping,4.85,100.7333,26.4,83,0.0,4.9,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,27.5,85,0.0,9.2,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Sabah,Lahad Datu,5.03,118.34,25.6,92,0.0,7.9,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Pahang,Raub,3.7931,101.8569,24.5,96,0.5,0.4,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,01:00:00,Pahang,Kuala Lipis,4.184,102.042,25.5,97,0.1,6.6,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,01:00:00,Sarawak,Bintulu,3.17,113.03,26.6,86,0.0,3.5,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Perak,Teluk Intan,4.0259,101.0213,27.0,88,0.0,2.6,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,26.6,88,0.0,5.4,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Sarawak,Sibu,2.3,111.8167,26.3,95,0.0,4.1,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,27.2,91,0.0,3.6,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Sabah,Kota Kinabalu,5.975,116.0725,25.4,93,0.0,3.4,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Putrajaya,Putrajaya,2.93,101.69,27.2,93,0.0,5.3,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Selangor,Shah Alam,3.0833,101.5333,27.0,92,0.7,1.5,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,01:00:00,Kedah,Alor Setar,6.1167,100.3667,26.2,92,0.0,5.5,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Perlis,Kangar,6.4333,100.2,25.9,91,0.0,5.4,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Johor,Johor Bahru,1.4556,103.7611,26.8,90,0.0,3.5,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Labuan,Labuan,5.2803,115.2475,27.5,87,0.0,3.1,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Perak,Ipoh,4.6,101.07,27.0,90,0.0,0.6,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Pulau Pinang,George Town,5.4145,100.3292,28.4,83,0.0,3.8,2,State of sky on the whole unchanged
+2026-05-15,00:00:00,Sarawak,Miri,4.4028,113.9933,26.4,99,0.0,7.5,95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation"
+2026-05-15,00:00:00,Sarawak,Sibu,2.3,111.8167,26.4,95,0.0,3.8,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Putrajaya,Putrajaya,2.93,101.69,28.0,90,0.1,0.6,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,00:00:00,Perak,Taiping,4.85,100.7333,26.7,83,0.0,3.1,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Kedah,Alor Setar,6.1167,100.3667,26.5,93,0.0,5.3,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Selangor,Petaling Jaya,3.1073,101.6067,27.0,95,0.0,0.7,95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation"
+2026-05-15,00:00:00,Kedah,Sungai Petani,5.65,100.48,26.4,92,0.0,7.0,2,State of sky on the whole unchanged
+2026-05-15,00:00:00,Pahang,Raub,3.7931,101.8569,25.0,97,0.0,3.7,81,"Rain shower(s), moderate or heavy"
+2026-05-15,00:00:00,Sabah,Lahad Datu,5.03,118.34,25.9,92,0.0,7.7,2,State of sky on the whole unchanged
+2026-05-15,00:00:00,Sarawak,Bintulu,3.17,113.03,28.3,76,0.0,0.6,2,State of sky on the whole unchanged
+2026-05-15,00:00:00,Pahang,Kuala Lipis,4.184,102.042,26.2,94,0.0,2.9,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,28.5,78,0.0,3.9,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,27.1,95,0.0,2.2,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Labuan,Labuan,5.2803,115.2475,27.9,88,0.0,3.1,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Johor,Kluang,2.0336,103.3194,25.8,95,0.0,8.0,80,"Rain shower(s), slight"
+2026-05-15,00:00:00,Johor,Muar,2.05,102.56,25.9,94,0.0,18.2,80,"Rain shower(s), slight"
+2026-05-15,00:00:00,Johor,Johor Bahru,1.4556,103.7611,27.3,88,0.0,3.0,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Melaka,Melaka,2.1889,102.2511,25.2,94,0.0,9.4,81,"Rain shower(s), moderate or heavy"
+2026-05-15,00:00:00,Perlis,Kangar,6.4333,100.2,26.2,90,0.0,4.7,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Pahang,Kuantan,3.8167,103.3333,26.4,94,0.0,6.4,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,00:00:00,Sabah,Kota Kinabalu,5.975,116.0725,25.4,93,0.0,3.4,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Terengganu,Cukai,4.2332,103.4479,27.1,91,0.1,7.1,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,00:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,27.0,86,0.0,2.8,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Selangor,Shah Alam,3.0833,101.5333,27.2,90,0.0,3.2,80,"Rain shower(s), slight"
+2026-05-15,00:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,28.6,78,0.0,3.9,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Perak,Teluk Intan,4.0259,101.0213,27.3,85,0.0,4.0,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Sabah,Sandakan,5.8388,118.1173,26.9,87,0.0,12.4,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Johor,Batu Pahat,1.85,102.93,27.7,86,0.0,3.3,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Kelantan,Kota Bharu,6.1333,102.25,26.2,95,0.0,5.6,3,Clouds generally forming or developing
+2026-05-15,13:00:00,Terengganu,Cukai,4.2332,103.4479,33.0,57,0.0,6.9,3,Clouds generally forming or developing
+2026-05-15,13:00:00,Kedah,Sungai Petani,5.65,100.48,32.7,63,0.0,4.8,95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation"
+2026-05-15,13:00:00,Sarawak,Bintulu,3.17,113.03,28.8,81,0.2,6.1,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,13:00:00,Sabah,Kota Kinabalu,5.975,116.0725,27.5,85,0.0,5.2,80,"Rain shower(s), slight"
+2026-05-15,13:00:00,Perlis,Kangar,6.4333,100.2,31.9,65,0.0,10.0,3,Clouds generally forming or developing
+2026-05-15,13:00:00,Kedah,Alor Setar,6.1167,100.3667,31.9,67,0.0,7.3,3,Clouds generally forming or developing
+2026-05-15,13:00:00,Johor,Kluang,2.0336,103.3194,29.3,78,0.0,4.3,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,13:00:00,Kelantan,Kota Bharu,6.1333,102.25,31.5,67,0.0,12.4,3,Clouds generally forming or developing
+2026-05-15,13:00:00,Selangor,Petaling Jaya,3.1073,101.6067,30.2,72,0.1,2.9,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,13:00:00,Perak,Ipoh,4.6,101.07,31.4,63,0.0,1.5,3,Clouds generally forming or developing
+2026-05-15,13:00:00,Johor,Johor Bahru,1.4556,103.7611,29.0,81,0.1,4.8,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,13:00:00,Johor,Muar,2.05,102.56,30.4,71,0.0,7.7,3,Clouds generally forming or developing
+2026-05-15,13:00:00,Selangor,Klang,3.0333,101.45,29.6,81,0.1,3.6,95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation"
+2026-05-15,13:00:00,Perak,Teluk Intan,4.0259,101.0213,31.2,69,0.0,4.4,3,Clouds generally forming or developing
+2026-05-15,13:00:00,Sarawak,Kuching,1.5397,110.3542,27.6,87,0.9,3.6,81,"Rain shower(s), moderate or heavy"
+2026-05-15,13:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,31.9,67,0.1,6.0,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,13:00:00,Pulau Pinang,George Town,5.4145,100.3292,31.5,70,0.1,7.8,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,13:00:00,Sarawak,Sibu,2.3,111.8167,26.5,93,0.2,6.2,80,"Rain shower(s), slight"
+2026-05-15,13:00:00,Melaka,Melaka,2.1889,102.2511,30.9,69,0.0,7.2,3,Clouds generally forming or developing
+2026-05-15,13:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,30.8,70,0.0,5.0,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,13:00:00,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,30.4,70,0.1,2.9,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,13:00:00,Labuan,Labuan,5.2803,115.2475,29.1,79,0.2,5.7,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,13:00:00,Pahang,Kuantan,3.8167,103.3333,31.9,64,0.0,4.3,3,Clouds generally forming or developing
+2026-05-15,13:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,29.2,79,0.0,12.1,80,"Rain shower(s), slight"
+2026-05-15,13:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,31.8,67,0.1,6.0,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,13:00:00,Sabah,Lahad Datu,5.03,118.34,27.5,86,0.1,13.6,81,"Rain shower(s), moderate or heavy"
+2026-05-15,13:00:00,Pahang,Raub,3.7931,101.8569,27.4,87,0.2,5.8,81,"Rain shower(s), moderate or heavy"
+2026-05-15,13:00:00,Putrajaya,Putrajaya,2.93,101.69,30.1,74,0.0,4.9,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,13:00:00,Johor,Batu Pahat,1.85,102.93,29.7,77,0.0,5.0,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,13:00:00,Sarawak,Miri,4.4028,113.9933,28.5,79,0.6,5.3,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,13:00:00,Perak,Taiping,4.85,100.7333,31.9,64,0.0,4.2,3,Clouds generally forming or developing
+2026-05-15,13:00:00,Selangor,Shah Alam,3.0833,101.5333,30.0,77,0.1,3.7,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,13:00:00,Pahang,Kuala Lipis,4.184,102.042,29.3,77,0.0,2.4,3,Clouds generally forming or developing
+2026-05-15,12:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,31.9,65,0.0,6.5,3,Clouds generally forming or developing
+2026-05-15,12:00:00,Selangor,Shah Alam,3.0833,101.5333,28.8,79,0.1,2.6,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,12:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,31.1,69,0.0,5.6,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,12:00:00,Sarawak,Miri,4.4028,113.9933,28.5,80,0.4,7.1,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,12:00:00,Sarawak,Sibu,2.3,111.8167,28.0,87,0.1,3.7,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,12:00:00,Sabah,Kota Kinabalu,5.975,116.0725,30.1,71,0.0,8.8,3,Clouds generally forming or developing
+2026-05-15,12:00:00,Perak,Teluk Intan,4.0259,101.0213,30.6,69,0.0,3.1,2,State of sky on the whole unchanged
+2026-05-15,12:00:00,Sabah,Lahad Datu,5.03,118.34,32.0,67,0.0,2.2,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,12:00:00,Selangor,Petaling Jaya,3.1073,101.6067,28.2,80,0.1,1.3,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,12:00:00,Perak,Ipoh,4.6,101.07,30.5,67,0.0,2.1,3,Clouds generally forming or developing
+2026-05-15,12:00:00,Putrajaya,Putrajaya,2.93,101.69,29.4,75,0.0,3.5,3,Clouds generally forming or developing
+2026-05-15,12:00:00,Selangor,Klang,3.0333,101.45,28.4,87,0.1,2.4,95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation"
+2026-05-15,12:00:00,Kedah,Alor Setar,6.1167,100.3667,31.5,68,0.0,5.3,3,Clouds generally forming or developing
+2026-05-15,12:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,29.5,75,0.0,3.6,2,State of sky on the whole unchanged
+2026-05-15,12:00:00,Perlis,Kangar,6.4333,100.2,31.5,67,0.0,6.5,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,12:00:00,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,28.6,78,0.2,1.9,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,12:00:00,Sarawak,Bintulu,3.17,113.03,28.8,82,0.0,3.3,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,12:00:00,Terengganu,Cukai,4.2332,103.4479,32.7,58,0.0,1.8,3,Clouds generally forming or developing
+2026-05-15,12:00:00,Pahang,Kuantan,3.8167,103.3333,31.2,65,0.0,1.3,3,Clouds generally forming or developing
+2026-05-15,12:00:00,Perak,Taiping,4.85,100.7333,31.1,67,0.0,3.5,3,Clouds generally forming or developing
+2026-05-15,12:00:00,Sarawak,Kuching,1.5397,110.3542,27.6,85,0.0,9.7,80,"Rain shower(s), slight"
+2026-05-15,12:00:00,Pahang,Raub,3.7931,101.8569,30.0,72,0.3,4.0,81,"Rain shower(s), moderate or heavy"
+2026-05-15,12:00:00,Kelantan,Kota Bharu,6.1333,102.25,31.4,65,0.0,10.0,2,State of sky on the whole unchanged
+2026-05-15,12:00:00,Johor,Batu Pahat,1.85,102.93,29.0,79,0.0,5.8,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,12:00:00,Labuan,Labuan,5.2803,115.2475,29.1,78,0.0,5.9,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,12:00:00,Johor,Kluang,2.0336,103.3194,28.1,82,0.0,6.6,3,Clouds generally forming or developing
+2026-05-15,12:00:00,Pulau Pinang,George Town,5.4145,100.3292,31.1,70,0.0,6.2,3,Clouds generally forming or developing
+2026-05-15,12:00:00,Pahang,Kuala Lipis,4.184,102.042,28.6,81,0.1,3.3,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,12:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,31.2,69,0.0,5.6,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,12:00:00,Kedah,Sungai Petani,5.65,100.48,32.0,66,0.0,3.1,3,Clouds generally forming or developing
+2026-05-15,12:00:00,Johor,Johor Bahru,1.4556,103.7611,27.0,91,0.5,3.6,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,12:00:00,Melaka,Melaka,2.1889,102.2511,30.5,68,0.1,6.4,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,12:00:00,Johor,Muar,2.05,102.56,29.9,72,0.0,7.5,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,11:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,29.0,77,0.0,3.7,2,State of sky on the whole unchanged
+2026-05-15,11:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,30.2,76,0.0,6.3,3,Clouds generally forming or developing
+2026-05-15,11:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,30.1,76,0.0,6.3,3,Clouds generally forming or developing
+2026-05-15,11:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,31.3,68,0.0,3.1,3,Clouds generally forming or developing
+2026-05-15,11:00:00,Melaka,Melaka,2.1889,102.2511,29.9,71,0.1,4.5,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,11:00:00,Kedah,Alor Setar,6.1167,100.3667,30.5,73,0.0,3.8,3,Clouds generally forming or developing
+2026-05-15,11:00:00,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,26.9,88,0.4,2.9,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,11:00:00,Pahang,Kuala Lipis,4.184,102.042,28.1,83,0.1,4.5,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,11:00:00,Selangor,Klang,3.0333,101.45,27.5,89,0.2,1.5,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,11:00:00,Kelantan,Kota Bharu,6.1333,102.25,30.9,68,0.0,7.1,3,Clouds generally forming or developing
+2026-05-15,11:00:00,Sabah,Kota Kinabalu,5.975,116.0725,30.0,72,0.0,8.0,3,Clouds generally forming or developing
+2026-05-15,11:00:00,Sarawak,Kuching,1.5397,110.3542,29.8,75,0.0,4.9,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,11:00:00,Johor,Johor Bahru,1.4556,103.7611,26.2,94,0.5,3.7,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,11:00:00,Sarawak,Miri,4.4028,113.9933,28.2,83,0.0,7.8,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,11:00:00,Sarawak,Sibu,2.3,111.8167,27.2,91,0.1,3.8,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,11:00:00,Selangor,Shah Alam,3.0833,101.5333,27.4,88,0.2,2.2,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,11:00:00,Johor,Muar,2.05,102.56,29.6,74,0.0,6.5,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,11:00:00,Putrajaya,Putrajaya,2.93,101.69,28.2,82,0.0,2.3,3,Clouds generally forming or developing
+2026-05-15,11:00:00,Perak,Teluk Intan,4.0259,101.0213,30.2,70,0.0,3.5,3,Clouds generally forming or developing
+2026-05-15,11:00:00,Perlis,Kangar,6.4333,100.2,30.6,70,0.0,5.0,3,Clouds generally forming or developing
+2026-05-15,11:00:00,Pahang,Kuantan,3.8167,103.3333,30.0,70,0.0,1.6,3,Clouds generally forming or developing
+2026-05-15,11:00:00,Johor,Batu Pahat,1.85,102.93,28.9,80,0.0,6.5,3,Clouds generally forming or developing
+2026-05-15,11:00:00,Perak,Taiping,4.85,100.7333,30.1,70,0.0,4.3,3,Clouds generally forming or developing
+2026-05-15,11:00:00,Terengganu,Cukai,4.2332,103.4479,30.8,65,0.0,3.1,3,Clouds generally forming or developing
+2026-05-15,11:00:00,Sarawak,Bintulu,3.17,113.03,27.7,89,0.0,2.2,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,11:00:00,Pahang,Raub,3.7931,101.8569,27.2,86,0.0,3.4,3,Clouds generally forming or developing
+2026-05-15,11:00:00,Sabah,Lahad Datu,5.03,118.34,31.4,71,0.0,4.1,2,State of sky on the whole unchanged
+2026-05-15,11:00:00,Johor,Kluang,2.0336,103.3194,27.1,88,0.0,5.2,3,Clouds generally forming or developing
+2026-05-15,11:00:00,Kedah,Sungai Petani,5.65,100.48,30.9,70,0.0,3.2,3,Clouds generally forming or developing
+2026-05-15,11:00:00,Labuan,Labuan,5.2803,115.2475,29.1,78,0.0,5.2,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,11:00:00,Perak,Ipoh,4.6,101.07,29.8,71,0.0,4.2,3,Clouds generally forming or developing
+2026-05-15,11:00:00,Selangor,Petaling Jaya,3.1073,101.6067,26.8,89,0.4,3.1,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,11:00:00,Pulau Pinang,George Town,5.4145,100.3292,30.5,74,0.0,6.2,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,10:00:00,Johor,Muar,2.05,102.56,28.5,83,0.0,3.4,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,10:00:00,Labuan,Labuan,5.2803,115.2475,28.9,80,0.1,5.5,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,10:00:00,Sarawak,Miri,4.4028,113.9933,27.5,90,0.1,6.7,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,10:00:00,Pahang,Kuantan,3.8167,103.3333,28.3,79,0.0,3.9,3,Clouds generally forming or developing
+2026-05-15,10:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,28.4,79,0.0,3.8,3,Clouds generally forming or developing
+2026-05-15,10:00:00,Perlis,Kangar,6.4333,100.2,29.2,77,0.0,5.6,3,Clouds generally forming or developing
+2026-05-15,10:00:00,Kelantan,Kota Bharu,6.1333,102.25,30.0,72,0.0,7.3,3,Clouds generally forming or developing
+2026-05-15,10:00:00,Perak,Taiping,4.85,100.7333,28.5,80,0.0,2.7,3,Clouds generally forming or developing
+2026-05-15,10:00:00,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,26.2,90,0.7,3.1,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,10:00:00,Sarawak,Kuching,1.5397,110.3542,28.3,80,0.0,2.1,2,State of sky on the whole unchanged
+2026-05-15,10:00:00,Perak,Teluk Intan,4.0259,101.0213,29.5,73,0.0,0.8,2,State of sky on the whole unchanged
+2026-05-15,10:00:00,Sabah,Lahad Datu,5.03,118.34,30.4,73,0.0,5.6,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,10:00:00,Putrajaya,Putrajaya,2.93,101.69,27.5,87,0.0,1.5,3,Clouds generally forming or developing
+2026-05-15,10:00:00,Kedah,Alor Setar,6.1167,100.3667,29.0,80,0.0,4.6,3,Clouds generally forming or developing
+2026-05-15,10:00:00,Sarawak,Sibu,2.3,111.8167,26.9,93,0.0,1.8,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,10:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,29.0,80,0.1,6.3,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,10:00:00,Johor,Batu Pahat,1.85,102.93,27.9,85,0.0,7.7,3,Clouds generally forming or developing
+2026-05-15,10:00:00,Perak,Ipoh,4.6,101.07,28.8,76,0.0,4.2,3,Clouds generally forming or developing
+2026-05-15,10:00:00,Melaka,Melaka,2.1889,102.2511,28.5,81,0.0,2.8,3,Clouds generally forming or developing
+2026-05-15,10:00:00,Kedah,Sungai Petani,5.65,100.48,29.6,75,0.0,3.3,3,Clouds generally forming or developing
+2026-05-15,10:00:00,Selangor,Klang,3.0333,101.45,27.1,91,0.3,3.5,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,10:00:00,Sarawak,Bintulu,3.17,113.03,26.5,93,0.4,3.1,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,10:00:00,Johor,Johor Bahru,1.4556,103.7611,25.9,95,0.6,2.4,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,10:00:00,Johor,Kluang,2.0336,103.3194,26.9,89,0.0,6.0,3,Clouds generally forming or developing
+2026-05-15,10:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,28.9,80,0.1,6.3,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,10:00:00,Pahang,Kuala Lipis,4.184,102.042,27.1,87,0.0,2.2,3,Clouds generally forming or developing
+2026-05-15,10:00:00,Pulau Pinang,George Town,5.4145,100.3292,29.5,78,0.1,4.7,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,10:00:00,Sabah,Kota Kinabalu,5.975,116.0725,29.5,74,0.0,4.0,3,Clouds generally forming or developing
+2026-05-15,10:00:00,Pahang,Raub,3.7931,101.8569,26.4,92,0.0,2.7,3,Clouds generally forming or developing
+2026-05-15,10:00:00,Selangor,Shah Alam,3.0833,101.5333,27.0,90,0.3,3.8,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,10:00:00,Selangor,Petaling Jaya,3.1073,101.6067,26.1,93,0.6,3.8,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,10:00:00,Terengganu,Cukai,4.2332,103.4479,28.2,79,0.0,4.5,3,Clouds generally forming or developing
+2026-05-15,10:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,30.1,73,0.0,2.1,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Pahang,Kuantan,3.8167,103.3333,26.5,90,0.0,4.6,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,25.9,93,0.8,4.0,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,09:00:00,Perak,Taiping,4.85,100.7333,27.7,82,0.0,1.6,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,27.5,85,0.0,6.7,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,09:00:00,Pulau Pinang,George Town,5.4145,100.3292,28.2,85,0.0,4.2,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Kedah,Alor Setar,6.1167,100.3667,27.5,84,0.0,3.6,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Johor,Johor Bahru,1.4556,103.7611,24.6,98,0.5,4.0,80,"Rain shower(s), slight"
+2026-05-15,09:00:00,Sarawak,Sibu,2.3,111.8167,26.2,95,0.1,4.3,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,09:00:00,Pahang,Kuala Lipis,4.184,102.042,26.2,92,0.0,2.3,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Sarawak,Miri,4.4028,113.9933,26.8,94,0.5,5.1,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,09:00:00,Perak,Ipoh,4.6,101.07,27.4,84,0.0,3.6,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,28.2,83,0.0,4.0,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Johor,Muar,2.05,102.56,26.9,93,0.0,5.2,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Kedah,Sungai Petani,5.65,100.48,28.3,80,0.0,1.0,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Sabah,Lahad Datu,5.03,118.34,29.1,76,0.0,6.0,2,State of sky on the whole unchanged
+2026-05-15,09:00:00,Johor,Kluang,2.0336,103.3194,25.5,95,0.0,4.7,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Labuan,Labuan,5.2803,115.2475,28.4,86,0.0,3.9,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,09:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,27.4,82,0.0,2.5,2,State of sky on the whole unchanged
+2026-05-15,09:00:00,Pahang,Raub,3.7931,101.8569,25.9,95,0.0,1.7,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Terengganu,Cukai,4.2332,103.4479,26.6,90,0.0,4.0,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Johor,Batu Pahat,1.85,102.93,26.5,95,0.0,4.2,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Perak,Teluk Intan,4.0259,101.0213,28.1,84,0.0,0.2,2,State of sky on the whole unchanged
+2026-05-15,09:00:00,Perlis,Kangar,6.4333,100.2,27.5,84,0.0,6.2,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Sarawak,Bintulu,3.17,113.03,25.0,97,0.9,8.1,63,"Rain, not freezing, continuous moderate at time of observation"
+2026-05-15,09:00:00,Putrajaya,Putrajaya,2.93,101.69,26.7,93,0.0,2.8,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Selangor,Shah Alam,3.0833,101.5333,26.4,94,0.2,4.4,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,09:00:00,Selangor,Klang,3.0333,101.45,26.4,94,0.2,2.8,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,09:00:00,Sabah,Kota Kinabalu,5.975,116.0725,28.6,76,0.0,1.4,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Melaka,Melaka,2.1889,102.2511,26.9,91,0.0,3.4,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Kelantan,Kota Bharu,6.1333,102.25,28.1,81,0.0,6.5,3,Clouds generally forming or developing
+2026-05-15,09:00:00,Sarawak,Kuching,1.5397,110.3542,27.0,86,0.1,3.8,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,09:00:00,Selangor,Petaling Jaya,3.1073,101.6067,25.9,95,0.6,4.3,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,09:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,27.5,86,0.0,6.7,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,08:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,26.3,89,0.0,6.6,2,State of sky on the whole unchanged
+2026-05-15,08:00:00,Melaka,Melaka,2.1889,102.2511,25.5,96,0.0,5.5,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Selangor,Shah Alam,3.0833,101.5333,25.8,95,0.3,4.5,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,08:00:00,Sarawak,Bintulu,3.17,113.03,24.7,100,0.0,9.7,81,"Rain shower(s), moderate or heavy"
+2026-05-15,08:00:00,Pahang,Raub,3.7931,101.8569,24.7,99,0.0,1.5,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Sabah,Lahad Datu,5.03,118.34,27.3,85,0.0,6.7,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Johor,Batu Pahat,1.85,102.93,25.6,97,0.0,5.3,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Johor,Johor Bahru,1.4556,103.7611,24.5,98,0.8,2.0,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,08:00:00,Terengganu,Cukai,4.2332,103.4479,25.6,97,0.0,6.1,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Pahang,Kuantan,3.8167,103.3333,25.5,97,0.2,5.2,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,08:00:00,Labuan,Labuan,5.2803,115.2475,28.2,89,0.0,3.1,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,08:00:00,Sabah,Kota Kinabalu,5.975,116.0725,27.2,85,0.0,1.5,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Sarawak,Kuching,1.5397,110.3542,26.0,90,0.0,1.1,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Selangor,Petaling Jaya,3.1073,101.6067,25.6,96,0.6,3.2,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,08:00:00,Perak,Teluk Intan,4.0259,101.0213,26.9,90,0.0,1.7,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Perak,Taiping,4.85,100.7333,26.4,88,0.0,2.7,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Sarawak,Miri,4.4028,113.9933,25.6,97,0.6,3.9,80,"Rain shower(s), slight"
+2026-05-15,08:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,26.4,89,0.0,6.6,2,State of sky on the whole unchanged
+2026-05-15,08:00:00,Kedah,Alor Setar,6.1167,100.3667,25.8,94,0.1,4.6,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,08:00:00,Pahang,Kuala Lipis,4.184,102.042,25.2,97,0.0,3.5,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Putrajaya,Putrajaya,2.93,101.69,26.1,95,0.0,0.2,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Kelantan,Kota Bharu,6.1333,102.25,26.2,90,0.0,8.0,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,26.1,91,0.0,4.8,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Johor,Muar,2.05,102.56,25.8,96,0.0,8.5,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Kedah,Sungai Petani,5.65,100.48,26.2,91,0.0,3.8,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,25.9,91,0.0,3.7,2,State of sky on the whole unchanged
+2026-05-15,08:00:00,Perlis,Kangar,6.4333,100.2,26.1,87,0.0,9.6,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Pulau Pinang,George Town,5.4145,100.3292,27.1,89,0.0,3.3,2,State of sky on the whole unchanged
+2026-05-15,08:00:00,Selangor,Klang,3.0333,101.45,25.7,95,0.4,4.6,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,08:00:00,Johor,Kluang,2.0336,103.3194,24.3,98,0.0,7.1,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Perak,Ipoh,4.6,101.07,26.0,91,0.0,5.4,3,Clouds generally forming or developing
+2026-05-15,08:00:00,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,26.0,94,0.7,2.2,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,08:00:00,Sarawak,Sibu,2.3,111.8167,25.2,96,0.4,5.2,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,07:00:00,Labuan,Labuan,5.2803,115.2475,27.5,88,0.0,2.4,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,07:00:00,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,25.8,96,0.7,2.6,80,"Rain shower(s), slight"
+2026-05-15,07:00:00,Sarawak,Bintulu,3.17,113.03,24.5,99,0.1,7.8,63,"Rain, not freezing, continuous moderate at time of observation"
+2026-05-15,07:00:00,Selangor,Petaling Jaya,3.1073,101.6067,25.5,95,0.4,2.7,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,07:00:00,Sarawak,Miri,4.4028,113.9933,25.2,97,0.2,3.7,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,07:00:00,Sarawak,Sibu,2.3,111.8167,24.8,97,0.5,5.0,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,07:00:00,Selangor,Shah Alam,3.0833,101.5333,25.8,94,0.3,4.3,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,07:00:00,Terengganu,Cukai,4.2332,103.4479,25.2,98,0.6,5.8,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,07:00:00,Pahang,Kuantan,3.8167,103.3333,25.2,99,0.5,3.5,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,07:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,25.8,90,0.0,5.1,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Johor,Johor Bahru,1.4556,103.7611,24.1,99,0.8,7.3,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,07:00:00,Pulau Pinang,George Town,5.4145,100.3292,26.1,92,0.0,2.3,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Selangor,Klang,3.0333,101.45,25.6,95,0.2,4.9,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,07:00:00,Perak,Ipoh,4.6,101.07,25.1,95,0.0,5.3,2,State of sky on the whole unchanged
+2026-05-15,07:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,25.2,95,0.0,5.4,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Perak,Teluk Intan,4.0259,101.0213,26.0,92,0.0,2.7,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Melaka,Melaka,2.1889,102.2511,25.0,97,0.0,3.4,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Sabah,Kota Kinabalu,5.975,116.0725,26.0,89,0.0,1.7,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Sabah,Lahad Datu,5.03,118.34,25.9,88,0.0,6.1,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Kedah,Alor Setar,6.1167,100.3667,24.7,99,0.0,2.2,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Johor,Muar,2.05,102.56,25.6,97,0.0,3.5,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,25.0,93,0.0,3.0,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Johor,Kluang,2.0336,103.3194,23.8,98,0.0,6.2,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Kelantan,Kota Bharu,6.1333,102.25,25.0,96,0.0,7.3,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Kedah,Sungai Petani,5.65,100.48,25.0,94,0.0,1.5,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Pahang,Kuala Lipis,4.184,102.042,24.5,100,0.0,4.0,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,25.7,90,0.0,5.1,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Perak,Taiping,4.85,100.7333,25.6,88,0.0,2.2,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Perlis,Kangar,6.4333,100.2,25.6,87,0.0,10.0,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Pahang,Raub,3.7931,101.8569,23.6,99,0.0,3.1,3,Clouds generally forming or developing
+2026-05-15,07:00:00,Putrajaya,Putrajaya,2.93,101.69,25.8,98,0.3,1.4,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,07:00:00,Johor,Batu Pahat,1.85,102.93,24.6,98,0.1,4.0,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,07:00:00,Sarawak,Kuching,1.5397,110.3542,24.8,92,0.0,5.5,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Kedah,Sungai Petani,5.65,100.48,25.0,94,0.0,5.5,2,State of sky on the whole unchanged
+2026-05-15,06:00:00,Pahang,Kuantan,3.8167,103.3333,25.4,98,0.0,1.0,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,06:00:00,Sabah,Kota Kinabalu,5.975,116.0725,25.9,87,0.0,1.7,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Melaka,Melaka,2.1889,102.2511,25.4,95,0.1,2.4,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,06:00:00,Johor,Johor Bahru,1.4556,103.7611,24.3,99,0.3,3.9,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,06:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,25.9,90,0.0,6.3,2,State of sky on the whole unchanged
+2026-05-15,06:00:00,Sabah,Lahad Datu,5.03,118.34,24.8,94,0.0,6.1,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Sarawak,Sibu,2.3,111.8167,24.9,98,0.5,6.3,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,06:00:00,Sarawak,Miri,4.4028,113.9933,25.0,98,0.4,4.4,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,06:00:00,Perak,Teluk Intan,4.0259,101.0213,26.3,90,0.0,0.2,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Pahang,Kuala Lipis,4.184,102.042,24.6,100,0.0,2.0,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,25.9,90,0.0,6.3,2,State of sky on the whole unchanged
+2026-05-15,06:00:00,Johor,Kluang,2.0336,103.3194,24.0,98,0.0,5.8,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,25.0,95,0.0,3.9,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Sarawak,Bintulu,3.17,113.03,24.7,98,0.9,5.9,61,"Rain, not freezing, continuous slight at time of observation"
+2026-05-15,06:00:00,Selangor,Petaling Jaya,3.1073,101.6067,26.0,90,0.2,0.5,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,06:00:00,Perlis,Kangar,6.4333,100.2,25.6,87,0.0,6.8,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Pahang,Raub,3.7931,101.8569,23.8,98,0.0,4.8,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Selangor,Klang,3.0333,101.45,25.9,95,0.1,2.7,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,06:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,25.7,95,0.0,5.9,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Perak,Ipoh,4.6,101.07,25.2,95,0.0,4.2,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Selangor,Shah Alam,3.0833,101.5333,26.4,90,0.1,1.1,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,06:00:00,Sarawak,Kuching,1.5397,110.3542,24.6,92,0.0,8.1,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Johor,Batu Pahat,1.85,102.93,24.4,99,0.3,6.4,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,06:00:00,Perak,Taiping,4.85,100.7333,25.4,87,0.0,2.8,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Pulau Pinang,George Town,5.4145,100.3292,25.8,94,0.0,2.0,2,State of sky on the whole unchanged
+2026-05-15,06:00:00,Terengganu,Cukai,4.2332,103.4479,25.2,98,1.5,4.2,81,"Rain shower(s), moderate or heavy"
+2026-05-15,06:00:00,Kedah,Alor Setar,6.1167,100.3667,24.7,99,0.0,5.6,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,26.0,96,0.2,2.5,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,06:00:00,Labuan,Labuan,5.2803,115.2475,27.0,88,0.1,1.7,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,06:00:00,Johor,Muar,2.05,102.56,26.0,95,0.1,1.7,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,06:00:00,Kelantan,Kota Bharu,6.1333,102.25,25.0,96,0.0,6.8,3,Clouds generally forming or developing
+2026-05-15,06:00:00,Putrajaya,Putrajaya,2.93,101.69,25.5,98,0.1,2.1,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,05:00:00,Terengganu,Cukai,4.2332,103.4479,25.2,99,0.3,7.0,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,05:00:00,Sarawak,Kuching,1.5397,110.3542,24.7,93,0.0,7.8,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Perak,Ipoh,4.6,101.07,25.2,95,0.0,3.3,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Putrajaya,Putrajaya,2.93,101.69,25.6,98,0.0,3.2,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,26.0,95,0.0,1.7,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,26.0,90,0.0,6.2,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Johor,Muar,2.05,102.56,26.1,94,0.0,4.6,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Selangor,Shah Alam,3.0833,101.5333,26.4,91,0.0,1.9,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Selangor,Klang,3.0333,101.45,26.0,94,0.0,1.5,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Melaka,Melaka,2.1889,102.2511,25.7,93,0.0,6.7,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Pulau Pinang,George Town,5.4145,100.3292,25.7,95,0.0,3.9,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,25.0,95,0.0,0.7,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Kedah,Alor Setar,6.1167,100.3667,25.0,98,0.0,5.8,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Perak,Taiping,4.85,100.7333,25.4,87,0.0,2.3,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,26.1,94,0.0,5.2,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Perak,Teluk Intan,4.0259,101.0213,26.5,90,0.0,0.6,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Perlis,Kangar,6.4333,100.2,25.5,88,0.0,5.6,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Johor,Batu Pahat,1.85,102.93,24.4,100,0.5,5.5,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,05:00:00,Sarawak,Bintulu,3.17,113.03,25.1,98,0.8,2.5,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,05:00:00,Pahang,Kuantan,3.8167,103.3333,25.5,98,0.1,3.8,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,05:00:00,Sarawak,Sibu,2.3,111.8167,25.2,95,0.3,8.1,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,05:00:00,Kedah,Sungai Petani,5.65,100.48,25.1,93,0.0,5.7,2,State of sky on the whole unchanged
+2026-05-15,05:00:00,Labuan,Labuan,5.2803,115.2475,26.1,95,0.6,3.6,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,05:00:00,Sabah,Kota Kinabalu,5.975,116.0725,25.9,88,0.0,2.5,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Kelantan,Kota Bharu,6.1333,102.25,25.0,97,0.0,6.7,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Johor,Kluang,2.0336,103.3194,24.1,98,0.3,5.1,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,05:00:00,Sarawak,Miri,4.4028,113.9933,24.9,99,0.1,7.8,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,05:00:00,Sabah,Lahad Datu,5.03,118.34,24.8,94,0.0,7.1,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Selangor,Petaling Jaya,3.1073,101.6067,26.2,88,0.0,0.5,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,26.0,90,0.0,6.2,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Pahang,Raub,3.7931,101.8569,24.0,98,0.0,3.9,3,Clouds generally forming or developing
+2026-05-15,05:00:00,Johor,Johor Bahru,1.4556,103.7611,24.4,98,0.4,2.3,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,05:00:00,Pahang,Kuala Lipis,4.184,102.042,24.9,98,0.0,1.9,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Selangor,Shah Alam,3.0833,101.5333,26.4,91,0.0,2.9,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Putrajaya,Putrajaya,2.93,101.69,25.9,97,0.0,5.9,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Terengganu,Cukai,4.2332,103.4479,25.6,99,0.2,8.9,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,04:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,26.4,93,0.0,7.1,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Pahang,Kuala Lipis,4.184,102.042,25.0,98,0.0,3.4,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Selangor,Klang,3.0333,101.45,25.9,95,0.0,3.7,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,26.0,93,0.0,1.7,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Perlis,Kangar,6.4333,100.2,25.3,90,0.0,5.1,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Johor,Batu Pahat,1.85,102.93,24.8,99,1.2,6.0,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,04:00:00,Sarawak,Kuching,1.5397,110.3542,24.8,93,0.0,7.5,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Selangor,Petaling Jaya,3.1073,101.6067,26.0,90,0.0,3.5,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Melaka,Melaka,2.1889,102.2511,25.7,91,0.0,11.2,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Perak,Taiping,4.85,100.7333,25.4,87,0.0,3.6,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Perak,Teluk Intan,4.0259,101.0213,26.8,88,0.0,3.1,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Kelantan,Kota Bharu,6.1333,102.25,25.2,97,0.0,5.5,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Sarawak,Bintulu,3.17,113.03,25.2,97,0.5,1.8,80,"Rain shower(s), slight"
+2026-05-15,04:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,26.1,90,0.0,4.5,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Labuan,Labuan,5.2803,115.2475,25.9,96,1.4,4.5,80,"Rain shower(s), slight"
+2026-05-15,04:00:00,Sabah,Kota Kinabalu,5.975,116.0725,25.9,89,0.0,2.5,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Sabah,Lahad Datu,5.03,118.34,25.0,93,0.0,6.2,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Pahang,Kuantan,3.8167,103.3333,25.7,99,0.0,6.0,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,04:00:00,Johor,Kluang,2.0336,103.3194,24.2,99,1.1,2.1,80,"Rain shower(s), slight"
+2026-05-15,04:00:00,Sarawak,Sibu,2.3,111.8167,25.7,91,0.2,11.1,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,04:00:00,Sarawak,Miri,4.4028,113.9933,25.0,99,0.6,7.5,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,04:00:00,Pulau Pinang,George Town,5.4145,100.3292,25.8,96,0.0,3.3,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,25.2,94,0.0,1.5,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Kedah,Alor Setar,6.1167,100.3667,25.0,98,0.0,6.2,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Pahang,Raub,3.7931,101.8569,24.1,98,0.1,3.0,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,04:00:00,Kedah,Sungai Petani,5.65,100.48,25.0,94,0.0,6.0,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Johor,Muar,2.05,102.56,26.2,94,0.2,9.8,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,04:00:00,Johor,Johor Bahru,1.4556,103.7611,24.2,97,1.0,0.8,81,"Rain shower(s), moderate or heavy"
+2026-05-15,04:00:00,Perak,Ipoh,4.6,101.07,25.4,96,0.0,0.6,3,Clouds generally forming or developing
+2026-05-15,04:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,26.2,90,0.0,4.5,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Sabah,Lahad Datu,5.03,118.34,25.2,92,0.0,7.9,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Johor,Johor Bahru,1.4556,103.7611,24.2,99,0.1,12.0,81,"Rain shower(s), moderate or heavy"
+2026-05-15,03:00:00,Pahang,Raub,3.7931,101.8569,24.2,98,0.1,1.9,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,03:00:00,Perlis,Kangar,6.4333,100.2,25.5,89,0.0,6.2,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Perak,Taiping,4.85,100.7333,25.7,86,0.0,3.1,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,26.2,88,0.0,5.6,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Sarawak,Sibu,2.3,111.8167,26.3,90,0.0,5.3,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Perak,Teluk Intan,4.0259,101.0213,27.2,86,0.0,3.2,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Johor,Batu Pahat,1.85,102.93,25.0,98,1.2,3.9,80,"Rain shower(s), slight"
+2026-05-15,03:00:00,Johor,Kluang,2.0336,103.3194,23.9,99,0.9,7.2,81,"Rain shower(s), moderate or heavy"
+2026-05-15,03:00:00,Putrajaya,Putrajaya,2.93,101.69,26.5,92,0.0,2.3,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,26.6,91,0.0,1.3,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Labuan,Labuan,5.2803,115.2475,25.7,95,0.0,6.9,81,"Rain shower(s), moderate or heavy"
+2026-05-15,03:00:00,Kedah,Alor Setar,6.1167,100.3667,25.3,96,0.0,6.5,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Sarawak,Bintulu,3.17,113.03,25.8,91,0.0,3.1,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Sarawak,Miri,4.4028,113.9933,25.4,100,0.4,9.0,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,03:00:00,Sabah,Kota Kinabalu,5.975,116.0725,25.5,93,0.0,1.9,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Kelantan,Kota Bharu,6.1333,102.25,25.3,96,0.0,7.3,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Pahang,Kuantan,3.8167,103.3333,26.1,99,0.2,4.1,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,03:00:00,Johor,Muar,2.05,102.56,26.3,90,0.6,6.7,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,03:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,26.3,88,0.0,5.6,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Melaka,Melaka,2.1889,102.2511,25.9,88,0.3,12.3,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,03:00:00,Perak,Ipoh,4.6,101.07,25.5,97,0.0,0.7,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Terengganu,Cukai,4.2332,103.4479,26.1,98,0.6,5.0,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,03:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,25.5,91,0.1,3.5,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,03:00:00,Kedah,Sungai Petani,5.65,100.48,25.0,95,0.0,7.1,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Pulau Pinang,George Town,5.4145,100.3292,26.1,96,0.0,4.2,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Pahang,Kuala Lipis,4.184,102.042,25.2,98,0.0,5.4,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Selangor,Klang,3.0333,101.45,26.0,95,0.0,3.0,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Selangor,Petaling Jaya,3.1073,101.6067,26.3,90,0.0,3.6,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Sarawak,Kuching,1.5397,110.3542,24.9,93,0.0,8.4,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,26.6,89,0.0,1.6,3,Clouds generally forming or developing
+2026-05-15,03:00:00,Selangor,Shah Alam,3.0833,101.5333,26.5,90,0.0,4.2,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Kelantan,Kota Bharu,6.1333,102.25,25.5,95,0.0,8.0,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Putrajaya,Putrajaya,2.93,101.69,27.1,89,0.0,3.4,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,02:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,26.2,83,0.0,4.7,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Johor,Muar,2.05,102.56,26.1,90,2.4,8.3,80,"Rain shower(s), slight"
+2026-05-15,02:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,26.6,87,0.0,6.7,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Sarawak,Bintulu,3.17,113.03,26.3,89,0.5,8.4,80,"Rain shower(s), slight"
+2026-05-15,02:00:00,Selangor,Shah Alam,3.0833,101.5333,26.9,90,0.1,3.6,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,02:00:00,Perak,Taiping,4.85,100.7333,26.0,86,0.0,2.8,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Sabah,Kota Kinabalu,5.975,116.0725,25.7,93,0.1,3.5,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,02:00:00,Kedah,Alor Setar,6.1167,100.3667,25.6,95,0.0,6.3,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,27.6,83,0.0,0.6,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Johor,Kluang,2.0336,103.3194,24.4,98,0.5,7.8,81,"Rain shower(s), moderate or heavy"
+2026-05-15,02:00:00,Pahang,Kuantan,3.8167,103.3333,26.2,99,0.8,6.3,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,02:00:00,Terengganu,Cukai,4.2332,103.4479,26.5,92,0.7,5.6,80,"Rain shower(s), slight"
+2026-05-15,02:00:00,Pahang,Raub,3.7931,101.8569,24.6,97,0.4,2.2,80,"Rain shower(s), slight"
+2026-05-15,02:00:00,Johor,Johor Bahru,1.4556,103.7611,25.8,96,0.0,6.9,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Sabah,Lahad Datu,5.03,118.34,25.5,93,0.0,7.3,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Johor,Batu Pahat,1.85,102.93,25.1,98,2.0,6.5,81,"Rain shower(s), moderate or heavy"
+2026-05-15,02:00:00,Sarawak,Miri,4.4028,113.9933,25.8,98,0.0,8.5,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,02:00:00,Pulau Pinang,George Town,5.4145,100.3292,26.7,94,0.0,6.2,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,26.5,87,0.0,6.7,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Sarawak,Sibu,2.3,111.8167,26.2,93,0.0,4.2,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Kedah,Sungai Petani,5.65,100.48,25.2,94,0.0,7.2,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Selangor,Petaling Jaya,3.1073,101.6067,26.9,86,0.0,2.9,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Melaka,Melaka,2.1889,102.2511,26.9,90,1.3,8.0,80,"Rain shower(s), slight"
+2026-05-15,02:00:00,Sarawak,Kuching,1.5397,110.3542,25.1,93,0.0,8.5,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Labuan,Labuan,5.2803,115.2475,27.2,90,0.2,3.1,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,02:00:00,Pahang,Kuala Lipis,4.184,102.042,25.6,97,0.5,2.3,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,02:00:00,Selangor,Klang,3.0333,101.45,26.6,92,0.1,3.6,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,02:00:00,Perlis,Kangar,6.4333,100.2,25.5,90,0.0,4.6,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Perak,Teluk Intan,4.0259,101.0213,27.5,88,0.0,1.1,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,27.0,90,0.0,0.6,3,Clouds generally forming or developing
+2026-05-15,02:00:00,Perak,Ipoh,4.6,101.07,26.2,94,0.0,3.6,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Sabah,Lahad Datu,5.03,118.34,25.6,92,0.0,7.9,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Pahang,Raub,3.7931,101.8569,24.5,96,0.5,0.4,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,01:00:00,Sarawak,Sibu,2.3,111.8167,26.3,95,0.0,4.1,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Kedah,Sungai Petani,5.65,100.48,25.8,95,0.1,7.0,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,01:00:00,Pulau Pinang,George Town,5.4145,100.3292,28.0,86,0.0,4.0,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Selangor,Klang,3.0333,101.45,26.5,94,0.7,3.8,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,01:00:00,Sarawak,Bintulu,3.17,113.03,26.6,86,0.0,3.5,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Perlis,Kangar,6.4333,100.2,25.9,91,0.0,5.4,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,27.5,85,0.0,9.2,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Kedah,Alor Setar,6.1167,100.3667,26.2,92,0.0,5.5,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Johor,Muar,2.05,102.56,25.0,98,0.9,4.6,81,"Rain shower(s), moderate or heavy"
+2026-05-15,01:00:00,Johor,Kluang,2.0336,103.3194,25.0,98,1.0,3.3,81,"Rain shower(s), moderate or heavy"
+2026-05-15,01:00:00,Terengganu,Cukai,4.2332,103.4479,26.3,93,0.0,13.0,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,01:00:00,Selangor,Shah Alam,3.0833,101.5333,27.0,92,0.7,1.5,55,"Drizzle, not freezing, continuous heavy (dense) at time of observation"
+2026-05-15,01:00:00,Kelantan,Kota Bharu,6.1333,102.25,26.2,96,0.0,5.3,2,State of sky on the whole unchanged
+2026-05-15,01:00:00,Johor,Batu Pahat,1.85,102.93,24.9,98,0.1,12.1,81,"Rain shower(s), moderate or heavy"
+2026-05-15,01:00:00,Labuan,Labuan,5.2803,115.2475,27.5,87,0.0,3.1,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Pahang,Kuala Lipis,4.184,102.042,25.5,97,0.1,6.6,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,01:00:00,Melaka,Melaka,2.1889,102.2511,25.5,96,2.1,0.4,81,"Rain shower(s), moderate or heavy"
+2026-05-15,01:00:00,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,26.8,94,0.0,5.4,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Selangor,Petaling Jaya,3.1073,101.6067,26.9,95,0.1,2.4,95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation"
+2026-05-15,01:00:00,Perak,Taiping,4.85,100.7333,26.4,83,0.0,4.9,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,26.6,88,0.0,5.4,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Pahang,Kuantan,3.8167,103.3333,26.2,96,0.8,3.4,81,"Rain shower(s), moderate or heavy"
+2026-05-15,01:00:00,Sabah,Kota Kinabalu,5.975,116.0725,25.4,93,0.0,3.4,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,27.2,91,0.0,3.6,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Sarawak,Miri,4.4028,113.9933,26.1,98,0.0,7.5,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Putrajaya,Putrajaya,2.93,101.69,27.2,93,0.0,5.3,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,27.5,85,0.0,9.2,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Perak,Ipoh,4.6,101.07,26.5,92,0.0,3.4,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Sarawak,Kuching,1.5397,110.3542,25.0,95,0.0,7.9,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Perak,Teluk Intan,4.0259,101.0213,27.0,88,0.0,2.6,3,Clouds generally forming or developing
+2026-05-15,01:00:00,Johor,Johor Bahru,1.4556,103.7611,26.8,90,0.0,3.5,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Kedah,Alor Setar,6.1167,100.3667,26.5,93,0.0,5.3,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Terengganu,Kuala Terengganu,5.3303,103.1408,27.1,95,0.0,2.2,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Sarawak,Miri,4.4028,113.9933,26.4,99,0.0,7.5,95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation"
+2026-05-15,00:00:00,Putrajaya,Putrajaya,2.93,101.69,28.0,90,0.1,0.6,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,00:00:00,Terengganu,Cukai,4.2332,103.4479,27.1,91,0.1,7.1,51,"Drizzle, not freezing, continuous 	slight at time of observation"
+2026-05-15,00:00:00,Selangor,Petaling Jaya,3.1073,101.6067,27.0,95,0.0,0.7,95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation"
+2026-05-15,00:00:00,Pahang,Raub,3.7931,101.8569,25.0,97,0.0,3.7,81,"Rain shower(s), moderate or heavy"
+2026-05-15,00:00:00,Perak,Taiping,4.85,100.7333,26.7,83,0.0,3.1,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Kuala Lumpur,Kuala Lumpur,3.1478,101.6953,27.0,96,0.0,1.2,95,"Thunderstorm, slight or moderate, without hail** but with rain and/or snow at time of observation - Thunderstorm at time of observation"
+2026-05-15,00:00:00,Pulau Pinang,George Town,5.4145,100.3292,28.4,83,0.0,3.8,2,State of sky on the whole unchanged
+2026-05-15,00:00:00,Johor,Johor Bahru,1.4556,103.7611,27.3,88,0.0,3.0,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Johor,Batu Pahat,1.85,102.93,27.7,86,0.0,3.3,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Labuan,Labuan,5.2803,115.2475,27.9,88,0.0,3.1,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Perak,Ipoh,4.6,101.07,27.0,90,0.0,0.6,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Sarawak,Bintulu,3.17,113.03,28.3,76,0.0,0.6,2,State of sky on the whole unchanged
+2026-05-15,00:00:00,Johor,Muar,2.05,102.56,25.9,94,0.0,18.2,80,"Rain shower(s), slight"
+2026-05-15,00:00:00,Sabah,Lahad Datu,5.03,118.34,25.9,92,0.0,7.7,2,State of sky on the whole unchanged
+2026-05-15,00:00:00,Johor,Kluang,2.0336,103.3194,25.8,95,0.0,8.0,80,"Rain shower(s), slight"
+2026-05-15,00:00:00,Pulau Pinang,Butterworth,5.3992,100.3639,28.6,78,0.0,3.9,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Negeri Sembilan,Seremban,2.7297,101.9381,27.0,86,0.0,2.8,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Perak,Teluk Intan,4.0259,101.0213,27.3,85,0.0,4.0,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Sarawak,Kuching,1.5397,110.3542,25.2,96,0.0,7.0,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Pahang,Kuantan,3.8167,103.3333,26.4,94,0.0,6.4,53,"Drizzle, not freezing, continuous 	moderate at time of observation"
+2026-05-15,00:00:00,Kelantan,Kota Bharu,6.1333,102.25,26.2,95,0.0,5.6,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Selangor,Klang,3.0333,101.45,26.8,93,0.0,6.3,81,"Rain shower(s), moderate or heavy"
+2026-05-15,00:00:00,Sabah,Kota Kinabalu,5.975,116.0725,25.4,93,0.0,3.4,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Kedah,Sungai Petani,5.65,100.48,26.4,92,0.0,7.0,2,State of sky on the whole unchanged
+2026-05-15,00:00:00,Melaka,Melaka,2.1889,102.2511,25.2,94,0.0,9.4,81,"Rain shower(s), moderate or heavy"
+2026-05-15,00:00:00,Sarawak,Sibu,2.3,111.8167,26.4,95,0.0,3.8,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Pulau Pinang,Bukit Mertajam,5.3631,100.4667,28.5,78,0.0,3.9,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Perlis,Kangar,6.4333,100.2,26.2,90,0.0,4.7,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Pahang,Kuala Lipis,4.184,102.042,26.2,94,0.0,2.9,3,Clouds generally forming or developing
+2026-05-15,00:00:00,Selangor,Shah Alam,3.0833,101.5333,27.2,90,0.0,3.2,80,"Rain shower(s), slight"
