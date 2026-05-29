@@ -266,7 +266,20 @@
       "thumbUrl": "https://image.thum.io/get/width/640/crop/420/https%3A%2F%2Fpintelmarket.netlify.app%2F",
       "faded": false,
       "newTab": true
+    },
+    {
+      "id": "c1780052761723",
+      "group": "ops",
+      "url": "mymobility-dash.netlify.app",
+      "title": "Malaysia Mobility Index",
+      "tag": "Dashboard",
+      "desc": "Comparison study due to oil price uncertainty",
+      "size": "",
+      "color": "#4f7cff",
+      "thumbUrl": "",
+      "faded": false,
+      "newTab": true
     }
   ],
-  "_synced": "2026-05-29T11:03:50.330Z"
+  "_synced": "2026-05-29T11:06:13.616Z"
 }
