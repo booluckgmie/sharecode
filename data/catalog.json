@@ -35,12 +35,6 @@
       "label": "Comms & Marketing",
       "icon": "mail",
       "color": "#f06292"
-    },
-    {
-      "id": "analytics",
-      "label": "Gen-AI",
-      "icon": "folder",
-      "color": "#f06292"
     }
   ],
   "cards": [
@@ -259,33 +253,7 @@
       "newTab": false,
       "desc": "Branded email newsletter template — responsive layout, sections, CTA buttons.",
       "size": "15 KB"
-    },
-    {
-      "id": "c1780052509973",
-      "group": "analytics",
-      "url": "https://pintelmarket.netlify.app/",
-      "title": "PETRONAS Market Intelligence",
-      "tag": "Dashboard",
-      "desc": "",
-      "size": "",
-      "color": "#4dd0e1",
-      "thumbUrl": "https://image.thum.io/get/width/640/crop/420/https%3A%2F%2Fpintelmarket.netlify.app%2F",
-      "faded": false,
-      "newTab": true
-    },
-    {
-      "id": "c1780052761723",
-      "group": "analytics",
-      "url": "mymobility-dash.netlify.app",
-      "title": "Malaysia Mobility Index",
-      "tag": "Dashboard",
-      "desc": "Comparison study due to oil price uncertainty",
-      "size": "",
-      "color": "#4f7cff",
-      "thumbUrl": "",
-      "faded": false,
-      "newTab": true
     }
   ],
-  "_synced": "2026-05-29T11:09:13.031Z"
+  "_synced": "2026-05-29T11:19:34.698Z"
 }
