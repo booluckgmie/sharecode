@@ -433,14 +433,17 @@ footer{max-width:1200px;margin:0 auto;padding:14px 44px 36px;display:flex;align-
     <div class="modal-body">
       <div style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:13px 15px;font-size:12px;color:var(--text2);line-height:1.7">
         <b style="color:var(--text);display:flex;align-items:center;gap:6px;margin-bottom:6px"><i class="ti ti-info-circle"></i> How publishing works</b>
-        Admin changes are saved locally first. Click <b>Publish</b> to commit <code style="background:var(--bg2);padding:1px 5px;border-radius:4px">data/catalog.json</code>
+        Admin changes are saved locally first. Click <b>Publish</b> to commit <code style="background:var(--bg2);padding:1px 5px;border-radius:4px">portfolio-cms/data/catalog.json</code>
         to GitHub. Netlify detects the commit and rebuilds the site in ~30 seconds.
       </div>
       <div class="field-row">
         <div class="field"><label>GitHub Owner *</label><input type="text" id="gh_owner" placeholder="booluckgmie"></div>
         <div class="field"><label>Repository *</label><input type="text" id="gh_repo" placeholder="project-hub"></div>
       </div>
-      <div class="field"><label>Branch</label><input type="text" id="gh_branch" placeholder="main" value="main"></div>
+      <div class="field-row">
+        <div class="field"><label>Branch</label><input type="text" id="gh_branch" placeholder="master"></div>
+        <div class="field"><label>File path in repo *</label><input type="text" id="gh_path" placeholder="portfolio-cms/data/catalog.json"></div>
+      </div>
       <div class="field">
         <label>Personal Access Token *
           <a href="https://github.com/settings/tokens/new?scopes=repo&description=ProjectHub" target="_blank"
@@ -638,8 +641,16 @@ async function loadCatalogFromServer(){
     if(!res.ok) throw new Error('HTTP ' + res.status);
     const d = await res.json();
     if(d.groups && d.cards){
+      // If local publish is newer than server (Netlify rebuild pending), keep local
+      const lastPublish = localStorage.getItem('hub_last_publish') || '';
+      const serverSynced = d._synced || '';
+      if(lastPublish && serverSynced && lastPublish > serverSynced){
+        console.log('[Hub] Server older than last publish — keeping local data until Netlify rebuilds');
+        return false;
+      }
       data = d;
       localStorage.setItem('hub_catalog', JSON.stringify(data));
+      localStorage.removeItem('hub_last_publish');
       hasUnpublished = false;
       updatePublishBadge();
       return true;
@@ -664,7 +675,8 @@ function openGHSettings(){
   const cfg = getGHConfig();
   document.getElementById('gh_owner').value = cfg.owner || '';
   document.getElementById('gh_repo').value = cfg.repo || '';
-  document.getElementById('gh_branch').value = cfg.branch || 'main';
+  document.getElementById('gh_branch').value = cfg.branch || 'master';
+  document.getElementById('gh_path').value = cfg.path || 'portfolio-cms/data/catalog.json';
   document.getElementById('gh_token').value = cfg.token || '';
   openModal('ghModal');
 }
@@ -672,7 +684,8 @@ function saveGHSettings(){
   const cfg = {
     owner: document.getElementById('gh_owner').value.trim(),
     repo:  document.getElementById('gh_repo').value.trim(),
-    branch:document.getElementById('gh_branch').value.trim() || 'main',
+    branch:document.getElementById('gh_branch').value.trim() || 'master',
+    path:  document.getElementById('gh_path').value.trim() || 'portfolio-cms/data/catalog.json',
     token: document.getElementById('gh_token').value.trim(),
   };
   if(!cfg.owner || !cfg.repo || !cfg.token){ showToast('Owner, repo, and token are required.','err'); return; }
@@ -690,8 +703,8 @@ async function publishToGitHub(){
   btn.innerHTML = '<i class="ti ti-loader" style="animation:spin .8s linear infinite"></i> Publishing…';
 
   try{
-    const branch = cfg.branch || 'main';
-    const filePath = 'data/catalog.json';
+    const branch = cfg.branch || 'master';
+    const filePath = cfg.path || 'portfolio-cms/data/catalog.json';
     const apiBase = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${filePath}`;
     const headers = { 'Authorization': `Bearer ${cfg.token}`, 'Accept': 'application/vnd.github.v3+json' };
 
@@ -711,6 +724,10 @@ async function publishToGitHub(){
     });
     if(!putRes.ok) throw new Error((await putRes.json()).message || 'GitHub API error');
 
+    const syncedAt = new Date().toISOString();
+    data._synced = syncedAt;
+    localStorage.setItem('hub_catalog', JSON.stringify(data));
+    localStorage.setItem('hub_last_publish', syncedAt);
     markUnpublished(false);
     showToast('Published to GitHub! Netlify rebuilds in ~30s.','ok');
 
