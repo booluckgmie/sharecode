@@ -266,7 +266,9 @@ footer{max-width:1200px;margin:0 auto;padding:14px 44px 36px;display:flex;align-
   </div>
   <button class="btn primary admin-only" onclick="openAddCard()"><i class="ti ti-plus"></i> Add link</button>
   <button class="btn admin-only" onclick="openGroupMgr()"><i class="ti ti-folder-cog"></i> Groups</button>
-  <!-- Publish to GitHub button — visible to admin when there are unpublished changes -->
+  <button class="btn admin-only" onclick="openNetlifyImport()" style="border-color:rgba(0,173,159,.4);color:#00ad9f" title="Import sites from Netlify">
+    <i class="ti ti-cloud-download"></i> Netlify
+  </button>
   <button class="btn warn admin-only" id="publishBtn" onclick="publishToGitHub()" title="Save all changes to GitHub">
     <i class="ti ti-cloud-upload"></i> Publish
   </button>
@@ -380,6 +382,9 @@ footer{max-width:1200px;margin:0 auto;padding:14px 44px 36px;display:flex;align-
       <button class="btn" onclick="closeModal('adminModal');openChangeKey()" style="width:100%;justify-content:flex-start">
         <i class="ti ti-key"></i> Change admin key
       </button>
+      <button class="btn" onclick="closeModal('adminModal');openNetlifyImport()" style="width:100%;justify-content:flex-start">
+        <i class="ti ti-cloud-download" style="color:#00ad9f"></i> Import from Netlify
+      </button>
       <button class="btn" onclick="closeModal('adminModal');openGHSettings()" style="width:100%;justify-content:flex-start">
         <i class="ti ti-brand-github"></i> GitHub publish settings
       </button>
@@ -490,6 +495,66 @@ footer{max-width:1200px;margin:0 auto;padding:14px 44px 36px;display:flex;align-
       <button class="btn" onclick="closeModal('sheetModal')">Cancel</button>
       <button class="btn danger" id="disconnectBtn" onclick="disconnectSheet()" style="display:none"><i class="ti ti-unlink"></i> Disconnect</button>
       <button class="btn success" onclick="connectSheet()"><i class="ti ti-plug"></i> Connect &amp; sync</button>
+    </div>
+  </div>
+</div>
+
+<!-- NETLIFY IMPORT MODAL -->
+<div class="modal-overlay" id="netlifyModal">
+  <div class="modal" style="max-width:700px">
+    <div class="modal-header">
+      <span class="modal-title"><i class="ti ti-cloud-download" style="color:#00ad9f"></i> Import from Netlify</span>
+      <button class="modal-close" onclick="closeModal('netlifyModal')"><i class="ti ti-x"></i></button>
+    </div>
+    <div class="modal-body">
+      <!-- Token + team + fetch row -->
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end">
+        <div class="field" style="flex:2;min-width:220px">
+          <label>Personal Access Token
+            <a href="https://app.netlify.com/user/applications/personal" target="_blank"
+               style="color:var(--accent);font-size:10px;margin-left:6px;text-decoration:none">
+              <i class="ti ti-external-link"></i> Create token
+            </a>
+          </label>
+          <div class="inp-wrap">
+            <input type="password" id="netlify_token" placeholder="nfp_xxxxxxxxxxxx">
+            <button class="eye-btn" onclick="toggleEye('netlify_token',this)" tabindex="-1"><i class="ti ti-eye"></i></button>
+          </div>
+        </div>
+        <div class="field" style="flex:1;min-width:120px">
+          <label>Team slug</label>
+          <input type="text" id="netlify_team" placeholder="dosmteam">
+        </div>
+        <button class="btn primary" id="netlifyFetchBtn" onclick="fetchNetlifySites()" style="flex-shrink:0;margin-bottom:1px">
+          <i class="ti ti-refresh"></i> Fetch sites
+        </button>
+      </div>
+
+      <!-- Site list (hidden until fetch) -->
+      <div id="netlify_sites_wrapper" style="display:none">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px">
+          <span id="netlify_count" style="font-size:13px;color:var(--text2)"></span>
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <label class="check-row" style="font-size:12px">
+              <input type="checkbox" id="netlify_select_all" onchange="toggleAllNetlifySites(this.checked)"> Select all
+            </label>
+            <div class="field" style="margin:0;min-width:160px">
+              <select id="netlify_target_group"
+                style="padding:5px 10px;font-size:12px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);color:var(--text);outline:none;width:100%">
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="netlify_sites_grid"
+          style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;max-height:380px;overflow-y:auto;padding:2px 2px 4px">
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" onclick="closeModal('netlifyModal')">Cancel</button>
+      <button class="btn primary" id="netlify_import_btn" style="display:none" onclick="importNetlifySites()">
+        <i class="ti ti-plus"></i> Add selected to hub
+      </button>
     </div>
   </div>
 </div>
@@ -1110,6 +1175,153 @@ function removeGrp(id){
   data.groups=data.groups.filter(g=>g.id!==id);
   data.cards=data.cards.filter(c=>c.group!==id);
   persist(); renderGrpList(); showToast('Group removed.','ok');
+}
+
+/* ═══════════════════════════════════════════════════════
+   NETLIFY IMPORT
+═══════════════════════════════════════════════════════ */
+function getNetlifyToken(){ return localStorage.getItem('hub_netlify_token') || ''; }
+function setNetlifyToken(t){ if(t) localStorage.setItem('hub_netlify_token', t); }
+
+let _netlifySites = [];
+
+function openNetlifyImport(){
+  document.getElementById('netlify_token').value = getNetlifyToken();
+  document.getElementById('netlify_team').value  = localStorage.getItem('hub_netlify_team') || 'dosmteam';
+  document.getElementById('netlify_sites_wrapper').style.display = 'none';
+  document.getElementById('netlify_import_btn').style.display    = 'none';
+  // populate group selector
+  const sel = document.getElementById('netlify_target_group');
+  sel.innerHTML = data.groups.map(g=>`<option value="${g.id}">${g.label}</option>`).join('');
+  openModal('netlifyModal');
+}
+
+async function fetchNetlifySites(){
+  const token = document.getElementById('netlify_token').value.trim();
+  const team  = document.getElementById('netlify_team').value.trim();
+  if(!token){ showToast('Enter your Netlify token first.','err'); return; }
+  setNetlifyToken(token);
+  if(team) localStorage.setItem('hub_netlify_team', team);
+
+  const btn = document.getElementById('netlifyFetchBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="ti ti-loader" style="animation:spin .8s linear infinite"></i> Fetching…';
+
+  try{
+    const res = await fetch('https://api.netlify.com/api/v1/sites?per_page=100&filter=all', {
+      headers:{ 'Authorization':`Bearer ${token}`, 'Content-Type':'application/json' }
+    });
+    if(!res.ok){
+      const msg = res.status === 401 ? 'Invalid token — check it has full access.' : 'HTTP ' + res.status;
+      throw new Error(msg);
+    }
+    let sites = await res.json();
+
+    // Filter by team slug if provided
+    if(team) sites = sites.filter(s => s.account_slug === team || s.account_name === team);
+
+    _netlifySites = sites;
+    renderNetlifySites(sites);
+    showToast(`Fetched ${sites.length} site${sites.length!==1?'s':''}.`, 'ok');
+
+  }catch(e){
+    showToast('Fetch failed: ' + e.message, 'err');
+  }finally{
+    btn.disabled = false;
+    btn.innerHTML = '<i class="ti ti-refresh"></i> Fetch sites';
+  }
+}
+
+function renderNetlifySites(sites){
+  const existingUrls = new Set(data.cards.map(c=>c.url));
+  const grid  = document.getElementById('netlify_sites_grid');
+  const count = document.getElementById('netlify_count');
+  document.getElementById('netlify_sites_wrapper').style.display = '';
+  document.getElementById('netlify_import_btn').style.display    = '';
+  document.getElementById('netlify_select_all').checked = false;
+
+  count.textContent = `${sites.length} site${sites.length!==1?'s':''} found` +
+    (sites.length !== _netlifySites.length ? ` (filtered from ${_netlifySites.length})` : '');
+
+  grid.innerHTML = sites.map((s, i) => {
+    const url  = s.ssl_url || s.url || '';
+    const host = url.replace(/^https?:\/\//, '');
+    const shot = s.screenshot_url || (s.published_deploy && s.published_deploy.screenshot_url) || '';
+    const already = existingUrls.has(url);
+    const updated = s.updated_at ? new Date(s.updated_at).toLocaleDateString('en-MY',{day:'2-digit',month:'short',year:'numeric'}) : '';
+
+    return `
+      <label style="cursor:${already?'default':'pointer'};background:var(--bg3);border:1px solid ${already?'rgba(255,183,77,.25)':'var(--border)'};border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:border-color .15s;position:relative"
+             onmouseover="if(!${already})this.style.borderColor='var(--border-h)'"
+             onmouseout="this.style.borderColor='${already?'rgba(255,183,77,.25)':'var(--border)'}'">
+        <input type="checkbox" data-idx="${i}"
+          style="position:absolute;top:8px;left:8px;width:16px;height:16px;accent-color:var(--accent);z-index:2;cursor:pointer"
+          ${already?'disabled':''}
+          title="${already?'Already in hub':''}">
+        <div style="height:90px;overflow:hidden;background:var(--bg2);flex-shrink:0;position:relative">
+          ${shot
+            ? `<img src="${shot}" style="width:100%;height:100%;object-fit:cover;object-position:top" onerror="this.parentElement.innerHTML='<div style=\'width:100%;height:100%;display:flex;align-items:center;justify-content:center\'><i class=\'ti ti-globe\' style=\'font-size:28px;color:var(--text3)\'></i></div>'">`
+            : `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center"><i class="ti ti-globe" style="font-size:28px;color:var(--text3)"></i></div>`
+          }
+        </div>
+        <div style="padding:8px 10px 10px;flex:1">
+          <div style="font-size:12px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${s.name||s.id}</div>
+          <div style="font-family:var(--mono);font-size:9px;color:var(--text3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px">${host}</div>
+          ${updated?`<div style="font-size:10px;color:var(--text3);margin-top:3px">${updated}</div>`:''}
+          ${already?'<div style="font-size:10px;color:var(--warn);margin-top:3px"><i class="ti ti-check" style="font-size:9px"></i> Already in hub</div>':''}
+          ${s.custom_domain?`<div style="font-size:10px;color:var(--a2);margin-top:2px"><i class="ti ti-world" style="font-size:9px"></i> ${s.custom_domain}</div>`:''}
+        </div>
+      </label>`;
+  }).join('');
+}
+
+function toggleAllNetlifySites(checked){
+  document.querySelectorAll('#netlify_sites_grid input[type=checkbox]:not([disabled])').forEach(cb=>cb.checked=checked);
+}
+
+function importNetlifySites(){
+  const selected = [...document.querySelectorAll('#netlify_sites_grid input[type=checkbox]:checked:not([disabled])')];
+  if(!selected.length){ showToast('Select at least one site.','err'); return; }
+
+  const targetGroup = document.getElementById('netlify_target_group').value;
+  const existingUrls = new Set(data.cards.map(c=>c.url));
+  let added = 0;
+
+  selected.forEach(cb => {
+    const site = _netlifySites[parseInt(cb.dataset.idx)];
+    if(!site) return;
+    const url  = site.ssl_url || site.url || '';
+    if(existingUrls.has(url)) return;
+
+    const shot = site.screenshot_url || (site.published_deploy && site.published_deploy.screenshot_url) || '';
+    const updated = site.updated_at ? new Date(site.updated_at).toLocaleDateString('en-MY',{day:'2-digit',month:'short',year:'numeric'}) : '';
+
+    data.cards.push({
+      id:       'nl_' + site.id.slice(0, 12),
+      group:    targetGroup,
+      url:      url,
+      title:    site.name || site.id,
+      tag:      'Netlify',
+      desc:     site.custom_domain
+                  ? `🌐 ${site.custom_domain}` + (updated ? ` · Updated ${updated}` : '')
+                  : (updated ? `Updated ${updated}` : ''),
+      size:     '',
+      color:    '#00ad9f',
+      thumbUrl: shot,
+      faded:    false,
+      newTab:   true,
+    });
+    existingUrls.add(url);
+    added++;
+  });
+
+  if(added > 0){
+    persist(); render();
+    closeModal('netlifyModal');
+    showToast(`${added} site${added!==1?'s':''} added. Click Publish to save to GitHub.`, 'ok');
+  }else{
+    showToast('No new sites — all already in hub.', 'info');
+  }
 }
 
 /* ═══════════════════════════════
