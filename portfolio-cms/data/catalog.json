@@ -1,0 +1,31 @@
+{
+  "groups": [
+    {"id": "corp", "label": "Corporate & Governance",  "icon": "building-community", "color": "#4f7cff"},
+    {"id": "hr",   "label": "HR & Talent",              "icon": "users",              "color": "#b39ddb"},
+    {"id": "fin",  "label": "Finance",                  "icon": "chart-line",         "color": "#6ef0b8"},
+    {"id": "ops",  "label": "Operations",               "icon": "settings-2",         "color": "#ffa94d"},
+    {"id": "dev",  "label": "Dev Tools & Utilities",    "icon": "code",               "color": "#4dd0e1"},
+    {"id": "comm", "label": "Comms & Marketing",        "icon": "mail",               "color": "#f06292"}
+  ],
+  "cards": [
+    {"id":"c1",  "group":"corp","url":"shareholder_network.html", "title":"Shareholder Network",      "tag":"Network",     "color":"#4f7cff","faded":false,"newTab":false,"desc":"Force-graph visualisation of shareholder–company relationships. Node drill-down.","size":"189 KB"},
+    {"id":"c2",  "group":"corp","url":"shareholder_coi6.html",    "title":"COI Dashboard v6",          "tag":"COI v6",      "color":"#4f7cff","faded":false,"newTab":false,"desc":"Conflict-of-interest declaration dashboard with updated schema, search, and UI.","size":"22 KB"},
+    {"id":"c3",  "group":"corp","url":"coi_v1.html",              "title":"Shareholder–Company Vis",   "tag":"Shareholders","color":"#4f7cff","faded":false,"newTab":false,"desc":"Original index page — full shareholder list and company network.","size":""},
+    {"id":"c4",  "group":"corp","url":"shareholder_db2.csv",      "title":"Shareholder Database",      "tag":"Data",        "color":"#4f7cff","faded":false,"newTab":true, "desc":"Raw CSV dataset — shareholder records, affiliations, and stake percentages.","size":"72 KB"},
+    {"id":"c5",  "group":"corp","url":"shareholder_coi6_old.html","title":"COI Dashboard (legacy)",    "tag":"Archive",     "color":"#4f7cff","faded":true, "newTab":false,"desc":"Previous COI dashboard — kept for reference.","size":"17 KB"},
+    {"id":"c6",  "group":"hr",  "url":"vistatalent.html",         "title":"VistaTalent",               "tag":"Talent",      "color":"#b39ddb","faded":false,"newTab":false,"desc":"Full-featured HR talent dashboard — profiles, org chart, performance bands.","size":"44 KB"},
+    {"id":"c7",  "group":"hr",  "url":"vistatalent-mini.html",    "title":"VistaTalent Mini",          "tag":"Compact",     "color":"#b39ddb","faded":false,"newTab":false,"desc":"Lightweight compact version for embedding or quick lookup.","size":"35 KB"},
+    {"id":"c8",  "group":"fin", "url":"paydaylock.html",          "title":"PaydayLock",                "tag":"Payroll",     "color":"#6ef0b8","faded":false,"newTab":false,"desc":"Payroll lock and sign-off — freeze periods, confirm cut-offs, audit trail.","size":"11 KB"},
+    {"id":"c9",  "group":"fin", "url":"ogsedash.html",            "title":"OGSE Dashboard",            "tag":"Dashboard",   "color":"#6ef0b8","faded":false,"newTab":false,"desc":"OGS/E financial metrics — KPI cards, trend charts, period comparison.","size":"18 KB"},
+    {"id":"c10", "group":"ops", "url":"samuraiv2_opdash.html",    "title":"Samurai v2 — Ops",          "tag":"Ops",         "color":"#ffa94d","faded":false,"newTab":false,"desc":"Operations command dashboard — status tiles, activity log, KPI summary.","size":"22 KB"},
+    {"id":"c11", "group":"ops", "url":"samuraiv2_opdash-int.html","title":"Samurai v2 — Interactive",  "tag":"Interactive", "color":"#ffa94d","faded":false,"newTab":false,"desc":"Enhanced interactive build — drill-down filters, live panels, alerts.","size":"27 KB"},
+    {"id":"c12", "group":"ops", "url":"weather_indc.html",        "title":"Weather Indicator",         "tag":"Weather",     "color":"#ffa94d","faded":false,"newTab":false,"desc":"Field operations weather widget — conditions, forecast, work-safe indicator.","size":"24 KB"},
+    {"id":"c13", "group":"dev", "url":"nexaflow.html",            "title":"NexaFlow",                  "tag":"Workflow",    "color":"#4dd0e1","faded":false,"newTab":false,"desc":"Visual workflow builder — node-based automation with conditional branching.","size":"47 KB"},
+    {"id":"c14", "group":"dev", "url":"pyjourney.html",           "title":"PyJourney",                 "tag":"Learning",    "color":"#4dd0e1","faded":false,"newTab":false,"desc":"Python learning tracker — module progress, snippets, and milestone badges.","size":"31 KB"},
+    {"id":"c15", "group":"dev", "url":"searchswec.html",          "title":"SearchSWEC",                "tag":"Search",      "color":"#4dd0e1","faded":false,"newTab":false,"desc":"Full-featured local search — indexed dataset, faceted filters, ranking.","size":"1.2 MB"},
+    {"id":"c16", "group":"dev", "url":"ui_form.html",             "title":"UI Form",                   "tag":"UI",          "color":"#4dd0e1","faded":false,"newTab":false,"desc":"General-purpose form prototype — validation, multi-step layout.","size":"20 KB"},
+    {"id":"c17", "group":"dev", "url":"x.html",                   "title":"X — Scratch Sandbox",       "tag":"Sandbox",     "color":"#4dd0e1","faded":false,"newTab":false,"desc":"Experimental page for quick prototyping before integration.","size":"7 KB"},
+    {"id":"c18", "group":"comm","url":"newsletter1fm.html",       "title":"Newsletter 1FM",            "tag":"Newsletter",  "color":"#f06292","faded":false,"newTab":false,"desc":"Branded email newsletter template — responsive layout, sections, CTA buttons.","size":"15 KB"}
+  ],
+  "_synced": ""
+}

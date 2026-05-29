@@ -1,4 +1,5 @@
 /
 main
 pyocclient
-data
+/data
+!portfolio-cms/data/**

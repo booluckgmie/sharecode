@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0d0f14;--bg2:#13161e;--bg3:#1a1e28;
+  --border:rgba(255,255,255,0.08);--border-h:rgba(255,255,255,0.18);
+  --text:#e8e9ed;--text2:#9098ad;--text3:#5a6279;
+  --accent:#4f7cff;--a2:#6ef0b8;--a3:#ffa94d;--a4:#f06292;--a5:#b39ddb;--a6:#4dd0e1;
+  --danger:#e57373;--warn:#ffb74d;--success:#66bb6a;
+  --font:'DM Sans',sans-serif;--mono:'DM Mono',monospace;
+  --r:12px;--rl:18px;--sh:0 8px 32px rgba(0,0,0,0.6);
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(79,124,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(79,124,255,0.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0}
+
+header{position:relative;z-index:10;padding:44px 44px 28px;max-width:1200px;margin:0 auto}
+.logo-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.logo-dot{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--accent),var(--a2));display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700;color:#0d0f14;flex-shrink:0;cursor:pointer;transition:transform .25s cubic-bezier(.34,1.56,.64,1);user-select:none}
+.logo-dot:hover{transform:scale(1.13) rotate(-8deg)}
+.logo-label{font-family:var(--mono);font-size:11px;color:var(--text3);letter-spacing:.08em;text-transform:uppercase}
+.hero-title{font-size:clamp(24px,4vw,42px);font-weight:600;line-height:1.15;letter-spacing:-.025em;margin-bottom:7px;background:linear-gradient(110deg,var(--text) 55%,var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{color:var(--text2);font-size:15px;font-weight:300;max-width:500px}
+
+.sync-bar{max-width:1200px;margin:0 auto;padding:0 44px 18px;display:flex;align-items:center;gap:10px;position:relative;z-index:10;flex-wrap:wrap}
+.sync-chip{display:inline-flex;align-items:center;gap:7px;padding:5px 13px;border-radius:99px;border:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--text3);background:var(--bg2);transition:all .15s}
+.sync-chip.connected{border-color:rgba(102,187,106,.3);color:var(--success)}
+.sync-chip.syncing{border-color:rgba(79,124,255,.3);color:var(--accent)}
+.sync-chip.error{border-color:rgba(229,115,115,.3);color:var(--danger)}
+.sync-chip.no-sheet{border-color:var(--border);color:var(--text3)}
+.sync-dot{width:7px;height:7px;border-radius:50%;background:currentColor;flex-shrink:0}
+.sync-dot.spin{background:none;border:2px solid currentColor;border-top-color:transparent;border-radius:50%;animation:spin .7s linear infinite;width:9px;height:9px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sync-time{font-size:10px;color:var(--text3);font-family:var(--mono)}
+
+.admin-badge{display:none;align-items:center;gap:6px;padding:4px 12px;border-radius:99px;background:rgba(79,124,255,.12);border:1px solid rgba(79,124,255,.3);color:var(--accent);font-size:11.5px;font-family:var(--mono);cursor:pointer;transition:all .15s;margin-left:auto}
+.admin-badge:hover{background:rgba(79,124,255,.22)}
+.admin-badge.visible{display:flex}
+.admin-pulse{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+.toolbar{max-width:1200px;margin:0 auto;padding:0 44px 22px;display:flex;align-items:center;gap:9px;flex-wrap:wrap;position:relative;z-index:10}
+.search-box{display:flex;align-items:center;gap:9px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:9px 14px;flex:1;min-width:180px;max-width:360px;transition:border-color .18s}
+.search-box:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px rgba(79,124,255,.1)}
+.search-box i{color:var(--text3);font-size:15px;flex-shrink:0}
+.search-box input{background:none;border:none;outline:none;color:var(--text);font-family:var(--font);font-size:14px;width:100%}
+.search-box input::placeholder{color:var(--text3)}
+
+.btn{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:var(--r);border:1px solid var(--border);font-family:var(--font);font-size:13px;color:var(--text2);cursor:pointer;background:var(--bg2);transition:all .15s;white-space:nowrap;user-select:none}
+.btn:hover{border-color:var(--border-h);color:var(--text)}
+.btn i{font-size:15px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:#3d6ae8;border-color:#3d6ae8}
+.btn.success{background:rgba(102,187,106,.12);border-color:rgba(102,187,106,.3);color:var(--success)}
+.btn.success:hover{background:rgba(102,187,106,.22)}
+.btn.danger{background:rgba(229,115,115,.1);border-color:rgba(229,115,115,.3);color:var(--danger)}
+.btn.danger:hover{background:rgba(229,115,115,.2)}
+.btn.warn{background:rgba(255,183,77,.1);border-color:rgba(255,183,77,.3);color:var(--warn)}
+.btn.warn:hover{background:rgba(255,183,77,.2)}
+.btn.sm{padding:5px 10px;font-size:12px}
+.btn.sm i{font-size:13px}
+.btn[disabled]{opacity:.35;cursor:not-allowed;pointer-events:none}
+.admin-only{display:none !important}
+body.admin-mode .admin-only{display:inline-flex !important}
+
+.unpub-badge{display:none;align-items:center;gap:5px;padding:3px 9px;border-radius:99px;background:rgba(255,183,77,.1);border:1px solid rgba(255,183,77,.3);font-family:var(--mono);font-size:10px;color:var(--warn)}
+body.admin-mode .unpub-badge.show{display:inline-flex}
+
+.filter-row{max-width:1200px;margin:0 auto;padding:0 44px 24px;display:flex;flex-wrap:wrap;gap:8px;position:relative;z-index:10}
+.pill{padding:5px 13px;border-radius:99px;border:1px solid var(--border);font-size:12px;color:var(--text2);cursor:pointer;background:var(--bg2);transition:all .15s;display:flex;align-items:center;gap:5px;user-select:none;font-family:var(--font)}
+.pill i{font-size:12px}
+.pill:hover{border-color:var(--border-h);color:var(--text)}
+.pill.active{background:var(--accent);border-color:var(--accent);color:#fff}
+
+.section-wrap{max-width:1200px;margin:0 auto;padding:0 44px 60px;position:relative;z-index:10}
+.tree-btn{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);font-family:var(--mono);font-size:11.5px;color:var(--text2);cursor:pointer;transition:all .15s;margin-bottom:20px;user-select:none}
+.tree-btn:hover{border-color:var(--border-h);color:var(--text)}
+.tree-btn.open .chev{transform:rotate(180deg)}
+.chev{transition:transform .2s}
+.tree-panel{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rl);padding:18px 22px;font-family:var(--mono);font-size:12px;line-height:2;display:none;margin-bottom:20px;overflow-x:auto}
+.tree-panel.open{display:block;animation:fadeIn .2s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
+
+.group-header{display:flex;align-items:center;gap:10px;margin:38px 0 14px}
+.g-line{height:1px;background:var(--border);flex:1}
+.g-label{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--text3);white-space:nowrap;display:flex;align-items:center;gap:6px}
+.g-label i{font-size:11px}
+.g-count{font-family:var(--mono);font-size:10px;padding:2px 8px;border-radius:99px;border:1px solid var(--border);color:var(--text3)}
+.g-btns{display:flex;gap:6px}
+
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(272px,1fr));gap:14px}
+
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;display:flex;flex-direction:column;cursor:pointer;transition:border-color .18s,transform .18s,box-shadow .18s;position:relative}
+.card:hover{border-color:var(--border-h);transform:translateY(-4px);box-shadow:var(--sh)}
+.card.faded{opacity:.42}
+.thumb{height:150px;position:relative;overflow:hidden;flex-shrink:0;background:var(--bg3)}
+.thumb img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:transform .4s ease}
+.card:hover .thumb img{transform:scale(1.05)}
+.thumb-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 45%,rgba(13,15,20,.82) 100%);pointer-events:none}
+.thumb-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+.thumb-fallback .fb-icon{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.thumb-fallback .fb-url{font-family:var(--mono);font-size:9px;color:var(--text3);padding:0 14px;text-align:center;word-break:break-all;max-height:30px;overflow:hidden}
+.card-body{padding:14px 16px 15px;flex:1;display:flex;flex-direction:column;gap:5px}
+.card-tag{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:99px;border:1px solid;width:fit-content;display:inline-flex;align-items:center;gap:4px}
+.card-title{font-size:14px;font-weight:600;color:var(--text);line-height:1.3}
+.card-desc{font-size:12px;color:var(--text2);line-height:1.5;flex:1}
+.card-footer{display:flex;align-items:center;justify-content:space-between;padding:8px 16px;border-top:1px solid var(--border);background:var(--bg3)}
+.card-fn{font-family:var(--mono);font-size:10px;color:var(--text3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:190px}
+.card-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.card-arr{font-size:14px;color:var(--text3);transition:color .15s,transform .15s}
+.card:hover .card-arr{color:var(--text);transform:translateX(3px)}
+
+.empty{text-align:center;padding:64px 20px;color:var(--text3);display:none}
+.empty i{font-size:32px;margin-bottom:10px;display:block}
+.section-group.hidden{display:none}
+
+/* AUTH */
+.auth-overlay{position:fixed;inset:0;background:rgba(8,10,14,.97);backdrop-filter:blur(10px);z-index:2000;display:flex;align-items:center;justify-content:center;padding:20px}
+.auth-box{background:var(--bg2);border:1px solid var(--border-h);border-radius:22px;padding:36px 36px 30px;width:100%;max-width:380px;animation:slideUp .28s cubic-bezier(.34,1.4,.64,1)}
+@keyframes slideUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.auth-logo{width:54px;height:54px;border-radius:16px;background:linear-gradient(135deg,var(--accent),var(--a2));display:flex;align-items:center;justify-content:center;font-size:25px;font-weight:800;color:#0d0f14;margin:0 auto 18px}
+.auth-title{text-align:center;font-size:19px;font-weight:600;margin-bottom:4px}
+.auth-sub{text-align:center;color:var(--text2);font-size:13px;margin-bottom:22px;line-height:1.5}
+.auth-field{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
+.auth-field label{font-size:11.5px;color:var(--text3);font-family:var(--mono);letter-spacing:.04em}
+.inp-wrap{position:relative}
+.inp-wrap input{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);color:var(--text);font-family:var(--font);font-size:14px;padding:10px 40px 10px 14px;outline:none;transition:border-color .15s;letter-spacing:.06em}
+.inp-wrap input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(79,124,255,.1)}
+.inp-wrap input.err{border-color:var(--danger)}
+.eye-btn{position:absolute;right:11px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--text3);cursor:pointer;font-size:16px;padding:2px;display:flex;transition:color .15s}
+.eye-btn:hover{color:var(--text)}
+.auth-err{font-size:12px;color:var(--danger);text-align:center;min-height:16px;margin-bottom:10px}
+.auth-btn{width:100%;padding:11px;border-radius:var(--r);border:none;background:var(--accent);color:#fff;font-family:var(--font);font-size:14px;font-weight:500;cursor:pointer;transition:background .15s;display:flex;align-items:center;justify-content:center;gap:8px}
+.auth-btn:hover{background:#3d6ae8}
+.auth-btn.ghost{background:var(--bg3);border:1px solid var(--border);color:var(--text2);margin-top:10px}
+.auth-btn.ghost:hover{border-color:var(--border-h);color:var(--text)}
+.auth-divider{display:flex;align-items:center;gap:10px;margin:14px 0}
+.auth-divider::before,.auth-divider::after{content:'';flex:1;height:1px;background:var(--border)}
+.auth-divider span{font-size:12px;color:var(--text3)}
+.auth-hint{text-align:center;font-size:11px;color:var(--text3);margin-top:16px;font-family:var(--mono);line-height:1.7}
+.auth-shake{animation:shake .38s ease}
+@keyframes shake{0%,100%{transform:none}20%,60%{transform:translateX(-7px)}40%,80%{transform:translateX(7px)}}
+
+/* MODALS */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:1000;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.show{display:flex}
+.modal{background:var(--bg2);border:1px solid var(--border-h);border-radius:var(--rl);width:100%;max-width:540px;max-height:92vh;overflow-y:auto;animation:slideUp .22s cubic-bezier(.34,1.4,.64,1)}
+.modal.narrow{max-width:420px}
+.modal-header{display:flex;align-items:center;justify-content:space-between;padding:20px 24px 14px;border-bottom:1px solid var(--border)}
+.modal-title{font-size:16px;font-weight:600;display:flex;align-items:center;gap:8px}
+.modal-close{background:none;border:none;color:var(--text3);cursor:pointer;font-size:20px;display:flex;padding:2px;transition:color .15s}
+.modal-close:hover{color:var(--text)}
+.modal-body{padding:20px 24px;display:flex;flex-direction:column;gap:14px}
+.modal-footer{padding:12px 24px 20px;display:flex;justify-content:flex-end;gap:10px;border-top:1px solid var(--border)}
+.field{display:flex;flex-direction:column;gap:5px}
+.field label{font-size:11.5px;color:var(--text2);font-family:var(--mono);letter-spacing:.04em}
+.field input,.field textarea,.field select{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);color:var(--text);font-family:var(--font);font-size:14px;padding:9px 12px;outline:none;transition:border-color .15s;width:100%}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--accent)}
+.field textarea{resize:vertical;min-height:64px}
+.field select option{background:var(--bg3)}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field-hint{font-size:11px;color:var(--text3);line-height:1.5}
+.check-row{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2);cursor:pointer}
+.check-row input[type=checkbox]{width:15px;height:15px;cursor:pointer;accent-color:var(--accent)}
+.thumb-preview{width:100%;height:134px;border-radius:var(--r);overflow:hidden;border:1px solid var(--border);background:var(--bg3);display:flex;align-items:center;justify-content:center;position:relative}
+.thumb-preview img{width:100%;height:100%;object-fit:cover;object-position:top}
+.preview-ph{color:var(--text3);font-size:12px;text-align:center;font-family:var(--mono)}
+.thumb-actions{display:flex;gap:8px;margin-top:6px;align-items:center}
+.swatches{display:flex;flex-wrap:wrap;gap:7px}
+.swatch{width:26px;height:26px;border-radius:7px;cursor:pointer;border:2px solid transparent;transition:transform .15s,border-color .15s;flex-shrink:0}
+.swatch:hover{transform:scale(1.18)}
+.swatch.sel{border-color:#fff;transform:scale(1.12)}
+.grp-item{display:flex;align-items:center;gap:10px;padding:10px 13px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);margin-bottom:7px}
+.grp-dot{width:13px;height:13px;border-radius:4px;flex-shrink:0}
+.sheet-status-box{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;display:flex;align-items:flex-start;gap:12px}
+.sheet-status-box i{font-size:20px;margin-top:2px;flex-shrink:0}
+.sheet-status-box .ssb-label{font-size:13px;font-weight:500;margin-bottom:2px}
+.sheet-status-box .ssb-url{font-family:var(--mono);font-size:10px;color:var(--text3);word-break:break-all;margin-top:4px}
+.thumb-spinner{width:20px;height:20px;border:2px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite}
+
+.toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(18px);background:var(--bg3);border:1px solid var(--border-h);border-radius:var(--r);padding:10px 18px;font-size:13px;color:var(--text);z-index:9999;opacity:0;transition:opacity .2s,transform .2s;pointer-events:none;white-space:nowrap;display:flex;align-items:center;gap:8px}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast.ok i{color:var(--success)}
+.toast.err i{color:var(--danger)}
+.toast.info i{color:var(--accent)}
+
+footer{max-width:1200px;margin:0 auto;padding:14px 44px 36px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);color:var(--text3);font-family:var(--mono);font-size:11px;position:relative;z-index:10}
+
+@media(max-width:680px){
+  header,.sync-bar,.toolbar,.filter-row,.section-wrap{padding-left:20px;padding-right:20px}
+  header{padding-top:32px}
+  .cards-grid{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:5px}
+  .field-row{grid-template-columns:1fr}
+  .auth-box{padding:28px 22px 24px}
+}
+</style>
+</head>
+<body>
+
+<!-- AUTH -->
+<div class="auth-overlay" id="authOverlay">
+  <div class="auth-box" id="authBox">
+    <div class="auth-logo">N</div>
+    <div class="auth-title">Project Hub</div>
+    <div class="auth-sub">Login as admin to add, edit, and manage links.<br>Guests can browse the full catalog.</div>
+    <div class="auth-field">
+      <label>Admin Key</label>
+      <div class="inp-wrap">
+        <input type="password" id="authInput" placeholder="••••••••" autocomplete="off"
+          onkeydown="if(event.key==='Enter')tryLogin()">
+        <button class="eye-btn" onclick="toggleEye('authInput',this)" tabindex="-1"><i class="ti ti-eye"></i></button>
+      </div>
+    </div>
+    <div class="auth-err" id="authErr"></div>
+    <button class="auth-btn" onclick="tryLogin()"><i class="ti ti-lock-open"></i> Login as Admin</button>
+    <div class="auth-divider"><span>or</span></div>
+    <button class="auth-btn ghost" onclick="loginGuest()"><i class="ti ti-eye"></i> Continue as Guest</button>
+    <div class="auth-hint">First-time default key: <b>admin123</b><br>Change it after login in Admin Settings.</div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-row">
+    <div class="logo-dot" onclick="handleLogoDot()">N</div>
+    <span class="logo-label" id="hubLabel">project-hub</span>
+    <div class="admin-badge" id="adminBadge" onclick="openAdminMenu()">
+      <div class="admin-pulse"></div>
+      Admin mode
+    </div>
+  </div>
+  <h1 class="hero-title">Project Hub</h1>
+  <p class="hero-sub">All tools, dashboards, and apps — one place, always in sync.</p>
+</header>
+
+<!-- SYNC BAR -->
+<div class="sync-bar">
+  <div class="sync-chip no-sheet" id="syncChip">
+    <div class="sync-dot"></div>
+    <span id="syncLabel">Not connected to Google Sheet</span>
+  </div>
+  <span class="sync-time" id="syncTime"></span>
+  <button class="btn sm admin-only" onclick="openSheetModal()" id="sheetConnectBtn">
+    <i class="ti ti-table-options"></i> <span id="sheetBtnLabel">Connect Sheet</span>
+  </button>
+  <button class="btn sm admin-only" onclick="syncNow()" id="syncBtn" style="display:none">
+    <i class="ti ti-refresh"></i> Sync now
+  </button>
+</div>
+
+<!-- TOOLBAR -->
+<div class="toolbar">
+  <div class="search-box">
+    <i class="ti ti-search"></i>
+    <input type="text" id="searchInput" placeholder="Search projects…" autocomplete="off">
+  </div>
+  <button class="btn primary admin-only" onclick="openAddCard()"><i class="ti ti-plus"></i> Add link</button>
+  <button class="btn admin-only" onclick="openGroupMgr()"><i class="ti ti-folder-cog"></i> Groups</button>
+  <!-- Publish to GitHub button — visible to admin when there are unpublished changes -->
+  <button class="btn warn admin-only" id="publishBtn" onclick="publishToGitHub()" title="Save all changes to GitHub">
+    <i class="ti ti-cloud-upload"></i> Publish
+  </button>
+  <div class="unpub-badge" id="unpubBadge"><i class="ti ti-circle-dot"></i> unsaved</div>
+  <button class="btn" onclick="toggleTree()"><i class="ti ti-folder-open"></i> Tree</button>
+  <button class="btn admin-only" onclick="exportJSON()" title="Export catalog JSON"><i class="ti ti-download"></i></button>
+  <button class="btn admin-only" onclick="document.getElementById('importFile').click()" title="Import catalog JSON"><i class="ti ti-upload"></i></button>
+  <button class="btn warn admin-only" onclick="doLogout()"><i class="ti ti-logout"></i></button>
+  <input type="file" id="importFile" accept=".json" style="display:none" onchange="importJSON(event)">
+</div>
+
+<!-- FILTER PILLS -->
+<div class="filter-row" id="filterRow"></div>
+
+<!-- CONTENT -->
+<div class="section-wrap">
+  <button class="tree-btn" id="treeBtn" onclick="toggleTree()">
+    <i class="ti ti-folder-open"></i> Directory tree
+    <i class="ti ti-chevron-down chev"></i>
+  </button>
+  <div class="tree-panel" id="treePanel"></div>
+  <div class="empty" id="emptyState"><i class="ti ti-search-off"></i>No projects found.</div>
+  <div id="catalogRoot"></div>
+</div>
+
+<footer>
+  <span id="footerDomain">project-hub</span>
+  <span id="footerCount"></span>
+</footer>
+
+<!-- CARD MODAL -->
+<div class="modal-overlay" id="cardModal">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="modal-title" id="cardModalTitle"><i class="ti ti-link"></i> Add link</span>
+      <button class="modal-close" onclick="closeModal('cardModal')"><i class="ti ti-x"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="field">
+        <label>URL / path *</label>
+        <input type="text" id="f_url" placeholder="https://… or relative.html" oninput="onUrlInput(this.value)">
+        <span class="field-hint">Thumbnail auto-loads from URL. For relative paths, uses your Netlify domain.</span>
+      </div>
+      <div class="field">
+        <label>Thumbnail</label>
+        <div class="thumb-preview" id="thumbPreview">
+          <div class="preview-ph"><i class="ti ti-photo" style="font-size:22px;display:block;margin-bottom:5px"></i>Auto from URL</div>
+        </div>
+        <div class="thumb-actions">
+          <button class="btn sm" onclick="reloadThumb()"><i class="ti ti-refresh"></i> Reload</button>
+          <input type="text" id="f_thumb" placeholder="Or paste custom image URL…"
+            style="flex:1;font-size:12px;padding:5px 10px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);outline:none"
+            oninput="onCustomThumb(this.value)">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label>Title *</label><input type="text" id="f_title" placeholder="Card title"></div>
+        <div class="field"><label>Tag label</label><input type="text" id="f_tag" placeholder="Dashboard"></div>
+      </div>
+      <div class="field"><label>Description</label><textarea id="f_desc" placeholder="Short description…"></textarea></div>
+      <div class="field-row">
+        <div class="field"><label>Size / badge</label><input type="text" id="f_size" placeholder="22 KB"></div>
+        <div class="field"><label>Group</label><select id="f_group"></select></div>
+      </div>
+      <div class="field"><label>Accent colour</label><div class="swatches" id="colorSwatches"></div></div>
+      <label class="check-row"><input type="checkbox" id="f_faded"> Archive / faded</label>
+      <label class="check-row"><input type="checkbox" id="f_newtab"> Open in new tab</label>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" onclick="closeModal('cardModal')">Cancel</button>
+      <button class="btn danger" id="delCardBtn" style="display:none" onclick="deleteCard()"><i class="ti ti-trash"></i> Delete</button>
+      <button class="btn primary" onclick="saveCard()"><i class="ti ti-check"></i> Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- GROUP MANAGER MODAL -->
+<div class="modal-overlay" id="groupModal">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="modal-title"><i class="ti ti-folder-cog"></i> Manage groups</span>
+      <button class="modal-close" onclick="closeModal('groupModal');render()"><i class="ti ti-x"></i></button>
+    </div>
+    <div class="modal-body">
+      <div id="grpListEl"></div>
+      <div style="border-top:1px solid var(--border);padding-top:16px;margin-top:4px">
+        <p style="font-size:12px;color:var(--text2);margin-bottom:11px">Add new group</p>
+        <div class="field-row" style="margin-bottom:10px">
+          <div class="field"><label>ID (slug)</label><input type="text" id="ng_id" placeholder="analytics"></div>
+          <div class="field"><label>Label</label><input type="text" id="ng_label" placeholder="Analytics"></div>
+        </div>
+        <div class="field-row" style="margin-bottom:10px">
+          <div class="field"><label>Icon (Tabler name)</label><input type="text" id="ng_icon" placeholder="chart-bar"></div>
+          <div class="field"><label>Colour</label><div class="swatches" id="grpColorSwatches" style="margin-top:5px"></div></div>
+        </div>
+        <button class="btn primary" onclick="addGroup()" style="width:100%"><i class="ti ti-plus"></i> Add group</button>
+      </div>
+    </div>
+    <div class="modal-footer"><button class="btn primary" onclick="closeModal('groupModal');render()">Done</button></div>
+  </div>
+</div>
+
+<!-- ADMIN MENU MODAL -->
+<div class="modal-overlay" id="adminModal">
+  <div class="modal narrow">
+    <div class="modal-header">
+      <span class="modal-title"><i class="ti ti-shield"></i> Admin Settings</span>
+      <button class="modal-close" onclick="closeModal('adminModal')"><i class="ti ti-x"></i></button>
+    </div>
+    <div class="modal-body">
+      <button class="btn" onclick="closeModal('adminModal');openChangeKey()" style="width:100%;justify-content:flex-start">
+        <i class="ti ti-key"></i> Change admin key
+      </button>
+      <button class="btn" onclick="closeModal('adminModal');openGHSettings()" style="width:100%;justify-content:flex-start">
+        <i class="ti ti-brand-github"></i> GitHub publish settings
+      </button>
+      <button class="btn" onclick="closeModal('adminModal');openSheetModal()" style="width:100%;justify-content:flex-start">
+        <i class="ti ti-table-options"></i> Google Sheet connection
+      </button>
+      <div style="border-top:1px solid var(--border);padding-top:12px;margin-top:4px">
+        <button class="btn danger" onclick="closeModal('adminModal');confirmReset()" style="width:100%;justify-content:flex-start">
+          <i class="ti ti-refresh-alert"></i> Reset catalog to defaults
+        </button>
+        <button class="btn warn" onclick="closeModal('adminModal');doLogout()" style="width:100%;justify-content:flex-start;margin-top:8px">
+          <i class="ti ti-logout"></i> Exit admin mode
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CHANGE KEY MODAL -->
+<div class="modal-overlay" id="keyModal">
+  <div class="modal narrow">
+    <div class="modal-header">
+      <span class="modal-title"><i class="ti ti-key"></i> Change Admin Key</span>
+      <button class="modal-close" onclick="closeModal('keyModal')"><i class="ti ti-x"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="field"><label>Current key</label><div class="inp-wrap"><input type="password" id="k_cur"><button class="eye-btn" onclick="toggleEye('k_cur',this)" tabindex="-1"><i class="ti ti-eye"></i></button></div></div>
+      <div class="field"><label>New key (min 6 chars)</label><div class="inp-wrap"><input type="password" id="k_new"><button class="eye-btn" onclick="toggleEye('k_new',this)" tabindex="-1"><i class="ti ti-eye"></i></button></div></div>
+      <div class="field"><label>Confirm new key</label><div class="inp-wrap"><input type="password" id="k_cfm"><button class="eye-btn" onclick="toggleEye('k_cfm',this)" tabindex="-1"><i class="ti ti-eye"></i></button></div></div>
+      <div class="auth-err" id="keyErr"></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" onclick="closeModal('keyModal')">Cancel</button>
+      <button class="btn primary" onclick="saveKey()"><i class="ti ti-check"></i> Update key</button>
+    </div>
+  </div>
+</div>
+
+<!-- GITHUB SETTINGS MODAL -->
+<div class="modal-overlay" id="ghModal">
+  <div class="modal narrow">
+    <div class="modal-header">
+      <span class="modal-title"><i class="ti ti-brand-github"></i> GitHub Publish Settings</span>
+      <button class="modal-close" onclick="closeModal('ghModal')"><i class="ti ti-x"></i></button>
+    </div>
+    <div class="modal-body">
+      <div style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:13px 15px;font-size:12px;color:var(--text2);line-height:1.7">
+        <b style="color:var(--text);display:flex;align-items:center;gap:6px;margin-bottom:6px"><i class="ti ti-info-circle"></i> How publishing works</b>
+        Admin changes are saved locally first. Click <b>Publish</b> to commit <code style="background:var(--bg2);padding:1px 5px;border-radius:4px">data/catalog.json</code>
+        to GitHub. Netlify detects the commit and rebuilds the site in ~30 seconds.
+      </div>
+      <div class="field-row">
+        <div class="field"><label>GitHub Owner *</label><input type="text" id="gh_owner" placeholder="booluckgmie"></div>
+        <div class="field"><label>Repository *</label><input type="text" id="gh_repo" placeholder="project-hub"></div>
+      </div>
+      <div class="field"><label>Branch</label><input type="text" id="gh_branch" placeholder="main" value="main"></div>
+      <div class="field">
+        <label>Personal Access Token *
+          <a href="https://github.com/settings/tokens/new?scopes=repo&description=ProjectHub" target="_blank"
+             style="color:var(--accent);font-size:10px;margin-left:6px;text-decoration:none">
+            <i class="ti ti-external-link"></i> Create token (repo scope)
+          </a>
+        </label>
+        <div class="inp-wrap">
+          <input type="password" id="gh_token" placeholder="ghp_xxxxxxxxxxxx">
+          <button class="eye-btn" onclick="toggleEye('gh_token',this)" tabindex="-1"><i class="ti ti-eye"></i></button>
+        </div>
+        <span class="field-hint">Token is stored in this browser only — never sent anywhere except GitHub.</span>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" onclick="closeModal('ghModal')">Cancel</button>
+      <button class="btn primary" onclick="saveGHSettings()"><i class="ti ti-cloud-upload"></i> Save &amp; Publish</button>
+    </div>
+  </div>
+</div>
+
+<!-- GOOGLE SHEET MODAL -->
+<div class="modal-overlay" id="sheetModal">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="modal-title"><i class="ti ti-table-options" style="color:var(--success)"></i> Google Sheet Sync</span>
+      <button class="modal-close" onclick="closeModal('sheetModal')"><i class="ti ti-x"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="sheet-status-box" id="sheetStatusBox">
+        <i class="ti ti-circle-dashed" style="color:var(--text3)" id="sheetStatusIcon"></i>
+        <div>
+          <div class="ssb-label" id="sheetStatusLabel">No sheet connected</div>
+          <div class="ssb-url" id="sheetStatusUrl">Connect your Apps Script web app URL below to enable live sync.</div>
+        </div>
+      </div>
+      <div class="field">
+        <label>Apps Script Web App URL</label>
+        <input type="text" id="sheetUrl" placeholder="https://script.google.com/macros/s/…/exec">
+        <span class="field-hint">
+          In your Google Sheet → Extensions → Apps Script → paste the <b>appscript.gs</b> code →
+          Deploy → New deployment → Web app → Execute as: <b>Me</b> → Anyone → Copy URL.
+        </span>
+      </div>
+      <div style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7">
+        <b style="color:var(--text);display:flex;align-items:center;gap:6px;margin-bottom:6px"><i class="ti ti-info-circle"></i> How it works</b>
+        Sheet sync loads live data from your Google Sheet on page open. Admin edits here apply locally
+        — update the sheet to make them permanent, or use <b>Publish</b> to push to GitHub.
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" onclick="closeModal('sheetModal')">Cancel</button>
+      <button class="btn danger" id="disconnectBtn" onclick="disconnectSheet()" style="display:none"><i class="ti ti-unlink"></i> Disconnect</button>
+      <button class="btn success" onclick="connectSheet()"><i class="ti ti-plug"></i> Connect &amp; sync</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- ═══════════════════════════════════════════════════════
+     SCRIPT
+═══════════════════════════════════════════════════════ -->
+<script>
+/* ─── THUMB SERVICES ─── */
+const BASE = window.location.origin + '/';
+const THUMB_SVC = [
+  u => `https://image.thum.io/get/width/640/crop/420/${encodeURIComponent(u)}`,
+  u => `https://api.thumbnail.ws/api/abc123/thumbnail/get?url=${encodeURIComponent(u)}&width=640`,
+  u => `https://mini.s-shot.ru/1024x640/PNG/640/?${encodeURIComponent(u)}`,
+  u => `https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICONIMAGE&fallback_opts=TYPE,SIZE,URL&url=${encodeURIComponent(u)}&size=256`,
+];
+function absUrl(u){ return u.startsWith('http') ? u : BASE + u.replace(/^\//,''); }
+function thumbSrc(u, i=0){ return THUMB_SVC[i](absUrl(u)); }
+
+/* ─── COLORS ─── */
+const COLORS = ['#4f7cff','#6ef0b8','#ffa94d','#f06292','#b39ddb','#4dd0e1','#ff8a65','#80cbc4','#e57373','#fff176','#aed581','#f48fb1','#90caf9','#ce93d8','#ffcc80'];
+
+/* ─── DEFAULTS (fallback if catalog.json unavailable) ─── */
+const DEFAULTS = {
+  groups:[
+    {id:'corp', label:'Corporate & Governance',  icon:'building-community', color:'#4f7cff'},
+    {id:'hr',   label:'HR & Talent',              icon:'users',              color:'#b39ddb'},
+    {id:'fin',  label:'Finance',                  icon:'chart-line',         color:'#6ef0b8'},
+    {id:'ops',  label:'Operations',               icon:'settings-2',         color:'#ffa94d'},
+    {id:'dev',  label:'Dev Tools & Utilities',    icon:'code',               color:'#4dd0e1'},
+    {id:'comm', label:'Comms & Marketing',        icon:'mail',               color:'#f06292'},
+  ],
+  cards:[
+    {id:'c1', group:'corp',url:'shareholder_network.html', title:'Shareholder Network',      tag:'Network',    color:'#4f7cff',faded:false,newTab:false,desc:'Force-graph visualisation of shareholder–company relationships.',size:'189 KB'},
+    {id:'c2', group:'corp',url:'shareholder_coi6.html',   title:'COI Dashboard v6',          tag:'COI v6',     color:'#4f7cff',faded:false,newTab:false,desc:'Conflict-of-interest declaration dashboard.',size:'22 KB'},
+    {id:'c3', group:'hr', url:'vistatalent.html',         title:'VistaTalent',               tag:'Talent',     color:'#b39ddb',faded:false,newTab:false,desc:'Full-featured HR talent dashboard.',size:'44 KB'},
+    {id:'c4', group:'fin',url:'paydaylock.html',          title:'PaydayLock',                tag:'Payroll',    color:'#6ef0b8',faded:false,newTab:false,desc:'Payroll lock and sign-off.',size:'11 KB'},
+    {id:'c5', group:'ops',url:'samuraiv2_opdash.html',    title:'Samurai v2 — Ops',          tag:'Ops',        color:'#ffa94d',faded:false,newTab:false,desc:'Operations command dashboard.',size:'22 KB'},
+    {id:'c6', group:'dev',url:'nexaflow.html',            title:'NexaFlow',                  tag:'Workflow',   color:'#4dd0e1',faded:false,newTab:false,desc:'Visual workflow builder.',size:'47 KB'},
+    {id:'c7', group:'comm',url:'newsletter1fm.html',      title:'Newsletter 1FM',            tag:'Newsletter', color:'#f06292',faded:false,newTab:false,desc:'Branded email newsletter template.',size:'15 KB'},
+  ]
+};
+
+/* ─── STATE ─── */
+let data = loadLocal();
+let isAdmin = false;
+let activeFilter = 'all';
+let editCardId = null;
+let selColor = COLORS[0];
+let selGrpColor = COLORS[0];
+let thumbDebounce = null;
+let currentThumbUrl = '';
+let hasUnpublished = false;
+
+/* ─── LOCAL STORAGE ─── */
+function loadLocal(){
+  try{ const s = localStorage.getItem('hub_catalog'); if(s) return JSON.parse(s); }catch(e){}
+  return JSON.parse(JSON.stringify(DEFAULTS));
+}
+function persist(){
+  localStorage.setItem('hub_catalog', JSON.stringify(data));
+  markUnpublished(true);
+}
+function getKey(){ return localStorage.getItem('hub_key') || 'admin123'; }
+function setKey(k){ localStorage.setItem('hub_key', k); }
+function getSheetUrl(){ return localStorage.getItem('hub_sheet_url') || ''; }
+function setSheetUrl(u){ localStorage.setItem('hub_sheet_url', u); }
+
+/* ─── GITHUB CONFIG ─── */
+function getGHConfig(){
+  try{ return JSON.parse(localStorage.getItem('hub_gh_config')) || {}; }catch{ return {}; }
+}
+function setGHConfig(cfg){ localStorage.setItem('hub_gh_config', JSON.stringify(cfg)); }
+
+/* ─── LOAD CATALOG FROM SERVER ─── */
+async function loadCatalogFromServer(){
+  try{
+    const res = await fetch(`/data/catalog.json?t=${Date.now()}`);
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    const d = await res.json();
+    if(d.groups && d.cards){
+      data = d;
+      localStorage.setItem('hub_catalog', JSON.stringify(data));
+      hasUnpublished = false;
+      updatePublishBadge();
+      return true;
+    }
+  }catch(e){
+    console.warn('[Hub] catalog.json not available, using local cache:', e.message);
+  }
+  return false;
+}
+
+/* ─── PUBLISH TO GITHUB ─── */
+function markUnpublished(show){
+  hasUnpublished = show;
+  updatePublishBadge();
+}
+function updatePublishBadge(){
+  const badge = document.getElementById('unpubBadge');
+  if(badge) badge.classList.toggle('show', hasUnpublished);
+}
+
+function openGHSettings(){
+  const cfg = getGHConfig();
+  document.getElementById('gh_owner').value = cfg.owner || '';
+  document.getElementById('gh_repo').value = cfg.repo || '';
+  document.getElementById('gh_branch').value = cfg.branch || 'main';
+  document.getElementById('gh_token').value = cfg.token || '';
+  openModal('ghModal');
+}
+function saveGHSettings(){
+  const cfg = {
+    owner: document.getElementById('gh_owner').value.trim(),
+    repo:  document.getElementById('gh_repo').value.trim(),
+    branch:document.getElementById('gh_branch').value.trim() || 'main',
+    token: document.getElementById('gh_token').value.trim(),
+  };
+  if(!cfg.owner || !cfg.repo || !cfg.token){ showToast('Owner, repo, and token are required.','err'); return; }
+  setGHConfig(cfg);
+  closeModal('ghModal');
+  publishToGitHub();
+}
+
+async function publishToGitHub(){
+  const cfg = getGHConfig();
+  if(!cfg.token || !cfg.owner || !cfg.repo){ openGHSettings(); return; }
+
+  const btn = document.getElementById('publishBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="ti ti-loader" style="animation:spin .8s linear infinite"></i> Publishing…';
+
+  try{
+    const branch = cfg.branch || 'main';
+    const filePath = 'data/catalog.json';
+    const apiBase = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${filePath}`;
+    const headers = { 'Authorization': `Bearer ${cfg.token}`, 'Accept': 'application/vnd.github.v3+json' };
+
+    // Get current SHA (needed for update)
+    let sha;
+    const getRes = await fetch(`${apiBase}?ref=${branch}`, { headers });
+    if(getRes.ok){ sha = (await getRes.json()).sha; }
+
+    const content = JSON.stringify({...data, _synced: new Date().toISOString()}, null, 2);
+    const encoded = btoa(unescape(encodeURIComponent(content)));
+    const body = { message:'📦 Update catalog via Project Hub admin', content: encoded, branch };
+    if(sha) body.sha = sha;
+
+    const putRes = await fetch(apiBase, {
+      method:'PUT', headers:{ ...headers, 'Content-Type':'application/json' },
+      body: JSON.stringify(body)
+    });
+    if(!putRes.ok) throw new Error((await putRes.json()).message || 'GitHub API error');
+
+    markUnpublished(false);
+    showToast('Published to GitHub! Netlify rebuilds in ~30s.','ok');
+
+  }catch(e){
+    showToast('Publish failed: ' + e.message, 'err');
+  }finally{
+    btn.disabled = false;
+    btn.innerHTML = '<i class="ti ti-cloud-upload"></i> Publish';
+  }
+}
+
+/* ═══════════════════════════════════════════════════════
+   GOOGLE SHEET SYNC  (JSONP to bypass CORS redirect)
+═══════════════════════════════════════════════════════ */
+function fetchSheetJSONP(url){
+  return new Promise((resolve, reject) => {
+    const cbName = '__hubSync_' + Date.now();
+    const timeout = setTimeout(() => { cleanup(); reject(new Error('Request timed out (10 s)')); }, 10000);
+    function cleanup(){ clearTimeout(timeout); delete window[cbName]; const el=document.getElementById('_jsonpScript'); if(el) el.remove(); }
+    window[cbName] = function(d){ cleanup(); resolve(d); };
+    const script = document.createElement('script');
+    script.id = '_jsonpScript';
+    script.src = url + '?callback=' + cbName + '&t=' + Date.now();
+    script.onerror = () => { cleanup(); reject(new Error('Script load failed')); };
+    document.head.appendChild(script);
+  });
+}
+
+async function fetchSheet(silent=false){
+  const url = getSheetUrl();
+  if(!url){ if(!silent) showToast('No sheet connected.','err'); return false; }
+  setSyncState('syncing','Syncing with Google Sheet…');
+  try{
+    const remote = await fetchSheetJSONP(url);
+    if(remote.error) throw new Error(remote.error);
+    if(!remote.groups || !remote.cards) throw new Error('Unexpected response');
+    data = remote; persist(); render();
+    const ts = remote._synced ? new Date(remote._synced).toLocaleString('en-MY',{timeZone:'Asia/Kuala_Lumpur',hour12:false,day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'}) : '';
+    setSyncState('connected','Synced from Google Sheet (' + (remote._count||remote.cards.length) + ' links)');
+    document.getElementById('syncTime').textContent = ts ? 'Last sync: '+ts : '';
+    localStorage.setItem('hub_last_sync', ts);
+    if(!silent) showToast('Synced — ' + (remote._count||remote.cards.length) + ' links loaded.','ok');
+    return true;
+  }catch(e){
+    setSyncState('error','Sheet sync failed — using cached data');
+    if(!silent) showToast('Sync failed: ' + e.message,'err');
+    return false;
+  }
+}
+function setSyncState(state, label){
+  const chip = document.getElementById('syncChip');
+  const dot = chip.querySelector('.sync-dot');
+  chip.className = 'sync-chip ' + state;
+  dot.className = 'sync-dot' + (state==='syncing'?' spin':'');
+  document.getElementById('syncLabel').textContent = label;
+}
+function syncNow(){ fetchSheet(false); }
+async function connectSheet(){
+  const url = document.getElementById('sheetUrl').value.trim();
+  if(!url){ showToast('Paste the Apps Script URL first.','err'); return; }
+  if(!url.includes('script.google.com')){ showToast('That doesn\'t look like an Apps Script URL.','err'); return; }
+  setSheetUrl(url);
+  document.getElementById('syncBtn').style.display='';
+  document.getElementById('sheetBtnLabel').textContent='Sheet';
+  closeModal('sheetModal'); updateSheetModalStatus();
+  const ok = await fetchSheet(false);
+  if(ok) showToast('Sheet connected and synced!','ok');
+}
+function disconnectSheet(){
+  if(!confirm('Disconnect Google Sheet?')) return;
+  setSheetUrl('');
+  document.getElementById('syncBtn').style.display='none';
+  document.getElementById('sheetBtnLabel').textContent='Connect Sheet';
+  setSyncState('no-sheet','Not connected to Google Sheet');
+  document.getElementById('syncTime').textContent='';
+  closeModal('sheetModal'); updateSheetModalStatus();
+  showToast('Sheet disconnected.','info');
+}
+function openSheetModal(){
+  document.getElementById('sheetUrl').value = getSheetUrl();
+  document.getElementById('disconnectBtn').style.display = getSheetUrl()?'':'none';
+  updateSheetModalStatus(); openModal('sheetModal');
+}
+function updateSheetModalStatus(){
+  const url = getSheetUrl();
+  const icon = document.getElementById('sheetStatusIcon');
+  const label = document.getElementById('sheetStatusLabel');
+  const urlEl = document.getElementById('sheetStatusUrl');
+  const box = document.getElementById('sheetStatusBox');
+  if(url){
+    icon.className='ti ti-circle-check'; icon.style.color='var(--success)';
+    label.textContent='Sheet connected'; urlEl.textContent=url;
+    box.style.borderColor='rgba(102,187,106,.25)';
+  }else{
+    icon.className='ti ti-circle-dashed'; icon.style.color='var(--text3)';
+    label.textContent='No sheet connected'; urlEl.textContent='Connect your Apps Script web app URL below.';
+    box.style.borderColor='';
+  }
+}
+
+/* ═══════════════════════════════
+   AUTH
+═══════════════════════════════ */
+function tryLogin(){
+  const val = document.getElementById('authInput').value;
+  const err = document.getElementById('authErr');
+  if(val === getKey()){
+    isAdmin = true;
+    document.getElementById('authOverlay').style.display='none';
+    document.body.classList.add('admin-mode');
+    document.getElementById('adminBadge').classList.add('visible');
+    if(getSheetUrl()) document.getElementById('syncBtn').style.display='';
+    showToast('Admin mode active.','ok');
+    updatePublishBadge();
+    initSync();
+  }else{
+    err.textContent='Incorrect admin key.';
+    const box = document.getElementById('authBox');
+    box.classList.add('auth-shake');
+    setTimeout(()=>box.classList.remove('auth-shake'), 420);
+    setTimeout(()=>err.textContent='', 3000);
+  }
+}
+function loginGuest(){
+  isAdmin = false;
+  document.getElementById('authOverlay').style.display='none';
+  document.body.classList.remove('admin-mode');
+  document.getElementById('adminBadge').classList.remove('visible');
+  initSync();
+}
+function doLogout(){
+  isAdmin = false;
+  document.body.classList.remove('admin-mode');
+  document.getElementById('adminBadge').classList.remove('visible');
+  document.getElementById('syncBtn').style.display='none';
+  showToast('Exited admin mode.','info');
+  document.getElementById('authInput').value='';
+  document.getElementById('authErr').textContent='';
+  document.getElementById('authOverlay').style.display='flex';
+}
+
+async function initSync(){
+  updateSheetSyncUI(); render();
+  // Load canonical catalog from server, then re-render
+  const loaded = await loadCatalogFromServer();
+  if(loaded) render();
+  // Also attempt sheet sync in background
+  if(getSheetUrl()) await fetchSheet(true);
+  render();
+}
+
+function updateSheetSyncUI(){
+  const url = getSheetUrl();
+  if(url){
+    const ts = localStorage.getItem('hub_last_sync') || '';
+    setSyncState('connected','Synced from Google Sheet');
+    document.getElementById('syncTime').textContent = ts ? 'Last sync: '+ts : '';
+    document.getElementById('syncBtn').style.display = isAdmin ? '' : 'none';
+    document.getElementById('sheetBtnLabel').textContent='Sheet';
+  }else{
+    setSyncState('no-sheet','Not connected to Google Sheet');
+    document.getElementById('syncBtn').style.display='none';
+    document.getElementById('sheetBtnLabel').textContent='Connect Sheet';
+  }
+  updateSheetModalStatus();
+}
+
+function toggleEye(id, btn){
+  const inp = document.getElementById(id);
+  const ic = btn.querySelector('i');
+  if(inp.type==='password'){ inp.type='text'; ic.className='ti ti-eye-off'; }
+  else{ inp.type='password'; ic.className='ti ti-eye'; }
+}
+function openAdminMenu(){ openModal('adminModal'); }
+function openChangeKey(){
+  ['k_cur','k_new','k_cfm'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('keyErr').textContent='';
+  openModal('keyModal');
+}
+function saveKey(){
+  const cur=document.getElementById('k_cur').value, nw=document.getElementById('k_new').value, cf=document.getElementById('k_cfm').value;
+  const err=document.getElementById('keyErr');
+  if(cur!==getKey()){ err.textContent='Current key is wrong.'; return; }
+  if(nw.length<6){ err.textContent='Min 6 characters.'; return; }
+  if(nw!==cf){ err.textContent='Keys do not match.'; return; }
+  setKey(nw); closeModal('keyModal'); showToast('Admin key updated.','ok');
+}
+
+/* ═══════════════════════════════
+   RENDER
+═══════════════════════════════ */
+function render(){ renderPills(); renderTree(); renderCatalog(); renderFooterCount(); }
+function getGrp(id){ return data.groups.find(g=>g.id===id)||{id:'?',label:'Other',icon:'folder',color:'#888'}; }
+
+function renderPills(){
+  const fr = document.getElementById('filterRow');
+  fr.innerHTML=`<button class="pill${activeFilter==='all'?' active':''}" onclick="setFilter('all')"><i class="ti ti-apps"></i> All</button>`;
+  data.groups.forEach(g=>{
+    fr.innerHTML+=`<button class="pill${activeFilter===g.id?' active':''}" onclick="setFilter('${g.id}')"><i class="ti ti-${g.icon}"></i> ${g.label}</button>`;
+  });
+}
+
+function renderTree(){
+  const el = document.getElementById('treePanel');
+  const domain = window.location.hostname || 'project-hub';
+  let h=`<div style="display:flex;align-items:center;gap:7px;margin-bottom:3px"><i class="ti ti-world" style="color:var(--accent);font-size:13px"></i><b style="color:var(--text);font-size:12px">${domain}/</b></div>`;
+  data.groups.forEach(g=>{
+    const cards = data.cards.filter(c=>c.group===g.id);
+    if(!cards.length) return;
+    h+=`<div style="margin-left:14px;margin-top:3px;font-size:10px;color:var(--text3);letter-spacing:.1em;text-transform:uppercase">── ${g.label} ──</div>`;
+    cards.forEach((c,i)=>{
+      const last = i===cards.length-1;
+      h+=`<div style="margin-left:28px;display:flex;align-items:center;gap:7px;line-height:2;font-size:11.5px">
+        <span style="color:var(--text3)">${last?'└─':'├─'}</span>
+        <i class="ti ti-file-code" style="color:${g.color};font-size:12px"></i>
+        <a href="${c.url}" ${c.newTab?'target="_blank"':''} style="color:var(--text2);text-decoration:none"
+          onmouseover="this.style.color='${g.color}'" onmouseout="this.style.color='var(--text2)'">${c.url}</a>
+        ${c.size?`<span style="color:var(--text3);font-size:10px;margin-left:auto">${c.size}</span>`:''}
+      </div>`;
+    });
+  });
+  el.innerHTML = h;
+}
+
+function renderCatalog(){
+  const root = document.getElementById('catalogRoot');
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  let html='', total=0;
+  data.groups.forEach(g=>{
+    const cards = data.cards.filter(c=>{
+      if(c.group!==g.id) return false;
+      if(activeFilter!=='all' && activeFilter!==g.id) return false;
+      if(q && !(c.title+c.desc+c.tag+c.url).toLowerCase().includes(q)) return false;
+      return true;
+    });
+    if(!cards.length) return;
+    total += cards.length;
+    html+=`<div class="section-group" data-group="${g.id}">
+      <div class="group-header">
+        <span class="g-label"><i class="ti ti-${g.icon}"></i>${g.label}</span>
+        <div class="g-line"></div>
+        <span class="g-count">${cards.length}</span>
+        ${isAdmin?`<div class="g-btns"><button class="btn sm" onclick="openAddCard('${g.id}')"><i class="ti ti-plus"></i></button></div>`:''}
+      </div>
+      <div class="cards-grid">${cards.map(c=>buildCard(c,g)).join('')}</div>
+    </div>`;
+  });
+  root.innerHTML = html;
+  document.getElementById('emptyState').style.display = total===0 ? 'block' : 'none';
+}
+
+function buildCard(c, g){
+  const col = c.color || g.color || '#4f7cff';
+  const dark = hex2dark(col);
+  const src = c.thumbUrl || thumbSrc(c.url, 0);
+  return `<div class="card${c.faded?' faded':''}" onclick="goCard(event,'${c.id}')">
+    <div class="thumb" style="background:${dark}">
+      <img src="${src}" loading="lazy" alt="${esc(c.title)}"
+        onerror="tbFail(this,'${esc(c.url)}',1,'${col}')">
+      <div class="thumb-overlay"></div>
+    </div>
+    <div class="card-body">
+      <span class="card-tag" style="color:${col};border-color:${col}28;background:${col}10">${c.tag||''}</span>
+      <div class="card-title">${c.title}</div>
+      <div class="card-desc">${c.desc||''}</div>
+    </div>
+    <div class="card-footer">
+      <span class="card-fn">${c.url}${c.size?' · '+c.size:''}</span>
+      <div class="card-actions">
+        ${isAdmin?`<button class="btn sm" onclick="event.stopPropagation();openEditCard('${c.id}')" title="Edit"><i class="ti ti-edit"></i></button>
+        <button class="btn sm danger" onclick="event.stopPropagation();doDeleteCard('${c.id}')" title="Remove"><i class="ti ti-trash"></i></button>`:''}
+        <i class="ti ti-${c.newTab?'external-link':'arrow-right'} card-arr"></i>
+      </div>
+    </div>
+  </div>`;
+}
+
+function tbFail(img, url, idx, col){
+  if(idx < THUMB_SVC.length){
+    img.onerror = () => tbFail(img, url, idx+1, col);
+    img.src = thumbSrc(url, idx);
+  }else{
+    const p = img.parentElement;
+    p.innerHTML=`<div class="thumb-fallback" style="background:${hex2dark(col)}">
+      <div class="fb-icon" style="background:${col}18;color:${col}"><i class="ti ti-globe" style="font-size:20px"></i></div>
+      <div class="fb-url">${url}</div>
+    </div><div class="thumb-overlay"></div>`;
+  }
+}
+
+function goCard(e, id){
+  if(e.target.closest('.btn')) return;
+  const c = data.cards.find(x=>x.id===id);
+  if(!c) return;
+  c.newTab ? window.open(c.url,'_blank') : window.location.href = c.url;
+}
+
+function setFilter(f){ activeFilter = f; render(); }
+function renderFooterCount(){
+  const t=data.cards.length, g=data.groups.length;
+  document.getElementById('footerCount').textContent=`${t} file${t!==1?'s':''} · ${g} group${g!==1?'s':''}`;
+}
+function toggleTree(){
+  document.getElementById('treePanel').classList.toggle('open');
+  document.getElementById('treeBtn').classList.toggle('open');
+}
+
+/* ═══════════════════════════════
+   CARD MODAL
+═══════════════════════════════ */
+function buildSwatches(elId, current, cb){
+  const el = document.getElementById(elId);
+  el.innerHTML = '';
+  COLORS.forEach(c=>{
+    const d = document.createElement('div');
+    d.className = 'swatch' + (c===current?' sel':'');
+    d.style.background = c; d.title = c;
+    d.onclick = () => { el.querySelectorAll('.swatch').forEach(s=>s.classList.remove('sel')); d.classList.add('sel'); cb(c); };
+    el.appendChild(d);
+  });
+}
+function buildGrpSelect(sel){
+  const el = document.getElementById('f_group');
+  el.innerHTML = data.groups.map(g=>`<option value="${g.id}"${g.id===sel?' selected':''}>${g.label}</option>`).join('');
+}
+function onUrlInput(v){ clearTimeout(thumbDebounce); thumbDebounce=setTimeout(()=>{ if(v.trim()) loadThumbPreview(v.trim()); }, 700); }
+function onCustomThumb(v){
+  if(!v.trim()){ const url=document.getElementById('f_url').value.trim(); if(url) loadThumbPreview(url); return; }
+  showThumbImg(v.trim()); currentThumbUrl = v.trim();
+}
+function reloadThumb(){
+  const custom=document.getElementById('f_thumb').value.trim(), url=document.getElementById('f_url').value.trim();
+  if(custom){ showThumbImg(custom); currentThumbUrl=custom; }
+  else if(url){ loadThumbPreview(url); }
+  else showToast('Enter a URL first.','err');
+}
+function loadThumbPreview(url, svcIdx=0){
+  const src = thumbSrc(url, svcIdx);
+  const box = document.getElementById('thumbPreview');
+  box.innerHTML=`<div style="display:flex;align-items:center;justify-content:center;height:100%"><div class="thumb-spinner"></div></div>`;
+  const img = document.createElement('img');
+  img.style.cssText='width:100%;height:100%;object-fit:cover;object-position:top';
+  let idx = svcIdx+1;
+  img.onerror=()=>{
+    if(idx<THUMB_SVC.length){ img.src=thumbSrc(url,idx++); }
+    else{ box.innerHTML=`<div class="preview-ph"><i class="ti ti-photo-off" style="font-size:20px;display:block;margin-bottom:4px"></i>Preview unavailable</div>`; currentThumbUrl=''; }
+  };
+  img.onload=()=>{ box.innerHTML=''; box.appendChild(img); currentThumbUrl=src; };
+  img.src=src;
+}
+function showThumbImg(src){
+  const box = document.getElementById('thumbPreview');
+  box.innerHTML='';
+  const img = document.createElement('img');
+  img.style.cssText='width:100%;height:100%;object-fit:cover;object-position:top';
+  img.onerror=()=>{ box.innerHTML=`<div class="preview-ph"><i class="ti ti-photo-off" style="font-size:20px;display:block;margin-bottom:4px"></i>Image failed to load</div>`; };
+  img.src=src; box.appendChild(img);
+}
+
+function openAddCard(preGrp){
+  editCardId=null;
+  document.getElementById('cardModalTitle').innerHTML='<i class="ti ti-link"></i> Add link';
+  document.getElementById('delCardBtn').style.display='none';
+  ['f_url','f_title','f_tag','f_desc','f_size','f_thumb'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('f_faded').checked=false;
+  document.getElementById('f_newtab').checked=false;
+  selColor=COLORS[0]; currentThumbUrl='';
+  document.getElementById('thumbPreview').innerHTML=`<div class="preview-ph"><i class="ti ti-photo" style="font-size:22px;display:block;margin-bottom:5px"></i>Auto from URL</div>`;
+  buildGrpSelect(preGrp||(data.groups[0]||{}).id);
+  buildSwatches('colorSwatches', selColor, c=>selColor=c);
+  openModal('cardModal');
+}
+function openEditCard(id){
+  const c = data.cards.find(x=>x.id===id); if(!c) return;
+  editCardId = id;
+  document.getElementById('cardModalTitle').innerHTML='<i class="ti ti-edit"></i> Edit link';
+  document.getElementById('delCardBtn').style.display='';
+  document.getElementById('f_url').value=c.url||'';
+  document.getElementById('f_title').value=c.title||'';
+  document.getElementById('f_tag').value=c.tag||'';
+  document.getElementById('f_desc').value=c.desc||'';
+  document.getElementById('f_size').value=c.size||'';
+  document.getElementById('f_thumb').value=c.thumbUrl||'';
+  document.getElementById('f_faded').checked=!!c.faded;
+  document.getElementById('f_newtab').checked=!!c.newTab;
+  selColor=c.color||COLORS[0]; currentThumbUrl=c.thumbUrl||'';
+  buildGrpSelect(c.group);
+  buildSwatches('colorSwatches', selColor, col=>selColor=col);
+  const prevSrc=c.thumbUrl||thumbSrc(c.url,0);
+  if(prevSrc) showThumbImg(prevSrc);
+  openModal('cardModal');
+}
+function saveCard(){
+  const url=document.getElementById('f_url').value.trim(), title=document.getElementById('f_title').value.trim();
+  if(!url||!title){ showToast('URL and title are required.','err'); return; }
+  const card={
+    id: editCardId||'c'+Date.now(), group:document.getElementById('f_group').value,
+    url, title, tag:document.getElementById('f_tag').value.trim(),
+    desc:document.getElementById('f_desc').value.trim(), size:document.getElementById('f_size').value.trim(),
+    color:selColor, thumbUrl:currentThumbUrl||'',
+    faded:document.getElementById('f_faded').checked, newTab:document.getElementById('f_newtab').checked,
+  };
+  if(editCardId){ const i=data.cards.findIndex(c=>c.id===editCardId); if(i>=0) data.cards[i]=card; }
+  else data.cards.push(card);
+  persist(); render(); closeModal('cardModal');
+  showToast(editCardId?'Link updated.':'Link added.','ok');
+}
+function deleteCard(){
+  if(!editCardId) return;
+  if(!confirm('Remove this link?')) return;
+  data.cards=data.cards.filter(c=>c.id!==editCardId);
+  persist(); render(); closeModal('cardModal');
+  showToast('Link removed.','ok');
+}
+function doDeleteCard(id){
+  if(!confirm('Remove this link?')) return;
+  data.cards=data.cards.filter(c=>c.id!==id);
+  persist(); render(); showToast('Link removed.','ok');
+}
+
+/* ═══════════════════════════════
+   GROUP MANAGER
+═══════════════════════════════ */
+function openGroupMgr(){
+  renderGrpList(); selGrpColor=COLORS[0];
+  buildSwatches('grpColorSwatches', selGrpColor, c=>selGrpColor=c);
+  openModal('groupModal');
+}
+function renderGrpList(){
+  const el=document.getElementById('grpListEl');
+  if(!data.groups.length){ el.innerHTML='<p style="color:var(--text3);font-size:13px">No groups yet.</p>'; return; }
+  el.innerHTML=data.groups.map((g,i)=>`
+    <div class="grp-item">
+      <div class="grp-dot" style="background:${g.color}"></div>
+      <i class="ti ti-${g.icon}" style="color:${g.color};font-size:16px"></i>
+      <span style="flex:1;font-size:14px">${g.label}</span>
+      <span style="font-family:var(--mono);font-size:10px;color:var(--text3)">${data.cards.filter(c=>c.group===g.id).length}</span>
+      <button class="btn sm" onclick="moveGrp(${i},-1)" ${i===0?'disabled':''}><i class="ti ti-arrow-up"></i></button>
+      <button class="btn sm" onclick="moveGrp(${i},1)" ${i===data.groups.length-1?'disabled':''}><i class="ti ti-arrow-down"></i></button>
+      <button class="btn sm danger" onclick="removeGrp('${g.id}')"><i class="ti ti-trash"></i></button>
+    </div>`).join('');
+}
+function addGroup(){
+  const id=document.getElementById('ng_id').value.trim().replace(/\s+/g,'_').toLowerCase();
+  const label=document.getElementById('ng_label').value.trim();
+  const icon=document.getElementById('ng_icon').value.trim()||'folder';
+  if(!id||!label){ showToast('ID and label required.','err'); return; }
+  if(data.groups.find(g=>g.id===id)){ showToast('Group ID already exists.','err'); return; }
+  data.groups.push({id,label,icon,color:selGrpColor});
+  document.getElementById('ng_id').value=''; document.getElementById('ng_label').value=''; document.getElementById('ng_icon').value='';
+  persist(); renderGrpList(); showToast('Group added.','ok');
+}
+function moveGrp(i, d){
+  const ni=i+d;
+  if(ni<0||ni>=data.groups.length) return;
+  [data.groups[i],data.groups[ni]]=[data.groups[ni],data.groups[i]];
+  persist(); renderGrpList();
+}
+function removeGrp(id){
+  const n=data.cards.filter(c=>c.group===id).length;
+  if(n>0&&!confirm(`Delete group + ${n} link(s)?`)) return;
+  data.groups=data.groups.filter(g=>g.id!==id);
+  data.cards=data.cards.filter(c=>c.group!==id);
+  persist(); renderGrpList(); showToast('Group removed.','ok');
+}
+
+/* ═══════════════════════════════
+   EXPORT / IMPORT / RESET
+═══════════════════════════════ */
+function exportJSON(){
+  const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='catalog.json'; a.click();
+  showToast('Catalog exported.','ok');
+}
+function importJSON(e){
+  const file=e.target.files[0]; if(!file) return;
+  const r=new FileReader();
+  r.onload=ev=>{
+    try{
+      const d=JSON.parse(ev.target.result);
+      if(!d.groups||!d.cards) throw new Error();
+      if(!confirm(`Import ${d.cards.length} links in ${d.groups.length} groups? Replaces current catalog.`)) return;
+      data=d; persist(); render(); showToast('Catalog imported.','ok');
+    }catch{ showToast('Import failed — invalid format.','err'); }
+  };
+  r.readAsText(file); e.target.value='';
+}
+function confirmReset(){
+  if(!confirm('Reset catalog to built-in defaults?')) return;
+  data=JSON.parse(JSON.stringify(DEFAULTS)); persist(); render();
+  showToast('Catalog reset to defaults.','ok');
+}
+function handleLogoDot(){
+  if(!isAdmin){ showToast('Login as admin to manage the catalog.','info'); return; }
+  openAdminMenu();
+}
+
+/* ═══════════════════════════════
+   MODAL / TOAST
+═══════════════════════════════ */
+function openModal(id){ document.getElementById(id).classList.add('show'); }
+function closeModal(id){ document.getElementById(id).classList.remove('show'); }
+document.querySelectorAll('.modal-overlay').forEach(o=>o.addEventListener('click',e=>{ if(e.target===o) o.classList.remove('show'); }));
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') document.querySelectorAll('.modal-overlay.show').forEach(m=>m.classList.remove('show')); });
+document.getElementById('searchInput').addEventListener('input',()=>render());
+
+let _toastTimer=null;
+function showToast(msg, type='ok'){
+  const t=document.getElementById('toast');
+  const icons={ok:'circle-check',err:'alert-circle',info:'info-circle'};
+  t.className='toast show '+type;
+  t.innerHTML=`<i class="ti ti-${icons[type]||'info-circle'}"></i>${msg}`;
+  clearTimeout(_toastTimer);
+  _toastTimer=setTimeout(()=>t.classList.remove('show'), 2800);
+}
+
+/* ═══════════════════════════════
+   HELPERS
+═══════════════════════════════ */
+function hex2dark(hex){
+  try{ const n=parseInt(hex.replace('#',''),16); return `rgb(${Math.floor(((n>>16)&255)*.14)},${Math.floor(((n>>8)&255)*.14)},${Math.floor((n&255)*.14)})`; }
+  catch{ return '#111'; }
+}
+function esc(s){ return (s||'').replace(/'/g,"&#39;").replace(/"/g,'&quot;'); }
+
+/* ═══════════════════════════════
+   BOOT
+═══════════════════════════════ */
+document.getElementById('authOverlay').style.display='flex';
+render(); // render with local data immediately so page isn't blank
+</script>
+</body>
+</html>
