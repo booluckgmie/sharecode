@@ -14,6 +14,7 @@ CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 RISE_THRESHOLD = 0.15   # 15% gain  → Take profit alert
 DROP_THRESHOLD = 0.05   # 5% drop   → Buy more alert
 PEAK_FILE = "last_peak.txt"
+CSV_FILE   = "gold_price_history.csv"
 
 
 # ---------------------------------------------------------------------------
@@ -21,10 +22,13 @@ PEAK_FILE = "last_peak.txt"
 # ---------------------------------------------------------------------------
 
 def get_gold_data() -> pd.DataFrame:
-    """Fetch gold price in RM/gram via Yahoo Finance (GC=F * MYR=X / 31.1035)."""
+    """Fetch 6 months of gold price data via Yahoo Finance.
+
+    Returns df with columns: Price (RM/g), USD_Price (USD/oz), Rate (USD/MYR).
+    """
     try:
-        gold = yf.Ticker("GC=F").history(period="3mo")
-        myr  = yf.Ticker("MYR=X").history(period="3mo")
+        gold = yf.Ticker("GC=F").history(period="6mo")
+        myr  = yf.Ticker("MYR=X").history(period="6mo")
     except Exception as e:
         raise ConnectionError(f"Failed to fetch data from Yahoo Finance: {e}")
 
@@ -41,11 +45,10 @@ def get_gold_data() -> pd.DataFrame:
     df["Price"] = (df["USD_Price"] / 31.1035) * df["Rate"]
     df.index = df.index.tz_localize(None)  # strip timezone for matplotlib
 
-    result = df[["Price"]]
-    n = len(result)
+    n = len(df)
     print(f"✅ Data fetched: {n} price points "
-          f"({result.index[0].strftime('%d %b')} → {result.index[-1].strftime('%d %b %Y')})")
-    return result
+          f"({df.index[0].strftime('%d %b')} → {df.index[-1].strftime('%d %b %Y')})")
+    return df
 
 
 # ---------------------------------------------------------------------------
@@ -69,7 +72,35 @@ def handle_peak(current_price: float) -> float:
 
 
 # ---------------------------------------------------------------------------
-# 3. PROJECTION (linear trend, next 30 days)
+# 3. CSV HISTORY EXPORT
+# ---------------------------------------------------------------------------
+
+def save_price_csv(df: pd.DataFrame) -> str:
+    """Save 6-month gold price history to CSV with derived analytics columns."""
+    p = df["Price"]
+
+    out = pd.DataFrame({
+        "date":              df.index.strftime("%Y-%m-%d"),
+        "price_rm_per_g":    p.round(4),
+        "price_usd_per_oz":  df["USD_Price"].round(4),
+        "usd_myr_rate":      df["Rate"].round(4),
+        "daily_change_rm":   p.diff().round(4),
+        "daily_change_pct":  (p.pct_change() * 100).round(4),
+        "ma_7d":             p.rolling(7, min_periods=1).mean().round(4),
+        "ma_30d":            p.rolling(30, min_periods=1).mean().round(4),
+        "high_30d":          p.rolling(30, min_periods=1).max().round(4),
+        "low_30d":           p.rolling(30, min_periods=1).min().round(4),
+        "pct_from_30d_high": ((p - p.rolling(30, min_periods=1).max())
+                              / p.rolling(30, min_periods=1).max() * 100).round(4),
+    })
+
+    out.to_csv(CSV_FILE, index=False)
+    print(f"✅ CSV saved: {CSV_FILE} ({len(out)} rows)")
+    return CSV_FILE
+
+
+# ---------------------------------------------------------------------------
+# 4. PROJECTION (linear trend, next 30 days)
 # ---------------------------------------------------------------------------
 
 def generate_projection(df: pd.DataFrame) -> pd.DataFrame:
@@ -86,7 +117,7 @@ def generate_projection(df: pd.DataFrame) -> pd.DataFrame:
 
 
 # ---------------------------------------------------------------------------
-# 4. BUY SIGNAL SCORING  (max 6 pts)
+# 5. BUY SIGNAL SCORING  (max 6 pts)
 # ---------------------------------------------------------------------------
 
 def compute_buy_score(current_price: float, low_30d: float,
@@ -122,7 +153,7 @@ def compute_buy_score(current_price: float, low_30d: float,
 
 
 # ---------------------------------------------------------------------------
-# 5. SELL SIGNAL SCORING  (max 6 pts)
+# 6. SELL SIGNAL SCORING  (max 6 pts)
 # ---------------------------------------------------------------------------
 
 def compute_sell_score(current_price: float, high_30d: float,
@@ -159,7 +190,7 @@ def compute_sell_score(current_price: float, high_30d: float,
 
 
 # ---------------------------------------------------------------------------
-# 6. CHART
+# 7. CHART
 # ---------------------------------------------------------------------------
 
 def create_chart(df: pd.DataFrame, proj_df: pd.DataFrame,
@@ -201,7 +232,7 @@ def create_chart(df: pd.DataFrame, proj_df: pd.DataFrame,
 
 
 # ---------------------------------------------------------------------------
-# 7. TELEGRAM
+# 8. TELEGRAM
 # ---------------------------------------------------------------------------
 
 def send_telegram(chart_path: str, caption: str) -> None:
@@ -224,7 +255,7 @@ def send_telegram(chart_path: str, caption: str) -> None:
 
 
 # ---------------------------------------------------------------------------
-# 8. MAIN
+# 9. MAIN
 # ---------------------------------------------------------------------------
 
 def send_telegram_text(text: str) -> None:
@@ -242,6 +273,7 @@ def main():
     try:
         # --- Data ---
         df = get_gold_data()
+        save_price_csv(df)
         prices = df["Price"].tolist()
 
         current_price = prices[-1]

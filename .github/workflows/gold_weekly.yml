@@ -59,13 +59,14 @@ jobs:
           echo "Applying stashed changes..."
           git stash pop || echo "No stash to apply"
 
-          # 5. Stage only the peak tracking file (chart PNG excluded)
+          # 5. Stage tracking files (chart PNG excluded)
           git add aurumvibe/last_peak.txt
+          git add aurumvibe/gold_price_history.csv
 
-          # 6. Commit and push only if the file actually changed
+          # 6. Commit and push only if any file actually changed
           if git diff --staged --quiet; then
-            echo "No changes to last_peak.txt. Skipping commit."
+            echo "No changes to tracked files. Skipping commit."
           else
-            git commit -m "chore: update gold peak data [skip ci]"
+            git commit -m "chore: update gold data [skip ci]"
             git push origin HEAD:master --force
           fi
