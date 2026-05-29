@@ -280,6 +280,9 @@ def main():
         prev_price    = prices[-2] if len(prices) > 1 else current_price
         change        = current_price - prev_price
 
+        usd_price    = df["USD_Price"].iloc[-1]
+        usd_myr_rate = df["Rate"].iloc[-1]
+
         window_30      = prices[-30:] if len(prices) >= 30 else prices
         high_30d       = max(window_30)
         low_30d        = min(window_30)
@@ -339,9 +342,12 @@ def main():
                       else f"-RM {abs(change):.2f}")
 
         caption = (
-            f"📊 *Public Gold Weekly Report*\n\n"
-            f"💰 Price:        *RM {current_price:.2f}/g*\n"
-            f"🔄 Change:       {change_str}\n"
+            f"📊 *Gold Daily Report*\n\n"
+            f"💵 Gold (USD):   *${usd_price:,.2f}/oz*\n"
+            f"💱 USD/MYR:      *{usd_myr_rate:.4f}*\n"
+            f"💰 Gold (MYR):   *RM {current_price:.2f}/g*\n"
+            f"🔄 Change:       {change_str}\n\n"
+            f"─────────────────────\n"
             f"🏔 30D High:     RM {high_30d:.2f}/g\n"
             f"📉 30D Low:      RM {low_30d:.2f}/g\n"
             f"📊 30D Avg:      RM {avg_30d:.2f}/g\n"
