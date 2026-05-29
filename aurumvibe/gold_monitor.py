@@ -1,13 +1,11 @@
 import requests
-from bs4 import BeautifulSoup
-import re
-import json
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from datetime import datetime, timedelta
 import numpy as np
+import yfinance as yf
 
 # --- Configuration ---
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
@@ -19,37 +17,35 @@ PEAK_FILE = "last_peak.txt"
 
 
 # ---------------------------------------------------------------------------
-# 1. DATA SOURCE: Public Gold (publicgold.me)
+# 1. DATA SOURCE: Yahoo Finance (GC=F gold futures + MYR=X exchange rate)
 # ---------------------------------------------------------------------------
 
-def get_public_gold_data() -> pd.DataFrame:
-    url = "https://publicgold.me/yes/gold-price-today"
-    headers = {"User-Agent": "Mozilla/5.0"}
-
+def get_gold_data() -> pd.DataFrame:
+    """Fetch gold price in RM/gram via Yahoo Finance (GC=F * MYR=X / 31.1035)."""
     try:
-        res = requests.get(url, headers=headers, timeout=15).text
-    except requests.RequestException as e:
-        raise ConnectionError(f"Failed to reach publicgold.me: {e}")
+        gold = yf.Ticker("GC=F").history(period="3mo")
+        myr  = yf.Ticker("MYR=X").history(period="3mo")
+    except Exception as e:
+        raise ConnectionError(f"Failed to fetch data from Yahoo Finance: {e}")
 
-    match = re.search(r"data:\s*\[([\d.,\s]+)\]", res)
-    if not match:
-        raise ValueError("❌ Could not find price data on Public Gold page. "
-                         "The site layout may have changed.")
+    if gold.empty or myr.empty:
+        raise ValueError("❌ Empty data returned from Yahoo Finance.")
 
-    data_str = "[" + match.group(1) + "]"
-    prices = json.loads(data_str)
+    df = pd.concat([gold["Close"], myr["Close"]], axis=1)
+    df.columns = ["USD_Price", "Rate"]
+    df = df.ffill().dropna()
 
-    if len(prices) < 2:
-        raise ValueError("❌ Not enough price data points returned from scrape.")
+    if df.empty:
+        raise ValueError("❌ No overlapping data after alignment.")
 
-    n = len(prices)
-    dates = [datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
-             - timedelta(days=n - 1 - i) for i in range(n)]
+    df["Price"] = (df["USD_Price"] / 31.1035) * df["Rate"]
+    df.index = df.index.tz_localize(None)  # strip timezone for matplotlib
 
-    df = pd.DataFrame({"Price": prices}, index=dates)
+    result = df[["Price"]]
+    n = len(result)
     print(f"✅ Data fetched: {n} price points "
-          f"({dates[0].strftime('%d %b')} → {dates[-1].strftime('%d %b %Y')})")
-    return df
+          f"({result.index[0].strftime('%d %b')} → {result.index[-1].strftime('%d %b %Y')})")
+    return result
 
 
 # ---------------------------------------------------------------------------
@@ -173,7 +169,7 @@ def create_chart(df: pd.DataFrame, proj_df: pd.DataFrame,
     ax.set_facecolor("#1a1a2e")
 
     ax.plot(df.index, df["Price"],
-            color="#DAA520", linewidth=2.5, label="Public Gold Price")
+            color="#DAA520", linewidth=2.5, label="Gold Price (RM/g)")
     ax.fill_between(df.index, df["Price"], color="#DAA520", alpha=0.08)
 
     ax.plot(proj_df.index, proj_df["Price"],
@@ -186,7 +182,7 @@ def create_chart(df: pd.DataFrame, proj_df: pd.DataFrame,
     ax.scatter([df.index[-1]], [current_price],
                color="#FFD700", s=80, zorder=5)
 
-    ax.set_title(f"Public Gold Price Trend & Projection (RM/g) — "
+    ax.set_title(f"Gold Price Trend & Projection (RM/g) — "
                  f"{datetime.now().strftime('%d %b %Y')}",
                  color="white", fontsize=13, pad=14)
     ax.set_ylabel("Price (RM/gram)", color="#cccccc")
@@ -231,10 +227,21 @@ def send_telegram(chart_path: str, caption: str) -> None:
 # 8. MAIN
 # ---------------------------------------------------------------------------
 
+def send_telegram_text(text: str) -> None:
+    if not TOKEN or not CHAT_ID:
+        return
+    url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+    try:
+        requests.post(url, data={"chat_id": CHAT_ID, "text": text,
+                                 "parse_mode": "Markdown"}, timeout=15)
+    except Exception:
+        pass
+
+
 def main():
     try:
         # --- Data ---
-        df = get_public_gold_data()
+        df = get_gold_data()
         prices = df["Price"].tolist()
 
         current_price = prices[-1]
@@ -323,6 +330,7 @@ def main():
 
     except Exception as e:
         print(f"❌ Script failed: {e}")
+        send_telegram_text(f"⚠️ *AurumVibe Error*\nGold monitor failed:\n`{e}`")
 
 
 if __name__ == "__main__":
