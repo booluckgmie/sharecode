@@ -35,6 +35,12 @@
       "label": "Comms & Marketing",
       "icon": "mail",
       "color": "#f06292"
+    },
+    {
+      "id": "analytics",
+      "label": "Gen-AI",
+      "icon": "folder",
+      "color": "#f06292"
     }
   ],
   "cards": [
@@ -256,7 +262,7 @@
     },
     {
       "id": "c1780052509973",
-      "group": "corp",
+      "group": "analytics",
       "url": "https://pintelmarket.netlify.app/",
       "title": "PETRONAS Market Intelligence",
       "tag": "Dashboard",
@@ -269,7 +275,7 @@
     },
     {
       "id": "c1780052761723",
-      "group": "ops",
+      "group": "analytics",
       "url": "mymobility-dash.netlify.app",
       "title": "Malaysia Mobility Index",
       "tag": "Dashboard",
@@ -281,5 +287,5 @@
       "newTab": true
     }
   ],
-  "_synced": "2026-05-29T11:06:13.616Z"
+  "_synced": "2026-05-29T11:09:13.031Z"
 }
