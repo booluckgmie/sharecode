@@ -131,12 +131,14 @@ function setupSheets() {
     .setFontColor('#e8e9ed');
 
   const groupRows = [
-    ['corp',  'Corporate & Governance', 'building-community', '#4f7cff'],
-    ['hr',    'HR & Talent',             'users',              '#b39ddb'],
-    ['fin',   'Finance',                 'chart-line',         '#6ef0b8'],
-    ['ops',   'Operations',              'settings-2',         '#ffa94d'],
-    ['dev',   'Dev Tools & Utilities',   'code',               '#4dd0e1'],
-    ['comm',  'Comms & Marketing',       'mail',               '#f06292'],
+    ['gov',  'Government & Regulatory', 'building-bank',      '#4c9be8'],
+    ['ngo',  'NGO & Social Impact',     'heart-handshake',    '#69db7c'],
+    ['corp', 'Corporate & Governance',  'building-community', '#4f7cff'],
+    ['fin',  'Finance & Fintech',       'chart-line',         '#ffd43b'],
+    ['hr',   'HR & Talent',             'users',              '#b39ddb'],
+    ['data', 'Data & Analytics',        'chart-dots-3',       '#ffa94d'],
+    ['dev',  'Dev & Engineering',       'code',               '#4dd0e1'],
+    ['comm', 'Comms & Marketing',       'speakerphone',       '#f06292'],
   ];
   gs.getRange(2, 1, groupRows.length, gHeaders.length).setValues(groupRows);
   gs.setColumnWidths(1, gHeaders.length, 200);
@@ -163,11 +165,11 @@ function setupSheets() {
     ['c5',  'corp', 'shareholder_coi6_old.html', 'COI Dashboard (legacy)',     'Archive',      'Previous COI dashboard version — kept for reference.',                    '17 KB',  '#4f7cff', '', 'TRUE',  'FALSE'],
     ['c6',  'hr',   'vistatalent.html',           'VistaTalent',                'Talent',       'Full-featured HR talent dashboard — profiles, org chart, performance.',    '44 KB',  '#b39ddb', '', 'FALSE', 'FALSE'],
     ['c7',  'hr',   'vistatalent-mini.html',      'VistaTalent Mini',           'Compact',      'Lightweight compact version for embedding or quick lookup.',               '35 KB',  '#b39ddb', '', 'FALSE', 'FALSE'],
-    ['c8',  'fin',  'paydaylock.html',            'PaydayLock',                 'Payroll',      'Payroll lock and sign-off — freeze periods, confirm cut-offs.',            '11 KB',  '#6ef0b8', '', 'FALSE', 'FALSE'],
-    ['c9',  'fin',  'ogsedash.html',              'OGSE Dashboard',             'Dashboard',    'OGS/E financial metrics — KPI cards, trend charts, period comparison.',   '18 KB',  '#6ef0b8', '', 'FALSE', 'FALSE'],
-    ['c10', 'ops',  'samuraiv2_opdash.html',      'Samurai v2 — Ops Dashboard', 'Ops',          'Operations command dashboard — status tiles, activity log, KPI summary.', '22 KB',  '#ffa94d', '', 'FALSE', 'FALSE'],
-    ['c11', 'ops',  'samuraiv2_opdash-int.html',  'Samurai v2 — Interactive',   'Interactive',  'Enhanced interactive build — drill-down filters, live panels, alerts.',   '27 KB',  '#ffa94d', '', 'FALSE', 'FALSE'],
-    ['c12', 'ops',  'weather_indc.html',          'Weather Indicator',          'Weather',      'Field operations weather widget — conditions, forecast, work-safe.',       '24 KB',  '#ffa94d', '', 'FALSE', 'FALSE'],
+    ['c8',  'fin',  'paydaylock.html',            'PaydayLock',                 'Payroll',      'Payroll lock and sign-off — freeze periods, confirm cut-offs.',            '11 KB',  '#ffd43b', '', 'FALSE', 'FALSE'],
+    ['c9',  'fin',  'ogsedash.html',              'OGSE Dashboard',             'KPI',          'OGS/E financial metrics — KPI cards, trend charts, period comparison.',   '18 KB',  '#ffd43b', '', 'FALSE', 'FALSE'],
+    ['c10', 'data', 'samuraiv2_opdash.html',      'Samurai v2 — Ops',          'Ops',          'Operations command dashboard — status tiles, activity log, KPI summary.', '22 KB',  '#ffa94d', '', 'FALSE', 'FALSE'],
+    ['c11', 'data', 'samuraiv2_opdash-int.html',  'Samurai v2 — Interactive',   'Interactive',  'Enhanced interactive build — drill-down filters, live panels, alerts.',   '27 KB',  '#ffa94d', '', 'FALSE', 'FALSE'],
+    ['c12', 'data', 'weather_indc.html',          'Weather Indicator',          'Weather',      'Field operations weather widget — conditions, forecast, work-safe.',       '24 KB',  '#ffa94d', '', 'FALSE', 'FALSE'],
     ['c13', 'dev',  'nexaflow.html',              'NexaFlow',                   'Workflow',     'Visual workflow builder — node-based automation with branching.',          '47 KB',  '#4dd0e1', '', 'FALSE', 'FALSE'],
     ['c14', 'dev',  'pyjourney.html',             'PyJourney',                  'Learning',     'Python learning tracker — progress, snippets, and milestone badges.',      '31 KB',  '#4dd0e1', '', 'FALSE', 'FALSE'],
     ['c15', 'dev',  'searchswec.html',            'SearchSWEC',                 'Search',       'Full-featured local search — indexed dataset, faceted filters.',           '1.2 MB', '#4dd0e1', '', 'FALSE', 'FALSE'],
