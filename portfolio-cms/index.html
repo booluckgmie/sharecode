@@ -641,13 +641,22 @@ async function loadCatalogFromServer(){
     if(!res.ok) throw new Error('HTTP ' + res.status);
     const d = await res.json();
     if(d.groups && d.cards){
-      // If local publish is newer than server (Netlify rebuild pending), keep local
-      const lastPublish = localStorage.getItem('hub_last_publish') || '';
+      const lastPublish  = localStorage.getItem('hub_last_publish') || '';
       const serverSynced = d._synced || '';
-      if(lastPublish && serverSynced && lastPublish > serverSynced){
+
+      // Server has new groups (admin-edited from repo) → always load it
+      const localRaw   = localStorage.getItem('hub_catalog');
+      const localData  = localRaw ? JSON.parse(localRaw) : null;
+      const localGrpIds = localData ? localData.groups.map(g=>g.id).sort().join(',') : '';
+      const serverGrpIds = d.groups.map(g=>g.id).sort().join(',');
+      const groupsChanged = localGrpIds && localGrpIds !== serverGrpIds;
+
+      // Only keep local when: server is behind our last publish AND groups haven't changed
+      if(!groupsChanged && lastPublish && serverSynced && lastPublish > serverSynced){
         console.log('[Hub] Server older than last publish — keeping local data until Netlify rebuilds');
         return false;
       }
+
       data = d;
       localStorage.setItem('hub_catalog', JSON.stringify(data));
       localStorage.removeItem('hub_last_publish');
