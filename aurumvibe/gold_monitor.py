@@ -11,10 +11,11 @@ import yfinance as yf
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
-RISE_THRESHOLD = 0.15   # 15% gain  → Take profit alert
-DROP_THRESHOLD = 0.05   # 5% drop   → Buy more alert
-PEAK_FILE = "last_peak.txt"
-CSV_FILE   = "gold_price_history.csv"
+RISE_THRESHOLD   = 0.15   # 15% gain  → Take profit alert
+DROP_THRESHOLD   = 0.05   # 5% drop   → Buy more alert
+PAWNSHOP_SPREAD  = 0.03   # fallback ±3% if BNM API unavailable
+PEAK_FILE        = "last_peak.txt"
+CSV_FILE         = "gold_price_history.csv"
 
 
 # ---------------------------------------------------------------------------
@@ -52,7 +53,49 @@ def get_gold_data() -> pd.DataFrame:
 
 
 # ---------------------------------------------------------------------------
-# 2. PEAK PERSISTENCE
+# 2. PAWNSHOP RATES  (BNM Kijang Emas → fallback ±3% spread)
+# ---------------------------------------------------------------------------
+
+def get_pawnshop_rates(spot_rm_per_g: float) -> tuple[float, float, str]:
+    """Return (sell_to_shop, buy_from_shop, source) in RM/gram.
+
+    sell_to_shop  = price you RECEIVE when selling gold to a dealer (lower)
+    buy_from_shop = price you PAY when buying gold from a dealer  (higher)
+
+    Primary source: BNM Kijang Emas API — official Malaysian benchmark,
+    free, no auth, updated daily.
+    Fallback: symmetric ±PAWNSHOP_SPREAD on the spot price.
+    """
+    try:
+        r = requests.get(
+            "https://api.bnm.gov.my/public/kijang-emas",
+            headers={"Accept": "application/vnd.BNM.API.v1+json"},
+            timeout=10,
+        )
+        if r.status_code == 200:
+            data = r.json()["data"]
+            oz        = data.get("one_oz", {})
+            buy_oz    = oz.get("buying")    # BNM buys from public  → you sell, you receive
+            sell_oz   = oz.get("selling")   # BNM sells to public   → you buy,  you pay
+            eff_date  = data.get("effective_date", "today")
+            if buy_oz and sell_oz:
+                sell_to_shop  = float(buy_oz)  / 31.1035
+                buy_from_shop = float(sell_oz) / 31.1035
+                source = f"BNM Kijang Emas ({eff_date})"
+                print(f"✅ {source}: Sell RM {sell_to_shop:.2f} | Buy RM {buy_from_shop:.2f}/g")
+                return sell_to_shop, buy_from_shop, source
+    except Exception as e:
+        print(f"⚠️ BNM Kijang Emas API unavailable: {e}")
+
+    sell_to_shop  = spot_rm_per_g * (1 - PAWNSHOP_SPREAD)
+    buy_from_shop = spot_rm_per_g * (1 + PAWNSHOP_SPREAD)
+    source = f"Estimated (±{PAWNSHOP_SPREAD:.0%} spread)"
+    print(f"⚠️ Fallback pawnshop rates: Sell RM {sell_to_shop:.2f} | Buy RM {buy_from_shop:.2f}/g")
+    return sell_to_shop, buy_from_shop, source
+
+
+# ---------------------------------------------------------------------------
+# 3. PEAK PERSISTENCE
 # ---------------------------------------------------------------------------
 
 def handle_peak(current_price: float) -> float:
@@ -72,35 +115,52 @@ def handle_peak(current_price: float) -> float:
 
 
 # ---------------------------------------------------------------------------
-# 3. CSV HISTORY EXPORT
+# 4. CSV HISTORY EXPORT
 # ---------------------------------------------------------------------------
 
-def save_price_csv(df: pd.DataFrame) -> str:
-    """Save 6-month gold price history to CSV with derived analytics columns."""
+def save_price_csv(df: pd.DataFrame,
+                   sell_to_shop: float, buy_from_shop: float,
+                   rate_source: str) -> str:
+    """Save 6-month price history + pawnshop buy/sell range to CSV.
+
+    Pawnshop rates come from today's BNM Kijang Emas data.  The same
+    percentage spread is applied uniformly across all historical rows so
+    you can see the estimated range at any point in the 6-month window.
+    """
     p = df["Price"]
+    spot_today = p.iloc[-1]
+
+    # Derive spread fractions from today's BNM data
+    sell_spread = (spot_today - sell_to_shop) / spot_today   # fraction below spot
+    buy_spread  = (buy_from_shop - spot_today) / spot_today  # fraction above spot
+    total_spread_pct = (sell_spread + buy_spread) * 100
 
     out = pd.DataFrame({
-        "date":              df.index.strftime("%Y-%m-%d"),
-        "price_rm_per_g":    p.round(4),
-        "price_usd_per_oz":  df["USD_Price"].round(4),
-        "usd_myr_rate":      df["Rate"].round(4),
-        "daily_change_rm":   p.diff().round(4),
-        "daily_change_pct":  (p.pct_change() * 100).round(4),
-        "ma_7d":             p.rolling(7, min_periods=1).mean().round(4),
-        "ma_30d":            p.rolling(30, min_periods=1).mean().round(4),
-        "high_30d":          p.rolling(30, min_periods=1).max().round(4),
-        "low_30d":           p.rolling(30, min_periods=1).min().round(4),
-        "pct_from_30d_high": ((p - p.rolling(30, min_periods=1).max())
-                              / p.rolling(30, min_periods=1).max() * 100).round(4),
+        "date":                   df.index.strftime("%Y-%m-%d"),
+        "price_rm_per_g":         p.round(4),
+        "price_usd_per_oz":       df["USD_Price"].round(4),
+        "usd_myr_rate":           df["Rate"].round(4),
+        "pawnshop_sell_rm_per_g": (p * (1 - sell_spread)).round(4),
+        "pawnshop_buy_rm_per_g":  (p * (1 + buy_spread)).round(4),
+        "pawnshop_spread_pct":    round(total_spread_pct, 4),
+        "pawnshop_rate_source":   rate_source,
+        "daily_change_rm":        p.diff().round(4),
+        "daily_change_pct":       (p.pct_change() * 100).round(4),
+        "ma_7d":                  p.rolling(7,  min_periods=1).mean().round(4),
+        "ma_30d":                 p.rolling(30, min_periods=1).mean().round(4),
+        "high_30d":               p.rolling(30, min_periods=1).max().round(4),
+        "low_30d":                p.rolling(30, min_periods=1).min().round(4),
+        "pct_from_30d_high":      ((p - p.rolling(30, min_periods=1).max())
+                                   / p.rolling(30, min_periods=1).max() * 100).round(4),
     })
 
     out.to_csv(CSV_FILE, index=False)
-    print(f"✅ CSV saved: {CSV_FILE} ({len(out)} rows)")
+    print(f"✅ CSV saved: {CSV_FILE} ({len(out)} rows, spread {total_spread_pct:.2f}%)")
     return CSV_FILE
 
 
 # ---------------------------------------------------------------------------
-# 4. PROJECTION (linear trend, next 30 days)
+# 5. PROJECTION (linear trend, next 30 days)
 # ---------------------------------------------------------------------------
 
 def generate_projection(df: pd.DataFrame) -> pd.DataFrame:
@@ -117,7 +177,7 @@ def generate_projection(df: pd.DataFrame) -> pd.DataFrame:
 
 
 # ---------------------------------------------------------------------------
-# 5. BUY SIGNAL SCORING  (max 6 pts)
+# 6. BUY SIGNAL SCORING  (max 6 pts)
 # ---------------------------------------------------------------------------
 
 def compute_buy_score(current_price: float, low_30d: float,
@@ -153,7 +213,7 @@ def compute_buy_score(current_price: float, low_30d: float,
 
 
 # ---------------------------------------------------------------------------
-# 6. SELL SIGNAL SCORING  (max 6 pts)
+# 7. SELL SIGNAL SCORING  (max 6 pts)
 # ---------------------------------------------------------------------------
 
 def compute_sell_score(current_price: float, high_30d: float,
@@ -190,17 +250,26 @@ def compute_sell_score(current_price: float, high_30d: float,
 
 
 # ---------------------------------------------------------------------------
-# 7. CHART
+# 8. CHART
 # ---------------------------------------------------------------------------
 
 def create_chart(df: pd.DataFrame, proj_df: pd.DataFrame,
-                 current_price: float, avg_cost: float) -> str:
+                 current_price: float, avg_cost: float,
+                 sell_to_shop: float, buy_from_shop: float) -> str:
     fig, ax = plt.subplots(figsize=(12, 6))
     fig.patch.set_facecolor("#0f0f0f")
     ax.set_facecolor("#1a1a2e")
 
+    # Pawnshop buy/sell band (drawn first so lines sit on top)
+    ax.axhspan(sell_to_shop, buy_from_shop,
+               alpha=0.07, color="#AAAAAA", label="Pawnshop Range")
+    ax.axhline(sell_to_shop,  color="#00CC44", linestyle="--", linewidth=1.2,
+               alpha=0.85, label=f"Sell RM {sell_to_shop:.2f}/g")
+    ax.axhline(buy_from_shop, color="#FF4455", linestyle="--", linewidth=1.2,
+               alpha=0.85, label=f"Buy  RM {buy_from_shop:.2f}/g")
+
     ax.plot(df.index, df["Price"],
-            color="#DAA520", linewidth=2.5, label="Gold Price (RM/g)")
+            color="#DAA520", linewidth=2.5, label="Gold Spot (RM/g)")
     ax.fill_between(df.index, df["Price"], color="#DAA520", alpha=0.08)
 
     ax.plot(proj_df.index, proj_df["Price"],
@@ -232,7 +301,7 @@ def create_chart(df: pd.DataFrame, proj_df: pd.DataFrame,
 
 
 # ---------------------------------------------------------------------------
-# 8. TELEGRAM
+# 9. TELEGRAM
 # ---------------------------------------------------------------------------
 
 def send_telegram(chart_path: str, caption: str) -> None:
@@ -255,7 +324,7 @@ def send_telegram(chart_path: str, caption: str) -> None:
 
 
 # ---------------------------------------------------------------------------
-# 9. MAIN
+# 10. MAIN
 # ---------------------------------------------------------------------------
 
 def send_telegram_text(text: str) -> None:
@@ -273,7 +342,6 @@ def main():
     try:
         # --- Data ---
         df = get_gold_data()
-        save_price_csv(df)
         prices = df["Price"].tolist()
 
         current_price = prices[-1]
@@ -282,6 +350,13 @@ def main():
 
         usd_price    = df["USD_Price"].iloc[-1]
         usd_myr_rate = df["Rate"].iloc[-1]
+
+        # --- Pawnshop rates (BNM Kijang Emas) ---
+        sell_to_shop, buy_from_shop, rate_source = get_pawnshop_rates(current_price)
+        pawnshop_spread_pct = ((buy_from_shop - sell_to_shop) / current_price) * 100
+
+        # --- CSV (includes pawnshop columns) ---
+        save_price_csv(df, sell_to_shop, buy_from_shop, rate_source)
 
         window_30      = prices[-30:] if len(prices) >= 30 else prices
         high_30d       = max(window_30)
@@ -296,7 +371,8 @@ def main():
 
         # --- Projection & Chart ---
         proj_df    = generate_projection(df)
-        chart_path = create_chart(df, proj_df, current_price, effective_avg_cost)
+        chart_path = create_chart(df, proj_df, current_price, effective_avg_cost,
+                                  sell_to_shop, buy_from_shop)
 
         # --- P/L ---
         profit_pct = (current_price - effective_avg_cost) / effective_avg_cost
@@ -347,6 +423,12 @@ def main():
             f"💱 USD/MYR:      *{usd_myr_rate:.4f}*\n"
             f"💰 Gold (MYR):   *RM {current_price:.2f}/g*\n"
             f"🔄 Change:       {change_str}\n\n"
+            f"─────────────────────\n"
+            f"🏪 *Pawnshop Range (RM/g)*\n"
+            f"🟢 Sell to shop:  *RM {sell_to_shop:.2f}*\n"
+            f"🔴 Buy fr. shop:  *RM {buy_from_shop:.2f}*\n"
+            f"📊 Spread:        {pawnshop_spread_pct:.2f}%\n"
+            f"📡 Source: _{rate_source}_\n\n"
             f"─────────────────────\n"
             f"🏔 30D High:     RM {high_30d:.2f}/g\n"
             f"📉 30D Low:      RM {low_30d:.2f}/g\n"
