@@ -418,18 +418,9 @@ def main():
                       else f"-RM {abs(change):.2f}")
 
         caption = (
-            f"📊 *Gold Daily Report*\n\n"
-            f"💵 Gold (USD):   *${usd_price:,.2f}/oz*\n"
-            f"💱 USD/MYR:      *{usd_myr_rate:.4f}*\n"
-            f"💰 Gold (MYR):   *RM {current_price:.2f}/g*\n"
-            f"🔄 Change:       {change_str}\n\n"
-            f"─────────────────────\n"
-            f"🏪 *Pawnshop Range (RM/g)*\n"
-            f"🟢 Sell to shop:  *RM {sell_to_shop:.2f}*\n"
-            f"🔴 Buy fr. shop:  *RM {buy_from_shop:.2f}*\n"
-            f"📊 Spread:        {pawnshop_spread_pct:.2f}%\n"
-            f"📡 Source: _{rate_source}_\n\n"
-            f"─────────────────────\n"
+            f"📊 *Public Gold Weekly Report*\n\n"
+            f"💰 Price:        *RM {current_price:.2f}/g*\n"
+            f"🔄 Change:       {change_str}\n"
             f"🏔 30D High:     RM {high_30d:.2f}/g\n"
             f"📉 30D Low:      RM {low_30d:.2f}/g\n"
             f"📊 30D Avg:      RM {avg_30d:.2f}/g\n"
