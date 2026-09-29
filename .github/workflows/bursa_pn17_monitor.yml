@@ -4,6 +4,9 @@ on:
   schedule:
     # 02:00 UTC = 10:00 AM MYT (UTC+8), runs daily
     - cron: "0 2 * * *"
+    # Backup runs: Cloudflare blocks some runner IPs intermittently; a later run
+    # gets a different runner. The script is idempotent (no change => no commit/email).
+    - cron: "0 6 * * *"
   workflow_dispatch:   # allow manual trigger from GitHub Actions tab
 
 # Suppress Node.js 20 deprecation warnings
@@ -41,7 +44,9 @@ jobs:
       # ── 4. Install Playwright Chromium browser ───────────────────────────────
       #    Only used as fallback if cloudscraper cannot bypass Cloudflare.
       - name: Install Playwright browser
-        run: playwright install chromium --with-deps
+        run: |
+          playwright install chromium --with-deps
+          sudo apt-get install -y xvfb
 
       # ── 5. Run the monitor script ───────────────────────────────────────────
       - name: Run Bursa PN17/GN3 monitor
@@ -49,7 +54,16 @@ jobs:
           GMAIL_USER:     ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASS: ${{ secrets.GMAIL_APP_PASS }}
           NOTIFY_EMAILS:  ${{ secrets.NOTIFY_EMAILS }}
-        run: python bursaMY/bursa_notifier.py
+        run: |
+          # Headed Chromium under a virtual display + up to 3 attempts (5 min apart)
+          for i in 1 2 3; do
+            echo "=== attempt $i/3 ==="
+            if xvfb-run -a --server-args="-screen 0 1366x768x24" python bursaMY/bursa_notifier.py; then
+              exit 0
+            fi
+            [ "$i" -lt 3 ] && sleep 300
+          done
+          exit 1
 
       # ── 6. Commit and push any changes ──────────────────────────────────────
       - name: Commit & push updates
