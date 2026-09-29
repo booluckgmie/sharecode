@@ -84,8 +84,12 @@ def _fetch_html_playwright(attempts: int = 3) -> str:
     from playwright.sync_api import sync_playwright
     html = ""
     with sync_playwright() as p:
+        # Headed Chrome (run under xvfb in CI) is far less detectable by Cloudflare
+        # than headless. Set BURSA_HEADLESS=1 to force headless locally.
+        headless = os.environ.get("BURSA_HEADLESS") == "1" or not os.environ.get("DISPLAY")
+        print(f"[SCRAPE] launching chromium (headless={headless})")
         browser = p.chromium.launch(
-            headless=True,
+            headless=headless,
             args=[
                 "--disable-blink-features=AutomationControlled",
                 "--no-sandbox",
