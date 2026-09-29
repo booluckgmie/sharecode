@@ -71,26 +71,60 @@ def _fetch_html_cloudscraper() -> str:
     return resp.text
 
 
-def _fetch_html_playwright() -> str:
-    """Use a headless Chromium browser as the guaranteed fallback."""
+def _is_ready(html: str) -> bool:
+    """True once the real page (not a Cloudflare challenge shell) has rendered."""
+    return "Last updated:" in html or "List updated:" in html
+
+
+def _fetch_html_playwright(attempts: int = 3) -> str:
+    """
+    Headless Chromium fetch that waits out Cloudflare's "Just a moment..."
+    challenge instead of parsing it. Retries with a fresh browser context.
+    """
     from playwright.sync_api import sync_playwright
+    html = ""
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_page(
-            user_agent=(
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/124.0.0.0 Safari/537.36"
-            )
+        browser = p.chromium.launch(
+            headless=True,
+            args=[
+                "--disable-blink-features=AutomationControlled",
+                "--no-sandbox",
+                "--disable-dev-shm-usage",
+            ],
         )
-        page.goto(URL, wait_until="domcontentloaded", timeout=60000)
-        # Wait for the data table to appear (new Bursa format)
         try:
-            page.wait_for_selector("table", timeout=20000)
-        except Exception:
-            pass
-        html = page.content()
-        browser.close()
+            for attempt in range(1, attempts + 1):
+                ctx = browser.new_context(
+                    user_agent=(
+                        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                        "AppleWebKit/537.36 (KHTML, like Gecko) "
+                        "Chrome/124.0.0.0 Safari/537.36"
+                    ),
+                    locale="en-US",
+                    viewport={"width": 1366, "height": 768},
+                )
+                ctx.add_init_script(
+                    "Object.defineProperty(navigator,'webdriver',{get:()=>undefined});"
+                )
+                page = ctx.new_page()
+                try:
+                    page.goto(BASE_URL, wait_until="domcontentloaded", timeout=60000)
+                    page.wait_for_timeout(3000)
+                    page.goto(URL, wait_until="domcontentloaded", timeout=60000)
+                    # Poll up to ~60s for the challenge to clear and content to render
+                    for _ in range(30):
+                        html = page.content()
+                        if _is_ready(html):
+                            return html
+                        page.wait_for_timeout(2000)
+                    title = page.title()
+                    print(f"[SCRAPE] attempt {attempt}/{attempts}: not ready (title={title!r})")
+                except Exception as e:
+                    print(f"[SCRAPE] attempt {attempt}/{attempts} error: {e}")
+                finally:
+                    ctx.close()
+        finally:
+            browser.close()
     return html
 
 
@@ -226,16 +260,16 @@ def fetch_current() -> dict:
 
     result = _parse_html(html)
 
-    # Sanity check: if list_updated is still N/A the page was not rendered properly
-    if result["list_updated"] == "N/A":
-        print("[SCRAPE] ⚠️  Page fetched but 'Last updated' date not found.")
-        print("[SCRAPE]    This usually means JS did not render — retrying with playwright...")
-        # Force playwright retry regardless of what already ran
+    # Sanity check: if list_updated is N/A the page was a challenge/shell page.
+    # Playwright already retried internally, so try cloudscraper as a last resort.
+    if result["list_updated"] == "N/A" and _CLOUDSCRAPER_OK:
+        print("[SCRAPE] ⚠️  'Last updated' not found — trying cloudscraper as last resort...")
         try:
-            html = _fetch_html_playwright()
-            result = _parse_html(html)
+            result2 = _parse_html(_fetch_html_cloudscraper())
+            if result2["list_updated"] != "N/A":
+                result = result2
         except Exception as e:
-            print(f"[SCRAPE] Playwright retry also failed: {e}", file=sys.stderr)
+            print(f"[SCRAPE] cloudscraper failed: {e}", file=sys.stderr)
 
     return result
 
