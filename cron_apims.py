@@ -29,14 +29,15 @@ try:
     # Configure requests session with retries for network resilience
     session = requests.Session()
     # Retry configuration: 3 retries on connection errors, exponential backoff, retry on specific HTTP status codes
-    retry = Retry(connect=3, backoff_factor=2, status_forcelist=[500, 502, 503, 504])
+    # read=3 also retries read timeouts, which is the failure the DOE server produces most often.
+    retry = Retry(total=5, connect=3, read=3, backoff_factor=2, status_forcelist=[500, 502, 503, 504])
     adapter = HTTPAdapter(max_retries=retry)
     session.mount('https://', adapter)
     session.mount('http://', adapter)
 
     # Use GET request. verify=False is used due to potential SSL certificate issues on the API side.
     # A timeout is set to prevent indefinite waiting.
-    response = session.get(url, headers=headers, verify=False, timeout=10)
+    response = session.get(url, headers=headers, verify=False, timeout=(10, 60))  # (connect, read) seconds
     response.raise_for_status() # Raise an HTTPError for bad responses (4xx or 5xx)
 
     # Process JSON response

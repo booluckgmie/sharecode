@@ -44,5 +44,10 @@ jobs:
         git config --global user.name "booluckgmie"
         git pull
         git add .
-        git commit -m "Update data"
-        git push --force  # Use the --force flag to forcefully push changes
+        # Nothing to commit (e.g. the API was unreachable) is not a failure
+        if git diff --cached --quiet; then
+          echo "No data changes to commit"
+        else
+          git commit -m "Update data"
+          git push --force  # Use the --force flag to forcefully push changes
+        fi
