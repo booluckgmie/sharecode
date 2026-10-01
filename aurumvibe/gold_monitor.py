@@ -10,6 +10,7 @@ import matplotlib.gridspec as gridspec
 from datetime import datetime, timedelta
 import numpy as np
 import yfinance as yf
+from gold_analytics import create_analytics_charts
 
 # ---------------------------------------------------------------------------
 # CONFIGURATION
@@ -440,6 +441,22 @@ def send_telegram(chart_path, caption):
         print(f"❌ Telegram connection error: {e}")
 
 
+def send_telegram_extra_charts(paths, captions):
+    """Send the analytics PNGs as separate photos (best-effort)."""
+    if not TOKEN or not CHAT_ID:
+        return
+    url = f"https://api.telegram.org/bot{TOKEN}/sendPhoto"
+    for path, cap in zip(paths, captions):
+        try:
+            with open(path, "rb") as photo:
+                resp = requests.post(url, data={"chat_id": CHAT_ID, "caption": cap},
+                                     files={"photo": photo}, timeout=20)
+            if resp.status_code != 200:
+                print(f"❌ Telegram Error {resp.status_code} ({path}): {resp.text}")
+        except Exception as e:
+            print(f"❌ Telegram connection error ({path}): {e}")
+
+
 def send_telegram_text(text):
     if not TOKEN or not CHAT_ID:
         return
@@ -550,6 +567,16 @@ def main():
         )
 
         send_telegram(chart_path, caption)
+
+        # --- Extra analytics images (never block the main report) ---
+        try:
+            extra = create_analytics_charts(df)
+            send_telegram_extra_charts(extra, [
+                "🔎 Drivers — gold in USD vs ringgit vs RM/g",
+                "🛡 Risk & Timing — drawdown, daily moves, volatility, range position",
+            ])
+        except Exception as e:
+            print(f"⚠️  Analytics charts skipped: {e}")
         print("🚀 Report dispatched!")
         print(caption)
 
