@@ -192,15 +192,20 @@ def get_pawnshop_rates(spot_rm_per_g):
 # 3. PEAK PERSISTENCE
 # ---------------------------------------------------------------------------
 
-def handle_peak(current_price):
+def handle_peak(current_price, history_high=None):
+    """Persisted all-time peak on the SAME basis as the price series (spot RM/g).
+    Never lower than the highest price in the loaded history, so a stale or
+    hand-seeded value cannot sit below real data, and the file is rewritten
+    whenever a higher value is seen."""
     try:
         with open(PEAK_FILE, "r") as f:
             peak = float(f.read().strip())
     except (FileNotFoundError, ValueError):
         peak = current_price
 
-    if current_price > peak:
-        peak = current_price
+    candidate = max(current_price, history_high or 0)
+    if candidate > peak:
+        peak = candidate
         with open(PEAK_FILE, "w") as f:
             f.write(f"{peak:.4f}")
         print(f"🆕 New peak recorded: RM {peak:.4f}")
@@ -497,7 +502,8 @@ def main():
         effective_avg_cost = (high_30d + low_30d) / 2
 
         # --- Peak ---
-        peak_price = handle_peak(current_price)
+        high_hist = max(prices)
+        peak_price = handle_peak(current_price, high_hist)
 
         # --- Projection & Chart ---
         proj_df    = generate_projection(df)
