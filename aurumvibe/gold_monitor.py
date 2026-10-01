@@ -50,7 +50,17 @@ class SpotYFinanceFetcher:
         if gold.empty or myr.empty:
             raise ValueError("❌ Empty data returned from Yahoo Finance.")
 
-        df = pd.concat([gold["Close"], myr["Close"]], axis=1)
+        # GC=F (New York tz) and MYR=X (London tz) carry different tz offsets, so
+        # concat on raw timestamps yields two misaligned rows per trading day.
+        # Align both on the calendar date first.
+        gold_close = gold["Close"].copy()
+        myr_close  = myr["Close"].copy()
+        gold_close.index = gold_close.index.tz_localize(None).normalize()
+        myr_close.index  = myr_close.index.tz_localize(None).normalize()
+        gold_close = gold_close[~gold_close.index.duplicated(keep="last")]
+        myr_close  = myr_close[~myr_close.index.duplicated(keep="last")]
+
+        df = pd.concat([gold_close, myr_close], axis=1)
         df.columns = ["USD_Price", "Rate"]
         df = df.ffill().dropna()
 
@@ -58,7 +68,8 @@ class SpotYFinanceFetcher:
             raise ValueError("❌ No overlapping gold/FX data after alignment.")
 
         df["Price"] = (df["USD_Price"] / 31.1035) * df["Rate"]
-        df.index = df.index.tz_localize(None)
+        # Keep only days with a gold quote (drops FX-only weekend rows)
+        df = df[df.index.isin(gold_close.index)]
 
         print(f"✅ [SPOT_YFINANCE] {len(df)} points "
               f"({df.index[0].strftime('%d %b')} → {df.index[-1].strftime('%d %b %Y')})")
@@ -521,7 +532,7 @@ def main():
                       else f"-RM {abs(change):.2f}")
 
         caption = (
-            f"📊 *Public Gold Weekly Report*\n\n"
+            f"📊 *AurumVibe Daily Gold Report*\n\n"
             f"💰 Price:        *RM {current_price:.2f}/g*\n"
             f"🔄 Change:       {change_str}\n"
             f"🏔 30D High:     RM {high_30d:.2f}/g\n"
