@@ -65,6 +65,10 @@ jobs:
           done
           exit 1
 
+      # ── 5b. Rebuild the dashboard data from the CSVs ─────────────────────────
+      - name: Build dashboard data
+        run: python bursaMY/build_dashboard_data.py
+
       # ── 6. Commit and push any changes ──────────────────────────────────────
       - name: Commit & push updates
         run: |
@@ -88,7 +92,8 @@ jobs:
           git add -f bursaMY/pn17_gn3_companies.csv \
                   bursaMY/pn17_gn3_historical.csv \
                   bursaMY/summary-reportPN17.csv \
-                  bursaMY/last_run.json
+                  bursaMY/last_run.json \
+                  bursaMY/dashboard/data.json
           
           # Check if there are changes to commit
           if git diff --cached --quiet; then
