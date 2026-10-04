@@ -50,6 +50,10 @@ jobs:
 
       # ── 5. Run the monitor script ───────────────────────────────────────────
       - name: Run Bursa PN17/GN3 monitor
+        id: monitor
+        # Don't stop here on failure: the dashboard must still record "last check failed".
+        # The run is turned red by the final step instead.
+        continue-on-error: true
         env:
           GMAIL_USER:     ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASS: ${{ secrets.GMAIL_APP_PASS }}
@@ -64,6 +68,12 @@ jobs:
             [ "$i" -lt 3 ] && sleep 300
           done
           exit 1
+
+      # ── 5b. Rebuild the dashboard data from the CSVs ─────────────────────────
+      - name: Build dashboard data
+        env:
+          SCRAPE_OUTCOME: ${{ steps.monitor.outcome }}
+        run: python bursaMY/build_dashboard_data.py
 
       # ── 6. Commit and push any changes ──────────────────────────────────────
       - name: Commit & push updates
@@ -88,7 +98,8 @@ jobs:
           git add -f bursaMY/pn17_gn3_companies.csv \
                   bursaMY/pn17_gn3_historical.csv \
                   bursaMY/summary-reportPN17.csv \
-                  bursaMY/last_run.json
+                  bursaMY/last_run.json \
+                  bursaMY/dashboard/data.json
           
           # Check if there are changes to commit
           if git diff --cached --quiet; then
@@ -101,3 +112,10 @@ jobs:
           
           # Push with force-with-lease (safe force push)
           git push --force-with-lease origin HEAD:${CURRENT_BRANCH}
+
+      # ── 7. Keep the run red when the scrape failed (after data.json was updated) ──
+      - name: Fail run if the scrape failed
+        if: steps.monitor.outcome == 'failure'
+        run: |
+          echo "::error::Bursa scrape failed - dashboard shows the last successful data."
+          exit 1

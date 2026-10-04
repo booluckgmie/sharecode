@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PN17 Watch</title>
+<meta name="description" content="Tracker for Bursa Malaysia PN17 and GN3 listed companies: counts, changes, time on list.">
+<style>
+  :root {
+    color-scheme: light;
+    --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink-2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --ring:rgba(11,11,11,0.10); --wash:#f0efec;
+    --s1:#2a78d6; --s2:#eb6834; --seq:#2a78d6;
+    --font: system-ui,-apple-system,"Segoe UI",sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --page:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink-2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,0.10); --wash:#232322;
+      --s1:#3987e5; --s2:#d95926; --seq:#3987e5;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink-2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,0.10); --wash:#232322;
+    --s1:#3987e5; --s2:#d95926; --seq:#3987e5;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin:0; background:var(--page); color:var(--ink); font:15px/1.45 var(--font); }
+  .wrap { max-width:1120px; margin:0 auto; padding:0 16px 48px; }
+  header.top { display:flex; flex-wrap:wrap; gap:12px 20px; align-items:center; justify-content:space-between; padding:22px 0 18px; }
+  .brand { display:flex; flex-direction:column; }
+  .brand h1 { font-size:20px; margin:0; letter-spacing:-0.01em; }
+  .brand span { color:var(--ink-2); font-size:13px; }
+  .meta { display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; color:var(--ink-2); font-size:13px; }
+  .pill { border:1px solid var(--ring); background:var(--surface); border-radius:999px; padding:4px 11px; }
+  button, input { font:inherit; color:inherit; }
+  .btn { border:1px solid var(--ring); background:var(--surface); border-radius:8px; padding:5px 11px; cursor:pointer; }
+  .btn:hover { background:var(--wash); }
+  .btn:focus-visible, .seg button:focus-visible, svg:focus-visible, th button:focus-visible, input:focus-visible { outline:2px solid var(--s1); outline-offset:2px; }
+
+  .card { background:var(--surface); border:1px solid var(--ring); border-radius:14px; padding:16px 18px; min-width:0; }
+  .card h2 { font-size:15px; margin:0; font-weight:600; }
+  .card .sub { color:var(--ink-2); font-size:13px; margin:2px 0 0; }
+  .card .head { display:flex; justify-content:space-between; gap:12px; align-items:flex-start; margin-bottom:10px; }
+  .grid { display:grid; gap:14px; grid-template-columns:repeat(12,1fr); }
+  .span-12 { grid-column:span 12; } .span-8 { grid-column:span 8; } .span-7 { grid-column:span 7; }
+  .span-6 { grid-column:span 6; } .span-5 { grid-column:span 5; } .span-4 { grid-column:span 4; }
+  @media (max-width: 860px) { .grid > * { grid-column:span 12 !important; } }
+
+  /* KPI row */
+  .kpis { display:grid; gap:14px; grid-template-columns:1.5fr 1fr 1fr 1fr; margin-bottom:14px; }
+  @media (max-width: 860px) { .kpis { grid-template-columns:1fr 1fr; } .kpis .hero { grid-column:span 2; } }
+  .tile { display:flex; flex-direction:column; gap:2px; }
+  .tile .label { color:var(--ink-2); font-size:13px; }
+  .tile .value { font-size:30px; font-weight:600; letter-spacing:-0.02em; line-height:1.15; }
+  .tile.hero .value { font-size:56px; line-height:1.05; }
+  .tile .delta { color:var(--ink-2); font-size:13px; }
+  .tile svg { margin-top:8px; display:block; }
+  .insights { margin:0; padding:0; list-style:none; display:grid; gap:6px; }
+  .insights li { padding-left:16px; position:relative; color:var(--ink); }
+  .insights li::before { content:""; position:absolute; left:0; top:.62em; width:6px; height:6px; border-radius:50%; background:var(--s1); }
+
+  /* filters */
+  .filters { display:flex; flex-wrap:wrap; gap:10px 22px; align-items:center; margin:18px 0 14px; }
+  .filters .grp { display:flex; align-items:center; gap:8px; color:var(--ink-2); font-size:13px; }
+  .seg { display:inline-flex; border:1px solid var(--ring); border-radius:9px; overflow:hidden; background:var(--surface); }
+  .seg button { border:0; background:transparent; padding:6px 12px; cursor:pointer; color:var(--ink-2); }
+  .seg button + button { border-left:1px solid var(--ring); }
+  .seg button:hover { background:var(--wash); }
+  .seg button[aria-pressed="true"] { background:var(--wash); color:var(--ink); font-weight:600; }
+  .seg button[aria-pressed="true"]::before { content:"✓ "; font-weight:700; }
+
+  /* charts */
+  .chart { width:100%; position:relative; }
+  .chart svg { display:block; width:100%; height:auto; overflow:visible; }
+  .chart text { font-family:var(--font); fill:var(--muted); font-size:12px; }
+  .chart text.ink { fill:var(--ink-2); }
+  .legend { display:flex; flex-wrap:wrap; gap:6px 16px; font-size:13px; color:var(--ink-2); margin:2px 0 8px; }
+  .legend i { display:inline-block; width:14px; height:0; border-top:2px solid; vertical-align:middle; margin-right:6px; border-radius:2px; }
+  .legend i.box { width:10px; height:10px; border:0; border-radius:2px; vertical-align:baseline; }
+  .note { color:var(--muted); font-size:12px; margin:8px 0 0; }
+  .tip { position:fixed; z-index:20; pointer-events:none; background:var(--surface); border:1px solid var(--ring); border-radius:10px;
+         box-shadow:0 6px 24px rgba(0,0,0,.16); padding:8px 11px; font-size:13px; min-width:150px; opacity:0; transition:opacity .08s; }
+  .tip.on { opacity:1; }
+  .tip .t { color:var(--ink-2); margin-bottom:4px; }
+  .tip .r { display:flex; align-items:center; justify-content:space-between; gap:14px; }
+  .tip .r b { font-size:15px; }
+  .tip .r span { color:var(--ink-2); display:inline-flex; align-items:center; }
+  .tip .r span i { display:inline-block; width:12px; border-top:2px solid; margin-right:7px; border-radius:2px; }
+
+  /* tables */
+  .tablewrap { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; font-size:14px; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--grid); vertical-align:top; }
+  th { font-weight:600; color:var(--ink-2); font-size:13px; white-space:nowrap; }
+  th button { border:0; background:none; padding:0; cursor:pointer; font:inherit; color:inherit; }
+  @media (max-width: 640px) { .tablewrap table { min-width: 560px; } }
+  td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; }
+  td .muted { color:var(--muted); font-size:12px; display:block; }
+  .tag { display:inline-block; border:1px solid var(--ring); border-radius:6px; padding:0 7px; font-size:12px; color:var(--ink-2); }
+  .toolbar { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:10px; }
+  input[type=search] { border:1px solid var(--ring); background:var(--page); border-radius:8px; padding:6px 10px; min-width:200px; }
+  label.chk { display:inline-flex; gap:6px; align-items:center; color:var(--ink-2); font-size:13px; cursor:pointer; }
+  footer { margin-top:26px; color:var(--muted); font-size:12.5px; display:grid; gap:6px; }
+  footer ul { margin:0; padding-left:18px; }
+  .err { padding:24px; border:1px dashed var(--axis); border-radius:12px; color:var(--ink-2); }
+  .sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><h1>PN17 Watch</h1><span>Bursa Malaysia PN17 &amp; GN3 listed-company tracker</span></div>
+    <div class="meta">
+      <span class="pill" id="asof">Loading…</span>
+      <span class="pill" id="fresh"></span>
+      <button class="btn" id="theme" type="button" aria-label="Toggle dark mode">◐ Theme</button>
+    </div>
+  </header>
+  <main id="app" aria-live="polite"></main>
+  <footer id="foot"></footer>
+</div>
+<div class="tip" id="tip" role="status"></div>
+
+<script>
+"use strict";
+/* ---------- tiny helpers ---------- */
+const NS = "http://www.w3.org/2000/svg";
+const $ = (s, r = document) => r.querySelector(s);
+function h(tag, attrs, ...kids) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (v == null || v === false) continue;
+    if (k === "class") e.className = v;
+    else if (k.startsWith("on")) e.addEventListener(k.slice(2), v);
+    else e.setAttribute(k, v === true ? "" : v);
+  }
+  for (const k of kids.flat()) if (k != null) e.append(k.nodeType ? k : document.createTextNode(String(k)));
+  return e;
+}
+function s(tag, attrs, parent) {
+  const e = document.createElementNS(NS, tag);
+  for (const [k, v] of Object.entries(attrs || {})) e.setAttribute(k, v);
+  if (parent) parent.append(e);
+  return e;
+}
+const MS = 86400000;
+const t = iso => Date.parse(iso + "T00:00:00Z");
+const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function fmtDate(x) { const d = new Date(typeof x === "string" ? t(x) : x); return `${d.getUTCDate()} ${MON[d.getUTCMonth()]} ${d.getUTCFullYear()}`; }
+function fmtYears(days) { return (days / 365.25).toFixed(1) + " yrs"; }
+function cssVar(n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
+function niceMax(v, steps = 4, int = false) {
+  if (v <= 0) return { max: 1, step: 1 };
+  const raw = v / steps, mag = Math.pow(10, Math.floor(Math.log10(raw)));
+  let step = (int ? [1, 2, 5, 10] : [1, 2, 2.5, 5, 10]).map(m => m * mag).find(x => x >= raw);
+  if (int) step = Math.max(1, Math.round(step));
+  return { max: Math.ceil(v / step) * step, step };
+}
+const tip = $("#tip");
+function showTip(x, y, title, rows, foot) {
+  tip.replaceChildren(h("div", { class: "t" }, title),
+    ...rows.map(r => h("div", { class: "r" },
+      h("span", {}, r.color ? h("i", { style: `border-color:${r.color}` }) : null, r.label), h("b", {}, r.value))),
+    foot ? h("div", { class: "t", style: "margin:4px 0 0" }, foot) : null);
+  tip.classList.add("on");
+  const w = tip.offsetWidth, hgt = tip.offsetHeight;
+  let left = x + 14, top = y - hgt - 10;
+  if (left + w > innerWidth - 8) left = x - w - 14;
+  if (top < 8) top = y + 16;
+  tip.style.left = Math.max(8, left) + "px"; tip.style.top = top + "px";
+}
+const hideTip = () => tip.classList.remove("on");
+
+/* ---------- state ---------- */
+const state = { range: "all", type: "ALL", showFormer: false, search: "", sort: { key: "tenure_days", dir: -1 }, evAll: false, tables: {} };
+let D = null;
+const GAP = 75;
+
+function rangeStart() {
+  const end = t(D.latest_snapshot);
+  const days = { all: Infinity, "5y": 365 * 5, "1y": 365, "6m": 183 }[state.range];
+  return days === Infinity ? t(D.first_snapshot) : end - days * MS;
+}
+const inRange = iso => t(iso) >= rangeStart();
+const typeOk = ty => state.type === "ALL" || state.type === ty;
+
+/* ---------- KPI ---------- */
+function spark(points, w = 120, hh = 28) {
+  const svg = s("svg", { viewBox: `0 0 ${w} ${hh}`, width: w, height: hh, "aria-hidden": "true" });
+  const lo = Math.min(...points), hi = Math.max(...points), span = hi - lo || 1;
+  const xy = points.map((v, i) => [2 + i * (w - 4) / Math.max(1, points.length - 1), hh - 3 - (v - lo) / span * (hh - 8)]);
+  s("path", { d: "M" + xy.map(p => p.join(",")).join("L"), fill: "none", stroke: "var(--muted)", "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }, svg);
+  const l = xy[xy.length - 1];
+  s("circle", { cx: l[0], cy: l[1], r: 4, fill: "var(--s1)", stroke: "var(--surface)", "stroke-width": 2 }, svg);
+  return svg;
+}
+function deltaText(now, then, label) {
+  if (then == null) return "";
+  const d = now - then;
+  return `${d === 0 ? "▬ no change" : (d > 0 ? "▲ +" : "▼ −") + Math.abs(d)} ${label}`;
+}
+function kpis() {
+  const c = D.kpi.current, y = D.kpi.year_ago, S = D.series.slice(-12);
+  const yl = y ? `vs ${fmtDate(y.date)}` : "";
+  const tile = (cls, label, value, delta, key, extra) => h("div", { class: "card tile " + cls },
+    h("div", { class: "label" }, label), h("div", { class: "value" }, value),
+    h("div", { class: "delta" }, delta || " "),
+    key ? spark(S.map(p => p[key])) : null, extra);
+  return h("section", { class: "kpis", "aria-label": "Headline numbers" },
+    tile("hero", "Companies on the list", c.total, deltaText(c.total, y && y.total, yl), "total"),
+    tile("", "PN17", c.pn17, deltaText(c.pn17, y && y.pn17, yl), "pn17"),
+    tile("", "GN3", c.gn3, deltaText(c.gn3, y && y.gn3, yl), "gn3"),
+    tile("", "Share of Bursa-listed", c.pct != null ? c.pct.toFixed(2) + "%" : "–",
+      c.listed ? `of ${c.listed.toLocaleString()} companies` : "", null));
+}
+
+/* ---------- generic line chart ---------- */
+function lineChart(host, cfg) {
+  host.replaceChildren();
+  const W = Math.max(300, host.clientWidth), H = cfg.height || 280;
+  const m = { l: 44, r: cfg.endLabels ? 84 : 20, t: 14, b: 30 };
+  const pts = cfg.points;
+  if (!pts.length) { host.append(h("p", { class: "note" }, "No data in this range.")); return; }
+  const x0 = Math.min(rangeStart(), t(pts[0].date)), x1 = t(D.latest_snapshot);
+  const X = ms => m.l + (ms - x0) / Math.max(1, x1 - x0) * (W - m.l - m.r);
+  const ymaxRaw = Math.max(...pts.flatMap(p => cfg.series.map(se => p[se.key] ?? 0)));
+  const { max, step } = niceMax(ymaxRaw * (cfg.pad || 1), 4, !!cfg.int);
+  const Y = v => H - m.b - v / max * (H - m.t - m.b);
+  const svg = s("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", tabindex: 0, "aria-label": cfg.aria }, host);
+
+  for (let v = 0; v <= max + 1e-9; v += step) {
+    s("line", { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), stroke: v === 0 ? "var(--axis)" : "var(--grid)", "stroke-width": 1 }, svg);
+    s("text", { x: m.l - 8, y: Y(v) + 4, "text-anchor": "end" }, svg).textContent = cfg.yfmt ? cfg.yfmt(v) : v;
+  }
+  // x ticks
+  const spanDays = (x1 - x0) / MS, y0 = new Date(x0).getUTCFullYear(), y1 = new Date(x1).getUTCFullYear();
+  const ticks = [];
+  if (spanDays > 900) { for (let y = y0 + 1; y <= y1; y++) ticks.push([Date.UTC(y, 0, 1), String(y)]); }
+  else {
+    const per = spanDays > 300 ? 3 : 1;
+    let d = new Date(Date.UTC(new Date(x0).getUTCFullYear(), new Date(x0).getUTCMonth() + 1, 1));
+    while (d.getTime() <= x1) { if (d.getUTCMonth() % per === 0) ticks.push([d.getTime(), MON[d.getUTCMonth()] + (d.getUTCMonth() === 0 ? " " + d.getUTCFullYear() : "")]); d = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, 1)); }
+  }
+  const every = Math.max(1, Math.ceil(48 / Math.max(1, ticks.length > 1 ? X(ticks[1][0]) - X(ticks[0][0]) : 100)));
+  ticks.forEach(([ms, lab], i) => { if (i % every === 0) s("text", { x: X(ms), y: H - 8, "text-anchor": "middle" }, svg).textContent = lab; });
+
+  // data-gap bands (> 120 days without a snapshot)
+  const gapDays = i => (t(pts[i].date) - t(pts[i - 1].date)) / MS;
+  for (let i = 1; i < pts.length; i++) {
+    const a = t(pts[i - 1].date), b = t(pts[i].date);
+    const regular = j => j < 1 || j >= pts.length || gapDays(j) <= GAP;
+    if (gapDays(i) > 120 && regular(i - 1) && regular(i + 1)) {
+      s("rect", { x: X(a), y: m.t, width: X(b) - X(a), height: H - m.t - m.b, fill: "var(--wash)" }, svg);
+      const lab = s("text", { x: (X(a) + X(b)) / 2, y: m.t + 14, "text-anchor": "middle" }, svg);
+      lab.textContent = X(b) - X(a) > 70 ? "no snapshots" : "";
+    }
+  }
+  const dots = [];
+  for (const se of cfg.series) {
+    const col = `var(${se.color})`;
+    const valid = pts.filter(p => p[se.key] != null);
+    if (cfg.area) {
+      s("path", { d: `M${X(t(valid[0].date))},${Y(0)}` + valid.map(p => `L${X(t(p.date))},${Y(p[se.key])}`).join("") + `L${X(t(valid.at(-1).date))},${Y(0)}Z`, fill: col, "fill-opacity": 0.1 }, svg);
+    }
+    for (let i = 1; i < valid.length; i++) {
+      const a = valid[i - 1], b = valid[i], gap = (t(b.date) - t(a.date)) / MS;
+      s("line", { x1: X(t(a.date)), y1: Y(a[se.key]), x2: X(t(b.date)), y2: Y(b[se.key]), stroke: col, "stroke-width": 2, "stroke-linecap": "round",
+        "stroke-dasharray": gap > GAP ? "1 6" : "none" }, svg);
+    }
+    valid.forEach((p, i) => {
+      const sparse = (valid[i - 1] && (t(p.date) - t(valid[i - 1].date)) / MS > GAP) || (valid[i + 1] && (t(valid[i + 1].date) - t(p.date)) / MS > GAP);
+      if (sparse || i === 0 || i === valid.length - 1 || valid.length < 4)
+        s("circle", { cx: X(t(p.date)), cy: Y(p[se.key]), r: 4, fill: col, stroke: "var(--surface)", "stroke-width": 2 }, svg);
+    });
+    dots.push(s("circle", { r: 5, fill: col, stroke: "var(--surface)", "stroke-width": 2, opacity: 0 }, svg));
+  }
+  // direct end labels (skipped when they would collide; legend + tooltip carry identity)
+  if (cfg.endLabels) {
+    const last = pts.at(-1), ys = cfg.series.map(se => Y(last[se.key] ?? 0));
+    const ok = ys.every((y, i) => ys.every((z, j) => i === j || Math.abs(y - z) > 16));
+    if (ok) cfg.series.forEach((se, i) => {
+      const tx = s("text", { x: X(t(last.date)) + 10, y: ys[i] + 4, class: "ink" }, svg);
+      tx.textContent = `${se.name} ${last[se.key]}`;
+    });
+  }
+  // hover layer
+  const cross = s("line", { y1: m.t, y2: H - m.b, stroke: "var(--muted)", "stroke-width": 1, opacity: 0 }, svg);
+  const overlay = s("rect", { x: m.l, y: 0, width: W - m.l - m.r, height: H, fill: "transparent" }, svg);
+  let idx = pts.length - 1;
+  function show(i, cx, cy) {
+    idx = i; const p = pts[i], px = X(t(p.date));
+    cross.setAttribute("x1", px); cross.setAttribute("x2", px); cross.setAttribute("opacity", 1);
+    cfg.series.forEach((se, k) => { if (p[se.key] == null) { dots[k].setAttribute("opacity", 0); return; }
+      dots[k].setAttribute("cx", px); dots[k].setAttribute("cy", Y(p[se.key])); dots[k].setAttribute("opacity", 1); });
+    const r = svg.getBoundingClientRect();
+    showTip(cx ?? r.left + px * r.width / W, cy ?? r.top + 40, fmtDate(p.date),
+      cfg.series.filter(se => p[se.key] != null).map(se => ({ color: `var(${se.color})`, label: se.name, value: (se.fmt || (v => v))(p[se.key]) })),
+      cfg.tipFoot ? cfg.tipFoot(p) : "");
+  }
+  function nearest(clientX) {
+    const r = svg.getBoundingClientRect(), mx = (clientX - r.left) * W / r.width;
+    let best = 0, bd = 1e18;
+    pts.forEach((p, i) => { const d = Math.abs(X(t(p.date)) - mx); if (d < bd) { bd = d; best = i; } });
+    return best;
+  }
+  overlay.addEventListener("pointermove", e => show(nearest(e.clientX), e.clientX, e.clientY));
+  overlay.addEventListener("pointerleave", () => { hideTip(); cross.setAttribute("opacity", 0); dots.forEach(d => d.setAttribute("opacity", 0)); });
+  svg.addEventListener("keydown", e => {
+    if (e.key === "ArrowLeft") { show(Math.max(0, idx - 1)); e.preventDefault(); }
+    if (e.key === "ArrowRight") { show(Math.min(pts.length - 1, idx + 1)); e.preventDefault(); }
+  });
+  svg.addEventListener("blur", () => { hideTip(); cross.setAttribute("opacity", 0); dots.forEach(d => d.setAttribute("opacity", 0)); });
+}
+
+/* ---------- card shell with chart/table toggle ---------- */
+function chartCard(id, title, sub, legendItems, draw, tableData, extraNote) {
+  const host = h("div", { class: "chart" });
+  const key = "tbl_" + id;
+  const btn = h("button", { class: "btn", type: "button", "aria-pressed": !!state.tables[key], onclick: () => { state.tables[key] = !state.tables[key]; render(); } },
+    state.tables[key] ? "Chart view" : "Table view");
+  const card = h("section", { class: "card", "aria-labelledby": id },
+    h("div", { class: "head" }, h("div", {}, h("h2", { id }, title), h("p", { class: "sub" }, sub)), btn),
+    legendItems && legendItems.length > 1 && !state.tables[key] ? h("div", { class: "legend" }, legendItems.map(l => h("span", {}, h("i", { class: l.box ? "box" : "", style: l.box ? `background:${l.color}` : `border-color:${l.color}` }), l.label))) : null,
+    host, extraNote ? h("p", { class: "note" }, extraNote) : null);
+  if (state.tables[key]) host.append(simpleTable(tableData.cols, tableData.rows));
+  else requestAnimationFrame(() => draw(host));
+  return card;
+}
+function simpleTable(cols, rows) {
+  return h("div", { class: "tablewrap" }, h("table", {},
+    h("thead", {}, h("tr", {}, cols.map((c, i) => h("th", { class: i ? "num" : "" }, c)))),
+    h("tbody", {}, rows.map(r => h("tr", {}, r.map((v, i) => h("td", { class: i ? "num" : "" }, v)))))));
+}
+
+/* ---------- charts ---------- */
+function trendCard() {
+  const pts = D.series.filter(p => inRange(p.date));
+  const all = state.type === "ALL";
+  const series = [];
+  if (all || state.type === "PN17") series.push({ key: "pn17", name: "PN17", color: "--s1" });
+  if (all || state.type === "GN3") series.push({ key: "gn3", name: "GN3", color: "--s2" });
+  const legend = series.map(se => ({ label: se.name, color: `var(${se.color})` }));
+  if (series.length > 1) legend.push({ label: "dotted = no snapshots in between", color: "var(--muted)" });
+  return chartCard("c-trend", "Companies on the list over time",
+    "Count per published list. Hover or use ← → for values.", legend,
+    host => lineChart(host, { points: pts, series, endLabels: true, int: true, height: 290, aria: "Line chart of PN17 and GN3 company counts over time",
+      tipFoot: p => `Total ${p.total}${p.pct != null ? ` · ${p.pct.toFixed(2)}% of listed` : ""}` }),
+    { cols: ["List as of", "PN17", "GN3", "Total", "% of listed"], rows: pts.map(p => [fmtDate(p.date), p.pn17, p.gn3, p.total, p.pct != null ? p.pct.toFixed(2) + "%" : "–"]) });
+}
+function shareCard() {
+  const pts = D.series.filter(p => p.pct != null && inRange(p.date));
+  return chartCard("c-share", "Share of all Bursa-listed companies", "PN17 + GN3 as % of total listed companies.", null,
+    host => lineChart(host, { points: pts, series: [{ key: "pct", name: "Share", color: "--s1", fmt: v => v.toFixed(2) + "%" }], area: true, endLabels: false, height: 240, pad: 1.1,
+      yfmt: v => v + "%", aria: "Line chart of the percentage of Bursa-listed companies on the PN17 or GN3 list",
+      tipFoot: p => p.listed ? `${p.total} of ${p.listed.toLocaleString()} listed` : "" }),
+    { cols: ["List as of", "% of listed", "Listed companies"], rows: pts.map(p => [fmtDate(p.date), p.pct.toFixed(2) + "%", p.listed ? p.listed.toLocaleString() : "–"]) });
+}
+function yearlyCard() {
+  const rows = D.yearly.filter(y => +y.year >= new Date(rangeStart()).getUTCFullYear());
+  const approx = rows.reduce((a, y) => a + y.approx, 0);
+  const draw = host => {
+    host.replaceChildren();
+    const W = Math.max(280, host.clientWidth), H = 240, m = { l: 34, r: 8, t: 22, b: 30 };
+    const svg = s("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Column chart of companies entering and leaving the list per year" }, host);
+    const ymax = Math.max(1, ...rows.flatMap(y => [y.entered, y.exited]));
+    const { max, step } = niceMax(ymax, 4, true);
+    const Y = v => H - m.b - v / max * (H - m.t - m.b);
+    for (let v = 0; v <= max + 1e-9; v += step) {
+      s("line", { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), stroke: v === 0 ? "var(--axis)" : "var(--grid)" }, svg);
+      s("text", { x: m.l - 8, y: Y(v) + 4, "text-anchor": "end" }, svg).textContent = v;
+    }
+    const band = (W - m.l - m.r) / rows.length, bw = Math.min(24, band / 2 - 6);
+    rows.forEach((y, i) => {
+      const cx = m.l + band * (i + .5);
+      const dataRows = [{ label: "Entered", value: y.entered, color: "var(--s1)" }, { label: "Exited", value: y.exited, color: "var(--s2)" }];
+      const none = y.entered + y.exited === 0 && y.approx > 0;
+      s("text", { x: cx, y: H - 8, "text-anchor": "middle" }, svg).textContent = y.year;
+      if (none) s("text", { x: cx, y: Y(0) - 8, "text-anchor": "middle" }, svg).textContent = "n/a";
+      else dataRows.forEach((r, k) => {
+        const x = cx + (k ? 1 : -bw - 1), top = Y(r.value), hgt = Math.max(0, Y(0) - top);
+        if (hgt > 0) s("path", { d: `M${x},${Y(0)}V${top + 4}Q${x},${top} ${x + 4},${top}H${x + bw - 4}Q${x + bw},${top} ${x + bw},${top + 4}V${Y(0)}Z`, fill: r.color }, svg);
+        s("text", { x: x + bw / 2, y: top - 5, "text-anchor": "middle", class: "ink" }, svg).textContent = r.value;
+      });
+      const hit = s("rect", { x: cx - band / 2, y: m.t, width: band, height: H - m.t - m.b, fill: "transparent", tabindex: 0 }, svg);
+      const on = e => { const r = hit.getBoundingClientRect(); showTip(e.clientX ?? r.left + r.width / 2, e.clientY ?? r.top + 30, none ? `${y.year} (no regular snapshots)` : String(y.year),
+        none ? [] : dataRows, y.approx ? `${y.approx} more change${y.approx > 1 ? "s" : ""} detected across data gaps (not shown)` : ""); };
+      hit.addEventListener("pointermove", on); hit.addEventListener("focus", on);
+      hit.addEventListener("pointerleave", hideTip); hit.addEventListener("blur", hideTip);
+    });
+  };
+  return chartCard("c-yearly", "Entered vs exited, per year", "Changes seen between regular list updates.",
+    [{ label: "Entered", color: "var(--s1)", box: 1 }, { label: "Exited", color: "var(--s2)", box: 1 }], draw,
+    { cols: ["Year", "Entered", "Exited", "Across data gaps"], rows: rows.map(y => [y.year, y.entered, y.exited, y.approx]) },
+    approx ? `${approx} change${approx > 1 ? "s" : ""} detected across periods without regular snapshots ${approx > 1 ? "are" : "is"} excluded.` : "");
+}
+function tenureCard() {
+  const cur = D.companies.filter(c => c.current && typeOk(c.type)).sort((a, b) => b.tenure_days - a.tenure_days);
+  const draw = host => {
+    host.replaceChildren();
+    const W = Math.max(300, host.clientWidth), row = 28, m = { l: Math.min(190, W * .42), r: 78, t: 6, b: 22 }, H = m.t + m.b + row * cur.length;
+    if (!cur.length) { host.append(h("p", { class: "note" }, "No companies match this filter.")); return; }
+    const svg = s("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Bar chart of how long each current company has been on the list" }, host);
+    const max = niceMax(Math.max(...cur.map(c => c.tenure_days)) / 365.25, 4, true);
+    const X = yrs => m.l + yrs / max.max * (W - m.l - m.r);
+    for (let v = 0; v <= max.max + 1e-9; v += max.step) {
+      s("line", { x1: X(v), x2: X(v), y1: m.t, y2: H - m.b, stroke: v === 0 ? "var(--axis)" : "var(--grid)" }, svg);
+      s("text", { x: X(v), y: H - 6, "text-anchor": "middle" }, svg).textContent = v;
+    }
+    cur.forEach((c, i) => {
+      const y = m.t + i * row + 5, bh = 16, yrs = c.tenure_days / 365.25, w = Math.max(2, X(yrs) - m.l);
+      const maxCh = Math.max(8, Math.floor((m.l - 14) / 6.4));
+      const name = c.name.length > maxCh ? c.name.slice(0, maxCh - 1) + "…" : c.name;
+      s("text", { x: m.l - 10, y: y + 12, "text-anchor": "end", class: "ink" }, svg).textContent = name;
+      s("path", { d: `M${m.l},${y}H${m.l + w - 4}Q${m.l + w},${y} ${m.l + w},${y + 4}V${y + bh - 4}Q${m.l + w},${y + bh} ${m.l + w - 4},${y + bh}H${m.l}Z`, fill: "var(--seq)", "fill-opacity": c.since_censored ? .55 : 1 }, svg);
+      s("text", { x: m.l + w + 6, y: y + 12, class: "ink" }, svg).textContent = (c.since_censored ? "≥ " : "") + yrs.toFixed(1);
+      const hit = s("rect", { x: 0, y: y - 4, width: W, height: row, fill: "transparent", tabindex: 0 }, svg);
+      const on = e => { const r = hit.getBoundingClientRect(); showTip(e.clientX ?? r.left + 40, e.clientY ?? r.top, c.name,
+        [{ label: "Time on list", value: (c.since_censored ? "≥ " : "") + fmtYears(c.tenure_days) }, { label: "Since", value: (c.since_censored ? "≤ " : "") + fmtDate(c.since) }, { label: "List", value: c.type }]); };
+      hit.addEventListener("pointermove", on); hit.addEventListener("focus", on); hit.addEventListener("pointerleave", hideTip); hit.addEventListener("blur", hideTip);
+    });
+    s("text", { x: W - m.r + 6, y: H - 6 }, svg).textContent = "years";
+  };
+  return chartCard("c-tenure", "Time on the list", "Years each current company has been listed (latest continuous stay).", null, draw,
+    { cols: ["Company", "Years", "Since"], rows: cur.map(c => [c.name, (c.since_censored ? "≥ " : "") + (c.tenure_days / 365.25).toFixed(1), (c.since_censored ? "≤ " : "") + fmtDate(c.since)]) },
+    "Lighter bars: already on the list when tracking began (Feb 2020), so the real figure is at least this long.");
+}
+
+/* ---------- tables ---------- */
+function eventsCard() {
+  let ev = D.events.filter(e => inRange(e.date) && typeOk(e.type));
+  const total = ev.length;
+  if (!state.evAll) ev = ev.slice(0, 10);
+  const body = ev.length ? h("div", { class: "tablewrap" }, h("table", {},
+    h("thead", {}, h("tr", {}, ["When", "Change", "Company", "List"].map(x => h("th", {}, x)))),
+    h("tbody", {}, ev.map(e => h("tr", {},
+      h("td", {}, e.approx ? `${fmtDate(e.from)} – ${fmtDate(e.date)}` : fmtDate(e.date), e.approx ? h("span", { class: "muted" }, "exact date unknown (data gap)") : null),
+      h("td", {}, e.kind === "entered" ? "▲ Joined" : "▼ Left"),
+      h("td", {}, e.company), h("td", {}, h("span", { class: "tag" }, e.type))))))) : h("p", { class: "note" }, "No changes in this range.");
+  return h("section", { class: "card", "aria-labelledby": "c-events" },
+    h("div", { class: "head" }, h("div", {}, h("h2", { id: "c-events" }, "Recent changes"), h("p", { class: "sub" }, "Companies joining or leaving the list between updates.")),
+      total > 10 ? h("button", { class: "btn", type: "button", onclick: () => { state.evAll = !state.evAll; render(); } }, state.evAll ? "Show latest 10" : `Show all ${total}`) : null),
+    body);
+}
+function companiesCard() {
+  let cs = D.companies.filter(c => typeOk(c.type) && (state.showFormer || c.current));
+  const q = state.search.trim().toLowerCase();
+  if (q) cs = cs.filter(c => c.name.toLowerCase().includes(q));
+  const k = state.sort.key, d = state.sort.dir;
+  cs = [...cs].sort((a, b) => (typeof a[k] === "string" ? a[k].localeCompare(b[k]) : (a[k] ?? -1) - (b[k] ?? -1)) * d);
+  const th = (label, key, num) => h("th", { class: num ? "num" : "", "aria-sort": state.sort.key === key ? (d > 0 ? "ascending" : "descending") : "none" },
+    h("button", { type: "button", onclick: () => { state.sort = { key, dir: state.sort.key === key ? -state.sort.dir : (key === "name" ? 1 : -1) }; render(); } },
+      label + (state.sort.key === key ? (d > 0 ? " ▲" : " ▼") : "")));
+  const search = h("input", { type: "search", placeholder: "Search company…", value: state.search, "aria-label": "Search companies", oninput: e => { state.search = e.target.value; renderTableOnly(); } });
+  const toolbar = h("div", { class: "toolbar" }, search,
+    h("label", { class: "chk" }, h("input", { type: "checkbox", checked: state.showFormer, onchange: e => { state.showFormer = e.target.checked; render(); } }), `Include former members (${D.companies.filter(c => !c.current).length})`));
+  const tbl = h("div", { class: "tablewrap", id: "ctable" }, h("table", {},
+    h("thead", {}, h("tr", {}, th("Company", "name"), th("List", "type"), th("On list since", "since"), th("Time on list", "tenure_days", true), h("th", {}, "Last known stage"), h("th", {}, "Trading"))),
+    h("tbody", {}, cs.map(c => h("tr", {},
+      h("td", {}, c.name, !c.current ? h("span", { class: "muted" }, `Left list · last seen ${fmtDate(c.last_seen)}`) : null),
+      h("td", {}, h("span", { class: "tag" }, c.type)),
+      h("td", {}, (c.since_censored ? "≤ " : "") + fmtDate(c.since)),
+      h("td", { class: "num" }, (c.since_censored ? "≥ " : "") + fmtYears(c.tenure_days)),
+      h("td", {}, c.stage ? `${c.stage}. ${c.stage_label}` : "–", c.stage ? h("span", { class: "muted" }, `as of ${fmtDate(c.stage_asof)}`) : null),
+      h("td", {}, c.trading ? (c.trading === "Suspended" ? "■ Suspended" : "● Trading") : "–"))))));
+  if (!cs.length) tbl.append(h("p", { class: "note" }, "No companies match."));
+  return h("section", { class: "card", "aria-labelledby": "c-comp" },
+    h("div", { class: "head" }, h("div", {}, h("h2", { id: "c-comp" }, "Companies"), h("p", { class: "sub" }, "Stage and trading status come from Bursa’s PDF lists (last published Nov 2025); newer lists don’t include them."))),
+    toolbar, tbl);
+}
+function renderTableOnly() { const c = $("#ctable"); if (c) c.replaceWith($("#ctable", companiesCard())); }
+
+/* ---------- page ---------- */
+function seg(label, opts, cur, set) {
+  return h("div", { class: "grp" }, label, h("div", { class: "seg", role: "group", "aria-label": label },
+    opts.map(([v, txt]) => h("button", { type: "button", "aria-pressed": String(cur === v), onclick: () => { set(v); render(); } }, txt))));
+}
+function render() {
+  const app = $("#app");
+  const y = window.scrollY;
+  app.replaceChildren(
+    kpis(),
+    h("section", { class: "card", "aria-label": "Key insights" }, h("h2", { style: "margin-bottom:8px" }, "What’s new"), h("ul", { class: "insights" }, D.insights.map(i => h("li", {}, i)))),
+    h("div", { class: "filters", role: "region", "aria-label": "Filters" },
+      seg("Range", [["all", "All"], ["5y", "5 yrs"], ["1y", "1 yr"], ["6m", "6 mo"]], state.range, v => state.range = v),
+      seg("List", [["ALL", "Both"], ["PN17", "PN17"], ["GN3", "GN3"]], state.type, v => state.type = v)),
+    h("div", { class: "grid" },
+      h("div", { class: "span-12" }, trendCard()),
+      h("div", { class: "span-6" }, shareCard()),
+      h("div", { class: "span-6" }, yearlyCard()),
+      h("div", { class: "span-12" }, tenureCard()),
+      h("div", { class: "span-12" }, eventsCard()),
+      h("div", { class: "span-12" }, companiesCard())));
+  window.scrollTo(0, y);
+}
+let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => D && render(), 150); });
+
+function theme() {
+  const root = document.documentElement;
+  try { const v = localStorage.getItem("pn17-theme"); if (v) root.dataset.theme = v; } catch (_) {}
+  $("#theme").addEventListener("click", () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("pn17-theme", root.dataset.theme); } catch (_) {}
+    if (D) render();
+  });
+}
+
+async function main() {
+  theme();
+  try {
+    if (window.__PN17_DATA__) D = window.__PN17_DATA__;   // inlined single-file builds
+    else {
+      const r = await fetch("data.json", { cache: "no-cache" });
+      if (!r.ok) throw new Error(r.status);
+      D = await r.json();
+    }
+  } catch (e) {
+    $("#app").replaceChildren(h("div", { class: "err" }, "Couldn’t load data.json. If you opened this file directly, serve the folder instead: ",
+      h("code", {}, "python3 -m http.server -d bursaMY/dashboard 8000"), " and open http://localhost:8000"));
+    $("#asof").textContent = "No data";
+    return;
+  }
+  $("#asof").textContent = `List as of ${fmtDate(D.latest_snapshot)}`;
+  const okAt = D.last_success_at || D.generated_at;
+  const age = Math.max(0, Math.floor((Date.now() - Date.parse(okAt)) / MS));
+  const failed = D.last_check && D.last_check.status === "failure";
+  const when = age === 0 ? "today" : `${age} day${age > 1 ? "s" : ""} ago`;
+  $("#fresh").textContent = failed ? `⚠ Last check failed · last success ${when}` : age > 3 ? `⚠ Last checked ${when}` : `Checked ${when}`;
+  $("#fresh").title = `Last successful check: ${okAt}`;
+  $("#foot").replaceChildren(
+    h("div", {}, `Source: ${D.source}. ${D.n_snapshots} published lists since ${fmtDate(D.first_snapshot)}. For information only — not investment advice.`),
+    D.data_quality.length ? h("div", {}, "Data notes:", h("ul", {}, D.data_quality.map(n => h("li", {}, n)))) : null);
+  render();
+}
+main();
+</script>
+</body>
+</html>
