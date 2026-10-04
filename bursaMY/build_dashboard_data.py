@@ -13,6 +13,7 @@ reads. Pure standard library - no pandas needed.
 """
 import csv
 import json
+import os
 import re
 import sys
 from collections import Counter, OrderedDict, defaultdict
@@ -360,8 +361,22 @@ def main():
             f"({g} days) - changes in that window are shown as date ranges."
         )
 
+    # Freshness: the workflow passes the scrape outcome (success / failure). When the scrape
+    # failed the CSVs are unchanged, so keep the previous "last success" time and let the
+    # dashboard say so instead of looking fresh.
+    now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    status = (os.environ.get("SCRAPE_OUTCOME") or "unknown").lower()
+    last_success = now_iso
+    if status == "failure":
+        try:
+            last_success = json.loads(OUT.read_text(encoding="utf-8")).get("last_success_at")
+        except (OSError, ValueError):
+            last_success = None
+
     out = {
-        "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "generated_at": now_iso,
+        "last_check": {"at": now_iso, "status": status},
+        "last_success_at": last_success,
         "source": "Bursa Malaysia - PN17 and GN3 companies (listing directory)",
         "first_snapshot": iso(first_date),
         "latest_snapshot": iso(latest["date"]),
@@ -373,6 +388,17 @@ def main():
         },
         "insights": insights,
         "series": series,
+        "snapshots": [
+            {
+                "date": iso(sn["date"]),
+                "source": sn["src"],
+                "companies": [
+                    {"name": display[k], "type": e["type"], "stage": e["stage"], "trading": e["trading"]}
+                    for k, e in sorted(sn["members"].items(), key=lambda kv: display[kv[0]])
+                ],
+            }
+            for sn in snap_list
+        ],
         "yearly": yearly_json,
         "events": events_json,
         "companies": companies,

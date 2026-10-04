@@ -526,8 +526,12 @@ async function main() {
     return;
   }
   $("#asof").textContent = `List as of ${fmtDate(D.latest_snapshot)}`;
-  const age = Math.floor((Date.now() - Date.parse(D.generated_at)) / MS);
-  $("#fresh").textContent = age <= 0 ? "Refreshed today" : `Refreshed ${age} day${age > 1 ? "s" : ""} ago${age > 3 ? " ⚠" : ""}`;
+  const okAt = D.last_success_at || D.generated_at;
+  const age = Math.max(0, Math.floor((Date.now() - Date.parse(okAt)) / MS));
+  const failed = D.last_check && D.last_check.status === "failure";
+  const when = age === 0 ? "today" : `${age} day${age > 1 ? "s" : ""} ago`;
+  $("#fresh").textContent = failed ? `⚠ Last check failed · last success ${when}` : age > 3 ? `⚠ Last checked ${when}` : `Checked ${when}`;
+  $("#fresh").title = `Last successful check: ${okAt}`;
   $("#foot").replaceChildren(
     h("div", {}, `Source: ${D.source}. ${D.n_snapshots} published lists since ${fmtDate(D.first_snapshot)}. For information only — not investment advice.`),
     D.data_quality.length ? h("div", {}, "Data notes:", h("ul", {}, D.data_quality.map(n => h("li", {}, n)))) : null);
