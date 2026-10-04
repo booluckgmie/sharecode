@@ -35,6 +35,11 @@ python3 -m http.server -d bursaMY/dashboard 8000
 `ignoreCommand` so other workflows in this repo (gold, weather, ...) don't trigger redeploys: a
 deploy only happens when something under `bursaMY/dashboard/` changed.
 
+The repo root also has a `vercel.json` that serves `bursaMY/dashboard` as a static site, so a
+Vercel project that still has the default Root Directory (the repo root) deploys the dashboard
+instead of failing with "No python entrypoint found". Setting Root Directory to
+`bursaMY/dashboard` is the cleaner setup; when it is set, the root `vercel.json` is ignored.
+
 Vercel's free Hobby plan is for non-commercial use. Move to Pro before charging customers.
 
 ## Files
