@@ -1,5 +1,7 @@
 import re
 import json
+import time
+import random
 import requests
 import os
 import sys
@@ -41,12 +43,33 @@ class SpotYFinanceFetcher:
     Reliable, continuous 24/5 market data.
     Returns DataFrame with columns: Price, USD_Price, Rate
     """
+    RETRIES    = 5
+    BASE_DELAY = 20   # seconds; doubles each attempt (20, 40, 80, 160)
+
+    def _history(self, symbol: str) -> pd.DataFrame:
+        """Fetch one ticker, retrying with exponential backoff on rate limits /
+        transient errors (Yahoo throttles shared CI IPs: 'Too Many Requests')."""
+        last_err = None
+        for attempt in range(1, self.RETRIES + 1):
+            try:
+                df = yf.Ticker(symbol).history(period="6mo")
+                if not df.empty:
+                    return df
+                last_err = ValueError(f"empty data for {symbol}")
+            except Exception as e:
+                last_err = e
+            if attempt < self.RETRIES:
+                delay = self.BASE_DELAY * 2 ** (attempt - 1) + random.uniform(0, 5)
+                print(f"⚠️  Yahoo {symbol} attempt {attempt}/{self.RETRIES} failed "
+                      f"({last_err}); retrying in {delay:.0f}s")
+                time.sleep(delay)
+        raise ConnectionError(f"Failed to fetch {symbol} from Yahoo Finance "
+                              f"after {self.RETRIES} attempts: {last_err}")
+
     def get_data(self) -> pd.DataFrame:
-        try:
-            gold = yf.Ticker("GC=F").history(period="6mo")
-            myr  = yf.Ticker("MYR=X").history(period="6mo")
-        except Exception as e:
-            raise ConnectionError(f"Failed to fetch from Yahoo Finance: {e}")
+        gold = self._history("GC=F")
+        time.sleep(random.uniform(2, 4))   # space out the two requests
+        myr  = self._history("MYR=X")
 
         if gold.empty or myr.empty:
             raise ValueError("❌ Empty data returned from Yahoo Finance.")
@@ -133,14 +156,34 @@ class PublicGoldFetcher:
         return df
 
 
+def load_cached_history() -> pd.DataFrame:
+    """Rebuild the price DataFrame from the last saved CSV (stale-data fallback)."""
+    if not os.path.exists(CSV_FILE):
+        raise ConnectionError("Yahoo Finance unavailable and no cached history exists.")
+    c = pd.read_csv(CSV_FILE, parse_dates=["date"]).set_index("date")
+    df = pd.DataFrame({
+        "USD_Price": c["price_usd_per_oz"],
+        "Rate":      c["usd_myr_rate"],
+        "Price":     c["price_rm_per_g"],
+    }).dropna()
+    if len(df) < 8:
+        raise ConnectionError("Cached history too short to use as fallback.")
+    print(f"♻️  Using cached history: {len(df)} rows, last {df.index[-1]:%d %b %Y}")
+    return df
+
+
 def get_gold_data() -> tuple:
     """Factory: select fetcher from DATA_SOURCE, return (df, source_label)."""
     if DATA_SOURCE == "PUBLIC_GOLD":
         df = PublicGoldFetcher().get_data()
         return df, "Public Gold (retail)"
     elif DATA_SOURCE == "SPOT_YFINANCE":
-        df = SpotYFinanceFetcher().get_data()
-        return df, "Yahoo Finance (GC=F × MYR=X)"
+        try:
+            df = SpotYFinanceFetcher().get_data()
+            return df, "Yahoo Finance (GC=F × MYR=X)"
+        except Exception as e:
+            print(f"⚠️  Live fetch failed ({e}); falling back to cached CSV history.")
+            return load_cached_history(), "CACHED (Yahoo rate-limited)"
     else:
         raise ValueError(
             f"Unknown AURUM_DATA_SOURCE='{DATA_SOURCE}'. "
@@ -492,7 +535,11 @@ def main():
         sell_to_shop, buy_from_shop, rate_source = get_pawnshop_rates(current_price)
 
         # --- CSV ---
-        save_price_csv(df, sell_to_shop, buy_from_shop, rate_source)
+        stale = source_label.startswith("CACHED")
+        if stale:
+            print("⚠️  Stale data: skipping CSV rewrite.")
+        else:
+            save_price_csv(df, sell_to_shop, buy_from_shop, rate_source)
 
         # --- 30D stats ---
         window_30 = prices[-30:] if len(prices) >= 30 else prices
@@ -554,7 +601,10 @@ def main():
         change_str = (f"+RM {change:.2f}" if change >= 0
                       else f"-RM {abs(change):.2f}")
 
+        stale_note = (f"⚠️ *Live data unavailable* (Yahoo rate-limited) — using last saved "
+                      f"data from {df.index[-1]:%d %b %Y}\n\n") if stale else ""
         caption = (
+            f"{stale_note}"
             f"📊 *AurumVibe Daily Gold Report*\n\n"
             f"💰 Price:        *RM {current_price:.2f}/g*\n"
             f"🔄 Change:       {change_str}\n"
