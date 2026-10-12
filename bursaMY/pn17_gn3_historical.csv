@@ -1,4 +1,4 @@
-,Company name,Market,Pending submission to authorities,"Submitted, pending authorities’ approval","Approval obtained, pending implementation","Implemented, pending compliance with Paragraph 5.2(c) of PN17",Trading status of listed securities,Status,Source File,_2,_3
+,Company name,Market,Pending submission to authorities,"Submitted, pending authorities’ approval","Approval obtained, pending implementation","Implemented, pending compliance with Paragraph 5.2(c) of PN17",Trading status of listed securities,Status,Source File,_2,_3,Stage,Trading
 1,APFT Berhad,Main – PN17,√,,,,Trading,3 February 2020,5e42765a39fba268f21251a4_Status-of-PN17-and-GN3-Companies-Jan2020.pdf,,
 2,Asia Media Group Berhad,Main – PN17,√,,,,Trading,3 February 2020,5e42765a39fba268f21251a4_Status-of-PN17-and-GN3-Companies-Jan2020.pdf,,
 3,Barakah Offshore Petroleum Berhad,Main – PN17,√,,,,Trading,3 February 2020,5e42765a39fba268f21251a4_Status-of-PN17-and-GN3-Companies-Jan2020.pdf,,
@@ -825,15 +825,15 @@
 2026-09-09,7 September 2026,Lambo Group Berhad,GN3
 2026-09-09,7 September 2026,LYC Healthcare Berhad,GN3
 2026-09-09,7 September 2026,SMTrack Berhad,GN3
-2026-10-09,12 October 2026,Ho Hup Construction Company Berhad,PN17
-2026-10-09,12 October 2026,Industronics Berhad,PN17
-2026-10-09,12 October 2026,Khee San Berhad,PN17
-2026-10-09,12 October 2026,Meridian Berhad,PN17
-2026-10-09,12 October 2026,Perak Corporation Bhd,PN17
-2026-10-09,12 October 2026,Pertama Digital Berhad,PN17
-2026-10-09,12 October 2026,TXCD Berhad (formerly known as Ageson Berhad),PN17
-2026-10-09,12 October 2026,Zelan Berhad,PN17
-2026-10-09,12 October 2026,Asdion Berhad,GN3
-2026-10-09,12 October 2026,Lambo Group Berhad,GN3
-2026-10-09,12 October 2026,LYC Healthcare Berhad,GN3
-2026-10-09,12 October 2026,SMTrack Berhad,GN3
+2026-10-09,12 October 2026,Ho Hup Construction Company Berhad,PN17,,,,,,,,,column 3,Trading
+2026-10-09,12 October 2026,Industronics Berhad,PN17,,,,,,,,,column 3,Trading
+2026-10-09,12 October 2026,Khee San Berhad,PN17,,,,,,,,,column 5,Trading
+2026-10-09,12 October 2026,Meridian Berhad,PN17,,,,,,,,,column 3,Trading
+2026-10-09,12 October 2026,Perak Corporation Bhd,PN17,,,,,,,,,column 5,Trading
+2026-10-09,12 October 2026,Pertama Digital Berhad,PN17,,,,,,,,,column 4,Suspended
+2026-10-09,12 October 2026,TXCD Berhad (formerly known as Ageson Berhad),PN17,,,,,,,,,column 4,Trading
+2026-10-09,12 October 2026,Zelan Berhad,PN17,,,,,,,,,column 4,Trading
+2026-10-09,12 October 2026,Asdion Berhad,GN3,,,,,,,,,column 3,Suspended
+2026-10-09,12 October 2026,Lambo Group Berhad,GN3,,,,,,,,,column 4,Suspended
+2026-10-09,12 October 2026,LYC Healthcare Berhad,GN3,,,,,,,,,column 3,Trading
+2026-10-09,12 October 2026,SMTrack Berhad,GN3,,,,,,,,,column 3,Trading
