@@ -100,6 +100,8 @@ jobs:
                   bursaMY/summary-reportPN17.csv \
                   bursaMY/last_run.json \
                   bursaMY/dashboard/data.json
+          # Raw scraped table, kept so stage/trading can be re-parsed later
+          [ -d bursaMY/raw ] && git add -f bursaMY/raw || true
           
           # Check if there are changes to commit
           if git diff --cached --quiet; then

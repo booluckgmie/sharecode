@@ -39,6 +39,7 @@ STAGE_LABELS = [
     "Approved, pending implementation",
     "Implemented, pending compliance",
 ]
+STAGE_KEYS = [("pending submission", 1), ("submitted", 2), ("approval obtained", 3), ("implemented", 4)]
 GAP_DAYS = 75  # snapshots further apart than this => event date is a range
 
 
@@ -57,6 +58,11 @@ def parse_date(s):
         except ValueError:
             pass
     return None
+
+
+def stage_no(label: str):
+    low = clean(label).lower()
+    return next((n for key, n in STAGE_KEYS if key in low), None)
 
 
 def norm(name: str) -> str:
@@ -140,6 +146,7 @@ def build_snapshots(rows, sum_file, sum_date):
                     "name": name,
                     "type": "PN17" if "PN17" in market.upper() else "GN3",
                     "stage": stage,
+                    "stage_label": STAGE_LABELS[stage - 1] if stage else None,
                     "trading": clean(r["Trading status of listed securities"]) or None,
                 }
             )
@@ -151,13 +158,22 @@ def build_snapshots(rows, sum_file, sum_date):
         asof = parse_date(r["Company name"])
         name, typ = clean(r["Market"]), clean(r["Pending submission to authorities"]).upper()
         if asof and name and typ in ("PN17", "GN3"):
-            by_list[asof].append((r[""], name, typ))
+            by_list[asof].append((r[""], name, typ, r.get("Stage") or "", r.get("Trading") or ""))
     for asof, items in by_list.items():
         latest_run = max(i[0] for i in items)  # if a list date was scraped twice, keep the latest run
         items = [i for i in items if i[0] == latest_run]
         run = datetime.strptime(latest_run, "%Y-%m-%d").date()
         snaps[asof] = {
-            "entries": [{"name": n, "type": t, "stage": None, "trading": None} for _, n, t in items],
+            "entries": [
+                {
+                    "name": n,
+                    "type": t,
+                    "stage": stage_no(st),
+                    "stage_label": (STAGE_LABELS[stage_no(st) - 1] if stage_no(st) else clean(st)) or None,
+                    "trading": clean(tr) or None,
+                }
+                for _, n, t, st, tr in items
+            ],
             "src": "html",
             "summary": sum_date.get(run),
         }
@@ -281,12 +297,17 @@ def main():
         since = snap_list[start_i]["date"]
         end = latest["date"] if in_now else snap_list[last_i]["date"]
         last_entry = snap_list[last_i]["members"][k]
-        # last snapshot that carried a stage / trading status
-        stage = trading = stage_asof = None
+        # latest snapshot that carried a stage, and (separately) a trading status
+        stage = stage_label = trading = stage_asof = trading_asof = None
         for i in range(last_i, -1, -1):
             m = snap_list[i]["members"].get(k)
-            if m and m["stage"]:
-                stage, trading, stage_asof = m["stage"], m["trading"], snap_list[i]["date"]
+            if not m:
+                continue
+            if stage_label is None and m.get("stage_label"):
+                stage, stage_label, stage_asof = m["stage"], m["stage_label"], snap_list[i]["date"]
+            if trading is None and m.get("trading"):
+                trading, trading_asof = m["trading"], snap_list[i]["date"]
+            if stage_label and trading:
                 break
         companies.append(
             {
@@ -299,9 +320,10 @@ def main():
                 "tenure_days": (end - since).days,
                 "snapshots": n_present,
                 "stage": stage,
-                "stage_label": STAGE_LABELS[stage - 1] if stage else None,
-                "trading": trading,
+                "stage_label": stage_label,
                 "stage_asof": iso(stage_asof),
+                "trading": trading,
+                "trading_asof": iso(trading_asof),
             }
         )
     companies.sort(key=lambda c: (not c["current"], -c["tenure_days"], c["name"]))
@@ -373,6 +395,15 @@ def main():
         except (OSError, ValueError):
             last_success = None
 
+    latest_members = list(latest["members"].values())
+    with_stage = sum(1 for e in latest_members if e.get("stage_label"))
+    with_trading = sum(1 for e in latest_members if e.get("trading"))
+    if latest_members and (with_stage < len(latest_members) or with_trading < len(latest_members)):
+        warnings.append(
+            f"Latest list ({fmt(latest['date'])}): stage known for {with_stage}/{len(latest_members)} companies, "
+            f"trading status for {with_trading}/{len(latest_members)}; missing values show the last known one."
+        )
+
     out = {
         "generated_at": now_iso,
         "last_check": {"at": now_iso, "status": status},
@@ -393,7 +424,7 @@ def main():
                 "date": iso(sn["date"]),
                 "source": sn["src"],
                 "companies": [
-                    {"name": display[k], "type": e["type"], "stage": e["stage"], "trading": e["trading"]}
+                    {"name": display[k], "type": e["type"], "stage": e["stage"], "stage_label": e.get("stage_label"), "trading": e["trading"]}
                     for k, e in sorted(sn["members"].items(), key=lambda kv: display[kv[0]])
                 ],
             }

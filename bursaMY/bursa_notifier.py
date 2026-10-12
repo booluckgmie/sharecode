@@ -50,6 +50,7 @@ COMPANIES_CSV  = ROOT / "pn17_gn3_companies.csv"
 HISTORICAL_CSV = ROOT / "pn17_gn3_historical.csv"
 SUMMARY_CSV    = ROOT / "summary-reportPN17.csv"
 CACHE_FILE     = ROOT / "last_run.json"
+RAW_DIR        = ROOT / "raw"          # raw <table> HTML kept so the data can be re-parsed later
 
 # ─── Bursa URL ────────────────────────────────────────────────────────────────
 URL      = "https://www.bursamalaysia.com/bm/trade/trading_resources/listing_directory/pn17_and_gn3_companies"
@@ -132,6 +133,28 @@ def _fetch_html_playwright(attempts: int = 3) -> str:
     return html
 
 
+STAGE_KEYS = [("pending submission", 1), ("submitted", 2), ("approval obtained", 3), ("implemented", 4)]
+NOT_TICKED = {"", "-", "–", "—", "n/a", "na", "nil"}
+
+
+def clean_text(x) -> str:
+    t = x if isinstance(x, str) else x.get_text(" ", strip=True)
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def _stage_no(label: str):
+    """Stage number (1-4) for a column header such as 'Submitted, pending authorities' approval'."""
+    low = clean_text(label).lower()
+    return next((n for key, n in STAGE_KEYS if key in low), None)
+
+
+def _is_ticked(cell) -> bool:
+    """A stage cell is ticked if it holds a tick glyph / any text other than a dash, or an icon."""
+    if clean_text(cell).lower() not in NOT_TICKED:
+        return True
+    return bool(cell.find(["img", "svg", "i"]))
+
+
 def _parse_html(html: str) -> dict:
     """
     Parse the Bursa PN17/GN3 page HTML.
@@ -181,14 +204,26 @@ def _parse_html(html: str) -> dict:
             break
 
     # ── 3. Company table ──────────────────────────────────────────────────────
-    # New format: <table> with section header rows (colspan=6) marking PN17 / GN3
-    # Each data row: col0=index, col1=company name, col2=trading status, col3-5=status ticks
+    # <table> with section header rows (colspan) marking PN17 / GN3.
+    # Each data row: index | company name | trading status | stage tick columns.
+    # Columns are located from the <th> header text, not hard-coded positions, so a
+    # reordered or renamed column does not silently break the scrape.
     pn17_companies: list[str] = []
     gn3_companies:  list[str] = []
+    details: list[dict] = []
     current_section: str | None = None
+    headers: list[str] = []
 
     table = soup.find("table")
     if table:
+        # header row = the row with the most <th> cells
+        for row in table.find_all("tr"):
+            ths = row.find_all("th")
+            if len(ths) > len(headers) and len(ths) == len(row.find_all(["td", "th"])):
+                headers = [clean_text(t) for t in ths]
+        trading_idx = next((i for i, h in enumerate(headers) if "trading" in h.lower()), 2)
+        stage_cols = [(i, h) for i, h in enumerate(headers) if _stage_no(h)]
+
         for row in table.find_all("tr"):
             cells = row.find_all(["td", "th"])
             if not cells:
@@ -216,10 +251,26 @@ def _parse_html(html: str) -> dict:
                     elif current_section == "gn3":
                         gn3_companies.append(name)
 
+                    trading = clean_text(cells[trading_idx]) if trading_idx < len(cells) else ""
+                    if not stage_cols:  # no recognisable stage headers: treat the cells after trading as stages
+                        stage_cols = [(i, headers[i] if i < len(headers) else f"column {i}")
+                                      for i in range(trading_idx + 1, len(cells))]
+                    ticked = [lab for i, lab in stage_cols if i < len(cells) and _is_ticked(cells[i])]
+                    details.append({
+                        "name": name,
+                        "type": "PN17" if current_section == "pn17" else "GN3",
+                        "trading": trading,
+                        # latest stage reached = last ticked column
+                        "stage": ticked[-1] if ticked else "",
+                        "stages_ticked": len(ticked),
+                    })
+
     return {
         "list_updated":   list_updated,
         "pn17_companies": pn17_companies,
         "gn3_companies":  gn3_companies,
+        "details":        details,
+        "table_html":     str(table) if table else "",
         "total_listed":   total_listed,
         "pct_of_total":   pct_of_total,
     }
@@ -295,19 +346,53 @@ def save_current(data: dict):
 # 2. CSV UPDATES
 # ══════════════════════════════════════════════════════════════════════════════
 
-COMPANIES_HEADER  = ["Company Name", "Type", "List Updated"]
-HISTORICAL_HEADER = ["Run Date", "List Updated", "Company Name", "Type"]
+COMPANIES_HEADER  = ["Company Name", "Type", "List Updated", "Stage", "Trading Status"]
+HISTORICAL_HEADER = ["Run Date", "List Updated", "Company Name", "Type"] + [""] * 8 + ["Stage", "Trading"]
 SUMMARY_HEADER    = ["Report Date", "PN17_GN3_Count", "Percentage_of_Total",
                      "Total_Listed_Companies", "PN17_Count", "GN3_Count"]
 
+# pn17_gn3_historical.csv keeps the original (PDF-era) column layout. Rows added since the
+# 2026 page change are: run date | list date | company | type, so the stage and trading
+# status of those rows live in two columns appended at the end of the header.
+HIST_STATUS_IDX = 12
+ISO_DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+
+def _detail_map(data: dict) -> dict:
+    return {clean_text(d["name"]): d for d in data.get("details", [])}
+
+
+def _has_status(data: dict) -> bool:
+    return any(d.get("stage") or d.get("trading") for d in data.get("details", []))
+
+
+def _iso_list_date(list_updated: str):
+    try:
+        return datetime.strptime(clean_text(list_updated), "%d %B %Y").strftime("%Y-%m-%d")
+    except ValueError:
+        return None
+
+
+def save_raw_table(data: dict):
+    """Keep the scraped <table> HTML so stage/trading can be re-parsed if the parser changes."""
+    html = data.get("table_html")
+    if not html:
+        return
+    RAW_DIR.mkdir(exist_ok=True)
+    (RAW_DIR / "table_latest.html").write_text(html, encoding="utf-8")
+    iso = _iso_list_date(data["list_updated"])
+    if iso and not (RAW_DIR / f"table_{iso}.html").exists():
+        (RAW_DIR / f"table_{iso}.html").write_text(html, encoding="utf-8")
+
 
 def update_companies_csv(data: dict):
-    """Overwrite pn17_gn3_companies.csv with the current snapshot."""
+    """Overwrite pn17_gn3_companies.csv with the current snapshot (incl. stage + trading status)."""
+    dm = _detail_map(data)
     rows = []
-    for name in data["pn17_companies"]:
-        rows.append([name, "PN17", data["list_updated"]])
-    for name in data["gn3_companies"]:
-        rows.append([name, "GN3", data["list_updated"]])
+    for names, typ in ((data["pn17_companies"], "PN17"), (data["gn3_companies"], "GN3")):
+        for name in names:
+            d = dm.get(clean_text(name), {})
+            rows.append([name, typ, data["list_updated"], d.get("stage", ""), d.get("trading", "")])
 
     with open(COMPANIES_CSV, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
@@ -316,25 +401,80 @@ def update_companies_csv(data: dict):
     print(f"[CSV] pn17_gn3_companies.csv updated — {len(rows)} companies")
 
 
+def _hist_upgrade_header():
+    """Add the Stage / Trading columns to an existing historical file (header line only)."""
+    if not HISTORICAL_CSV.exists():
+        return
+    with open(HISTORICAL_CSV, newline="", encoding="utf-8") as f:
+        raw = f.read()
+    nl = raw.find("\n")
+    first = raw if nl < 0 else raw[: nl + 1]
+    if ",Stage" in first:
+        return
+    eol = "\r\n" if first.endswith("\r\n") else ("\n" if first.endswith("\n") else "")
+    new_first = first.rstrip("\r\n") + ",Stage,Trading" + (eol or "\n")
+    with open(HISTORICAL_CSV, "w", newline="", encoding="utf-8") as f:
+        f.write(new_first + raw[len(first):])
+    print("[CSV] historical — added Stage / Trading columns to the header")
+
+
+def _hist_list_dates() -> set[str]:
+    dates: set[str] = set()
+    if HISTORICAL_CSV.exists():
+        with open(HISTORICAL_CSV, newline="", encoding="utf-8") as f:
+            for row in csv.reader(f):
+                if len(row) > 2 and ISO_DATE.match(row[0] or ""):
+                    dates.add(clean_text(row[1]))
+    return dates
+
+
+def enrich_historical(data: dict) -> int:
+    """Fill blank Stage / Trading cells of the rows already stored for this list date.
+
+    Returns the number of cells filled. Idempotent; used to self-heal a snapshot that was
+    recorded before stage/trading were scraped, and to pick up changes under the same date.
+    """
+    if not HISTORICAL_CSV.exists() or not _has_status(data):
+        return 0
+    _hist_upgrade_header()
+    dm = _detail_map(data)
+    with open(HISTORICAL_CSV, newline="", encoding="utf-8") as f:
+        rows = list(csv.reader(f))
+    filled = 0
+    for row in rows[1:]:
+        if len(row) > 2 and ISO_DATE.match(row[0] or "") and clean_text(row[1]) == clean_text(data["list_updated"]):
+            d = dm.get(clean_text(row[2]))
+            if not d:
+                continue
+            row.extend([""] * (HIST_STATUS_IDX + 2 - len(row)))
+            for off, key in ((0, "stage"), (1, "trading")):
+                val = d.get(key, "")
+                if val and row[HIST_STATUS_IDX + off] != val:
+                    row[HIST_STATUS_IDX + off] = val
+                    filled += 1
+    if filled:
+        with open(HISTORICAL_CSV, "w", newline="", encoding="utf-8") as f:
+            csv.writer(f).writerows(rows)
+        print(f"[CSV] historical — filled {filled} stage/trading cells for '{data['list_updated']}'")
+    return filled
+
+
 def append_historical_csv(data: dict):
-    """Append new rows to pn17_gn3_historical.csv (skips if date already recorded)."""
+    """Append new rows to pn17_gn3_historical.csv (skips if the list date is already recorded)."""
     run_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
-    existing_dates: set[str] = set()
-    if HISTORICAL_CSV.exists():
-        with open(HISTORICAL_CSV, encoding="utf-8") as f:
-            for row in csv.DictReader(f):
-                existing_dates.add(row.get("List Updated", ""))
-
-    if data["list_updated"] in existing_dates:
+    if clean_text(data["list_updated"]) in _hist_list_dates():
         print(f"[CSV] historical — '{data['list_updated']}' already recorded, skipping.")
         return
 
+    _hist_upgrade_header()
+    dm = _detail_map(data)
     new_rows = []
-    for name in data["pn17_companies"]:
-        new_rows.append([run_date, data["list_updated"], name, "PN17"])
-    for name in data["gn3_companies"]:
-        new_rows.append([run_date, data["list_updated"], name, "GN3"])
+    for names, typ in ((data["pn17_companies"], "PN17"), (data["gn3_companies"], "GN3")):
+        for name in names:
+            d = dm.get(clean_text(name), {})
+            new_rows.append([run_date, data["list_updated"], name, typ] + [""] * 8
+                            + [d.get("stage", ""), d.get("trading", "")])
 
     write_header = not HISTORICAL_CSV.exists()
     with open(HISTORICAL_CSV, "a", newline="", encoding="utf-8") as f:
@@ -515,6 +655,14 @@ def main():
         print("⚠️  last_run.json NOT updated — next run will retry.\n")
         sys.exit(1)
 
+    save_raw_table(current)
+    n_stage = sum(1 for d in current["details"] if d["stage"])
+    n_trading = sum(1 for d in current["details"] if d["trading"])
+    print(f"  Stage found   : {n_stage}/{len(current['details'])}   Trading status found: {n_trading}/{len(current['details'])}")
+    if not _has_status(current):
+        print("⚠️  No stage / trading status found in the table — the page layout may have changed. "
+              "Check bursaMY/raw/table_latest.html.")
+
     # Detect change — compare by list_updated date only (no PDF link anymore)
     changed = (
         not previous
@@ -522,7 +670,15 @@ def main():
     )
 
     if not changed:
-        print("✅ No update detected — nothing to do.\n")
+        # Same list as last run: no email, no new snapshot. Still fill in stage / trading
+        # status for this snapshot if it was recorded without them (self-healing).
+        filled = enrich_historical(current)
+        if _has_status(current):
+            update_companies_csv(current)
+        if filled:
+            print(f"🩹 Filled stage/trading for the existing '{current['list_updated']}' snapshot.\n")
+        else:
+            print("✅ No update detected — nothing to do.\n")
         return
 
     print("🆕 New release detected! Processing...\n")

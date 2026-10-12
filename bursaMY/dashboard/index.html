@@ -465,11 +465,13 @@ function companiesCard() {
       h("td", {}, h("span", { class: "tag" }, c.type)),
       h("td", {}, (c.since_censored ? "≤ " : "") + fmtDate(c.since)),
       h("td", { class: "num" }, (c.since_censored ? "≥ " : "") + fmtYears(c.tenure_days)),
-      h("td", {}, c.stage ? `${c.stage}. ${c.stage_label}` : "–", c.stage ? h("span", { class: "muted" }, `as of ${fmtDate(c.stage_asof)}`) : null),
-      h("td", {}, c.trading ? (c.trading === "Suspended" ? "■ Suspended" : "● Trading") : "–"))))));
+      h("td", {}, c.stage_label ? (c.stage ? `${c.stage}. ${c.stage_label}` : c.stage_label) : "–",
+        c.stage_label && c.stage_asof !== D.latest_snapshot ? h("span", { class: "muted" }, `as of ${fmtDate(c.stage_asof)}`) : null),
+      h("td", {}, c.trading ? (/suspend/i.test(c.trading) ? "■ " : "● ") + c.trading : "–",
+        c.trading && c.trading_asof !== D.latest_snapshot ? h("span", { class: "muted" }, `as of ${fmtDate(c.trading_asof)}`) : null))))));
   if (!cs.length) tbl.append(h("p", { class: "note" }, "No companies match."));
   return h("section", { class: "card", "aria-labelledby": "c-comp" },
-    h("div", { class: "head" }, h("div", {}, h("h2", { id: "c-comp" }, "Companies"), h("p", { class: "sub" }, "Stage and trading status come from Bursa’s PDF lists (last published Nov 2025); newer lists don’t include them."))),
+    h("div", { class: "head" }, h("div", {}, h("h2", { id: "c-comp" }, "Companies"), h("p", { class: "sub" }, "Stage and trading status from Bursa’s list. A date shows when the latest value on record is older than the current list."))),
     toolbar, tbl);
 }
 function renderTableOnly() { const c = $("#ctable"); if (c) c.replaceWith($("#ctable", companiesCard())); }
