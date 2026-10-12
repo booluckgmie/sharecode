@@ -8,11 +8,6 @@ on:
     # gets a different runner. The script is idempotent (no change => no commit/email).
     - cron: "0 6 * * *"
   workflow_dispatch:   # allow manual trigger from GitHub Actions tab
-    inputs:
-      explore:
-        description: "Also run the announcements explorer (writes bursaMY/raw/explore)"
-        type: boolean
-        default: false
 
 # Suppress Node.js 20 deprecation warnings
 env:
@@ -79,12 +74,6 @@ jobs:
         env:
           SCRAPE_OUTCOME: ${{ steps.monitor.outcome }}
         run: python bursaMY/build_dashboard_data.py
-
-      # ── 5c. (manual, temporary) explore Bursa's announcements page ─────────────
-      - name: Explore Bursa announcements
-        if: ${{ inputs.explore }}
-        continue-on-error: true
-        run: xvfb-run -a --server-args="-screen 0 1366x768x24" python bursaMY/tools/explore_announcements.py
 
       # ── 6. Commit and push any changes ──────────────────────────────────────
       - name: Commit & push updates
