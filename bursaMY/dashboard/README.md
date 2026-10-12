@@ -16,6 +16,26 @@ Static page (`index.html`) that reads one file, `data.json`. No backend, no data
 entries/exits, per-company history, and every published snapshot (`snapshots`). The CSVs stay
 the source of truth; `data.json` is rebuilt from them and can be deleted and regenerated.
 
+## Stage and trading status
+
+The scraper reads both from Bursa's table (columns are located from the header text) and keeps
+the raw `<table>` HTML in `bursaMY/raw/` so it can be re-parsed if the parser changes. Run
+`python3 bursaMY/test_parser.py` to check the parser against the real table saved there.
+
+Bursa used four stage columns in the PDF lists (to Nov 2025) and three since 2026. `data.json`
+puts both on the three-stage scale:
+
+| Stage | Label | Bursa wording |
+|---|---|---|
+| 1 | Pending submission of regularisation plan | "Pending submission of Regularisation Plan to authorities" (PDF: "Pending submission to authorities") |
+| 2 | Regularisation plan under review | "Regularisation Plans under authorities' review" (PDF: "Submitted, pending authorities' approval") |
+| 3 | Plan approved, pending upliftment | "Regularisation Plan approved by authorities, pending upliftment from PN17 / GN3" (PDF: "Approval obtained, pending implementation" and "Implemented, pending compliance") |
+
+Folding the two old late stages into stage 3 is an interpretation. The original wording stays in
+the CSVs. A run on an unchanged list fills in or corrects stage/trading for the current snapshot
+(no email, no duplicate rows). Companies that left the list keep their last known value, shown with
+an "as of" date.
+
 ## Run locally
 
 ```bash

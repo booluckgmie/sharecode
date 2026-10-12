@@ -133,13 +133,43 @@ def _fetch_html_playwright(attempts: int = 3) -> str:
     return html
 
 
-STAGE_KEYS = [("pending submission", 1), ("submitted", 2), ("approval obtained", 3), ("implemented", 4)]
+# Bursa's stage columns. Until Nov 2025 (PDF lists) there were four; since 2026 there are three:
+#   1 pending submission of regularisation plan   2 plan under authorities' review
+#   3 plan approved, pending upliftment from PN17/GN3 (the old "approval obtained" and
+#     "implemented, pending compliance" stages)
+STAGE_KEYS = [
+    ("pending submission", 1),
+    ("under authorities", 2), ("review", 2), ("submitted", 2),
+    ("approved by authorities", 3), ("approval obtained", 3), ("implemented", 3), ("upliftment", 3),
+]
 NOT_TICKED = {"", "-", "–", "—", "n/a", "na", "nil"}
 
 
 def clean_text(x) -> str:
     t = x if isinstance(x, str) else x.get_text(" ", strip=True)
     return re.sub(r"\s+", " ", t).strip()
+
+
+def _header_labels(header_rows) -> dict:
+    """Map column index -> most specific header text, honouring rowspan/colspan."""
+    occupied: set[tuple[int, int]] = set()
+    labels: dict[int, list[str]] = {}
+    for r, cells in enumerate(header_rows):
+        c = 0
+        for cell in cells:
+            while (r, c) in occupied:
+                c += 1
+            rs = int(cell.get("rowspan") or 1)
+            cs = int(cell.get("colspan") or 1)
+            for dr in range(rs):
+                for dc in range(cs):
+                    occupied.add((r + dr, c + dc))
+            txt = clean_text(cell)
+            if txt:
+                for dc in range(cs):
+                    labels.setdefault(c + dc, []).append(txt)
+            c += cs
+    return {col: txts[-1] for col, txts in labels.items()}
 
 
 def _stage_no(label: str):
@@ -216,13 +246,18 @@ def _parse_html(html: str) -> dict:
 
     table = soup.find("table")
     if table:
-        # header row = the row with the most <th> cells
+        # Header = the rows before the first section row (single cell with colspan). Bursa
+        # uses <td> for these, with rowspan/colspan, so resolve them into a column grid.
+        header_rows = []
         for row in table.find_all("tr"):
-            ths = row.find_all("th")
-            if len(ths) > len(headers) and len(ths) == len(row.find_all(["td", "th"])):
-                headers = [clean_text(t) for t in ths]
-        trading_idx = next((i for i, h in enumerate(headers) if "trading" in h.lower()), 2)
-        stage_cols = [(i, h) for i, h in enumerate(headers) if _stage_no(h)]
+            cells = row.find_all(["td", "th"])
+            if len(cells) == 1 and cells[0].get("colspan"):
+                break
+            if cells:
+                header_rows.append(cells)
+        headers = _header_labels(header_rows)
+        trading_idx = next((i for i, h in sorted(headers.items()) if "trading" in h.lower()), 2)
+        stage_cols = [(i, h) for i, h in sorted(headers.items()) if _stage_no(h)]
 
         for row in table.find_all("tr"):
             cells = row.find_all(["td", "th"])

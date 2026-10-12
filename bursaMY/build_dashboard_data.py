@@ -33,13 +33,20 @@ STAGE_COLS = [
     "Approval obtained, pending implementation",
     "Implemented, pending compliance with Paragraph 5.2(c) of PN17",
 ]
+# Bursa used four stage columns in the PDF lists (to Nov 2025) and three since 2026.
+# Both are put on the three-stage scale: the old "approval obtained, pending implementation"
+# and "implemented, pending compliance" stages both fold into stage 3.
 STAGE_LABELS = [
-    "Pending submission to authorities",
-    "Submitted, pending approval",
-    "Approved, pending implementation",
-    "Implemented, pending compliance",
+    "Pending submission of regularisation plan",
+    "Regularisation plan under review",
+    "Plan approved, pending upliftment",
 ]
-STAGE_KEYS = [("pending submission", 1), ("submitted", 2), ("approval obtained", 3), ("implemented", 4)]
+PDF_STAGE_TO_SCALE = {1: 1, 2: 2, 3: 3, 4: 3}
+STAGE_KEYS = [
+    ("pending submission", 1),
+    ("under authorities", 2), ("review", 2), ("submitted", 2),
+    ("approved by authorities", 3), ("approval obtained", 3), ("implemented", 3), ("upliftment", 3),
+]
 GAP_DAYS = 75  # snapshots further apart than this => event date is a range
 
 
@@ -141,6 +148,7 @@ def build_snapshots(rows, sum_file, sum_date):
             if not name or not market:
                 continue  # continuation / note lines from the PDF parse
             stage = next((i + 1 for i, c in enumerate(STAGE_COLS) if clean(r.get(c))), None)
+            stage = PDF_STAGE_TO_SCALE.get(stage)
             entries.append(
                 {
                     "name": name,
