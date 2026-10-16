@@ -16,6 +16,51 @@ Static page (`index.html`) that reads one file, `data.json`. No backend, no data
 entries/exits, per-company history, and every published snapshot (`snapshots`). The CSVs stay
 the source of truth; `data.json` is rebuilt from them and can be deleted and regenerated.
 
+## Stage and trading status
+
+The scraper reads both from Bursa's table (columns are located from the header text) and keeps
+the raw `<table>` HTML in `bursaMY/raw/` so it can be re-parsed if the parser changes. Run
+`python3 bursaMY/test_parser.py` to check the parser against the real table saved there.
+
+Bursa used four stage columns in the PDF lists (to Nov 2025) and three since 2026. `data.json`
+puts both on the three-stage scale:
+
+| Stage | Label | Bursa wording |
+|---|---|---|
+| 1 | Pending submission of regularisation plan | "Pending submission of Regularisation Plan to authorities" (PDF: "Pending submission to authorities") |
+| 2 | Regularisation plan under review | "Regularisation Plans under authorities' review" (PDF: "Submitted, pending authorities' approval") |
+| 3 | Plan approved, pending upliftment | "Regularisation Plan approved by authorities, pending upliftment from PN17 / GN3" (PDF: "Approval obtained, pending implementation" and "Implemented, pending compliance") |
+
+Folding the two old late stages into stage 3 is an interpretation. The original wording stays in
+the CSVs. A run on an unchanged list fills in or corrects stage/trading for the current snapshot
+(no email, no duplicate rows). Companies that left the list keep their last known value, shown with
+an "as of" date.
+
+## Site analytics (Vercel Web Analytics)
+
+`index.html` loads Vercel's cookieless Web Analytics script, and the page has a **Site analytics**
+section at the bottom (page views and visitors per day, top pages, referrers, countries, devices,
+browsers). The section stays hidden until it has real data.
+
+**One-time setup (cannot be done from code):**
+
+1. **Enable Web Analytics** for the project: Vercel dashboard > project > *Analytics* tab > *Enable*
+   (or `vercel project web-analytics enable <project>`). Do this for every Vercel project you want
+   measured. Until it is enabled, the script request is a harmless 404.
+2. **Create a token** that can read the team's analytics: Vercel > Account Settings > *Tokens*.
+3. **Add it as a GitHub secret** named `VERCEL_TOKEN` (repo > Settings > Secrets and variables >
+   Actions). The project and team ids are already set in the workflow.
+
+After that the daily workflow runs `bursaMY/tools/fetch_web_analytics.py`, which reads
+`GET /v1/query/web-analytics/visits/aggregate` for the last 30 days and commits
+`dashboard/analytics.json`. If the token is missing or the API call fails, the section is hidden
+(or shows the last good numbers with a "last updated" warning); the monitor run is never failed.
+`python3 bursaMY/tools/test_web_analytics.py` runs the offline tests.
+
+The numbers are aggregated, with no cookies and no personal data. The section is public if the
+site is public. To keep it private, remove the `VERCEL_TOKEN` secret (no `analytics.json` is
+produced) or password-protect the deployment in Vercel.
+
 ## Run locally
 
 ```bash
@@ -35,6 +80,11 @@ python3 -m http.server -d bursaMY/dashboard 8000
 `ignoreCommand` so other workflows in this repo (gold, weather, ...) don't trigger redeploys: a
 deploy only happens when something under `bursaMY/dashboard/` changed.
 
+The repo root also has a `vercel.json` that serves `bursaMY/dashboard` as a static site, so a
+Vercel project that still has the default Root Directory (the repo root) deploys the dashboard
+instead of failing with "No python entrypoint found". Setting Root Directory to
+`bursaMY/dashboard` is the cleaner setup; when it is set, the root `vercel.json` is ignored.
+
 Vercel's free Hobby plan is for non-commercial use. Move to Pro before charging customers.
 
 ## Files
@@ -43,4 +93,5 @@ Vercel's free Hobby plan is for non-commercial use. Move to Pro before charging 
 |---|---|
 | `index.html` | The dashboard (HTML, CSS and JS in one file) |
 | `data.json` | Generated data. Committed by the workflow; don't edit by hand |
+| `analytics.json` | Site traffic snapshot (only exists once the setup above is done) |
 | `vercel.json` | Cache and deploy-skip rules for Vercel |
