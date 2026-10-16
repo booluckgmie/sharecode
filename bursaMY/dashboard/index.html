@@ -47,6 +47,8 @@
   .card .sub { color:var(--ink-2); font-size:13px; margin:2px 0 0; }
   .card .head { display:flex; justify-content:space-between; gap:12px; align-items:flex-start; margin-bottom:10px; }
   .grid { display:grid; gap:14px; grid-template-columns:repeat(12,1fr); }
+  .grid > div { display:flex; flex-direction:column; min-width:0; }
+  .grid > div > .card { flex:1; }
   .span-12 { grid-column:span 12; } .span-8 { grid-column:span 8; } .span-7 { grid-column:span 7; }
   .span-6 { grid-column:span 6; } .span-5 { grid-column:span 5; } .span-4 { grid-column:span 4; }
   @media (max-width: 860px) { .grid > * { grid-column:span 12 !important; } }
@@ -108,8 +110,26 @@
   footer { margin-top:26px; color:var(--muted); font-size:12.5px; display:grid; gap:6px; }
   footer ul { margin:0; padding-left:18px; }
   .err { padding:24px; border:1px dashed var(--axis); border-radius:12px; color:var(--ink-2); }
+  /* site analytics */
+  .sec-head { margin:34px 0 12px; }
+  .sec-head h2 { font-size:17px; margin:0; font-weight:600; }
+  .sec-head p { margin:2px 0 0; color:var(--ink-2); font-size:13px; }
+  .kpis.three { grid-template-columns:repeat(3,1fr); }
+  @media (max-width: 860px) { .kpis.three { grid-template-columns:1fr; } }
+  .rank { list-style:none; margin:0; padding:0; display:grid; gap:11px; }
+  .rank li { min-width:0; }
+  .rk-top { display:flex; justify-content:space-between; gap:12px; font-size:14px; }
+  .rk-l { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .rk-top b { font-variant-numeric:tabular-nums; font-weight:600; }
+  .rk-bar { height:8px; margin-top:5px; background:var(--wash); border-radius:4px; }
+  .rk-bar i { display:block; height:100%; background:var(--seq); border-radius:4px; }
+  .empty { color:var(--ink-2); margin:6px 0; }
   .sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
 </style>
+<!-- Vercel Web Analytics (cookieless). Records page views once Analytics is enabled for the
+     Vercel project; before that the script request is a harmless 404. -->
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -163,10 +183,10 @@ function niceMax(v, steps = 4, int = false) {
 }
 const tip = $("#tip");
 function showTip(x, y, title, rows, foot) {
-  tip.replaceChildren(h("div", { class: "t" }, title),
+  tip.replaceChildren(...[h("div", { class: "t" }, title),
     ...rows.map(r => h("div", { class: "r" },
       h("span", {}, r.color ? h("i", { style: `border-color:${r.color}` }) : null, r.label), h("b", {}, r.value))),
-    foot ? h("div", { class: "t", style: "margin:4px 0 0" }, foot) : null);
+    foot ? h("div", { class: "t", style: "margin:4px 0 0" }, foot) : null].filter(Boolean));
   tip.classList.add("on");
   const w = tip.offsetWidth, hgt = tip.offsetHeight;
   let left = x + 14, top = y - hgt - 10;
@@ -226,7 +246,8 @@ function lineChart(host, cfg) {
   const m = { l: 44, r: cfg.endLabels ? 84 : 20, t: 14, b: 30 };
   const pts = cfg.points;
   if (!pts.length) { host.append(h("p", { class: "note" }, "No data in this range.")); return; }
-  const x0 = Math.min(rangeStart(), t(pts[0].date)), x1 = t(D.latest_snapshot);
+  const x0 = cfg.domain ? cfg.domain[0] : Math.min(rangeStart(), t(pts[0].date));
+  const x1 = cfg.domain ? cfg.domain[1] : t(D.latest_snapshot);
   const X = ms => m.l + (ms - x0) / Math.max(1, x1 - x0) * (W - m.l - m.r);
   const ymaxRaw = Math.max(...pts.flatMap(p => cfg.series.map(se => p[se.key] ?? 0)));
   const { max, step } = niceMax(ymaxRaw * (cfg.pad || 1), 4, !!cfg.int);
@@ -241,6 +262,9 @@ function lineChart(host, cfg) {
   const spanDays = (x1 - x0) / MS, y0 = new Date(x0).getUTCFullYear(), y1 = new Date(x1).getUTCFullYear();
   const ticks = [];
   if (spanDays > 900) { for (let y = y0 + 1; y <= y1; y++) ticks.push([Date.UTC(y, 0, 1), String(y)]); }
+  else if (spanDays <= 62) {            // short ranges (e.g. 30 days of traffic): a label every 7 days
+    for (let ms = x0; ms <= x1; ms += 7 * MS) { const d = new Date(ms); ticks.push([ms, `${d.getUTCDate()} ${MON[d.getUTCMonth()]}`]); }
+  }
   else {
     const per = spanDays > 300 ? 3 : 1;
     let d = new Date(Date.UTC(new Date(x0).getUTCFullYear(), new Date(x0).getUTCMonth() + 1, 1));
@@ -476,6 +500,54 @@ function companiesCard() {
 }
 function renderTableOnly() { const c = $("#ctable"); if (c) c.replaceWith($("#ctable", companiesCard())); }
 
+/* ---------- site analytics (snapshot of Vercel Web Analytics, written by the workflow) ---------- */
+let A = null;
+const regionNames = (() => { try { return new Intl.DisplayNames(["en"], { type: "region" }); } catch (_) { return null; } })();
+function rankCard(id, title, sub, items, label) {
+  const max = Math.max(1, ...items.map(i => i.pageviews));
+  return h("section", { class: "card", "aria-labelledby": id },
+    h("div", { class: "head" }, h("div", {}, h("h2", { id }, title), h("p", { class: "sub" }, sub))),
+    items.length ? h("ol", { class: "rank" }, items.map(i => {
+      const name = label(i.label);
+      return h("li", { title: `${name}: ${i.pageviews.toLocaleString()} page views, ${i.visitors.toLocaleString()} visitors` },
+        h("div", { class: "rk-top" }, h("span", { class: "rk-l" }, name), h("b", {}, i.pageviews.toLocaleString())),
+        h("div", { class: "rk-bar" }, h("i", { style: `width:${(i.pageviews / max * 100).toFixed(1)}%` })));
+    })) : h("p", { class: "empty" }, "No data yet."));
+}
+function analyticsSection() {
+  const a = A, tot = a.totals, days = a.period.days;
+  const age = Math.max(0, Math.floor((Date.now() - Date.parse(a.generated_at)) / MS));
+  const stale = a.stale || age > 3;
+  const when = age === 0 ? "today" : `${age} day${age > 1 ? "s" : ""} ago`;
+  const head = h("div", { class: "sec-head" }, h("h2", {}, "Site analytics"),
+    h("p", {}, `Visits to this dashboard, ${fmtDate(a.period.since)} – ${fmtDate(a.period.until)}. Cookieless Vercel Web Analytics; no personal data.`
+      + (stale ? ` ⚠ Last updated ${when}.` : "")));
+  if (!tot.pageviews) {
+    return h("div", {}, head, h("div", { class: "card" }, h("p", { class: "empty" }, "No visits recorded yet. Numbers appear here within a day of the first visit.")));
+  }
+  const tile = (label, value, delta, points) => h("div", { class: "card tile" },
+    h("div", { class: "label" }, label), h("div", { class: "value" }, value), h("div", { class: "delta" }, delta || "\u00a0"),
+    points ? spark(points) : null);
+  const kpi = h("section", { class: "kpis three", "aria-label": "Site traffic headline numbers" },
+    tile("Page views", tot.pageviews.toLocaleString(), `last ${days} days`, a.daily.map(d => d.pageviews)),
+    tile("Visitors per day", tot.avg_daily_visitors.toLocaleString(), "daily average", a.daily.map(d => d.visitors)),
+    tile("Busiest day", tot.peak_day ? tot.peak_day.pageviews.toLocaleString() : "–", tot.peak_day ? `page views · ${fmtDate(tot.peak_day.date)}` : "", null));
+  const chart = chartCard("c-traffic", "Daily visits", "Page views and visitors per day.",
+    [{ label: "Page views", color: "var(--s1)" }, { label: "Visitors", color: "var(--s2)" }],
+    host => lineChart(host, { points: a.daily, series: [{ key: "pageviews", name: "Page views", color: "--s1" }, { key: "visitors", name: "Visitors", color: "--s2" }],
+      domain: [t(a.daily[0].date), t(a.daily[a.daily.length - 1].date)], endLabels: true, int: true, height: 240, aria: "Line chart of daily page views and visitors" }),
+    { cols: ["Date", "Page views", "Visitors"], rows: a.daily.map(d => [fmtDate(d.date), d.pageviews, d.visitors]) });
+  const cap = x => x ? x[0].toUpperCase() + x.slice(1) : "Unknown";
+  const country = l => (l && l.length === 2 && regionNames ? (regionNames.of(l.toUpperCase()) || l) : l) || "Unknown";
+  return h("div", {}, head, kpi, h("div", { class: "grid" },
+    h("div", { class: "span-12" }, chart),
+    h("div", { class: "span-6" }, rankCard("c-pages", "Top pages", "By page views", a.top_pages, l => l || "/")),
+    h("div", { class: "span-6" }, rankCard("c-ref", "Where visitors come from", "Referring sites", a.referrers, l => l || "Direct / none")),
+    h("div", { class: "span-4" }, rankCard("c-cty", "Countries", "By page views", a.countries, country)),
+    h("div", { class: "span-4" }, rankCard("c-dev", "Devices", "By page views", a.devices, cap)),
+    h("div", { class: "span-4" }, rankCard("c-brw", "Browsers", "By page views", a.browsers, l => l || "Unknown"))));
+}
+
 /* ---------- page ---------- */
 function seg(label, opts, cur, set) {
   return h("div", { class: "grp" }, label, h("div", { class: "seg", role: "group", "aria-label": label },
@@ -496,7 +568,8 @@ function render() {
       h("div", { class: "span-6" }, yearlyCard()),
       h("div", { class: "span-12" }, tenureCard()),
       h("div", { class: "span-12" }, eventsCard()),
-      h("div", { class: "span-12" }, companiesCard())));
+      h("div", { class: "span-12" }, companiesCard())),
+    A && A.status === "ok" ? analyticsSection() : null);
   window.scrollTo(0, y);
 }
 let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => D && render(), 150); });
@@ -527,6 +600,10 @@ async function main() {
     $("#asof").textContent = "No data";
     return;
   }
+  try {                                   // optional: traffic snapshot written by the workflow
+    if (window.__PN17_ANALYTICS__) A = window.__PN17_ANALYTICS__;
+    else { const r = await fetch("analytics.json", { cache: "no-cache" }); if (r.ok) A = await r.json(); }
+  } catch (_) { A = null; }
   $("#asof").textContent = `List as of ${fmtDate(D.latest_snapshot)}`;
   const okAt = D.last_success_at || D.generated_at;
   const age = Math.max(0, Math.floor((Date.now() - Date.parse(okAt)) / MS));

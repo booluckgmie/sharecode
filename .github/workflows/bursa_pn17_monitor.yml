@@ -75,6 +75,16 @@ jobs:
           SCRAPE_OUTCOME: ${{ steps.monitor.outcome }}
         run: python bursaMY/build_dashboard_data.py
 
+      # ── 5c. Pull Vercel Web Analytics for the "Site analytics" section ─────────
+      #    Needs the VERCEL_TOKEN repo secret; without it the section simply stays hidden.
+      - name: Fetch site analytics
+        continue-on-error: true
+        env:
+          VERCEL_TOKEN:      ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_PROJECT_ID: prj_XCp82iOKgpQ42W6doyOTAhklLow7
+          VERCEL_TEAM_ID:    team_YWXoh9J5uvtJSnOIlBq2H8Rl
+        run: python bursaMY/tools/fetch_web_analytics.py
+
       # ── 6. Commit and push any changes ──────────────────────────────────────
       - name: Commit & push updates
         run: |
@@ -100,6 +110,8 @@ jobs:
                   bursaMY/summary-reportPN17.csv \
                   bursaMY/last_run.json \
                   bursaMY/dashboard/data.json
+          # Site analytics snapshot (only if the fetch step produced it)
+          [ -f bursaMY/dashboard/analytics.json ] && git add -f bursaMY/dashboard/analytics.json || true
           # Raw scraped table, kept so stage/trading can be re-parsed later
           [ -d bursaMY/raw ] && git add -f bursaMY/raw || true
           

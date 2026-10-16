@@ -36,6 +36,31 @@ the CSVs. A run on an unchanged list fills in or corrects stage/trading for the 
 (no email, no duplicate rows). Companies that left the list keep their last known value, shown with
 an "as of" date.
 
+## Site analytics (Vercel Web Analytics)
+
+`index.html` loads Vercel's cookieless Web Analytics script, and the page has a **Site analytics**
+section at the bottom (page views and visitors per day, top pages, referrers, countries, devices,
+browsers). The section stays hidden until it has real data.
+
+**One-time setup (cannot be done from code):**
+
+1. **Enable Web Analytics** for the project: Vercel dashboard > project > *Analytics* tab > *Enable*
+   (or `vercel project web-analytics enable <project>`). Do this for every Vercel project you want
+   measured. Until it is enabled, the script request is a harmless 404.
+2. **Create a token** that can read the team's analytics: Vercel > Account Settings > *Tokens*.
+3. **Add it as a GitHub secret** named `VERCEL_TOKEN` (repo > Settings > Secrets and variables >
+   Actions). The project and team ids are already set in the workflow.
+
+After that the daily workflow runs `bursaMY/tools/fetch_web_analytics.py`, which reads
+`GET /v1/query/web-analytics/visits/aggregate` for the last 30 days and commits
+`dashboard/analytics.json`. If the token is missing or the API call fails, the section is hidden
+(or shows the last good numbers with a "last updated" warning); the monitor run is never failed.
+`python3 bursaMY/tools/test_web_analytics.py` runs the offline tests.
+
+The numbers are aggregated, with no cookies and no personal data. The section is public if the
+site is public. To keep it private, remove the `VERCEL_TOKEN` secret (no `analytics.json` is
+produced) or password-protect the deployment in Vercel.
+
 ## Run locally
 
 ```bash
@@ -68,4 +93,5 @@ Vercel's free Hobby plan is for non-commercial use. Move to Pro before charging 
 |---|---|
 | `index.html` | The dashboard (HTML, CSS and JS in one file) |
 | `data.json` | Generated data. Committed by the workflow; don't edit by hand |
+| `analytics.json` | Site traffic snapshot (only exists once the setup above is done) |
 | `vercel.json` | Cache and deploy-skip rules for Vercel |
