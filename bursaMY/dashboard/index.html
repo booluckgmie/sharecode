@@ -126,10 +126,6 @@
   .empty { color:var(--ink-2); margin:6px 0; }
   .sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
 </style>
-<!-- Vercel Web Analytics (cookieless). Records page views once Analytics is enabled for the
-     Vercel project; before that the script request is a harmless 404. -->
-<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
-<script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -618,5 +614,9 @@ async function main() {
 }
 main();
 </script>
+<!-- Vercel Web Analytics (cookieless). Records page views once Analytics is enabled for the
+     Vercel project; before that the script request is a harmless 404. -->
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
