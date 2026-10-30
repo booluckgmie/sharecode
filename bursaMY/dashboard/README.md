@@ -18,8 +18,8 @@ the source of truth; `data.json` is rebuilt from them and can be deleted and reg
 
 ## Failure alerts
 
-Bursa's Cloudflare blocks some runner IPs, so roughly four runs in ten fail to scrape, and the next
-scheduled run usually recovers (the longest gap between successes seen was about 29 hours). A failed
+Bursa's Cloudflare blocks some runner IPs, so about half of the runs fail to scrape (14 of 29 between
+16 and 30 Oct), and the next scheduled run usually recovers (the longest gap between successes seen was about 29 hours). A failed
 scrape therefore does not turn the run red: the workflow prints a warning and keeps going.
 `tools/check_scrape_freshness.py` fails the run (GitHub emails you) only when no scrape has succeeded
 for **36 hours**, and the dashboard shows "Data may be out of date" under the same rule. Until then
