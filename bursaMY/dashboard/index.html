@@ -601,12 +601,16 @@ async function main() {
     else { const r = await fetch("analytics.json", { cache: "no-cache" }); if (r.ok) A = await r.json(); }
   } catch (_) { A = null; }
   $("#asof").textContent = `List as of ${fmtDate(D.latest_snapshot)}`;
+  // Freshness pill. A single failed scrape is normal (Cloudflare) and the next run recovers, so
+  // it only warns once the data is older than 36 hours; same limit as the workflow's alert.
   const okAt = D.last_success_at || D.generated_at;
-  const age = Math.max(0, Math.floor((Date.now() - Date.parse(okAt)) / MS));
+  const hrs = Math.max(0, (Date.now() - Date.parse(okAt)) / 3600000);
+  const when = hrs < 1 ? "less than an hour ago" : hrs < 48 ? `${Math.round(hrs)} hours ago`
+    : `${Math.floor(hrs / 24)} day${Math.floor(hrs / 24) > 1 ? "s" : ""} ago`;
+  const outdated = hrs > 36;
   const failed = D.last_check && D.last_check.status === "failure";
-  const when = age === 0 ? "today" : `${age} day${age > 1 ? "s" : ""} ago`;
-  $("#fresh").textContent = failed ? `⚠ Last check failed · last success ${when}` : age > 3 ? `⚠ Last checked ${when}` : `Checked ${when}`;
-  $("#fresh").title = `Last successful check: ${okAt}`;
+  $("#fresh").textContent = outdated ? `⚠ Data may be out of date · last updated ${when}` : `Checked ${when}`;
+  $("#fresh").title = `Last successful check: ${okAt}` + (failed && !outdated ? " · the latest attempt failed and will be retried" : "");
   $("#foot").replaceChildren(
     h("div", {}, `Source: ${D.source}. ${D.n_snapshots} published lists since ${fmtDate(D.first_snapshot)}. For information only — not investment advice.`),
     D.data_quality.length ? h("div", {}, "Data notes:", h("ul", {}, D.data_quality.map(n => h("li", {}, n)))) : null);

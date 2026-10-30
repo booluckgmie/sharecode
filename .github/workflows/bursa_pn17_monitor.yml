@@ -127,9 +127,10 @@ jobs:
           # Push with force-with-lease (safe force push)
           git push --force-with-lease origin HEAD:${CURRENT_BRANCH}
 
-      # ── 7. Keep the run red when the scrape failed (after data.json was updated) ──
-      - name: Fail run if the scrape failed
+      # ── 7. Alert only when it matters ─────────────────────────────────────────────
+      #    One blocked scrape is normal (Cloudflare) and the next run recovers, so a failed
+      #    scrape only warns. The run goes red (and GitHub emails) when no scrape has
+      #    succeeded for 36 hours.
+      - name: Check scrape freshness
         if: steps.monitor.outcome == 'failure'
-        run: |
-          echo "::error::Bursa scrape failed - dashboard shows the last successful data."
-          exit 1
+        run: python bursaMY/tools/check_scrape_freshness.py

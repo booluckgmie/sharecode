@@ -16,6 +16,16 @@ Static page (`index.html`) that reads one file, `data.json`. No backend, no data
 entries/exits, per-company history, and every published snapshot (`snapshots`). The CSVs stay
 the source of truth; `data.json` is rebuilt from them and can be deleted and regenerated.
 
+## Failure alerts
+
+Bursa's Cloudflare blocks some runner IPs, so roughly four runs in ten fail to scrape, and the next
+scheduled run usually recovers (the longest gap between successes seen was about 29 hours). A failed
+scrape therefore does not turn the run red: the workflow prints a warning and keeps going.
+`tools/check_scrape_freshness.py` fails the run (GitHub emails you) only when no scrape has succeeded
+for **36 hours**, and the dashboard shows "Data may be out of date" under the same rule. Until then
+the page shows "Checked N hours ago". Change `LIMIT_HOURS` in the script and the `36` in `index.html`
+together if you want a different limit. Tests: `python3 bursaMY/tools/test_check_scrape_freshness.py`.
+
 ## Stage and trading status
 
 The scraper reads both from Bursa's table (columns are located from the header text) and keeps
