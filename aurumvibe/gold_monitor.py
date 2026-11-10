@@ -100,6 +100,64 @@ class SpotYFinanceFetcher:
         return df
 
 
+class BackupSpotFetcher:
+    """
+    Backup when Yahoo Finance is unavailable (rate-limited / blocked).
+    No free source offers keyless gold *history*, so:
+      history = last saved CSV   (price / USD / FX per trading day)
+      today   = live XAU/USD spot (gold-api.com) x live USD/MYR
+                (Frankfurter/ECB, fallback open.er-api.com)
+    Today's row replaces/extends the cached series, so MA, 30D range, signals and
+    charts keep working with a fresh price instead of a stale one.
+    """
+    GOLD_URL = "https://api.gold-api.com/price/XAU"
+    FX_URLS  = [
+        ("https://api.frankfurter.dev/v1/latest?base=USD&symbols=MYR",
+         lambda j: j["rates"]["MYR"]),
+        ("https://open.er-api.com/v6/latest/USD",
+         lambda j: j["rates"]["MYR"]),
+    ]
+
+    @staticmethod
+    def _get_json(url, tries=3):
+        last = None
+        for i in range(tries):
+            try:
+                r = requests.get(url, timeout=15,
+                                 headers={"User-Agent": "Mozilla/5.0 AurumVibe"})
+                r.raise_for_status()
+                return r.json()
+            except Exception as e:
+                last = e
+                time.sleep(2 * (i + 1))
+        raise ConnectionError(f"{url}: {last}")
+
+    def get_data(self) -> pd.DataFrame:
+        hist = load_cached_history()
+        usd = float(self._get_json(self.GOLD_URL)["price"])
+        rate, errs = None, []
+        for url, pick in self.FX_URLS:
+            try:
+                rate = float(pick(self._get_json(url)))
+                break
+            except Exception as e:
+                errs.append(str(e))
+        if rate is None:
+            raise ConnectionError(f"No FX source reachable: {errs}")
+        if not (500 < usd < 20000 and 2 < rate < 10):
+            raise ValueError(f"Implausible backup quote: gold={usd}, USDMYR={rate}")
+
+        today = pd.Timestamp(datetime.utcnow().date())
+        row = pd.DataFrame(
+            {"USD_Price": [usd], "Rate": [rate],
+             "Price": [usd / 31.1035 * rate]}, index=[today])
+        df = pd.concat([hist[hist.index < today], row])
+        print(f"✅ [BACKUP] gold ${usd:,.2f}/oz × {rate:.4f} = "
+              f"RM {row['Price'].iloc[0]:.2f}/g on {today:%d %b %Y} "
+              f"({len(df)} points)")
+        return df
+
+
 class PublicGoldFetcher:
     """
     Scrapes daily local retail price from publicgold.me/yes/gold-price-today.
@@ -182,8 +240,12 @@ def get_gold_data() -> tuple:
             df = SpotYFinanceFetcher().get_data()
             return df, "Yahoo Finance (GC=F × MYR=X)"
         except Exception as e:
-            print(f"⚠️  Live fetch failed ({e}); falling back to cached CSV history.")
-            return load_cached_history(), "CACHED (Yahoo rate-limited)"
+            print(f"⚠️  Yahoo failed ({e}); trying backup source.")
+            try:
+                return BackupSpotFetcher().get_data(), "BACKUP (gold-api.com × ECB FX)"
+            except Exception as e2:
+                print(f"⚠️  Backup failed ({e2}); falling back to cached CSV history.")
+                return load_cached_history(), "CACHED (live sources unavailable)"
     else:
         raise ValueError(
             f"Unknown AURUM_DATA_SOURCE='{DATA_SOURCE}'. "
@@ -601,8 +663,13 @@ def main():
         change_str = (f"+RM {change:.2f}" if change >= 0
                       else f"-RM {abs(change):.2f}")
 
-        stale_note = (f"⚠️ *Live data unavailable* (Yahoo rate-limited) — using last saved "
-                      f"data from {df.index[-1]:%d %b %Y}\n\n") if stale else ""
+        if stale:
+            stale_note = (f"⚠️ *Live data unavailable* — using last saved "
+                          f"data from {df.index[-1]:%d %b %Y}\n\n")
+        elif source_label.startswith("BACKUP"):
+            stale_note = "ℹ️ Yahoo unavailable — price from backup source (spot XAU × ECB FX)\n\n"
+        else:
+            stale_note = ""
         caption = (
             f"{stale_note}"
             f"📊 *AurumVibe Daily Gold Report*\n\n"
