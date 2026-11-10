@@ -19,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.9  # Set the desired Python version
+          python-version: "3.11"  # Set the desired Python version
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
