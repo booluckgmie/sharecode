@@ -29,7 +29,7 @@ jobs:
     - name: Set up Python # Step to set up Python environment
       uses: actions/setup-python@v4
       with:
-        python-version: 3.9 # Specify the Python version to use
+        python-version: "3.11" # Specify the Python version to use
 
     - name: Install dependencies # Step to install required Python packages
       run: |
