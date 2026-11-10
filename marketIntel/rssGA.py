@@ -59,7 +59,7 @@ def fetch_and_process_google_alerts(url: str) -> pd.DataFrame:
 
 # Main script to fetch, process, and save data to a CSV
 feed_url = "https://www.google.com.my/alerts/feeds/00888648782241832453/695303575284904172"
-csv_file = "petronasGAlerts2025.csv"
+csv_file = "marketGAlerts2025.csv"
 
 # Fetch the new data
 new_df = fetch_and_process_google_alerts(feed_url)
