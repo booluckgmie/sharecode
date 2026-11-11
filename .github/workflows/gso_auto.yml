@@ -46,8 +46,14 @@ jobs:
           exit 0
         else
           git commit -m "Update data - $(date +'%Y-%m-%d %H:%M:%S')"
-          git pull --rebase origin master
-          git push origin master
+          pushed=0
+          for i in 1 2 3 4 5; do
+            if git push origin HEAD:master; then pushed=1; break; fi
+            echo "Push rejected (attempt $i of 5): rebasing onto the latest master and retrying"
+            git pull --rebase --autostash origin master || exit 1
+            sleep $((RANDOM % 5 + 2))
+          done
+          [ "$pushed" = 1 ] || { echo "Push failed after 5 attempts"; exit 1; }
           echo "Changes committed and pushed successfully"
         fi
       continue-on-error: false
