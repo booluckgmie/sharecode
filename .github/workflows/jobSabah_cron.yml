@@ -58,5 +58,12 @@ jobs:
           else
             DATE=$(TZ='Asia/Kuala_Lumpur' date '+%Y-%m-%d %H:%M MYT')
             git commit -m "chore: scrape sabah jobs – ${DATE}"
-            git push
+            pushed=0
+            for i in 1 2 3 4 5; do
+              if git push origin HEAD:master; then pushed=1; break; fi
+              echo "Push rejected (attempt $i of 5): rebasing onto the latest master and retrying"
+              git pull --rebase --autostash origin master || exit 1
+              sleep $((RANDOM % 5 + 2))
+            done
+            [ "$pushed" = 1 ] || { echo "Push failed after 5 attempts"; exit 1; }
           fi
