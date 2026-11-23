@@ -290,11 +290,13 @@ function lineChart(host, cfg) {
     for (let i = 1; i < valid.length; i++) {
       const a = valid[i - 1], b = valid[i], gap = (t(b.date) - t(a.date)) / MS;
       s("line", { x1: X(t(a.date)), y1: Y(a[se.key]), x2: X(t(b.date)), y2: Y(b[se.key]), stroke: col, "stroke-width": 2, "stroke-linecap": "round",
-        "stroke-dasharray": gap > GAP ? "1 6" : "none" }, svg);
+        "stroke-dasharray": gap > GAP ? "1 6" : (a.reconstructed || b.reconstructed) ? "6 4" : "none" }, svg);
     }
     valid.forEach((p, i) => {
       const sparse = (valid[i - 1] && (t(p.date) - t(valid[i - 1].date)) / MS > GAP) || (valid[i + 1] && (t(valid[i + 1].date) - t(p.date)) / MS > GAP);
-      if (sparse || i === 0 || i === valid.length - 1 || valid.length < 4)
+      if (p.reconstructed)
+        s("circle", { cx: X(t(p.date)), cy: Y(p[se.key]), r: 4, fill: "var(--surface)", stroke: col, "stroke-width": 2 }, svg);
+      else if (sparse || i === 0 || i === valid.length - 1 || valid.length < 4)
         s("circle", { cx: X(t(p.date)), cy: Y(p[se.key]), r: 4, fill: col, stroke: "var(--surface)", "stroke-width": 2 }, svg);
     });
     dots.push(s("circle", { r: 5, fill: col, stroke: "var(--surface)", "stroke-width": 2, opacity: 0 }, svg));
@@ -320,7 +322,7 @@ function lineChart(host, cfg) {
     const r = svg.getBoundingClientRect();
     showTip(cx ?? r.left + px * r.width / W, cy ?? r.top + 40, fmtDate(p.date),
       cfg.series.filter(se => p[se.key] != null).map(se => ({ color: `var(${se.color})`, label: se.name, value: (se.fmt || (v => v))(p[se.key]) })),
-      cfg.tipFoot ? cfg.tipFoot(p) : "");
+      [cfg.tipFoot ? cfg.tipFoot(p) : "", p.reconstructed ? "Reconstructed from dated news and filings, not a Bursa list" : ""].filter(Boolean).join(" · "));
   }
   function nearest(clientX) {
     const r = svg.getBoundingClientRect(), mx = (clientX - r.left) * W / r.width;
@@ -366,6 +368,7 @@ function trendCard() {
   if (all || state.type === "GN3") series.push({ key: "gn3", name: "GN3", color: "--s2" });
   const legend = series.map(se => ({ label: se.name, color: `var(${se.color})` }));
   if (series.length > 1) legend.push({ label: "dotted = no snapshots in between", color: "var(--muted)" });
+  if (pts.some(p => p.reconstructed)) legend.push({ label: "hollow dot, dashed line = reconstructed from news and filings", color: "var(--muted)" });
   return chartCard("c-trend", "Companies on the list over time",
     "Count per published list. Hover or use ← → for values.", legend,
     host => lineChart(host, { points: pts, series, endLabels: true, int: true, height: 290, aria: "Line chart of PN17 and GN3 company counts over time",
@@ -614,7 +617,7 @@ async function main() {
   $("#fresh").textContent = outdated ? `⚠ Data may be out of date · last updated ${when}` : `Checked ${when}`;
   $("#fresh").title = `Last successful check: ${okAt}` + (failed && !outdated ? " · the latest attempt failed and will be retried" : "");
   $("#foot").replaceChildren(
-    h("div", {}, `Source: ${D.source}. ${D.n_snapshots} published lists since ${fmtDate(D.first_snapshot)}. For information only — not investment advice.`),
+    h("div", {}, `Source: ${D.source}. ${D.n_snapshots} published lists since ${fmtDate(D.first_snapshot)}${D.n_reconstructed ? `, plus ${D.n_reconstructed} points reconstructed from news and filings` : ""}. For information only — not investment advice.`),
     D.data_quality.length ? h("div", {}, "Data notes:", h("ul", {}, D.data_quality.map(n => h("li", {}, n)))) : null);
   render();
 }

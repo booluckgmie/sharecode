@@ -46,6 +46,30 @@ the CSVs. A run on an unchanged list fills in or corrects stage/trading for the 
 (no email, no duplicate rows). Companies that left the list keep their last known value, shown with
 an "as of" date.
 
+## Gaps between published lists (reconstructed points)
+
+When two published lists are more than 75 days apart (3 Nov 2025 to 2 Apr 2026 is 150 days),
+`build_dashboard_data.py` can fill the gap with **reconstructed** snapshots built from
+`gap_events.json`: dated company exits taken from news and company filings, each with a source link.
+Bursa did not publish these lists, so they are labelled everywhere:
+
+- `data.json`: the snapshot has `"source": "reconstructed"` and its series point has
+  `"reconstructed": true`, with no `listed` or `pct` (those only exist for real Bursa lists).
+- The chart draws them as hollow dots with dashed lines, the tooltip says "Reconstructed from dated
+  news and filings, not a Bursa list", and the footer and data notes count them separately
+  (`n_snapshots` counts published lists only; `n_reconstructed` counts the others).
+- KPIs, "a year earlier", per-company tenure and `last_seen` use published lists only.
+
+**A gap is reconstructed only if the dated exits explain it exactly**: applying them one by one to the
+earlier list must give the later list. If an event is missing, names a company that was not listed,
+or is an entry (not supported), the gap is left as date ranges and the data note says so.
+For 3 Nov 2025 to 2 Apr 2026: 19 companies (15 PN17 + 4 GN3), then Bintai Kinden left on 27 Feb (18),
+Ireka was delisted on 10 Mar (17) and Pharmaniaga left on 17 Mar (16 = the 2 Apr list).
+
+Add an event to `gap_events.json` (`company` must match the name on the lists, `kind: "exited"`, an ISO
+`date`, `how`, `source`) and run `python3 bursaMY/build_dashboard_data.py`.
+`python3 bursaMY/test_reconstruct.py` checks the rules and the committed data.
+
 ## Site analytics (Vercel Web Analytics)
 
 `index.html` loads Vercel's cookieless Web Analytics script, and the page has a **Site analytics**

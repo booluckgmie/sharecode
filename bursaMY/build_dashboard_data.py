@@ -48,6 +48,7 @@ STAGE_KEYS = [
     ("approved by authorities", 3), ("approval obtained", 3), ("implemented", 3), ("upliftment", 3),
 ]
 GAP_DAYS = 75  # snapshots further apart than this => event date is a range
+GAP_FILE = ROOT / "gap_events.json"
 
 
 # ── helpers ───────────────────────────────────────────────────────────────────
@@ -206,6 +207,36 @@ def build_aliases(snaps):
     return alias
 
 
+def add_reconstructed(snaps, gap_events, key_of):
+    """Insert snapshots inside gaps longer than GAP_DAYS by applying the dated, sourced exits in
+    gap_events.json to the earlier list. This is done only when those exits turn the earlier
+    official list into the later one *exactly*; otherwise the gap is left as it was, so a missing or
+    wrong event can never invent a company list. Inserted snapshots have src "reconstructed", no
+    Bursa summary row, and carry over the earlier list's last known stage / trading status.
+
+    Returns (snapshots, [(gap_start, gap_end, n_inserted)])."""
+    out, notes = list(snaps[:1]), []
+    for a, b in zip(snaps, snaps[1:]):
+        if (b["date"] - a["date"]).days > GAP_DAYS:
+            lo, hi = a["date"].isoformat(), b["date"].isoformat()
+            evs = sorted((g for g in gap_events if lo < g["date"] < hi), key=lambda g: g["date"])
+            members, steps, ok = dict(a["members"]), [], bool(evs)
+            for i, g in enumerate(evs):
+                k = key_of(g["company"])
+                if g["kind"] != "exited" or k not in members:
+                    ok = False
+                    break
+                del members[k]
+                if i + 1 == len(evs) or evs[i + 1]["date"] != g["date"]:
+                    steps.append((g["date"], dict(members)))
+            if ok and set(members) == set(b["members"]):
+                out += [{"date": date.fromisoformat(d), "members": m, "src": "reconstructed", "summary": None}
+                        for d, m in steps]
+                notes.append((a["date"], b["date"], len(steps)))
+        out.append(b)
+    return out, notes
+
+
 # ── main ──────────────────────────────────────────────────────────────────────
 def main():
     rows = load_rows()
@@ -228,6 +259,11 @@ def main():
             display[k] = strip_parens(e["name"])
         snap_list.append({"date": d, "members": members, "src": s["src"], "summary": s["summary"]})
 
+    gap_data = json.loads(GAP_FILE.read_text(encoding="utf-8")) if GAP_FILE.exists() else {"events": []}
+    official = snap_list  # published Bursa lists only
+    snap_list, recon_gaps = add_reconstructed(official, gap_data.get("events", []), key_of)
+    recon_dates = {iso(s["date"]) for s in snap_list if s["src"] == "reconstructed"}
+
     warnings = []
 
     # ── series ──
@@ -243,16 +279,17 @@ def main():
                 f"{s['date']}: scraped {len(s['members'])} companies but Bursa summary says "
                 f"{to_int(sm['PN17_GN3_Count'])} (parsing quirk in source)"
             )
-        series.append(
-            {
-                "date": iso(s["date"]),
-                "pn17": pn17,
-                "gn3": gn3,
-                "total": pn17 + gn3,
-                "listed": total_listed,
-                "pct": pct,
-            }
-        )
+        row = {
+            "date": iso(s["date"]),
+            "pn17": pn17,
+            "gn3": gn3,
+            "total": pn17 + gn3,
+            "listed": total_listed,
+            "pct": pct,
+        }
+        if s["src"] == "reconstructed":
+            row["reconstructed"] = True
+        series.append(row)
 
     # ── events between consecutive snapshots ──
     events = []
@@ -276,10 +313,8 @@ def main():
         for d, prev, gap, kind, k, typ in events
     ]
     # Resolve range-dated events using sourced facts (gap_events.json; not official list data)
-    gap_file = ROOT / "gap_events.json"
     gap_stage_changes = {}
-    if gap_file.exists():
-        gap_data = json.loads(gap_file.read_text(encoding="utf-8"))
+    if GAP_FILE.exists():
         known = {(g["company"], g["kind"]): g for g in gap_data["events"]}
         for sc in gap_data.get("stage_changes", []):
             gap_stage_changes.setdefault(sc["company"], []).append(sc)
@@ -287,6 +322,8 @@ def main():
             g = known.get((e["company"], e["kind"]))
             if g and e["approx"] and e["from"] < g["date"] <= e["date"]:
                 e.update(date=g["date"], approx=False, sourced=True, note=g["how"], source=g["source"])
+            elif g and e["date"] == g["date"] and e["date"] in recon_dates:  # dated by a reconstructed snapshot
+                e.update(sourced=True, note=g["how"], source=g["source"])
     events_json.sort(key=lambda e: (e["date"], e["company"]), reverse=True)
 
     # entries / exits per calendar year (year the change was observed)
@@ -301,12 +338,12 @@ def main():
     yearly_json = [{"year": y, **v} for y, v in sorted(yearly.items())]
 
     # ── companies ──
-    latest = snap_list[-1]
-    first_date = snap_list[0]["date"]
+    latest = official[-1]
+    first_date = official[0]["date"]
     companies = []
-    all_keys = set().union(*(set(s["members"]) for s in snap_list))
+    all_keys = set().union(*(set(s["members"]) for s in official))
     for k in all_keys:
-        present = [k in s["members"] for s in snap_list]
+        present = [k in s["members"] for s in official]
         n_present = sum(present)
         in_now = present[-1]
         # start of the run that ends at the last snapshot the company appeared in
@@ -314,19 +351,19 @@ def main():
         start_i = last_i
         while start_i > 0 and present[start_i - 1]:
             start_i -= 1
-        since = snap_list[start_i]["date"]
-        end = latest["date"] if in_now else snap_list[last_i]["date"]
-        last_entry = snap_list[last_i]["members"][k]
+        since = official[start_i]["date"]
+        end = latest["date"] if in_now else official[last_i]["date"]
+        last_entry = official[last_i]["members"][k]
         # latest snapshot that carried a stage, and (separately) a trading status
         stage = stage_label = trading = stage_asof = trading_asof = None
         for i in range(last_i, -1, -1):
-            m = snap_list[i]["members"].get(k)
+            m = official[i]["members"].get(k)
             if not m:
                 continue
             if stage_label is None and m.get("stage_label"):
-                stage, stage_label, stage_asof = m["stage"], m["stage_label"], snap_list[i]["date"]
+                stage, stage_label, stage_asof = m["stage"], m["stage_label"], official[i]["date"]
             if trading is None and m.get("trading"):
-                trading, trading_asof = m["trading"], snap_list[i]["date"]
+                trading, trading_asof = m["trading"], official[i]["date"]
             if stage_label and trading:
                 break
         # a sourced stage change newer than the last scraped stage supersedes it
@@ -342,7 +379,7 @@ def main():
                 "current": in_now,
                 "since": iso(since),
                 "since_censored": start_i == 0,  # already listed at first snapshot => "at least"
-                "last_seen": iso(snap_list[last_i]["date"]),
+                "last_seen": iso(official[last_i]["date"]),
                 "tenure_days": (end - since).days,
                 "snapshots": n_present,
                 "stage": stage,
@@ -356,10 +393,11 @@ def main():
     companies.sort(key=lambda c: (not c["current"], -c["tenure_days"], c["name"]))
 
     # ── KPIs / insights ──
-    cur, prev = series[-1], series[-2] if len(series) > 1 else None
+    published = [x for x in series if not x.get("reconstructed")]
+    cur, prev = published[-1], published[-2] if len(published) > 1 else None
     year_ago = None
     target = latest["date"].toordinal() - 365
-    cands = [s for s in series if datetime.strptime(s["date"], "%Y-%m-%d").toordinal() <= target + 60]
+    cands = [s for s in published if datetime.strptime(s["date"], "%Y-%m-%d").toordinal() <= target + 60]
     if cands:
         year_ago = min(cands, key=lambda s: abs(datetime.strptime(s["date"], "%Y-%m-%d").toordinal() - target))
 
@@ -401,14 +439,22 @@ def main():
             f"{yrs:.1f} years (since {fmt(longest['since'])})."
         )
     # biggest data gap
-    gaps = [(b["date"] - a["date"]).days for a, b in zip(snap_list, snap_list[1:])]
-    big = max(range(len(gaps)), key=lambda i: gaps[i]) if gaps else None
-    recent_gaps = [(i, g) for i, g in enumerate(gaps) if g > 120 and snap_list[i]["date"].year >= 2025]
+    gaps = [(b["date"] - a["date"]).days for a, b in zip(official, official[1:])]
+    recon_by_gap = {(x, y): n for x, y, n in recon_gaps}
+    recent_gaps = [(i, g) for i, g in enumerate(gaps) if g > 120 and official[i]["date"].year >= 2025]
     for i, g in recent_gaps:
-        warnings.append(
-            f"No snapshots between {fmt(snap_list[i]['date'])} and {fmt(snap_list[i + 1]['date'])} "
-            f"({g} days) - changes in that window are shown as date ranges."
-        )
+        start, end = official[i]["date"], official[i + 1]["date"]
+        n = recon_by_gap.get((start, end))
+        if n:
+            warnings.append(
+                f"No published Bursa list between {fmt(start)} and {fmt(end)} ({g} days). The {n} points in "
+                f"between are reconstructed from dated news and company filings (gap_events.json), not Bursa data."
+            )
+        else:
+            warnings.append(
+                f"No snapshots between {fmt(start)} and {fmt(end)} "
+                f"({g} days) - changes in that window are shown as date ranges."
+            )
 
     # Freshness: the workflow passes the scrape outcome (success / failure). When the scrape
     # failed the CSVs are unchanged, so keep the previous "last success" time and let the
@@ -438,7 +484,8 @@ def main():
         "source": "Bursa Malaysia - PN17 and GN3 companies (listing directory)",
         "first_snapshot": iso(first_date),
         "latest_snapshot": iso(latest["date"]),
-        "n_snapshots": len(snap_list),
+        "n_snapshots": len(official),
+        "n_reconstructed": len(snap_list) - len(official),
         "kpi": {
             "current": cur,
             "previous": prev,
@@ -465,7 +512,7 @@ def main():
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    print(f"[dashboard] {len(snap_list)} snapshots, {len(companies)} companies "
+    print(f"[dashboard] {len(official)} snapshots (+{len(snap_list) - len(official)} reconstructed), {len(companies)} companies "
           f"({len(curr)} current), {len(events_json)} events -> {OUT.relative_to(ROOT.parent)}")
     for w in warnings:
         print(f"[dashboard] note: {w}", file=sys.stderr)
