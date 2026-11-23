@@ -1,0 +1,8 @@
+{
+  "_note": "Dated events sourced from public news/company filings to resolve gaps between Bursa list snapshots. NOT official Bursa list data. Applied only to events the snapshots could only date as a range.",
+  "events": [
+    {"company": "Bintai Kinden Corporation Berhad", "kind": "exited", "date": "2026-02-27", "how": "PN17 upliftment effective", "source": "https://www.thestar.com.my/business/business-news/2026/02/26/bintai-kinden-exits-pn17-status"},
+    {"company": "Ireka Corporation Berhad", "kind": "exited", "date": "2026-03-10", "how": "Delisted after appeal rejected (not an upliftment)", "source": "https://www.thestar.com.my/business/business-news/2026/03/05/ireka-to-be-delisted-from-bursa-securities-on-march-10"},
+    {"company": "Pharmaniaga Berhad", "kind": "exited", "date": "2026-03-17", "how": "PN17 upliftment effective", "source": "https://www.thestar.com.my/business/business-news/2026/03/17/pharmaniaga-exits-pn17-status"}
+  ]
+}

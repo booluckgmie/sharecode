@@ -275,6 +275,14 @@ def main():
         }
         for d, prev, gap, kind, k, typ in events
     ]
+    # Resolve range-dated events using sourced facts (gap_events.json; not official list data)
+    gap_file = ROOT / "gap_events.json"
+    if gap_file.exists():
+        known = {(g["company"], g["kind"]): g for g in json.loads(gap_file.read_text(encoding="utf-8"))["events"]}
+        for e in events_json:
+            g = known.get((e["company"], e["kind"]))
+            if g and e["approx"] and e["from"] < g["date"] <= e["date"]:
+                e.update(date=g["date"], approx=False, sourced=True, note=g["how"], source=g["source"])
     events_json.sort(key=lambda e: (e["date"], e["company"]), reverse=True)
 
     # entries / exits per calendar year (year the change was observed)
