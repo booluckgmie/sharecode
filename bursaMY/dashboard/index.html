@@ -458,7 +458,8 @@ function eventsCard() {
   const body = ev.length ? h("div", { class: "tablewrap" }, h("table", {},
     h("thead", {}, h("tr", {}, ["When", "Change", "Company", "List"].map(x => h("th", {}, x)))),
     h("tbody", {}, ev.map(e => h("tr", {},
-      h("td", {}, e.approx ? `${fmtDate(e.from)} – ${fmtDate(e.date)}` : fmtDate(e.date), e.approx ? h("span", { class: "muted" }, "exact date unknown (data gap)") : null),
+      h("td", {}, e.approx ? `${fmtDate(e.from)} – ${fmtDate(e.date)}` : fmtDate(e.date), e.approx ? h("span", { class: "muted" }, "exact date unknown (data gap)") : null,
+        e.sourced ? h("a", { class: "muted", href: e.source, target: "_blank", rel: "noopener", title: "Dated from news/filings, not Bursa list data" }, " " + e.note + " ↗") : null),
       h("td", {}, e.kind === "entered" ? "▲ Joined" : "▼ Left"),
       h("td", {}, e.company), h("td", {}, h("span", { class: "tag" }, e.type))))))) : h("p", { class: "note" }, "No changes in this range.");
   return h("section", { class: "card", "aria-labelledby": "c-events" },

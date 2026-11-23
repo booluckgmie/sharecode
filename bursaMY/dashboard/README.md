@@ -105,3 +105,6 @@ Vercel's free Hobby plan is for non-commercial use. Move to Pro before charging 
 | `data.json` | Generated data. Committed by the workflow; don't edit by hand |
 | `analytics.json` | Site traffic snapshot (only exists once the setup above is done) |
 | `vercel.json` | Cache and deploy-skip rules for Vercel |
+
+## Gap events (`bursaMY/gap_events.json`)
+Where Bursa list snapshots are far apart (e.g. 3 Nov 2025 → 2 Apr 2026), exits are dated from public news and company filings instead of a date range. These are marked with a link and are not official list data. Found so far: Bintai Kinden (PN17 lifted 27 Feb 2026), Ireka (delisted 10 Mar 2026, not lifted), Pharmaniaga (PN17 lifted 17 Mar 2026). Stage changes in the gap (e.g. Perak Corp's plan approved ~Jan 2026, MMM Group's plan filed ~16 Jan 2026) are not back-filled because only approximate dates were found.
