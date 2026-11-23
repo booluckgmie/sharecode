@@ -487,7 +487,8 @@ function companiesCard() {
       h("td", {}, (c.since_censored ? "≤ " : "") + fmtDate(c.since)),
       h("td", { class: "num" }, (c.since_censored ? "≥ " : "") + fmtYears(c.tenure_days)),
       h("td", {}, c.stage_label || "–",
-        c.stage_label && c.stage_asof !== D.latest_snapshot ? h("span", { class: "muted" }, `as of ${fmtDate(c.stage_asof)}`) : null),
+        c.stage_label && c.stage_asof !== D.latest_snapshot ? h("span", { class: "muted" }, `as of ${fmtDate(c.stage_asof)}`) : null,
+        ...(c.stage_changes || []).map(sc => h("a", { class: "muted", href: sc.source, target: "_blank", rel: "noopener", title: sc.how }, ` Stage ${sc.from_stage}→${sc.to_stage} ~${fmtDate(sc.date)} ↗`))),
       h("td", {}, c.trading ? (/suspend/i.test(c.trading) ? "■ " : "● ") + c.trading : "–",
         c.trading && c.trading_asof !== D.latest_snapshot ? h("span", { class: "muted" }, `as of ${fmtDate(c.trading_asof)}`) : null))))));
   if (!cs.length) tbl.append(h("p", { class: "note" }, "No companies match."));
