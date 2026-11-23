@@ -1,8 +1,46 @@
 {
   "_note": "Dated events sourced from public news/company filings to resolve gaps between Bursa list snapshots. NOT official Bursa list data. Applied only to events the snapshots could only date as a range.",
   "events": [
-    {"company": "Bintai Kinden Corporation Berhad", "kind": "exited", "date": "2026-02-27", "how": "PN17 upliftment effective", "source": "https://www.thestar.com.my/business/business-news/2026/02/26/bintai-kinden-exits-pn17-status"},
-    {"company": "Ireka Corporation Berhad", "kind": "exited", "date": "2026-03-10", "how": "Delisted after appeal rejected (not an upliftment)", "source": "https://www.thestar.com.my/business/business-news/2026/03/05/ireka-to-be-delisted-from-bursa-securities-on-march-10"},
-    {"company": "Pharmaniaga Berhad", "kind": "exited", "date": "2026-03-17", "how": "PN17 upliftment effective", "source": "https://www.thestar.com.my/business/business-news/2026/03/17/pharmaniaga-exits-pn17-status"}
+    {
+      "company": "Bintai Kinden Corporation Berhad",
+      "kind": "exited",
+      "date": "2026-02-27",
+      "how": "PN17 upliftment effective",
+      "source": "https://www.thestar.com.my/business/business-news/2026/02/26/bintai-kinden-exits-pn17-status"
+    },
+    {
+      "company": "Ireka Corporation Berhad",
+      "kind": "exited",
+      "date": "2026-03-10",
+      "how": "Delisted after appeal rejected (not an upliftment)",
+      "source": "https://www.thestar.com.my/business/business-news/2026/03/05/ireka-to-be-delisted-from-bursa-securities-on-march-10"
+    },
+    {
+      "company": "Pharmaniaga Berhad",
+      "kind": "exited",
+      "date": "2026-03-17",
+      "how": "PN17 upliftment effective",
+      "source": "https://www.thestar.com.my/business/business-news/2026/03/17/pharmaniaga-exits-pn17-status"
+    }
+  ],
+  "stage_changes": [
+    {
+      "company": "Perak Corporation Bhd",
+      "date": "2026-01-19",
+      "approx_days": 1,
+      "from_stage": 2,
+      "to_stage": 3,
+      "how": "Bursa approved regularisation plan (report dated 20 Jan 2026 says 'Monday', i.e. 19 Jan; date +/- 1 day)",
+      "source": "https://www.edgeprop.my/content/1915031/bursa-approves-perak-corp’s-regularisation-plan-lift-pn17-status"
+    },
+    {
+      "company": "MMM Group Berhad",
+      "date": "2026-01-16",
+      "approx_days": 13,
+      "from_stage": 1,
+      "to_stage": 2,
+      "how": "Fresh regularisation plan unveiled after Bursa approved appeal against delisting; submission deadline was 29 Jan 2026. Later rejected 10 Jul 2026 and delisted 12 Oct 2026",
+      "source": "https://www.businesstoday.com.my/2026/10/07/mmm-group-to-be-delisted-from-bursa-on-oct-12/"
+    }
   ]
 }

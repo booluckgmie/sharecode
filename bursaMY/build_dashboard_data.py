@@ -277,8 +277,12 @@ def main():
     ]
     # Resolve range-dated events using sourced facts (gap_events.json; not official list data)
     gap_file = ROOT / "gap_events.json"
+    gap_stage_changes = {}
     if gap_file.exists():
-        known = {(g["company"], g["kind"]): g for g in json.loads(gap_file.read_text(encoding="utf-8"))["events"]}
+        gap_data = json.loads(gap_file.read_text(encoding="utf-8"))
+        known = {(g["company"], g["kind"]): g for g in gap_data["events"]}
+        for sc in gap_data.get("stage_changes", []):
+            gap_stage_changes.setdefault(sc["company"], []).append(sc)
         for e in events_json:
             g = known.get((e["company"], e["kind"]))
             if g and e["approx"] and e["from"] < g["date"] <= e["date"]:
@@ -340,6 +344,7 @@ def main():
                 "stage_asof": iso(stage_asof),
                 "trading": trading,
                 "trading_asof": iso(trading_asof),
+                "stage_changes": gap_stage_changes.get(display[k], []),
             }
         )
     companies.sort(key=lambda c: (not c["current"], -c["tenure_days"], c["name"]))
