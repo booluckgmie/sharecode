@@ -329,6 +329,12 @@ def main():
                 trading, trading_asof = m["trading"], snap_list[i]["date"]
             if stage_label and trading:
                 break
+        # a sourced stage change newer than the last scraped stage supersedes it
+        for sc in sorted(gap_stage_changes.get(display[k], []), key=lambda x: x["date"]):
+            if stage_asof is None or sc["date"] > iso(stage_asof):
+                stage = sc["to_stage"]
+                stage_label = STAGE_LABELS[stage - 1]
+                stage_asof = date.fromisoformat(sc["date"])
         companies.append(
             {
                 "name": display[k],
