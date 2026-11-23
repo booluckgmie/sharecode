@@ -3,3 +3,5 @@ main
 pyocclient
 /data
 !portfolio-cms/data/**
+__pycache__/
+*.pyc
